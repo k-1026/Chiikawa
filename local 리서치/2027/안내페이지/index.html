@@ -1,0 +1,514 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>타지에서 온 말손님</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+  :root{
+    /* 고양이(말손님) 파랑 기준 팔레트 */
+    --pri:#3b9ae1; --pri-d:#1f6fb2; --sky:#8fd0f5; --sky-l:#d8eefc; --pink:#f4a6bf;
+    --yellow:#ffd23f; --cream:#eef7fd;
+    --ink:#16243a; --ink-2:#506279; --line:#d3e6f4; --card:#ffffff; --bg:#15202e;
+    --green:#4caf50; --green-d:#2e7d32; --green-l:#e1f3e1; --blue:#3b9ae1;
+    --shadow:0 6px 18px rgba(20,70,120,.12);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{height:100%}
+  body{background:var(--bg);font-family:"Noto Sans KR",system-ui,sans-serif;color:var(--ink);-webkit-font-smoothing:antialiased}
+  button{font:inherit;color:inherit;border:0;background:none;cursor:pointer}
+  .app{max-width:430px;margin:0 auto;min-height:100%;background:var(--cream);position:relative;display:flex;flex-direction:column}
+  /* top bar */
+  .top{position:sticky;top:0;z-index:20;display:flex;align-items:center;justify-content:space-between;padding:12px 16px;background:rgba(238,247,253,.92);backdrop-filter:blur(8px)}
+  .logo{font-family:"Black Han Sans",sans-serif;font-size:19px;line-height:1;color:var(--pri-d);letter-spacing:-.5px;text-shadow:1.5px 1.5px 0 var(--sky-l)}
+  .logo small{display:block;font-family:"Noto Sans KR";font-weight:700;font-size:10px;color:var(--ink-2);text-shadow:none;letter-spacing:0;margin-bottom:2px}
+  .top-r{display:flex;gap:8px;align-items:center}
+  .pill{font-size:11px;font-weight:700;padding:5px 9px;border-radius:99px;background:#fff;border:1px solid var(--line)}
+  .draft{background:var(--ink);color:#fff;border:0}
+  main{flex:1;padding:4px 16px 96px}
+  .page{display:none;animation:fade .25s ease}
+  .page.on{display:block}
+  @keyframes fade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+  h2.ttl{font-size:18px;font-weight:900;text-align:center;margin:8px 0 14px}
+  .card{background:var(--card);border-radius:16px;box-shadow:var(--shadow);padding:16px;margin-bottom:12px}
+  .muted{color:var(--ink-2);font-size:13px;line-height:1.55}
+  /* hero */
+  .hero{position:relative;overflow:hidden;border-radius:20px;margin-bottom:12px;background:#fff;box-shadow:var(--shadow)}
+  .hero-top{padding:20px 18px 16px;color:#fff;background:radial-gradient(circle at 88% 18%,rgba(255,210,63,.5),transparent 40%),linear-gradient(150deg,var(--sky),var(--pri) 55%,var(--pri-d))}
+  .hero-stage{display:flex;align-items:flex-end;justify-content:center;gap:4px;padding:6px 10px 12px;background:linear-gradient(#fff,#f4faff)}
+  .hero-stage figure{text-align:center;flex:1}
+  .hero-stage img{width:100%;max-width:150px;height:auto;display:block;margin:0 auto}
+  .hero-stage figcaption{font-size:11.5px;font-weight:900;margin-top:2px}
+  .hero-stage .vsmark{font-family:"Black Han Sans";font-size:26px;color:var(--yellow);-webkit-text-stroke:1px var(--pri-d);align-self:center;padding:0 2px}
+  .cap-a{color:var(--pri-d)} .cap-b{color:var(--green-d)}
+  .friends{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:12px}
+  .friend{border-radius:16px;padding:12px;box-shadow:var(--shadow);text-align:center;background:#fff}
+  .friend img{height:120px;width:auto;display:block;margin:0 auto 6px}
+  .friend b{font-size:14.5px;display:block}
+  .friend .role{display:inline-block;font-size:11px;font-weight:700;padding:3px 8px;border-radius:99px;margin:4px 0 6px}
+  .friend p{font-size:12px;color:var(--ink-2);line-height:1.5}
+  .friend.cat{border-top:4px solid var(--pri)} .friend.cat .role{background:var(--sky-l);color:var(--pri-d)}
+  .friend.dog{border-top:4px solid var(--green)} .friend.dog .role{background:var(--green-l);color:var(--green-d)}
+  .side-img{width:74px;height:auto;flex:none;margin:-6px -4px -10px 0}
+  .say{display:flex;gap:10px;align-items:center}
+  .hero .ord{display:inline-block;font-size:11px;font-weight:700;background:rgba(0,0,0,.22);padding:4px 9px;border-radius:99px}
+  .hero h1{font-family:"Black Han Sans",sans-serif;font-weight:400;font-size:36px;line-height:1.08;margin:10px 0 8px;letter-spacing:-1px;text-shadow:2px 3px 0 rgba(0,0,0,.18)}
+  .hero h1 em{font-style:normal;color:var(--yellow);text-shadow:2px 3px 0 rgba(10,60,110,.35)}
+  .hero-top p{font-size:13px;opacity:.95}
+  .hero .when{margin-top:12px;font-weight:900;font-size:15px}
+  .avatar{width:34px;height:34px;border-radius:50%;object-fit:cover;object-position:50% 22%;background:var(--sky-l);flex:none}
+  .ai-img{width:64px;height:64px;object-fit:cover;object-position:50% 20%;border-radius:16px;background:var(--sky-l);flex:none}
+  .row-msg{display:flex;gap:8px;align-items:flex-start}
+  /* checkin */
+  .checkin h3{font-size:16px;font-weight:900}
+  .checkin .row{display:flex;justify-content:space-between;align-items:flex-end;margin-top:14px}
+  .chips{display:flex;gap:6px;flex-wrap:wrap;margin-top:8px}
+  .chip{font-size:12px;padding:5px 10px;border-radius:99px;border:1px solid var(--line);background:#fff}
+  .chip.on{background:var(--yellow);border-color:var(--yellow);font-weight:700}
+  .btn{display:inline-flex;align-items:center;gap:6px;background:var(--ink);color:#fff;font-weight:700;font-size:14px;padding:10px 16px;border-radius:99px}
+  .btn.red{background:var(--pri)} .btn.ghost{background:#fff;color:var(--ink);border:1px solid var(--line)}
+  .btn:active{transform:scale(.97)}
+  .stamps{display:flex;gap:6px}
+  .stamp{width:30px;height:30px;border-radius:50%;border:2px dashed #b9d3e8;display:grid;place-items:center;font-size:11px;font-weight:900;color:#9fbad1}
+  .stamp.on{border:2px solid var(--pri);background:var(--pri);color:#fff;transform:rotate(-12deg)}
+  /* banner */
+  .banner{display:flex;align-items:center;justify-content:space-between;gap:10px;border-radius:16px;padding:16px;margin-bottom:12px;color:#fff;background:linear-gradient(110deg,var(--pri-d),var(--pri));box-shadow:var(--shadow);width:100%;text-align:left}
+  .banner b{font-size:15px;display:block} .banner span{font-size:12px;opacity:.9}
+  .arrow{width:28px;height:28px;border-radius:50%;background:rgba(255,255,255,.25);display:grid;place-items:center;flex:none;font-weight:900}
+  /* grid cards */
+  .grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:12px}
+  .tile{background:#fff;border-radius:16px;box-shadow:var(--shadow);padding:14px;text-align:left;min-height:128px;display:flex;flex-direction:column;position:relative;overflow:hidden}
+  .tile .ic{font-size:22px} .tile b{font-size:15px;margin-top:auto;padding-top:10px}
+  .tile span{font-size:11.5px;color:var(--ink-2);line-height:1.45;margin-top:3px}
+  .tile.wide{grid-column:span 2;min-height:auto;flex-direction:row;align-items:center;gap:12px}
+  .tile.wide b{margin:0;padding:0}
+  .tile .blob{position:absolute;right:-18px;top:-18px;width:70px;height:70px;border-radius:50%;opacity:.16}
+  .ai{background:linear-gradient(120deg,#fff,var(--sky-l))}
+  /* tabs */
+  .seg{display:flex;gap:6px;background:var(--sky-l);border-radius:99px;padding:4px;margin-bottom:12px}
+  .seg button{flex:1;padding:8px 4px;border-radius:99px;font-size:13px;font-weight:700;color:var(--ink-2)}
+  .seg button.on{background:#fff;color:var(--ink);box-shadow:0 2px 6px rgba(0,0,0,.08)}
+  /* timetable */
+  table{width:100%;border-collapse:collapse;font-size:12.5px}
+  .tt th{background:var(--yellow);padding:8px 4px;font-weight:900;font-size:12px}
+  .tt th:first-child{border-radius:10px 0 0 0} .tt th:last-child{border-radius:0 10px 0 0}
+  .tt td{border-bottom:1px solid var(--line);padding:9px 5px;text-align:center;vertical-align:middle}
+  .tt td:first-child{color:var(--ink-2);font-weight:700;white-space:nowrap;width:62px}
+  .tt .hl{background:var(--sky-l);font-weight:900;color:var(--pri-d)}
+  .tt .heat{background:#f3f7fb;color:#8a9bb0;font-size:11.5px}
+  .tag{display:inline-block;font-size:10px;font-weight:700;padding:2px 6px;border-radius:6px;background:var(--sky-l);color:var(--pri-d);margin-left:2px}
+  /* bracket */
+  .vs{display:flex;align-items:center;justify-content:space-between;gap:6px;padding:10px 0;border-bottom:1px solid var(--line)}
+  .vs:last-child{border:0}
+  .team{flex:1;font-size:13px;font-weight:700;padding:8px;border-radius:10px;text-align:center}
+  .team{display:flex;align-items:center;justify-content:center;gap:4px}
+  .team img{width:24px;height:24px;object-fit:cover;object-position:50% 44%;border-radius:50%;background:#fff}
+  .team.d{background:var(--sky-l);color:var(--pri-d)} .team.g{background:var(--green-l);color:var(--green-d)}
+  .vs i{font-style:normal;font-family:"Black Han Sans";color:var(--ink-2);font-size:14px}
+  .legend{display:flex;gap:10px;justify-content:center;font-size:12px;margin-bottom:10px}
+  .legend span::before{content:"";display:inline-block;width:10px;height:10px;border-radius:3px;margin-right:4px;vertical-align:-1px;background:var(--c)}
+  .topic{padding:12px 0;border-bottom:1px solid var(--line)} .topic:last-child{border:0}
+  .topic b{font-size:14px;display:block;margin-bottom:6px}
+  .meta{display:flex;gap:6px;flex-wrap:wrap}
+  .vote{display:flex;gap:8px;margin-top:10px}
+  .vote button{flex:1;padding:10px;border-radius:12px;font-weight:700;font-size:13px;border:2px solid var(--line);background:#fff}
+  .vote button.picked{border-color:var(--pri);background:var(--sky-l)}
+  .bar{height:8px;border-radius:99px;background:#eee;overflow:hidden;margin-top:8px;display:flex}
+  .bar div{height:100%;transition:width .4s}
+  /* map */
+  .mapwrap{position:relative;border-radius:16px;overflow:hidden;box-shadow:var(--shadow);background:#e4f2dc}
+  .mapwrap svg{display:block;width:100%;height:auto}
+  .zone{cursor:pointer;transition:opacity .2s}
+  .zone:hover{opacity:.85}
+  .filters{display:flex;gap:6px;flex-wrap:wrap;margin:12px 0}
+  .poi{transition:opacity .2s}
+  .poi.off{opacity:0}
+  .zinfo{margin-top:12px}
+  /* quiz */
+  .q-prog{height:6px;border-radius:99px;background:var(--sky-l);overflow:hidden;margin-bottom:14px}
+  .q-prog div{height:100%;background:var(--pri);transition:width .3s}
+  .q-word{font-family:"Black Han Sans";font-size:30px;text-align:center;color:var(--pri);margin:10px 0 4px}
+  .q-ask{text-align:center;font-size:14px;color:var(--ink-2);margin-bottom:16px}
+  .opts{display:grid;gap:8px}
+  .opt{padding:13px;border-radius:12px;background:#fff;border:2px solid var(--line);font-weight:700;font-size:14px;text-align:left}
+  .opt.ok{border-color:var(--green);background:#e7f6ee} .opt.no{border-color:var(--pink);background:#fdebf1}
+  .result{text-align:center}
+  .grade{font-family:"Black Han Sans";font-size:34px;color:var(--pri-d);margin:6px 0}
+  .conv{display:flex;gap:8px;margin-top:10px}
+  .conv input{flex:1;padding:11px 12px;border-radius:12px;border:2px solid var(--line);font:inherit;font-size:14px;background:#fff}
+  .conv-out{margin-top:10px;padding:12px;border-radius:12px;background:var(--cream);font-weight:700;min-height:44px}
+  /* chat sheet */
+  .sheet{position:fixed;inset:0;z-index:50;display:none;background:rgba(0,0,0,.45)}
+  .sheet.on{display:block}
+  .sheet-in{position:absolute;left:50%;transform:translateX(-50%);bottom:0;width:100%;max-width:430px;height:78%;background:var(--cream);border-radius:20px 20px 0 0;display:flex;flex-direction:column}
+  .sheet-h{display:flex;justify-content:space-between;align-items:center;padding:14px 16px;border-bottom:1px solid var(--line);font-weight:900}
+  .msgs{flex:1;overflow:auto;padding:14px 16px;display:flex;flex-direction:column;gap:8px}
+  .msg{max-width:82%;padding:10px 12px;border-radius:14px;font-size:13.5px;line-height:1.5}
+  .msg.bot{background:#fff;box-shadow:0 2px 6px rgba(0,0,0,.06);align-self:flex-start;border-top-left-radius:4px}
+  .msg.me{background:var(--pri);color:#fff;align-self:flex-end;border-top-right-radius:4px}
+  .sugg{display:flex;gap:6px;overflow-x:auto;padding:0 16px 8px}
+  .sugg button{white-space:nowrap;font-size:12px;padding:6px 10px;border-radius:99px;background:#fff;border:1px solid var(--line)}
+  .chat-in{display:flex;gap:8px;padding:10px 16px 18px}
+  .chat-in input{flex:1;padding:11px 12px;border-radius:99px;border:2px solid var(--line);font:inherit;font-size:14px}
+  /* toast */
+  .toast{position:fixed;left:50%;bottom:90px;transform:translateX(-50%) translateY(20px);opacity:0;background:var(--ink);color:#fff;font-size:13px;padding:10px 16px;border-radius:99px;transition:.25s;z-index:60;pointer-events:none;white-space:nowrap}
+  .toast.on{opacity:1;transform:translateX(-50%)}
+  /* bottom nav */
+  nav{position:fixed;bottom:0;left:50%;transform:translateX(-50%);width:100%;max-width:430px;background:#fff;border-top:1px solid var(--line);display:grid;grid-template-columns:repeat(6,1fr);padding:6px 4px calc(8px + env(safe-area-inset-bottom));z-index:30;border-radius:16px 16px 0 0;box-shadow:0 -4px 14px rgba(0,0,0,.06)}
+  nav button{display:flex;flex-direction:column;align-items:center;gap:2px;font-size:10.5px;font-weight:700;color:#8a9bb0;padding:4px 0}
+  nav button .ni{font-size:19px;filter:grayscale(1);opacity:.7}
+  nav button.on{color:var(--pri)} nav button.on .ni{filter:none;opacity:1}
+  .foot{text-align:center;font-size:11px;color:#8a9bb0;margin:18px 0 6px;line-height:1.6}
+  .info-row{display:flex;gap:12px;padding:10px 0;border-bottom:1px solid var(--line);font-size:13.5px}
+  .info-row:last-child{border:0}
+  .info-row dt{width:64px;flex:none;color:var(--ink-2);font-weight:700}
+  .prog{display:flex;gap:12px;align-items:flex-start;padding:12px 0;border-bottom:1px solid var(--line)}
+  .prog:last-child{border:0}
+  .prog .num{width:34px;height:34px;flex:none;border-radius:10px;background:var(--pri);color:#fff;font-family:"Black Han Sans";display:grid;place-items:center;font-size:16px}
+  .prog b{font-size:14.5px}
+  .flow{display:flex;align-items:center;gap:4px;flex-wrap:wrap;font-size:12px;font-weight:700}
+  .flow span{background:#fff;border:1px solid var(--line);padding:5px 8px;border-radius:8px}
+  .flow i{font-style:normal;color:var(--pri)}
+</style>
+</head>
+<body>
+<div class="app">
+  <header class="top">
+    <div class="logo"><small>2027 대구 사투리 축제</small>타지에서 온 말손님</div>
+    <div class="top-r"><span class="pill draft">기획 시안</span><span class="pill">🇰🇷 KO</span></div>
+  </header>
+
+  <main>
+    <!-- ============ 홈 ============ -->
+    <section class="page on" id="home">
+      <div class="hero">
+        <div class="hero-top">
+        <span class="ord">제1회 · 두류공원 일원</span>
+        <h1>대구말,<br><em>함 붙어 보까?</em></h1>
+        <p>대구 토박이 냥이 vs 타지에서 온 말손님 멍이<br>사흘 동안 말로 겨루고, 묵고, 놀다 가이소.</p>
+        <div class="when">2027. 8. 20 FRI – 8. 22 SUN</div>
+        </div>
+        <div class="hero-stage">
+          <figure><img src="assets/cat.png" alt="파란 고양이 마스코트 — 토박이"><figcaption class="cap-a">🐱 토박이 냥이</figcaption></figure>
+          <span class="vsmark">VS</span>
+          <figure><img src="assets/dog.png" alt="초록 강아지 마스코트 — 말손님"><figcaption class="cap-b">🐶 말손님 멍이</figcaption></figure>
+        </div>
+      </div>
+
+      <div class="card checkin" id="checkinCard">
+        <div class="say"><div style="flex:1"><h3 id="ciTitle">체크인하고 말손님 스탬프 모으이소</h3>
+        <p class="muted" id="ciSub">체크인하면 스탬프·쿠폰·관객 투표가 열려요</p></div><img class="side-img" src="assets/dog.png" alt="말손님 멍이"></div>
+        <div class="chips"><span class="chip" id="chipStay">🏨 숙박 인증</span><span class="chip" id="chipQuiz">📝 능력고사</span><span class="chip" id="chipVote">🗳 관객 투표</span></div>
+        <div class="row">
+          <div class="stamps" id="stamps"><div class="stamp">1</div><div class="stamp">2</div><div class="stamp">3</div></div>
+          <button class="btn" id="ciBtn">체크인하기 ›</button>
+        </div>
+      </div>
+
+      <button class="banner" data-go="stay">
+        <div style="flex:1"><b>🏨 말손님, 하룻밤 묵고 가이소</b><span>대구 숙소 인증하면 대구로페이 2만 원 · 결승 관람석 우선 입장</span></div>
+        <div class="arrow">›</div>
+      </button>
+
+      <div class="grid">
+        <button class="tile" data-go="food"><div class="blob" style="background:var(--pri)"></div><div class="ic">🍢</div><b>10미 포장마차</b><span>막창부터 납작만두까지, 대구 10미 한자리에서</span></button>
+        <button class="tile" data-go="debate"><div class="blob" style="background:var(--green)"></div><div class="ic">🎤</div><b>토론 대진표</b><span>말손님 vs 토박이, 오늘 누가 이기노?</span></button>
+        <button class="tile" data-go="map"><div class="blob" style="background:var(--green)"></div><div class="ic">🗺</div><b>실시간 지도</b><span>무대·쉼터·화장실 위치 보기</span></button>
+        <button class="tile" data-go="tour"><div class="blob" style="background:var(--sky)"></div><div class="ic">🏮</div><b>원조가게 스탬프</b><span>시내 원조가게 3곳 들르면 1만 원</span></button>
+        <button class="tile wide ai" id="aiOpen"><img class="ai-img" src="assets/cat.png" alt=""><div><b>궁금한 거는 토박이 냥이한테</b><br><span>시간표·주차·숙박, 뭐든 물어보이소</span></div><div class="arrow" style="background:var(--yellow);color:var(--ink);margin-left:auto">›</div></button>
+      </div>
+
+      <b style="display:block;font-size:15px;margin:4px 2px 10px">축제 친구들</b>
+      <div class="friends">
+        <div class="friend cat"><img src="assets/cat.png" alt="토박이 냥이"><b>토박이 냥이</b><span class="role">🐱 토박이 팀 · 길잡이</span><p>대구 나고 자란 토박이. 축제 안내랑 대구말 문제는 냥이가 맡아요.</p></div>
+        <div class="friend dog"><img src="assets/dog.png" alt="말손님 멍이"><b>말손님 멍이</b><span class="role">🐶 말손님 팀 · 여행자</span><p>타지에서 놀러 온 손님. 대구말 배워서 토박이랑 한판 붙어 보려고요.</p></div>
+      </div>
+
+      <div class="card">
+        <b style="font-size:15px">말손님 멍이의 사흘, 이렇게 노이소</b>
+        <div class="flow" style="margin-top:10px">
+          <span>📝 능력고사</span><i>→</i><span>🎤 토론 관람</span><i>→</i><span>🍢 포장마차</span><i>→</i><span>🏨 1박</span><i>→</i><span>🏮 원조가게</span>
+        </div>
+      </div>
+      <img src="assets/pair.png" alt="고양이와 강아지 마스코트가 함께 인사하는 모습" style="display:block;width:180px;margin:14px auto 0;border-radius:20px;box-shadow:var(--shadow)">
+      <p class="foot">본 페이지는 2027 대구 사투리 축제 기획안(03_기획안.md) 기반의 <b>가상 안내 페이지 시안</b>입니다.<br>일정·장소·혜택은 확정 전이며 실제 운영과 다를 수 있어요.</p>
+    </section>
+
+    <!-- ============ 행사개요 ============ -->
+    <section class="page" id="about">
+      <h2 class="ttl">행사개요</h2>
+      <div class="seg" data-seg="about"><button class="on" data-k="a1">축제 소개</button><button data-k="a2">3대 프로그램</button><button data-k="a3">숙박·혜택</button></div>
+      <div data-pane="about" id="a1">
+        <div class="card">
+          <p style="font-size:15px;font-weight:700;line-height:1.6">타지역 2030이 온라인 <span style="color:var(--pri)">「대구 사투리 능력고사」</span>로 먼저 대구말을 배우고, 현장에 ‘말손님’으로 와서 대구 토박이와 토론으로 맞붙는 사흘.</p>
+        </div>
+        <div class="card say"><img src="assets/pair.png" alt="토박이 냥이와 말손님 멍이" style="width:120px;flex:none"><p class="muted"><b style="color:var(--pri-d)">🐱 토박이 냥이</b>는 대구 토박이 팀, <b style="color:var(--green-d)">🐶 말손님 멍이</b>는 타지에서 온 말손님 팀을 대표해요.</p></div>
+        <div class="card">
+          <dl>
+            <div class="info-row"><dt>행사명</dt><dd>2027 대구 사투리 축제 「타지에서 온 말손님」</dd></div>
+            <div class="info-row"><dt>기간</dt><dd>2027. 8. 20(금) ~ 8. 22(일), 3일</dd></div>
+            <div class="info-row"><dt>장소</dt><dd>두류공원 일원 (코오롱 야외음악당 · 2.28 자유광장 · 잔디광장)</dd></div>
+            <div class="info-row"><dt>운영</dt><dd>금·토 11:00~23:00 / 일 11:00~21:00<br><span class="muted">낮 12~16시는 실내 ‘말손님 사랑방’ 중심 운영(폭염 대응)</span></dd></div>
+            <div class="info-row"><dt>입장</dt><dd>무료 · 토론 결승 관람은 사전 예약 + 현장 선착순</dd></div>
+            <div class="info-row"><dt>주최·주관</dt><dd class="muted">기획 시안 단계 — 확정 전</dd></div>
+          </dl>
+        </div>
+      </div>
+      <div data-pane="about" id="a2" hidden>
+        <div class="card">
+          <div class="prog"><div class="num">1</div><div><b>토박이 🐱 vs 말손님 🐶 사투리 토론 대회</b><p class="muted">2인 1팀 16팀 토너먼트. 유머·지역문화 표현력으로 겨루는 예능형 토론. 심사위원 60% + 관객 투표 40%. <b>결승은 토요일 밤 8시 30분.</b></p></div></div>
+          <div class="prog"><div class="num">2</div><div><b>말로 주문하는 10미 포장마차</b><p class="muted">따로국밥·막창구이·뭉티기·동인동찜갈비·논메기매운탕·복어불고기·누른국수·무침회·야끼우동·납작만두. 대구말로 주문하면 스탬프 1개(표준어 주문도 똑같이 받아요).</p></div></div>
+          <div class="prog"><div class="num">3</div><div><b>대구 로컬 장터</b><p class="muted">대구 소상공인·로컬 브랜드 플리마켓. 오후 3시부터 잔디광장 그늘 구역에서.</p></div></div>
+        </div>
+        <div class="card"><b>부대 프로그램</b>
+          <p class="muted" style="margin-top:6px">🏠 말손님 사랑방(실내 · 현장 고사 · 사투리 사진관 · 냉방 쉼터)<br>🎓 말손님 수료식(토 결승 후)<br>🎙 한 마디 토론 — 누구나 1분 오픈 마이크(일 14:00)</p>
+        </div>
+      </div>
+      <div data-pane="about" id="a3" hidden>
+        <div class="card" id="stay">
+          <b style="font-size:16px">🏨 하룻밤 묵고 가면 2만 원</b>
+          <p class="muted" style="margin:6px 0 12px">8/20(금)·8/21(토) 대구 숙박 영수증을 앱에서 인증하면 대구로페이 2만 원 + 결승 관람석 우선 입장.</p>
+          <ol class="muted" style="padding-left:18px">
+            <li>현장 체크인 후 ‘숙박 인증’ 선택</li><li>숙소 영수증 촬영 (결제 정보는 가려 주세요)</li><li>확인 후 대구로페이 지급 · 이미지는 즉시 삭제</li>
+          </ol>
+          <button class="btn red" style="margin-top:12px" id="stayBtn">숙박 인증 체험하기</button>
+        </div>
+        <div class="card" id="tour"><b style="font-size:16px">🏮 원조가게 스탬프투어</b>
+          <p class="muted" style="margin-top:6px">포장마차 부스마다 있는 ‘원조가게 카드’ QR로 시내 원조 가게를 찾아가 보세요. 3곳 들르면 대구로페이 1만 원. 일요일 오전, 집에 가기 전에 딱이에요.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 시간표 ============ -->
+    <section class="page" id="time">
+      <h2 class="ttl">무대 시간표</h2>
+      <div class="seg" data-seg="time"><button class="on" data-k="d1">8/20(금)</button><button data-k="d2">8/21(토)</button><button data-k="d3">8/22(일)</button></div>
+      <div class="card" style="padding:10px"><table class="tt"><thead><tr><th>시간</th><th>🎤 말판 무대<br><span style="font-weight:500;font-size:10px">코오롱 야외음악당</span></th><th>🏠 사랑방<br><span style="font-weight:500;font-size:10px">실내</span></th></tr></thead><tbody id="ttBody"></tbody></table></div>
+      <p class="muted" style="text-align:center;font-size:12px">🍢 10미 포장마차 17:00~23:00(일 21:00) · 🛍 로컬 장터 15:00~22:00</p>
+    </section>
+
+    <!-- ============ 토론 ============ -->
+    <section class="page" id="debate">
+      <h2 class="ttl">토론 대회</h2>
+      <div class="seg" data-seg="debate"><button class="on" data-k="b1">대진표</button><button data-k="b2">논제</button><button data-k="b3">관객 투표</button></div>
+      <div data-pane="debate" id="b1">
+        <div class="legend"><span style="--c:var(--pri)">🐱 토박이 팀</span><span style="--c:var(--green)">🐶 말손님 팀</span></div>
+        <div class="card"><b style="font-size:14px">16강 · 8/20(금) 19:00~</b><div id="bracket" style="margin-top:4px"></div></div>
+        <div class="card muted" style="font-size:12.5px">• 8강 8/21(토) 17:00 · 4강 19:30 · <b style="color:var(--pri)">결승 20:30</b><br>• 1경기 12분: 입론 2분×2 → 자유 토론 4분 → 관객 질문 1분 → 최종 발언<br>• 말손님 팀은 ‘대구말 찬스’ 2번 — 사회자가 표준어를 대구말로 바꿔 줘요<br>• 팀명은 예선(6/1~7/6) 후 공개돼요</div>
+      </div>
+      <div data-pane="debate" id="b2" hidden><div class="card" id="topics"></div></div>
+      <div data-pane="debate" id="b3" hidden>
+        <div class="card">
+          <span class="tag" style="background:var(--pri);color:#fff">LIVE 예시</span>
+          <b style="display:block;font-size:15px;margin:8px 0 2px">결승 · 대구말 배울 때, 억양이 먼저다 vs 단어가 먼저다</b>
+          <p class="muted">관객 투표는 최종 점수의 40%예요. 체크인 후 한 번만 투표할 수 있어요.</p>
+          <div class="vote"><button data-v="0">🐱 토박이 팀<br><span style="font-weight:500;font-size:12px">억양이 먼저다</span></button><button data-v="1">🐶 말손님 팀<br><span style="font-weight:500;font-size:12px">단어가 먼저다</span></button></div>
+          <div class="bar"><div id="vb0" style="width:50%;background:var(--pri)"></div><div id="vb1" style="width:50%;background:var(--green)"></div></div>
+          <p class="muted" id="vtxt" style="text-align:center;margin-top:6px;font-size:12px">투표하면 현재 비율이 보여요</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 지도 ============ -->
+    <section class="page" id="map">
+      <h2 class="ttl">실시간 지도</h2>
+      <div class="filters" id="filters">
+        <button class="chip on" data-f="stage">🎤 무대</button><button class="chip on" data-f="food">🍢 포장마차</button><button class="chip on" data-f="wc">🚻 화장실</button><button class="chip on" data-f="cool">❄️ 쉼터</button><button class="chip on" data-f="med">⛑ 의료</button>
+      </div>
+      <div class="mapwrap">
+        <svg viewBox="0 0 360 440" role="img" aria-label="두류공원 축제 구역 배치도(시안)">
+          <rect width="360" height="440" fill="#e4f2dc"/>
+          <path d="M0 300 C80 280 120 330 200 320 S320 290 360 310" stroke="#b9d9a2" stroke-width="18" fill="none"/>
+          <path d="M60 0 L90 120 L170 210 L250 260 L300 440" stroke="#f3e3c8" stroke-width="14" fill="none" stroke-linecap="round"/>
+          <path d="M0 210 L170 210" stroke="#f3e3c8" stroke-width="10" fill="none"/>
+          <g class="zone" data-z="music"><rect x="150" y="40" width="160" height="110" rx="14" fill="#d8eefc" stroke="#3b9ae1" stroke-width="2"/><path d="M170 120 Q230 60 290 120" fill="none" stroke="#3b9ae1" stroke-width="2" stroke-dasharray="4 4"/><text x="230" y="70" text-anchor="middle" font-size="13" font-weight="900" fill="#1f6fb2">말판 무대</text><text x="230" y="88" text-anchor="middle" font-size="10" fill="#36597a">코오롱 야외음악당</text></g>
+          <g class="zone" data-z="plaza"><rect x="190" y="230" width="140" height="120" rx="14" fill="#fff3c4" stroke="#f2b53a" stroke-width="2"/><text x="260" y="285" text-anchor="middle" font-size="13" font-weight="900" fill="#b05a14">10미 포장마차</text><text x="260" y="303" text-anchor="middle" font-size="10" fill="#7a4a1e">2.28 자유광장</text></g>
+          <g class="zone" data-z="lawn"><rect x="20" y="230" width="150" height="130" rx="40" fill="#bfe3a5" stroke="#2f9e6b" stroke-width="2"/><text x="95" y="290" text-anchor="middle" font-size="13" font-weight="900" fill="#1f6e49">대구 로컬 장터</text><text x="95" y="308" text-anchor="middle" font-size="10" fill="#2c5c43">잔디광장</text></g>
+          <g class="zone" data-z="hall"><rect x="20" y="40" width="110" height="120" rx="10" fill="#fde6ee" stroke="#e98bab" stroke-width="2"/><text x="75" y="95" text-anchor="middle" font-size="13" font-weight="900" fill="#b04d74">말손님 사랑방</text><text x="75" y="113" text-anchor="middle" font-size="10" fill="#7a4a5e">실내 · 냉방</text></g>
+          <g class="poi" data-p="stage"><circle cx="230" cy="125" r="11" fill="#3b9ae1"/><text x="230" y="129" text-anchor="middle" font-size="11">🎤</text></g>
+          <g class="poi" data-p="food"><circle cx="230" cy="325" r="11" fill="#f2b53a"/><text x="230" y="329" text-anchor="middle" font-size="11">🍢</text><circle cx="295" cy="325" r="11" fill="#f2b53a"/><text x="295" y="329" text-anchor="middle" font-size="11">🍢</text></g>
+          <g class="poi" data-p="wc"><circle cx="175" cy="190" r="10" fill="#fff" stroke="#555"/><text x="175" y="194" text-anchor="middle" font-size="10">🚻</text><circle cx="180" cy="380" r="10" fill="#fff" stroke="#555"/><text x="180" y="384" text-anchor="middle" font-size="10">🚻</text><circle cx="330" cy="215" r="10" fill="#fff" stroke="#555"/><text x="330" y="219" text-anchor="middle" font-size="10">🚻</text></g>
+          <g class="poi" data-p="cool"><circle cx="110" cy="145" r="10" fill="#bfe0ff"/><text x="110" y="149" text-anchor="middle" font-size="10">❄️</text><circle cx="140" cy="250" r="10" fill="#bfe0ff"/><text x="140" y="254" text-anchor="middle" font-size="10">❄️</text></g>
+          <g class="poi" data-p="med"><circle cx="300" cy="190" r="10" fill="#fff" stroke="#e98bab"/><text x="300" y="194" text-anchor="middle" font-size="10">⛑</text></g>
+          <text x="345" y="430" text-anchor="end" font-size="9" fill="#5b6b4f">※ 배치 시안 · 실제 구역·대관 미확정</text>
+        </svg>
+      </div>
+      <div class="card zinfo" id="zinfo"><b>구역을 눌러 보세요</b><p class="muted">무대·포장마차·장터·사랑방 운영 시간을 보여 줘요.</p></div>
+    </section>
+
+    <!-- ============ 능력고사 ============ -->
+    <section class="page" id="quiz">
+      <h2 class="ttl">대구 사투리 능력고사</h2>
+      <div class="card say"><img class="side-img" src="assets/cat.png" alt="토박이 냥이" style="margin:-6px 0 -10px -4px"><p class="muted" style="flex:1"><b style="color:var(--pri-d)">토박이 냥이</b>가 내는 5문제! 다 맞히면 <b>토박이</b>, 못 맞혀도 괜찮아요 — <b style="color:var(--green-d)">귀한 말손님</b>으로 대환영이라예.</p></div>
+      <div class="card" id="quizBox"></div>
+      <div class="card">
+        <b style="font-size:15px">🔁 냥이의 표준어 → 대구말 변환기 <span class="tag">맛보기</span></b>
+        <p class="muted" style="margin-top:4px">자주 쓰는 표현만 바꿔 줘요. 정식 버전은 방언 데이터로 만들 예정이에요.</p>
+        <div class="conv"><input id="convIn" placeholder="예: 정말 맛있다, 똑바로 해" aria-label="바꿀 표준어 문장"><button class="btn red" id="convBtn">변환</button></div>
+        <div class="conv-out" id="convOut">여기에 대구말이 나와요</div>
+      </div>
+    </section>
+
+    <!-- ============ 포장마차 (홈에서 진입) ============ -->
+    <section class="page" id="food">
+      <h2 class="ttl">10미 포장마차</h2>
+      <div class="card say" style="background:linear-gradient(120deg,var(--pri-d),var(--pri));color:#fff">
+        <div style="flex:1"><b>💬 냥이가 알려 주는 대구말 주문</b>
+        <p style="font-size:13px;opacity:.9;margin-top:4px">“막창 2인분 주이소” — 대구말로 주문하면 스탬프 1개! 표준어로 주문해도 괜찮아요.</p></div>
+        <img class="side-img" src="assets/cat.png" alt="토박이 냥이">
+      </div>
+      <div class="card" id="menu"></div>
+    </section>
+  </main>
+
+  <nav id="nav">
+    <button class="on" data-go="home"><span class="ni">🏠</span>홈</button>
+    <button data-go="about"><span class="ni">📜</span>행사개요</button>
+    <button data-go="time"><span class="ni">🕒</span>시간표</button>
+    <button data-go="debate"><span class="ni">🎤</span>토론대회</button>
+    <button data-go="map"><span class="ni">🗺</span>지도</button>
+    <button data-go="quiz"><span class="ni">📝</span>능력고사</button>
+  </nav>
+</div>
+
+<div class="sheet" id="sheet">
+  <div class="sheet-in">
+    <div class="sheet-h"><span style="display:flex;align-items:center;gap:8px"><img class="avatar" src="assets/cat.png" alt="">토박이 냥이 도우미 <span class="tag">시안 · 정해진 답변만</span></span><button id="aiClose" aria-label="닫기" style="font-size:20px">✕</button></div>
+    <div class="msgs" id="msgs"></div>
+    <div class="sugg" id="sugg"></div>
+    <form class="chat-in" id="chatForm"><input id="chatIn" placeholder="궁금한 거 물어보이소" aria-label="질문 입력"><button class="btn red" type="submit">전송</button></form>
+  </div>
+</div>
+<div class="toast" id="toast"></div>
+
+<script>
+const $=s=>document.querySelector(s), $$=s=>[...document.querySelectorAll(s)];
+const toast=m=>{const t=$('#toast');t.textContent=m;t.classList.add('on');clearTimeout(t._h);t._h=setTimeout(()=>t.classList.remove('on'),1800)};
+const state={checked:false,stamps:0,voted:null,stay:false,quizDone:false};
+
+/* ---------- navigation ---------- */
+const navMap={stay:['about','a3'],tour:['about','a3'],food:['food']};
+function go(id){
+  const [page,pane]=navMap[id]||[id];
+  $$('.page').forEach(p=>p.classList.toggle('on',p.id===page));
+  $$('#nav button').forEach(b=>b.classList.toggle('on',b.dataset.go===page));
+  if(pane) setSeg('about',pane);
+  window.scrollTo({top:0});
+  if(id==='stay'||id==='tour') setTimeout(()=>document.getElementById(id).scrollIntoView({behavior:'smooth',block:'start'}),60);
+}
+document.addEventListener('click',e=>{const b=e.target.closest('[data-go]');if(b){go(b.dataset.go)}});
+function setSeg(group,key){
+  $$(`[data-seg="${group}"] button`).forEach(b=>b.classList.toggle('on',b.dataset.k===key));
+  $$(`[data-pane="${group}"]`).forEach(p=>p.hidden=p.id!==key);
+}
+$$('[data-seg]').forEach(seg=>seg.addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;
+  const g=seg.dataset.seg; if(g==='time'){$$('[data-seg=time] button').forEach(x=>x.classList.toggle('on',x===b));renderTT(b.dataset.k)} else setSeg(g,b.dataset.k)}));
+
+/* ---------- check-in & stamps (데모: 개인정보 입력 없음) ---------- */
+function addStamp(why){ if(state.stamps>=3)return; state.stamps++; renderStamps(); toast(`스탬프 ${state.stamps}/3 · ${why}`); if(state.stamps===3) setTimeout(()=>toast('🎓 말손님 수료증 받을 수 있어요!'),1900)}
+function renderStamps(){ $$('#stamps .stamp').forEach((s,i)=>{s.classList.toggle('on',i<state.stamps);s.textContent=i<state.stamps?'말':i+1}) }
+$('#ciBtn').addEventListener('click',()=>{
+  if(!state.checked){state.checked=true;$('#ciTitle').textContent='어서 오이소, 말손님!';$('#ciSub').textContent='체크인 완료 (시안 데모 · 실제 정보는 받지 않아요)';$('#ciBtn').textContent='QR 스탬프 찍기 ›';addStamp('입장 체크인');}
+  else addStamp('구역 QR');
+});
+$('#stayBtn').addEventListener('click',()=>{ if(!state.checked){toast('먼저 홈에서 체크인해 주이소');return} if(state.stay){toast('이미 인증했어요');return} state.stay=true;$('#chipStay').classList.add('on');toast('🏨 숙박 인증 완료 (데모) · 대구로페이 2만 원')});
+
+/* ---------- timetable ---------- */
+const TT={
+ d1:[['11:00','—','사랑방 개관'],['12:00~16:00','<span class="tag">폭염 · 야외 쉼</span>','현장 능력고사 · 사진관','heat'],['15:00','—','로컬 장터 개장 🛍'],['17:00','—','10미 포장마차 오픈 🍢'],['19:00','<b>개막식</b>',''],['19:20~21:00','<b>토론 16강</b> (8경기)','','hl'],['23:00','마감','']],
+ d2:[['11:00','—','현장 능력고사 · 사진관'],['12:00~16:00','<span class="tag">폭염 · 야외 쉼</span>','억양 맞히기 게임','heat'],['17:00~18:00','<b>토론 8강</b> (4경기)',''],['19:30~20:00','<b>토론 4강</b> (2경기)',''],['20:30~21:15','🏆 <b>결승</b>','','hl'],['21:15','시상 · 말손님 수료식',''],['23:00','마감 · 야간 셔틀','']],
+ d3:[['11:00','—','원조가게 스탬프투어 출발 🏮'],['12:00~16:00','<span class="tag">폭염 · 야외 쉼</span>','사투리 사진관','heat'],['14:00','','🎙 한 마디 토론 (오픈 마이크)'],['17:00','—','포장마차 오픈 🍢'],['19:00~20:30','<b>폐막 갈라</b> · 명장면 다시 보기','','hl'],['21:00','폐막','']]
+};
+function renderTT(d){ $('#ttBody').innerHTML=TT[d].map(([t,a,b,c])=>`<tr class="${c||''}"><td>${t}</td><td class="${c==='hl'?'hl':''}">${a}</td><td>${b}</td></tr>`).join('') }
+renderTT('d1');
+
+/* ---------- debate ---------- */
+$('#bracket').innerHTML=Array.from({length:8},(_,i)=>`<div class="vs"><div class="team d"><img src="assets/cat.png" alt="">토박이 ${String.fromCharCode(65+i)}</div><i>VS</i><div class="team g"><img src="assets/dog.png" alt="">말손님 ${String.fromCharCode(65+i)}</div></div>`).join('');
+const TOPICS=[
+ ['처음 만난 사이 “밥 뭇나?”는 인사다 vs 진짜 질문이다','하','12분','경험담 QR 투표'],
+ ['야끼우동, 이름만 우동이지 볶음면이다 vs 그래도 우동이다','하','12분','현장 시식 후 투표'],
+ ['납작만두, 간장 찍어야 원조다 vs 떡볶이 국물이 정답이다','하','12분','포장마차 연계 투표'],
+ ['“됐나?” “됐다.” 두 마디면 대화 끝난다 vs 안 된다','중','12분','관객이 상황극 제시'],
+ ['첫 대구 여행, 막창 먼저다 vs 뭉티기 먼저다','중','12분','10미 스탬프 연계'],
+ ['(결승) 대구말 배울 때, 억양이 먼저다 vs 단어가 먼저다','상','15분','관객 투표 40%']];
+$('#topics').innerHTML=TOPICS.map(([t,l,m,v])=>`<div class="topic"><b>${t}</b><div class="meta"><span class="tag">난이도 ${l}</span><span class="tag">⏱ ${m}</span><span class="tag">🙋 ${v}</span></div></div>`).join('')+'<p class="muted" style="font-size:11.5px;margin-top:8px">지역 비하·정치·젠더·세대 갈등 논제는 다루지 않아요.</p>';
+let votes=[312,287];
+$$('.vote button').forEach(b=>b.addEventListener('click',()=>{
+  if(!state.checked){toast('체크인해야 투표할 수 있어요');go('home');return}
+  if(state.voted!==null){toast('투표는 한 번만 돼요');return}
+  state.voted=+b.dataset.v;votes[state.voted]++;b.classList.add('picked');$('#chipVote').classList.add('on');
+  const s=votes[0]+votes[1],p=Math.round(votes[0]/s*100);$('#vb0').style.width=p+'%';$('#vb1').style.width=(100-p)+'%';
+  $('#vtxt').textContent=`토박이 ${p}% · 말손님 ${100-p}% (예시 숫자)`;addStamp('관객 투표');
+}));
+
+/* ---------- map ---------- */
+const ZONES={music:['🎤 말판 무대 · 코오롱 야외음악당','토론 16강(금 19:20) · 8강·4강·결승(토 17:00~21:15) · 폐막 갈라(일 19:00)'],
+ plaza:['🍢 10미 포장마차 · 2.28 자유광장','금·토 17:00~23:00 / 일 17:00~21:00 · 웹앱으로 대기 번호 확인'],
+ lawn:['🛍 대구 로컬 장터 · 잔디광장','매일 15:00~22:00 · 대구 소상공인·로컬 브랜드'],
+ hall:['🏠 말손님 사랑방 · 실내','매일 11:00~18:00 · 현장 고사·사진관·냉방 쉼터 · 비 오면 토론 대체 무대']};
+$$('.zone').forEach(z=>z.addEventListener('click',()=>{const [t,d]=ZONES[z.dataset.z];$('#zinfo').innerHTML=`<b>${t}</b><p class="muted" style="margin-top:4px">${d}</p>`}));
+$$('#filters .chip').forEach(c=>c.addEventListener('click',()=>{c.classList.toggle('on');$$(`.poi[data-p="${c.dataset.f}"]`).forEach(p=>p.classList.toggle('off',!c.classList.contains('on')))}));
+
+/* ---------- food menu ---------- */
+const MENU=[['따로국밥','따로국밥 한 그릇 주이소'],['막창구이','막창 2인분 주이소'],['뭉티기','뭉티기 한 접시 주이소'],['동인동찜갈비','찜갈비 맵게 해 주이소'],['논메기매운탕','매운탕 하나 주이소'],['복어불고기','복불고기 하나 주이소'],['누른국수','누른국수 두 개 주이소'],['무침회','무침회 하나 주이소'],['야끼우동','야끼우동 억수로 맵게요'],['납작만두','납작만두 하나 주이소']];
+$('#menu').innerHTML=MENU.map(([n,s],i)=>`<div class="info-row" style="align-items:center"><dt style="width:auto;flex:1;color:var(--ink)">${n}<br><span class="muted" style="font-weight:400;font-size:12px">“${s}”</span></dt><dd><button class="btn ghost" style="padding:7px 12px;font-size:12px" data-order="${i}">대기 번호</button></dd></div>`).join('');
+$('#menu').addEventListener('click',e=>{const b=e.target.closest('[data-order]');if(!b)return;const n=Math.floor(Math.random()*20)+5;b.textContent=`대기 ${n}팀`;b.disabled=true;toast(`${MENU[b.dataset.order][0]} · 앞에 ${n}팀 (예시)`)});
+
+/* ---------- quiz ---------- */
+const Q=[
+ ['단디 해라','무슨 뜻일까요?',['단단하게 묶어라','확실히·똑바로 해라','빨리 해라'],1],
+ ['정구지','무슨 채소일까요?',['부추','시금치','깻잎'],0],
+ ['억수로','어떤 뜻일까요?',['비가 많이','아주·매우','억지로'],1],
+ ['마카 다 온나','누구보고 오라는 걸까요?',['마카라는 사람','모두 다','말 타고'],1],
+ ['파이다','어떤 상황에서 쓸까요?',['파이를 먹을 때','별로라서 아쉬울 때','기분이 좋을 때'],1]];
+let qi=0,score=0;
+function renderQ(){
+  const box=$('#quizBox');
+  if(qi>=Q.length){
+    const g=score>=5?['토박이','냥이랑 같은 토박이 급이네예! 토박이 팀으로 나가도 되겠는데요?']:score>=3?['반쯤 대구 사람','이 정도면 대구 와서 길 잃을 일은 없겠네예.']:['귀한 말손님','멍이랑 같은 말손님이네예. 처음엔 다 그래요, 현장 와서 배워 가이소!'];
+    const img=score>=5?'cat.png':score>=3?'pair.png':'dog.png';
+    box.innerHTML=`<div class="result"><img src="assets/${img}" alt="" style="height:150px;width:auto;margin:0 auto 4px;display:block"><p class="muted">${score} / ${Q.length} 정답</p><div class="grade">${g[0]}</div><p class="muted">${g[1]}</p>
+      <div style="display:grid;gap:8px;margin-top:16px"><button class="btn red" style="justify-content:center" data-go="debate">토론 예선 신청하기 (6/1~7/6)</button><button class="btn ghost" style="justify-content:center" data-go="stay">결승 관람 예약 · 숙박 혜택 보기</button><button class="btn ghost" style="justify-content:center" id="retry">다시 풀기</button></div></div>`;
+    $('#retry').onclick=()=>{qi=0;score=0;renderQ()};
+    if(!state.quizDone){state.quizDone=true;$('#chipQuiz').classList.add('on');if(state.checked)addStamp('능력고사 완료')}
+    return;
+  }
+  const [w,a,o,ans]=Q[qi];
+  box.innerHTML=`<div class="q-prog"><div style="width:${qi/Q.length*100}%"></div></div><p class="muted" style="text-align:center">문제 ${qi+1} / ${Q.length}</p><div class="q-word">“${w}”</div><p class="q-ask">${a}</p><div class="opts">${o.map((x,i)=>`<button class="opt" data-i="${i}">${x}</button>`).join('')}</div>`;
+  $$('.opt').forEach(b=>b.onclick=()=>{ $$('.opt').forEach(x=>x.disabled=true); const ok=+b.dataset.i===ans; if(ok)score++;
+    b.classList.add(ok?'ok':'no'); if(!ok) $$('.opt')[ans].classList.add('ok'); setTimeout(()=>{qi++;renderQ()},700)});
+}
+renderQ();
+
+/* ---------- converter (맛보기 사전) ---------- */
+const DICT=[[/정말|진짜|매우|아주|엄청/g,'억수로'],[/똑바로|확실히|제대로/g,'단디'],[/맛있다/g,'맛있데이'],[/모두|전부/g,'마카'],[/왜 그래|왜 이래/g,'와 이카노'],[/별로다|별로야/g,'파이다'],[/부추/g,'정구지'],[/밥 먹었어\??/g,'밥 뭇나?'],[/됐어\?/g,'됐나?'],[/해\b|해라/g,'해라이'],[/주세요/g,'주이소'],[/와라|와\b/g,'온나'],[/나랑/g,'내캉'],[/아니에요/g,'어데예'],[/뭐 해\??/g,'머 하노?']];
+$('#convBtn').addEventListener('click',()=>{let t=$('#convIn').value.trim();if(!t){toast('문장을 적어 주이소');return}
+  let out=t;DICT.forEach(([r,v])=>out=out.replace(r,v));$('#convOut').textContent=out===t?`“${t}” — 아직 모르는 표현이라예. 현장 사랑방에서 물어보이소!`:out});
+
+/* ---------- 말손이 도우미 (규칙 기반 데모) ---------- */
+const FAQ=[
+ [/시간|언제|몇 시|일정/, '8/20(금)~22(일)이고, 금·토는 11시~23시, 일요일은 21시까지예요. 토론 결승은 <b>토요일 저녁 8시 30분</b>! 시간표 탭에서 자세히 볼 수 있어요.'],
+ [/결승|토론|대진|참가|신청|예선/, '토론 예선은 6/1~7/6 영상 접수예요(2인 1팀). 토박이 팀은 대구·경북 거주, 말손님 팀은 그 외 지역이에요. 결승은 토요일 20:30 말판 무대.'],
+ [/숙박|호텔|자고|1박|묵/, '8/20·21 대구 숙박 영수증을 인증하면 대구로페이 2만 원이랑 결승 관람석 우선 입장! 행사개요 → 숙박·혜택에서 볼 수 있어요.'],
+ [/먹|포장마차|10미|막창|음식/, '2.28 자유광장 10미 포장마차는 17시부터예요. 대구말로 주문하면 스탬프 1개! 웹앱에서 대기 번호도 확인돼요.'],
+ [/덥|폭염|더위|쉼터|에어컨/, '낮 12~16시는 실내 말손님 사랑방에서 노이소. 냉방 쉼터 위치는 지도 탭 ❄️ 표시예요. 물 자주 드시고예!'],
+ [/비|우천/, '비 오면 토론은 실내 사랑방 무대로 옮기고, 결승은 일요일 19시 예비일이 있어요. (시안 기준)'],
+ [/화장실|주차|교통|셔틀|지하철/, '화장실은 지도 탭 🚻 필터로 볼 수 있어요. 교통·주차·셔틀 노선은 아직 확정 전이에요(시안).'],
+ [/고사|퀴즈|시험/, '능력고사 탭에서 5문제 맛보기 고사를 풀 수 있어요. 등급이 토박이 / 반쯤 대구 사람 / 귀한 말손님으로 나와요.'],
+ [/스탬프|수료|원조/, '스탬프 3개 모으면 말손님 수료증! 일요일엔 원조가게 3곳 들르면 대구로페이 1만 원이에요.']];
+const sugg=['결승 언제 해요?','숙박 혜택 알려줘','너무 더운데 어디 가요?','토론 참가하려면?','비 오면요?'];
+function say(html,who){const d=document.createElement('div');d.className='msg '+who;d.innerHTML=html;
+  if(who==='bot'){const w=document.createElement('div');w.className='row-msg';w.innerHTML='<img class="avatar" src="assets/cat.png" alt="">';w.appendChild(d);$('#msgs').appendChild(w)} else $('#msgs').appendChild(d);
+  $('#msgs').scrollTop=1e9}
+function answer(q){say(q.replace(/</g,'&lt;'),'me');const hit=FAQ.find(([r])=>r.test(q));setTimeout(()=>say(hit?hit[1]:'음… 그건 아직 잘 모르겠어예. 시간표·숙박·토론·먹거리·폭염 쪽으로 물어봐 주이소! (시안 데모라 정해진 답만 해요)','bot'),350)}
+$('#sugg').innerHTML=sugg.map(s=>`<button>${s}</button>`).join('');
+$('#sugg').addEventListener('click',e=>{const b=e.target.closest('button');if(b)answer(b.textContent)});
+$('#chatForm').addEventListener('submit',e=>{e.preventDefault();const v=$('#chatIn').value.trim();if(v){answer(v);$('#chatIn').value=''}});
+$('#aiOpen').addEventListener('click',()=>{$('#sheet').classList.add('on');if(!$('#msgs').children.length)say('말손님, 어서 오이소! 대구 토박이 냥이라예 👋<br>축제 시간표, 숙박 혜택, 토론 참가, 먹거리… 궁금한 거 물어보이소.','bot')});
+$('#aiClose').addEventListener('click',()=>$('#sheet').classList.remove('on'));
+$('#sheet').addEventListener('click',e=>{if(e.target.id==='sheet')$('#sheet').classList.remove('on')});
+</script>
+</body>
+</html>
