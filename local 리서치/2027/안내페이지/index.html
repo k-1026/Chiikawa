@@ -1,35 +1,36 @@
-<!doctype html>
-<html lang="ko">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>타지에서 온 말손님</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
 <style>
+  /* 레이아웃: 축제 현장용 모바일 앱 한 장(430px 프레임) + 하단 탭 6개. 의도적으로 라이트 단일 테마 */
   :root{
-    /* 고양이(말손님) 파랑 기준 팔레트 */
+    color-scheme:light;
+    /* 토박이 고양이 파랑 기준 팔레트 */
     --pri:#3b9ae1; --pri-d:#1f6fb2; --sky:#8fd0f5; --sky-l:#d8eefc; --pink:#f4a6bf;
     --yellow:#ffd23f; --cream:#eef7fd;
     --ink:#16243a; --ink-2:#506279; --line:#d3e6f4; --card:#ffffff; --bg:#15202e;
     --green:#4caf50; --green-d:#2e7d32; --green-l:#e1f3e1; --blue:#3b9ae1;
     --shadow:0 6px 18px rgba(20,70,120,.12);
   }
-  *{box-sizing:border-box;margin:0;padding:0}
-  html,body{height:100%}
+  *,*::before,*::after{box-sizing:border-box}
+  body,body *{margin:0;padding:0}
+  html,body{min-height:100%}
   body{background:var(--bg);font-family:"Noto Sans KR",system-ui,sans-serif;color:var(--ink);-webkit-font-smoothing:antialiased}
   button{font:inherit;color:inherit;border:0;background:none;cursor:pointer}
   .app{max-width:430px;margin:0 auto;min-height:100%;background:var(--cream);position:relative;display:flex;flex-direction:column}
   /* top bar */
-  .top{position:sticky;top:0;z-index:20;display:flex;align-items:center;justify-content:space-between;padding:12px 16px;background:rgba(238,247,253,.92);backdrop-filter:blur(8px)}
+  .top{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;display:flex;align-items:center;justify-content:space-between;padding:12px 16px;background:rgba(238,247,253,.92);backdrop-filter:blur(8px)}
   .logo{font-family:"Black Han Sans",sans-serif;font-size:19px;line-height:1;color:var(--pri-d);letter-spacing:-.5px;text-shadow:1.5px 1.5px 0 var(--sky-l)}
-  .logo small{display:block;font-family:"Noto Sans KR";font-weight:700;font-size:10px;color:var(--ink-2);text-shadow:none;letter-spacing:0;margin-bottom:2px}
+  .logo small{display:block;font-family:"Noto Sans KR",sans-serif;font-weight:700;font-size:10px;color:var(--ink-2);text-shadow:none;letter-spacing:0;margin-bottom:2px}
   .top-r{display:flex;gap:8px;align-items:center}
   .pill{font-size:11px;font-weight:700;padding:5px 9px;border-radius:99px;background:#fff;border:1px solid var(--line)}
   .draft{background:var(--ink);color:#fff;border:0}
   main{flex:1;padding:4px 16px 96px}
   .page{display:none;animation:fade .25s ease}
   .page.on{display:block}
+  body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:25;background:var(--cream)}
+  @media (prefers-reduced-motion:reduce){.page{animation:none}.bar div,.q-prog div,.toast{transition:none}}
+  button:focus-visible,input:focus-visible{outline:3px solid var(--yellow);outline-offset:2px}
   @keyframes fade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
   h2.ttl{font-size:18px;font-weight:900;text-align:center;margin:8px 0 14px}
   .card{background:var(--card);border-radius:16px;box-shadow:var(--shadow);padding:16px;margin-bottom:12px}
@@ -41,7 +42,7 @@
   .hero-stage figure{text-align:center;flex:1}
   .hero-stage img{width:100%;max-width:150px;height:auto;display:block;margin:0 auto}
   .hero-stage figcaption{font-size:11.5px;font-weight:900;margin-top:2px}
-  .hero-stage .vsmark{font-family:"Black Han Sans";font-size:26px;color:var(--yellow);-webkit-text-stroke:1px var(--pri-d);align-self:center;padding:0 2px}
+  .hero-stage .vsmark{font-family:"Black Han Sans","Noto Sans KR",sans-serif;font-size:26px;color:var(--yellow);-webkit-text-stroke:1px var(--pri-d);align-self:center;padding:0 2px}
   .cap-a{color:var(--pri-d)} .cap-b{color:var(--green-d)}
   .friends{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:12px}
   .friend{border-radius:16px;padding:12px;box-shadow:var(--shadow);text-align:center;background:#fff}
@@ -106,7 +107,7 @@
   .team{display:flex;align-items:center;justify-content:center;gap:4px}
   .team img{width:24px;height:24px;object-fit:cover;object-position:50% 44%;border-radius:50%;background:#fff}
   .team.d{background:var(--sky-l);color:var(--pri-d)} .team.g{background:var(--green-l);color:var(--green-d)}
-  .vs i{font-style:normal;font-family:"Black Han Sans";color:var(--ink-2);font-size:14px}
+  .vs i{font-style:normal;font-family:"Black Han Sans","Noto Sans KR",sans-serif;color:var(--ink-2);font-size:14px}
   .legend{display:flex;gap:10px;justify-content:center;font-size:12px;margin-bottom:10px}
   .legend span::before{content:"";display:inline-block;width:10px;height:10px;border-radius:3px;margin-right:4px;vertical-align:-1px;background:var(--c)}
   .topic{padding:12px 0;border-bottom:1px solid var(--line)} .topic:last-child{border:0}
@@ -129,13 +130,13 @@
   /* quiz */
   .q-prog{height:6px;border-radius:99px;background:var(--sky-l);overflow:hidden;margin-bottom:14px}
   .q-prog div{height:100%;background:var(--pri);transition:width .3s}
-  .q-word{font-family:"Black Han Sans";font-size:30px;text-align:center;color:var(--pri);margin:10px 0 4px}
+  .q-word{font-family:"Black Han Sans","Noto Sans KR",sans-serif;font-size:30px;text-align:center;color:var(--pri);margin:10px 0 4px}
   .q-ask{text-align:center;font-size:14px;color:var(--ink-2);margin-bottom:16px}
   .opts{display:grid;gap:8px}
   .opt{padding:13px;border-radius:12px;background:#fff;border:2px solid var(--line);font-weight:700;font-size:14px;text-align:left}
   .opt.ok{border-color:var(--green);background:#e7f6ee} .opt.no{border-color:var(--pink);background:#fdebf1}
   .result{text-align:center}
-  .grade{font-family:"Black Han Sans";font-size:34px;color:var(--pri-d);margin:6px 0}
+  .grade{font-family:"Black Han Sans","Noto Sans KR",sans-serif;font-size:34px;color:var(--pri-d);margin:6px 0}
   .conv{display:flex;gap:8px;margin-top:10px}
   .conv input{flex:1;padding:11px 12px;border-radius:12px;border:2px solid var(--line);font:inherit;font-size:14px;background:#fff}
   .conv-out{margin-top:10px;padding:12px;border-radius:12px;background:var(--cream);font-weight:700;min-height:44px}
@@ -166,14 +167,12 @@
   .info-row dt{width:64px;flex:none;color:var(--ink-2);font-weight:700}
   .prog{display:flex;gap:12px;align-items:flex-start;padding:12px 0;border-bottom:1px solid var(--line)}
   .prog:last-child{border:0}
-  .prog .num{width:34px;height:34px;flex:none;border-radius:10px;background:var(--pri);color:#fff;font-family:"Black Han Sans";display:grid;place-items:center;font-size:16px}
+  .prog .num{width:34px;height:34px;flex:none;border-radius:10px;background:var(--pri);color:#fff;font-family:"Black Han Sans","Noto Sans KR",sans-serif;display:grid;place-items:center;font-size:16px}
   .prog b{font-size:14.5px}
   .flow{display:flex;align-items:center;gap:4px;flex-wrap:wrap;font-size:12px;font-weight:700}
   .flow span{background:#fff;border:1px solid var(--line);padding:5px 8px;border-radius:8px}
   .flow i{font-style:normal;color:var(--pri)}
 </style>
-</head>
-<body>
 <div class="app">
   <header class="top">
     <div class="logo"><small>2027 대구 사투리 축제</small>타지에서 온 말손님</div>
@@ -510,5 +509,3 @@ $('#aiOpen').addEventListener('click',()=>{$('#sheet').classList.add('on');if(!$
 $('#aiClose').addEventListener('click',()=>$('#sheet').classList.remove('on'));
 $('#sheet').addEventListener('click',e=>{if(e.target.id==='sheet')$('#sheet').classList.remove('on')});
 </script>
-</body>
-</html>
