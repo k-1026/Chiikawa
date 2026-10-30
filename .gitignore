@@ -1,0 +1,9 @@
+# macOS
+.DS_Store
+
+# 파이썬
+__pycache__/
+*.pyc
+
+# 비밀 키
+.env
