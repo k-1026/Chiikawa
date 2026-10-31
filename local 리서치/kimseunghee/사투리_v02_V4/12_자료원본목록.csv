@@ -45,8 +45,8 @@ ID,v01 ID,하위 키워드,제목,지역 범위,출처 등급,발행일,근거 �
 08-07,-,08,전주 사투리 볼펜,전국 참고,② 기사,2026-04-15,판매 수치 없음,단일 출처,확인,벤치마크,https://www.hankyung.com/amp/2026041519611,조건부,C
 08-08,T17,08,로컬 굿즈 티셔츠 트렌드,경상권 참고,② 기사,2026-09,-,단일 출처,확인,벤치마크,https://www.hankyung.com/article/202609118650H,조건부,C
 08-09,-,08,지자체 사투리 사업(안동·포항·문경 등),경상권 참고,② 기사,2016-02-16,-,단일 출처,확인,정보(기간외),https://www.imaeil.com/page/view/2016021600381518116,제외,F
-08-10,-,08,스코틀랜드 Royal National Mòd,해외 참고,① 공식(보고서 미열람),2019~2024,"£3.2m(2019, STR&Glamis 작성), £2.5m(2022)",단일 출처,확인,벤치마크(공식 미검증),https://www.gaidhlig.scot/?p=4699,조건부,C
-08-11,N04,08,웨일스 National Eisteddfod,해외 참고,③ 비공식,2025-08,미확인(15만/17만 근거 없음),근거 미확보,추정,벤치마크,https://eisteddfod.wales,보류,E
+08-10,-,08,스코틀랜드 Royal National Mòd,해외 참고,② 기사·① 공식,2019~2024,"£3.2m(2019), £2.5m(2022), £1.7m(2023), £3.6m(2024·2차), £3.9m(2025·2차)",부분 확인(2024·2025는 2차 인용),확인,벤치마크(공식 미검증),https://www.gaidhlig.scot/?p=4699,조건부,C
+08-11,N04,08,웨일스 National Eisteddfod,해외 참고,③ 비공식,2025-08,"175,000명(카운슬)",해소(공식 방문객 확인),확인,벤치마크,https://news.wrexham.gov.uk/visitor-figures-reveal-huge-success-of-wrexham-eisteddfod/,조건부,C
 08-12,-,08·09,일본 가고시마현 방언 주간,해외 참고,① 공식,2026(令和8),-,단일 출처(요약 기반),확인,벤치마크,https://www.pref.kagoshima.jp/ab10/kyoiku-bunka/bunka/shinko/hougennsyuukann/r4hougennsyuukann.html,조건부,C
 08-13,-,08,일본 방언 호감도 순위(라이브재팬),해외 참고,③ 비공식,미확인,순위,단일 출처,확인,반응,https://livejapan.com/ko/article-a0002714/,보류,E
 09-01,T14,09,대구시민주간 사투리 이쁘다 아이가,대구 직접,② 기사,2023-02-19,참여 인원 미확인,단일 출처,확인,정보,https://kbmaeil.com/article/202302190355367,조건부,B
@@ -57,3 +57,11 @@ ID,v01 ID,하위 키워드,제목,지역 범위,출처 등급,발행일,근거 �
 09-07,-,09,전라북도 국어 진흥 조례,전국 참고,② 기사,2025-06-07,2021 제정(요약),단일 출처,확인,벤치마크,https://www.jjan.kr/article/20250606580078,조건부,C
 09-08,T13,09,창원시 지역어 보전 조례,경상권 참고,② 기사,2024-03-11,-,단일 출처,확인,벤치마크,https://www.metroseoul.co.kr/article/20240311500609,조건부,C
 09-10,N03,09,방구석 부산 사투리 노래자랑,경상권 참고,② 기사,2022,참가자 수 미확인,단일 출처,확인,벤치마크,https://dhnews.co.kr/news/view/179524800093246,조건부,C
+14-01,-,03·14,아이돌 무섭노 말투 여론조사(개혁연구원 실시·개혁신당 발표),전국 참고,② 기사,2026-07-07,"사투리 55.8%, 일베식 16.7%, 모름 27.5% (500명, 응답률 0.53%)",단일 출처(정당 발표),확인,반응,https://www.m-economynews.com/mobile/article.html?no=68518,조건부,D
+14-02,-,03·14,MBC경남 PD 지적·시청자 항의 경위,경상권 참고,② 기사,2026-07-07,수치 없음,단일 출처,확인,반응,https://sports.khan.co.kr/article/202607070917003,조건부,D
+14-03,-,06·14,대구 사투리 크리에이터와 지역 광고(로컬경제학),대구 직접,② 기사,2026-08-21,대구타이슨형제들·워효 수치 없음,단일 출처,확인,반응,https://www.imaeil.com/page/view/2026081815385103597,조건부,D
+14-04,-,06·14,대구 달서구 관광홍보 웹드라마,대구 직접,② 기사,2024-05-08,50만/233만/17만 회 (사투리 언급 없음),단일 출처(구청 발표),확인,제외(사투리 무관),https://kbmaeil.com/article/202405070393065,제외,F
+14-05,-,06·14,파밍레터 피식대학 릴스 440만 회,전국 참고,③ 비공식,2024-02-14,440만 회,단일 출처(집계 주체 없음),확인,반응,https://maily.so/farmingletter/posts/d2b021e9,조건부,D
+14-10,-,08·14,Mòd 2019 Glasgow / 2022 Perth / 2023 Paisley 효과,해외 참고,② 기사·① 공식,2020~2024,£3.2m / £2.5m / £1.7m,원문 확인(산출 주체 일부 미기재),확인,벤치마크,https://eventsbase.co.uk/increased-participation-in-the-royal-national-mod-brings-1-7-million-boost-to-paisley/,조건부,C
+14-11,-,08·14,Mòd 2024 Oban / 2025 Lochaber 효과(2차 인용),해외 참고,② 기사,2026-07-23,"£3.6m·9,000명 / £3.9m·9,400명+",단일 출처(2차 인용),확인,벤치마크,https://www.assemblyresearchmatters.org/2026/07/23/the-fleadh-the-mod-and-the-eisteddfod-socio-economic-considerations-for-national-cultural-festivals/,조건부,C
+14-12,-,08·14,Eisteddfod 2025 사전 추정 경제효과,해외 참고,② 기사,2025-04-01,"최대 £16m(사전 추정, 자원봉사 임원 발언)",단일 출처,추정,벤치마크(사전 추정),https://businessnewswales.com/cultural-events-set-to-give-north-wales-economy-a-multi-million-pound-boost/,조건부,C
