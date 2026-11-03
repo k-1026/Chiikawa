@@ -1,0 +1,216 @@
+{
+  "version": "1.1",
+  "units": "cm",
+  "height_definition": "antenna ball highest point to bottom of sole",
+  "rounding": "documents display 0.1 cm; exact working values retained in JSON",
+  "characters": {
+    "daekimi": {
+      "name": "대키미",
+      "height_cm": 103,
+      "cm_per_u": 1.03,
+      "front_projection": {
+        "head": {
+          "label": "머리 본체",
+          "width_cm": 69.78972,
+          "height_cm": 51.01869,
+          "basis": "부분 가림·수동 근사"
+        },
+        "body": {
+          "label": "몸통",
+          "width_cm": 34.65421,
+          "height_cm": 23.58411,
+          "basis": "팔다리 연결부 추정"
+        },
+        "ear_left": {
+          "label": "귀 1개",
+          "width_cm": 22.14019,
+          "height_cm": 22.6215,
+          "basis": "수동 근사"
+        },
+        "antenna_stem_left": {
+          "label": "안테나 줄기 1개",
+          "width_cm": 6.73832,
+          "height_cm": 12.51402,
+          "basis": "머리 연결부 추정"
+        },
+        "antenna_ball_left": {
+          "label": "안테나 구슬 1개",
+          "width_cm": 11.5514,
+          "height_cm": 12.99533,
+          "basis": "수동 근사"
+        },
+        "antenna_ball_right": {
+          "label": "반대쪽 구슬",
+          "width_cm": 12.03271,
+          "height_cm": 12.51402,
+          "basis": "수동 근사"
+        },
+        "arm_left": {
+          "label": "팔 1개",
+          "width_cm": 10.58879,
+          "height_cm": 16.36449,
+          "basis": "몸통 연결부 추정"
+        },
+        "leg_left": {
+          "label": "다리와 발 1개",
+          "width_cm": 14.43925,
+          "height_cm": 11.5514,
+          "basis": "분리 경계 제작 기준"
+        },
+        "foot_left": {
+          "label": "발 1개",
+          "width_cm": 14.43925,
+          "height_cm": 5.7757,
+          "basis": "발등 분리선 제작 기준"
+        },
+        "eye_left": {
+          "label": "화면 왼쪽 눈",
+          "width_cm": 21.65888,
+          "height_cm": 21.17757,
+          "basis": "검정 픽셀 연결영역 기준"
+        },
+        "eye_right": {
+          "label": "화면 오른쪽 눈",
+          "width_cm": 21.17757,
+          "height_cm": 21.65888,
+          "basis": "검정 픽셀 연결영역 기준"
+        },
+        "nose": {
+          "label": "코",
+          "width_cm": 3.85047,
+          "height_cm": 2.40654,
+          "basis": "수동 근사"
+        },
+        "mouth": {
+          "label": "기본 열린 입",
+          "width_cm": 6.73832,
+          "height_cm": 6.25701,
+          "basis": "수동 근사"
+        }
+      },
+      "production_dimensions": {
+        "head_depth_cm": 57.68,
+        "body_depth_cm": 27.81,
+        "foot_depth_cm": 19.57,
+        "tail_length_cm": 45.32,
+        "tail_diameter_cm": 10.3,
+        "tail_curl_radius_cm": 10.3,
+        "tail_root_y_cm": 85.49,
+        "head_top_y_cm": 21.218,
+        "eye_center_y_cm": 48.616,
+        "nose_center_y_cm": 55.105,
+        "mouth_bottom_y_cm": 62.521,
+        "antenna_center_spacing_cm": 22.66,
+        "antenna_ball_diameter_cm": 11.845
+      },
+      "inner_ear_area_percent": 55
+    },
+    "oejimong": {
+      "name": "외지몽",
+      "height_cm": 105,
+      "cm_per_u": 1.05,
+      "front_projection": {
+        "head": {
+          "label": "머리 본체",
+          "width_cm": 60.0,
+          "height_cm": 52.0,
+          "basis": "처진 귀에 가린 측면 경계 추정"
+        },
+        "body": {
+          "label": "몸통",
+          "width_cm": 36.5,
+          "height_cm": 27.5,
+          "basis": "팔다리 연결부 추정"
+        },
+        "ear_left": {
+          "label": "귀 1개",
+          "width_cm": 22.0,
+          "height_cm": 39.0,
+          "basis": "머리 연결부 추정"
+        },
+        "antenna_stem_left": {
+          "label": "안테나 줄기 1개",
+          "width_cm": 7.0,
+          "height_cm": 10.0,
+          "basis": "머리 연결부 추정"
+        },
+        "antenna_ball_left": {
+          "label": "안테나 구슬 1개",
+          "width_cm": 13.0,
+          "height_cm": 14.0,
+          "basis": "수동 근사"
+        },
+        "antenna_ball_right": {
+          "label": "반대쪽 구슬",
+          "width_cm": 13.5,
+          "height_cm": 14.0,
+          "basis": "수동 근사"
+        },
+        "arm_left": {
+          "label": "팔 1개",
+          "width_cm": 10.0,
+          "height_cm": 17.0,
+          "basis": "몸통 연결부 추정"
+        },
+        "leg_left": {
+          "label": "다리와 발 1개",
+          "width_cm": 16.0,
+          "height_cm": 13.0,
+          "basis": "분리 경계 제작 기준"
+        },
+        "foot_left": {
+          "label": "발 1개",
+          "width_cm": 16.0,
+          "height_cm": 6.0,
+          "basis": "발등 분리선 제작 기준"
+        },
+        "eye_left": {
+          "label": "화면 왼쪽 눈",
+          "width_cm": 20.0,
+          "height_cm": 21.5,
+          "basis": "검정 픽셀 연결영역 기준"
+        },
+        "eye_right": {
+          "label": "화면 오른쪽 눈",
+          "width_cm": 20.5,
+          "height_cm": 21.0,
+          "basis": "검정 픽셀 연결영역 기준"
+        },
+        "nose": {
+          "label": "코",
+          "width_cm": 6.0,
+          "height_cm": 4.5,
+          "basis": "검정 픽셀 영역 참고"
+        },
+        "mouth": {
+          "label": "기본 열린 입",
+          "width_cm": 10.0,
+          "height_cm": 9.0,
+          "basis": "수동 근사"
+        },
+        "muzzle": {
+          "label": "크림색 주둥이",
+          "width_cm": 22.5,
+          "height_cm": 20.0,
+          "basis": "수동 근사"
+        }
+      },
+      "production_dimensions": {
+        "head_depth_cm": 54.6,
+        "body_depth_cm": 28.35,
+        "foot_depth_cm": 19.95,
+        "tail_length_cm": 31.5,
+        "tail_diameter_cm": 11.55,
+        "tail_curl_radius_cm": 0.0,
+        "tail_root_y_cm": 88.2,
+        "head_top_y_cm": 19.53,
+        "eye_center_y_cm": 47.46,
+        "nose_center_y_cm": 52.29,
+        "mouth_bottom_y_cm": 63.525,
+        "antenna_center_spacing_cm": 27.3,
+        "antenna_ball_diameter_cm": 13.65
+      },
+      "inner_ear_area_percent": 45
+    }
+  }
+}
