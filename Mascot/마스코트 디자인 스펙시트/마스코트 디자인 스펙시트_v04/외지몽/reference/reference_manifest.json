@@ -1,0 +1,30 @@
+{
+  "source_md": "/Users/seunghui/Desktop/대외활동/CJ AI x AX/daegu-local-festival-ai-agent/Mascot/마스코트 디자인 스펙시트/마스코트 디자인 스펙시트_v03/외지몽/디자인_스펙시트_v04.md",
+  "source_md_sha256": "a9487f568f55a35961c21754874c192b158d6247cb264878aa41758fc0f60e75",
+  "references": [
+    {
+      "file": "reference/oejimong_original_board.png",
+      "sha256": "5a55a135f95318872d4ded2d38434d599c9d6ff61890a953be481e454e7b5927"
+    },
+    {
+      "file": "reference/oejimong_fixed_front_v03.png",
+      "sha256": "56035cebd25d1e1c51e75805e367fe8b033418f666f5aaeefadbbf49767691f8"
+    },
+    {
+      "file": "reference/oejimong_approved_pads_pose_v04.png",
+      "sha256": "d616ab26120284946eaf22e7a665190ba219fe921e7ad6f84a94f304f254a90c"
+    },
+    {
+      "file": "reference/oejimong_approved_side_width_v04.png",
+      "sha256": "e2fd85d4d1b533d13cda82c0d3cc51d96f6fff87b566d48e985d4fb3e844fe75"
+    },
+    {
+      "file": "reference/oejimong_fixed_comparison_v03.png",
+      "sha256": "e3c3211275cacd02a0fed4559e6da136a3c13d9fa9b4741dfe860992fa937269"
+    },
+    {
+      "file": "reference/oejimong_approved_front_v04.png",
+      "sha256": "56035cebd25d1e1c51e75805e367fe8b033418f666f5aaeefadbbf49767691f8"
+    }
+  ]
+}
