@@ -2,7 +2,7 @@
 
 - 생성일: **2026-11-05**
 - 선택 기업: **코스맥스** (KOSPI 192820, 화장품 ODM)
-- 이전 단계: [candidates.md](candidates.md) (후보 비교) → [business-model-6q.md](business-model-6q.md) (사업모델 여섯 질문)
+- 이전 단계: [candidates_화장품_v1.md](candidates_화장품_v1.md) (후보 비교) → [business-model-6q.md](business-model-6q.md) (사업모델 여섯 질문)
 - 이 파일의 용도: 산업 이슈 질문 뱅크를 돌리면서 이슈를 세분화하는 작업 공간. 결과물은 캠페인·콘텐츠 기획 에이전트가 읽는 **산업 컨텍스트 파일(지식파일)** 재료가 됨.
 - 표기: `[I]` = 작성자 해석 · 출처 번호는 맨 아래 목록 기준
 
