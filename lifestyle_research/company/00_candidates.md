@@ -1,4 +1,4 @@
-# candidates.md — 콘텐츠 산업 국내 기업 후보 3곳 (life-style 트랙)
+# 00_candidates.md — 콘텐츠 산업 국내 기업 후보 3곳 (life-style 트랙)
 
 > life-style 트랙 · 콘텐츠 산업 → 현희
 
