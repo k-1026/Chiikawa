@@ -5,6 +5,7 @@
 - 실습 목표: **원문 6건 이상 저장 + 번호가 맞는 sources.md** → 4교시 서브에이전트의 입력 전부
 - 저장 위치: [sources/](sources/) (파일 8개) · 이 표의 번호는 파일명 앞 두 자리와 같음
 - 질문과 연결: [questions.md](questions.md) 6절 "1차 훑기 — 질문별 sources 번호"
+- 4교시 결과(이 8개 원문만으로 만든 출처 기반 요약·비교): [summary-compare.md](summary-compare.md)
 
 ## 1. 저장한 원문 (번호 · 자료원 · 제목 · 날짜 · 저장 파일명)
 
