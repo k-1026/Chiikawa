@@ -2,7 +2,7 @@
 
 > life-style 트랙 · 콘텐츠 산업 → 현희
 
-- 작성: 2026-11-06 · 근거 문서: [00_candidates.md](00_candidates.md) · [01_questions.md](01_questions.md)
+- 작성: 2026-11-06 · 근거 문서: [00_candidates.md](00_candidates_v0.md) · [01_questions.md](01_questions_v0.md)
 - 이 표의 번호는 각 파일명 맨 앞의 번호와 그대로 일치한다. 01_questions.md의 질문별 자료원 칸은 이 표의 번호를 가리킨다.
 - 전부 **로그인·유료 결제 없이** 공식 채널(DART, 카카오 공식 IR·뉴스룸)에서 받은 원문이다.
 

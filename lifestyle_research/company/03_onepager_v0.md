@@ -3,7 +3,7 @@
 > life-style 트랙 · 콘텐츠 산업 → 현희
 
 - 작성: 2026-11-06 · 서브에이전트 4개(A·B·C·D) 병렬 실행 결과를 템플릿 순서로 합친 초안
-- 근거 문서: [02_sources.md](02_sources.md)(원문 7건), [00_candidates.md](00_candidates.md), [01_questions.md](01_questions.md)
+- 근거 문서: [02_sources.md](02_sources_v0.md)(원문 7건), [00_candidates.md](00_candidates_v0.md), [01_questions.md](01_questions_v0.md)
 - 라벨: `[출처 n]` = 02_sources.md 번호 · `[U]` = 미확인 · `[I]` = 해석·추정
 
 ---

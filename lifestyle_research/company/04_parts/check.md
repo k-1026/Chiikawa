@@ -3,7 +3,7 @@
 > life-style 트랙 · 콘텐츠 산업 → 현희
 
 - 작성: 2026-11-06 · 대상: [A_bm.md](A_bm.md) · [B_fin.md](B_fin.md) · [C_news.md](C_news.md) · [D_industry.md](D_industry.md)
-- 대조 기준: [../02_sources.md](../02_sources.md)(출처 01~07 번호표), [../01_questions.md](../01_questions.md)(질문 10개), [../02_sources/](../02_sources/)(원문 7건)
+- 대조 기준: [../02_sources.md](../02_sources_v0.md)(출처 01~07 번호표), [../01_questions.md](../01_questions_v0.md)(질문 10개), [../02_sources/](../02_sources/)(원문 7건)
 - **이번 패스는 점검만 한다. 네 파일 내용은 수정하지 않았다.** 재실행(재작성)한 항목 없음 — 담당자 지시("수정은 하지 말고 목록만")에 따름.
 
 ---
