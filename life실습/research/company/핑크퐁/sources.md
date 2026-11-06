@@ -8,6 +8,7 @@
 - 4교시 결과(이 8개 원문만으로 만든 출처 기반 요약·비교): [summary-compare.md](summary-compare.md)
 - 사람 검증 체크리스트(핵심 사실 5개를 원문에서 직접 대조): [human-check.md](human-check.md)
 - 복습·질의응답 점검(점검 질문 5개 답, parts 재점검, 막힌 점 목록): [review-check.md](review-check.md)
+- 원페이지 사실 검증(핵심 사실 5개 원문 대조, 줄 번호): [verify.md](verify.md)
 - 여덟 칸 원페이지(템플릿 형식): [onepager.md](onepager.md) (병렬 취합본), 메인 단독 v1은 [onepager-v1-메인단독.md](onepager-v1-메인단독.md)
 
 ## 1. 저장한 원문 (번호 · 자료원 · 제목 · 날짜 · 저장 파일명)
