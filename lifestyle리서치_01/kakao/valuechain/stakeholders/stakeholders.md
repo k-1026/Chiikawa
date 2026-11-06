@@ -1,6 +1,6 @@
 # 카카오프렌즈 밸류체인 — 이해관계자 맵
 
-> 확인 날짜: 2026-11-06 · 근거: `valuechain/activities_v1.md`(IP 여정 중심, 출처 01~16) + `현희` 브랜치 `lifestyle_research/company/03_onepager.md`
+> 확인 날짜: 2026-11-06 · 근거: `valuechain/activities/activities_v1.md`(IP 여정 중심, 출처 01~16) + `현희` 브랜치 `lifestyle_research/company/03_onepager.md`
 > 단계 5개: activities_v1.md에서 쓴 **1. 인바운드 · 2. 운영·제작 · 3. 아웃바운드 · 4. 마케팅·판매 · 5. 서비스**를 그대로 사용(FigJam 단계 이름이 아직 비어 있어서, 이미 확정된 activities_v1.md 단계명으로 맞춤).
 > 이름 표기 규칙: onepager.md 또는 공시 계열회사 표에 실명이 있으면 그 이름, 없으면 유형 이름 + `[U]`. **하는 사람은 굵게**, (영향 주는 사람은 괄호).
 > 이 맵은 우리 팀(대키미·외지몽)이 아니라 **벤치마킹 대상인 카카오프렌즈의 체인**이라, 팀 자산 틸 표시는 하지 않았다.

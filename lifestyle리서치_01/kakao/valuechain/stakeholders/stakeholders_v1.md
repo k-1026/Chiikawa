@@ -1,7 +1,7 @@
 # 카카오프렌즈 밸류체인 — 이해관계자 맵 (v1)
 
 > 확인 날짜: 2026-11-06
-> 근거: `valuechain/activities_v1.md`(우리 쪽 출처 01~16) + `현희` 브랜치 `lifestyle_research/company/03_onepager_v1.md`(현희 쪽 출처 01~42, `02_sources_v1.md` 기준)
+> 근거: `valuechain/activities/activities_v1.md`(우리 쪽 출처 01~16) + `현희` 브랜치 `lifestyle_research/company/03_onepager_v1.md`(현희 쪽 출처 01~42, `02_sources_v1.md` 기준)
 > 단계 5개: `activities_v1.md`의 **1. 인바운드 · 2. 운영·제작 · 3. 아웃바운드 · 4. 마케팅·판매 · 5. 서비스**를 그대로 사용(FigJam 단계 이름이 비어 있어 기존 단계명 유지).
 > **출처 번호 안내**: 두 문서가 번호 체계가 달라서, 이 표에서는 우리 쪽 출처를 `[출처 n]`, 현희 쪽 03_onepager_v1.md 출처를 `[v1-출처 n]`으로 구분했다. 이름 표기 규칙은 동일: onepager·공시 계열회사 표에 실명이 있으면 그 이름, 없으면 유형 이름 + `[U]`. **하는 사람은 굵게**, (영향 주는 사람은 괄호).
 > 이 맵은 벤치마킹 대상인 카카오프렌즈의 체인이라 팀 자산 틸 표시는 하지 않았다.
