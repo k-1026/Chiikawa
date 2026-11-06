@@ -4,7 +4,7 @@
 
 ## 검증 — valuechain_v0.md 대조
 
-> 대조 대상: `valuechain/diagram/valuechain_v0.md` ↔ `현희` 브랜치 `lifestyle_research/company/03_onepager_v1.md` + `02_sources_v1.md`
+> 대조 대상: `valuechain/valuechain/valuechain_v0.md` ↔ `현희` 브랜치 `lifestyle_research/company/03_onepager_v1.md` + `02_sources_v1.md`
 
 ### 1. 단계 이름·순서 / 이해관계자 / 돈·데이터 라벨 중 원페이지 근거가 없는 항목
 
