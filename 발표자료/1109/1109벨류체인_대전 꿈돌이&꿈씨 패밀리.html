@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=1280">
+<title>밸류체인 v1 대전 꿈돌이</title>
+<style>
+:root{color-scheme:light;--ink:#16302e;--mute:#5d726f;--line:#cfdcda;--teal:#2e8c85;--tealbg:#e6f3f1;--amber:#E89B00;--amberbg:#FEF3DC;--coral:#E8603C;--coralbg:#FCEBE5;--lime:#9BD24B;--limebg:#EEF7E2;--blue:#3B69D6;--bluebg:#E8EEFC;--gold:#C98A1F;--violet:#8E5BD9}
+*{box-sizing:border-box}
+html,body{margin:0;background:#e9eeed}
+.page{position:relative;width:1280px;height:720px;margin:0 auto;background:#fff;color:var(--ink);overflow:hidden;font:12px/1.4 -apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Noto Sans KR","Malgun Gothic",sans-serif}
+.hd{position:absolute;left:24px;top:12px;width:1232px;height:46px}
+.hd h1{margin:0;font-size:19px;line-height:24px}
+.hd p{margin:2px 0 0;color:var(--mute);font-size:11px;line-height:15px}
+.hd .tag{display:inline-block;background:var(--amberbg);border:1px solid var(--amber);border-radius:10px;padding:0 8px;font-size:10.5px;color:#8a5a00;margin-left:8px;vertical-align:2px}
+.row{position:absolute;left:24px;width:1232px;display:grid;grid-template-columns:100px repeat(5,218px);column-gap:10px}
+.rl{font-weight:700;font-size:11.5px;line-height:1.35;padding-top:4px}
+.rl small{display:block;font-weight:400;color:var(--mute);font-size:10px;line-height:1.3}
+.rl i{display:inline-block;width:16px;height:16px;border-radius:50%;color:#fff;font-style:normal;font-size:10px;text-align:center;line-height:16px;margin-right:4px;vertical-align:1px}
+.r1{top:66px;height:62px}.r2{top:136px;height:150px}.r3{top:294px;height:86px}.r4{top:388px;height:104px}.r5{top:500px;height:138px}
+.stage{position:relative;border:1.5px solid var(--ink);border-radius:9px;padding:7px 10px;background:#fff}
+.stage b{display:block;font-size:13px;line-height:17px}
+.stage span{display:block;font-size:10.5px;color:var(--mute);line-height:14px;margin-top:2px}
+.stage:not(.last)::after{content:"→";position:absolute;right:-17px;top:17px;font-weight:700;color:var(--ink);font-size:15px}
+.stage.team{background:var(--teal);border-color:var(--teal);color:#fff}.stage.team span{color:#d6efec}
+.stage.gap{border-style:dashed;border-color:#9aa8a6;background:#f3f5f5;color:#66777a}
+.cell{border-radius:9px;padding:7px 9px;overflow:hidden;font-size:11.5px;line-height:1.38}
+.r2 .cell{background:#f6f8f8;border:1px solid var(--line)}
+.r3 .cell{background:#fdf6e6;border:1px solid #efd9a6}
+.r4 .cell{background:var(--bluebg);border:1px solid #c5d3f3}
+.cell b{font-weight:700}.cell .inf{color:var(--mute)}
+.cell.gapc{background:#f3f5f5!important;border:1px dashed #9aa8a6!important;color:#66777a}
+.chipteam{margin-top:5px;background:var(--teal);color:#fff;border-radius:6px;padding:4px 7px;font-size:10.5px;line-height:1.35}
+.r5 .col{display:flex;flex-direction:column;gap:6px}
+.mk{border-radius:8px;padding:5px 8px;font-size:10.8px;line-height:1.35;border-width:2px;border-style:solid}
+.mk b{display:block;font-size:11px}
+.mk.bn{background:#fff;border-color:var(--amber)}
+.mk.co{background:#fff;border-color:var(--coral)}
+.mk.op{background:var(--limebg);border-color:var(--limebg)}
+.mk.op.pri{border-color:var(--lime)}
+.mk.empty{border:1px dashed #b8c4c2;color:#8a9a98;background:#fafbfb}
+.bn b{color:#a86f00}.co b{color:#c0431f}.op b{color:#4f7d12}
+svg.ov{position:absolute;left:0;top:0;pointer-events:none}
+.bt{position:absolute;top:646px;height:68px}
+.pri-box{left:24px;width:760px;border:1.5px solid var(--lime);background:var(--limebg);border-radius:9px;padding:7px 11px;font-size:11.3px;line-height:1.42}
+.pri-box b{color:#3f6a0c}
+.lg{left:800px;width:456px;border:1px solid var(--line);border-radius:9px;padding:6px 10px;font-size:10.5px;line-height:1.5;background:#fff}
+.lg .sw{display:inline-block;width:14px;height:10px;border-radius:3px;vertical-align:-1px;margin-right:4px;border:2px solid}
+.lg span.it{display:inline-block;margin-right:10px;white-space:nowrap}
+.tg{display:inline-block;min-width:15px;text-align:center;border-radius:3px;font-size:9.5px;line-height:14px;color:#fff;margin-right:3px}
+.tg.f{background:#2e8c3a}.tg.i{background:#c98a1f}.tg.u{background:#8a8f93}
+</style></head>
+<body>
+<div class="page" id="pg">
+<div class="hd"><h1>밸류체인 v1 — 대전 꿈돌이&amp;꿈씨 패밀리 (as-is) <span class="tag">제안 적용 · 팀 확인 대기</span></h1>
+<p>활동(팀 5단계) · 이해관계자 · 돈 · 데이터 네 층 + 병목·비용·기회 마커. 출처 번호는 sources/sources.md 기준(7은 local_candidates_v05.md의 S번호). 숫자는 [출처]가 있는 것만, 값이 없는 선은 [U]. 근거 상세는 valuechain_v1.md · analysis_v01.md.</p></div>
+
+<div class="row r1"><div class="rl"><i style="background:var(--teal)">1</i>활동<small>팀 5단계</small></div>
+<div class="stage gap"><b>① 트렌드·타깃 인사이트</b><span>대전 근거 없음 [U]</span></div>
+<div class="stage team"><b>② IP 콘텐츠 제작</b><span>IP 보유·콘텐츠·라이센싱 · 팀 자산 단계</span></div>
+<div class="stage"><b>③ 캠페인·참여</b><span>꿈돌이 페스타·이름 공모·시식회</span></div>
+<div class="stage"><b>④ 커머스 전환</b><span>홍보관·공공판매처·꿈씨상회</span></div>
+<div class="stage last gap" style="border-style:dashed"><b>⑤ 데이터 환류</b><span>결산·공시만 확인, 분석 주체 [U]</span></div></div>
+
+<div class="row r2"><div class="rl"><i style="background:#6b7f7c">2</i>이해관계자<small><b>하는 사람</b><br>(영향 주는 사람)</small></div>
+<div class="cell gapc">원천·제조·유통·소비자·파트너·공공 유형 모두 이름 [U]<br><span class="inf">관광객 겨냥만 2장 ① [출처 7, S1·S3]</span></div>
+<div class="cell"><b>대전관광공사</b> (IP 일체 보유) [출처 7, S5]<br><b>라이센싱 플랫폼</b> (운영 주체 [U]) [출처 1]<br><b>우리술협동조합</b> (공동브랜딩) [출처 7, S3]<br>상업 사용 기업 <span class="inf">이름 [U]</span><br><span class="inf">(꿈씨기자단)</span>
+<div class="chipteam">우리 팀 자산: 대키미·외지몽 IP · 세계관(2027 주제 「타지에서 온 말손님」) · IP 가이드 [출처 8]</div></div>
+<div class="cell"><b>대전관광공사</b> (페스타·이름 공모)<br><b>홍보대사(유튜버)</b> 이름 [U] [출처 13]<br><b>참여 관광객</b><br><span class="inf">(대전시 — 0시 축제를 여는 지자체)</span></div>
+<div class="cell"><b>대전시</b> (꿈씨상회 운영) [출처 11]<br><b>롯데백화점 대전점</b> [출처 7, S6]<br><b>지역 기업</b> (협업 상품 제조)<br><b>홍보관·꿈돌이하우스·공공판매처</b> <span class="inf">묶음, 중복 [U]</span><br><b>관광객</b> (구매자)</div>
+<div class="cell"><b>대전관광공사</b> (결산 데이터)<br><b>클린아이</b> (경영공시) [출처 2]<br><span class="inf">분석·개선 주체 [U]</span></div></div>
+
+<div class="row r3"><div class="rl"><i style="background:var(--gold)">3</i>돈 흐름<small>소비자 → 원천 (←)</small></div>
+<div class="cell gapc">돈 선 없음 [U]</div>
+<div class="cell"><b>끝점</b> IP 보유자(공사)에게 돌아오는 몫 = IP 수수료 [U 주체·율] (시 설명 수익 3배 [출처 10])<br>부수: 상업 사용료 [U]</div>
+<div class="cell gapc">돈 선 근거 없음 (정산선 삭제)</div>
+<div class="cell"><b>시작점</b> 관광객 결제 — 상품판매수익 1,085,425,261원 [출처 2]<br>판매처 → 지역 기업: 상품 매입 / 납품 단가 [U]</div>
+<div class="cell gapc">돈이 아니라 데이터 단계</div></div>
+
+<div class="row r4"><div class="rl"><i style="background:var(--blue)">4</i>데이터 흐름<small>생기는 → 보유 (→)<br>피드백 ⇢ 앞 단계</small></div>
+<div class="cell gapc">대전 근거 없음 [U]</div>
+<div class="cell">IP 사용 신청·계약 / 공사 [출처 1]</div>
+<div class="cell">SNS 인증·시식회 참여 / 보유자 [U], 방향 [I] [출처 11] [출처 13]</div>
+<div class="cell">구매자·팬 데이터(앱·멤버십) [U] [출처 1]</div>
+<div class="cell">상품판매수익 / 공사 결산 <span class="tg f">F</span>판매 수량 <span class="tg i">I</span>클린아이 공시 [출처 2]</div></div>
+
+<div class="row r5"><div class="rl"><i style="background:var(--lime);color:#27400a">★</i>마커<small>병목 2 · 비용 2<br>기회 3</small></div>
+<div class="col"><div class="mk op"><b>기회 O1 · 무엇을 분류·요약하는가</b>트렌드·밈 → 연도 주제 후보 <span class="tg i">I</span> 보류</div></div>
+<div class="col"><div class="mk bn"><b>병목 B1 · 무엇이 기다리는가</b>상업 사용 신청 재개 대기 [출처 1]</div><div class="mk op pri"><b>기회 O2 ★ 우선 · 무엇을 생성하는가</b>사투리 변환기·고사·숏폼 <span class="tg i">I</span></div></div>
+<div class="col"><div class="mk co"><b>비용 C2 · 무엇이 떼이는가</b>조형물 제작설치 40,300,000원+17,355,000원 [출처 2]</div></div>
+<div class="col"><div class="mk bn"><b>병목 B2 · 무엇이 기다리는가</b>식음료가 관광지 중심 판매 구조에 묶임 [출처 9]</div><div class="mk co"><b>비용 C1 · 무엇이 떼이는가</b>홍보관 상품매입비 707,339,875원 [출처 2]</div></div>
+<div class="col"><div class="mk op"><b>기회 O3 · 무엇을 분석·예측하는가</b>판매·참여 데이터 → 판정 <span class="tg i">I</span> 지금은 어려움</div></div></div>
+
+<svg class="ov" width="1280" height="720" viewBox="0 0 1280 720" aria-hidden="true">
+<defs>
+<marker id="mg" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#C98A1F"/></marker>
+<marker id="mb" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#3B69D6"/></marker>
+</defs>
+<!-- 돈 흐름: ④ 오른쪽 → ② 왼쪽 -->
+<line x1="1030" y1="372" x2="368" y2="372" stroke="#C98A1F" stroke-width="3" marker-end="url(#mg)"/>
+<circle cx="1030" cy="372" r="4" fill="#C98A1F"/>
+<!-- 데이터 흐름: ② → ⑤ -->
+<line x1="368" y1="448" x2="1256" y2="448" stroke="#3B69D6" stroke-width="2" stroke-dasharray="6 4" marker-end="url(#mb)"/>
+<!-- 피드백 ⑤ → ① [U] -->
+<path d="M1150 452 L1150 482 L243 482 L243 454" fill="none" stroke="#3B69D6" stroke-width="2" stroke-dasharray="2 4" marker-end="url(#mb)"/>
+<text x="700" y="477" font-size="10.5" fill="#2a4fb0" text-anchor="middle" font-weight="700">피드백 ⑤ → ① 차년도 반영 [U] — 환류 체계 근거 없음 (외부 지적: 전담 조직·로드맵 부재 [출처 9])</text>
+</svg>
+
+<div class="bt pri-box"><b>우선 기회 O2 사투리 변환기·사투리 고사·숏폼 생성</b> — 영향 7 · 실현 7, 매트릭스 "먼저 간다" (analysis_v01 7장, 가정 A1~A3 위의 가설 <span class="tg i">I</span>). 근거: 팀 자산 = 프롬프트 6개 + IP 가이드 [출처 8], 사투리를 처음 접하는 페르소나의 낯섦과 직결. ② 단계에서 대전은 신청 재개 대기(B1)가 막혀 있는데 팀은 IP를 직접 보유한다는 차이가 근거예요 <span class="tg i">I</span>. O3은 영향 6·실현 5, O1은 3·5.</div>
+<div class="bt lg"><span class="it"><i class="sw" style="border-color:#E89B00;background:#fff"></i>병목</span><span class="it"><i class="sw" style="border-color:#E8603C;background:#fff"></i>비용</span><span class="it"><i class="sw" style="border-color:#EEF7E2;background:#EEF7E2"></i>기회</span><span class="it"><i class="sw" style="border-color:#2e8c85;background:#2e8c85"></i>팀 자산</span><span class="it" style="color:#8a5a00">← 돈</span><span class="it" style="color:#2a4fb0">⇢ 데이터</span><br><span class="tg f">F</span>원문 사실 <span class="tg i">I</span>해석·가설 <span class="tg u">U</span>미확인 · 회색 점선 = 대전 근거 없음 · <b>굵게</b> 하는 사람 (괄호) 영향 주는 사람</div>
+</div>
+<script>
+// 잘림 점검: 텍스트 상자가 내용보다 작으면 콘솔에 표시
+window.addEventListener('load',function(){try{var bad=[];document.querySelectorAll('.cell,.mk,.stage,.bt').forEach(function(e){if(e.scrollHeight>e.clientHeight+1||e.scrollWidth>e.clientWidth+1)bad.push((e.textContent||'').slice(0,20))});window.__clip=bad}catch(x){}});
+</script>
+</body></html>
