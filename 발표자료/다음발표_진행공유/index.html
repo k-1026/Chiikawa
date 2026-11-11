@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>말손님 에이전트 진행 공유</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=IBM+Plex+Sans+KR:wght@400;500;700&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+/* Layout: 상단 시간 막대 → 발표 순서대로 슬라이드 카드. 아직 받지 못한 내용은 점선 '빈칸'으로 표시 */
+:root{
+  --bg:#f2f6fa; --surface:#ffffff; --ink:#15233a; --ink-2:#56667c; --line:#d8e2ec;
+  --accent:#1f6fb2; --accent-soft:#e1edf9; --warm:#c9473b; --warm-soft:#fbe7e4; --green:#1f7a45; --green-soft:#e1f1e7;
+  --sky:#2a9fcf;
+  --f-display:"Black Han Sans","Apple SD Gothic Neo",sans-serif;
+  --f-body:"IBM Plex Sans KR","Apple SD Gothic Neo","Malgun Gothic",sans-serif;
+  --f-mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0f1722; --surface:#172231; --ink:#e6edf5; --ink-2:#9fb0c4; --line:#2a3a4e;
+  --accent:#6fb4ee; --accent-soft:#1b3550; --warm:#f07a6c; --warm-soft:#3a2224; --green:#6fcf97; --green-soft:#183427; --sky:#6dcff5; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0f1722; --surface:#172231; --ink:#e6edf5; --ink-2:#9fb0c4; --line:#2a3a4e;
+  --accent:#6fb4ee; --accent-soft:#1b3550; --warm:#f07a6c; --warm-soft:#3a2224; --green:#6fcf97; --green-soft:#183427; --sky:#6dcff5; color-scheme:dark}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:15px;line-height:1.65;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:32px 64px}
+.wrap{max-width:960px;margin:0 auto;display:grid;gap:18px}
+header.hero{display:grid;gap:12px;padding-bottom:22px;border-bottom:2px solid var(--ink)}
+.eyebrow{font-family:var(--f-mono);font-size:12px;letter-spacing:.08em;color:var(--accent);text-transform:uppercase}
+h1{font-family:var(--f-display);font-weight:400;font-size:clamp(28px,5vw,42px);line-height:1.18;margin:0;text-wrap:balance}
+h1 em{font-style:normal;color:var(--warm)}
+.lead{color:var(--ink-2);max-width:68ch;margin:0}
+.timebar{display:flex;height:34px;border-radius:6px;overflow:hidden;border:1px solid var(--line);font-family:var(--f-mono);font-size:11px}
+.timebar a{display:flex;align-items:center;justify-content:center;color:var(--ink);text-decoration:none;border-right:1px solid var(--surface);min-width:0;overflow:hidden}
+.timebar a:last-child{border-right:0}
+.timebar a:hover,.timebar a:focus-visible{outline:2px solid var(--accent);outline-offset:-2px}
+.tb-a{background:var(--accent-soft)} .tb-g{background:var(--green-soft)} .tb-w{background:var(--warm-soft)}
+.legend{display:flex;flex-wrap:wrap;gap:6px 18px;font-size:12.5px;color:var(--ink-2)}
+.legend i{display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:6px;vertical-align:-1px}
+.part{font-family:var(--f-display);font-weight:400;font-size:21px;margin:20px 0 0;display:flex;align-items:baseline;gap:12px;flex-wrap:wrap}
+.part small{font-family:var(--f-body);font-size:13px;color:var(--ink-2)}
+article.slide{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:22px 24px;display:grid;gap:14px;min-width:0}
+.sh{display:flex;gap:12px;align-items:baseline;flex-wrap:wrap}
+.no{font-family:var(--f-mono);font-size:13px;color:var(--accent);background:var(--accent-soft);padding:2px 8px;border-radius:4px}
+.sh h3{margin:0;font-size:19px;font-weight:700;text-wrap:balance;flex:1 1 300px}
+.time{font-family:var(--f-mono);font-size:12px;color:var(--ink-2)}
+.msg{font-size:17px;font-weight:500;margin:0;padding-left:12px;border-left:3px solid var(--warm)}
+.lbl{font-family:var(--f-mono);font-size:11px;letter-spacing:.07em;color:var(--ink-2);text-transform:uppercase;margin-bottom:4px}
+ul,ol{margin:0;padding-left:18px;display:grid;gap:3px}
+.screen{font-size:13.5px;color:var(--ink-2);margin:0}
+.screen::before{content:"화면  ";font-family:var(--f-mono);font-size:11px;color:var(--accent);letter-spacing:.06em}
+.say{background:var(--bg);border-radius:8px;padding:10px 14px;font-size:14px;margin:0}
+.say::before{content:"멘트  ";font-family:var(--f-mono);font-size:11px;color:var(--accent);letter-spacing:.06em}
+.tw{overflow-x:auto}
+table{border-collapse:collapse;width:100%;font-size:13.5px;font-variant-numeric:tabular-nums}
+th,td{text-align:left;padding:6px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-weight:700;color:var(--ink-2);font-size:12px}
+td.n{text-align:right;font-family:var(--f-mono)}
+code{font-family:var(--f-mono);font-size:12.5px;background:var(--accent-soft);color:var(--ink);padding:1px 5px;border-radius:4px}
+.tag{display:inline-block;font-family:var(--f-mono);font-size:11.5px;padding:1px 6px;border-radius:4px;white-space:nowrap}
+.t-new{background:var(--green-soft);color:var(--green)} .t-q{background:var(--warm-soft);color:var(--warm)} .t-base{background:var(--accent-soft);color:var(--accent)}
+.cols{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:18px}
+@media (max-width:680px){.cols{grid-template-columns:minmax(0,1fr)}}
+.blank{border:2px dashed var(--warm);border-radius:8px;padding:12px 14px;color:var(--warm);font-size:13.5px;background:var(--warm-soft)}
+.blank b{display:block;font-family:var(--f-mono);font-size:11px;letter-spacing:.06em;margin-bottom:2px}
+.flow{display:grid;gap:8px}
+.flow .row{display:grid;grid-template-columns:44px minmax(0,1fr);gap:12px;align-items:start;padding:10px 12px;border:1px solid var(--line);border-radius:8px}
+.flow .row b{font-family:var(--f-mono);font-size:12px;color:var(--accent);font-weight:500;padding-top:2px}
+.flow .row.hl{border-color:var(--accent);background:var(--accent-soft)}
+.unit{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin-top:6px}
+@media (max-width:560px){.unit{grid-template-columns:minmax(0,1fr)}}
+.unit div{background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:8px 10px;font-size:13px}
+.unit div strong{display:block;font-size:12px;color:var(--accent)}
+.chars{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.chars figure{margin:0;border:1px solid var(--line);border-radius:8px;padding:12px;display:grid;gap:6px;justify-items:center;text-align:center}
+.chars img{width:100%;max-width:120px;aspect-ratio:1;object-fit:contain}
+.chars figcaption{font-size:13.5px}
+.chars figcaption b{display:block}
+.sw{display:inline-block;width:11px;height:11px;border-radius:50%;vertical-align:-1px;margin-right:4px;border:1px solid var(--line)}
+.note{font-size:13px;color:var(--ink-2);border-top:1px solid var(--line);padding-top:16px;margin-top:6px}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="hero">
+  <div class="eyebrow">CJ 올리브네트워크 LLM 아카데미 · 진행 공유 발표 구성안 초안 · [발표일]</div>
+  <h1>메인 지침서를 보완했고, 이제 <em>파트별로</em> 에이전트를 만든다</h1>
+  <p class="lead">10월 30일 중간발표 이후 바뀐 것과 앞으로의 제작 계획을 담은 구성안입니다. 10장, 약 6분 30초 분량입니다. 주황 점선 칸은 아직 받지 못한 내용이라 채워야 하는 빈칸입니다.</p>
+  <nav class="timebar" aria-label="슬라이드별 시간 배분">
+    <a class="tb-a" href="#s1" style="flex:20">01</a>
+    <a class="tb-a" href="#s2" style="flex:30">02</a>
+    <a class="tb-g" href="#s3" style="flex:50">03</a>
+    <a class="tb-g" href="#s4" style="flex:45">04</a>
+    <a class="tb-g" href="#s5" style="flex:40">05</a>
+    <a class="tb-a" href="#s6" style="flex:60">06</a>
+    <a class="tb-a" href="#s7" style="flex:40">07</a>
+    <a class="tb-w" href="#s8" style="flex:45">08</a>
+    <a class="tb-a" href="#s9" style="flex:45">09</a>
+    <a class="tb-a" href="#s10" style="flex:15">10</a>
+  </nav>
+  <div class="legend"><span><i class="tb-g"></i>메인 지침서 보완</span><span><i class="tb-a"></i>제작 로직·향후 계획</span><span><i class="tb-w"></i>자료조사 DB</span><span>칸 너비 = 발표 시간</span></div>
+</header>
+
+<article class="slide" id="s1">
+  <div class="sh"><span class="no">01</span><h3>표지</h3><span class="time">0:20</span></div>
+  <p class="msg">대구 사투리 축제를 매년 열 수 있게 돕는 에이전트 — 진행 공유</p>
+  <p class="screen">제목, 팀명·발표일, 오른쪽에 대키미·외지몽 함께 있는 이미지(pair).</p>
+</article>
+
+<article class="slide" id="s2">
+  <div class="sh"><span class="no">02</span><h3>중간발표 이후 바뀐 것 3가지</h3><span class="time">0:30</span></div>
+  <div class="tw"><table>
+    <tr><th>#</th><th>바뀐 것</th><th>한 줄 요약</th></tr>
+    <tr><td>1</td><td>메인 지침서 보완</td><td>v1 → v1.1. 목적·성공 기준·공간 배치·마스코트 IP까지 구체화</td></tr>
+    <tr><td>2</td><td>전체 제작 로직 정리</td><td>메인 지침 하나 아래에 파트별 정보·에이전트·지침을 붙이는 구조</td></tr>
+    <tr><td>3</td><td>자료조사 데이터베이스 구축</td><td>지침의 필수 조사 항목에 맞춰 세부 DB로 쌓는 중</td></tr>
+  </table></div>
+  <p class="say">"지난번엔 피드백을 어떻게 반영했는지 말씀드렸고, 오늘은 그걸 바탕으로 에이전트를 실제로 어떻게 만들어 갈지를 말씀드리겠습니다."</p>
+</article>
+
+<h2 class="part">1 · 메인 지침서 보완 <small>03–05 · 약 2분 15초</small></h2>
+
+<article class="slide" id="s3">
+  <div class="sh"><span class="no">03</span><h3>지침서 v1 → v1.1, 무엇이 달라졌나</h3><span class="time">0:50</span></div>
+  <p class="msg">"무엇을 하라"에서 "어디까지 하고, 언제 사람에게 묻고, 뭘 보면 성공인지"까지 적었다.</p>
+  <div class="tw"><table>
+    <tr><th>장</th><th>v1</th><th>v1.1에서 추가된 것</th></tr>
+    <tr><td>0 정의</td><td>역할·사용자·하지 않는 것</td><td><span class="tag t-new">새로</span> 해결하려는 문제 3개, 문화관광축제 선정 기준 대응 점검표, 단계별 에이전트 성공 기준, 할 수 있는 것 10개 / 하지 않는 것 7개, 관할 기관 확인 목록</td></tr>
+    <tr><td>3 프로그램</td><td>3대 프로그램 역할</td><td><span class="tag t-new">새로</span> 프로그램 연계 원칙(동선 하나로), 포장마차거리·플리마켓·공식 굿즈 상점 상세 운영안</td></tr>
+    <tr><td>4 기획 요소</td><td>요소 목록</td><td><span class="tag t-new">새로</span> 공통 작성 규칙, 기획 순서, 요소별 필수 항목·체크 포인트, 축제장 밖 대구 연계 자원</td></tr>
+    <tr><td>5 프로세스</td><td>10단계</td><td><span class="tag t-new">새로</span> 0단계(작년 자료 읽기), 단계별 완료 기준, 담당자 확인 필수 단계 5개</td></tr>
+    <tr><td>7 조사</td><td>라벨·출처 순위</td><td><span class="tag t-new">새로</span> 필수 조사 항목 7영역, 유사 축제 최소 3개 비교 기준</td></tr>
+    <tr><td>8–12</td><td>평가·예산·KPI·개선</td><td><span class="tag t-new">새로</span> 점수 기준, 예산 대분류 7개, 인력 역할, 첫해는 기준선 수집, 실험 프로그램 판정 규칙</td></tr>
+  </table></div>
+  <p class="screen">왼쪽 v1 목차, 오른쪽 v1.1 목차를 나란히 두고 새로 생긴 칸만 초록으로 표시.</p>
+  <p class="say">"가장 큰 변화는 성공 기준입니다. 축제 성과가 아니라 에이전트가 단계마다 쓸 만한 결과를 냈는지로 판단합니다. 축제 목표에 못 미쳐도 원인을 정확히 분석하고 개선안을 냈다면 에이전트는 제 몫을 한 겁니다."</p>
+</article>
+
+<article class="slide" id="s4">
+  <div class="sh"><span class="no">04</span><h3>보완 예시 ① 두류공원 공간 배치가 숫자로 내려왔다</h3><span class="time">0:45</span></div>
+  <p class="msg">최소 105동 + 공식 굿즈 상점 1곳. 첫해는 최소 규모로 시작하고, 데이터가 쌓이면 늘린다.</p>
+  <div class="tw"><table>
+    <tr><th>공간</th><th>프로그램</th><th class="n">최소 부스</th></tr>
+    <tr><td>야외음악당 진입로</td><td>축제 공식 굿즈 상점</td><td class="n">1곳</td></tr>
+    <tr><td>코오롱 야외음악당 둘레</td><td>대구 10미 포장마차 (10종 전부, 품목당 4동)</td><td class="n">40동</td></tr>
+    <tr><td>야외음악당 옆 공원순환로</td><td>대구 7구 맛집거리 (구당 7동 + 달서구 1동)</td><td class="n">50동</td></tr>
+    <tr><td>야외음악당 뒤 체육공원</td><td>소상공인 플리마켓 (계획서 심사, 수수료 5.3%)</td><td class="n">15동</td></tr>
+    <tr><th>합계</th><th></th><th class="n">105동 + 1곳</th></tr>
+  </table></div>
+  <ul>
+    <li>모든 부스에 매장 카드(QR) → 축제 뒤 실제 원조 매장 방문 스탬프 3곳이면 혜택</li>
+    <li>사투리 주문은 혜택만 있는 선택 미션, 표준어 주문도 똑같이 구매 가능</li>
+    <li>참고값 <code>[확인]</code> 치맥 2013년 80여 부스 → 2026년 250여 부스. 기간·구성이 달라 목표치로 쓰지 않음</li>
+  </ul>
+  <p class="screen">두류공원 약도 위에 구역 4개를 색으로 칠하고, 걸어가는 일방향 동선 화살표.</p>
+</article>
+
+<article class="slide" id="s5">
+  <div class="sh"><span class="no">05</span><h3>보완 예시 ② 마스코트 IP 가이드 — 첫 번째 파트 지침의 모습</h3><span class="time">0:40</span></div>
+  <p class="msg">"표현이 달라도, 친구가 된다." 캐릭터는 고정, 상황과 콘텐츠만 매년 확장한다.</p>
+  <div class="chars">
+    <figure><img src="assets/cat.png" alt="대키미, 하늘색 고양이 외계인"><figcaption><b><span class="sw" style="background:#6DCFF5"></span>대키미 · 고양이 외계인</b>대구 토박이. 설명하는 친구</figcaption></figure>
+    <figure><img src="assets/dog.png" alt="외지몽, 초록색 강아지 외계인"><figcaption><b><span class="sw" style="background:#008C3A"></span>외지몽 · 강아지 외계인</b>우주에서 온 여행자. 질문하는 친구</figcaption></figure>
+  </div>
+  <ul>
+    <li>고정 규칙(종·몸색·귀·꼬리·더듬이 2개) + 허용 변화(표정·자세) + AI 금지 사항 12개 + 검수 체크리스트</li>
+    <li>모든 AI 작업 앞에 넣는 <b>마스터 프롬프트</b> 1개 + 작업별 프롬프트 5개(기획·이미지·영상·굿즈·SNS)</li>
+  </ul>
+  <p class="say">"마스코트 가이드는 정보, 규칙, 프롬프트가 한 세트로 묶여 있습니다. 다음 장에서 말씀드릴 '파트별 지침'이 바로 이 모양입니다."</p>
+</article>
+
+<h2 class="part">2 · 에이전트 제작 로직 <small>06–07 · 약 1분 40초</small></h2>
+
+<article class="slide" id="s6">
+  <div class="sh"><span class="no">06</span><h3>전체 로직 — 메인 지침 하나, 파트 여러 개</h3><span class="time">1:00</span></div>
+  <p class="msg">메인 지침이 축제 전체의 기준을 잡고, 각 파트가 그 기준 안에서 자기 일을 한다.</p>
+  <div class="flow">
+    <div class="row"><b>①</b><span><b style="color:var(--ink);font-family:var(--f-body)">메인 지침서</b> — 축제 전제, 목표 우선순위, 근거 규칙, 윤리, 성공 기준. 모든 파트가 따르는 공통 규칙</span></div>
+    <div class="row"><b>②</b><span><b style="color:var(--ink);font-family:var(--f-body)">세부사항 확정</b> — 지침의 ❓ 항목을 회의로 결정 (서브 타깃, 요일, 3일 구성, 토론 참가 단위·심사 비율, 평가 컷오프, 일정, 실험 비율, 접근성·친환경)</span></div>
+    <div class="row"><b>③</b><span><b style="color:var(--ink);font-family:var(--f-body)">파트로 나누기</b> — 확정된 세부사항을 기준으로 축제를 파트 단위로 쪼갬</span></div>
+    <div class="row hl"><b>④</b><span><b style="color:var(--ink);font-family:var(--f-body)">파트마다 세 가지를 만든다</b>
+      <div class="unit">
+        <div><strong>정보 정리</strong>그 파트에 필요한 자료조사 DB</div>
+        <div><strong>파트 에이전트</strong>그 파트를 기획하는 에이전트</div>
+        <div><strong>파트 기본 지침서</strong>규칙 + 프롬프트 (마스코트 IP 가이드 형식)</div>
+      </div></span></div>
+    <div class="row"><b>⑤</b><span><b style="color:var(--ink);font-family:var(--f-body)">통합·순환</b> — 파트 결과를 하나의 연도별 기획안(00~05)으로 묶고, 축제 뒤 결과가 다음 해 입력이 됨</span></div>
+  </div>
+  <div class="blank"><b>빈칸 · 확인 필요</b>파트 에이전트들을 누가 묶는지(메인 에이전트가 파트를 불러 쓰는지, 담당자가 순서대로 돌리는지)를 알려 주시면 ⑤를 확정해서 그리겠습니다.</div>
+  <p class="say">"한 에이전트에 모든 걸 시키면 지침이 끝없이 길어집니다. 그래서 공통 규칙은 메인 지침에, 파트마다 필요한 정보와 규칙은 파트 지침에 나눠 담습니다."</p>
+</article>
+
+<article class="slide" id="s7">
+  <div class="sh"><span class="no">07</span><h3>파트 후보와 지금 준비 상태</h3><span class="time">0:40</span></div>
+  <p class="msg">지침 v1.1에 이미 파트 단위로 자라난 내용이 있다. 그걸 출발점으로 파트를 나눈다.</p>
+  <div class="tw"><table>
+    <tr><th>파트 (후보)</th><th>v1.1에 있는 내용</th><th>파트 지침 상태</th></tr>
+    <tr><td>마스코트·굿즈</td><td>IP 가이드, 마스터 프롬프트, 굿즈 구성 원칙, 공식 굿즈 상점</td><td><span class="tag t-new">초안 있음</span></td></tr>
+    <tr><td>10미 포장마차·7구 맛집거리</td><td>배치·부스 수, 원조 골목 연결, 모집·선정, 위생·화기</td><td><span class="tag t-new">상세 있음</span></td></tr>
+    <tr><td>소상공인 플리마켓</td><td>선정 기준 100점, 수수료, 정산, 운영 시간</td><td><span class="tag t-new">상세 있음</span></td></tr>
+    <tr><td>사투리 토론 대회</td><td>평가 기준, 대진 원칙, 공정성, 논제 10개 이상</td><td><span class="tag t-q">❓ 결정 필요</span></td></tr>
+    <tr><td>온라인 연계·홍보</td><td>사전·현장·사후 단계표, 측정 지표</td><td><span class="tag t-base">원칙만</span></td></tr>
+    <tr><td>관광·상권 연계</td><td>축제장 밖 연계 후보(시티투어, 야간관광, 먹거리 골목)</td><td><span class="tag t-base">원칙만</span></td></tr>
+    <tr><td>운영·예산·안전</td><td>예산 대분류, 인력 역할, 역산 일정, 관할 기관 확인 목록</td><td><span class="tag t-q">❓ 결정 필요</span></td></tr>
+    <tr><td>KPI·성과 분석</td><td>측정 방법, 첫해 기준선, 유지·개선·실험 판정</td><td><span class="tag t-base">원칙만</span></td></tr>
+  </table></div>
+  <div class="blank"><b>빈칸 · 확인 필요</b>파트 목록과 이름을 팀에서 정한 대로 알려 주세요. 위 표는 지침 v1.1 구조에서 뽑은 후보입니다. 파트별 담당자가 정해졌으면 열을 하나 더 넣겠습니다.</div>
+</article>
+
+<h2 class="part">3 · 자료조사 데이터베이스 <small>08 · 약 45초</small></h2>
+
+<article class="slide" id="s8">
+  <div class="sh"><span class="no">08</span><h3>자료조사를 파트에 맞는 세부 DB로 쌓는 중</h3><span class="time">0:45</span></div>
+  <p class="msg">지침 7장의 필수 조사 항목이 곧 DB의 틀이다. 항목마다 출처·기준일·라벨을 붙여 쌓는다.</p>
+  <div class="tw"><table>
+    <tr><th>필수 조사 영역 (지침 7장)</th><th>지금 쌓인 팀 자료</th><th>쓰는 파트</th></tr>
+    <tr><td>관광 (방문객·체류 패턴)</td><td>hyunhee — 대구 관광 사업 통합표</td><td>관광·상권 연계, KPI</td></tr>
+    <tr><td>숙박</td><td>— 아직 없음</td><td>관광·상권 연계</td></tr>
+    <tr><td>유사 축제</td><td>king — 축제 사례, SNS 조사, 축제 기대효과(대구치맥)</td><td>전체, 운영·예산</td></tr>
+    <tr><td>사투리</td><td>kimseunghee — 사투리 v02_V4 (방언 특성·인식 태도·교육·AI 데이터·SNS 반응 등 14개 문서)</td><td>토론 대회, 마스코트, 온라인</td></tr>
+    <tr><td>음식</td><td>대구 10미 공식 목록, 원조 골목 연결표 (지침 v1.1)</td><td>포장마차·맛집거리</td></tr>
+    <tr><td>상권</td><td>minju — 팝업·캐릭터·온라인 콘텐츠·상업연계</td><td>플리마켓, 굿즈, 관광·상권</td></tr>
+    <tr><td>트렌드 (2030 SNS·밈)</td><td>리뷰·영상·SNS 인사이트 분석 진행 중</td><td>홍보, 토론 논제</td></tr>
+  </table></div>
+  <div class="blank"><b>빈칸 · 확인 필요</b>DB를 어디에 어떤 형태로 쌓는지(파트별 폴더·CSV·Supabase 등), 나누는 기준, 지금까지 모은 양(파트별 자료 수·출처 수)을 알려 주세요. 숫자가 없으면 "구축 중"으로만 적겠습니다.</div>
+  <p class="say">"지난번엔 팀원별로 자료를 모았다면, 이제는 파트 에이전트가 바로 꺼내 쓸 수 있게 파트 기준으로 다시 묶고 있습니다."</p>
+</article>
+
+<h2 class="part">4 · 향후 계획 <small>09–10 · 약 1분</small></h2>
+
+<article class="slide" id="s9">
+  <div class="sh"><span class="no">09</span><h3>향후 계획</h3><span class="time">0:45</span></div>
+  <p class="msg">메인 지침서를 바탕으로, 한 파트씩 정보·에이전트·지침을 완성해 붙여 나간다.</p>
+  <div class="flow">
+    <div class="row"><b>1</b><span>현재 메인 지침서를 바탕으로 에이전트 제작 전체 로직에 필요한 <b>세부사항 확정</b></span></div>
+    <div class="row"><b>2</b><span>각 세부사항에 맞춰 <b>파트별로 나누어 붙이기</b></span></div>
+    <div class="row hl"><b>3</b><span>한 파트마다 <b>정보 정리 + 에이전트 + 그 파트의 기본 지침서</b> 구축</span></div>
+    <div class="row"><b>4</b><span>파트를 다 붙이면 2027 시범 기획을 다시 돌려 연결 확인</span></div>
+  </div>
+  <div class="blank"><b>빈칸 · 선택</b>단계별 시점, 첫 번째로 만들 파트, 다음 발표 날짜가 있으면 넣겠습니다. 4번은 제안이라 빼도 됩니다.</div>
+</article>
+
+<article class="slide" id="s10">
+  <div class="sh"><span class="no">10</span><h3>Q&amp;A</h3><span class="time">0:15</span></div>
+  <p class="msg">캐릭터는 변하지 않고, 축제 콘텐츠만 매년 자란다. 에이전트도 같은 방식으로 만든다.</p>
+  <p class="screen">대키미·외지몽 이미지 + 핵심 메시지 "표현이 달라도, 친구가 된다."</p>
+</article>
+
+<p class="note">근거: 팀이 보완한 「기본 지침 v1.1 (초안)」, 10월 30일 중간발표 PPT, 원격 main의 <code>local 리서치/</code> 폴더(2026-11-04 기준). 부스 수·수수료·마스코트 색상은 지침 v1.1 값을 그대로 옮겼습니다.</p>
+</div>
+</body>
+</html>
