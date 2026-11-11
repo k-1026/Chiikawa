@@ -1,0 +1,119 @@
+[
+  {
+    "from": "output/대구_얼라들_브랜드_로고_v1/대구_얼라들_라벨_적용참고.png",
+    "to": "Brand logo/01_확정_로고/대구_얼라들_라벨_적용참고.png",
+    "sha256": "df0207b4da3243effb68506ee3f721deeb5d4b8a3f6a802b5cc1377df92771bc"
+  },
+  {
+    "from": "output/대구_얼라들_브랜드_로고_v1/대구_얼라들_로고_디자인시트_v1.md",
+    "to": "Brand logo/01_확정_로고/대구_얼라들_로고_디자인시트_v1.md",
+    "sha256": "f1f60bd733f2da2c578a33b3a877edb660c6028be6f2161d381aeeafeb3f1e3c"
+  },
+  {
+    "from": "output/대구_얼라들_브랜드_로고_v1/대구_얼라들_로고_승인원본.png",
+    "to": "Brand logo/01_확정_로고/대구_얼라들_로고_승인원본.png",
+    "sha256": "4c55b4da0db388d6d3cf1cd5040e36fc8717f109f485889bae53511dff19b795"
+  },
+  {
+    "from": "output/daegu-eolladeul-logo-planet-v1/daegu-eolladeul-planet-v1.png",
+    "to": "Brand logo/02_로고_시안/daegu-eolladeul-logo-planet-v1/daegu-eolladeul-planet-v1.png",
+    "sha256": "361afa7acb76ce641ca223867f4bede2d1c78e7db1c6a6b3ce8ee366f36fd523"
+  },
+  {
+    "from": "output/daegu-eolladeul-logo-planet-v2/daegu-eolladeul-planet-v2.png",
+    "to": "Brand logo/02_로고_시안/daegu-eolladeul-logo-planet-v2/daegu-eolladeul-planet-v2.png",
+    "sha256": "4c55b4da0db388d6d3cf1cd5040e36fc8717f109f485889bae53511dff19b795"
+  },
+  {
+    "from": "output/daegu-eolladeul-logo-v3/daegu-eolladeul-v3.svg",
+    "to": "Brand logo/02_로고_시안/daegu-eolladeul-logo-v3/daegu-eolladeul-v3.svg",
+    "sha256": "64955ce1d67adb744ab27df699fe273612fc61485dc23748e2485d438c2a7a6f"
+  },
+  {
+    "from": "output/daegu-eolladeul-logo-v3/daegu-eolladeul-v3-transparent.svg",
+    "to": "Brand logo/02_로고_시안/daegu-eolladeul-logo-v3/daegu-eolladeul-v3-transparent.svg",
+    "sha256": "76744cf9483f73572669d84568de2daeba77b9f0fcba1b10a18d9bd9b7f03355"
+  },
+  {
+    "from": "output/daegu-eolladeul-logo-v3/daegu-eolladeul-v3.png",
+    "to": "Brand logo/02_로고_시안/daegu-eolladeul-logo-v3/daegu-eolladeul-v3.png",
+    "sha256": "5f9ffa2c0c65384610bf1c55a7cac79375686b5661522308cb093248fdb10973"
+  },
+  {
+    "from": "output/daegu-eolladeul-logo-v4/design-notes.txt",
+    "to": "Brand logo/02_로고_시안/daegu-eolladeul-logo-v4/design-notes.txt",
+    "sha256": "6f2b88d58beadb52c8430f2b995cce9be47eee119b64c4155e4abce0d2e516d4"
+  },
+  {
+    "from": "output/daegu-eolladeul-logo-v4/daegu-eolladeul-v4-brand-preview.svg",
+    "to": "Brand logo/02_로고_시안/daegu-eolladeul-logo-v4/daegu-eolladeul-v4-brand-preview.svg",
+    "sha256": "cd69bdee199d46282da3d22a4467418271e1337ca16c238a7ddc2b605bfc786b"
+  },
+  {
+    "from": "output/daegu-eolladeul-logo-v4/daegu-eolladeul-v4.svg",
+    "to": "Brand logo/02_로고_시안/daegu-eolladeul-logo-v4/daegu-eolladeul-v4.svg",
+    "sha256": "e7dd863eb0a06a56bd0934b645f25b57b69d2a066e0c174117772bdf3dec3d35"
+  },
+  {
+    "from": "output/daegu-eolladeul-logo-v4/daegu-eolladeul-v4.png",
+    "to": "Brand logo/02_로고_시안/daegu-eolladeul-logo-v4/daegu-eolladeul-v4.png",
+    "sha256": "5efb45516dcb5bc570d9f7d3f17e26c77bf08e3e6ec888c40d5dd743fce758b5"
+  },
+  {
+    "from": "output/daegu-eolladeul-logo-v4/daegu-eolladeul-v4-brand-preview.png",
+    "to": "Brand logo/02_로고_시안/daegu-eolladeul-logo-v4/daegu-eolladeul-v4-brand-preview.png",
+    "sha256": "2bdc454a092c0970c418d5da889339ce9d388add7ceade4072362458fbfdd696"
+  },
+  {
+    "from": "output/daegu-eolladeul-logo-v4/daegu-eolladeul-v4-transparent.svg",
+    "to": "Brand logo/02_로고_시안/daegu-eolladeul-logo-v4/daegu-eolladeul-v4-transparent.svg",
+    "sha256": "494a0c45bd7233c52ad8ada1129ee281fa67973b976443ec0dc9855e862b2424"
+  },
+  {
+    "from": "output/daegu-eolladeul-logo-v7/daegu-eolladeul-v7-transparent.svg",
+    "to": "Brand logo/02_로고_시안/daegu-eolladeul-logo-v7/daegu-eolladeul-v7-transparent.svg",
+    "sha256": "8d5c16062d2a9fe47a8483538a71fb49ae1dceacf1f8368c21f28ee04f7ae057"
+  },
+  {
+    "from": "output/daegu-eolladeul-logo-v7/daegu-eolladeul-v7.svg",
+    "to": "Brand logo/02_로고_시안/daegu-eolladeul-logo-v7/daegu-eolladeul-v7.svg",
+    "sha256": "553d610a4264a77ef1876f3ce174e878de14a44d27d8af643bdffac6659485fa"
+  },
+  {
+    "from": "output/daegu-eolladeul-logo-v7/daegu-eolladeul-v7.png",
+    "to": "Brand logo/02_로고_시안/daegu-eolladeul-logo-v7/daegu-eolladeul-v7.png",
+    "sha256": "f8ee354a300cdacb36f9174056030c078d906fe38e3a88c99b73a5512da7648f"
+  },
+  {
+    "from": "output/daegu-eolladeul-logo-v8/daegu-eolladeul-v8.png",
+    "to": "Brand logo/02_로고_시안/daegu-eolladeul-logo-v8/daegu-eolladeul-v8.png",
+    "sha256": "4cca7db2f09b8685707d065c7ca10927b2589a1e6207c4f58afdf285fb7858ed"
+  },
+  {
+    "from": "output/daegu-eolladeul-logo-v8/daegu-eolladeul-v8-transparent.svg",
+    "to": "Brand logo/02_로고_시안/daegu-eolladeul-logo-v8/daegu-eolladeul-v8-transparent.svg",
+    "sha256": "1c7b092d58f840995f9aa28fc9eace30282f49926ccb951467e22b795b0f4c42"
+  },
+  {
+    "from": "output/daegu-eolladeul-logo-v8/daegu-eolladeul-v8.svg",
+    "to": "Brand logo/02_로고_시안/daegu-eolladeul-logo-v8/daegu-eolladeul-v8.svg",
+    "sha256": "ff4622290119b3226004db4223922ca3dda258084962a4c11739e01fc7596ec0"
+  },
+  {
+    "from": "output/daegu-eolladeul-label-mockup-v1/daegu-eolladeul-label-mockup-v1.png",
+    "to": "Brand logo/03_라벨_목업/daegu-eolladeul-label-mockup-v1/daegu-eolladeul-label-mockup-v1.png",
+    "sha256": "df0207b4da3243effb68506ee3f721deeb5d4b8a3f6a802b5cc1377df92771bc"
+  },
+  {
+    "from": "/Users/seunghui/.codex/generated_images/01a1c555-7911-7a60-bb4b-c458aeef875c/exec-f16bb029-8cbf-4a7d-af80-0ad4790a6ef9.png",
+    "to": "Brand logo/04_초기_생성이미지/01_초기_흑백_로고.png",
+    "sha256": "eefb3ee569bbf0b3a78f6e7ffb8a8aba9e8003c00606d09597aac220fad47e3a",
+    "operation": "copy_from_generation_cache"
+  },
+  {
+    "from": "/Users/seunghui/.codex/generated_images/01a1c555-7911-7a60-bb4b-c458aeef875c/exec-b3d1f612-d035-4698-8b24-877feac97272.png",
+    "to": "Brand logo/04_초기_생성이미지/02_유기적_차콜_로고.png",
+    "sha256": "1ca2a862e32cc48d1d0c0fed191a7b26d4ac5c21bde8ffbdf09b0c29400fc716",
+    "operation": "copy_from_generation_cache"
+  }
+]
