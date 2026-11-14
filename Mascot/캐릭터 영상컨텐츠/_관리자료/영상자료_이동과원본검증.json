@@ -1,0 +1,215 @@
+{
+  "date": "2026-11-13",
+  "moves": [
+    {
+      "source": "마스코트 디자인 스펙시트/아가버전 대키미&외지몽 디자인 스펙시트_v01/대키미 아기버전/부화 영상/.DS_Store",
+      "destination": "캐릭터 영상컨텐츠/대키미&외지몽 부화영상/대키미/.DS_Store",
+      "hash_before": "bb4af45f401c92d26ce8660f1111882c6670114e64b5103e83cc2964640c1744",
+      "hash_after": "bb4af45f401c92d26ce8660f1111882c6670114e64b5103e83cc2964640c1744"
+    },
+    {
+      "source": "마스코트 디자인 스펙시트/아가버전 대키미&외지몽 디자인 스펙시트_v01/대키미 아기버전/부화 영상/안내_버전순서.md",
+      "destination": "캐릭터 영상컨텐츠/대키미&외지몽 부화영상/대키미/안내_버전순서.md",
+      "hash_before": "abebfa8941b9756de463e78299e491e37db96bf9e199d0c3e69ce99b1ea736b9",
+      "hash_after": "abebfa8941b9756de463e78299e491e37db96bf9e199d0c3e69ce99b1ea736b9"
+    },
+    {
+      "source": "마스코트 디자인 스펙시트/아가버전 대키미&외지몽 디자인 스펙시트_v01/대키미 아기버전/부화 영상/대키미_초기결과_v00/대키미 부화 영상.mp4",
+      "destination": "캐릭터 영상컨텐츠/대키미&외지몽 부화영상/대키미/대키미_초기결과_v00/대키미_부화영상_초기_v00.mp4",
+      "hash_before": "04505a76f1ec0a012f06faebabae07675ceafed72bc3e345affd78306f08df8d",
+      "hash_after": "04505a76f1ec0a012f06faebabae07675ceafed72bc3e345affd78306f08df8d"
+    },
+    {
+      "source": "마스코트 디자인 스펙시트/아가버전 대키미&외지몽 디자인 스펙시트_v01/대키미 아기버전/부화 영상/대키미_초기결과_v00/안내_제작단계.md",
+      "destination": "캐릭터 영상컨텐츠/대키미&외지몽 부화영상/대키미/대키미_초기결과_v00/안내_제작단계.md",
+      "hash_before": "08cd779f7e0189be1ad263307c5945c04f0dcad45f6e7e83eb10171c3cb181b8",
+      "hash_after": "a534f6fe3024d76e6b0aa081aa3f7520afaa6f6bb94118edc8f8594f5141547e"
+    },
+    {
+      "source": "마스코트 디자인 스펙시트/아가버전 대키미&외지몽 디자인 스펙시트_v01/대키미 아기버전/부화 영상/대키미_1080p_결과_v01/.DS_Store",
+      "destination": "캐릭터 영상컨텐츠/대키미&외지몽 부화영상/대키미/대키미_1080p_결과_v01/.DS_Store",
+      "hash_before": "b72537c22932acfdedf57f5bfcad219eb3bb316c1c21e40ac8a8294338cda487",
+      "hash_after": "b72537c22932acfdedf57f5bfcad219eb3bb316c1c21e40ac8a8294338cda487"
+    },
+    {
+      "source": "마스코트 디자인 스펙시트/아가버전 대키미&외지몽 디자인 스펙시트_v01/대키미 아기버전/부화 영상/대키미_1080p_결과_v01/대키미 부화 최종_1080.mp4",
+      "destination": "캐릭터 영상컨텐츠/대키미&외지몽 부화영상/대키미/대키미_1080p_결과_v01/대키미_부화영상_최종1080p_v01.mp4",
+      "hash_before": "8258a485c30d3b6c3053f603855459fc067abdfbba4836200fd190a37b86f135",
+      "hash_after": "8258a485c30d3b6c3053f603855459fc067abdfbba4836200fd190a37b86f135"
+    },
+    {
+      "source": "마스코트 디자인 스펙시트/아가버전 대키미&외지몽 디자인 스펙시트_v01/대키미 아기버전/부화 영상/대키미_1080p_결과_v01/안내_제작단계.md",
+      "destination": "캐릭터 영상컨텐츠/대키미&외지몽 부화영상/대키미/대키미_1080p_결과_v01/안내_제작단계.md",
+      "hash_before": "1adf72ca8b84c460f9bd6bc5cdb19e08de627872585ae8ab8e808fd962b9a103",
+      "hash_after": "6ecf77ba5422ef6e1bbf67360ca2f9686a146e61cc9df9d4436bfdb5c5a7048a"
+    },
+    {
+      "source": "마스코트 디자인 스펙시트/아가버전 대키미&외지몽 디자인 스펙시트_v01/외지몽 아기버전/부화 영상/.DS_Store",
+      "destination": "캐릭터 영상컨텐츠/대키미&외지몽 부화영상/외지몽/.DS_Store",
+      "hash_before": "c0b9ed2f02202d7a0f8a71f54efbf6f7b5c4eb587712eccc9a91347a4b98a042",
+      "hash_after": "c0b9ed2f02202d7a0f8a71f54efbf6f7b5c4eb587712eccc9a91347a4b98a042"
+    },
+    {
+      "source": "마스코트 디자인 스펙시트/아가버전 대키미&외지몽 디자인 스펙시트_v01/외지몽 아기버전/부화 영상/안내_버전순서.md",
+      "destination": "캐릭터 영상컨텐츠/대키미&외지몽 부화영상/외지몽/안내_버전순서.md",
+      "hash_before": "1fe7c6746f865ee91c6125495f202ba0c5b4149400b36d8ebf902eb252679e8c",
+      "hash_after": "1fe7c6746f865ee91c6125495f202ba0c5b4149400b36d8ebf902eb252679e8c"
+    },
+    {
+      "source": "마스코트 디자인 스펙시트/아가버전 대키미&외지몽 디자인 스펙시트_v01/외지몽 아기버전/부화 영상/외지몽_10초_부화영상_프롬프트_v01/레퍼런스_원본위치_v01.json",
+      "destination": "캐릭터 영상컨텐츠/대키미&외지몽 부화영상/외지몽/외지몽_10초_부화영상_프롬프트_v01/레퍼런스_원본위치_v01.json",
+      "hash_before": "e7507b812d71496fc3b31211d9dcec3364b6eb835665719f11262fac1ce64c72",
+      "hash_after": "e7507b812d71496fc3b31211d9dcec3364b6eb835665719f11262fac1ce64c72"
+    },
+    {
+      "source": "마스코트 디자인 스펙시트/아가버전 대키미&외지몽 디자인 스펙시트_v01/외지몽 아기버전/부화 영상/외지몽_10초_부화영상_프롬프트_v01/Higgsfield_외지몽_10초_부화영상_프롬프트_EN_v01.txt",
+      "destination": "캐릭터 영상컨텐츠/대키미&외지몽 부화영상/외지몽/외지몽_10초_부화영상_프롬프트_v01/Higgsfield_외지몽_10초_부화영상_프롬프트_EN_v01.txt",
+      "hash_before": "1fbfcbc8ea03ae6433dd234d54c40967eedf5aa30e238a454278b522286bcd4e",
+      "hash_after": "1fbfcbc8ea03ae6433dd234d54c40967eedf5aa30e238a454278b522286bcd4e"
+    },
+    {
+      "source": "마스코트 디자인 스펙시트/아가버전 대키미&외지몽 디자인 스펙시트_v01/외지몽 아기버전/부화 영상/외지몽_10초_부화영상_프롬프트_v01/사용안내_레퍼런스순서_v01.txt",
+      "destination": "캐릭터 영상컨텐츠/대키미&외지몽 부화영상/외지몽/외지몽_10초_부화영상_프롬프트_v01/사용안내_레퍼런스순서_v01.txt",
+      "hash_before": "80425fd793f64228ec3da15c6759ce5a174081b71e912eb05409f0159a751e83",
+      "hash_after": "80425fd793f64228ec3da15c6759ce5a174081b71e912eb05409f0159a751e83"
+    },
+    {
+      "source": "마스코트 디자인 스펙시트/아가버전 대키미&외지몽 디자인 스펙시트_v01/외지몽 아기버전/부화 영상/외지몽_25초_스토리보드지시_v00/.DS_Store",
+      "destination": "캐릭터 영상컨텐츠/대키미&외지몽 부화영상/외지몽/외지몽_25초_스토리보드지시_v00/.DS_Store",
+      "hash_before": "1702fa31fd828dd3b13b9eea59a8179e058e45cc16b2cfa2d1a6ea2020ba3b38",
+      "hash_after": "1702fa31fd828dd3b13b9eea59a8179e058e45cc16b2cfa2d1a6ea2020ba3b38"
+    },
+    {
+      "source": "마스코트 디자인 스펙시트/아가버전 대키미&외지몽 디자인 스펙시트_v01/외지몽 아기버전/부화 영상/외지몽_25초_스토리보드지시_v00/안내_제작단계.md",
+      "destination": "캐릭터 영상컨텐츠/대키미&외지몽 부화영상/외지몽/외지몽_25초_스토리보드지시_v00/안내_제작단계.md",
+      "hash_before": "965299f1123b64117b331a529e8111cd4ac1672a99e38155c1765b39ad888937",
+      "hash_after": "965299f1123b64117b331a529e8111cd4ac1672a99e38155c1765b39ad888937"
+    },
+    {
+      "source": "마스코트 디자인 스펙시트/아가버전 대키미&외지몽 디자인 스펙시트_v01/외지몽 아기버전/부화 영상/외지몽_15초_굴러오는알_부화영상_프롬프트_v02/Claude_Higgsfield_Seedance2.5_외지몽_15초_EN_v02.txt",
+      "destination": "캐릭터 영상컨텐츠/대키미&외지몽 부화영상/외지몽/외지몽_15초_굴러오는알_부화영상_프롬프트_v02/Claude_Higgsfield_Seedance2.5_외지몽_15초_EN_v02.txt",
+      "hash_before": "f74a5434c157a9c38a397ec3c128e00539e7e3d34de9fa836a3ecb13d541b22e",
+      "hash_after": "f74a5434c157a9c38a397ec3c128e00539e7e3d34de9fa836a3ecb13d541b22e"
+    },
+    {
+      "source": "마스코트 디자인 스펙시트/아가버전 대키미&외지몽 디자인 스펙시트_v01/외지몽 아기버전/부화 영상/외지몽_15초_굴러오는알_부화영상_프롬프트_v02/Claude_Higgsfield_외지몽_15초_부화영상_EN_v02.txt",
+      "destination": "캐릭터 영상컨텐츠/대키미&외지몽 부화영상/외지몽/외지몽_15초_굴러오는알_부화영상_프롬프트_v02/Claude_Higgsfield_외지몽_15초_부화영상_EN_v02.txt",
+      "hash_before": "3d4a1acb14f4941ce1c558e45745ca5e7656744b11a7dd701bc21f394ed09516",
+      "hash_after": "3d4a1acb14f4941ce1c558e45745ca5e7656744b11a7dd701bc21f394ed09516"
+    },
+    {
+      "source": "마스코트 디자인 스펙시트/아가버전 대키미&외지몽 디자인 스펙시트_v01/외지몽 아기버전/부화 영상/외지몽_15초_굴러오는알_부화영상_프롬프트_v02/레퍼런스_원본위치_v02.json",
+      "destination": "캐릭터 영상컨텐츠/대키미&외지몽 부화영상/외지몽/외지몽_15초_굴러오는알_부화영상_프롬프트_v02/레퍼런스_원본위치_v02.json",
+      "hash_before": "764d67faee304f45a522ec2df575f1653dac493caa4d427e1517fef924a5d961",
+      "hash_after": "764d67faee304f45a522ec2df575f1653dac493caa4d427e1517fef924a5d961"
+    },
+    {
+      "source": "마스코트 디자인 스펙시트/아가버전 대키미&외지몽 디자인 스펙시트_v01/외지몽 아기버전/부화 영상/외지몽_15초_굴러오는알_부화영상_프롬프트_v02/안내_제작단계.md",
+      "destination": "캐릭터 영상컨텐츠/대키미&외지몽 부화영상/외지몽/외지몽_15초_굴러오는알_부화영상_프롬프트_v02/안내_제작단계.md",
+      "hash_before": "e05698a24e7e84ea12dc847fc20a8a2b6f3effb169acff27d64594a85b257917",
+      "hash_after": "e05698a24e7e84ea12dc847fc20a8a2b6f3effb169acff27d64594a85b257917"
+    },
+    {
+      "source": "마스코트 디자인 스펙시트/아가버전 대키미&외지몽 디자인 스펙시트_v01/외지몽 아기버전/부화 영상/외지몽_25초_스토리보드지시_v00/스토리보드_v01/.DS_Store",
+      "destination": "캐릭터 영상컨텐츠/대키미&외지몽 부화영상/외지몽/외지몽_25초_스토리보드지시_v00/스토리보드_v01/.DS_Store",
+      "hash_before": "1585c23d6ad60706cc52ada6cca8e260428284c58581a6d2316d0b86fd7c269e",
+      "hash_after": "1585c23d6ad60706cc52ada6cca8e260428284c58581a6d2316d0b86fd7c269e"
+    },
+    {
+      "source": "마스코트 디자인 스펙시트/아가버전 대키미&외지몽 디자인 스펙시트_v01/외지몽 아기버전/부화 영상/외지몽_25초_스토리보드지시_v00/스토리보드_v01/Higgsfield_25초_영상프롬프트_EN.txt",
+      "destination": "캐릭터 영상컨텐츠/대키미&외지몽 부화영상/외지몽/외지몽_25초_스토리보드지시_v00/스토리보드_v01/Higgsfield_25초_영상프롬프트_EN.txt",
+      "hash_before": "576deaee56f09944731d328ce1aa8c7838c7e349fbd8c341eec8421a82ddf2f6",
+      "hash_after": "576deaee56f09944731d328ce1aa8c7838c7e349fbd8c341eec8421a82ddf2f6"
+    },
+    {
+      "source": "마스코트 디자인 스펙시트/아가버전 대키미&외지몽 디자인 스펙시트_v01/외지몽 아기버전/부화 영상/외지몽_25초_스토리보드지시_v00/스토리보드_v01/외지몽_25초_8컷_스토리보드_지시서.txt",
+      "destination": "캐릭터 영상컨텐츠/대키미&외지몽 부화영상/외지몽/외지몽_25초_스토리보드지시_v00/스토리보드_v01/외지몽_25초_8컷_스토리보드_지시서.txt",
+      "hash_before": "07c713488be6b277d361fa2812e820db20c5e42e1b4c0b6468d8d764a1677534",
+      "hash_after": "07c713488be6b277d361fa2812e820db20c5e42e1b4c0b6468d8d764a1677534"
+    },
+    {
+      "source": "마스코트 디자인 스펙시트/아가버전 대키미&외지몽 디자인 스펙시트_v01/외지몽 아기버전/부화 영상/외지몽_25초_스토리보드지시_v00/스토리보드_v01/스토리보드_이미지생성_영문프롬프트.txt",
+      "destination": "캐릭터 영상컨텐츠/대키미&외지몽 부화영상/외지몽/외지몽_25초_스토리보드지시_v00/스토리보드_v01/스토리보드_이미지생성_영문프롬프트.txt",
+      "hash_before": "bb4c8badad0a471be9ea84195f03ef171e080fad5a696ce3a7e0b0ccd714cae2",
+      "hash_after": "bb4c8badad0a471be9ea84195f03ef171e080fad5a696ce3a7e0b0ccd714cae2"
+    },
+    {
+      "source": "마스코트 디자인 스펙시트/아가버전 대키미&외지몽 디자인 스펙시트_v01/외지몽 아기버전/부화 영상/외지몽_25초_스토리보드지시_v00/스토리보드_v01/Higgsfield_업로드자료/03_외지몽알_6방향.png",
+      "destination": "캐릭터 영상컨텐츠/대키미&외지몽 부화영상/외지몽/외지몽_25초_스토리보드지시_v00/스토리보드_v01/Higgsfield_업로드자료/03_외지몽알_6방향.png",
+      "hash_before": "775cdf923e20659d5091a116c5eb6e339da5ca6558ecfb47036b9b7daad1b11e",
+      "hash_after": "775cdf923e20659d5091a116c5eb6e339da5ca6558ecfb47036b9b7daad1b11e"
+    },
+    {
+      "source": "마스코트 디자인 스펙시트/아가버전 대키미&외지몽 디자인 스펙시트_v01/외지몽 아기버전/부화 영상/외지몽_25초_스토리보드지시_v00/스토리보드_v01/Higgsfield_업로드자료/01_외지몽아기_정면.png",
+      "destination": "캐릭터 영상컨텐츠/대키미&외지몽 부화영상/외지몽/외지몽_25초_스토리보드지시_v00/스토리보드_v01/Higgsfield_업로드자료/01_외지몽아기_정면.png",
+      "hash_before": "9c9c581b1cc96b1021bd79365d15dc9dce9be86c4b9680b0bd6584b951e2b0bf",
+      "hash_after": "9c9c581b1cc96b1021bd79365d15dc9dce9be86c4b9680b0bd6584b951e2b0bf"
+    },
+    {
+      "source": "마스코트 디자인 스펙시트/아가버전 대키미&외지몽 디자인 스펙시트_v01/외지몽 아기버전/부화 영상/외지몽_25초_스토리보드지시_v00/스토리보드_v01/Higgsfield_업로드자료/02_외지몽아기_6방향.png",
+      "destination": "캐릭터 영상컨텐츠/대키미&외지몽 부화영상/외지몽/외지몽_25초_스토리보드지시_v00/스토리보드_v01/Higgsfield_업로드자료/02_외지몽아기_6방향.png",
+      "hash_before": "876d8c3f59ba4ced59ca2678e91a2cf5ec5c57918c6710507dce5af08481fd8f",
+      "hash_after": "876d8c3f59ba4ced59ca2678e91a2cf5ec5c57918c6710507dce5af08481fd8f"
+    },
+    {
+      "source": "output/video/daekimi_hatching_v01/.DS_Store",
+      "destination": "캐릭터 영상컨텐츠/대키미&외지몽 부화영상/대키미/스토리보드와수정기록/대키미_부화영상_제작검토_v00/.DS_Store",
+      "hash_before": "4812d12458b0b0e12007be62ce7cb3011d236e5036d712c82381cbaf7ab84fb9",
+      "hash_after": "4812d12458b0b0e12007be62ce7cb3011d236e5036d712c82381cbaf7ab84fb9"
+    },
+    {
+      "source": "output/video/daekimi_hatching_v01/storyboard_v01/generation_prompt.txt",
+      "destination": "캐릭터 영상컨텐츠/대키미&외지몽 부화영상/대키미/스토리보드와수정기록/대키미_부화영상_제작검토_v00/storyboard_v01/generation_prompt.txt",
+      "hash_before": "f3fb41dac085374ba672562c36dd33f2d720074e63ef8a4c0eca7f21da15e47b",
+      "hash_after": "f3fb41dac085374ba672562c36dd33f2d720074e63ef8a4c0eca7f21da15e47b"
+    },
+    {
+      "source": "output/video/daekimi_hatching_v01/storyboard_v01/스토리보드_컷설명.txt",
+      "destination": "캐릭터 영상컨텐츠/대키미&외지몽 부화영상/대키미/스토리보드와수정기록/대키미_부화영상_제작검토_v00/storyboard_v01/스토리보드_컷설명.txt",
+      "hash_before": "e3e27b0242b620a26316cb7484995010d72adfa74e2b8cd7d683880ad0c8b42e",
+      "hash_after": "e3e27b0242b620a26316cb7484995010d72adfa74e2b8cd7d683880ad0c8b42e"
+    },
+    {
+      "source": "output/video/daekimi_hatching_v01/storyboard_v01/대키미_부화_12컷_스토리보드_v01.png",
+      "destination": "캐릭터 영상컨텐츠/대키미&외지몽 부화영상/대키미/스토리보드와수정기록/대키미_부화영상_제작검토_v00/storyboard_v01/대키미_부화_12컷_스토리보드_v01.png",
+      "hash_before": "aec245038dbab5ffd79a3beab15a3ca2fe04ea3305201a1aa1bf28866e68dc86",
+      "hash_after": "aec245038dbab5ffd79a3beab15a3ca2fe04ea3305201a1aa1bf28866e68dc86"
+    },
+    {
+      "source": "output/video/daekimi_hatching_v01/revision_01/image_generation_prompts.json",
+      "destination": "캐릭터 영상컨텐츠/대키미&외지몽 부화영상/대키미/스토리보드와수정기록/대키미_부화영상_제작검토_v00/revision_01/image_generation_prompts.json",
+      "hash_before": "2fbb749414c84b99fcf8c72f2ce0f09285b37a06550e0843a767dab33d986a54",
+      "hash_after": "2fbb749414c84b99fcf8c72f2ce0f09285b37a06550e0843a767dab33d986a54"
+    },
+    {
+      "source": "output/video/daekimi_hatching_v01/revision_01/01_start_upright.png",
+      "destination": "캐릭터 영상컨텐츠/대키미&외지몽 부화영상/대키미/스토리보드와수정기록/대키미_부화영상_제작검토_v00/revision_01/01_start_upright.png",
+      "hash_before": "c6615d1e52b7b54402e8e22e02a570cda0c3c2290fffb87801b5a8b44eb6b2ea",
+      "hash_after": "c6615d1e52b7b54402e8e22e02a570cda0c3c2290fffb87801b5a8b44eb6b2ea"
+    },
+    {
+      "source": "output/video/daekimi_hatching_v01/revision_01/Flow_첫8초_수정프롬프트.txt",
+      "destination": "캐릭터 영상컨텐츠/대키미&외지몽 부화영상/대키미/스토리보드와수정기록/대키미_부화영상_제작검토_v00/revision_01/Flow_첫8초_수정프롬프트.txt",
+      "hash_before": "f402b1889a28fa623192c0a943ed2c428e8fa33ba216583c6119cf5c98c1f232",
+      "hash_after": "f402b1889a28fa623192c0a943ed2c428e8fa33ba216583c6119cf5c98c1f232"
+    },
+    {
+      "source": "output/video/daekimi_hatching_v01/revision_01/검토와_수정방향.txt",
+      "destination": "캐릭터 영상컨텐츠/대키미&외지몽 부화영상/대키미/스토리보드와수정기록/대키미_부화영상_제작검토_v00/revision_01/검토와_수정방향.txt",
+      "hash_before": "cb47ac83d674469afdadbf177b5a45191e3cd460caa56d2457a4653946cac760",
+      "hash_after": "cb47ac83d674469afdadbf177b5a45191e3cd460caa56d2457a4653946cac760"
+    },
+    {
+      "source": "키미앤지몽.mp4",
+      "destination": "캐릭터 영상컨텐츠/트렌드 영상/키미앤지몽_v00/키미앤지몽_v00.mp4",
+      "hash_before": "da849cb37a260bc334d0aefc524ac181f38ec08a7ccc92a28bdf5726c3746e54",
+      "hash_after": "da849cb37a260bc334d0aefc524ac181f38ec08a7ccc92a28bdf5726c3746e54"
+    }
+  ],
+  "path_updates": [
+    "Brand logo/README.md",
+    "Brand logo/01_확정_로고/대구_얼라들_로고_디자인시트_v1.md",
+    "goods/아기버전 시팅인형 /시팅인형_디자인자세_v01/대키미_아기_시팅_디자인_측정시트_v01.md"
+  ],
+  "additional_navigation_updates": 5
+}

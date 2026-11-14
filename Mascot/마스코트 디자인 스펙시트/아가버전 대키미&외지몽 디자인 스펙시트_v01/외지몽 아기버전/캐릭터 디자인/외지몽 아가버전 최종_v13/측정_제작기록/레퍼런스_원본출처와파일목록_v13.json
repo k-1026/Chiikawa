@@ -1,0 +1,114 @@
+[
+  {
+    "file": "레퍼런스_이미지/01_정면.png",
+    "sha256": "f698736d640b404eff306b944c540fc525f105efc6ddf4e6d9867d9cc31f9064",
+    "image_size": [
+      1536,
+      1024
+    ],
+    "green_extent_bbox_px_approx": [
+      382,
+      94,
+      1150,
+      944
+    ],
+    "green_extent_height_px": 850,
+    "role": "user-approved canonical front copy"
+  },
+  {
+    "file": "레퍼런스_이미지/02_45도_관찰자왼쪽.png",
+    "sha256": "73f009c26c71f98a809932e1f3fa4c970927163b7433ce5a0a8f5840b7af933a",
+    "image_size": [
+      1536,
+      1024
+    ],
+    "green_extent_bbox_px_approx": [
+      409,
+      68,
+      1077,
+      950
+    ],
+    "green_extent_height_px": 882,
+    "role": "new rotation supporting reference; not a CAD orthographic render"
+  },
+  {
+    "file": "레퍼런스_이미지/03_45도_관찰자오른쪽.png",
+    "sha256": "2cf16b8b9769f99ebdad3f93c31cf0812e62e96f2337032624e0f664b72bd9dc",
+    "image_size": [
+      1536,
+      1024
+    ],
+    "green_extent_bbox_px_approx": [
+      431,
+      86,
+      1076,
+      949
+    ],
+    "green_extent_height_px": 863,
+    "role": "new rotation supporting reference; not a CAD orthographic render"
+  },
+  {
+    "file": "레퍼런스_이미지/04_측면_관찰자왼쪽.png",
+    "sha256": "99d4e8f7cbe978c7e034e70f22bfde7eecd05bbc4c5b6d82c18f663d13829833",
+    "image_size": [
+      1536,
+      1024
+    ],
+    "green_extent_bbox_px_approx": [
+      483,
+      60,
+      959,
+      948
+    ],
+    "green_extent_height_px": 888,
+    "role": "new rotation supporting reference; not a CAD orthographic render"
+  },
+  {
+    "file": "레퍼런스_이미지/05_측면_관찰자오른쪽.png",
+    "sha256": "facad9b31c12fff58fde9fc77f3b58e3033dbc915e3ab313334e4bf4b498128f",
+    "image_size": [
+      1536,
+      1024
+    ],
+    "green_extent_bbox_px_approx": [
+      507,
+      67,
+      997,
+      946
+    ],
+    "green_extent_height_px": 879,
+    "role": "new rotation supporting reference; not a CAD orthographic render"
+  },
+  {
+    "file": "레퍼런스_이미지/06_후면.png",
+    "sha256": "7ad3f252b66946951daf244696890794163cb8fb4b29db396379efe1ea0d4915",
+    "image_size": [
+      1536,
+      1024
+    ],
+    "green_extent_bbox_px_approx": [
+      382,
+      95,
+      1146,
+      944
+    ],
+    "green_extent_height_px": 849,
+    "role": "new rotation supporting reference; not a CAD orthographic render"
+  },
+  {
+    "file": "앉은자세_보조이미지/07_앉은자세_정면.png",
+    "sha256": "834a6e8b774edec1e18ba0adb4ef57109933da7c721715d61c1c114b4eac58bc",
+    "image_size": [
+      1536,
+      1024
+    ],
+    "green_extent_bbox_px_approx": [
+      383,
+      98,
+      1150,
+      941
+    ],
+    "green_extent_height_px": 843,
+    "role": "user-approved seated supporting copy"
+  }
+]

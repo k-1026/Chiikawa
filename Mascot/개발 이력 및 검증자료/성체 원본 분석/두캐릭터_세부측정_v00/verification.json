@@ -1,0 +1,22 @@
+{
+  "daekimi": {
+    "pdf_pages": 12,
+    "source_preserved_sha256": "99f9eaf0e27627e19c1fd6cfc3307c97f4e5158b82c3111d95cd62a0a4fa3f32",
+    "four_view_contour_points": 4552,
+    "eyes": 2,
+    "highlight_design_motifs_per_eye": 3,
+    "manual_torso_stations": 6,
+    "files": 25,
+    "pdf_visual_review": "all pages reviewed; revised thumb location rechecked on source-coordinate grid"
+  },
+  "oejimong": {
+    "pdf_pages": 12,
+    "source_preserved_sha256": "5a55a135f95318872d4ded2d38434d599c9d6ff61890a953be481e454e7b5927",
+    "four_view_contour_points": 4334,
+    "eyes": 2,
+    "highlight_design_motifs_per_eye": 3,
+    "manual_torso_stations": 6,
+    "files": 25,
+    "pdf_visual_review": "all pages reviewed; revised thumb location rechecked on source-coordinate grid"
+  }
+}

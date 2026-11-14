@@ -1,0 +1,26 @@
+{
+  "version": "03",
+  "date": "2026-11-03",
+  "save_authorized_by_user": true,
+  "reference_precedence": "latest user-fixed image > this package reference-derived observations > original boards for non-conflicting unseen poses/details > old PDF measurements; old percentage proposals are history only",
+  "characters": {
+    "daekimi": {
+      "spec": "대키미_고정외형_디자인측정시트_v03.md",
+      "reference": "레퍼런스_이미지/대키미_고정기준_정면.png",
+      "source_reference": "/Users/seunghui/Desktop/대외활동/CJ AI x AX/daegu-local-festival-ai-agent/Mascot/output/daekimi_pdf_validation/daekimi_validation_front_01.png",
+      "sha256": "3a8477cfae72e51d0c76fb8734076c84c21539fe3d7687e91bba055ca2812feb",
+      "status": "사용자가 첨부해 얼굴형·크기·몸 비율을 고정한 기준",
+      "height_cm": 103,
+      "measurement_file": "측정_제작기록/대키미_고정이미지_관측치수.json"
+    },
+    "oejimong": {
+      "spec": "외지몽_고정외형_디자인측정시트_v03.md",
+      "reference": "레퍼런스_이미지/외지몽_잠정고정_비교이미지.png",
+      "source_reference": "/Users/seunghui/.codex/generated_images/01a1a022-6002-7142-b69b-3f431caf1080/exec-01120af4-bada-4ead-9fab-f031a0a1db2c.png",
+      "sha256": "e3c3211275cacd02a0fed4559e6da136a3c13d9fa9b4741dfe860992fa937269",
+      "status": "사용자가 지금은 일단 픽스라고 한 마지막 비교 이미지의 오른쪽 초록색 캐릭터만 잠정 고정",
+      "height_cm": 105,
+      "measurement_file": "측정_제작기록/외지몽_고정이미지_관측치수.json"
+    }
+  }
+}

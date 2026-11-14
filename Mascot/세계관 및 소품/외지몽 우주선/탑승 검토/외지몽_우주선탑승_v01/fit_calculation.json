@@ -1,0 +1,13 @@
+{
+  "mascot_total_height_cm": 105,
+  "cabin_standing_clear_height_cm": 120,
+  "overhead_clearance_cm": 15,
+  "height_fraction": 0.875,
+  "cabin_clear_width_cm": 180,
+  "scope": "Illustrative dimensional proposal. Right cabin is primary ratio comparison; left outside figure is not accurately matched in scale.",
+  "not_verified": [
+    "Actual3D interior clearance",
+    "Whole spacecraft external dimensions",
+    "Left/right figure scale equality"
+  ]
+}

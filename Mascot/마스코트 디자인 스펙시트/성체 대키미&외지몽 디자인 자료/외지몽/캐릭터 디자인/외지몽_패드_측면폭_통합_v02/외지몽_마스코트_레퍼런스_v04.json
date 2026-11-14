@@ -1,0 +1,11 @@
+{
+  "tool": "built-in image_gen",
+  "role": "Consolidated companion reference; existing approved sources remain authoritative",
+  "prompt_summary": "Faithful Oejimong four-view reference: front,45 degrees,approved side depth,seated paw view; preserve identity,belly and round gradient tail; cream pads one large plus three small at55 percent local surface width; perspective and occlusion; white neutral studio background.",
+  "approved_sources": [
+    "레퍼런스_이미지/외지몽_승인측면_머리폭_v04.png",
+    "레퍼런스_이미지/외지몽_승인젤리패드_동작_v04.png"
+  ],
+  "output": "외지몽_마스코트_레퍼런스_v04.png",
+  "sha256": "75cbcdf0701698cf9c1d58ef8a2972fbfa6b6e00badc2d64638c02e1ce862ba3"
+}

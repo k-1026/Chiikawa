@@ -1,0 +1,17 @@
+{
+  "date": "2026-11-13",
+  "checks": [
+    "6 separate standing reference PNGs verified",
+    "1 seated supporting PNG verified",
+    "Front and seated byte-identical to approved samples",
+    "MD local image links resolve",
+    "21 manual projected measurement entries, not 3D dimensions",
+    "Observed colors sampled from new front; old neon observation superseded",
+    "Viewer-relative left/right documented with anatomical side and nose direction",
+    "Generated rotations inspected for counts, profile orientation, cream regions, rear tail direction",
+    "Rotations are generated 2D supplements with small silhouette/scale/depth variation; exact geometric equivalence not established",
+    "No product30cm size injected into character53cm setting",
+    "No commit or push"
+  ],
+  "limits": "User-approved appearance preserved in canonical copies; new rotation references await user review and do not guarantee exact same pixels or exact 3D geometry across AI tools."
+}

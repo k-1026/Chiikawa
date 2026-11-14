@@ -1,0 +1,91 @@
+Use the connected Higgsfield tools to create ONE new reference-guided video with SEEDANCE 2.5.
+This is fresh generation using the approved videos as references, following the user's chosen workflow. It is not permission to redesign or re-choreograph the scene.
+The ONLY creative change is facial expression animation.
+
+Before submitting, inspect whether the connection can accept BOTH video references with the separate roles below. Bind the actual assets, not unbound filenames.
+If this reference configuration is unsupported, report the limitation and do not silently substitute still-only generation, change models or submit a paid attempt.
+Target 15 seconds, 16:9, ONE output, 1080p if supported. Match Video A's source duration and audio where supported. Do not retime the source choreography to match Video B.
+No automatic additional paid attempts.
+
+REFERENCE ROLES — STRICTLY SEPARATE
+VIDEO A — MASTER FOR THE ENTIRE FILM:
+외지몽_부화영상_v05.mp4
+Original filename: 최종.mp4.
+This is the approved scene, character appearance, camera, animation and physical performance. Match it as closely as possible in every respect except the permitted facial animation below.
+
+VIDEO B — FACIAL EXPRESSION DONOR ONLY:
+외지몽_부화영상_v02.mp4
+Original filename: hf_20261113_153832_2090d78a-bb33-4273-bf5b-ecd76113382e.mp4.
+Extract ONLY eyelid/blink, mouth-opening/smile and small visible tongue animation.
+Do NOT transfer its body motion, timing, running gait, recovery speed, camera, proportions, head pose, shell behavior or face-contact deformation.
+
+IMAGE 1 — IDENTITY CHECK ONLY:
+Approved Oejimong baby standing front, 01_정면.png.
+Use only to confirm identity, colors, fur and original facial feature design. Do not copy its standing pose, framing or expression as a static hold.
+
+PRIORITY
+Video A controls the film and character.
+Video B controls ONLY the approved eyelid, mouth and tongue expression sequence.
+Image 1 confirms identity only.
+Never average the two videos or create an alternate hybrid scene.
+
+PERMITTED CHANGES — FACIAL ANIMATION ONLY
+Animate the existing eyelids, mouth opening/closure, smile and small tongue.
+Keep the character's original eyes, nose, muzzle extent, face outline, feature spacing, head size, cheek volume and blush.
+No added eyebrows, teeth, tears, wrinkles, exaggerated cheeks or longer tongue.
+Eye motifs remain the original large cream four-point star, smaller gray four-point sparkle and tiny pale diamond on each open black eye. During a blink, eyelids naturally hide these motifs; do not redraw them on the lids.
+
+EXPRESSION SEQUENCE
+Align by the corresponding ACTION in Video A, not by copying Video B's absolute timestamps. Preserve the donor expressions' order, gentle intensity and transitions while leaving Video A's physical timing unchanged.
+
+1. HEAD FIRST BECOMES VISIBLE:
+Use Video B's brief eyelid lowering/blink and reopening, as seen around its 4.0–4.25-second emergence.
+Apply only once Video A's face is actually exposed. Do not reveal the face earlier or alter the shell to show it.
+Settle into the donor's soft closed-mouth smile.
+
+2. GREETING AND EAGER APPROACH:
+Transition from that closed-mouth smile into Video B's open, delighted smile with its little pink tongue, seen from approximately 6.25 seconds through its approach.
+Keep the same friendly excitement, natural mouth opening and small tongue size.
+Apply this expression progression to Video A's existing greeting/running phases, without extending a greeting or changing any footstep.
+During the fall/recovery, carry the friendly expression naturally; do not add crying, pain, panic or a new comedic reaction.
+
+3. CAMERA CONTACT:
+Use Video B's transition from open excitement to a briefly closed mouth, then a small surprised mouth opening, around its 11.0–12.25-second contact.
+Apply only the mouth/eyelid changes to Video A's own contact beat.
+Retain exactly Video A's accepted mild nose/muzzle pressure and physical stop. Do not import Video B's lens distance, framing, impact strength or muzzle proportions.
+No exaggerated squash or wide shocked mouth.
+
+4. RELEASE, BACKWARD STEPS AND ENDING:
+Use the donor's brief blink around 12.75 seconds, followed by its relaxed closed-mouth smile around 13 seconds onward.
+Align this with Video A's own release/backward-step phase when the face is readable.
+Keep Video A's head tilt, viewer eye contact and close framing exactly as its existing performance.
+No additional nod, new head turn, extra backward step or new wave.
+Finish with the donor's gentle relaxed smile, not a new open-mouth ending.
+
+LOCK EVERYTHING ELSE TO VIDEO A
+Preserve:
+- The existing duration, sequence and action timing.
+- Egg arrival, egg silhouette, cream color and mint decorations.
+- Tail-first emergence, antenna reaction, face/ears emergence and simultaneous limb emergence/shell break.
+- Yellow antenna signal marks, their size, positions and timing.
+- Gravity, shell fragment trajectories, landing and settled floor positions.
+- Continuous tail wag, tail root, shape, cream tip and motion.
+- The first run, single fall, gradual baby-like recovery and balance adjustment.
+- Upright TWO-LEGGED second run, alternating footfalls, speed and arm motion.
+- Camera approach, accepted light contact, one-or-two-step retreat and close ending.
+- Existing head orientation, head tilt, gaze direction, ear and antenna movement.
+- Head/body proportions, green color, short tidy fur, light blush, cream areas, eyes/nose design and forelocks.
+- Every palm/sole jelly pad: the approved separate ONE large cream pad plus THREE small cream ovals, their smooth hairless material, placement, visibility and temporal consistency. No pads on handbacks or foot tops. No sudden pad appearance.
+- Background, lighting, shadows, camera position, perspective, framing and source sound effects.
+
+Do not add cuts, zoom, new props, new actions, music, dialogue, barking or vocal laughter.
+Do not change body movement to help a facial expression.
+Do not return to a quadrupedal gait or copy Video B's faster stand-up.
+Do not use the reference still as a first frame.
+
+FINAL CHECK
+If inspection is supported, compare the new result with Video A: only eyelid/mouth/tongue animation should differ in the intended expression phases.
+Check that Video B's expression changes are readable without changes to physical choreography, pads or character design.
+Report deviations honestly. Fresh generation cannot guarantee frame-identical preservation; do not claim that it does.
+Return one completed video or playable/download link. Do not automatically generate further paid attempts.
+

@@ -1,0 +1,93 @@
+{
+  "character": "대키미",
+  "unit": "mm",
+  "version": "v01",
+  "stage": "견적·샘플 개발용 / 미완성 항목 별도 표시",
+  "source": "/Users/seunghui/Desktop/대외활동/CJ AI x AX/daegu-local-festival-ai-agent/Mascot/마스코트 디자인 스펙시트/아가버전 대키미&외지몽 디자인 스펙시트_v01/대키미 아기버전/reference/무표정_꼬리리본_팔내림_시안_v02/02_STANDING_FRONT.png",
+  "source_sha256": "9a9304514cb5a760fae257a0c8dd8240f5b17f33ec3224864f1fdaf93bc8f46f",
+  "logo_source": "/Users/seunghui/Desktop/대외활동/CJ AI x AX/daegu-local-festival-ai-agent/Mascot/Brand logo/01_확정_로고/대구_얼라들_로고_승인원본.png",
+  "logo_sha256": "4c55b4da0db388d6d3cf1cd5040e36fc8717f109f485889bae53511dff19b795",
+  "source_bbox_manual_px": [
+    205,
+    69,
+    1020,
+    1162
+  ],
+  "head_top_y_manual_px": 274,
+  "measurements": [
+    {
+      "id": "H01",
+      "name": "전체 세로",
+      "definition": "발바닥~가장 높은 안테나 구슬 끝",
+      "target_mm": 160,
+      "status": "사용자 확정"
+    },
+    {
+      "id": "W01",
+      "name": "정면 가로·폭",
+      "definition": "양쪽 귀·꼬리 등 보이는 윤곽의 최대 폭",
+      "target_mm": 119.30466605672461,
+      "status": "원본 이미지 관측 근사"
+    },
+    {
+      "id": "H02",
+      "name": "안테나 제외 세로",
+      "definition": "귀·앞머리 제외, 머리 본체 윗면~발바닥",
+      "target_mm": 129.99085086916745,
+      "status": "원본 이미지 관측 근사"
+    },
+    {
+      "id": "H03",
+      "name": "안테나 수직 돌출",
+      "definition": "머리 본체 윗면~가장 높은 구슬 끝",
+      "target_mm": 30.009149130832572,
+      "status": "실제 줄기 곡선 길이 아님"
+    },
+    {
+      "id": "D01",
+      "name": "앞뒤 두께·깊이",
+      "definition": "코·주둥이 최전방~뒤통수·몸통 최후방, 꼬리 별도",
+      "target_mm": 60,
+      "status": "샘플 검토 제안"
+    },
+    {
+      "id": "L01",
+      "name": "라벨 보이는 가로",
+      "definition": "옆선 바깥 노출 폭",
+      "target_mm": 25,
+      "status": "검토 제안"
+    },
+    {
+      "id": "L02",
+      "name": "라벨 보이는 세로",
+      "definition": "완성 접은 라벨 높이",
+      "target_mm": 22,
+      "status": "검토 제안"
+    }
+  ],
+  "pending": [
+    "신규6방향",
+    "최종원단품번",
+    "라벨실물검수",
+    "자수/덧댐비교견적",
+    "봉제패턴개발",
+    "시험봉제",
+    "허용오차",
+    "양산승인"
+  ],
+  "label": {
+    "visible_mm": [
+      25,
+      22
+    ],
+    "flat_cut_mm": [
+      25,
+      54
+    ],
+    "seam_allowance_each_end_mm": 5,
+    "position": "character right side seam",
+    "front": "approved logo unchanged",
+    "back": "made in korea",
+    "status": "검토제안"
+  }
+}

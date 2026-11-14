@@ -1,0 +1,347 @@
+{
+  "version": "1.1",
+  "units": "All dimensions ending _H are normalized units u; total height = 100u, 1u = 1 percent of total height.",
+  "status": "v1 working standard; not recovered original CAD",
+  "manual_boundary_uncertainty_px": 3,
+  "occluded_boundary_uncertainty_px": 6,
+  "characters": {
+    "daekimi": {
+      "name": "대키미",
+      "H": 214,
+      "origin": [
+        130,
+        638
+      ],
+      "front_roi": [
+        45,
+        630,
+        241,
+        855
+      ],
+      "boxes": {
+        "head": [
+          [
+            58,
+            682,
+            203,
+            788
+          ],
+          "머리 본체",
+          "부분 가림·수동 근사"
+        ],
+        "body": [
+          [
+            94,
+            786,
+            166,
+            835
+          ],
+          "몸통",
+          "팔다리 연결부 추정"
+        ],
+        "ear_left": [
+          [
+            56,
+            666,
+            102,
+            713
+          ],
+          "귀 1개",
+          "수동 근사"
+        ],
+        "antenna_stem_left": [
+          [
+            106,
+            661,
+            120,
+            687
+          ],
+          "안테나 줄기 1개",
+          "머리 연결부 추정"
+        ],
+        "antenna_ball_left": [
+          [
+            94,
+            638,
+            118,
+            665
+          ],
+          "안테나 구슬 1개",
+          "수동 근사"
+        ],
+        "antenna_ball_right": [
+          [
+            141,
+            638,
+            166,
+            664
+          ],
+          "반대쪽 구슬",
+          "수동 근사"
+        ],
+        "arm_left": [
+          [
+            79,
+            790,
+            101,
+            824
+          ],
+          "팔 1개",
+          "몸통 연결부 추정"
+        ],
+        "leg_left": [
+          [
+            96,
+            828,
+            126,
+            852
+          ],
+          "다리와 발 1개",
+          "분리 경계 제작 기준"
+        ],
+        "foot_left": [
+          [
+            96,
+            840,
+            126,
+            852
+          ],
+          "발 1개",
+          "발등 분리선 제작 기준"
+        ],
+        "eye_left": [
+          [
+            71,
+            717,
+            116,
+            761
+          ],
+          "화면 왼쪽 눈",
+          "검정 픽셀 연결영역 기준"
+        ],
+        "eye_right": [
+          [
+            148,
+            716,
+            192,
+            761
+          ],
+          "화면 오른쪽 눈",
+          "검정 픽셀 연결영역 기준"
+        ],
+        "nose": [
+          [
+            127,
+            750,
+            135,
+            755
+          ],
+          "코",
+          "수동 근사"
+        ],
+        "mouth": [
+          [
+            124,
+            755,
+            138,
+            768
+          ],
+          "기본 열린 입",
+          "수동 근사"
+        ]
+      },
+      "standards": {
+        "head_depth_H": 56,
+        "body_depth_H": 27,
+        "foot_depth_H": 19,
+        "tail_length_H": 44,
+        "tail_diameter_H": 10,
+        "tail_curl_radius_H": 10,
+        "tail_root_y_H": 83,
+        "inner_ear_area_percent": 55,
+        "head_top_y_H": 20.6,
+        "eye_center_y_H": 47.2,
+        "nose_center_y_H": 53.5,
+        "mouth_bottom_y_H": 60.7,
+        "antenna_center_spacing_H": 22,
+        "antenna_ball_diameter_u": 11.5
+      },
+      "physical_height_cm": 103,
+      "cm_per_normalized_unit": 1.03
+    },
+    "oejimong": {
+      "name": "외지몽",
+      "H": 210,
+      "origin": [
+        120,
+        705
+      ],
+      "front_roi": [
+        25,
+        695,
+        215,
+        916
+      ],
+      "boxes": {
+        "head": [
+          [
+            60,
+            744,
+            180,
+            848
+          ],
+          "머리 본체",
+          "처진 귀에 가린 측면 경계 추정"
+        ],
+        "body": [
+          [
+            86,
+            844,
+            159,
+            899
+          ],
+          "몸통",
+          "팔다리 연결부 추정"
+        ],
+        "ear_left": [
+          [
+            31,
+            758,
+            75,
+            836
+          ],
+          "귀 1개",
+          "머리 연결부 추정"
+        ],
+        "antenna_stem_left": [
+          [
+            96,
+            730,
+            110,
+            750
+          ],
+          "안테나 줄기 1개",
+          "머리 연결부 추정"
+        ],
+        "antenna_ball_left": [
+          [
+            85,
+            705,
+            111,
+            733
+          ],
+          "안테나 구슬 1개",
+          "수동 근사"
+        ],
+        "antenna_ball_right": [
+          [
+            139,
+            706,
+            166,
+            734
+          ],
+          "반대쪽 구슬",
+          "수동 근사"
+        ],
+        "arm_left": [
+          [
+            73,
+            849,
+            93,
+            883
+          ],
+          "팔 1개",
+          "몸통 연결부 추정"
+        ],
+        "leg_left": [
+          [
+            87,
+            889,
+            119,
+            915
+          ],
+          "다리와 발 1개",
+          "분리 경계 제작 기준"
+        ],
+        "foot_left": [
+          [
+            87,
+            903,
+            119,
+            915
+          ],
+          "발 1개",
+          "발등 분리선 제작 기준"
+        ],
+        "eye_left": [
+          [
+            64,
+            776,
+            104,
+            819
+          ],
+          "화면 왼쪽 눈",
+          "검정 픽셀 연결영역 기준"
+        ],
+        "eye_right": [
+          [
+            137,
+            779,
+            178,
+            821
+          ],
+          "화면 오른쪽 눈",
+          "검정 픽셀 연결영역 기준"
+        ],
+        "nose": [
+          [
+            113,
+            805,
+            125,
+            814
+          ],
+          "코",
+          "검정 픽셀 영역 참고"
+        ],
+        "mouth": [
+          [
+            110,
+            814,
+            130,
+            832
+          ],
+          "기본 열린 입",
+          "수동 근사"
+        ],
+        "muzzle": [
+          [
+            97,
+            800,
+            142,
+            840
+          ],
+          "크림색 주둥이",
+          "수동 근사"
+        ]
+      },
+      "standards": {
+        "head_depth_H": 52,
+        "body_depth_H": 27,
+        "foot_depth_H": 19,
+        "tail_length_H": 30,
+        "tail_diameter_H": 11,
+        "tail_curl_radius_H": 0,
+        "tail_root_y_H": 84,
+        "inner_ear_area_percent": 45,
+        "head_top_y_H": 18.6,
+        "eye_center_y_H": 45.2,
+        "nose_center_y_H": 49.8,
+        "mouth_bottom_y_H": 60.5,
+        "antenna_center_spacing_H": 26,
+        "antenna_ball_diameter_u": 13.0
+      },
+      "physical_height_cm": 105,
+      "cm_per_normalized_unit": 1.05
+    }
+  }
+}

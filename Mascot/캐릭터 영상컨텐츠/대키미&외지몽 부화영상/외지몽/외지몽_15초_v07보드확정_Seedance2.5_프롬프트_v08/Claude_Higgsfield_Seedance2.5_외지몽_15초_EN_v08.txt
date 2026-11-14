@@ -1,0 +1,122 @@
+Use the connected Higgsfield tools to generate ONE video with SEEDANCE 2.5.
+Inspect supported parameters, use the actual model identifier and bind the actual uploaded reference assets. Do not silently switch models.
+
+SETTINGS
+15 seconds; 16:9; ONE output. Use 1080p and native audio for sound effects only if supported. Report unavailable settings before submitting.
+ONE continuous take, fixed low front camera. No cuts, zoom, tracking or orbit. Do not automatically generate additional paid attempts.
+
+REFERENCE ROLES
+Image 1: approved standing FRONT — primary authority for identity, proportions, green, short tidy fur, light blush and upright anatomy.
+Image 2: approved standing THREE-QUARTER — supporting ears, muzzle and tail anatomy.
+Image 3: single EGG FRONT — cream shell, milky-mint paw and four-point stars, no ribbon.
+Image 4: approved v07 STORYBOARD — chronological action reference ONLY. Read its 12 panels left to right, top to bottom, as successive moments of ONE scene.
+Character references control appearance. The written directions control movement, timing and mild face pressure.
+Never render the storyboard grid, arrows, numbers, captions, logos or multiple simultaneous scenes. The ONLY visible graphic effect is the tiny antenna electricity described below.
+Do not use a standing baby image as the opening frame. Do not use seated or failed-running images as motion references.
+
+CHARACTER
+ONE friendly, confident baby Oejimong: an anthropomorphic TWO-LEGGED mascot with a canine face, not a real four-legged animal.
+Match the approved huge rounded head, tiny chubby torso, hidden neck, short limbs, fresh medium-bright green and extremely short even plush fuzz. Cream muzzle, belly and small tail tip; very light round rose-pink blush.
+Two floppy ears; two tiny rounded forelocks; exactly two smooth hairless antenna stems with one round ball each.
+Preserve the glossy black eyes, each with its cream four-point star, smaller gray four-point sparkle and tiny pale diamond. Small black nose, little pink tongue, mitten hands and oval feet. Visible palms/soles retain one main cream pad and three small cream ovals.
+One connected curved puppy tail with the approved root and direction. No ribbon or accessories. No change to face shape, body proportions or limb length.
+
+NON-NEGOTIABLE MOVEMENT
+All walking, running and backward steps are BIPEDAL.
+Keep the head above the chest, chest above pelvis, and pelvis above TWO legs. Belly faces the camera; only a small forward lean.
+During running, BOTH hands stay at waist-to-chest height, off the floor. Small arm swings balance the body.
+Only LEFT and RIGHT FEET produce running ground contacts. No four-limb gallop, crawling, pouncing or horizontal animal posture.
+Hand-floor contact is allowed ONLY during the single fall and stationary recovery.
+Finish standing upright BEFORE moving forward again.
+
+CONTINUOUS TAIL
+From first emergence to the final frame, the tail keeps wagging left and right during every action, including the fall, recovery, contact and backward steps.
+Use smaller wags when appropriate. Natural occlusion/cropping is allowed; do not relocate the tail to show it.
+
+SCENE
+Warm pale ivory seamless studio floor/background, soft diffuse light, consistent shadows. One egg and one baby. Physical approach makes the baby larger; the camera never zooms.
+
+TIMELINE — MATCH THE APPROVED v07 BOARD
+
+01 | 0.0–1.5s | ROLL IN
+Begin with an empty hatching area.
+One closed egg rolls in from off-screen, tilting naturally while preserving its taller-than-wide shape.
+A small crack forms. The egg settles upright and shakes vigorously.
+
+02 | 1.5–2.5s | TAIL FIRST
+ONLY the connected green, cream-tipped tail breaks through a small side/rear opening and starts wagging left and right.
+Face, ears, antennae, arms and legs remain hidden. Most shell remains intact.
+
+03 | 2.5–3.3s | ANTENNAE AND TINY ELECTRIC SIGNAL
+Exactly TWO ball-tipped antennae emerge above the egg and make small responsive twitches, as if receiving a signal.
+Show ONE tiny pale warm-yellow zigzag electricity mark beside the OUTER side of EACH ball: TWO marks total.
+The marks float just beside the balls with a small air gap, approximately one-quarter of a ball's diameter. Briefly flicker once, then disappear completely BEFORE 3.3s.
+They are temporary playful graphics, not new antenna parts. Balls stay round, smooth and green.
+No electrical arc between balls, large lightning, glowing body or permanent markings.
+Tail keeps wagging. Face, ears and all limbs are STILL hidden.
+
+04 | 3.3–4.1s | FACE AND EARS ONLY
+The upper opening expands and the face with both floppy ears emerges.
+Antennae remain visible; the electricity marks are gone.
+Torso, arms and legs stay inside. No hands gripping the rim.
+
+05 | 4.1–5.0s | ALL LIMBS, ONE SHELL BREAK
+BOTH arms and BOTH legs emerge TOGETHER as all remaining shell breaks apart in ONE event.
+A few large shell pieces fall to the floor.
+The baby settles upright on two feet with a tiny balance wobble. Do not fall yet.
+
+06 | 5.0–6.0s | FIRST GREETING
+Look directly at the camera, smile and gently tilt the head once.
+
+07 | 6.0–7.2s | TWO-FOOT RUN, ONE TRIP
+Run forward on alternating left/right feet, hands above the floor.
+Trip ONCE, briefly catch the fall with the hands, and let the tummy gently meet the floor.
+Stop forward travel during the fall. Do not crawl onward.
+
+08 | 7.2–8.3s | COMPLETE UPRIGHT RECOVERY
+Recover at the fall location: bring both feet under the pelvis, push up, straighten the torso and lift both hands to waist-to-chest height.
+By 8.0s, stand FULLY UPRIGHT.
+From 8.0–8.3s, visibly establish BOTH feet planted, belly facing the lens, head above pelvis and BOTH hands clear of the floor.
+This completed standing pose MUST precede the second run. Tail continues wagging.
+
+09 | 8.3–10.5s | FASTER BIPEDAL RUN
+From the upright stance, accelerate directly toward the camera, faster than the first run.
+Clearly show LEFT FOOT, RIGHT FOOT, LEFT FOOT in the first three running contacts, lifting the opposite foot each time.
+BOTH hands stay at waist-to-chest height. Torso stays vertical with a small forward lean.
+Convey speed through quick short footfalls, bouncing ears and actual forward travel, not a horizontal dive.
+Establish the upright gait before the legs are cropped by proximity.
+Its momentum carries it toward the camera before it can stop.
+
+10 | 10.5–11.0s | NOSE APPROACH
+The nose comes extremely close through actual movement. No camera zoom.
+
+11 | 11.0–12.0s | LIGHT BLOCKED CONTACT
+One soft bonk: the nose meets an invisible flat camera plane, like unexpectedly meeting a clean glass door.
+Forward motion stops against the plane. Show ONLY slight flattening at the nose tip and cream muzzle, with very subtle cheek pressure.
+Brief contact around half a second, small surprised expression.
+Keep the original face nearly unchanged. No wide flattened face, stretched muzzle, bulging cheeks, screaming mouth or exaggerated squash.
+It must read as gentle physical blockage, not merely an ordinary close-up.
+No visible door, frame, shards or added glass prop. The camera stays fixed.
+
+12 | 12.0–15.0s | ONE OR TWO TINY STEPS BACK, CLOSE ENDING
+Take ONLY ONE OR TWO small backward steps to release contact. Restore the original face as it pulls away.
+Remain CLOSE: head and upper torso fill most of the frame, face/ears/antenna balls readable.
+Do not return to the egg position or distant full-body framing. No zoom-out.
+Look directly at the viewer, smile and make one gentle head tilt. Tail keeps wagging through the last frame.
+
+SHELL CONTINUITY
+After settling, the same shell pieces stay at the same floor positions.
+Never disappear, dissolve, reassemble, multiply or follow the baby.
+They may become naturally occluded, defocused or cropped in close-up.
+
+AUDIO AND EXCLUSIONS
+Only soft rolling/cracking, alternating footfalls, a gentle stumble and one soft contact bonk.
+No music, dialogue, narration, barking or vocal laughter.
+No extra characters/limbs/antennae, four-legged movement, altered colors, shaggy fur, accessories, five-point eye stars, captions, logos, storyboard graphics or watermarks.
+The only graphic exception is the TWO tiny yellow electricity marks during 2.5–3.3s.
+
+AFTER GENERATION
+Wait for completion and return the playable result or download link.
+If inspection is available, check: exact emergence order; electricity only during the antenna beat; complete upright recovery; two-foot second run with hands above floor; continuous tail wag; persistent shells; slight face pressure; close one-or-two-step ending.
+Report deviations honestly. Do not automatically generate another paid attempt.
+

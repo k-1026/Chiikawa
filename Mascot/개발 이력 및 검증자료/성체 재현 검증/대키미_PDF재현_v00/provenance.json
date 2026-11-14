@@ -1,0 +1,7 @@
+{
+  "source_pdf": "/Users/seunghui/Desktop/대외활동/CJ AI x AX/daegu-local-festival-ai-agent/Mascot/마스코트 디자인 스펙시트/character_sheet.pdf",
+  "source_sha256": "9ff194436d68bdef2bc9dd8e5770b162fce3552046720bec7a0deb9487ac7e13",
+  "reference_board": "reference/original_board.png",
+  "source_matches_associated_measurements": true,
+  "method": "PDF-derived spec; no previous generated character used as reference"
+}

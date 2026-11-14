@@ -1,0 +1,154 @@
+Use the connected Higgsfield tools to generate ONE NEW video from the attached image references using SEEDANCE 2.5.
+This is fresh generation, NOT editing, repainting or compositing over the previous video. Keep the approved story and character. Apply ONLY the approved refinements: gravity-driven falling shell fragments, stable anatomically attached jelly pads, and a slower weight-bearing baby recovery after the fall.
+Inspect supported parameters, use the actual model identifier and bind the actual uploaded reference assets. Do not silently switch models.
+
+SETTINGS
+15 seconds; 16:9; ONE output. Use 1080p and native audio for sound effects only if supported. Report unavailable settings before submitting.
+ONE continuous take, fixed low front camera. No cuts, zoom, tracking or orbit. Do not automatically generate additional paid attempts.
+
+REFERENCE ROLES — BIND FOUR ACTUAL IMAGE ASSETS
+Image 1: approved standing FRONT — PRIMARY authority for identity, proportions, green color, short tidy fur, light blush and upright anatomy.
+Image 2: approved EGG FRONT — exact cream shell, milky-mint paw and four-point stars, no ribbon. If this asset contains several views, they depict ONE egg; never render the sheet or multiple eggs.
+Image 3: approved seated FRONT showing pads — PAD DESIGN ONLY: number, contour, spacing, warm cream and smooth hairless material. Do NOT copy its seated or waving pose. Do NOT use it as a locomotion reference.
+Image 4: approved v07 STORYBOARD — broad ACTION ORDER reference ONLY. The UPDATED written timing and recovery stages below override its old timing labels and simplified stand-up pose. Read the 12 panels left to right, top to bottom as successive moments of ONE scene. Its simplified circular palm patches are NOT the pad design: for pads, Image 3 and the PAD SPECIFICATION below override the board.
+
+Priority: Image 1 for character identity; Image 2 for egg; Image 3 plus pad specification for palm/sole detail; UPDATED written timeline for timing, gravity and recovery; Image 4 only supplements the overall action order.
+Never render storyboard grids, arrows, numbers, captions, labels or multiple simultaneous scenes. The ONLY graphic effect is the temporary antenna electricity below.
+Do not start with the standing or seated baby image as a literal first frame. Begin with an empty hatching area.
+Do not use the earlier video with incorrect pads as an appearance reference.
+
+CHARACTER
+ONE friendly, confident baby Oejimong: an anthropomorphic TWO-LEGGED mascot with a canine face, not a real four-legged animal.
+Match the approved huge rounded head, tiny chubby torso, hidden neck, short limbs, fresh medium-bright green and extremely short even plush fuzz. Cream muzzle, belly and small tail tip; very light round rose-pink blush.
+Two floppy ears; two tiny rounded forelocks; exactly two smooth hairless antenna stems with one round ball each.
+Preserve the glossy black eyes, each with its cream four-point star, smaller gray four-point sparkle and tiny pale diamond. Small black nose, little pink tongue, mitten hands and oval feet. Visible palms/soles must follow the mandatory PAD SPECIFICATION below.
+One connected curved puppy tail with the approved root and direction. No ribbon or accessories. No change to face shape, body proportions or limb length.
+
+MANDATORY PAD SPECIFICATION AND SURFACE CONTINUITY
+On EACH palm and EACH sole, use exactly FOUR separate cream pad pieces:
+ONE large rounded heart/triangle central pad with a shallow notch on its lower edge, PLUS exactly THREE small OVAL pads above it in a shallow arc. The middle small oval is slightly higher than the side ovals.
+Two palms and two soles carry this same 1+3 layout. Do not force all 16 anatomical pads to be visible at once.
+Match Image 3 for pad size, contour, spacing and orientation. Leave green gaps between all four pieces and a green border around the group.
+Pads are warm cream, smooth, HAIRLESS, shallow soft cushion-like volume and low sheen. They are not cream fur, transparent gel or shiny hard plastic.
+Never simplify a palm/sole to ONE round cream disk, merge the pieces into a white mitten, add a fourth small oval, or cover the whole foot with cream.
+Pads exist ONLY on actual PALMS and SOLES. No pads on handbacks, foot tops, wrists, ankles or limb sides.
+The pad groups remain attached to their original surfaces and rotate with them; perspective, motion blur and natural occlusion apply. No drifting, flicker, changing counts or screen-facing floating symbols.
+If a palm/sole faces away or contacts the floor, its pads may be partly or completely hidden. Do not move them onto the visible back/top surface.
+During the existing arms-up and running moments, any palm actually facing the lens must show the correct four-part group, never a single cream circle. When a lifted foot naturally shows its sole, use the same four-part group.
+Do NOT add a wave, seated pose, sole showcase, pause, close-up, new shot or altered hand/foot rotation merely to display pads. Preserve the existing mitten/oval silhouettes, short limbs and approved choreography.
+
+VIEWER-RIGHT SOLE — NO SUDDEN PAD APPEARANCE
+Pay particular attention to the foot seen on the VIEWER'S RIGHT in the near-front falling/recovery view. This is a screen-view description, not a command to swap anatomical feet.
+All four pad pieces are present on that sole from its FIRST anatomical appearance, even while hidden. They never spawn when the foot lifts or the character stands.
+As the foot rolls away from the floor, progressively reveal the SAME fixed group through changing view angle and occlusion. As it plants, conceal that same group naturally.
+Maintain its contour, position relative to the toes/heel, cream material and shallow volume across adjacent frames. Never fade, pop, paint or grow the group into existence. Track the same physical foot through turns; do not transfer pads to whichever foot happens to be on screen-right.
+Do not show hidden pads through the foot or move them onto its side/top. Visibility changes, not the underlying design.
+
+NON-NEGOTIABLE MOVEMENT
+All walking, running and backward steps are BIPEDAL.
+Keep the head above the chest, chest above pelvis, and pelvis above TWO legs. Belly faces the camera; only a small forward lean.
+During running, BOTH hands stay at waist-to-chest height, off the floor. Small arm swings balance the body.
+Only LEFT and RIGHT FEET produce running ground contacts. No four-limb gallop, crawling, pouncing or horizontal animal posture.
+Hand-floor contact is allowed ONLY during the single fall and stationary recovery.
+Finish standing upright BEFORE moving forward again.
+
+CONTINUOUS TAIL
+From first emergence to the final frame, the tail keeps wagging left and right during every action, including the fall, recovery, contact and backward steps.
+Use smaller wags when appropriate. Natural occlusion/cropping is allowed; do not relocate the tail to show it.
+
+SCENE
+Warm pale ivory seamless studio floor/background, soft diffuse light, consistent shadows. One egg and one baby. Physical approach makes the baby larger; the camera never zooms.
+
+UPDATED 15-SECOND TIMELINE — SAME STORY, SLOWER NATURAL RECOVERY
+
+01 | 0.0–1.5s | ROLL IN
+Begin with an empty hatching area.
+One closed egg rolls in from off-screen, tilting naturally while preserving its taller-than-wide shape.
+A small crack forms. The egg settles upright and shakes vigorously.
+
+02 | 1.5–2.5s | TAIL FIRST
+ONLY the connected green, cream-tipped tail breaks through a small side/rear opening and starts wagging left and right.
+Face, ears, antennae, arms and legs remain hidden. Most shell remains intact.
+
+03 | 2.5–3.3s | ANTENNAE AND TINY ELECTRIC SIGNAL
+Exactly TWO ball-tipped antennae emerge above the egg and make small responsive twitches, as if receiving a signal.
+Show ONE tiny pale warm-yellow zigzag electricity mark beside the OUTER side of EACH ball: TWO marks total.
+The marks float just beside the balls with a small air gap, approximately one-quarter of a ball's diameter. Briefly flicker once, then disappear completely BEFORE 3.3s.
+They are temporary playful graphics, not new antenna parts. Balls stay round, smooth and green.
+No electrical arc between balls, large lightning, glowing body or permanent markings.
+Tail keeps wagging. Face, ears and all limbs are STILL hidden.
+
+04 | 3.3–4.1s | FACE AND EARS ONLY
+The upper opening expands and the face with both floppy ears emerges.
+Antennae remain visible; the electricity marks are gone.
+Torso, arms and legs stay inside. No hands gripping the rim.
+
+05 | 4.1–5.0s | ALL LIMBS, ONE SHELL BREAK, GRAVITY
+BOTH arms and BOTH legs emerge TOGETHER as all remaining shell breaks apart in ONE event.
+Every detached fragment has weight and immediately follows a continuous gravity-driven falling trajectory. Brief outward/upward motion from the break is allowed only if it curves downward naturally and lands; no suspended decorative fragments.
+All detached fragments, including small chips and upper shell pieces, reach the floor by the end of this beat. Let them make a small plausible bounce, tilt or short roll on contact, then settle on the floor.
+No hovering, frozen airborne fragments, suspended shell halo, levitation or shell pieces stuck to the head. All pieces clear the baby and fall.
+Contact shadows follow the falling pieces and meet them at the floor. No fragment remains hanging above its own shadow after landing.
+The baby settles upright on two feet with a tiny balance wobble. Do not fall yet.
+
+06 | 5.0–5.6s | FIRST GREETING
+Look directly at the camera, smile and gently tilt the head once. A short natural greeting, not a long stationary hold.
+
+07 | 5.6–6.8s | TWO-FOOT RUN, ONE TRIP
+Run forward on alternating left/right feet, hands above the floor.
+Trip ONCE, briefly catch the fall with the hands, and let the tummy gently meet the floor. Harmless and cute.
+Stop forward travel during the fall. Do not crawl onward.
+
+08 | 6.8–8.3s | SLOW, WEIGHT-BEARING BABY RECOVERY
+Use this full 1.5-second beat for one continuous, slightly effortful baby-like stand-up. Motion stays at natural speed, not a slow-motion camera effect.
+6.8–7.15s: plant the hands and gently press the upper body off the floor; the body visibly has weight.
+7.15–7.5s: draw the feet underneath the body and shift the hips back into a low supported crouch. No forward crawling or locomotion.
+7.5–8.1s: transfer support gradually from the hands to the feet; lift the hips, then bring the torso upright. Release the hands as balance transfers to the legs. Keep hands on/near the floor only as required for stationary support.
+8.1–8.3s: reach a fully upright TWO-foot stance, with a tiny baby wobble and small balance adjustment; then raise both hands to waist-to-chest height.
+Show connected intermediate poses, pressure through supporting hands/feet and a continuous center-of-mass shift. No instant posture snap, vertical spring, jump to standing, floating pelvis or skipped crouch.
+Do not lengthen limbs, redesign the body or add exaggerated human knees to achieve the movement. Use the approved short limbs.
+The tail keeps wagging. Pads remain attached and reveal/occlude naturally throughout.
+Complete the upright balance adjustment BEFORE starting the second run.
+
+09 | 8.3–10.5s | FASTER BIPEDAL RUN
+From the upright stance, accelerate directly toward the camera, faster than the first run.
+Clearly show LEFT FOOT, RIGHT FOOT, LEFT FOOT in the first three running contacts, lifting the opposite foot each time.
+BOTH hands stay at waist-to-chest height. Torso stays vertical with a small forward lean.
+Convey speed through quick short footfalls, bouncing ears and actual forward travel, not a horizontal dive.
+Establish the upright gait before the legs are cropped by proximity.
+Its momentum carries it toward the camera before it can stop.
+
+10 | 10.5–11.0s | NOSE APPROACH
+The nose comes extremely close through actual movement. No camera zoom.
+
+11 | 11.0–12.0s | LIGHT BLOCKED CONTACT
+One soft bonk: the nose meets an invisible flat camera plane, like unexpectedly meeting a clean glass door.
+Forward motion stops against the plane. Show ONLY slight flattening at the nose tip and cream muzzle, with very subtle cheek pressure.
+Brief contact around half a second, small surprised expression.
+Keep the original face nearly unchanged. No wide flattened face, stretched muzzle, bulging cheeks, screaming mouth or exaggerated squash.
+It must read as gentle physical blockage, not merely an ordinary close-up.
+No visible door, frame, shards or added glass prop. The camera stays fixed.
+
+12 | 12.0–15.0s | ONE OR TWO TINY STEPS BACK, CLOSE ENDING
+Take ONLY ONE OR TWO small backward steps to release contact. Restore the original face as it pulls away.
+Remain CLOSE: head and upper torso fill most of the frame, face/ears/antenna balls readable.
+Do not return to the egg position or distant full-body framing. No zoom-out.
+Look directly at the viewer, smile and make one gentle head tilt. Tail keeps wagging through the last frame.
+
+SHELL CONTINUITY AND GRAVITY
+EVERY detached shell piece falls and lands; none remains in the air after the break.
+Once each fragment has made its brief landing bounce/roll and settled, it remains at its own floor position throughout the rest of the film.
+No later lift-off, orbiting pieces, unexplained sliding, following the baby, disappearance, dissolving, reassembly or multiplication.
+Fragments can be naturally occluded, defocused or cropped as the baby approaches. This does not permit deleting or suspending them.
+
+AUDIO AND EXCLUSIONS
+Only soft rolling/cracking, alternating footfalls, a gentle stumble and one soft contact bonk.
+No music, dialogue, narration, barking or vocal laughter.
+No extra characters/limbs/antennae, four-legged movement, single-disk palm pads, fur-covered pads, merged pad groups, altered colors, shaggy fur, accessories, five-point eye stars, captions, logos, storyboard graphics or watermarks.
+The only graphic exception is the TWO tiny yellow electricity marks during 2.5–3.3s.
+
+AFTER GENERATION
+Wait for completion and return the playable result or download link.
+If inspection is available, check: correct separate 1+3 pads on naturally visible palms/soles, no pads on handbacks or foot tops, no single cream palm disks; exact emergence order; electricity only during the antenna beat; continuous 1.5-second weight-bearing recovery with a crouch and final balance adjustment; no sudden viewer-right sole pad appearance; all detached shell fragments falling and settling on the floor; two-foot second run with hands above floor; continuous tail wag; persistent shells; slight face pressure; close one-or-two-step ending.
+Report deviations honestly. Do not automatically generate another paid attempt.
+

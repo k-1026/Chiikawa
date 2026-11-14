@@ -1,0 +1,9 @@
+01_FRONT.png 1254×1254 수동 근사·경계 불확실성 약 10~20px
+머리 본체: bbox≈(270,264)~(1000,822); width/W≈1.000; height/H≈1.000; center normalized≈(0.500,0.500)
+화면 왼눈: bbox≈(356,445)~(588,670); width/W≈0.318; height/H≈0.403; center normalized≈(0.277,0.526)
+화면 오른눈: bbox≈(708,418)~(926,637); width/W≈0.299; height/H≈0.392; center normalized≈(0.749,0.472)
+코: bbox≈(635,581)~(675,607); width/W≈0.055; height/H≈0.047; center normalized≈(0.527,0.591)
+입 전체: bbox≈(633,606)~(689,656); width/W≈0.077; height/H≈0.090; center normalized≈(0.536,0.658)
+선 구슬: bbox≈(486,81)~(615,207); width/W≈0.177; height/H≈0.226; center normalized≈(0.384,-0.215)
+처진 구슬: bbox≈(808,155)~(919,264); width/W≈0.152; height/H≈0.195; center normalized≈(0.813,-0.098)
+양눈 중심 연결선의 화면 기울기≈-5.0 deg; 중립 얼굴 지도에서는 사진의 고개 기울임을 분리한다.

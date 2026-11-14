@@ -1,0 +1,100 @@
+{
+  "character": "외지몽",
+  "unit": "mm",
+  "version": "v01",
+  "stage": "견적·샘플 개발용 / 미완성 항목 별도 표시",
+  "source": "/Users/seunghui/Desktop/대외활동/CJ AI x AX/daegu-local-festival-ai-agent/Mascot/마스코트 디자인 스펙시트/아가버전 대키미&외지몽 디자인 스펙시트_v01/외지몽 아기버전/reference/01_외지몽_아기_최종승인_서있는정면_v01.png",
+  "source_sha256": "9c9c581b1cc96b1021bd79365d15dc9dce9be86c4b9680b0bd6584b951e2b0bf",
+  "logo_source": "/Users/seunghui/Desktop/대외활동/CJ AI x AX/daegu-local-festival-ai-agent/Mascot/Brand logo/01_확정_로고/대구_얼라들_로고_승인원본.png",
+  "logo_sha256": "4c55b4da0db388d6d3cf1cd5040e36fc8717f109f485889bae53511dff19b795",
+  "source_bbox_manual_px": [
+    380,
+    96,
+    1155,
+    947
+  ],
+  "head_top_y_manual_px": 220,
+  "measurements": [
+    {
+      "id": "H01",
+      "name": "전체 세로",
+      "definition": "발바닥~가장 높은 안테나 구슬 끝",
+      "target_mm": 160,
+      "status": "사용자 확정"
+    },
+    {
+      "id": "W01",
+      "name": "정면 가로·폭",
+      "definition": "양쪽 귀·꼬리 등 보이는 윤곽의 최대 폭",
+      "target_mm": 145.71092831962397,
+      "status": "원본 이미지 관측 근사"
+    },
+    {
+      "id": "H02",
+      "name": "안테나 제외 세로",
+      "definition": "귀·앞머리 제외, 머리 본체 윗면~발바닥",
+      "target_mm": 136.68625146886018,
+      "status": "원본 이미지 관측 근사"
+    },
+    {
+      "id": "H04",
+      "name": "앞머리 포함 세로",
+      "definition": "안테나 제외, 앞머리 끝~발바닥",
+      "target_mm": 144.01880141010577,
+      "status": "원본 이미지 관측 근사"
+    },
+    {
+      "id": "H03",
+      "name": "안테나 수직 돌출",
+      "definition": "머리 본체 윗면~가장 높은 구슬 끝",
+      "target_mm": 23.313748531139836,
+      "status": "실제 줄기 곡선 길이 아님"
+    },
+    {
+      "id": "D01",
+      "name": "앞뒤 두께·깊이",
+      "definition": "코·주둥이 최전방~뒤통수·몸통 최후방, 꼬리 별도",
+      "target_mm": 60,
+      "status": "사용자 지정 제작 목표"
+    },
+    {
+      "id": "L01",
+      "name": "라벨 보이는 가로",
+      "definition": "옆선 바깥 노출 폭",
+      "target_mm": 25,
+      "status": "검토 제안"
+    },
+    {
+      "id": "L02",
+      "name": "라벨 보이는 세로",
+      "definition": "완성 접은 라벨 높이",
+      "target_mm": 22,
+      "status": "검토 제안"
+    }
+  ],
+  "pending": [
+    "신규6방향",
+    "최종원단품번",
+    "라벨실물검수",
+    "자수/덧댐비교견적",
+    "봉제패턴개발",
+    "시험봉제",
+    "허용오차",
+    "양산승인"
+  ],
+  "label": {
+    "visible_mm": [
+      25,
+      22
+    ],
+    "flat_cut_mm": [
+      25,
+      54
+    ],
+    "seam_allowance_each_end_mm": 5,
+    "position": "character right side seam",
+    "front": "approved logo unchanged",
+    "back": "made in korea",
+    "status": "검토제안"
+  }
+}

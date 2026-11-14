@@ -1,0 +1,7 @@
+{
+  "source_pdf": "/Users/seunghui/Desktop/대외활동/CJ AI x AX/daegu-local-festival-ai-agent/Mascot/마스코트 디자인 스펙시트/외지몽character_sheet.pdf",
+  "source_pdf_sha256": "b1bda7a97c8a1239b7a49e63ee58fd12a2c4d4670abe7ba167123600814ed86d",
+  "reference": "reference_from_pdf.png",
+  "reference_role": "original board embedded in input PDF; not previous generated images",
+  "pages": 12
+}

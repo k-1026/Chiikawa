@@ -1,0 +1,32 @@
+{
+  "status": "reference candidate pending review; no specification MD created",
+  "views": [
+    "FRONT",
+    "45 LEFT",
+    "45 RIGHT",
+    "SIDE LEFT",
+    "SIDE RIGHT",
+    "BACK"
+  ],
+  "left_right": "nose points screen-left/screen-right",
+  "closed": "Canopy and front hatch closed,stairs hidden,controls deployed",
+  "open": "Canopy raised,front hatch down,stairs deployed,console and levers retracted for boarding",
+  "color_reference": {
+    "rendered_green_midtone": "#43C146",
+    "cream_base": "#F8F0E4"
+  },
+  "review_limits": [
+    "Canopy curvature/opening-angle consistency and seat-position alignment require review.",
+    "Exact dimensions and repeatability across different generators are not established."
+  ],
+  "files": [
+    {
+      "name": "외지몽_우주선_닫힘_6방향.png",
+      "sha256": "3ed35c5ec816ee759f960a37646af1fe2ba27c8dcd7b89f66f31e747a8f37c25"
+    },
+    {
+      "name": "외지몽_우주선_열림_6방향.png",
+      "sha256": "b7a438829866602936d96f41372d43cd57332c95d170a2d4d9eb101c62d3245d"
+    }
+  ]
+}

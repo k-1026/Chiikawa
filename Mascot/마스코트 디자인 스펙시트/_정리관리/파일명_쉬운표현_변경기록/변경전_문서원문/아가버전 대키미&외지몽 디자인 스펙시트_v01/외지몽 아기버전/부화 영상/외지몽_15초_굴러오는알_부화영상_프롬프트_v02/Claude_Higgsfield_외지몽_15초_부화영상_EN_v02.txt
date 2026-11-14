@@ -1,0 +1,59 @@
+Use the connected Higgsfield tools to generate ONE 15-second Oejimong baby introduction video using the four attached images.
+
+Inspect the attachments and available tool parameters first. Use Cinema Studio 4.0. Set the actual generation duration to 15 seconds, aspect ratio 16:9, resolution 1080p, Tempo Single shot, Genre General, static low front camera, and audio ON for sound effects only. Generate ONE output. Where a named setting is not exposed by the tool, express its intention in the creative prompt rather than inventing unsupported parameters. If the model or required reference-input capability is unavailable, explain the limitation; do not silently substitute another model or duration.
+
+Bind the actual attached image assets to the request. Plain filenames or unbound @ tags do not transmit images.
+
+REFERENCE ROLES
+Image 1: approved standing front, PRIMARY authority for identity, proportions, green color, extremely short tidy fur and LIGHT blush.
+Image 2: the SAME baby in three-quarter view, supporting muzzle, ear and tail anatomy only.
+Image 3: the SAME baby seated, palm and sole anatomy only. Do not copy its seated or waving pose.
+Image 4: a single upright egg front reference, controlling shell silhouette, cream color, milky-mint paw and FOUR-point stars. No ribbon.
+All baby references depict ONE character. Never reproduce reference-sheet layouts.
+
+CREATIVE PROMPT
+Create a 15-second, 16:9, soft stylized 3D film. The character is a confident, affectionate puppy-like baby who is excited to meet the viewer. One continuous take. Preserve this exact order: egg rolls in and cracks → strong wobble → wagging tail emerges FIRST → face emerges → arms and legs emerge as the whole shell breaks in ONE event → smile and head tilt → run and stumble → get up and run again → extreme-close nose/face boop → step backward, smile, head tilt and wag tail.
+
+IDENTITY LOCK
+Match Image 1: huge rounded puppy head, tiny chubby torso, hidden neck, very short limbs, approved fresh medium-bright green and extremely short dense even soft plush fuzz. Cream muzzle, belly and small rounded tail cap. Small LIGHT translucent round rose-pink/red blush, no cheek bulges, shaggy clumps or neon glow.
+Two floppy rounded dog ears; exactly TWO tiny narrow round-ended forelocks; TWO smooth HAIRLESS antenna stems with one ROUND smooth ball each. Each fully open glossy black eye has one large cream FOUR-point star, one smaller gray FOUR-point sparkle and one tiny pale diamond. Preserve their original contours and placement.
+Small black puppy nose and happy little pink tongue. Rounded mitten hands and oval feet, almost no digit grooves. On each visible palm/sole: one main cream pad plus THREE small cream ovals, smooth and hairless. No pads on handbacks or foot tops.
+ONE plump upward-curved puppy tail rooted at the lower rear midline and bending toward the character's left, with a small cream tip. No cat spiral. No ribbon or accessories.
+
+SCENE AND CAMERA
+Warm pale ivory seamless floor/background, gentle diffused light and contact shadows matching Image 1. Locked low front camera with enough floor for several tiny running steps. No cuts, orbit, tracking, zoom or slow motion. The egg moves into frame and the baby later approaches the camera physically.
+
+TIMELINE
+0.0–2.0 seconds — ARRIVAL:
+Begin with an EMPTY visible hatching area. ONE closed egg rolls naturally into frame from off-screen across the floor, still retaining its taller-than-wide egg geometry. A small crack forms while it rolls. It settles on its broad lower end and begins a vigorous baby-driven wobble. Preserve the reference shell and mint decorations; never reshape it into a ball.
+
+2.0–4.0 seconds — TAIL FIRST, THEN FACE:
+The closed shell shakes strongly. Its first opening reveals ONLY the baby's green cream-tipped tail, wagging through a small side/rear crack. Briefly establish the wagging tail BEFORE the face becomes visible. Then the face peeks through an upper/front opening. Arms and legs remain inside until the next stage. The tail stays connected to the same baby; never become a separate creature or detach.
+
+4.0–5.0 seconds — ONE SHELL BREAK:
+As the arms and legs push out, the remaining shell breaks apart all at once in ONE brief mechanical opening event into a few large rounded pieces. The baby lands on its little feet with a small balance wobble. No fall here: the intended fall happens later during the run. Shell pieces drop to the floor at the hatching location.
+
+5.0–6.5 seconds — FIRST GREETING:
+The baby notices the camera, smiles directly at the viewer and makes ONE small curious head tilt. Its tail wags. Keep the friendly, confident puppy personality.
+
+6.5–9.0 seconds — CLUMSY RUN AND RECOVERY:
+It starts eagerly running toward the camera with short unsteady steps. It stumbles once, front paws touch the floor and its tummy gently follows. It immediately pushes itself up and regains its feet. Cute and harmless, without pain or crying. The stumble occurs on the way to the lens, away from the shell pile.
+
+9.0–11.0 seconds — SECOND APPROACH:
+It resumes running happily toward the SAME camera. Its face grows rapidly larger through actual approach until the black nose nearly fills the frame. Cropping the eyes and antennae is intentional ONLY during this brief extreme close-up. No digital zoom.
+
+11.0–12.0 seconds — GLASS-LIKE FACE BOOP:
+The nose and soft muzzle give the clear lens plane ONE gentle face-first BOOP, like a puppy unknowingly meeting a clean glass door. A tiny temporary squash at the nose/muzzle contact conveys soft pressure. The camera nudges slightly. No visible new glass door, broken glass, lens damage, hard impact, injury or permanently distorted face.
+
+12.0–15.0 seconds — BACK UP AND FINAL GREETING:
+It takes two tiny backward steps so its full face, forelocks and antenna balls return to view. Restore the original facial shape immediately after contact. It smiles, makes ONE small head tilt and keeps wagging its tail. Hold warm direct eye contact for the final beat.
+
+SHELL CONTINUITY
+The shell does NOT disappear, dissolve, reassemble, clean itself up or follow the baby. Pieces may move briefly as they land; once settled, they stay at their exact floor positions for the rest of the film. If visible behind the baby, keep that same pile. The final close framing may naturally crop it out; this is not permission to remove it.
+
+AUDIO AND LOCKS
+Only soft rolling shell sounds, shell cracks, gentle paw contacts, a soft stumble thump and ONE tiny nose/face boop. NO dialogue, cooing, barking, laughter, narration, singing or music.
+Keep one baby, one egg, the approved green, short fur, light blush and consistent anatomy throughout. Ears/antennae follow motion with a slight delay, balls remain round. No violent shell explosion, extra limbs, human fingers, pointed hair, cat tail, ribbon, five-point stars, text, logos, grids or watermarks. Do not skip, reorder or merge the tail-first emergence, running stumble, recovery, second approach, close face boop and final backing-up greeting.
+
+AFTER GENERATION
+Wait for the actual job to finish and return the playable video or download link. If inspection is supported, check the tail-first order, ONE shell break, persistent floor shell pieces, mid-run stumble and recovery, extreme-close boop and final backward-step/head-tilt ending. Report deviations honestly. Do not automatically generate additional paid attempts.

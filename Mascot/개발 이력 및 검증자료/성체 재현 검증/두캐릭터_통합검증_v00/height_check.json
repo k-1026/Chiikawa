@@ -1,0 +1,14 @@
+{
+  "daekimi": {
+    "top_y": 29,
+    "bottom_y": 462,
+    "colored_height_px": 434
+  },
+  "oejimong": {
+    "top_y": 21,
+    "bottom_y": 464,
+    "colored_height_px": 444
+  },
+  "height_ratio": 1.023041474654378,
+  "method": "Approximate top-row colored skin bounds; threshold excludes ground shadow; not CAD dimensions."
+}

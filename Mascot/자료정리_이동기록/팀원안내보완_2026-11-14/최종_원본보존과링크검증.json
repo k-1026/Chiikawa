@@ -1,0 +1,70 @@
+{
+  "verification": {
+    "existing_files_checked": 1009,
+    "existing_changed": [],
+    "existing_missing": [],
+    "new_guide_docs": 5,
+    "new_guide_local_links": 57,
+    "missing_guide_links": []
+  },
+  "added_files_before_this_report": [
+    {
+      "path": "README.md",
+      "sha256": "7e2acee6941198ff6d372d7c404a35e632dd97e57b1d647faa9dc57ffcaf6201",
+      "bytes": 1471
+    },
+    {
+      "path": "00_팀원용_현재자료안내/04_Git공유전점검.md",
+      "sha256": "a44fb50411ce695730060e4ed51c92d1d6e25db71a6bbf4c8a7f397cc543d6f1",
+      "bytes": 2481
+    },
+    {
+      "path": "00_팀원용_현재자료안내/02_승인상태와버전연결.md",
+      "sha256": "99cf1ce0ebf97565ce50ec890f2c13a46e73f122ada54d298c46dabda534c6c2",
+      "bytes": 9102
+    },
+    {
+      "path": "00_팀원용_현재자료안내/01_현재사용자료와진행상태.md",
+      "sha256": "692c3a94f2ef080b4729564d01ca485eb0f473a3c2b15f24d3b158eb0dc9226e",
+      "bytes": 12562
+    },
+    {
+      "path": "00_팀원용_현재자료안내/03_자료이름풀이와이전경로대응.md",
+      "sha256": "ca0a1fc02caf441a582b14ac7b8f98d77da612058ede4cae8b26e7091f6a5c15",
+      "bytes": 5405
+    },
+    {
+      "path": "자료정리_이동기록/팀원안내보완_2026-11-14/단계별_작업결과.md",
+      "sha256": "5d1db8cbc6b849c2f4c15c29532cc7ffeb9e040b01579763af14dff7f521a78a",
+      "bytes": 1133
+    },
+    {
+      "path": "자료정리_이동기록/팀원안내보완_2026-11-14/Git공유전_실측기록.json",
+      "sha256": "1e0443e8bce51efed902003c6dfb65e4aa5b08fb4216ed194ff9be913fbb6fd6",
+      "bytes": 22648
+    },
+    {
+      "path": "자료정리_이동기록/팀원안내보완_2026-11-14/작업전_Git상태.json",
+      "sha256": "86ac4fa417059dd0e9658ad36f463c150b304714443033222802336667490884",
+      "bytes": 180114
+    },
+    {
+      "path": "자료정리_이동기록/팀원안내보완_2026-11-14/작업전_기존파일_해시.json",
+      "sha256": "37d9989299c844d28af6bb30a8074f68ea9dde0391cd90d333c78447a7f37845",
+      "bytes": 306326
+    },
+    {
+      "path": "자료정리_이동기록/팀원안내보완_2026-11-14/Git공유범위_검토목록.csv",
+      "sha256": "3352e82f04d5bd5205178525692a3a72b30211dcc2d96c94142666414b11a25c",
+      "bytes": 281761
+    },
+    {
+      "path": "자료정리_이동기록/팀원안내보완_2026-11-14/작업계획.md",
+      "sha256": "87f65112b61134efd70b62c81238e5cf22c4c013f55ff478e96142f002de7cde",
+      "bytes": 1454
+    }
+  ],
+  "preservation": "All 1009 preexisting files remain with identical SHA-256; no source renames/moves/deletions",
+  "git_add_commit_push_executed": false,
+  "report_excluded_from_own_hash_manifest": true
+}

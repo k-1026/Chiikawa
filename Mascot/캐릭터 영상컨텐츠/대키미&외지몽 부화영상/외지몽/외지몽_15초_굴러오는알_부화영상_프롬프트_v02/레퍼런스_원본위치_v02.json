@@ -1,0 +1,27 @@
+{
+  "date": "2026-11-13",
+  "duration_seconds": 15,
+  "references": [
+    {
+      "tag": "Image 1",
+      "path": "/Users/seunghui/Desktop/대외활동/CJ AI x AX/daegu-local-festival-ai-agent/Mascot/마스코트 디자인 스펙시트/아가버전 대키미&외지몽 디자인 스펙시트_v01/외지몽 아기버전/캐릭터 디자인/외지몽 아가버전 최종_v13/레퍼런스_이미지/01_정면.png",
+      "note": "원본 그대로 첨부"
+    },
+    {
+      "tag": "Image 2",
+      "path": "/Users/seunghui/Desktop/대외활동/CJ AI x AX/daegu-local-festival-ai-agent/Mascot/마스코트 디자인 스펙시트/아가버전 대키미&외지몽 디자인 스펙시트_v01/외지몽 아기버전/캐릭터 디자인/외지몽 아가버전 최종_v13/레퍼런스_이미지/03_45도_관찰자오른쪽.png",
+      "note": "원본 그대로 첨부"
+    },
+    {
+      "tag": "Image 3",
+      "path": "/Users/seunghui/Desktop/대외활동/CJ AI x AX/daegu-local-festival-ai-agent/Mascot/마스코트 디자인 스펙시트/아가버전 대키미&외지몽 디자인 스펙시트_v01/외지몽 아기버전/캐릭터 디자인/외지몽 아가버전 최종_v13/앉은자세_보조이미지/07_앉은자세_정면.png",
+      "note": "원본 그대로 첨부"
+    },
+    {
+      "tag": "Image 4",
+      "path": "/Users/seunghui/Desktop/대외활동/CJ AI x AX/daegu-local-festival-ai-agent/Mascot/마스코트 디자인 스펙시트/아가버전 대키미&외지몽 디자인 스펙시트_v01/외지몽 아기버전/알 디자인/외지몽_크림밀키민트_6방향_v00/외지몽_알_6방향_레퍼런스_v01.png",
+      "note": "정면 알 하나만 잘라 사용"
+    }
+  ],
+  "version": "video-topic-v02"
+}

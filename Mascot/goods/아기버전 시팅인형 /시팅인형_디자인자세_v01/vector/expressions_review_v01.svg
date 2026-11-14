@@ -1,0 +1,373 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg
+  PUBLIC '-//W3C//DTD SVG 1.0//EN'
+  'http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd'>
+<svg width="1200" height="620" preserveAspectRatio="xMinYMin meet" viewBox="0 0 1200 620" xmlns="http://www.w3.org/2000/svg" version="1.0" fill-rule="evenodd" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<title>...</title>
+	<desc>...</desc>
+	<clipPath id="clip">
+		<rect x="0" y="0" width="1200" height="620"/>
+	</clipPath>
+	<g id="group" transform="scale(1,-1) translate(0,-620)" style="clip-path: url(#clip)">
+		<g transform="">
+			<g transform=" matrix(1,0,0,1,5,340)">
+				<g transform=" matrix(0.29,0,0,0.29,-34.8,-84.1)">
+					<g transform="">
+						<polygon points="566.9537 953.3605, 560.9537 1041.36, 521.0463 1038.64, 527.0463 950.6395" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(42%,81%,96%); fill-rule: evenodd;"/>
+						<polygon points="560.9157 1041.834, 553.9157 1117.834, 514.0843 1114.166, 521.0843 1038.166" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(42%,81%,96%); fill-rule: evenodd;"/>
+						<ellipse cx="547.0" cy="952.0" rx="20.0" ry="20.0" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(42%,81%,96%); fill-rule: evenodd;"/>
+						<ellipse cx="541.0" cy="1040.0" rx="20.0" ry="20.0" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(42%,81%,96%); fill-rule: evenodd;"/>
+						<ellipse cx="534.0" cy="1116.0" rx="20.0" ry="20.0" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(42%,81%,96%); fill-rule: evenodd;"/>
+						<polygon points="709.8826 941.2773, 756.8826 1015.277, 723.1174 1036.723, 676.1174 962.7227" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(42%,81%,96%); fill-rule: evenodd;"/>
+						<polygon points="749.3282 1008.309, 804.3282 1037.309, 785.6718 1072.691, 730.6718 1043.691" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(42%,81%,96%); fill-rule: evenodd;"/>
+						<polygon points="792.7914 1035.122, 873.7914 1026.122, 878.2086 1065.878, 797.2086 1074.878" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(42%,81%,96%); fill-rule: evenodd;"/>
+						<ellipse cx="693.0" cy="952.0" rx="20.0" ry="20.0" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(42%,81%,96%); fill-rule: evenodd;"/>
+						<ellipse cx="740.0" cy="1026.0" rx="20.0" ry="20.0" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(42%,81%,96%); fill-rule: evenodd;"/>
+						<ellipse cx="795.0" cy="1055.0" rx="20.0" ry="20.0" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(42%,81%,96%); fill-rule: evenodd;"/>
+						<ellipse cx="876.0" cy="1046.0" rx="20.0" ry="20.0" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(42%,81%,96%); fill-rule: evenodd;"/>
+						<ellipse cx="534.0" cy="1118.0" rx="68.0" ry="65.0" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(42%,81%,96%); fill-rule: evenodd;"/>
+						<ellipse cx="876.0" cy="1045.0" rx="62.0" ry="60.0" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(42%,81%,96%); fill-rule: evenodd;"/>
+						<path d="M 230 769 C 197 897 218 1055 272 1073 C 341 1090 425 1000 445 949 L 399 786 Z " style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(42%,81%,96%); fill-rule: evenodd;"/>
+						<path d="M 267 840 C 250 934 258 1006 279 1017 C 321 1009 369 972 390 932 Z " style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(99%,71%,75%); fill-rule: evenodd;"/>
+						<path d="M 250 712 C 210 835 290 955 448 973 C 568 994 692 984 803 957 C 955 940 1003 782 978 607 C 965 498 887 445 757 437 L 474 437 C 337 447 242 508 237 605 Z " style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(42%,81%,96%); fill-rule: evenodd;"/>
+						<path d="M 775 951 C 845 978 930 945 981 895 C 1031 841 1015 783 974 756 C 935 740 892 794 871 834 C 842 888 810 910 775 951 Z " style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(42%,81%,96%); fill-rule: evenodd;"/>
+						<path d="M 832 921 C 884 924 949 881 966 823 C 938 838 901 864 867 881 Z " style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(99%,71%,75%); fill-rule: evenodd;"/>
+						<path d="M 329 635 C 309 735 366 820 441 818 C 511 820 559 724 551 630 C 515 588 373 582 329 635 Z " style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(9%,10%,12%); fill-rule: evenodd;"/>
+						<path d="M 467 791 C 481.1 755.75 480.16 755.75 514 744 C 480.16 732.25 481.1 732.25 467 697 C 452.9 732.25 453.84 732.25 420 744 C 453.84 755.75 452.9 755.75 467 791 Z " style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(96%,96%,96%); fill-rule: evenodd;"/>
+						<path d="M 406 673 C 412.3 657.25 411.88 657.25 427 652 C 411.88 646.75 412.3 646.75 406 631 C 399.7 646.75 400.12 646.75 385 652 C 400.12 657.25 399.7 657.25 406 673 Z " style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(62%,62%,62%); fill-rule: evenodd;"/>
+						<polygon points="392 770, 403 759, 392 748, 381 759" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(85%,86%,87%); fill-rule: evenodd;"/>
+						<path d="M 680 635 C 660 735 717 820 792 818 C 862 820 910 724 902 630 C 866 588 724 582 680 635 Z " style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(9%,10%,12%); fill-rule: evenodd;"/>
+						<path d="M 818 791 C 832.1 755.75 831.16 755.75 865 744 C 831.16 732.25 832.1 732.25 818 697 C 803.9 732.25 804.84 732.25 771 744 C 804.84 755.75 803.9 755.75 818 791 Z " style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(96%,96%,96%); fill-rule: evenodd;"/>
+						<path d="M 757 673 C 763.3 657.25 762.88 657.25 778 652 C 762.88 646.75 763.3 646.75 757 631 C 750.7 646.75 751.12 646.75 736 652 C 751.12 657.25 750.7 657.25 757 673 Z " style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(62%,62%,62%); fill-rule: evenodd;"/>
+						<polygon points="743 770, 754 759, 743 748, 732 759" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(85%,86%,87%); fill-rule: evenodd;"/>
+						<ellipse cx="619.0" cy="646.0" rx="20.0" ry="12.0" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(9%,10%,12%); fill-rule: evenodd;"/>
+						<polygon points="616 635, 616 615, 622 615, 622 635" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(9%,10%,12%); fill-rule: evenodd;"/>
+						<polygon points="617.41 617.544, 593.41 602.544, 596.59 597.456, 620.59 612.456" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(9%,10%,12%); fill-rule: evenodd;"/>
+						<ellipse cx="619.0" cy="635.0" rx="3.0" ry="3.0" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(9%,10%,12%); fill-rule: evenodd;"/>
+						<ellipse cx="619.0" cy="615.0" rx="3.0" ry="3.0" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(9%,10%,12%); fill-rule: evenodd;"/>
+						<ellipse cx="595.0" cy="600.0" rx="3.0" ry="3.0" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(9%,10%,12%); fill-rule: evenodd;"/>
+						<polygon points="617.41 612.456, 641.41 597.456, 644.59 602.544, 620.59 617.544" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(9%,10%,12%); fill-rule: evenodd;"/>
+						<ellipse cx="619.0" cy="615.0" rx="3.0" ry="3.0" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(9%,10%,12%); fill-rule: evenodd;"/>
+						<ellipse cx="643.0" cy="600.0" rx="3.0" ry="3.0" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(9%,10%,12%); fill-rule: evenodd;"/>
+					</g>
+				</g>
+			</g>
+			<text x="12" y="320" style="font-family: Helvetica; font-size: 10px;fill: rgb(9%,10%,12%); stroke:none;" transform="translate(0,640) scale(1,-1)">01 NEUTRAL</text>
+			<g transform=" matrix(1,0,0,1,305,340)">
+				<g transform=" matrix(0.29,0,0,0.29,-34.8,-84.1)">
+					<g transform="">
+						<polygon points="566.9537 953.3605, 560.9537 1041.36, 521.0463 1038.64, 527.0463 950.6395" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(42%,81%,96%); fill-rule: evenodd;"/>
+						<polygon points="560.9157 1041.834, 553.9157 1117.834, 514.0843 1114.166, 521.0843 1038.166" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(42%,81%,96%); fill-rule: evenodd;"/>
+						<ellipse cx="547.0" cy="952.0" rx="20.0" ry="20.0" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(42%,81%,96%); fill-rule: evenodd;"/>
+						<ellipse cx="541.0" cy="1040.0" rx="20.0" ry="20.0" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(42%,81%,96%); fill-rule: evenodd;"/>
+						<ellipse cx="534.0" cy="1116.0" rx="20.0" ry="20.0" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(42%,81%,96%); fill-rule: evenodd;"/>
+						<polygon points="709.8826 941.2773, 756.8826 1015.277, 723.1174 1036.723, 676.1174 962.7227" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(42%,81%,96%); fill-rule: evenodd;"/>
+						<polygon points="749.3282 1008.309, 804.3282 1037.309, 785.6718 1072.691, 730.6718 1043.691" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(42%,81%,96%); fill-rule: evenodd;"/>
+						<polygon points="792.7914 1035.122, 873.7914 1026.122, 878.2086 1065.878, 797.2086 1074.878" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(42%,81%,96%); fill-rule: evenodd;"/>
+						<ellipse cx="693.0" cy="952.0" rx="20.0" ry="20.0" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(42%,81%,96%); fill-rule: evenodd;"/>
+						<ellipse cx="740.0" cy="1026.0" rx="20.0" ry="20.0" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(42%,81%,96%); fill-rule: evenodd;"/>
+						<ellipse cx="795.0" cy="1055.0" rx="20.0" ry="20.0" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(42%,81%,96%); fill-rule: evenodd;"/>
+						<ellipse cx="876.0" cy="1046.0" rx="20.0" ry="20.0" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(42%,81%,96%); fill-rule: evenodd;"/>
+						<ellipse cx="534.0" cy="1118.0" rx="68.0" ry="65.0" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(42%,81%,96%); fill-rule: evenodd;"/>
+						<ellipse cx="876.0" cy="1045.0" rx="62.0" ry="60.0" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(42%,81%,96%); fill-rule: evenodd;"/>
+						<path d="M 230 769 C 197 897 218 1055 272 1073 C 341 1090 425 1000 445 949 L 399 786 Z " style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(42%,81%,96%); fill-rule: evenodd;"/>
+						<path d="M 267 840 C 250 934 258 1006 279 1017 C 321 1009 369 972 390 932 Z " style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(99%,71%,75%); fill-rule: evenodd;"/>
+						<path d="M 250 712 C 210 835 290 955 448 973 C 568 994 692 984 803 957 C 955 940 1003 782 978 607 C 965 498 887 445 757 437 L 474 437 C 337 447 242 508 237 605 Z " style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(42%,81%,96%); fill-rule: evenodd;"/>
+						<path d="M 775 951 C 845 978 930 945 981 895 C 1031 841 1015 783 974 756 C 935 740 892 794 871 834 C 842 888 810 910 775 951 Z " style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(42%,81%,96%); fill-rule: evenodd;"/>
+						<path d="M 832 921 C 884 924 949 881 966 823 C 938 838 901 864 867 881 Z " style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(99%,71%,75%); fill-rule: evenodd;"/>
+						<path d="M 329 635 C 309 735 366 820 441 818 C 511 820 559 724 551 630 C 515 588 373 582 329 635 Z " style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(9%,10%,12%); fill-rule: evenodd;"/>
+						<path d="M 467 791 C 481.1 755.75 480.16 755.75 514 744 C 480.16 732.25 481.1 732.25 467 697 C 452.9 732.25 453.84 732.25 420 744 C 453.84 755.75 452.9 755.75 467 791 Z " style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(96%,96%,96%); fill-rule: evenodd;"/>
+						<path d="M 406 673 C 412.3 657.25 411.88 657.25 427 652 C 411.88 646.75 412.3 646.75 406 631 C 399.7 646.75 400.12 646.75 385 652 C 400.12 657.25 399.7 657.25 406 673 Z " style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(62%,62%,62%); fill-rule: evenodd;"/>
+						<polygon points="392 770, 403 759, 392 748, 381 759" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(85%,86%,87%); fill-rule: evenodd;"/>
+						<path d="M 680 635 C 660 735 717 820 792 818 C 862 820 910 724 902 630 C 866 588 724 582 680 635 Z " style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(9%,10%,12%); fill-rule: evenodd;"/>
+						<path d="M 818 791 C 832.1 755.75 831.16 755.75 865 744 C 831.16 732.25 832.1 732.25 818 697 C 803.9 732.25 804.84 732.25 771 744 C 804.84 755.75 803.9 755.75 818 791 Z " style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(96%,96%,96%); fill-rule: evenodd;"/>
+						<path d="M 757 673 C 763.3 657.25 762.88 657.25 778 652 C 762.88 646.75 763.3 646.75 757 631 C 750.7 646.75 751.12 646.75 736 652 C 751.12 657.25 750.7 657.25 757 673 Z " style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(62%,62%,62%); fill-rule: evenodd;"/>
+						<polygon points="743 770, 754 759, 743 748, 732 759" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(85%,86%,87%); fill-rule: evenodd;"/>
+						<ellipse cx="619.0" cy="646.0" rx="20.0" ry="12.0" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(9%,10%,12%); fill-rule: evenodd;"/>
+						<ellipse cx="619.0" cy="601.0" rx="33.0" ry="30.0" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(9%,10%,12%); fill-rule: evenodd;"/>
+						<ellipse cx="619.0" cy="585.0" rx="21.0" ry="10.0" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(99%,71%,75%); fill-rule: evenodd;"/>
+					</g>
+				</g>
+			</g>
+			<text x="312" y="320" style="font-family: Helvetica; font-size: 10px;fill: rgb(9%,10%,12%); stroke:none;" transform="translate(0,640) scale(1,-1)">02 JOY</text>
+			<g transform=" matrix(1,0,0,1,605,340)">
+				<g transform=" matrix(0.29,0,0,0.29,-34.8,-84.1)">
+					<g transform="">
+						<polygon points="566.9537 953.3605, 560.9537 1041.36, 521.0463 1038.64, 527.0463 950.6395" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(42%,81%,96%); fill-rule: evenodd;"/>
+						<polygon points="560.9157 1041.834, 553.9157 1117.834, 514.0843 1114.166, 521.0843 1038.166" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(42%,81%,96%); fill-rule: evenodd;"/>
+						<ellipse cx="547.0" cy="952.0" rx="20.0" ry="20.0" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(42%,81%,96%); fill-rule: evenodd;"/>
+						<ellipse cx="541.0" cy="1040.0" rx="20.0" ry="20.0" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(42%,81%,96%); fill-rule: evenodd;"/>
+						<ellipse cx="534.0" cy="1116.0" rx="20.0" ry="20.0" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(42%,81%,96%); fill-rule: evenodd;"/>
+						<polygon points="709.8826 941.2773, 756.8826 1015.277, 723.1174 1036.723, 676.1174 962.7227" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(42%,81%,96%); fill-rule: evenodd;"/>
+						<polygon points="749.3282 1008.309, 804.3282 1037.309, 785.6718 1072.691, 730.6718 1043.691" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(42%,81%,96%); fill-rule: evenodd;"/>
+						<polygon points="792.7914 1035.122, 873.7914 1026.122, 878.2086 1065.878, 797.2086 1074.878" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(42%,81%,96%); fill-rule: evenodd;"/>
+						<ellipse cx="693.0" cy="952.0" rx="20.0" ry="20.0" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(42%,81%,96%); fill-rule: evenodd;"/>
+						<ellipse cx="740.0" cy="1026.0" rx="20.0" ry="20.0" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(42%,81%,96%); fill-rule: evenodd;"/>
+						<ellipse cx="795.0" cy="1055.0" rx="20.0" ry="20.0" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(42%,81%,96%); fill-rule: evenodd;"/>
+						<ellipse cx="876.0" cy="1046.0" rx="20.0" ry="20.0" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(42%,81%,96%); fill-rule: evenodd;"/>
+						<ellipse cx="534.0" cy="1118.0" rx="68.0" ry="65.0" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(42%,81%,96%); fill-rule: evenodd;"/>
+						<ellipse cx="876.0" cy="1045.0" rx="62.0" ry="60.0" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(42%,81%,96%); fill-rule: evenodd;"/>
+						<path d="M 230 769 C 197 897 218 1055 272 1073 C 341 1090 425 1000 445 949 L 399 786 Z " style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(42%,81%,96%); fill-rule: evenodd;"/>
+						<path d="M 267 840 C 250 934 258 1006 279 1017 C 321 1009 369 972 390 932 Z " style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(99%,71%,75%); fill-rule: evenodd;"/>
+						<path d="M 250 712 C 210 835 290 955 448 973 C 568 994 692 984 803 957 C 955 940 1003 782 978 607 C 965 498 887 445 757 437 L 474 437 C 337 447 242 508 237 605 Z " style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(42%,81%,96%); fill-rule: evenodd;"/>
+						<path d="M 775 951 C 845 978 930 945 981 895 C 1031 841 1015 783 974 756 C 935 740 892 794 871 834 C 842 888 810 910 775 951 Z " style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(42%,81%,96%); fill-rule: evenodd;"/>
+						<path d="M 832 921 C 884 924 949 881 966 823 C 938 838 901 864 867 881 Z " style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(99%,71%,75%); fill-rule: evenodd;"/>
+						<path d="M 329 635 C 309 735 366 820 441 818 C 511 820 559 724 551 630 C 515 588 373 582 329 635 Z " style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(9%,10%,12%); fill-rule: evenodd;"/>
+						<path d="M 467 791 C 481.1 755.75 480.16 755.75 514 744 C 480.16 732.25 481.1 732.25 467 697 C 452.9 732.25 453.84 732.25 420 744 C 453.84 755.75 452.9 755.75 467 791 Z " style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(96%,96%,96%); fill-rule: evenodd;"/>
+						<path d="M 406 673 C 412.3 657.25 411.88 657.25 427 652 C 411.88 646.75 412.3 646.75 406 631 C 399.7 646.75 400.12 646.75 385 652 C 400.12 657.25 399.7 657.25 406 673 Z " style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(62%,62%,62%); fill-rule: evenodd;"/>
+						<polygon points="392 770, 403 759, 392 748, 381 759" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(85%,86%,87%); fill-rule: evenodd;"/>
+						<path d="M 680 635 C 660 735 717 820 792 818 C 862 820 910 724 902 630 C 866 588 724 582 680 635 Z " style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(9%,10%,12%); fill-rule: evenodd;"/>
+						<path d="M 818 791 C 832.1 755.75 831.16 755.75 865 744 C 831.16 732.25 832.1 732.25 818 697 C 803.9 732.25 804.84 732.25 771 744 C 804.84 755.75 803.9 755.75 818 791 Z " style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(96%,96%,96%); fill-rule: evenodd;"/>
+						<path d="M 757 673 C 763.3 657.25 762.88 657.25 778 652 C 762.88 646.75 763.3 646.75 757 631 C 750.7 646.75 751.12 646.75 736 652 C 751.12 657.25 750.7 657.25 757 673 Z " style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(62%,62%,62%); fill-rule: evenodd;"/>
+						<polygon points="743 770, 754 759, 743 748, 732 759" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(85%,86%,87%); fill-rule: evenodd;"/>
+						<ellipse cx="619.0" cy="646.0" rx="20.0" ry="12.0" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(9%,10%,12%); fill-rule: evenodd;"/>
+						<ellipse cx="619.0" cy="601.0" rx="23.0" ry="34.0" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(9%,10%,12%); fill-rule: evenodd;"/>
+					</g>
+				</g>
+			</g>
+			<text x="612" y="320" style="font-family: Helvetica; font-size: 10px;fill: rgb(9%,10%,12%); stroke:none;" transform="translate(0,640) scale(1,-1)">03 SURPRISE</text>
+			<g transform=" matrix(1,0,0,1,905,340)">
+				<g transform=" matrix(0.29,0,0,0.29,-34.8,-84.1)">
+					<g transform="">
+						<polygon points="566.9537 953.3605, 560.9537 1041.36, 521.0463 1038.64, 527.0463 950.6395" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(42%,81%,96%); fill-rule: evenodd;"/>
+						<polygon points="560.9157 1041.834, 553.9157 1117.834, 514.0843 1114.166, 521.0843 1038.166" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(42%,81%,96%); fill-rule: evenodd;"/>
+						<ellipse cx="547.0" cy="952.0" rx="20.0" ry="20.0" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(42%,81%,96%); fill-rule: evenodd;"/>
+						<ellipse cx="541.0" cy="1040.0" rx="20.0" ry="20.0" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(42%,81%,96%); fill-rule: evenodd;"/>
+						<ellipse cx="534.0" cy="1116.0" rx="20.0" ry="20.0" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(42%,81%,96%); fill-rule: evenodd;"/>
+						<polygon points="709.8826 941.2773, 756.8826 1015.277, 723.1174 1036.723, 676.1174 962.7227" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(42%,81%,96%); fill-rule: evenodd;"/>
+						<polygon points="749.3282 1008.309, 804.3282 1037.309, 785.6718 1072.691, 730.6718 1043.691" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(42%,81%,96%); fill-rule: evenodd;"/>
+						<polygon points="792.7914 1035.122, 873.7914 1026.122, 878.2086 1065.878, 797.2086 1074.878" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(42%,81%,96%); fill-rule: evenodd;"/>
+						<ellipse cx="693.0" cy="952.0" rx="20.0" ry="20.0" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(42%,81%,96%); fill-rule: evenodd;"/>
+						<ellipse cx="740.0" cy="1026.0" rx="20.0" ry="20.0" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(42%,81%,96%); fill-rule: evenodd;"/>
+						<ellipse cx="795.0" cy="1055.0" rx="20.0" ry="20.0" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(42%,81%,96%); fill-rule: evenodd;"/>
+						<ellipse cx="876.0" cy="1046.0" rx="20.0" ry="20.0" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(42%,81%,96%); fill-rule: evenodd;"/>
+						<ellipse cx="534.0" cy="1118.0" rx="68.0" ry="65.0" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(42%,81%,96%); fill-rule: evenodd;"/>
+						<ellipse cx="876.0" cy="1045.0" rx="62.0" ry="60.0" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(42%,81%,96%); fill-rule: evenodd;"/>
+						<path d="M 230 769 C 197 897 218 1055 272 1073 C 341 1090 425 1000 445 949 L 399 786 Z " style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(42%,81%,96%); fill-rule: evenodd;"/>
+						<path d="M 267 840 C 250 934 258 1006 279 1017 C 321 1009 369 972 390 932 Z " style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(99%,71%,75%); fill-rule: evenodd;"/>
+						<path d="M 250 712 C 210 835 290 955 448 973 C 568 994 692 984 803 957 C 955 940 1003 782 978 607 C 965 498 887 445 757 437 L 474 437 C 337 447 242 508 237 605 Z " style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(42%,81%,96%); fill-rule: evenodd;"/>
+						<path d="M 775 951 C 845 978 930 945 981 895 C 1031 841 1015 783 974 756 C 935 740 892 794 871 834 C 842 888 810 910 775 951 Z " style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(42%,81%,96%); fill-rule: evenodd;"/>
+						<path d="M 832 921 C 884 924 949 881 966 823 C 938 838 901 864 867 881 Z " style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(99%,71%,75%); fill-rule: evenodd;"/>
+						<path d="M 329 635 C 309 735 366 820 441 818 C 511 820 559 724 551 630 C 515 588 373 582 329 635 Z " style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(9%,10%,12%); fill-rule: evenodd;"/>
+						<path d="M 467 791 C 481.1 755.75 480.16 755.75 514 744 C 480.16 732.25 481.1 732.25 467 697 C 452.9 732.25 453.84 732.25 420 744 C 453.84 755.75 452.9 755.75 467 791 Z " style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(96%,96%,96%); fill-rule: evenodd;"/>
+						<path d="M 406 673 C 412.3 657.25 411.88 657.25 427 652 C 411.88 646.75 412.3 646.75 406 631 C 399.7 646.75 400.12 646.75 385 652 C 400.12 657.25 399.7 657.25 406 673 Z " style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(62%,62%,62%); fill-rule: evenodd;"/>
+						<polygon points="392 770, 403 759, 392 748, 381 759" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(85%,86%,87%); fill-rule: evenodd;"/>
+						<path d="M 680 635 C 660 735 717 820 792 818 C 862 820 910 724 902 630 C 866 588 724 582 680 635 Z " style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(9%,10%,12%); fill-rule: evenodd;"/>
+						<path d="M 818 791 C 832.1 755.75 831.16 755.75 865 744 C 831.16 732.25 832.1 732.25 818 697 C 803.9 732.25 804.84 732.25 771 744 C 804.84 755.75 803.9 755.75 818 791 Z " style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(96%,96%,96%); fill-rule: evenodd;"/>
+						<path d="M 757 673 C 763.3 657.25 762.88 657.25 778 652 C 762.88 646.75 763.3 646.75 757 631 C 750.7 646.75 751.12 646.75 736 652 C 751.12 657.25 750.7 657.25 757 673 Z " style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(62%,62%,62%); fill-rule: evenodd;"/>
+						<polygon points="743 770, 754 759, 743 748, 732 759" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(85%,86%,87%); fill-rule: evenodd;"/>
+						<ellipse cx="619.0" cy="646.0" rx="20.0" ry="12.0" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(9%,10%,12%); fill-rule: evenodd;"/>
+						<polygon points="596.555 599.0332, 616.555 596.0332, 617.445 601.9668, 597.445 604.9668" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(9%,10%,12%); fill-rule: evenodd;"/>
+						<polygon points="618.068 596.1965, 639.068 604.1965, 636.932 609.8035, 615.932 601.8035" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(9%,10%,12%); fill-rule: evenodd;"/>
+						<ellipse cx="597.0" cy="602.0" rx="3.0" ry="3.0" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(9%,10%,12%); fill-rule: evenodd;"/>
+						<ellipse cx="617.0" cy="599.0" rx="3.0" ry="3.0" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(9%,10%,12%); fill-rule: evenodd;"/>
+						<ellipse cx="638.0" cy="607.0" rx="3.0" ry="3.0" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(9%,10%,12%); fill-rule: evenodd;"/>
+					</g>
+				</g>
+			</g>
+			<text x="912" y="320" style="font-family: Helvetica; font-size: 10px;fill: rgb(9%,10%,12%); stroke:none;" transform="translate(0,640) scale(1,-1)">04 CONFUSED</text>
+			<g transform=" matrix(1,0,0,1,5,30)">
+				<g transform=" matrix(0.29,0,0,0.29,-34.8,-84.1)">
+					<g transform="">
+						<polygon points="566.9537 953.3605, 560.9537 1041.36, 521.0463 1038.64, 527.0463 950.6395" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(42%,81%,96%); fill-rule: evenodd;"/>
+						<polygon points="560.9157 1041.834, 553.9157 1117.834, 514.0843 1114.166, 521.0843 1038.166" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(42%,81%,96%); fill-rule: evenodd;"/>
+						<ellipse cx="547.0" cy="952.0" rx="20.0" ry="20.0" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(42%,81%,96%); fill-rule: evenodd;"/>
+						<ellipse cx="541.0" cy="1040.0" rx="20.0" ry="20.0" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(42%,81%,96%); fill-rule: evenodd;"/>
+						<ellipse cx="534.0" cy="1116.0" rx="20.0" ry="20.0" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(42%,81%,96%); fill-rule: evenodd;"/>
+						<polygon points="709.8826 941.2773, 756.8826 1015.277, 723.1174 1036.723, 676.1174 962.7227" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(42%,81%,96%); fill-rule: evenodd;"/>
+						<polygon points="749.3282 1008.309, 804.3282 1037.309, 785.6718 1072.691, 730.6718 1043.691" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(42%,81%,96%); fill-rule: evenodd;"/>
+						<polygon points="792.7914 1035.122, 873.7914 1026.122, 878.2086 1065.878, 797.2086 1074.878" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(42%,81%,96%); fill-rule: evenodd;"/>
+						<ellipse cx="693.0" cy="952.0" rx="20.0" ry="20.0" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(42%,81%,96%); fill-rule: evenodd;"/>
+						<ellipse cx="740.0" cy="1026.0" rx="20.0" ry="20.0" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(42%,81%,96%); fill-rule: evenodd;"/>
+						<ellipse cx="795.0" cy="1055.0" rx="20.0" ry="20.0" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(42%,81%,96%); fill-rule: evenodd;"/>
+						<ellipse cx="876.0" cy="1046.0" rx="20.0" ry="20.0" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(42%,81%,96%); fill-rule: evenodd;"/>
+						<ellipse cx="534.0" cy="1118.0" rx="68.0" ry="65.0" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(42%,81%,96%); fill-rule: evenodd;"/>
+						<ellipse cx="876.0" cy="1045.0" rx="62.0" ry="60.0" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(42%,81%,96%); fill-rule: evenodd;"/>
+						<path d="M 230 769 C 197 897 218 1055 272 1073 C 341 1090 425 1000 445 949 L 399 786 Z " style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(42%,81%,96%); fill-rule: evenodd;"/>
+						<path d="M 267 840 C 250 934 258 1006 279 1017 C 321 1009 369 972 390 932 Z " style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(99%,71%,75%); fill-rule: evenodd;"/>
+						<path d="M 250 712 C 210 835 290 955 448 973 C 568 994 692 984 803 957 C 955 940 1003 782 978 607 C 965 498 887 445 757 437 L 474 437 C 337 447 242 508 237 605 Z " style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(42%,81%,96%); fill-rule: evenodd;"/>
+						<path d="M 775 951 C 845 978 930 945 981 895 C 1031 841 1015 783 974 756 C 935 740 892 794 871 834 C 842 888 810 910 775 951 Z " style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(42%,81%,96%); fill-rule: evenodd;"/>
+						<path d="M 832 921 C 884 924 949 881 966 823 C 938 838 901 864 867 881 Z " style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(99%,71%,75%); fill-rule: evenodd;"/>
+						<polygon points="346.8856 680.4691, 391.8856 659.4691, 396.1144 668.5309, 351.1144 689.5309" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(9%,10%,12%); fill-rule: evenodd;"/>
+						<polygon points="393.5573 659.0196, 438.5573 655.0196, 439.4427 664.9804, 394.4427 668.9804" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(9%,10%,12%); fill-rule: evenodd;"/>
+						<polygon points="439.5522 655.0306, 484.5522 660.0306, 483.4478 669.9694, 438.4478 664.9694" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(9%,10%,12%); fill-rule: evenodd;"/>
+						<polygon points="486.4282 660.6292, 531.4282 685.6292, 526.5718 694.3708, 481.5718 669.3708" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(9%,10%,12%); fill-rule: evenodd;"/>
+						<ellipse cx="349.0" cy="685.0" rx="5.0" ry="5.0" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(9%,10%,12%); fill-rule: evenodd;"/>
+						<ellipse cx="394.0" cy="664.0" rx="5.0" ry="5.0" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(9%,10%,12%); fill-rule: evenodd;"/>
+						<ellipse cx="439.0" cy="660.0" rx="5.0" ry="5.0" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(9%,10%,12%); fill-rule: evenodd;"/>
+						<ellipse cx="484.0" cy="665.0" rx="5.0" ry="5.0" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(9%,10%,12%); fill-rule: evenodd;"/>
+						<ellipse cx="529.0" cy="690.0" rx="5.0" ry="5.0" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(9%,10%,12%); fill-rule: evenodd;"/>
+						<polygon points="697.8856 680.4691, 742.8856 659.4691, 747.1144 668.5309, 702.1144 689.5309" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(9%,10%,12%); fill-rule: evenodd;"/>
+						<polygon points="744.5573 659.0196, 789.5573 655.0196, 790.4427 664.9804, 745.4427 668.9804" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(9%,10%,12%); fill-rule: evenodd;"/>
+						<polygon points="790.5522 655.0306, 835.5522 660.0306, 834.4478 669.9694, 789.4478 664.9694" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(9%,10%,12%); fill-rule: evenodd;"/>
+						<polygon points="837.4282 660.6292, 882.4282 685.6292, 877.5718 694.3708, 832.5718 669.3708" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(9%,10%,12%); fill-rule: evenodd;"/>
+						<ellipse cx="700.0" cy="685.0" rx="5.0" ry="5.0" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(9%,10%,12%); fill-rule: evenodd;"/>
+						<ellipse cx="745.0" cy="664.0" rx="5.0" ry="5.0" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(9%,10%,12%); fill-rule: evenodd;"/>
+						<ellipse cx="790.0" cy="660.0" rx="5.0" ry="5.0" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(9%,10%,12%); fill-rule: evenodd;"/>
+						<ellipse cx="835.0" cy="665.0" rx="5.0" ry="5.0" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(9%,10%,12%); fill-rule: evenodd;"/>
+						<ellipse cx="880.0" cy="690.0" rx="5.0" ry="5.0" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(9%,10%,12%); fill-rule: evenodd;"/>
+						<ellipse cx="619.0" cy="646.0" rx="20.0" ry="12.0" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(9%,10%,12%); fill-rule: evenodd;"/>
+						<polygon points="616 635, 616 615, 622 615, 622 635" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(9%,10%,12%); fill-rule: evenodd;"/>
+						<polygon points="617.41 617.544, 593.41 602.544, 596.59 597.456, 620.59 612.456" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(9%,10%,12%); fill-rule: evenodd;"/>
+						<ellipse cx="619.0" cy="635.0" rx="3.0" ry="3.0" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(9%,10%,12%); fill-rule: evenodd;"/>
+						<ellipse cx="619.0" cy="615.0" rx="3.0" ry="3.0" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(9%,10%,12%); fill-rule: evenodd;"/>
+						<ellipse cx="595.0" cy="600.0" rx="3.0" ry="3.0" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(9%,10%,12%); fill-rule: evenodd;"/>
+						<polygon points="617.41 612.456, 641.41 597.456, 644.59 602.544, 620.59 617.544" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(9%,10%,12%); fill-rule: evenodd;"/>
+						<ellipse cx="619.0" cy="615.0" rx="3.0" ry="3.0" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(9%,10%,12%); fill-rule: evenodd;"/>
+						<ellipse cx="643.0" cy="600.0" rx="3.0" ry="3.0" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(9%,10%,12%); fill-rule: evenodd;"/>
+					</g>
+				</g>
+			</g>
+			<text x="12" y="10" style="font-family: Helvetica; font-size: 10px;fill: rgb(9%,10%,12%); stroke:none;" transform="translate(0,20) scale(1,-1)">05 SLEEPY</text>
+			<g transform=" matrix(1,0,0,1,305,30)">
+				<g transform=" matrix(0.29,0,0,0.29,-34.8,-84.1)">
+					<g transform="">
+						<polygon points="566.9537 953.3605, 560.9537 1041.36, 521.0463 1038.64, 527.0463 950.6395" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(42%,81%,96%); fill-rule: evenodd;"/>
+						<polygon points="560.9157 1041.834, 553.9157 1117.834, 514.0843 1114.166, 521.0843 1038.166" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(42%,81%,96%); fill-rule: evenodd;"/>
+						<ellipse cx="547.0" cy="952.0" rx="20.0" ry="20.0" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(42%,81%,96%); fill-rule: evenodd;"/>
+						<ellipse cx="541.0" cy="1040.0" rx="20.0" ry="20.0" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(42%,81%,96%); fill-rule: evenodd;"/>
+						<ellipse cx="534.0" cy="1116.0" rx="20.0" ry="20.0" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(42%,81%,96%); fill-rule: evenodd;"/>
+						<polygon points="709.8826 941.2773, 756.8826 1015.277, 723.1174 1036.723, 676.1174 962.7227" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(42%,81%,96%); fill-rule: evenodd;"/>
+						<polygon points="749.3282 1008.309, 804.3282 1037.309, 785.6718 1072.691, 730.6718 1043.691" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(42%,81%,96%); fill-rule: evenodd;"/>
+						<polygon points="792.7914 1035.122, 873.7914 1026.122, 878.2086 1065.878, 797.2086 1074.878" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(42%,81%,96%); fill-rule: evenodd;"/>
+						<ellipse cx="693.0" cy="952.0" rx="20.0" ry="20.0" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(42%,81%,96%); fill-rule: evenodd;"/>
+						<ellipse cx="740.0" cy="1026.0" rx="20.0" ry="20.0" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(42%,81%,96%); fill-rule: evenodd;"/>
+						<ellipse cx="795.0" cy="1055.0" rx="20.0" ry="20.0" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(42%,81%,96%); fill-rule: evenodd;"/>
+						<ellipse cx="876.0" cy="1046.0" rx="20.0" ry="20.0" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(42%,81%,96%); fill-rule: evenodd;"/>
+						<ellipse cx="534.0" cy="1118.0" rx="68.0" ry="65.0" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(42%,81%,96%); fill-rule: evenodd;"/>
+						<ellipse cx="876.0" cy="1045.0" rx="62.0" ry="60.0" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(42%,81%,96%); fill-rule: evenodd;"/>
+						<path d="M 230 769 C 197 897 218 1055 272 1073 C 341 1090 425 1000 445 949 L 399 786 Z " style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(42%,81%,96%); fill-rule: evenodd;"/>
+						<path d="M 267 840 C 250 934 258 1006 279 1017 C 321 1009 369 972 390 932 Z " style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(99%,71%,75%); fill-rule: evenodd;"/>
+						<path d="M 250 712 C 210 835 290 955 448 973 C 568 994 692 984 803 957 C 955 940 1003 782 978 607 C 965 498 887 445 757 437 L 474 437 C 337 447 242 508 237 605 Z " style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(42%,81%,96%); fill-rule: evenodd;"/>
+						<path d="M 775 951 C 845 978 930 945 981 895 C 1031 841 1015 783 974 756 C 935 740 892 794 871 834 C 842 888 810 910 775 951 Z " style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(42%,81%,96%); fill-rule: evenodd;"/>
+						<path d="M 832 921 C 884 924 949 881 966 823 C 938 838 901 864 867 881 Z " style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(99%,71%,75%); fill-rule: evenodd;"/>
+						<path d="M 329 635 C 309 735 366 820 441 818 C 511 820 559 724 551 630 C 515 588 373 582 329 635 Z " style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(9%,10%,12%); fill-rule: evenodd;"/>
+						<path d="M 467 791 C 481.1 755.75 480.16 755.75 514 744 C 480.16 732.25 481.1 732.25 467 697 C 452.9 732.25 453.84 732.25 420 744 C 453.84 755.75 452.9 755.75 467 791 Z " style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(96%,96%,96%); fill-rule: evenodd;"/>
+						<path d="M 406 673 C 412.3 657.25 411.88 657.25 427 652 C 411.88 646.75 412.3 646.75 406 631 C 399.7 646.75 400.12 646.75 385 652 C 400.12 657.25 399.7 657.25 406 673 Z " style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(62%,62%,62%); fill-rule: evenodd;"/>
+						<polygon points="392 770, 403 759, 392 748, 381 759" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(85%,86%,87%); fill-rule: evenodd;"/>
+						<path d="M 680 635 C 660 735 717 820 792 818 C 862 820 910 724 902 630 C 866 588 724 582 680 635 Z " style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(9%,10%,12%); fill-rule: evenodd;"/>
+						<path d="M 818 791 C 832.1 755.75 831.16 755.75 865 744 C 831.16 732.25 832.1 732.25 818 697 C 803.9 732.25 804.84 732.25 771 744 C 804.84 755.75 803.9 755.75 818 791 Z " style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(96%,96%,96%); fill-rule: evenodd;"/>
+						<path d="M 757 673 C 763.3 657.25 762.88 657.25 778 652 C 762.88 646.75 763.3 646.75 757 631 C 750.7 646.75 751.12 646.75 736 652 C 751.12 657.25 750.7 657.25 757 673 Z " style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(62%,62%,62%); fill-rule: evenodd;"/>
+						<polygon points="743 770, 754 759, 743 748, 732 759" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(85%,86%,87%); fill-rule: evenodd;"/>
+						<ellipse cx="619.0" cy="646.0" rx="20.0" ry="12.0" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(9%,10%,12%); fill-rule: evenodd;"/>
+						<polygon points="597.4762 591.3883, 620.4762 604.3883, 617.5238 609.6117, 594.5238 596.6117" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(9%,10%,12%); fill-rule: evenodd;"/>
+						<polygon points="617.5238 604.3883, 640.5238 591.3883, 643.4762 596.6117, 620.4762 609.6117" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(9%,10%,12%); fill-rule: evenodd;"/>
+						<ellipse cx="596.0" cy="594.0" rx="3.0" ry="3.0" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(9%,10%,12%); fill-rule: evenodd;"/>
+						<ellipse cx="619.0" cy="607.0" rx="3.0" ry="3.0" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(9%,10%,12%); fill-rule: evenodd;"/>
+						<ellipse cx="642.0" cy="594.0" rx="3.0" ry="3.0" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(9%,10%,12%); fill-rule: evenodd;"/>
+					</g>
+				</g>
+			</g>
+			<text x="312" y="10" style="font-family: Helvetica; font-size: 10px;fill: rgb(9%,10%,12%); stroke:none;" transform="translate(0,20) scale(1,-1)">06 SAD</text>
+			<g transform=" matrix(1,0,0,1,605,30)">
+				<g transform=" matrix(0.29,0,0,0.29,-34.8,-84.1)">
+					<g transform="">
+						<polygon points="566.9537 953.3605, 560.9537 1041.36, 521.0463 1038.64, 527.0463 950.6395" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(42%,81%,96%); fill-rule: evenodd;"/>
+						<polygon points="560.9157 1041.834, 553.9157 1117.834, 514.0843 1114.166, 521.0843 1038.166" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(42%,81%,96%); fill-rule: evenodd;"/>
+						<ellipse cx="547.0" cy="952.0" rx="20.0" ry="20.0" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(42%,81%,96%); fill-rule: evenodd;"/>
+						<ellipse cx="541.0" cy="1040.0" rx="20.0" ry="20.0" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(42%,81%,96%); fill-rule: evenodd;"/>
+						<ellipse cx="534.0" cy="1116.0" rx="20.0" ry="20.0" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(42%,81%,96%); fill-rule: evenodd;"/>
+						<polygon points="709.8826 941.2773, 756.8826 1015.277, 723.1174 1036.723, 676.1174 962.7227" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(42%,81%,96%); fill-rule: evenodd;"/>
+						<polygon points="749.3282 1008.309, 804.3282 1037.309, 785.6718 1072.691, 730.6718 1043.691" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(42%,81%,96%); fill-rule: evenodd;"/>
+						<polygon points="792.7914 1035.122, 873.7914 1026.122, 878.2086 1065.878, 797.2086 1074.878" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(42%,81%,96%); fill-rule: evenodd;"/>
+						<ellipse cx="693.0" cy="952.0" rx="20.0" ry="20.0" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(42%,81%,96%); fill-rule: evenodd;"/>
+						<ellipse cx="740.0" cy="1026.0" rx="20.0" ry="20.0" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(42%,81%,96%); fill-rule: evenodd;"/>
+						<ellipse cx="795.0" cy="1055.0" rx="20.0" ry="20.0" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(42%,81%,96%); fill-rule: evenodd;"/>
+						<ellipse cx="876.0" cy="1046.0" rx="20.0" ry="20.0" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(42%,81%,96%); fill-rule: evenodd;"/>
+						<ellipse cx="534.0" cy="1118.0" rx="68.0" ry="65.0" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(42%,81%,96%); fill-rule: evenodd;"/>
+						<ellipse cx="876.0" cy="1045.0" rx="62.0" ry="60.0" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(42%,81%,96%); fill-rule: evenodd;"/>
+						<path d="M 230 769 C 197 897 218 1055 272 1073 C 341 1090 425 1000 445 949 L 399 786 Z " style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(42%,81%,96%); fill-rule: evenodd;"/>
+						<path d="M 267 840 C 250 934 258 1006 279 1017 C 321 1009 369 972 390 932 Z " style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(99%,71%,75%); fill-rule: evenodd;"/>
+						<path d="M 250 712 C 210 835 290 955 448 973 C 568 994 692 984 803 957 C 955 940 1003 782 978 607 C 965 498 887 445 757 437 L 474 437 C 337 447 242 508 237 605 Z " style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(42%,81%,96%); fill-rule: evenodd;"/>
+						<path d="M 775 951 C 845 978 930 945 981 895 C 1031 841 1015 783 974 756 C 935 740 892 794 871 834 C 842 888 810 910 775 951 Z " style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(42%,81%,96%); fill-rule: evenodd;"/>
+						<path d="M 832 921 C 884 924 949 881 966 823 C 938 838 901 864 867 881 Z " style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(99%,71%,75%); fill-rule: evenodd;"/>
+						<polygon points="346.8856 680.4691, 391.8856 659.4691, 396.1144 668.5309, 351.1144 689.5309" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(9%,10%,12%); fill-rule: evenodd;"/>
+						<polygon points="393.5573 659.0196, 438.5573 655.0196, 439.4427 664.9804, 394.4427 668.9804" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(9%,10%,12%); fill-rule: evenodd;"/>
+						<polygon points="439.5522 655.0306, 484.5522 660.0306, 483.4478 669.9694, 438.4478 664.9694" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(9%,10%,12%); fill-rule: evenodd;"/>
+						<polygon points="486.4282 660.6292, 531.4282 685.6292, 526.5718 694.3708, 481.5718 669.3708" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(9%,10%,12%); fill-rule: evenodd;"/>
+						<ellipse cx="349.0" cy="685.0" rx="5.0" ry="5.0" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(9%,10%,12%); fill-rule: evenodd;"/>
+						<ellipse cx="394.0" cy="664.0" rx="5.0" ry="5.0" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(9%,10%,12%); fill-rule: evenodd;"/>
+						<ellipse cx="439.0" cy="660.0" rx="5.0" ry="5.0" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(9%,10%,12%); fill-rule: evenodd;"/>
+						<ellipse cx="484.0" cy="665.0" rx="5.0" ry="5.0" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(9%,10%,12%); fill-rule: evenodd;"/>
+						<ellipse cx="529.0" cy="690.0" rx="5.0" ry="5.0" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(9%,10%,12%); fill-rule: evenodd;"/>
+						<path d="M 680 635 C 660 735 717 820 792 818 C 862 820 910 724 902 630 C 866 588 724 582 680 635 Z " style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(9%,10%,12%); fill-rule: evenodd;"/>
+						<path d="M 818 791 C 832.1 755.75 831.16 755.75 865 744 C 831.16 732.25 832.1 732.25 818 697 C 803.9 732.25 804.84 732.25 771 744 C 804.84 755.75 803.9 755.75 818 791 Z " style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(96%,96%,96%); fill-rule: evenodd;"/>
+						<path d="M 757 673 C 763.3 657.25 762.88 657.25 778 652 C 762.88 646.75 763.3 646.75 757 631 C 750.7 646.75 751.12 646.75 736 652 C 751.12 657.25 750.7 657.25 757 673 Z " style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(62%,62%,62%); fill-rule: evenodd;"/>
+						<polygon points="743 770, 754 759, 743 748, 732 759" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(85%,86%,87%); fill-rule: evenodd;"/>
+						<ellipse cx="619.0" cy="646.0" rx="20.0" ry="12.0" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(9%,10%,12%); fill-rule: evenodd;"/>
+						<polygon points="616 635, 616 615, 622 615, 622 635" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(9%,10%,12%); fill-rule: evenodd;"/>
+						<polygon points="617.41 617.544, 593.41 602.544, 596.59 597.456, 620.59 612.456" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(9%,10%,12%); fill-rule: evenodd;"/>
+						<ellipse cx="619.0" cy="635.0" rx="3.0" ry="3.0" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(9%,10%,12%); fill-rule: evenodd;"/>
+						<ellipse cx="619.0" cy="615.0" rx="3.0" ry="3.0" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(9%,10%,12%); fill-rule: evenodd;"/>
+						<ellipse cx="595.0" cy="600.0" rx="3.0" ry="3.0" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(9%,10%,12%); fill-rule: evenodd;"/>
+						<polygon points="617.41 612.456, 641.41 597.456, 644.59 602.544, 620.59 617.544" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(9%,10%,12%); fill-rule: evenodd;"/>
+						<ellipse cx="619.0" cy="615.0" rx="3.0" ry="3.0" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(9%,10%,12%); fill-rule: evenodd;"/>
+						<ellipse cx="643.0" cy="600.0" rx="3.0" ry="3.0" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(9%,10%,12%); fill-rule: evenodd;"/>
+					</g>
+				</g>
+			</g>
+			<text x="612" y="10" style="font-family: Helvetica; font-size: 10px;fill: rgb(9%,10%,12%); stroke:none;" transform="translate(0,20) scale(1,-1)">07 WINK</text>
+			<g transform=" matrix(1,0,0,1,905,30)">
+				<g transform=" matrix(0.29,0,0,0.29,-34.8,-84.1)">
+					<g transform="">
+						<polygon points="566.9537 953.3605, 560.9537 1041.36, 521.0463 1038.64, 527.0463 950.6395" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(42%,81%,96%); fill-rule: evenodd;"/>
+						<polygon points="560.9157 1041.834, 553.9157 1117.834, 514.0843 1114.166, 521.0843 1038.166" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(42%,81%,96%); fill-rule: evenodd;"/>
+						<ellipse cx="547.0" cy="952.0" rx="20.0" ry="20.0" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(42%,81%,96%); fill-rule: evenodd;"/>
+						<ellipse cx="541.0" cy="1040.0" rx="20.0" ry="20.0" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(42%,81%,96%); fill-rule: evenodd;"/>
+						<ellipse cx="534.0" cy="1116.0" rx="20.0" ry="20.0" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(42%,81%,96%); fill-rule: evenodd;"/>
+						<polygon points="709.8826 941.2773, 756.8826 1015.277, 723.1174 1036.723, 676.1174 962.7227" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(42%,81%,96%); fill-rule: evenodd;"/>
+						<polygon points="749.3282 1008.309, 804.3282 1037.309, 785.6718 1072.691, 730.6718 1043.691" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(42%,81%,96%); fill-rule: evenodd;"/>
+						<polygon points="792.7914 1035.122, 873.7914 1026.122, 878.2086 1065.878, 797.2086 1074.878" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(42%,81%,96%); fill-rule: evenodd;"/>
+						<ellipse cx="693.0" cy="952.0" rx="20.0" ry="20.0" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(42%,81%,96%); fill-rule: evenodd;"/>
+						<ellipse cx="740.0" cy="1026.0" rx="20.0" ry="20.0" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(42%,81%,96%); fill-rule: evenodd;"/>
+						<ellipse cx="795.0" cy="1055.0" rx="20.0" ry="20.0" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(42%,81%,96%); fill-rule: evenodd;"/>
+						<ellipse cx="876.0" cy="1046.0" rx="20.0" ry="20.0" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(42%,81%,96%); fill-rule: evenodd;"/>
+						<ellipse cx="534.0" cy="1118.0" rx="68.0" ry="65.0" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(42%,81%,96%); fill-rule: evenodd;"/>
+						<ellipse cx="876.0" cy="1045.0" rx="62.0" ry="60.0" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(42%,81%,96%); fill-rule: evenodd;"/>
+						<path d="M 230 769 C 197 897 218 1055 272 1073 C 341 1090 425 1000 445 949 L 399 786 Z " style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(42%,81%,96%); fill-rule: evenodd;"/>
+						<path d="M 267 840 C 250 934 258 1006 279 1017 C 321 1009 369 972 390 932 Z " style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(99%,71%,75%); fill-rule: evenodd;"/>
+						<path d="M 250 712 C 210 835 290 955 448 973 C 568 994 692 984 803 957 C 955 940 1003 782 978 607 C 965 498 887 445 757 437 L 474 437 C 337 447 242 508 237 605 Z " style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(42%,81%,96%); fill-rule: evenodd;"/>
+						<path d="M 775 951 C 845 978 930 945 981 895 C 1031 841 1015 783 974 756 C 935 740 892 794 871 834 C 842 888 810 910 775 951 Z " style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(42%,81%,96%); fill-rule: evenodd;"/>
+						<path d="M 832 921 C 884 924 949 881 966 823 C 938 838 901 864 867 881 Z " style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(99%,71%,75%); fill-rule: evenodd;"/>
+						<path d="M 329 635 C 309 735 366 820 441 818 C 511 820 559 724 551 630 C 515 588 373 582 329 635 Z " style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(9%,10%,12%); fill-rule: evenodd;"/>
+						<path d="M 467 791 C 481.1 755.75 480.16 755.75 514 744 C 480.16 732.25 481.1 732.25 467 697 C 452.9 732.25 453.84 732.25 420 744 C 453.84 755.75 452.9 755.75 467 791 Z " style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(96%,96%,96%); fill-rule: evenodd;"/>
+						<path d="M 406 673 C 412.3 657.25 411.88 657.25 427 652 C 411.88 646.75 412.3 646.75 406 631 C 399.7 646.75 400.12 646.75 385 652 C 400.12 657.25 399.7 657.25 406 673 Z " style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(62%,62%,62%); fill-rule: evenodd;"/>
+						<polygon points="392 770, 403 759, 392 748, 381 759" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(85%,86%,87%); fill-rule: evenodd;"/>
+						<path d="M 680 635 C 660 735 717 820 792 818 C 862 820 910 724 902 630 C 866 588 724 582 680 635 Z " style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(9%,10%,12%); fill-rule: evenodd;"/>
+						<path d="M 818 791 C 832.1 755.75 831.16 755.75 865 744 C 831.16 732.25 832.1 732.25 818 697 C 803.9 732.25 804.84 732.25 771 744 C 804.84 755.75 803.9 755.75 818 791 Z " style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(96%,96%,96%); fill-rule: evenodd;"/>
+						<path d="M 757 673 C 763.3 657.25 762.88 657.25 778 652 C 762.88 646.75 763.3 646.75 757 631 C 750.7 646.75 751.12 646.75 736 652 C 751.12 657.25 750.7 657.25 757 673 Z " style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(62%,62%,62%); fill-rule: evenodd;"/>
+						<polygon points="743 770, 754 759, 743 748, 732 759" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(85%,86%,87%); fill-rule: evenodd;"/>
+						<ellipse cx="619.0" cy="646.0" rx="20.0" ry="12.0" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(9%,10%,12%); fill-rule: evenodd;"/>
+						<polygon points="616 635, 616 615, 622 615, 622 635" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(9%,10%,12%); fill-rule: evenodd;"/>
+						<polygon points="617.41 617.544, 593.41 602.544, 596.59 597.456, 620.59 612.456" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(9%,10%,12%); fill-rule: evenodd;"/>
+						<ellipse cx="619.0" cy="635.0" rx="3.0" ry="3.0" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(9%,10%,12%); fill-rule: evenodd;"/>
+						<ellipse cx="619.0" cy="615.0" rx="3.0" ry="3.0" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(9%,10%,12%); fill-rule: evenodd;"/>
+						<ellipse cx="595.0" cy="600.0" rx="3.0" ry="3.0" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(9%,10%,12%); fill-rule: evenodd;"/>
+						<polygon points="617.41 612.456, 641.41 597.456, 644.59 602.544, 620.59 617.544" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(9%,10%,12%); fill-rule: evenodd;"/>
+						<ellipse cx="619.0" cy="615.0" rx="3.0" ry="3.0" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(9%,10%,12%); fill-rule: evenodd;"/>
+						<ellipse cx="643.0" cy="600.0" rx="3.0" ry="3.0" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(9%,10%,12%); fill-rule: evenodd;"/>
+						<polygon points="324.7301 578.9524, 330.7301 565.9524, 335.2699 568.0476, 329.2699 581.0476" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(99%,71%,75%); fill-rule: evenodd;"/>
+						<ellipse cx="327.0" cy="580.0" rx="2.5" ry="2.5" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(99%,71%,75%); fill-rule: evenodd;"/>
+						<ellipse cx="333.0" cy="567.0" rx="2.5" ry="2.5" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(99%,71%,75%); fill-rule: evenodd;"/>
+						<polygon points="336.7301 578.9524, 342.7301 565.9524, 347.2699 568.0476, 341.2699 581.0476" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(99%,71%,75%); fill-rule: evenodd;"/>
+						<ellipse cx="339.0" cy="580.0" rx="2.5" ry="2.5" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(99%,71%,75%); fill-rule: evenodd;"/>
+						<ellipse cx="345.0" cy="567.0" rx="2.5" ry="2.5" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(99%,71%,75%); fill-rule: evenodd;"/>
+						<polygon points="348.7301 578.9524, 354.7301 565.9524, 359.2699 568.0476, 353.2699 581.0476" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(99%,71%,75%); fill-rule: evenodd;"/>
+						<ellipse cx="351.0" cy="580.0" rx="2.5" ry="2.5" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(99%,71%,75%); fill-rule: evenodd;"/>
+						<ellipse cx="357.0" cy="567.0" rx="2.5" ry="2.5" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(99%,71%,75%); fill-rule: evenodd;"/>
+						<polygon points="897.7301 578.9524, 903.7301 565.9524, 908.2699 568.0476, 902.2699 581.0476" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(99%,71%,75%); fill-rule: evenodd;"/>
+						<ellipse cx="900.0" cy="580.0" rx="2.5" ry="2.5" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(99%,71%,75%); fill-rule: evenodd;"/>
+						<ellipse cx="906.0" cy="567.0" rx="2.5" ry="2.5" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(99%,71%,75%); fill-rule: evenodd;"/>
+						<polygon points="909.7301 578.9524, 915.7301 565.9524, 920.2699 568.0476, 914.2699 581.0476" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(99%,71%,75%); fill-rule: evenodd;"/>
+						<ellipse cx="912.0" cy="580.0" rx="2.5" ry="2.5" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(99%,71%,75%); fill-rule: evenodd;"/>
+						<ellipse cx="918.0" cy="567.0" rx="2.5" ry="2.5" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(99%,71%,75%); fill-rule: evenodd;"/>
+						<polygon points="921.7301 578.9524, 927.7301 565.9524, 932.2699 568.0476, 926.2699 581.0476" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(99%,71%,75%); fill-rule: evenodd;"/>
+						<ellipse cx="924.0" cy="580.0" rx="2.5" ry="2.5" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(99%,71%,75%); fill-rule: evenodd;"/>
+						<ellipse cx="930.0" cy="567.0" rx="2.5" ry="2.5" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(99%,71%,75%); fill-rule: evenodd;"/>
+					</g>
+				</g>
+			</g>
+			<text x="912" y="10" style="font-family: Helvetica; font-size: 10px;fill: rgb(9%,10%,12%); stroke:none;" transform="translate(0,20) scale(1,-1)">08 EMBARRASSED</text>
+		</g>
+	</g>
+</svg>

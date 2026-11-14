@@ -1,0 +1,621 @@
+{
+  "date": "2026-11-13",
+  "rule": "주제별 독립v00 시작; 기존 자료 보존",
+  "files": [
+    {
+      "source": "마스코트 디자인 스펙시트_v01/외지몽character_sheet.pdf",
+      "destination": "성체 대키미&외지몽 디자인 자료/외지몽/원본 분석/외지몽_PDF관측시트_v00/외지몽character_sheet.pdf",
+      "sha256_before": "b1bda7a97c8a1239b7a49e63ee58fd12a2c4d4670abe7ba167123600814ed86d",
+      "sha256_after": "b1bda7a97c8a1239b7a49e63ee58fd12a2c4d4670abe7ba167123600814ed86d",
+      "change": "byte-identical"
+    },
+    {
+      "source": "마스코트 디자인 스펙시트_v01/expression_guide.md",
+      "destination": "성체 대키미&외지몽 디자인 자료/공통 기준/성체_통합가이드_초기규격_v00/expression_guide.md",
+      "sha256_before": "8ef17acf7dbca9d26906017666ad1943040441f0fe5a56bb2df2cd37700629d8",
+      "sha256_after": "8ef17acf7dbca9d26906017666ad1943040441f0fe5a56bb2df2cd37700629d8",
+      "change": "byte-identical"
+    },
+    {
+      "source": "마스코트 디자인 스펙시트_v01/physical_dimensions.md",
+      "destination": "성체 대키미&외지몽 디자인 자료/공통 기준/성체_통합가이드_초기규격_v00/physical_dimensions.md",
+      "sha256_before": "5b50dd6b29bf549d526eae363b9e86b339adb04acdab3c0be9e3cb1d5eca54fd",
+      "sha256_after": "5b50dd6b29bf549d526eae363b9e86b339adb04acdab3c0be9e3cb1d5eca54fd",
+      "change": "byte-identical"
+    },
+    {
+      "source": "마스코트 디자인 스펙시트_v01/design_spec_common.md",
+      "destination": "성체 대키미&외지몽 디자인 자료/공통 기준/성체_통합가이드_초기규격_v00/design_spec_common.md",
+      "sha256_before": "cc36079fb4b82256676dc46f3f75218b76d1587bba95e48ab3f7f5302cbe400b",
+      "sha256_after": "cc36079fb4b82256676dc46f3f75218b76d1587bba95e48ab3f7f5302cbe400b",
+      "change": "byte-identical"
+    },
+    {
+      "source": "마스코트 디자인 스펙시트_v01/design_spec_oejimong.md",
+      "destination": "성체 대키미&외지몽 디자인 자료/공통 기준/성체_통합가이드_초기규격_v00/design_spec_oejimong.md",
+      "sha256_before": "bf34e2c3a3e0868daf6867d8d84109b65a582447c8a4cd3693fdae52a751d04c",
+      "sha256_after": "bf34e2c3a3e0868daf6867d8d84109b65a582447c8a4cd3693fdae52a751d04c",
+      "change": "byte-identical"
+    },
+    {
+      "source": "마스코트 디자인 스펙시트_v01/대키미mascot_design_spec_v2.pdf",
+      "destination": "성체 대키미&외지몽 디자인 자료/대키미/원본 분석/대키미_PDF관측시트_v00/대키미mascot_design_spec_v2.pdf",
+      "sha256_before": "9ff194436d68bdef2bc9dd8e5770b162fce3552046720bec7a0deb9487ac7e13",
+      "sha256_after": "9ff194436d68bdef2bc9dd8e5770b162fce3552046720bec7a0deb9487ac7e13",
+      "change": "byte-identical"
+    },
+    {
+      "source": "마스코트 디자인 스펙시트_v01/마스코트 디자인 스펙시트_v01.md",
+      "destination": "성체 대키미&외지몽 디자인 자료/공통 기준/성체_통합가이드_초기규격_v00/마스코트 디자인 스펙시트_v01.md",
+      "sha256_before": "07d09cfe6e95bc45f098eba566ba67b92424e6d97a833a508501dec65a12d212",
+      "sha256_after": "07d09cfe6e95bc45f098eba566ba67b92424e6d97a833a508501dec65a12d212",
+      "change": "byte-identical"
+    },
+    {
+      "source": "마스코트 디자인 스펙시트_v01/negative_prompt.md",
+      "destination": "성체 대키미&외지몽 디자인 자료/공통 기준/성체_통합가이드_초기규격_v00/negative_prompt.md",
+      "sha256_before": "81b5abdb69c52a4c9e90c7f35ae27ab8f6501ae4a18c0e270bac517a3cd37f0b",
+      "sha256_after": "81b5abdb69c52a4c9e90c7f35ae27ab8f6501ae4a18c0e270bac517a3cd37f0b",
+      "change": "byte-identical"
+    },
+    {
+      "source": "마스코트 디자인 스펙시트_v01/마스코트 디자인 스펙시트_v04.md",
+      "destination": "성체 대키미&외지몽 디자인 자료/공통 기준/성체_통합가이드_재현조정_검토_v03/마스코트 디자인 스펙시트_v04.md",
+      "sha256_before": "ac7789b8dfdddab3011909f8f172055ff69171a1b1db3d143c8f17e478e8db2b",
+      "sha256_after": "ac7789b8dfdddab3011909f8f172055ff69171a1b1db3d143c8f17e478e8db2b",
+      "change": "byte-identical"
+    },
+    {
+      "source": "마스코트 디자인 스펙시트_v01/README.md",
+      "destination": "성체 대키미&외지몽 디자인 자료/공통 기준/성체_통합가이드_초기규격_v00/README.md",
+      "sha256_before": "62aa7fbba6e073fb8ec93a0bc7a9bb016ac6731b4df9f2ab0e0287aff247b700",
+      "sha256_after": "62aa7fbba6e073fb8ec93a0bc7a9bb016ac6731b4df9f2ab0e0287aff247b700",
+      "change": "byte-identical"
+    },
+    {
+      "source": "마스코트 디자인 스펙시트_v01/마스코트 디자인 스펙시트_v03.md",
+      "destination": "성체 대키미&외지몽 디자인 자료/공통 기준/성체_통합가이드_재현규칙_v02/마스코트 디자인 스펙시트_v03.md",
+      "sha256_before": "fa839e0e23d9c28b826f2ed1d15dafe89509603e97b16fab43f8e06dde2c38f2",
+      "sha256_after": "fa839e0e23d9c28b826f2ed1d15dafe89509603e97b16fab43f8e06dde2c38f2",
+      "change": "byte-identical"
+    },
+    {
+      "source": "마스코트 디자인 스펙시트_v01/color_palette.md",
+      "destination": "성체 대키미&외지몽 디자인 자료/공통 기준/성체_통합가이드_초기규격_v00/color_palette.md",
+      "sha256_before": "0be6fbce9e06e65b30039ba8ffd566b4fc1a505a44aaddb97abe8a93860b4f7a",
+      "sha256_after": "0be6fbce9e06e65b30039ba8ffd566b4fc1a505a44aaddb97abe8a93860b4f7a",
+      "change": "byte-identical"
+    },
+    {
+      "source": "마스코트 디자인 스펙시트_v01/physical_dimensions.json",
+      "destination": "성체 대키미&외지몽 디자인 자료/공통 기준/성체_통합가이드_초기규격_v00/physical_dimensions.json",
+      "sha256_before": "aec916546e631e8ea4bb99e4b0e7c1bdf0832c1c414ecce1cbea1ff1782e4fb5",
+      "sha256_after": "aec916546e631e8ea4bb99e4b0e7c1bdf0832c1c414ecce1cbea1ff1782e4fb5",
+      "change": "byte-identical"
+    },
+    {
+      "source": "마스코트 디자인 스펙시트_v01/detail_color_samples.json",
+      "destination": "성체 대키미&외지몽 디자인 자료/공통 기준/성체_통합가이드_초기규격_v00/detail_color_samples.json",
+      "sha256_before": "ddf981346c35b324f69ac3254fb7e403d1ce0663b71bf34d0cce877ef7fc443c",
+      "sha256_after": "ddf981346c35b324f69ac3254fb7e403d1ce0663b71bf34d0cce877ef7fc443c",
+      "change": "byte-identical"
+    },
+    {
+      "source": "마스코트 디자인 스펙시트_v01/design_spec_daekimi.md",
+      "destination": "성체 대키미&외지몽 디자인 자료/공통 기준/성체_통합가이드_초기규격_v00/design_spec_daekimi.md",
+      "sha256_before": "0782c95fd9a1efad0f8711c16525c1bfc08433ef22234b30ae0f792d901fb75e",
+      "sha256_after": "0782c95fd9a1efad0f8711c16525c1bfc08433ef22234b30ae0f792d901fb75e",
+      "change": "byte-identical"
+    },
+    {
+      "source": "마스코트 디자인 스펙시트_v01/마스코트 디자인 스펙시트_v02.md",
+      "destination": "성체 대키미&외지몽 디자인 자료/공통 기준/성체_통합가이드_통합배포_v01/마스코트 디자인 스펙시트_v02.md",
+      "sha256_before": "e527624edb187f3ab95b5353bd32d63d9e0e4ffdbcaf0ad051a54e7e4571266d",
+      "sha256_after": "e60130b8d0d51e838ca095a194416b85aaa868ed3a757e0c41e6f79fd389a89f",
+      "change": "Markdown link paths only"
+    },
+    {
+      "source": "마스코트 디자인 스펙시트_v01/ai_prompt_guide.md",
+      "destination": "성체 대키미&외지몽 디자인 자료/공통 기준/성체_통합가이드_초기규격_v00/ai_prompt_guide.md",
+      "sha256_before": "fc9015659724095a4bb1f9deeeea7692f49dfc6d35475a8d73c2980575871c1d",
+      "sha256_after": "fc9015659724095a4bb1f9deeeea7692f49dfc6d35475a8d73c2980575871c1d",
+      "change": "byte-identical"
+    },
+    {
+      "source": "마스코트 디자인 스펙시트_v01/proportion_guide.md",
+      "destination": "성체 대키미&외지몽 디자인 자료/공통 기준/성체_통합가이드_초기규격_v00/proportion_guide.md",
+      "sha256_before": "2ae398547eb397d716811760cd1f00322266ccf1c6b285c6a04de090e4594e97",
+      "sha256_after": "2ae398547eb397d716811760cd1f00322266ccf1c6b285c6a04de090e4594e97",
+      "change": "byte-identical"
+    },
+    {
+      "source": "마스코트 디자인 스펙시트_v01/mascot_design_spec_v2.pdf",
+      "destination": "성체 대키미&외지몽 디자인 자료/공통 기준/성체_통합가이드_통합배포_v01/mascot_design_spec_v2.pdf",
+      "sha256_before": "be2d862f491cc32e677b62a34b5c80d3c8b42d6c5b583324477be5481dbc84cb",
+      "sha256_after": "be2d862f491cc32e677b62a34b5c80d3c8b42d6c5b583324477be5481dbc84cb",
+      "change": "byte-identical"
+    },
+    {
+      "source": "마스코트 디자인 스펙시트_v01/face_detail_guide.md",
+      "destination": "성체 대키미&외지몽 디자인 자료/공통 기준/성체_통합가이드_초기규격_v00/face_detail_guide.md",
+      "sha256_before": "ed2fb81cb086570d95da3642e1d3762f387c3ea73397ef229207bb0393c08faf",
+      "sha256_after": "ed2fb81cb086570d95da3642e1d3762f387c3ea73397ef229207bb0393c08faf",
+      "change": "byte-identical"
+    },
+    {
+      "source": "마스코트 디자인 스펙시트_v01/character_sheet.pdf",
+      "destination": "성체 대키미&외지몽 디자인 자료/대키미/원본 분석/대키미_PDF관측시트_v00/character_sheet.pdf",
+      "sha256_before": "9ff194436d68bdef2bc9dd8e5770b162fce3552046720bec7a0deb9487ac7e13",
+      "sha256_after": "9ff194436d68bdef2bc9dd8e5770b162fce3552046720bec7a0deb9487ac7e13",
+      "change": "byte-identical"
+    },
+    {
+      "source": "마스코트 디자인 스펙시트_v01/color_samples.json",
+      "destination": "성체 대키미&외지몽 디자인 자료/공통 기준/성체_통합가이드_초기규격_v00/color_samples.json",
+      "sha256_before": "7eb6816102b1b10317e96c5de91c0f3637f6fbe3c2e61460575dcb00dffad1bc",
+      "sha256_after": "7eb6816102b1b10317e96c5de91c0f3637f6fbe3c2e61460575dcb00dffad1bc",
+      "change": "byte-identical"
+    },
+    {
+      "source": "마스코트 디자인 스펙시트_v01/geometry_reference.json",
+      "destination": "성체 대키미&외지몽 디자인 자료/공통 기준/성체_통합가이드_초기규격_v00/geometry_reference.json",
+      "sha256_before": "7ce834c04f353178601b16d3ee112d7b404ff3b7412ac8ace56a45b66e245ff9",
+      "sha256_after": "7ce834c04f353178601b16d3ee112d7b404ff3b7412ac8ace56a45b66e245ff9",
+      "change": "byte-identical"
+    },
+    {
+      "source": "마스코트 디자인 스펙시트_v01/v04_재현_패키지/comparison_front_v04.txt",
+      "destination": "성체 대키미&외지몽 디자인 자료/공통 기준/성체_통합가이드_재현조정_검토_v03/prompts/comparison_front_v04.txt",
+      "sha256_before": "f69831bbb7a1aedbb6530cb13de181bed25d76c83ee5da75821e4af59c60f2a3",
+      "sha256_after": "f69831bbb7a1aedbb6530cb13de181bed25d76c83ee5da75821e4af59c60f2a3",
+      "change": "byte-identical"
+    },
+    {
+      "source": "마스코트 디자인 스펙시트_v01/v04_재현_패키지/mascot_reproduction_values_v04.json",
+      "destination": "성체 대키미&외지몽 디자인 자료/공통 기준/성체_통합가이드_재현조정_검토_v03/prompts/mascot_reproduction_values_v04.json",
+      "sha256_before": "c822d9cbf3895537c8582561bddeb09e3a350f8655c717a4bb478f06579a2e26",
+      "sha256_after": "c822d9cbf3895537c8582561bddeb09e3a350f8655c717a4bb478f06579a2e26",
+      "change": "byte-identical"
+    },
+    {
+      "source": "마스코트 디자인 스펙시트_v01/v04_재현_패키지/oejimong_front_v04.txt",
+      "destination": "성체 대키미&외지몽 디자인 자료/공통 기준/성체_통합가이드_재현조정_검토_v03/prompts/oejimong_front_v04.txt",
+      "sha256_before": "bcd93f26452256efbd7f325b3c7c7da18933e7f32e299efad1bfd6f73813842a",
+      "sha256_after": "bcd93f26452256efbd7f325b3c7c7da18933e7f32e299efad1bfd6f73813842a",
+      "change": "byte-identical"
+    },
+    {
+      "source": "마스코트 디자인 스펙시트_v01/v04_재현_패키지/daekimi_front_v04.txt",
+      "destination": "성체 대키미&외지몽 디자인 자료/공통 기준/성체_통합가이드_재현조정_검토_v03/prompts/daekimi_front_v04.txt",
+      "sha256_before": "d48cbd89206e9e73aaaae46f0628297013bab691aaa2f1f1f72f57ef95198eae",
+      "sha256_after": "d48cbd89206e9e73aaaae46f0628297013bab691aaa2f1f1f72f57ef95198eae",
+      "change": "byte-identical"
+    },
+    {
+      "source": "마스코트 디자인 스펙시트_v01/v03_고정_프롬프트/daekimi_front_v03.txt",
+      "destination": "성체 대키미&외지몽 디자인 자료/공통 기준/성체_통합가이드_재현규칙_v02/prompts/daekimi_front_v03.txt",
+      "sha256_before": "510593dfb3809fc21b35217d0865361ba8c4e6108380d67b50c365e863000815",
+      "sha256_after": "510593dfb3809fc21b35217d0865361ba8c4e6108380d67b50c365e863000815",
+      "change": "byte-identical"
+    },
+    {
+      "source": "마스코트 디자인 스펙시트_v01/v03_고정_프롬프트/oejimong_front_v03.txt",
+      "destination": "성체 대키미&외지몽 디자인 자료/공통 기준/성체_통합가이드_재현규칙_v02/prompts/oejimong_front_v03.txt",
+      "sha256_before": "09e4be5956c91213ce29572d744bfabb1a54a2c4a7bab6e4e17e18997bcd12a6",
+      "sha256_after": "09e4be5956c91213ce29572d744bfabb1a54a2c4a7bab6e4e17e18997bcd12a6",
+      "change": "byte-identical"
+    },
+    {
+      "source": "마스코트 디자인 스펙시트_v01/마스코트 디자인 스펙시트 _v02/oejimong_design_spec_from_pdf.md",
+      "destination": "성체 대키미&외지몽 디자인 자료/외지몽/원본 분석/외지몽_PDF관측시트_v00/oejimong_design_spec_from_pdf.md",
+      "sha256_before": "992517ce9ed9e5e82e55b2a9bcc2c8e5189bd55af566c788875749f43106c6ea",
+      "sha256_after": "992517ce9ed9e5e82e55b2a9bcc2c8e5189bd55af566c788875749f43106c6ea",
+      "change": "byte-identical"
+    },
+    {
+      "source": "마스코트 디자인 스펙시트_v01/마스코트 디자인 스펙시트 _v02/daekimi_design_spec_from_pdf.md",
+      "destination": "성체 대키미&외지몽 디자인 자료/대키미/원본 분석/대키미_PDF관측시트_v00/daekimi_design_spec_from_pdf.md",
+      "sha256_before": "7fc0e2f6572be381959bc8db7cbef8b50a1d65952324e2de6d6584d6a8738bfa",
+      "sha256_after": "7fc0e2f6572be381959bc8db7cbef8b50a1d65952324e2de6d6584d6a8738bfa",
+      "change": "byte-identical"
+    },
+    {
+      "source": "마스코트 디자인 스펙시트_v02/README.md",
+      "destination": "성체 대키미&외지몽 디자인 자료/공통 기준/두캐릭터_고정외형_배포기록_v00/README.md",
+      "sha256_before": "0ee1956d1ab757bddf5d6236d9e3d032f9d270c96580c29a6d4126baff6b09ee",
+      "sha256_after": "0e8445475d659ee461a7ddf173c004eaf94bc312c8f6377d66c436d371ad6c98",
+      "change": "Markdown link paths only"
+    },
+    {
+      "source": "마스코트 디자인 스펙시트_v02/reference_manifest.json",
+      "destination": "성체 대키미&외지몽 디자인 자료/공통 기준/두캐릭터_고정외형_배포기록_v00/reference_manifest.json",
+      "sha256_before": "b3e27daa801afdab778fc6d3af80f005a8ccaf62852ac1fd37bc11efe6fe9a1d",
+      "sha256_after": "b3e27daa801afdab778fc6d3af80f005a8ccaf62852ac1fd37bc11efe6fe9a1d",
+      "change": "byte-identical"
+    },
+    {
+      "source": "마스코트 디자인 스펙시트_v02/대키미 캐릭터 디자인측정시트_v03 검증이미지.png",
+      "destination": "성체 대키미&외지몽 디자인 자료/대키미/캐릭터 디자인/대키미_고정외형_v00/대키미 캐릭터 디자인측정시트_v03 검증이미지.png",
+      "sha256_before": "a88b1c8379955fee86326cb425ca907c430b002a03ffe4308766fbc23ed356f0",
+      "sha256_after": "a88b1c8379955fee86326cb425ca907c430b002a03ffe4308766fbc23ed356f0",
+      "change": "byte-identical"
+    },
+    {
+      "source": "마스코트 디자인 스펙시트_v02/oejimong_design_spec_v03.md",
+      "destination": "성체 대키미&외지몽 디자인 자료/외지몽/캐릭터 디자인/외지몽_잠정고정외형_v00/oejimong_design_spec_v03.md",
+      "sha256_before": "7176b1d740e7979f0654907e93ceb7a4ff588ee18b58168201b6942ec4119fe3",
+      "sha256_after": "7176b1d740e7979f0654907e93ceb7a4ff588ee18b58168201b6942ec4119fe3",
+      "change": "byte-identical"
+    },
+    {
+      "source": "마스코트 디자인 스펙시트_v02/외지몽 캐릭터 디자인 측정시트_v03 검증이미지.png",
+      "destination": "성체 대키미&외지몽 디자인 자료/외지몽/캐릭터 디자인/외지몽_잠정고정외형_v00/외지몽 캐릭터 디자인 측정시트_v03 검증이미지.png",
+      "sha256_before": "711ea86076beb2c7db3c6e93cb91523175f70d47a2d78d9f20b2418ffa4a76cb",
+      "sha256_after": "711ea86076beb2c7db3c6e93cb91523175f70d47a2d78d9f20b2418ffa4a76cb",
+      "change": "byte-identical"
+    },
+    {
+      "source": "마스코트 디자인 스펙시트_v02/daekimi_design_spec_v03.md",
+      "destination": "성체 대키미&외지몽 디자인 자료/대키미/캐릭터 디자인/대키미_고정외형_v00/daekimi_design_spec_v03.md",
+      "sha256_before": "a1048b96c86ca74b86fd090a65f87f2e256864f93354e0f889f13a1484c54691",
+      "sha256_after": "a1048b96c86ca74b86fd090a65f87f2e256864f93354e0f889f13a1484c54691",
+      "change": "byte-identical"
+    },
+    {
+      "source": "마스코트 디자인 스펙시트_v02/data/oejimong_fixed_reference_measurements.json",
+      "destination": "성체 대키미&외지몽 디자인 자료/외지몽/캐릭터 디자인/외지몽_잠정고정외형_v00/data/oejimong_fixed_reference_measurements.json",
+      "sha256_before": "31cf5b003f9c28b5cb96df74fb2dcd485b4b47ee6fd70f70511f5e068da9a032",
+      "sha256_after": "31cf5b003f9c28b5cb96df74fb2dcd485b4b47ee6fd70f70511f5e068da9a032",
+      "change": "byte-identical"
+    },
+    {
+      "source": "마스코트 디자인 스펙시트_v02/data/daekimi_fixed_reference_measurements.json",
+      "destination": "성체 대키미&외지몽 디자인 자료/대키미/캐릭터 디자인/대키미_고정외형_v00/data/daekimi_fixed_reference_measurements.json",
+      "sha256_before": "77990788891bb1bd86a042c01d443107304750fd3569e77c81940b3fb0d583fd",
+      "sha256_after": "77990788891bb1bd86a042c01d443107304750fd3569e77c81940b3fb0d583fd",
+      "change": "byte-identical"
+    },
+    {
+      "source": "마스코트 디자인 스펙시트_v02/reference/oejimong_original_board.png",
+      "destination": "성체 대키미&외지몽 디자인 자료/외지몽/캐릭터 디자인/외지몽_잠정고정외형_v00/reference/oejimong_original_board.png",
+      "sha256_before": "5a55a135f95318872d4ded2d38434d599c9d6ff61890a953be481e454e7b5927",
+      "sha256_after": "5a55a135f95318872d4ded2d38434d599c9d6ff61890a953be481e454e7b5927",
+      "change": "byte-identical"
+    },
+    {
+      "source": "마스코트 디자인 스펙시트_v02/reference/daekimi_fixed_front.png",
+      "destination": "성체 대키미&외지몽 디자인 자료/대키미/캐릭터 디자인/대키미_고정외형_v00/reference/daekimi_fixed_front.png",
+      "sha256_before": "3a8477cfae72e51d0c76fb8734076c84c21539fe3d7687e91bba055ca2812feb",
+      "sha256_after": "3a8477cfae72e51d0c76fb8734076c84c21539fe3d7687e91bba055ca2812feb",
+      "change": "byte-identical"
+    },
+    {
+      "source": "마스코트 디자인 스펙시트_v02/reference/daekimi_original_board.png",
+      "destination": "성체 대키미&외지몽 디자인 자료/대키미/캐릭터 디자인/대키미_고정외형_v00/reference/daekimi_original_board.png",
+      "sha256_before": "99f9eaf0e27627e19c1fd6cfc3307c97f4e5158b82c3111d95cd62a0a4fa3f32",
+      "sha256_after": "99f9eaf0e27627e19c1fd6cfc3307c97f4e5158b82c3111d95cd62a0a4fa3f32",
+      "change": "byte-identical"
+    },
+    {
+      "source": "마스코트 디자인 스펙시트_v02/reference/oejimong_fixed_comparison.png",
+      "destination": "성체 대키미&외지몽 디자인 자료/외지몽/캐릭터 디자인/외지몽_잠정고정외형_v00/reference/oejimong_fixed_comparison.png",
+      "sha256_before": "e3c3211275cacd02a0fed4559e6da136a3c13d9fa9b4741dfe860992fa937269",
+      "sha256_after": "e3c3211275cacd02a0fed4559e6da136a3c13d9fa9b4741dfe860992fa937269",
+      "change": "byte-identical"
+    },
+    {
+      "source": "마스코트 디자인 스펙시트_v03/.DS_Store",
+      "destination": "_정리관리/Finder메타데이터/마스코트 디자인 스펙시트_v03/.DS_Store",
+      "sha256_before": "e8e21780b0a2f7bb78b92815632e78e03e35e38fe27f6722e6ab51167155a4a6",
+      "sha256_after": "e8e21780b0a2f7bb78b92815632e78e03e35e38fe27f6722e6ab51167155a4a6",
+      "change": "byte-identical"
+    },
+    {
+      "source": "마스코트 디자인 스펙시트_v03/외지몽/초록 외계 강아지 4면 턴어라운드.png",
+      "destination": "성체 대키미&외지몽 디자인 자료/외지몽/캐릭터 디자인/외지몽_배무늬_꼬리_턴어라운드_v01/초록 외계 강아지 4면 턴어라운드.png",
+      "sha256_before": "b49280ac3773fa26ae6373f705cc5919c264612184ab95045210719ae0532c44",
+      "sha256_after": "b49280ac3773fa26ae6373f705cc5919c264612184ab95045210719ae0532c44",
+      "change": "byte-identical"
+    },
+    {
+      "source": "마스코트 디자인 스펙시트_v03/외지몽/둥근 끝의 오에지몽.png",
+      "destination": "성체 대키미&외지몽 디자인 자료/외지몽/캐릭터 디자인/외지몽_배무늬_꼬리_턴어라운드_v01/둥근 끝의 오에지몽.png",
+      "sha256_before": "56035cebd25d1e1c51e75805e367fe8b033418f666f5aaeefadbbf49767691f8",
+      "sha256_after": "56035cebd25d1e1c51e75805e367fe8b033418f666f5aaeefadbbf49767691f8",
+      "change": "byte-identical"
+    },
+    {
+      "source": "마스코트 디자인 스펙시트_v03/외지몽/디자인_스펙시트_v04.md",
+      "destination": "성체 대키미&외지몽 디자인 자료/외지몽/캐릭터 디자인/외지몽_배무늬_꼬리_턴어라운드_v01/디자인_스펙시트_v04.md",
+      "sha256_before": "a9487f568f55a35961c21754874c192b158d6247cb264878aa41758fc0f60e75",
+      "sha256_after": "a9487f568f55a35961c21754874c192b158d6247cb264878aa41758fc0f60e75",
+      "change": "byte-identical"
+    },
+    {
+      "source": "마스코트 디자인 스펙시트_v03/대키미/대키미 마스코트 4방향 턴어라운드 시트.png",
+      "destination": "성체 대키미&외지몽 디자인 자료/대키미/캐릭터 디자인/대키미_꼬리리본_턴어라운드_v01/대키미 마스코트 4방향 턴어라운드 시트.png",
+      "sha256_before": "42b345d6c5206cf83a73718e337201ed0909d47ae272237682c5430565b10861",
+      "sha256_after": "42b345d6c5206cf83a73718e337201ed0909d47ae272237682c5430565b10861",
+      "change": "byte-identical"
+    },
+    {
+      "source": "마스코트 디자인 스펙시트_v03/대키미/파란 마스코트의 꼬리 리본.png",
+      "destination": "성체 대키미&외지몽 디자인 자료/대키미/캐릭터 디자인/대키미_꼬리리본_턴어라운드_v01/파란 마스코트의 꼬리 리본.png",
+      "sha256_before": "23a7f35ef3c3dd38d491bf06f7238d91124cb8e13ef1adfe2c9cccc402ee3144",
+      "sha256_after": "23a7f35ef3c3dd38d491bf06f7238d91124cb8e13ef1adfe2c9cccc402ee3144",
+      "change": "byte-identical"
+    },
+    {
+      "source": "마스코트 디자인 스펙시트_v03/대키미/디자인_스펙시트_v04.md",
+      "destination": "성체 대키미&외지몽 디자인 자료/대키미/캐릭터 디자인/대키미_꼬리리본_턴어라운드_v01/디자인_스펙시트_v04.md",
+      "sha256_before": "05ff90c7f1d50aba0e71cec060745184a4a792438ac2ab2de5b9236b1418f80a",
+      "sha256_after": "05ff90c7f1d50aba0e71cec060745184a4a792438ac2ab2de5b9236b1418f80a",
+      "change": "byte-identical"
+    },
+    {
+      "source": "마스코트 디자인 스펙시트_v04/.DS_Store",
+      "destination": "_정리관리/Finder메타데이터/마스코트 디자인 스펙시트_v04/.DS_Store",
+      "sha256_before": "05671f4d099403903517f58a917e5d38f473a26d998b8bee896ffed30b5301a9",
+      "sha256_after": "05671f4d099403903517f58a917e5d38f473a26d998b8bee896ffed30b5301a9",
+      "change": "byte-identical"
+    },
+    {
+      "source": "마스코트 디자인 스펙시트_v04/외지몽/외지몽_마스코트_레퍼런스_v04.png",
+      "destination": "성체 대키미&외지몽 디자인 자료/외지몽/캐릭터 디자인/외지몽_패드_측면폭_통합_v02/외지몽_마스코트_레퍼런스_v04.png",
+      "sha256_before": "75cbcdf0701698cf9c1d58ef8a2972fbfa6b6e00badc2d64638c02e1ce862ba3",
+      "sha256_after": "75cbcdf0701698cf9c1d58ef8a2972fbfa6b6e00badc2d64638c02e1ce862ba3",
+      "change": "byte-identical"
+    },
+    {
+      "source": "마스코트 디자인 스펙시트_v04/외지몽/.DS_Store",
+      "destination": "_정리관리/Finder메타데이터/마스코트 디자인 스펙시트_v04/외지몽/.DS_Store",
+      "sha256_before": "ae5c0f2594f34eae47dfc14e032cbea55522dfca9f30e95ebeac61acff85e951",
+      "sha256_after": "ae5c0f2594f34eae47dfc14e032cbea55522dfca9f30e95ebeac61acff85e951",
+      "change": "byte-identical"
+    },
+    {
+      "source": "마스코트 디자인 스펙시트_v04/외지몽/외지몽_마스코트_레퍼런스_v04.json",
+      "destination": "성체 대키미&외지몽 디자인 자료/외지몽/캐릭터 디자인/외지몽_패드_측면폭_통합_v02/외지몽_마스코트_레퍼런스_v04.json",
+      "sha256_before": "73d632f468790ed264ab6a07ec63fe11071643e1869526b2b1105352064d949d",
+      "sha256_after": "73d632f468790ed264ab6a07ec63fe11071643e1869526b2b1105352064d949d",
+      "change": "byte-identical"
+    },
+    {
+      "source": "마스코트 디자인 스펙시트_v04/외지몽/외지몽_마스코트_디자인_스펙시트_v04.md",
+      "destination": "성체 대키미&외지몽 디자인 자료/외지몽/캐릭터 디자인/외지몽_패드_측면폭_통합_v02/외지몽_마스코트_디자인_스펙시트_v04.md",
+      "sha256_before": "fe6c09dd03ad30e440d9687b57a2a1d7a733a276ab1b6cdd2dcc409f8b776377",
+      "sha256_after": "fe6c09dd03ad30e440d9687b57a2a1d7a733a276ab1b6cdd2dcc409f8b776377",
+      "change": "byte-identical"
+    },
+    {
+      "source": "마스코트 디자인 스펙시트_v04/대키미/.DS_Store",
+      "destination": "_정리관리/Finder메타데이터/마스코트 디자인 스펙시트_v04/대키미/.DS_Store",
+      "sha256_before": "bf7a00d1ec510072438a7dc19b7cd46454262ef050c8c1b656edef6c06609f32",
+      "sha256_after": "bf7a00d1ec510072438a7dc19b7cd46454262ef050c8c1b656edef6c06609f32",
+      "change": "byte-identical"
+    },
+    {
+      "source": "마스코트 디자인 스펙시트_v04/대키미/마스코트_디자인_스펙시트_v04.md",
+      "destination": "성체 대키미&외지몽 디자인 자료/대키미/젤리패드/대키미_젤리패드_통합_v00/마스코트_디자인_스펙시트_v04.md",
+      "sha256_before": "e56c70c23ed23d1f8fe61c6bd008453e04cfe0c61638358fea73aaf224bff595",
+      "sha256_after": "e56c70c23ed23d1f8fe61c6bd008453e04cfe0c61638358fea73aaf224bff595",
+      "change": "byte-identical"
+    },
+    {
+      "source": "마스코트 디자인 스펙시트_v04/대키미/대키미_젤리패드_스펙시트_v04/.DS_Store",
+      "destination": "_정리관리/Finder메타데이터/마스코트 디자인 스펙시트_v04/대키미/대키미_젤리패드_스펙시트_v04/.DS_Store",
+      "sha256_before": "f48c598e29743d07f5aa35856a4662f9cbf4f861d43ec5e7ed302e93ec6f793b",
+      "sha256_after": "f48c598e29743d07f5aa35856a4662f9cbf4f861d43ec5e7ed302e93ec6f793b",
+      "change": "byte-identical"
+    },
+    {
+      "source": "마스코트 디자인 스펙시트_v04/대키미/대키미_젤리패드_스펙시트_v04/마스코트_디자인_스펙시트_v04.md",
+      "destination": "성체 대키미&외지몽 디자인 자료/대키미/젤리패드/대키미_젤리패드_통합_v00/대키미_젤리패드_스펙시트_v04/마스코트_디자인_스펙시트_v04.md",
+      "sha256_before": "e56c70c23ed23d1f8fe61c6bd008453e04cfe0c61638358fea73aaf224bff595",
+      "sha256_after": "e56c70c23ed23d1f8fe61c6bd008453e04cfe0c61638358fea73aaf224bff595",
+      "change": "byte-identical"
+    },
+    {
+      "source": "마스코트 디자인 스펙시트_v04/대키미/대키미_젤리패드_스펙시트_v04/reference/.DS_Store",
+      "destination": "_정리관리/Finder메타데이터/마스코트 디자인 스펙시트_v04/대키미/대키미_젤리패드_스펙시트_v04/reference/.DS_Store",
+      "sha256_before": "6e7f5846a401a223337ed4e1f59e72ee7e52b854ecce2b733644f7817099d13f",
+      "sha256_after": "6e7f5846a401a223337ed4e1f59e72ee7e52b854ecce2b733644f7817099d13f",
+      "change": "byte-identical"
+    },
+    {
+      "source": "마스코트 디자인 스펙시트_v04/대키미/대키미_젤리패드_스펙시트_v04/reference/daekimi_fixed_front.png",
+      "destination": "성체 대키미&외지몽 디자인 자료/대키미/젤리패드/대키미_젤리패드_통합_v00/대키미_젤리패드_스펙시트_v04/reference/daekimi_fixed_front.png",
+      "sha256_before": "2b2b710df805a4542e882ed3588710eca64f8b1d8f144483894c64500a590448",
+      "sha256_after": "2b2b710df805a4542e882ed3588710eca64f8b1d8f144483894c64500a590448",
+      "change": "byte-identical"
+    },
+    {
+      "source": "마스코트 디자인 스펙시트_v04/대키미/대키미_젤리패드_스펙시트_v04/reference/daekimi_pads_detail_only_v04.png",
+      "destination": "성체 대키미&외지몽 디자인 자료/대키미/젤리패드/대키미_젤리패드_통합_v00/대키미_젤리패드_스펙시트_v04/reference/daekimi_pads_detail_only_v04.png",
+      "sha256_before": "78e22a38233040a3cb42bb0dbd20580171bda33b387068f0d6ed3a22e7fa5a93",
+      "sha256_after": "78e22a38233040a3cb42bb0dbd20580171bda33b387068f0d6ed3a22e7fa5a93",
+      "change": "byte-identical"
+    },
+    {
+      "source": "마스코트 디자인 스펙시트_v04/외지몽/reference/oejimong_original_board.png",
+      "destination": "성체 대키미&외지몽 디자인 자료/외지몽/캐릭터 디자인/외지몽_패드_측면폭_통합_v02/reference/oejimong_original_board.png",
+      "sha256_before": "5a55a135f95318872d4ded2d38434d599c9d6ff61890a953be481e454e7b5927",
+      "sha256_after": "5a55a135f95318872d4ded2d38434d599c9d6ff61890a953be481e454e7b5927",
+      "change": "byte-identical"
+    },
+    {
+      "source": "마스코트 디자인 스펙시트_v04/외지몽/reference/oejimong_fixed_front_v03.png",
+      "destination": "성체 대키미&외지몽 디자인 자료/외지몽/캐릭터 디자인/외지몽_패드_측면폭_통합_v02/reference/oejimong_fixed_front_v03.png",
+      "sha256_before": "56035cebd25d1e1c51e75805e367fe8b033418f666f5aaeefadbbf49767691f8",
+      "sha256_after": "56035cebd25d1e1c51e75805e367fe8b033418f666f5aaeefadbbf49767691f8",
+      "change": "byte-identical"
+    },
+    {
+      "source": "마스코트 디자인 스펙시트_v04/외지몽/reference/reference_manifest.json",
+      "destination": "성체 대키미&외지몽 디자인 자료/외지몽/캐릭터 디자인/외지몽_패드_측면폭_통합_v02/reference/reference_manifest.json",
+      "sha256_before": "eee5cb1192df847540b301f2ef8f98daf10595fbc5feda99a2d8af4af11ae119",
+      "sha256_after": "eee5cb1192df847540b301f2ef8f98daf10595fbc5feda99a2d8af4af11ae119",
+      "change": "byte-identical"
+    },
+    {
+      "source": "마스코트 디자인 스펙시트_v04/외지몽/reference/oejimong_approved_pads_pose_v04.png",
+      "destination": "성체 대키미&외지몽 디자인 자료/외지몽/캐릭터 디자인/외지몽_패드_측면폭_통합_v02/reference/oejimong_approved_pads_pose_v04.png",
+      "sha256_before": "d616ab26120284946eaf22e7a665190ba219fe921e7ad6f84a94f304f254a90c",
+      "sha256_after": "d616ab26120284946eaf22e7a665190ba219fe921e7ad6f84a94f304f254a90c",
+      "change": "byte-identical"
+    },
+    {
+      "source": "마스코트 디자인 스펙시트_v04/외지몽/reference/oejimong_approved_side_width_v04.png",
+      "destination": "성체 대키미&외지몽 디자인 자료/외지몽/캐릭터 디자인/외지몽_패드_측면폭_통합_v02/reference/oejimong_approved_side_width_v04.png",
+      "sha256_before": "e2fd85d4d1b533d13cda82c0d3cc51d96f6fff87b566d48e985d4fb3e844fe75",
+      "sha256_after": "e2fd85d4d1b533d13cda82c0d3cc51d96f6fff87b566d48e985d4fb3e844fe75",
+      "change": "byte-identical"
+    },
+    {
+      "source": "마스코트 디자인 스펙시트_v04/외지몽/reference/oejimong_fixed_comparison_v03.png",
+      "destination": "성체 대키미&외지몽 디자인 자료/외지몽/캐릭터 디자인/외지몽_패드_측면폭_통합_v02/reference/oejimong_fixed_comparison_v03.png",
+      "sha256_before": "e3c3211275cacd02a0fed4559e6da136a3c13d9fa9b4741dfe860992fa937269",
+      "sha256_after": "e3c3211275cacd02a0fed4559e6da136a3c13d9fa9b4741dfe860992fa937269",
+      "change": "byte-identical"
+    },
+    {
+      "source": "마스코트 디자인 스펙시트_v04/외지몽/reference/oejimong_approved_front_v04.png",
+      "destination": "성체 대키미&외지몽 디자인 자료/외지몽/캐릭터 디자인/외지몽_패드_측면폭_통합_v02/reference/oejimong_approved_front_v04.png",
+      "sha256_before": "56035cebd25d1e1c51e75805e367fe8b033418f666f5aaeefadbbf49767691f8",
+      "sha256_after": "56035cebd25d1e1c51e75805e367fe8b033418f666f5aaeefadbbf49767691f8",
+      "change": "byte-identical"
+    }
+  ],
+  "link_path_changes": [
+    {
+      "file": "성체 대키미&외지몽 디자인 자료/공통 기준/성체_통합가이드_통합배포_v01/마스코트 디자인 스펙시트_v02.md",
+      "old_link": "../../character/대키미 캐릭터 설정보드.png",
+      "new_link": "../../../../character/%E1%84%83%E1%85%A2%E1%84%8F%E1%85%B5%E1%84%86%E1%85%B5%20%E1%84%8F%E1%85%A2%E1%84%85%E1%85%B5%E1%86%A8%E1%84%90%E1%85%A5%20%E1%84%89%E1%85%A5%E1%86%AF%E1%84%8C%E1%85%A5%E1%86%BC%E1%84%87%E1%85%A9%E1%84%83%E1%85%B3.png"
+    },
+    {
+      "file": "성체 대키미&외지몽 디자인 자료/공통 기준/성체_통합가이드_통합배포_v01/마스코트 디자인 스펙시트_v02.md",
+      "old_link": "../../character/외지몽 캐릭터 설정보드.png",
+      "new_link": "../../../../character/%E1%84%8B%E1%85%AC%E1%84%8C%E1%85%B5%E1%84%86%E1%85%A9%E1%86%BC%20%E1%84%8F%E1%85%A2%E1%84%85%E1%85%B5%E1%86%A8%E1%84%90%E1%85%A5%20%E1%84%89%E1%85%A5%E1%86%AF%E1%84%8C%E1%85%A5%E1%86%BC%E1%84%87%E1%85%A9%E1%84%83%E1%85%B3.png"
+    },
+    {
+      "file": "성체 대키미&외지몽 디자인 자료/공통 기준/두캐릭터_고정외형_배포기록_v00/README.md",
+      "old_link": "daekimi_design_spec_v03.md",
+      "new_link": "../../%EB%8C%80%ED%82%A4%EB%AF%B8/%EC%BA%90%EB%A6%AD%ED%84%B0%20%EB%94%94%EC%9E%90%EC%9D%B8/%EB%8C%80%ED%82%A4%EB%AF%B8_%EA%B3%A0%EC%A0%95%EC%99%B8%ED%98%95_v00/daekimi_design_spec_v03.md"
+    },
+    {
+      "file": "성체 대키미&외지몽 디자인 자료/공통 기준/두캐릭터_고정외형_배포기록_v00/README.md",
+      "old_link": "oejimong_design_spec_v03.md",
+      "new_link": "../../%EC%99%B8%EC%A7%80%EB%AA%BD/%EC%BA%90%EB%A6%AD%ED%84%B0%20%EB%94%94%EC%9E%90%EC%9D%B8/%EC%99%B8%EC%A7%80%EB%AA%BD_%EC%9E%A0%EC%A0%95%EA%B3%A0%EC%A0%95%EC%99%B8%ED%98%95_v00/oejimong_design_spec_v03.md"
+    }
+  ],
+  "preexisting_unresolved_links": [
+    {
+      "document": "마스코트 디자인 스펙시트_v01/마스코트 디자인 스펙시트_v01.md",
+      "link": "mascot_design_spec_v1.md"
+    },
+    {
+      "document": "마스코트 디자인 스펙시트_v01/마스코트 디자인 스펙시트_v04.md",
+      "link": "../character/대키미 캐릭터 설정보드.png"
+    },
+    {
+      "document": "마스코트 디자인 스펙시트_v01/마스코트 디자인 스펙시트_v04.md",
+      "link": "../character/외지몽 캐릭터 설정보드.png"
+    },
+    {
+      "document": "마스코트 디자인 스펙시트_v01/README.md",
+      "link": "mascot_design_spec_v1.md"
+    },
+    {
+      "document": "마스코트 디자인 스펙시트_v01/마스코트 디자인 스펙시트_v03.md",
+      "link": "../character/대키미 캐릭터 설정보드.png"
+    },
+    {
+      "document": "마스코트 디자인 스펙시트_v01/마스코트 디자인 스펙시트_v03.md",
+      "link": "../character/외지몽 캐릭터 설정보드.png"
+    },
+    {
+      "document": "마스코트 디자인 스펙시트_v01/마스코트 디자인 스펙시트 _v02/daekimi_design_spec_from_pdf.md",
+      "link": "measurement_viewer.html"
+    },
+    {
+      "document": "마스코트 디자인 스펙시트_v01/마스코트 디자인 스펙시트 _v02/daekimi_design_spec_from_pdf.md",
+      "link": "measurement_viewer.html"
+    },
+    {
+      "document": "마스코트 디자인 스펙시트_v01/마스코트 디자인 스펙시트 _v02/daekimi_design_spec_from_pdf.md",
+      "link": "measurement_viewer.html"
+    },
+    {
+      "document": "마스코트 디자인 스펙시트_v01/마스코트 디자인 스펙시트 _v02/daekimi_design_spec_from_pdf.md",
+      "link": "measurement_viewer.html"
+    },
+    {
+      "document": "마스코트 디자인 스펙시트_v01/마스코트 디자인 스펙시트 _v02/daekimi_design_spec_from_pdf.md",
+      "link": "measurement_viewer.html"
+    },
+    {
+      "document": "마스코트 디자인 스펙시트_v01/마스코트 디자인 스펙시트 _v02/daekimi_design_spec_from_pdf.md",
+      "link": "measurement_viewer.html"
+    },
+    {
+      "document": "마스코트 디자인 스펙시트_v01/마스코트 디자인 스펙시트 _v02/daekimi_design_spec_from_pdf.md",
+      "link": "measurement_viewer.html"
+    },
+    {
+      "document": "마스코트 디자인 스펙시트_v01/마스코트 디자인 스펙시트 _v02/daekimi_design_spec_from_pdf.md",
+      "link": "measurement_viewer.html"
+    },
+    {
+      "document": "마스코트 디자인 스펙시트_v01/마스코트 디자인 스펙시트 _v02/daekimi_design_spec_from_pdf.md",
+      "link": "measurement_viewer.html"
+    },
+    {
+      "document": "마스코트 디자인 스펙시트_v01/마스코트 디자인 스펙시트 _v02/daekimi_design_spec_from_pdf.md",
+      "link": "measurement_viewer.html"
+    },
+    {
+      "document": "마스코트 디자인 스펙시트_v01/마스코트 디자인 스펙시트 _v02/daekimi_design_spec_from_pdf.md",
+      "link": "measurement_viewer.html"
+    },
+    {
+      "document": "마스코트 디자인 스펙시트_v01/마스코트 디자인 스펙시트 _v02/daekimi_design_spec_from_pdf.md",
+      "link": "measurement_viewer.html"
+    },
+    {
+      "document": "마스코트 디자인 스펙시트_v01/마스코트 디자인 스펙시트 _v02/daekimi_design_spec_from_pdf.md",
+      "link": "reference/original_board.png"
+    },
+    {
+      "document": "마스코트 디자인 스펙시트_v03/외지몽/디자인_스펙시트_v04.md",
+      "link": "reference/oejimong_approved_front_v04.png"
+    },
+    {
+      "document": "마스코트 디자인 스펙시트_v03/외지몽/디자인_스펙시트_v04.md",
+      "link": "reference/oejimong_fixed_comparison_v03.png"
+    },
+    {
+      "document": "마스코트 디자인 스펙시트_v03/대키미/디자인_스펙시트_v04.md",
+      "link": "reference/daekimi_ribbon_approved_v04.png"
+    },
+    {
+      "document": "마스코트 디자인 스펙시트_v03/대키미/디자인_스펙시트_v04.md",
+      "link": "reference/daekimi_fixed_front.png"
+    },
+    {
+      "document": "마스코트 디자인 스펙시트_v04/대키미/마스코트_디자인_스펙시트_v04.md",
+      "link": "reference/daekimi_ribbon_approved_v04.png"
+    },
+    {
+      "document": "마스코트 디자인 스펙시트_v04/대키미/마스코트_디자인_스펙시트_v04.md",
+      "link": "reference/daekimi_fixed_front.png"
+    },
+    {
+      "document": "마스코트 디자인 스펙시트_v04/대키미/마스코트_디자인_스펙시트_v04.md",
+      "link": "reference/daekimi_pads_detail_only_v04.png"
+    },
+    {
+      "document": "마스코트 디자인 스펙시트_v04/대키미/대키미_젤리패드_스펙시트_v04/마스코트_디자인_스펙시트_v04.md",
+      "link": "reference/daekimi_ribbon_approved_v04.png"
+    }
+  ]
+}

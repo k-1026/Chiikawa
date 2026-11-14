@@ -1,0 +1,75 @@
+{
+  "status": "generated validation candidate, not approved identical reproduction",
+  "method": "built-in image_gen; references: attached PDF page1, page5 and embedded original board",
+  "image_size": [
+    1199,
+    1312
+  ],
+  "green_mask_bbox": [
+    145,
+    91,
+    1045,
+    1152
+  ],
+  "green_mask_height_px": 1061,
+  "eye_threshold": "max RGB <100, largest two dark components in facial band; projected mask approximate",
+  "eye_comparison": [
+    {
+      "eye": "screen_left",
+      "bbox_xyxy_exclusive": [
+        312,
+        457,
+        515,
+        668
+      ],
+      "generated_size_px": [
+        203,
+        211
+      ],
+      "generated_size_u": [
+        19.132893496701225,
+        19.886899151743638
+      ],
+      "pdf_target_size_u": [
+        19.047619047619047,
+        20.476190476190474
+      ],
+      "width_relative_deviation_percent": 0.44769085768143757,
+      "height_relative_deviation_percent": -2.877934375205482
+    },
+    {
+      "eye": "screen_right",
+      "bbox_xyxy_exclusive": [
+        670,
+        465,
+        876,
+        677
+      ],
+      "generated_size_px": [
+        206,
+        212
+      ],
+      "generated_size_u": [
+        19.415645617342133,
+        19.98114985862394
+      ],
+      "pdf_target_size_u": [
+        19.523809523809526,
+        20.0
+      ],
+      "width_relative_deviation_percent": -0.554010252637871,
+      "height_relative_deviation_percent": -0.09425070688030557
+    }
+  ],
+  "visual_checks": {
+    "front_full_body": true,
+    "two_antennae": true,
+    "three_intended_highlights_per_eye": true,
+    "small_highlights_dimmer_than_large_star": true,
+    "cream_muzzle": true,
+    "no_cheek_blush": true,
+    "neutral_hands_no_forced_thumb": true,
+    "light_gap_between_legs": true
+  },
+  "remaining_review": "Reference identity, ear silhouette, exact curvature, material and individual shade values still require source-side visual comparison; numeric input is not proof of exact reproduction."
+}

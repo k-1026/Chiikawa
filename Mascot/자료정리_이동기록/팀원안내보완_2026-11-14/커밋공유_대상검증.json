@@ -1,0 +1,19 @@
+{
+  "scope": "Mascot newly organized materials and byte-identical moves only",
+  "new_files_before_this_record": 732,
+  "byte_identical_renames": 178,
+  "excluded_modified_paths": [
+    ".DS_Store",
+    "Mascot/Brand logo/README.md",
+    "Mascot/Brand logo/01_확정_로고/대구_얼라들_로고_디자인시트_v1.md"
+  ],
+  "unmatched_missing_reference_not_deleted_in_commit": [
+    {
+      "old_path": "마스코트 디자인 스펙시트/마스코트 디자인 스펙시트_v04/대키미/대키미_젤리패드_스펙시트_v04/reference/daekimi_ribbon_approved_v04.png",
+      "same_content_current_paths": [],
+      "sha256": "a4fb2c15f59b173965ed5367522333357af599962a58f7ff3694748d34b7150c"
+    }
+  ],
+  "verification": "Existing 1009 source files preserved, new guide links valid. Whitespace warnings in preserved original material/PDF not auto-fixed.",
+  "git_history_authoritative_for_commit_push": true
+}

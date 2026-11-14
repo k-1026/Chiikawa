@@ -1,0 +1,679 @@
+{
+  "date": "2026-11-13",
+  "version": "topic-character-v13",
+  "canonical_front": "reference/01_FRONT.png",
+  "size_px": [
+    1536,
+    1024
+  ],
+  "setting_height_cm": 53,
+  "whole_height_y_px": [
+    94,
+    947
+  ],
+  "height_px": 853,
+  "method": "수동 2D 투영 경계 판독; 머리/몸/색은 이미지 관측 근사, 정밀3D/재단치수 아님",
+  "uncertainty_px": "일반 경계 약±5~10px; 홍조·가려진 몸통/관절·꼬리 뿌리는 더 큼",
+  "seated_estimate": {
+    "front_head_width_px": 562,
+    "seated_head_width_px_approx": 562,
+    "top_floor_px": [
+      97,
+      943
+    ],
+    "height_cm_estimate": 52.57,
+    "status": "같은 머리 폭으로 맞춘 특정 앉은 샘플의 투영 환산, 일반 관절 모델 치수 아님"
+  },
+  "measurements": [
+    {
+      "id": "head",
+      "label": "머리 본체 — 귀·안테나·앞머리 제외",
+      "bbox_xyxy_px": [
+        486,
+        221,
+        1048,
+        668
+      ],
+      "size_px": [
+        562,
+        447
+      ],
+      "size_H100": [
+        65.89,
+        52.4
+      ],
+      "size_cm_at_setting_53": [
+        34.92,
+        27.77
+      ],
+      "center_head_uv": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "id": "head_ears",
+      "label": "귀 포함 머리 외곽",
+      "bbox_xyxy_px": [
+        379,
+        221,
+        1156,
+        668
+      ],
+      "size_px": [
+        777,
+        447
+      ],
+      "size_H100": [
+        91.09,
+        52.4
+      ],
+      "size_cm_at_setting_53": [
+        48.28,
+        27.77
+      ],
+      "center_head_uv": [
+        0.501,
+        0.5
+      ]
+    },
+    {
+      "id": "torso",
+      "label": "몸통 — 팔 제외, 일부 가림",
+      "bbox_xyxy_px": [
+        616,
+        666,
+        915,
+        902
+      ],
+      "size_px": [
+        299,
+        236
+      ],
+      "size_H100": [
+        35.05,
+        27.67
+      ],
+      "size_cm_at_setting_53": [
+        18.58,
+        14.66
+      ],
+      "center_head_uv": [
+        0.497,
+        1.26
+      ]
+    },
+    {
+      "id": "eye_vleft",
+      "label": "정면 화면 왼쪽 검정 눈",
+      "bbox_xyxy_px": [
+        526,
+        370,
+        706,
+        551
+      ],
+      "size_px": [
+        180,
+        181
+      ],
+      "size_H100": [
+        21.1,
+        21.22
+      ],
+      "size_cm_at_setting_53": [
+        11.18,
+        11.25
+      ],
+      "center_head_uv": [
+        0.231,
+        0.536
+      ]
+    },
+    {
+      "id": "eye_vright",
+      "label": "정면 화면 오른쪽 검정 눈",
+      "bbox_xyxy_px": [
+        829,
+        369,
+        1010,
+        550
+      ],
+      "size_px": [
+        181,
+        181
+      ],
+      "size_H100": [
+        21.22,
+        21.22
+      ],
+      "size_cm_at_setting_53": [
+        11.25,
+        11.25
+      ],
+      "center_head_uv": [
+        0.771,
+        0.534
+      ]
+    },
+    {
+      "id": "muzzle",
+      "label": "크림색 주둥이 영역",
+      "bbox_xyxy_px": [
+        658,
+        469,
+        878,
+        643
+      ],
+      "size_px": [
+        220,
+        174
+      ],
+      "size_H100": [
+        25.79,
+        20.4
+      ],
+      "size_cm_at_setting_53": [
+        13.67,
+        10.81
+      ],
+      "center_head_uv": [
+        0.502,
+        0.749
+      ]
+    },
+    {
+      "id": "nose",
+      "label": "검정 코",
+      "bbox_xyxy_px": [
+        734,
+        484,
+        804,
+        529
+      ],
+      "size_px": [
+        70,
+        45
+      ],
+      "size_H100": [
+        8.21,
+        5.28
+      ],
+      "size_cm_at_setting_53": [
+        4.35,
+        2.8
+      ],
+      "center_head_uv": [
+        0.504,
+        0.639
+      ]
+    },
+    {
+      "id": "mouth",
+      "label": "열린 입 전체",
+      "bbox_xyxy_px": [
+        723,
+        526,
+        815,
+        612
+      ],
+      "size_px": [
+        92,
+        86
+      ],
+      "size_H100": [
+        10.79,
+        10.08
+      ],
+      "size_cm_at_setting_53": [
+        5.72,
+        5.34
+      ],
+      "center_head_uv": [
+        0.504,
+        0.779
+      ]
+    },
+    {
+      "id": "belly",
+      "label": "크림색 배 영역",
+      "bbox_xyxy_px": [
+        681,
+        700,
+        849,
+        881
+      ],
+      "size_px": [
+        168,
+        181
+      ],
+      "size_H100": [
+        19.7,
+        21.22
+      ],
+      "size_cm_at_setting_53": [
+        10.44,
+        11.25
+      ],
+      "center_head_uv": [
+        0.496,
+        1.274
+      ]
+    },
+    {
+      "id": "ear_vleft",
+      "label": "정면 화면 왼쪽 귀",
+      "bbox_xyxy_px": [
+        380,
+        281,
+        551,
+        597
+      ],
+      "size_px": [
+        171,
+        316
+      ],
+      "size_H100": [
+        20.05,
+        37.05
+      ],
+      "size_cm_at_setting_53": [
+        10.62,
+        19.63
+      ],
+      "center_head_uv": [
+        -0.036,
+        0.488
+      ]
+    },
+    {
+      "id": "ear_vright",
+      "label": "정면 화면 오른쪽 귀",
+      "bbox_xyxy_px": [
+        990,
+        282,
+        1156,
+        598
+      ],
+      "size_px": [
+        166,
+        316
+      ],
+      "size_H100": [
+        19.46,
+        37.05
+      ],
+      "size_cm_at_setting_53": [
+        10.31,
+        19.63
+      ],
+      "center_head_uv": [
+        1.044,
+        0.49
+      ]
+    },
+    {
+      "id": "ball_vleft",
+      "label": "정면 화면 왼쪽 안테나 구슬",
+      "bbox_xyxy_px": [
+        529,
+        94,
+        658,
+        217
+      ],
+      "size_px": [
+        129,
+        123
+      ],
+      "size_H100": [
+        15.12,
+        14.42
+      ],
+      "size_cm_at_setting_53": [
+        8.02,
+        7.64
+      ],
+      "center_head_uv": [
+        0.191,
+        -0.147
+      ]
+    },
+    {
+      "id": "ball_vright",
+      "label": "정면 화면 오른쪽 안테나 구슬",
+      "bbox_xyxy_px": [
+        866,
+        96,
+        996,
+        220
+      ],
+      "size_px": [
+        130,
+        124
+      ],
+      "size_H100": [
+        15.24,
+        14.54
+      ],
+      "size_cm_at_setting_53": [
+        8.08,
+        7.7
+      ],
+      "center_head_uv": [
+        0.792,
+        -0.141
+      ]
+    },
+    {
+      "id": "forelocks",
+      "label": "앞머리 두 갈래 전체",
+      "bbox_xyxy_px": [
+        719,
+        182,
+        816,
+        225
+      ],
+      "size_px": [
+        97,
+        43
+      ],
+      "size_H100": [
+        11.37,
+        5.04
+      ],
+      "size_cm_at_setting_53": [
+        6.03,
+        2.67
+      ],
+      "center_head_uv": [
+        0.501,
+        -0.039
+      ]
+    },
+    {
+      "id": "arm_vleft",
+      "label": "정면 화면 왼쪽 팔·손 가시 영역",
+      "bbox_xyxy_px": [
+        548,
+        697,
+        641,
+        810
+      ],
+      "size_px": [
+        93,
+        113
+      ],
+      "size_H100": [
+        10.9,
+        13.25
+      ],
+      "size_cm_at_setting_53": [
+        5.78,
+        7.02
+      ],
+      "center_head_uv": [
+        0.193,
+        1.191
+      ]
+    },
+    {
+      "id": "arm_vright",
+      "label": "정면 화면 오른쪽 팔·손 가시 영역",
+      "bbox_xyxy_px": [
+        882,
+        697,
+        968,
+        809
+      ],
+      "size_px": [
+        86,
+        112
+      ],
+      "size_H100": [
+        10.08,
+        13.13
+      ],
+      "size_cm_at_setting_53": [
+        5.34,
+        6.96
+      ],
+      "center_head_uv": [
+        0.781,
+        1.19
+      ]
+    },
+    {
+      "id": "foot_vleft",
+      "label": "정면 화면 왼쪽 발 가시 영역",
+      "bbox_xyxy_px": [
+        622,
+        882,
+        741,
+        947
+      ],
+      "size_px": [
+        119,
+        65
+      ],
+      "size_H100": [
+        13.95,
+        7.62
+      ],
+      "size_cm_at_setting_53": [
+        7.39,
+        4.04
+      ],
+      "center_head_uv": [
+        0.348,
+        1.551
+      ]
+    },
+    {
+      "id": "foot_vright",
+      "label": "정면 화면 오른쪽 발 가시 영역",
+      "bbox_xyxy_px": [
+        788,
+        883,
+        906,
+        947
+      ],
+      "size_px": [
+        118,
+        64
+      ],
+      "size_H100": [
+        13.83,
+        7.5
+      ],
+      "size_cm_at_setting_53": [
+        7.33,
+        3.98
+      ],
+      "center_head_uv": [
+        0.642,
+        1.553
+      ]
+    },
+    {
+      "id": "tail",
+      "label": "정면에서 드러난 꼬리 — 뿌리 제외",
+      "bbox_xyxy_px": [
+        911,
+        675,
+        1046,
+        851
+      ],
+      "size_px": [
+        135,
+        176
+      ],
+      "size_H100": [
+        15.83,
+        20.63
+      ],
+      "size_cm_at_setting_53": [
+        8.39,
+        10.94
+      ],
+      "center_head_uv": [
+        0.876,
+        1.213
+      ]
+    },
+    {
+      "id": "blush_vleft",
+      "label": "정면 화면 왼쪽 홍조 — 흐린 경계",
+      "bbox_xyxy_px": [
+        530,
+        535,
+        603,
+        594
+      ],
+      "size_px": [
+        73,
+        59
+      ],
+      "size_H100": [
+        8.56,
+        6.92
+      ],
+      "size_cm_at_setting_53": [
+        4.54,
+        3.67
+      ],
+      "center_head_uv": [
+        0.143,
+        0.768
+      ]
+    },
+    {
+      "id": "blush_vright",
+      "label": "정면 화면 오른쪽 홍조 — 흐린 경계",
+      "bbox_xyxy_px": [
+        928,
+        535,
+        1000,
+        596
+      ],
+      "size_px": [
+        72,
+        61
+      ],
+      "size_H100": [
+        8.44,
+        7.15
+      ],
+      "size_cm_at_setting_53": [
+        4.47,
+        3.79
+      ],
+      "center_head_uv": [
+        0.851,
+        0.771
+      ]
+    }
+  ],
+  "palette_observations": [
+    {
+      "id": "green_forehead",
+      "label": "이마 중간톤",
+      "sample_box": [
+        730,
+        280,
+        800,
+        325
+      ],
+      "rgb": [
+        113,
+        212,
+        68
+      ],
+      "hex": "#71D444",
+      "method": "RGB 채널별 중앙값; 조명 포함 관측값, 재질 알베도 아님"
+    },
+    {
+      "id": "green_body_shade",
+      "label": "몸통 그늘",
+      "sample_box": [
+        642,
+        745,
+        675,
+        790
+      ],
+      "rgb": [
+        101,
+        187,
+        60
+      ],
+      "hex": "#65BB3C",
+      "method": "RGB 채널별 중앙값; 조명 포함 관측값, 재질 알베도 아님"
+    },
+    {
+      "id": "cream_belly",
+      "label": "크림 배",
+      "sample_box": [
+        730,
+        750,
+        790,
+        800
+      ],
+      "rgb": [
+        249,
+        232,
+        211
+      ],
+      "hex": "#F9E8D3",
+      "method": "RGB 채널별 중앙값; 조명 포함 관측값, 재질 알베도 아님"
+    },
+    {
+      "id": "antenna_lit",
+      "label": "안테나 밝은 면",
+      "sample_box": [
+        570,
+        125,
+        610,
+        160
+      ],
+      "rgb": [
+        117,
+        214,
+        68
+      ],
+      "hex": "#75D644",
+      "method": "RGB 채널별 중앙값; 조명 포함 관측값, 재질 알베도 아님"
+    },
+    {
+      "id": "blush_composite",
+      "label": "홍조 합성 관측값",
+      "sample_box": [
+        550,
+        552,
+        575,
+        573
+      ],
+      "rgb": [
+        192,
+        166,
+        125
+      ],
+      "hex": "#C0A67D",
+      "method": "RGB 채널별 중앙값; 조명 포함 관측값, 재질 알베도 아님"
+    },
+    {
+      "id": "eye_dark",
+      "label": "눈 검정",
+      "sample_box": [
+        565,
+        475,
+        600,
+        490
+      ],
+      "rgb": [
+        20,
+        21,
+        17
+      ],
+      "hex": "#141511",
+      "method": "RGB 채널별 중앙값; 조명 포함 관측값, 재질 알베도 아님"
+    }
+  ]
+}
