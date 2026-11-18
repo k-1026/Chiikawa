@@ -1,0 +1,178 @@
+{
+  "package_version": "v01",
+  "approval_scope": "user supplied front appearance, silicone family only",
+  "nominal_capacity_ml": [
+    900,
+    350
+  ],
+  "status": {
+    "visual": "user approved source",
+    "six_views": "AI generated reference; not exact CAD projections; user review pending",
+    "dimensions": "designer proposal, supplier confirmation required",
+    "materials": "proposal only",
+    "colors": "digital starting proposals, not Pantone or measured manufacturing colors"
+  },
+  "coordinates": {
+    "origin": "bottom center contact plane",
+    "axes": {
+      "X": "right in approved front",
+      "Y": "back",
+      "Z": "up"
+    },
+    "front_camera": [
+      0,
+      -1,
+      0
+    ],
+    "view_order": [
+      {
+        "id": "01_FRONT",
+        "label": "정면",
+        "azimuth_deg": "0°"
+      },
+      {
+        "id": "02_LEFT",
+        "label": "왼쪽 측면",
+        "azimuth_deg": "-90°"
+      },
+      {
+        "id": "03_RIGHT",
+        "label": "오른쪽 측면",
+        "azimuth_deg": "+90°"
+      },
+      {
+        "id": "04_LEFT45",
+        "label": "왼쪽 45도",
+        "azimuth_deg": "-45°"
+      },
+      {
+        "id": "05_RIGHT45",
+        "label": "오른쪽 45도",
+        "azimuth_deg": "+45°"
+      },
+      {
+        "id": "06_BACK",
+        "label": "후면",
+        "azimuth_deg": "180°"
+      }
+    ],
+    "camera_left": "camera moves to object X negative; front badges appear on image right edge in side view",
+    "camera_right": "camera moves to object X positive; large handle near camera, narrow edge-on grip",
+    "handle": "large only, X positive, handle plane XZ",
+    "front_decoration": "negative Y only",
+    "back": "plain, continuous band only"
+  },
+  "palette": {
+    "B01 하늘색": {
+      "hex": "#8DC4E2",
+      "use": "대키미 본체·큰 손잡이·얼굴",
+      "status": "proposed sRGB, master image appearance prevails"
+    },
+    "P01 리본 핑크": {
+      "hex": "#EEA2B7",
+      "use": "대키미 밴드·리본·작은 뚜껑/고리",
+      "status": "proposed sRGB, master image appearance prevails"
+    },
+    "G01 연두색": {
+      "hex": "#B4CE6A",
+      "use": "외지몽 얼굴·밴드·작은 뚜껑/고리",
+      "status": "proposed sRGB, master image appearance prevails"
+    },
+    "C01 따뜻한 크림": {
+      "hex": "#F7E5CE",
+      "use": "외지몽 본체·큰 손잡이·주둥이·우주선",
+      "status": "proposed sRGB, master image appearance prevails"
+    }
+  },
+  "dimensions_mm": {
+    "large": {
+      "closed_height_without_straw": 260,
+      "exposed_straw": 55,
+      "overall_with_straw": 315,
+      "upper_diameter": 100,
+      "base_diameter": 75,
+      "width_with_handle": 145,
+      "band_height": 24,
+      "band_thickness": 1.8,
+      "band_center_z": 125,
+      "face_center_z": 190,
+      "face_bbox": [
+        58,
+        55
+      ],
+      "bow_bbox": [
+        30,
+        22
+      ],
+      "ship_bbox": [
+        32,
+        22
+      ]
+    },
+    "small": {
+      "overall_height": 200,
+      "body_shoulder_height": 155,
+      "cap_including_loop": 45,
+      "diameter": 65,
+      "cap_diameter": 65,
+      "band_height": 20,
+      "band_thickness": 1.8,
+      "band_center_z": 78,
+      "face_center_z": 120,
+      "face_bbox": [
+        38,
+        35
+      ],
+      "bow_bbox": [
+        24,
+        18
+      ],
+      "ship_bbox": [
+        26,
+        18
+      ]
+    }
+  },
+  "skus": {
+    "DK900": {
+      "character": "대키미",
+      "capacity_label": "900mL",
+      "size": "large",
+      "master_reference": "00_승인기준/DK900_정면참고.png",
+      "front_only": true
+    },
+    "OM900": {
+      "character": "외지몽",
+      "capacity_label": "900mL",
+      "size": "large",
+      "master_reference": "00_승인기준/OM900_정면참고.png",
+      "front_only": true
+    },
+    "DK350": {
+      "character": "대키미",
+      "capacity_label": "350mL",
+      "size": "small",
+      "master_reference": "00_승인기준/DK350_정면참고.png",
+      "front_only": true
+    },
+    "OM350": {
+      "character": "외지몽",
+      "capacity_label": "350mL",
+      "size": "small",
+      "master_reference": "00_승인기준/OM350_정면참고.png",
+      "front_only": true
+    }
+  },
+  "fixed_rules": [
+    "No names or printed portraits",
+    "No bottom silicone boots",
+    "No cap ears",
+    "Clear large lids and straws",
+    "Small cat cap and loop pink",
+    "Small dog cap and loop leaf green",
+    "Dog muzzle cream; dog face green",
+    "Cat bow pink; dog ship cream",
+    "Spaceship ears join upper dome shoulders, elongated rounded downward; no disconnected blobs"
+  ],
+  "reproducibility": "Use supplied photos and this spec together; exact pixel identity not guaranteed; use one approved 3D model and calibrated render for exact multi-view projections."
+}
