@@ -1,0 +1,18 @@
+생성 방식: built-in image_gen
+검수: 앞면 타원 테두리 없음, 착용자 왼쪽 가슴 얼굴, 초록 바탕, 흰색 앞뒤 문구 및 앞뒤 원페이지 배치 확인.
+
+Use case: product-mockup.
+Create ONE polished single-page landscape merchandise concept sheet for Korean "대사투 페스티벌". Quiet ivory background, clean generous margins, refined minimal editorial product presentation. Two large realistic cotton crew-neck short-sleeve T-shirts side by side at equal scale: FRONT on left, BACK on right, completely visible, straight-on flat lay, sleeves spread naturally, subtle fabric folds and soft studio shadows. Shirts occupy most of page. No people, hangers or props.
+Both T-shirts solid mascot signature green, target base color sRGB #008C3A (rich saturated medium green), with realistic lighting. All shirt lettering white.
+Reference image is solely the identity reference for 외지몽 mascot: green floppy-eared alien dog, two green ball-tipped antennae, huge black eyes with cream star highlights, cream muzzle, black nose, smiling mouth. Print only the head including ears and antennae as a tiny flat full-color screen-printed graphic on wearer's LEFT upper chest, thus on viewer RIGHT of front shirt, noticeably ABOVE central text. No full body, no embroidery, no circular badge.
+FRONT: exact Korean text "외지인" centered horizontally at chest height, moderate size, simple slightly hand-lettered Korean lettering inspired by a modest souvenir tee. ONLY those three characters, absolutely NO oval outline, no frame, no enclosing border. Mascot face small and separate.
+BACK: centered text block upper-to-mid back, white lettering with clear size hierarchy and generous spacing. Exact Korean text with the following line breaks:
+지금 사투리 해석 중…
+
+웃고 있지만
+아직 이해한 건 아닙니다.
+
+맛있는 거 먹으러 가자는 말이면
+일단 따라갑니다.
+First line largest, middle two lines smaller, last two lines medium. Ensure legible accurate Hangul, printed naturally on fabric. No bullet list and no "외지인 특".
+Page typography outside shirts: small top kicker "대사투 페스티벌"; tasteful main title "외지인 티셔츠"; tiny subtitle "굿즈 디자인 샘플 · 01". Small labels below the respective shirts "앞면" and "뒷면". Small bottom note "COLOR  #008C3A    /    WHITE PRINT". Keep layout restrained, product-focused, not a crowded infographic. No unrequested slogans. High-resolution professional merch design approval board.
