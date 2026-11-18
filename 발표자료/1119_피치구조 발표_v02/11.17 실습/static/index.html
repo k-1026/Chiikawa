@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<title>멀티에이전트 챗봇</title>
+<style>
+  body { font-family: sans-serif; }
+  #app { display: flex; justify-content: center; gap: 24px; margin: 40px auto; max-width: 1100px; }
+  #app.split { justify-content: flex-start; }
+
+  #leftPane { width: 600px; }
+  #messages { border: 1px solid #ddd; border-radius: 8px; height: 400px; overflow-y: auto; padding: 12px; margin-bottom: 12px; }
+  .msg { margin: 8px 0; padding: 8px 12px; border-radius: 12px; max-width: 80%; white-space: pre-wrap; }
+  .user { background: #daf1ff; margin-left: auto; text-align: right; }
+  .bot { background: #f1f1f1; }
+  #inputArea { display: flex; gap: 8px; }
+  #input { flex: 1; padding: 8px; }
+  button { padding: 8px 16px; }
+
+  #rightPane { display: none; flex-direction: column; width: 420px; }
+  #app.split #rightPane { display: flex; }
+
+  #orgchart { position: relative; width: 280px; height: 220px; margin: 0 auto 16px; }
+  .node {
+    position: absolute; text-align: center; border: 2px solid #999; border-radius: 8px;
+    padding: 10px 6px; background: #fff; transition: background 0.2s, box-shadow 0.2s;
+  }
+  .node.active {
+    background: #39ff14; box-shadow: 0 0 14px #39ff14; animation: blink 0.5s ease-in-out infinite;
+  }
+  @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0.35; } }
+  #node-orchestrator { left: 50px; top: 10px; width: 180px; }
+  #node-calculate { left: 10px; top: 140px; width: 120px; }
+  #node-web_search { left: 150px; top: 140px; width: 120px; }
+
+  #log { border: 1px solid #ddd; border-radius: 8px; height: 260px; overflow-y: auto; padding: 8px; font-size: 13px; font-family: monospace; background: #fafafa; }
+  #log div { margin-bottom: 4px; }
+</style>
+</head>
+<body>
+<div id="app">
+
+  <div id="leftPane">
+    <h2>멀티에이전트 챗봇</h2>
+    <div id="messages"></div>
+    <div id="inputArea">
+      <input id="input" type="text" placeholder="메시지를 입력하세요" />
+      <button id="sendBtn">전송</button>
+    </div>
+  </div>
+
+  <div id="rightPane">
+    <h3>에이전트 구조</h3>
+    <div id="orgchart">
+      <svg width="280" height="220" style="position:absolute; top:0; left:0;">
+        <line x1="140" y1="55" x2="70" y2="140" stroke="#999" stroke-width="2" />
+        <line x1="140" y1="55" x2="210" y2="140" stroke="#999" stroke-width="2" />
+      </svg>
+      <div id="node-orchestrator" class="node">오케스트레이터</div>
+      <div id="node-calculate" class="node">계산기</div>
+      <div id="node-web_search" class="node">검색</div>
+    </div>
+    <h3>작업 로그</h3>
+    <div id="log"></div>
+  </div>
+
+</div>
+
+<script>
+const AGENT_LABELS = { calculate: "계산기", web_search: "검색" };
+
+const appEl = document.getElementById("app");
+const messagesEl = document.getElementById("messages");
+const inputEl = document.getElementById("input");
+const sendBtn = document.getElementById("sendBtn");
+const logEl = document.getElementById("log");
+
+function addMessage(text, role) {
+  const div = document.createElement("div");
+  div.className = "msg " + role;
+  div.textContent = text;
+  messagesEl.appendChild(div);
+  messagesEl.scrollTop = messagesEl.scrollHeight;
+  return div;
+}
+
+function addLog(text) {
+  const time = new Date().toLocaleTimeString("ko-KR", { hour12: false });
+  const line = document.createElement("div");
+  line.textContent = `[${time}] ${text}`;
+  logEl.appendChild(line);
+  logEl.scrollTop = logEl.scrollHeight;
+}
+
+function setActive(nodeId, on) {
+  document.getElementById(nodeId).classList.toggle("active", on);
+}
+
+function sleep(ms) {
+  return new Promise((resolve) => setTimeout(resolve, ms));
+}
+
+// 백엔드가 보내준 호출 기록을 순서대로 재생하며 조직도를 블링크시키고 로그를 쌓음
+async function playSteps(steps) {
+  for (const step of steps) {
+    const nodeId = "node-" + step.agent;
+    const label = AGENT_LABELS[step.agent] || step.agent;
+    if (step.action === "call") {
+      setActive(nodeId, true);
+      addLog(`${label} 서브에이전트 호출 - ${JSON.stringify(step.detail)}`);
+      await sleep(500);
+    } else {
+      addLog(`${label} 서브에이전트 결과 - ${JSON.stringify(step.detail)}`);
+      setActive(nodeId, false);
+      await sleep(200);
+    }
+  }
+}
+
+async function sendMessage() {
+  const text = inputEl.value.trim();
+  if (!text) return;
+
+  appEl.classList.add("split"); // 첫 메시지를 보내는 순간 화면을 좌우로 분할
+
+  addMessage(text, "user");
+  inputEl.value = "";
+  const loadingEl = addMessage("...", "bot");
+
+  setActive("node-orchestrator", true);
+  addLog(`오케스트레이터: 요청 수신 - "${text}"`);
+
+  try {
+    const res = await fetch("/chat", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ message: text }),
+    });
+    const data = await res.json();
+
+    setActive("node-orchestrator", false);
+    await playSteps(data.steps);
+
+    setActive("node-orchestrator", true);
+    addLog("오케스트레이터: 최종 답변 생성");
+    await sleep(400);
+    setActive("node-orchestrator", false);
+
+    loadingEl.textContent = data.reply;
+  } catch (e) {
+    setActive("node-orchestrator", false);
+    addLog("오류 발생");
+    loadingEl.textContent = "오류가 발생했습니다.";
+  }
+}
+
+sendBtn.addEventListener("click", sendMessage);
+inputEl.addEventListener("keydown", (e) => {
+  if (e.key === "Enter") sendMessage();
+});
+</script>
+</body>
+</html>

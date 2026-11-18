@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:ai.google.dev)",
+      "WebFetch(domain:aistudio.google.com)",
+      "WebFetch(domain:github.com)",
+      "WebFetch(domain:raw.githubusercontent.com)",
+      "Bash(pip --version)",
+      "Bash(pip install *)",
+      "Bash(python test_connection.py)",
+      "Bash(git check-ignore *)",
+      "Bash(curl -s -m 2 http://127.0.0.1:8000/chat -o /dev/null -w \"status:%{http_code}\\\\n\")",
+      "Bash(netstat -ano)",
+      "Bash(taskkill //F //PID 24828)"
+    ]
+  }
+}
