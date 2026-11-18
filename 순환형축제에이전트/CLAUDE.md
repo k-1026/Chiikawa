@@ -38,7 +38,7 @@
 | 묶음 | 에이전트 | 하는 일 |
 |---|---|---|
 | 기획 단계 | `retro-reader` (S0) · `researcher` (S2) · `strategist` (S3 · S4) · `idea-scorer` (S5 · S6) · `flow-designer` (S8 동선 · 스탬프 지점) | 방향 정하기 |
-| 파트 | `part-agent` + 파트 글자 (A · B · C · D · E · F · G · H · I · J · K) | main 세부지침안 기준 파트 기획. H · K는 지침 없음 → 질문 필요로 돌아옴 |
+| 파트 | `part-agent` + 파트 글자 (A · B · C · D · E · F · G · H · I · J · K) | main 세부지침안 기준 파트 기획. K는 지침 없음 → 질문 필요로 돌아옴 |
 | 검증 | `conflict-checker` · `duplicate-finder` · `format-checker` · `evidence-auditor` · `ethics-reviewer` · `reviewer` | 검사만. 고치지 않음 |
 
 - 서브에이전트는 담당자에게 직접 묻지 않는다. 반환 형식은 `지침/반환형식.md`.
