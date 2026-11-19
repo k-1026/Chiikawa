@@ -1,0 +1,740 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>대사투! 페스티벌 · 축제 기획 AI 에이전트 데모</title>
+<meta name="description" content="대구 사투리 축제를 매년 열 수 있게 돕는 순환형 축제 기획 AI 에이전트 시연용 데모">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" rel="stylesheet">
+<style>
+:root{
+  --sky:#6DCFF5; --sky-deep:#1F8FCB; --sky-soft:#E4F6FD; --sky-mid:#BFE9FA;
+  --green:#008C3A; --green-soft:#DDF3E5;
+  --cream:#F8F0E4; --paper:#FFFDF8;
+  --pink:#FDB6C1; --pink-soft:#FFE6EA;
+  --yellow:#FFC93C; --yellow-soft:#FFF4CF;
+  --navy:#0F3557; --ink:#282727; --muted:#52647A; --line:#E4D9C6;
+  --radius:24px;
+  --shadow:0 10px 30px -12px rgba(15,53,87,.28);
+  --head:'Jua','Pretendard Variable',Pretendard,system-ui,sans-serif;
+  --body:'Pretendard Variable',Pretendard,-apple-system,'Apple SD Gothic Neo','Noto Sans KR',system-ui,sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;color-scheme:light}
+body{margin:0;background:var(--cream);color:var(--navy);font-family:var(--body);line-height:1.6;-webkit-font-smoothing:antialiased}
+img,svg{max-width:100%}
+button{font:inherit;cursor:pointer}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--navy);outline-offset:2px;border-radius:8px}
+.wrap{width:min(1200px,100% - 32px);margin-inline:auto}
+
+/* ---------- sprite (mascot crops from design sheets) ---------- */
+.spr{display:block;width:var(--dw,120px);aspect-ratio:var(--w) / var(--h);background-repeat:no-repeat;background-image:var(--img);
+  background-size:calc(var(--sw) / var(--w) * 100%) auto;
+  background-position:calc(var(--x) / (var(--sw) - var(--w)) * 100%) calc(var(--y) / (var(--sh) - var(--h)) * 100%);
+  mix-blend-mode:multiply;pointer-events:none;user-select:none}
+
+/* ---------- nav ---------- */
+.nav{position:sticky;top:0;z-index:20;background:rgba(248,240,228,.88);backdrop-filter:blur(10px);border-bottom:2px solid rgba(15,53,87,.08)}
+.nav .wrap{display:flex;align-items:center;gap:18px;height:62px}
+.brand{font-family:var(--head);font-size:24px;text-decoration:none;color:var(--sky-deep);-webkit-text-stroke:0;display:flex;align-items:center;gap:8px}
+.brand b{color:var(--navy);font-weight:400}
+.nav ul{display:flex;gap:6px;list-style:none;margin:0 0 0 auto;padding:0}
+.nav ul a{display:block;padding:8px 14px;border-radius:999px;text-decoration:none;font-weight:600;font-size:15px}
+.nav ul a:hover{background:var(--sky-soft)}
+.sim-badge{font-size:12px;font-weight:700;background:var(--yellow-soft);border:1.5px solid var(--yellow);padding:3px 10px;border-radius:999px;white-space:nowrap}
+
+/* ---------- hero ---------- */
+.hero{position:relative;overflow:hidden;background:
+  radial-gradient(120% 70% at 50% 0%, var(--sky-mid) 0%, rgba(191,233,250,0) 70%),
+  linear-gradient(180deg,#DDF3FC 0%,var(--cream) 100%)}
+.hero .wrap{position:relative;display:grid;grid-template-columns:1fr minmax(320px,1.1fr) 1fr;align-items:end;gap:8px;padding:48px 0 0;min-height:560px}
+.cloud{position:absolute;background:#fff;border-radius:999px;opacity:.9;filter:blur(.3px)}
+.cloud::before,.cloud::after{content:"";position:absolute;background:#fff;border-radius:50%}
+.c1{width:150px;height:44px;left:6%;top:90px}.c1::before{width:60px;height:60px;left:22px;top:-28px}.c1::after{width:44px;height:44px;left:78px;top:-18px}
+.c2{width:190px;height:54px;right:7%;top:150px}.c2::before{width:74px;height:74px;left:28px;top:-34px}.c2::after{width:54px;height:54px;left:104px;top:-22px}
+.c3{width:110px;height:34px;left:42%;top:40px;opacity:.75}.c3::before{width:44px;height:44px;left:16px;top:-20px}.c3::after{width:32px;height:32px;left:56px;top:-12px}
+.title-box{text-align:center;align-self:center;padding-bottom:40px;z-index:2}
+.eyebrow{display:inline-block;background:#fff;border:2px solid var(--sky);padding:5px 16px;border-radius:999px;font-weight:700;font-size:14px;color:var(--sky-deep);margin-bottom:10px}
+h1.logo{margin:0;font-family:var(--head);font-weight:400;line-height:1;font-size:clamp(76px,12vw,148px);color:var(--sky);
+  -webkit-text-stroke:10px #fff;paint-order:stroke fill;text-shadow:0 8px 0 var(--sky-deep),0 14px 24px rgba(15,53,87,.25);letter-spacing:-2px}
+h1.logo small{display:block;font-size:.34em;color:var(--navy);-webkit-text-stroke:7px #fff;text-shadow:0 4px 0 rgba(15,53,87,.12);letter-spacing:0;margin-top:6px}
+.tag{font-size:clamp(18px,2.2vw,24px);font-weight:700;margin:22px 0 6px}
+.tag em{font-style:normal;background:linear-gradient(transparent 62%,var(--yellow) 62%)}
+.lead{max-width:460px;margin:0 auto 22px;color:var(--muted);font-size:16px}
+.btn{display:inline-flex;align-items:center;gap:8px;border:0;border-radius:999px;padding:13px 24px;font-weight:800;font-size:16px;text-decoration:none;transition:transform .15s,box-shadow .15s}
+.btn:hover{transform:translateY(-2px)}
+.btn:active{transform:translateY(0)}
+.btn-sky{background:var(--sky);color:var(--navy);box-shadow:0 6px 0 var(--sky-deep)}
+.btn-green{background:var(--green);color:#fff;box-shadow:0 5px 0 #005e27}
+.btn-ghost{background:#fff;color:var(--navy);border:2px solid var(--navy)}
+.btn[disabled]{opacity:.45;cursor:not-allowed;transform:none}
+.hero-char{position:relative;display:flex;justify-content:center;align-items:flex-end}
+.hero-char .spr{--dw:min(300px,28vw)}
+.hero-char.k .spr{animation:bob 3.6s ease-in-out infinite}
+.hero-char.o .spr{animation:bob 3.6s ease-in-out -1.8s infinite}
+@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+.bubble{position:absolute;background:#fff;border:2.5px solid var(--navy);border-radius:20px;padding:8px 14px;font-weight:800;font-size:15px;box-shadow:var(--shadow);z-index:3;white-space:nowrap}
+.bubble::after{content:"";position:absolute;bottom:-11px;width:16px;height:16px;background:#fff;border-right:2.5px solid var(--navy);border-bottom:2.5px solid var(--navy);transform:rotate(45deg)}
+.hero-char.k .bubble{top:14%;right:-6%}.hero-char.k .bubble::after{left:24px}
+.hero-char.o .bubble{top:20%;left:-4%}.hero-char.o .bubble::after{right:24px}
+.spark{position:absolute;color:var(--yellow);font-size:28px;animation:tw 2.4s ease-in-out infinite}
+@keyframes tw{0%,100%{opacity:.35;transform:scale(.8) rotate(0)}50%{opacity:1;transform:scale(1.15) rotate(20deg)}}
+
+/* ---------- section ---------- */
+section{padding:72px 0 8px;scroll-margin-top:62px}
+.sec-head{display:flex;align-items:flex-end;gap:16px;flex-wrap:wrap;margin-bottom:26px}
+.sec-head h2{margin:0;font-family:var(--head);font-weight:400;font-size:clamp(30px,4.4vw,44px);line-height:1.1}
+.sec-head h2 span{color:var(--sky-deep)}
+.sec-head p{margin:0;color:var(--muted);max-width:520px}
+.sec-kicker{display:inline-block;font-weight:800;font-size:13px;letter-spacing:.08em;color:var(--green);margin-bottom:4px}
+
+/* ---------- demo ---------- */
+.demo{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:20px;align-items:start}
+.card{background:var(--paper);border:2.5px solid var(--navy);border-radius:var(--radius);box-shadow:0 6px 0 var(--navy)}
+.chat{display:flex;flex-direction:column;height:690px;overflow:hidden}
+.chat-top{display:flex;align-items:center;gap:10px;padding:12px 16px;background:var(--sky);border-bottom:2.5px solid var(--navy)}
+.chat-top h3{margin:0;font-family:var(--head);font-weight:400;font-size:20px}
+.chat-top .sp{flex:1}
+.mini{border:2px solid var(--navy);background:#fff;border-radius:999px;padding:5px 12px;font-weight:700;font-size:13px;color:var(--navy)}
+.mini[aria-pressed="true"]{background:var(--navy);color:#fff}
+.log{flex:1;overflow-y:auto;padding:18px 16px;display:flex;flex-direction:column;gap:14px;background:
+  radial-gradient(circle at 1px 1px,rgba(31,143,203,.12) 1.2px,transparent 1.4px) 0 0/22px 22px,var(--paper);scroll-behavior:smooth}
+.msg{display:flex;gap:10px;align-items:flex-end;max-width:94%;animation:pop .3s ease-out both}
+.msg.user{flex-direction:row-reverse;align-self:flex-end}
+@keyframes pop{from{opacity:0;transform:translateY(8px) scale(.98)}to{opacity:1;transform:none}}
+.av{flex:none;width:46px;height:46px;border-radius:50%;border:2.5px solid var(--navy);overflow:hidden;display:grid;place-items:center;background:#fff}
+.av.k{background:var(--sky-soft)}.av.o{background:var(--green-soft)}
+.av .spr{--dw:46px}
+.who{font-size:12px;font-weight:800;margin:0 4px 3px;color:var(--muted)}
+.msg.user .who{text-align:right}
+.bub{background:#fff;border:2px solid var(--navy);border-radius:20px 20px 20px 6px;padding:10px 14px;font-size:15px}
+.msg.user .bub{background:var(--green);color:#fff;border-color:#005e27;border-radius:20px 20px 6px 20px}
+.bub p{margin:0 0 6px}.bub p:last-child{margin:0}
+.bub ul{margin:6px 0 0;padding-left:18px}
+.bub li{margin:2px 0}
+.typing{display:inline-flex;gap:5px;padding:4px 2px}
+.typing i{width:8px;height:8px;border-radius:50%;background:var(--sky-deep);animation:dot 1s infinite}
+.typing i:nth-child(2){animation-delay:.15s}.typing i:nth-child(3){animation-delay:.3s}
+@keyframes dot{0%,80%,100%{transform:translateY(0);opacity:.4}40%{transform:translateY(-5px);opacity:1}}
+.sys{align-self:center;font-size:12.5px;font-weight:700;color:var(--muted);background:var(--sky-soft);border-radius:999px;padding:4px 14px}
+.gate{border:2.5px dashed var(--green);background:var(--green-soft);border-radius:18px;padding:12px 14px;animation:pop .3s ease-out both}
+.gate h4{margin:0 0 2px;font-size:15px;color:#005e27}
+.gate p{margin:0 0 10px;font-size:14px}
+.gate .row{display:flex;gap:8px;flex-wrap:wrap}
+.gate .done-note{font-weight:800;color:#005e27;font-size:14px}
+.link-btn{display:inline-block;margin-top:8px;border:2px solid var(--navy);background:var(--yellow-soft);border-radius:999px;padding:4px 12px;font-weight:800;font-size:13px;color:var(--navy)}
+.composer{display:flex;gap:10px;padding:12px;border-top:2.5px solid var(--navy);background:var(--cream)}
+.composer .field{flex:1;min-height:46px;background:#fff;border:2px solid var(--navy);border-radius:14px;padding:10px 14px;font-size:15px;display:flex;align-items:center;color:var(--muted)}
+.composer .field.has{color:var(--navy);font-weight:600}
+.caret::after{content:"▍";animation:blink 1s steps(2) infinite;color:var(--sky-deep)}
+@keyframes blink{50%{opacity:0}}
+
+/* ---------- side panel ---------- */
+.side{display:grid;gap:16px}
+.panel{padding:16px}
+.panel h3{margin:0 0 10px;font-family:var(--head);font-weight:400;font-size:20px;display:flex;align-items:center;gap:8px}
+.panel h3 small{font-family:var(--body);font-size:12px;font-weight:600;color:var(--muted)}
+.phases{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.ph{border:2px solid var(--line);border-radius:14px;padding:8px 10px;font-size:13.5px;font-weight:700;background:#fff;display:flex;gap:8px;align-items:center;transition:.25s}
+.ph b{flex:none;width:24px;height:24px;border-radius:50%;background:var(--cream);display:grid;place-items:center;font-size:12px}
+.ph.on{border-color:var(--navy);background:var(--sky);box-shadow:0 3px 0 var(--navy)}
+.ph.on b{background:#fff}
+.ph.done{background:var(--green-soft);border-color:var(--green)}
+.ph.done b{background:var(--green);color:#fff}
+.ph.wait{background:var(--yellow-soft);border-style:dashed;border-color:var(--yellow)}
+.orch{display:flex;align-items:center;gap:10px;background:var(--navy);color:#fff;border-radius:14px;padding:10px 14px;margin-bottom:10px}
+.orch .dotl{width:10px;height:10px;border-radius:50%;background:#8aa3bb}
+.orch.work .dotl{background:var(--yellow);animation:blink 1s infinite}
+.orch.done .dotl{background:#5fe08a}
+.orch b{font-size:15px}.orch span{font-size:12.5px;opacity:.85;margin-left:auto}
+.agents{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.ag{border:2px solid var(--line);background:#fff;border-radius:14px;padding:8px 10px;min-height:68px;transition:.25s;position:relative}
+.ag b{display:block;font-size:13.5px;line-height:1.25}
+.ag code{font-size:10.5px;color:var(--muted);font-family:ui-monospace,Menlo,monospace}
+.ag .st{display:block;font-size:12px;font-weight:700;margin-top:4px;color:var(--muted)}
+.ag.work{border-color:var(--navy);background:var(--yellow-soft);animation:pulse 1.1s infinite}
+.ag.work .st{color:var(--navy)}
+.ag.done{border-color:var(--green);background:var(--green-soft)}
+.ag.done .st{color:#005e27}
+.ag.warn{border-color:#C98500;background:var(--yellow-soft)}
+.ag.warn .st{color:#7A4F00}
+@keyframes pulse{50%{box-shadow:0 0 0 4px rgba(255,201,60,.55)}}
+.legend{display:flex;gap:6px;flex-wrap:wrap;font-size:12.5px;margin-top:10px;color:var(--muted)}
+
+/* ---------- evidence labels ---------- */
+.lb{display:inline-block;font-weight:800;font-size:12px;padding:1px 8px;border-radius:7px;margin-right:4px;vertical-align:1px;white-space:nowrap}
+.l-ok{background:var(--green-soft);color:#005e27}
+.l-int{background:var(--sky-soft);color:#0b5a85}
+.l-hyp{background:var(--yellow-soft);color:#7A4F00}
+.l-est{background:var(--pink-soft);color:#9A2F47}
+.l-asm{background:#ECECEC;color:#444}
+.l-wait{background:var(--cream);color:#6b5a3a;border:1px dashed #b8a37a}
+
+/* ---------- results ---------- */
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px}
+.tab{border:2.5px solid var(--navy);background:#fff;border-radius:999px;padding:8px 18px;font-weight:800;color:var(--navy);position:relative}
+.tab[aria-selected="true"]{background:var(--sky);box-shadow:0 4px 0 var(--navy)}
+.tab.new::after{content:"";position:absolute;top:-4px;right:-2px;width:12px;height:12px;border-radius:50%;background:var(--pink);border:2px solid var(--navy)}
+.result{padding:22px 24px;min-height:360px}
+.result h3{font-family:var(--head);font-weight:400;font-size:24px;margin:0 0 4px}
+.result .sub{color:var(--muted);margin:0 0 16px;font-size:14.5px}
+table{border-collapse:collapse;width:100%;font-size:14.5px}
+th,td{text-align:left;padding:9px 12px;border-bottom:1.5px solid var(--line);vertical-align:top}
+th{font-size:13px;color:var(--muted);font-weight:700;background:var(--cream)}
+tr:last-child td{border-bottom:0}
+.grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.tile{border:2px solid var(--navy);border-radius:18px;padding:14px 16px;background:#fff}
+.tile h4{margin:0 0 4px;font-size:16px;display:flex;gap:8px;align-items:center}
+.tile .n{flex:none;width:28px;height:28px;border-radius:50%;background:var(--sky);display:grid;place-items:center;font-family:var(--head);font-size:16px;border:2px solid var(--navy)}
+.tile p{margin:0;font-size:14px;color:var(--muted)}
+.finding{display:flex;gap:10px;padding:10px 0;border-bottom:1.5px solid var(--line)}
+.finding:last-child{border:0}
+.finding small{color:var(--muted);display:block}
+.flow{display:flex;gap:0;margin:6px 0 18px;overflow-x:auto;padding-bottom:6px}
+.fl{flex:1 0 128px;position:relative;padding:12px 10px 12px 16px;background:var(--sky-soft);border:2px solid var(--navy);margin-right:-2px;font-size:13px;font-weight:700;line-height:1.35;clip-path:polygon(0 0,calc(100% - 14px) 0,100% 50%,calc(100% - 14px) 100%,0 100%,14px 50%)}
+.fl:first-child{clip-path:polygon(0 0,calc(100% - 14px) 0,100% 50%,calc(100% - 14px) 100%,0 100%);border-radius:14px 0 0 14px}
+.fl small{display:block;font-weight:600;color:var(--muted)}
+.fl.night{background:var(--navy);color:#fff}.fl.night small{color:#BFD6EA}
+.bars{display:grid;gap:12px;margin-top:6px}
+.bar{display:grid;grid-template-columns:70px 1fr 100px;gap:12px;align-items:center;font-weight:700;font-size:14px}
+.track{height:26px;background:var(--cream);border-radius:999px;overflow:hidden;border:2px solid var(--navy)}
+.fill{height:100%;border-radius:999px 0 0 999px;width:0;transition:width 1s cubic-bezier(.2,.8,.2,1)}
+.bar .v{text-align:right;font-variant-numeric:tabular-nums}
+.note{margin-top:14px;font-size:13.5px;background:var(--yellow-soft);border:1.5px solid var(--yellow);padding:10px 14px;border-radius:14px}
+.verd{display:inline-block;font-weight:800;font-size:12.5px;padding:2px 10px;border-radius:999px}
+.v-ok{background:var(--green);color:#fff}.v-warn{background:var(--yellow);color:var(--navy)}
+.parts{display:flex;flex-wrap:wrap;gap:8px;margin-top:6px}
+.chip{border:2px solid var(--navy);background:#fff;border-radius:999px;padding:4px 12px;font-weight:700;font-size:13.5px}
+.chip.off{border-style:dashed;color:var(--muted);background:var(--cream)}
+
+/* ---------- cycle ---------- */
+.cycle{display:grid;grid-template-columns:200px minmax(0,1fr) 200px;align-items:center;gap:10px;padding:18px 20px;background:linear-gradient(180deg,#fff, var(--sky-soft))}
+.cycle .spr{--dw:190px;margin-inline:auto}
+.cycle svg{width:100%;height:auto;display:block;overflow:visible}
+.node{fill:#fff;stroke:var(--navy);stroke-width:3}
+.node.future{stroke-dasharray:6 5;fill:var(--cream)}
+.nt{font-family:var(--head);font-size:17px;fill:var(--navy);text-anchor:middle}
+.ns{font-size:11.5px;font-weight:700;fill:var(--muted);text-anchor:middle}
+.nnum{font-family:var(--head);font-size:15px;fill:#fff;text-anchor:middle}
+.cycle-cap{text-align:center;margin:10px auto 0;color:var(--muted);font-size:14.5px;max-width:640px}
+
+footer{margin-top:72px;background:var(--navy);color:#DCEAF5;padding:34px 0 40px;font-size:13.5px}
+footer b{color:#fff}
+footer .wrap{display:grid;gap:8px}
+
+/* ---------- responsive ---------- */
+@media (max-width:980px){
+  .demo{grid-template-columns:1fr}
+  .chat{height:620px}
+  .hero .wrap{grid-template-columns:1fr 1fr;min-height:0}
+  .title-box{grid-column:1/-1;order:-1;padding-bottom:12px}
+  .hero-char .spr{--dw:min(230px,40vw)}
+  .cycle{grid-template-columns:1fr}
+  .cycle .spr{display:none}
+  .grid3{grid-template-columns:1fr}
+  .nav ul{display:none}
+}
+@media (max-width:620px){
+  .phases,.agents{grid-template-columns:repeat(2,1fr)}
+  .grid2{grid-template-columns:1fr}
+  .bar{grid-template-columns:54px 1fr 86px;gap:8px}
+  .result{padding:16px}
+  .bubble{font-size:12.5px;padding:5px 10px;white-space:normal;max-width:150px;text-align:center}
+  .hero-char.k .bubble{top:-14%;right:auto;left:0}
+  .hero-char.o .bubble{top:-10%;left:auto;right:0}
+  .sim-badge{display:none}
+}
+@media (prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+}
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="대사투 페스티벌 처음으로"><b>대사투!</b>페스티벌</a>
+    <span class="sim-badge">시연용 시뮬레이션</span>
+    <ul>
+      <li><a href="#demo">에이전트 데모</a></li>
+      <li><a href="#result">기획 결과</a></li>
+      <li><a href="#cycle">순환 구조</a></li>
+    </ul>
+  </div>
+</header>
+
+<main id="top">
+<!-- ================= HERO ================= -->
+<div class="hero">
+  <i class="cloud c1"></i><i class="cloud c2"></i><i class="cloud c3"></i>
+  <span class="spark" style="left:30%;top:120px">✦</span>
+  <span class="spark" style="right:29%;top:200px;animation-delay:-1s">✦</span>
+  <span class="spark" style="left:46%;bottom:130px;animation-delay:-1.6s;font-size:20px">✦</span>
+  <div class="wrap">
+    <div class="hero-char k">
+      <span class="bubble">이거는 말이다, 이래 하는 기라!</span>
+      <i class="spr" data-pose="k.hello" role="img" aria-label="대키미가 손을 흔드는 모습"></i>
+    </div>
+    <div class="title-box">
+      <span class="eyebrow">순환형 축제 기획 AI 에이전트 · 데모</span>
+      <h1 class="logo">대사투!<small>페스티벌</small></h1>
+      <p class="tag">축제 기획, <em>말로 시키믄</em> 된다</p>
+      <p class="lead">대구 사투리 축제를 매년 열 수 있게 돕는 에이전트예요. 질문하는 외지몽, 설명하는 대키미와 함께 조건 입력부터 차년도 과제까지 돌아가 보세요.</p>
+      <a class="btn btn-sky" href="#demo">데모 시작하기 ▸</a>
+    </div>
+    <div class="hero-char o">
+      <span class="bubble">대구말, 알려 주세요!</span>
+      <i class="spr" data-pose="o.curious" role="img" aria-label="외지몽이 고개를 갸웃하는 모습"></i>
+    </div>
+  </div>
+</div>
+
+<!-- ================= DEMO ================= -->
+<section id="demo">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <span class="sec-kicker">STEP 1 · AGENT DEMO</span>
+        <h2>외지몽이 묻고, <span>대키미</span>가 기획해요</h2>
+      </div>
+      <p>오른쪽 작업 패널에서 어떤 에이전트가 언제 일하는지 볼 수 있어요. <b>사람 확인</b> 단계에서는 승인해야 다음으로 넘어가요. 에이전트는 결정을 대신하지 않아요.</p>
+    </div>
+
+    <div class="demo">
+      <!-- chat -->
+      <div class="card chat" aria-label="에이전트와의 대화">
+        <div class="chat-top">
+          <span class="av k" style="width:38px;height:38px"><i class="spr" data-pose="k.av" style="--dw:52px"></i></span>
+          <h3>대키미 기획 에이전트</h3>
+          <span class="sp"></span>
+          <button class="mini" id="autoBtn" aria-pressed="false" title="질문 보내기와 승인을 자동으로 진행해요">자동 재생</button>
+          <button class="mini" id="resetBtn">처음부터</button>
+        </div>
+        <div class="log" id="log" role="log" aria-live="polite"></div>
+        <div class="composer">
+          <div class="field" id="field">대화를 시작해 볼까요?</div>
+          <button class="btn btn-green" id="sendBtn">보내기 ▸</button>
+        </div>
+      </div>
+
+      <!-- side -->
+      <div class="side">
+        <div class="card panel">
+          <h3>진행 단계 <small>데모용 요약 흐름</small></h3>
+          <div class="phases" id="phases"></div>
+        </div>
+        <div class="card panel">
+          <h3>에이전트 작업 패널 <small>12 agents</small></h3>
+          <div class="orch" id="orch"><span class="dotl"></span><b>오케스트레이터</b><span id="orchSt">대기 중</span></div>
+          <div class="agents" id="agents"></div>
+          <div class="legend">
+            <span><i class="lb l-ok">확인</i>출처 있는 사실</span>
+            <span><i class="lb l-hyp">가설</i>검증 필요</span>
+            <span><i class="lb l-est">추정</i>계산·가정 기반</span>
+            <span><i class="lb l-wait">⏳</i>개최 후 검증</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= RESULT ================= -->
+<section id="result">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <span class="sec-kicker">STEP 2 · OUTPUT</span>
+        <h2>에이전트가 만든 <span>기획 결과</span></h2>
+      </div>
+      <p>대사투/2027 초안(담당자 확인 전)을 바탕으로 한 시연 화면이에요. 데모를 진행하면 해당 탭에 <b>새 결과</b> 표시가 떠요.</p>
+    </div>
+
+    <div class="tabs" role="tablist" id="tabs">
+      <button class="tab" role="tab" aria-selected="true"  data-tab="cond">기획조건표</button>
+      <button class="tab" role="tab" aria-selected="false" data-tab="research">조사</button>
+      <button class="tab" role="tab" aria-selected="false" data-tab="plan">기획안</button>
+      <button class="tab" role="tab" aria-selected="false" data-tab="verify">검증</button>
+    </div>
+
+    <div class="card result" id="resultBox">
+      <!-- cond -->
+      <div data-panel="cond">
+        <h3>2027 대구 사투리 축제 · 기획조건표</h3>
+        <p class="sub">결정된 값과 아직 정해지지 않은 값을 나눠 보여줘요.</p>
+        <div class="grid2">
+          <div>
+            <table>
+              <tr><th colspan="2">고정·확정 조건</th></tr>
+              <tr><td>개최 일정</td><td>2027-08-20(금) ~ 08-22(일) · 3일</td></tr>
+              <tr><td>장소</td><td>두류공원 (대구 달서구)</td></tr>
+              <tr><td>연도 주제</td><td>「타지에서 온 말손님」</td></tr>
+              <tr><td>메인 타깃</td><td>타지역 2030</td></tr>
+              <tr><td>목표 순서</td><td>① 1박 이상 체류 → ② 지역 상권 → ③ 사투리 정착</td></tr>
+              <tr><td>3대 프로그램</td><td>토론 대회 · 10미 포장마차 · 플리마켓</td></tr>
+            </table>
+          </div>
+          <div>
+            <table>
+              <tr><th colspan="2">아직 미정 <span class="lb l-hyp">사람이 결정</span></th></tr>
+              <tr><td>협력 기관</td><td>미정</td></tr>
+              <tr><td>가용 인력</td><td>미정</td></tr>
+              <tr><td>예상 방문객 규모</td><td>미확정 (참고값만 있음)</td></tr>
+              <tr><td>주관(운영) 기관</td><td>미정</td></tr>
+              <tr><td>2027 예산 확보 경로</td><td>미확인</td></tr>
+            </table>
+            <div class="note">에이전트는 미정 항목을 <b>임의로 채우지 않고</b>, 기획안에서는 <i class="lb l-asm">가정</i>으로 표시해 써요.</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- research -->
+      <div data-panel="research" hidden>
+        <h3>조사 보고서 요약</h3>
+        <p class="sub">근거 라벨이 없는 수치는 쓰지 않아요. 확인 안 된 건 “확인 안 됨”으로 둬요.</p>
+        <div class="finding"><i class="lb l-ok">확인</i><div>국립한글박물관 ‘사투리 능력고사’ 전시 관람 <b>85,764명</b><small>출처 구분: 공식 · 테스트형 콘텐츠의 공공 선례</small></div></div>
+        <div class="finding"><i class="lb l-ok">확인</i><div>대구 방문 유입은 경북 <b>74.7%</b>, 서울 <b>1.0%</b><small>출처 구분: 언론 → 수도권 2030에게는 ‘첫 방문 계기’가 필요</small></div></div>
+        <div class="finding"><i class="lb l-ok">확인</i><div>대구 체류시간 <b>-1.5%</b><small>출처 구분: 언론 → 저녁·야간 프로그램이 필요</small></div></div>
+        <div class="finding"><i class="lb l-ok">확인</i><div>사투리 경연 모집이 저조한 사례(영양, 신청 <b>7명</b>)<small>출처 구분: 언론 → 참가 장벽을 낮추는 예선 설계 필요</small></div></div>
+        <div class="finding"><i class="lb l-hyp">가설</i><div>타지역 2030의 사투리 선호 설문은 <b>없음</b><small>검증 방법: 온라인 사전 고사 참여율로 확인</small></div></div>
+      </div>
+
+      <!-- plan -->
+      <div data-panel="plan" hidden>
+        <h3>2027 대구 사투리 축제 「타지에서 온 말손님」</h3>
+        <p class="sub">타지역 2030이 온라인 ‘대구 사투리 능력고사’로 먼저 대구말을 배우고, 현장에 ‘말손님’으로 와서 대구 토박이와 토론으로 맞붙는 3일.</p>
+        <div class="grid3">
+          <div class="tile"><h4><span class="n">1</span>말손님 vs 토박이 토론</h4><p>예선은 온라인, 결승은 토요일 밤. 참가 장벽을 낮추는 설계.</p></div>
+          <div class="tile"><h4><span class="n">2</span>말로 주문하는 10미 포장마차</h4><p>사투리로 주문하고, 시내 원조가게로 이어지는 연결.</p></div>
+          <div class="tile"><h4><span class="n">3</span>대구 로컬 장터</h4><p>소상공인 플리마켓. 대구로페이 혜택과 연계.</p></div>
+        </div>
+        <h4 style="margin:20px 0 6px">핵심 동선</h4>
+        <div class="flow">
+          <div class="fl">온라인 사투리 고사<small>5월~</small></div>
+          <div class="fl">토론 예선 · 관람 예약<small>사전</small></div>
+          <div class="fl">금 · 개막<small>08-20 밤</small></div>
+          <div class="fl night">토 · 결승<small>08-21 밤 · 1박 유도</small></div>
+          <div class="fl">숙박 인증<small>혜택 연계</small></div>
+          <div class="fl">일 · 스탬프투어<small>원조가게</small></div>
+        </div>
+        <h4 style="margin:0 0 4px">예산 3안 <i class="lb l-est">추정</i></h4>
+        <div class="bars" id="bars">
+          <div class="bar"><span>최소안</span><div class="track"><div class="fill" data-w="40" style="background:var(--sky)"></div></div><span class="v">3억 9,480만</span></div>
+          <div class="bar"><span>기본안</span><div class="track"><div class="fill" data-w="68" style="background:var(--green)"></div></div><span class="v">6억 6,675만</span></div>
+          <div class="bar"><span>확장안</span><div class="track"><div class="fill" data-w="100" style="background:var(--pink)"></div></div><span class="v">9억 7,545만</span></div>
+        </div>
+        <div class="note">⚠ 단가표가 비어 있어서 예산 단가는 <b>전부 추정</b>이에요. 견적을 받기 전에는 비교용으로만 써 주세요.</div>
+      </div>
+
+      <!-- verify -->
+      <div data-panel="verify" hidden>
+        <h3>검증 결과</h3>
+        <p class="sub">검증 에이전트 6종이 각자 관점에서 점검한 결과예요(시연용 요약).</p>
+        <table>
+          <tr><th style="width:170px">검증 에이전트</th><th>점검 내용</th><th style="width:110px">판정</th></tr>
+          <tr><td><b>근거 감사</b><br><small>evidence-auditor</small></td><td>모든 수치에 근거 라벨이 있는지. 예산 단가는 전부 추정 → 견적 확보 필요</td><td><span class="verd v-warn">보완 필요</span></td></tr>
+          <tr><td><b>충돌 점검</b><br><small>conflict-checker</small></td><td>목표 순서와 일정 충돌 확인. 결승을 토요일 밤에 둔 이유가 1박 목표와 맞음</td><td><span class="verd v-ok">통과</span></td></tr>
+          <tr><td><b>윤리 검토</b><br><small>ethics-reviewer</small></td><td>할매 말투·지역 비하 콘셉트 사용 여부</td><td><span class="verd v-ok">통과</span></td></tr>
+          <tr><td><b>중복 탐지</b><br><small>duplicate-finder</small></td><td>프로그램·동선 간 중복 항목</td><td><span class="verd v-ok">통과</span></td></tr>
+          <tr><td><b>양식 점검</b><br><small>format-checker</small></td><td>기획안 양식과 라벨 표기 형식</td><td><span class="verd v-ok">통과</span></td></tr>
+          <tr><td><b>총괄 검토</b><br><small>reviewer</small></td><td>미정 항목 5개가 가정으로 표시됐는지, 담당자 확인 전 초안 표시</td><td><span class="verd v-warn">사람 확인</span></td></tr>
+        </table>
+        <h4 style="margin:20px 0 4px">운영 준비 · 파트 지침서</h4>
+        <div class="parts">
+          <span class="chip">A 사투리 콘텐츠</span><span class="chip">B 포장마차</span><span class="chip">C 플리마켓</span><span class="chip">D 굿즈·마스코트</span>
+          <span class="chip">E</span><span class="chip">F</span><span class="chip">G</span><span class="chip">H</span><span class="chip">I</span><span class="chip">J</span>
+          <span class="chip off">K 웹 · 지침서 없음</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CYCLE ================= -->
+<section id="cycle">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <span class="sec-kicker">STEP 3 · CYCLE</span>
+        <h2>한 번으로 끝나지 않는 <span>순환형</span></h2>
+      </div>
+      <p>축제가 끝나면 운영 결과가 차년도 과제가 되고, 그 과제가 다음 해 기획조건표의 입력으로 돌아가요.</p>
+    </div>
+    <div class="card cycle">
+      <i class="spr" data-pose="k.proud" role="img" aria-label="대키미가 허리에 손을 얹은 모습"></i>
+      <div>
+        <svg viewBox="0 0 560 440" id="ring" role="img" aria-label="조건 입력, 조사, 기획, 검증, 운영 준비, 성과 정리가 이어지는 순환 구조">
+          <defs>
+            <marker id="arr" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#1F8FCB"/></marker>
+          </defs>
+        </svg>
+        <p class="cycle-cap"><span class="lb l-wait">⏳</span> 점선 단계는 <b>개최·실행 후에만</b> 알 수 있는 결과예요. 아직 열리지 않은 축제의 실적은 만들어 내지 않아요.</p>
+      </div>
+      <i class="spr" data-pose="o.praise" role="img" aria-label="외지몽이 손을 내미는 모습"></i>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div><b>대사투! 페스티벌 · 순환형 축제 기획 AI 에이전트 데모</b></div>
+    <div>이 화면은 <b>시연용 시뮬레이션</b>이에요. 실제 AI를 호출하지 않고, 미리 준비한 시나리오를 보여줘요.</div>
+    <div>내용은 대사투/2027 초안(담당자 확인 전)에서 가져왔고, 예산 수치는 모두 <b>추정</b>이에요. 확인 안 된 값은 “미정”으로 표시했어요.</div>
+    <div>마스코트: 대키미 시그니처 표정 시트 v08 · 외지몽 시그니처 표정·자세 v05(확정본 v01과 동일 파일) · 공식 색 #6DCFF5 / #008C3A</div>
+  </div>
+</footer>
+
+<script>
+/* ============ sprites ============ */
+const SHEETS={
+  k:{img:'assets/daekimi-v08.png',w:1448,h:1086},
+  o:{img:'assets/oejimong-v05.png',w:1536,h:1024}
+};
+const POSE={
+  'k.hello':[70,105,270,290],'k.proud':[1110,110,250,285],'k.av':[110,130,215,215],
+  'o.curious':[470,420,230,250],'o.praise':[1170,415,250,255],'o.av':[115,135,225,225]
+};
+document.querySelectorAll('.spr[data-pose]').forEach(initSpr);
+function initSpr(el){
+  const key=el.dataset.pose, sh=SHEETS[key[0]], r=POSE[key];
+  el.style.setProperty('--img',`url("${sh.img}")`);
+  el.style.setProperty('--sw',sh.w);el.style.setProperty('--sh',sh.h);
+  el.style.setProperty('--x',r[0]);el.style.setProperty('--y',r[1]);
+  el.style.setProperty('--w',r[2]);el.style.setProperty('--h',r[3]);
+}
+function sprHTML(key,extra=''){return `<i class="spr" data-pose="${key}" style="${extra}"></i>`}
+
+/* ============ data ============ */
+const PHASES=['조건 입력','조사','기획','검증','운영 준비','성과 정리 ⏳'];
+const AGENTS=[
+ ['researcher','조사원'],['strategist','전략가'],['flow-designer','동선 설계'],
+ ['idea-scorer','아이디어 채점'],['part-agent','파트 작성'],['evidence-auditor','근거 감사'],
+ ['conflict-checker','충돌 점검'],['duplicate-finder','중복 탐지'],['ethics-reviewer','윤리 검토'],
+ ['format-checker','양식 점검'],['reviewer','총괄 검토'],['retro-reader','회고 해석']
+];
+const L=(c,t)=>`<i class="lb l-${c}">${t}</i>`;
+const sleep=ms=>new Promise(r=>setTimeout(r,matchMedia('(prefers-reduced-motion:reduce)').matches?Math.min(ms,80):ms));
+
+/* each step: prompt, phase, tab, agents[], and bot messages */
+const STEPS=[
+ {phase:0,tab:'cond',
+  prompt:'2027년 8월 말, 두류공원에서 대구 사투리 축제를 열고 싶어. 주제는 「타지에서 온 말손님」!',
+  work:[['orch','조건표 작성 중…']],
+  bot:[`<p>좋아요! 먼저 <b>기획 조건표</b>부터 정리했어요.</p><ul><li>2027-08-20(금) ~ 08-22(일), 두류공원</li><li>메인 타깃: 타지역 2030</li><li>목표 순서: ① 1박 체류 → ② 상권 → ③ 사투리 정착</li></ul>`,
+       `<p>결정된 건 주제와 날짜뿐이라, <b>협력 기관·인력·방문객·주관 기관·예산 경로</b> 5가지는 “미정”으로 남겨 뒀어요. 제가 대신 정하지 않아요.</p><span class="link-btn">기획조건표 탭에서 보기</span>`],
+  gate:{no:'1',title:'기획 조건표 확인',text:'미정 5개 항목을 사람이 정해야 해요. 지금은 가정으로 표시하고 넘어갈까요?'}},
+ {phase:1,tab:'research',
+  prompt:'그런데 타지역 사람들이 대구말에 진짜 관심 있어? 근거가 있어?',
+  work:[['researcher','자료 조사 중…']],
+  bot:[`<p>조사해 봤어요. 근거가 되는 사실부터 말할게요.</p><ul><li>${L('ok','확인')}국립한글박물관 ‘사투리 능력고사’ 전시 관람 85,764명</li><li>${L('ok','확인')}대구 유입은 경북 74.7%, 서울 1.0% → 수도권에는 <b>첫 방문 계기</b>가 필요해요</li><li>${L('ok','확인')}대구 체류시간 -1.5% → 저녁·야간 프로그램이 필요해요</li></ul>`,
+       `<p>다만 ${L('hyp','가설')}<b>타지역 2030의 사투리 선호 설문은 없어요.</b> 그래서 온라인 사전 고사 참여율로 먼저 검증하기로 했어요.</p><span class="link-btn">조사 탭에서 보기</span>`],
+  gate:null},
+ {phase:2,tab:'plan',
+  prompt:'좋아, 그럼 3일 동안 뭘 하게 돼? 예산은 얼마나 들어?',
+  work:[['strategist','기획 방향 설계…'],['flow-designer','동선 설계…'],['idea-scorer','아이디어 채점…']],
+  bot:[`<p>3대 프로그램으로 짰어요.</p><ul><li><b>말손님 vs 토박이</b> 사투리 토론 대회</li><li><b>말로 주문하는</b> 10미 포장마차</li><li><b>대구 로컬 장터</b> 플리마켓</li></ul>`,
+       `<p>결승은 <b>토요일 밤</b>에 뒀어요. 1박 체류가 1순위 목표라서, 금요일보다 숙박을 유도하기 좋아요.</p><p>예산은 최소 3억 9,480만 / 기본 6억 6,675만 / 확장 9억 7,545만 원이에요. ${L('est','추정')}단가표가 비어 있어서 전부 추정이에요.</p><span class="link-btn">기획안 탭에서 보기</span>`],
+  gate:{no:'2',title:'기획 방향 확인',text:'프로그램 구성과 토요일 밤 결승을 이 방향으로 진행할까요?'}},
+ {phase:3,tab:'verify',
+  prompt:'이거 그대로 믿어도 돼? 검증해 줘!',
+  work:[['evidence-auditor','근거 감사…'],['conflict-checker','충돌 점검…'],['ethics-reviewer','윤리 검토…'],['duplicate-finder','중복 탐지…'],['format-checker','양식 점검…'],['reviewer','총괄 검토…']],
+  warn:['evidence-auditor','reviewer'],
+  bot:[`<p>검증 에이전트 6종이 확인했어요. 4종은 통과, 2종은 <b>보완이 필요해요</b>.</p><ul><li>${L('est','근거 감사')}예산 단가가 전부 추정 → <b>견적을 받아야</b> 해요</li><li>${L('hyp','총괄 검토')}담당자 확인 전 초안이라 사람이 최종 확인해야 해요</li><li>윤리·충돌·중복·양식은 문제가 없었어요</li></ul><span class="link-btn">검증 탭에서 보기</span>`],
+  gate:{no:'3',title:'검증 결과 확인',text:'보완 필요 2건을 담당자가 확인하고, 운영 준비로 넘어갈까요?'}},
+ {phase:4,tab:'verify',
+  prompt:'그럼 현장 운영 지침은 어디까지 준비돼 있어?',
+  work:[['part-agent','파트 지침 연결…']],
+  bot:[`<p>파트별 세부 지침서가 <b>A~J까지</b> 준비돼 있어요. 사투리 콘텐츠(A), 포장마차(B), 플리마켓(C), 굿즈(D)처럼 파트 에이전트가 해당 지침을 읽고 문서 초안을 만들어요.</p><p>아직 없는 건 <b>K(웹) 지침서</b>예요. 이 부분은 비어 있다고 솔직하게 표시해 둘게요.</p>`],
+  gate:null},
+ {phase:5,tab:'cond',
+  prompt:'축제가 끝나면 어떻게 돼? 내년에도 쓸 수 있어?',
+  work:[['retro-reader','회고 구조 준비…']],
+  bot:[`<p>${L('wait','⏳')}축제는 아직 열리지 않았으니 <b>성과는 만들어 내지 않아요.</b></p><p>개최 후에 <b>운영 결과</b>를 넣어 주면 → 차년도 과제로 정리하고 → 다음 해 <b>기획 조건표의 입력</b>으로 돌려 보내요. 그게 순환형이에요.</p><span class="link-btn">아래 순환 구조 보기</span>`],
+  gate:null,last:true}
+];
+
+/* ============ DOM ============ */
+const $=s=>document.querySelector(s);
+const log=$('#log'),field=$('#field'),sendBtn=$('#sendBtn'),autoBtn=$('#autoBtn'),resetBtn=$('#resetBtn');
+const phasesEl=$('#phases'),agentsEl=$('#agents'),orch=$('#orch'),orchSt=$('#orchSt');
+let idx=0,busy=false,auto=false,runId=0;
+
+function buildSide(){
+  phasesEl.innerHTML=PHASES.map((p,i)=>`<div class="ph ${i===5?'wait':''}" data-ph="${i}"><b>${i+1}</b>${p}</div>`).join('');
+  agentsEl.innerHTML=AGENTS.map(([id,name])=>`<div class="ag" data-ag="${id}"><b>${name}</b><code>${id}</code><span class="st">대기</span></div>`).join('');
+}
+function setPhase(n){
+  phasesEl.querySelectorAll('.ph').forEach(el=>{
+    const i=+el.dataset.ph;
+    el.classList.toggle('on',i===n);
+    if(i!==5) el.classList.toggle('done',i<n);
+  });
+}
+function setAgent(id,state,text){
+  if(id==='orch'){
+    orch.classList.remove('work','done');
+    if(state) orch.classList.add(state);
+    orchSt.textContent=text||'대기 중';return;
+  }
+  const el=agentsEl.querySelector(`[data-ag="${id}"]`);if(!el)return;
+  el.classList.remove('work','done','warn');
+  if(state) el.classList.add(state);
+  el.querySelector('.st').textContent=text||'대기';
+}
+function resetAgents(){
+  setAgent('orch',null,'대기 중');
+  AGENTS.forEach(([id])=>setAgent(id,null,'대기'));
+}
+
+function scrollLog(){log.scrollTop=log.scrollHeight}
+function msgEl(role,inner){
+  const k=role==='bot';
+  const d=document.createElement('div');d.className='msg '+(k?'bot':'user');
+  d.innerHTML=`<span class="av ${k?'k':'o'}">${sprHTML(k?'k.av':'o.av')}</span><div><div class="who">${k?'대키미':'외지몽'}</div><div class="bub">${inner}</div></div>`;
+  d.querySelectorAll('.spr').forEach(initSpr);
+  log.appendChild(d);scrollLog();return d;
+}
+function sys(text){const d=document.createElement('div');d.className='sys';d.textContent=text;log.appendChild(d);scrollLog()}
+
+async function typeInField(text,id){
+  field.classList.add('has','caret');field.textContent='';
+  for(let i=0;i<text.length;i++){
+    if(id!==runId)return false;
+    field.textContent+=text[i];
+    await sleep(auto?14:20);
+  }
+  field.classList.remove('caret');return true;
+}
+
+function showTab(name,flag=true){
+  document.querySelectorAll('.tab').forEach(t=>{
+    const on=t.dataset.tab===name;
+    t.setAttribute('aria-selected',on);
+    if(on)t.classList.remove('new');
+  });
+  document.querySelectorAll('[data-panel]').forEach(p=>p.hidden=p.dataset.panel!==name);
+  if(name==='plan')animateBars();
+}
+function flagTab(name){const t=document.querySelector(`.tab[data-tab="${name}"]`);if(t&&t.getAttribute('aria-selected')!=='true')t.classList.add('new')}
+function animateBars(){
+  document.querySelectorAll('#bars .fill').forEach(f=>{f.style.width='0';requestAnimationFrame(()=>requestAnimationFrame(()=>f.style.width=f.dataset.w+'%'))});
+}
+
+function askGate(g,id){
+  return new Promise(res=>{
+    const d=document.createElement('div');d.className='gate';
+    d.innerHTML=`<h4>사람 확인 ${g.no} · ${g.title}</h4><p>${g.text}</p><div class="row"><button class="btn btn-green" data-ok>승인하고 계속</button><button class="btn btn-ghost" data-edit>수정할게요</button></div>`;
+    log.appendChild(d);scrollLog();
+    const done=(msg)=>{d.querySelector('.row').outerHTML=`<div class="done-note">✔ ${msg}</div>`;res(true)};
+    d.querySelector('[data-ok]').onclick=()=>done('승인했어요');
+    d.querySelector('[data-edit]').onclick=()=>{ sys('데모에서는 수정 입력을 지원하지 않아요. 승인으로 이어 갈게요.'); };
+    if(auto) setTimeout(()=>{ if(id===runId && d.querySelector('[data-ok]')) done('승인했어요 (자동 재생)'); },1500);
+  });
+}
+
+async function runStep(){
+  if(busy||idx>=STEPS.length)return;
+  busy=true;sendBtn.disabled=true;const id=++runId;
+  const s=STEPS[idx];
+  if(!(await typeInField(s.prompt,id))){busy=false;return}
+  await sleep(250);
+  field.classList.remove('has');field.textContent='';
+  msgEl('user',s.prompt);
+  setPhase(s.phase);
+  setAgent('orch','work','단계 배정 중…');
+  await sleep(500);
+  // typing indicator
+  const typing=msgEl('bot','<span class="typing"><i></i><i></i><i></i></span>');
+  s.work.forEach(([a,t])=>setAgent(a,'work',t));
+  if(s.work.length>1){ // staggered completion for multi-agent steps
+    for(let i=0;i<s.work.length;i++){
+      await sleep(s.work.length>3?450:600);
+      if(id!==runId)return;
+      const [a]=s.work[i];
+      setAgent(a,s.warn&&s.warn.includes(a)?'warn':'done',s.warn&&s.warn.includes(a)?'보완 필요':'완료');
+    }
+  } else { await sleep(1100); const [a]=s.work[0]; setAgent(a,'done','완료'); }
+  if(id!==runId)return;
+  typing.remove();
+  showTab(s.tab);
+  for(const html of s.bot){
+    msgEl('bot',html);
+    await sleep(700);if(id!==runId)return;
+  }
+  setAgent('orch','done','완료');
+  if(s.gate){
+    setPhase(s.phase);
+    await askGate(s.gate,id);
+    if(id!==runId)return;
+    sys(`사람 확인 ${s.gate.no} 완료 · 다음 단계로 이동`);
+  }
+  idx++;
+  if(s.phase===5||s.last){ // final
+    phasesEl.querySelectorAll('.ph').forEach(el=>el.classList.remove('on'));
+    document.querySelectorAll('.ph').forEach((el,i)=>{if(i<5)el.classList.add('done')});
+    sys('데모가 끝났어요. 처음부터 다시 볼 수 있어요.');
+    field.classList.remove('has');field.textContent='데모를 모두 마쳤어요 🎉';
+    sendBtn.textContent='다시 보기 ↺';sendBtn.disabled=false;busy=false;
+    sendBtn.dataset.mode='reset';
+    document.querySelector('#cycle').scrollIntoView({behavior:'smooth'});
+    return;
+  }
+  prepareNext();busy=false;
+  if(auto) setTimeout(()=>{if(!busy&&auto)runStep()},700);
+}
+function prepareNext(){
+  field.classList.remove('has','caret');
+  field.textContent='다음 질문: “'+STEPS[idx].prompt.slice(0,28)+'…”';
+  sendBtn.disabled=false;sendBtn.textContent='보내기 ▸';delete sendBtn.dataset.mode;
+}
+function reset(){
+  runId++;busy=false;idx=0;
+  log.innerHTML='';buildSide();resetAgents();
+  setPhase(-1);showTab('cond');document.querySelectorAll('.tab').forEach(t=>t.classList.remove('new'));
+  msgEl('bot',`<p>안녕! 나는 <b>대키미</b>야. 대사투 페스티벌 기획을 도와줄게.</p><p>옆에 있는 <b>외지몽</b>이 궁금한 걸 물어보면, 내가 조사하고 기획해서 알려 줄게. 아래 <b>보내기</b>를 눌러 시작해 봐!</p>`);
+  prepareNext();sendBtn.dataset.mode='';
+}
+sendBtn.addEventListener('click',()=>{ if(sendBtn.dataset.mode==='reset'){reset();return} runStep(); });
+resetBtn.addEventListener('click',reset);
+autoBtn.addEventListener('click',()=>{
+  auto=!auto;autoBtn.setAttribute('aria-pressed',auto);
+  if(auto&&!busy&&sendBtn.dataset.mode!=='reset')runStep();
+});
+document.querySelectorAll('.tab').forEach(t=>t.addEventListener('click',()=>showTab(t.dataset.tab)));
+
+/* ============ cycle ring ============ */
+(function ring(){
+  const svg=$('#ring'),cx=280,cy=215,R=160;
+  const N=[['조건 입력','기획조건표'],['조사','근거 라벨'],['기획','3대 프로그램'],['검증','6종 점검'],['운영 준비','파트 A~K'],['성과 정리','차년도 과제']];
+  const pts=N.map((_,i)=>{const a=(-90+60*i)*Math.PI/180;return [cx+R*Math.cos(a),cy+R*Math.sin(a)]});
+  let h='';
+  // arcs
+  for(let i=0;i<6;i++){
+    const a0=(-90+60*i+17)*Math.PI/180,a1=(-90+60*(i+1)-17)*Math.PI/180;
+    const x0=cx+R*Math.cos(a0),y0=cy+R*Math.sin(a0),x1=cx+R*Math.cos(a1),y1=cy+R*Math.sin(a1);
+    const dash=(i===5||i===4)?'stroke-dasharray="7 6"':'';
+    h+=`<path d="M${x0.toFixed(1)} ${y0.toFixed(1)} A${R} ${R} 0 0 1 ${x1.toFixed(1)} ${y1.toFixed(1)}" fill="none" stroke="#1F8FCB" stroke-width="4" ${dash} marker-end="url(#arr)"/>`;
+  }
+  pts.forEach(([x,y],i)=>{
+    const future=i===5;
+    h+=`<g><circle class="node ${future?'future':''}" cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="46"/>
+    <circle cx="${(x-34).toFixed(1)}" cy="${(y-34).toFixed(1)}" r="13" fill="${future?'#b8a37a':'#008C3A'}"/>
+    <text class="nnum" x="${(x-34).toFixed(1)}" y="${(y-29).toFixed(1)}">${i+1}</text>
+    <text class="nt" x="${x.toFixed(1)}" y="${(y+2).toFixed(1)}">${N[i][0]}</text>
+    <text class="ns" x="${x.toFixed(1)}" y="${(y+20).toFixed(1)}">${future?'⏳ '+N[i][1]:N[i][1]}</text></g>`;
+  });
+  h+=`<text class="nt" x="${cx}" y="${cy-4}" style="font-size:20px">다음 해 입력</text><text class="ns" x="${cx}" y="${cy+16}">결과가 다시 기획의 재료가 돼요</text>`;
+  svg.insertAdjacentHTML('beforeend',h);
+})();
+
+/* ============ go ============ */
+reset();
+</script>
+</body>
+</html>
