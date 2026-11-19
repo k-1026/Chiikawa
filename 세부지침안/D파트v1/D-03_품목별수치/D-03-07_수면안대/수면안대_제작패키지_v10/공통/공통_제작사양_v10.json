@@ -1,7 +1,7 @@
 {
-  "version": "V09",
+  "version": "V10",
   "status": "first_sample_design_proposal_not_production_verified",
-  "date": "2026-11-18",
+  "date": "2026-11-19",
   "units": "mm",
   "body": {
     "width": 200,
@@ -78,10 +78,10 @@
     {
       "key": "DK",
       "name": "대키미",
-      "word": "잠와",
+      "word": "잠온다",
       "color": "#6DCFF5",
       "text": "#F3A2B8",
-      "photo": "대키미_잠와_정면후면_상품이미지_v09.png",
+      "photo": "대키미_잠온다_정면후면_상품이미지_v10.png",
       "ears": "삼각 고양이 귀 2개 · 안쪽 분홍",
       "earSize": "폭 34 × 노출높이 25 mm",
       "earPositions": "왼쪽 x=18~52, 오른쪽 x=148~182; 귀 끝 y=-25",
@@ -90,10 +90,10 @@
     {
       "key": "OE",
       "name": "외지몽",
-      "word": "졸려",
+      "word": "졸리다",
       "color": "#008C3A",
       "text": "#F6EBD8",
-      "photo": "외지몽_졸려_정면후면_상품이미지_v09.png",
+      "photo": "외지몽_졸리다_정면후면_상품이미지_v10.png",
       "ears": "길고 둥근 강아지 처진 귀 2개",
       "earSize": "폭 30 × 길이 82 mm",
       "earPositions": "상단 고정점 (15,5), (185,5); 귀가 앞쪽 양옆에 내려옴",
