@@ -6,8 +6,8 @@
 
 /* ============ sprites (마스코트 시트 크롭) ============ */
 const SHEETS={
-  k:{img:'{{IMG:assets/daekimi-v08.jpg}}',w:1448,h:1086},
-  o:{img:'{{IMG:assets/oejimong-v05.jpg}}',w:1536,h:1024}
+  k:{img:'{{IMG:assets_v01/daekimi-v08.jpg}}',w:1448,h:1086},
+  o:{img:'{{IMG:assets_v01/oejimong-v05.jpg}}',w:1536,h:1024}
 };
 const POSE={
   'k.hello':[70,105,270,290],'k.proud':[1110,110,250,285],'k.av':[110,130,215,215],'k.peek':[60,750,250,280],
@@ -31,18 +31,22 @@ const sleep=ms=>new Promise(r=>setTimeout(r,matchMedia('(prefers-reduced-motion:
 const L=(c,t)=>`<i class="lb l-${c}">${t}</i>`;
 const SRC=t=>`<small class="src">출처: ${t}</small>`;
 const FALLBACK='에이전트 데모 버전이라서 개발 중 입니다! 불편을 드려 죄송합니다.';
+const PIC={k:'{{IMG:assets_v01/av_daekimi.png}}',o:'{{IMG:assets_v01/av_oejimong.png}}'};
+const THINK_VIDEO='{{IMG:assets_v01/thinking.mp4}}';
 
 /* ============ 굿즈 데이터 (D 파트 지침서 D-03 · 상품 이미지) ============ */
 const IMG={
-  keyring:'{{IMG:assets/goods/keyring.jpg}}',sticker:'{{IMG:assets/goods/sticker.jpg}}',headband:'{{IMG:assets/goods/headband.jpg}}',
-  magnet:'{{IMG:assets/goods/magnet.jpg}}',ecobag:'{{IMG:assets/goods/ecobag.jpg}}',tshirt:'{{IMG:assets/goods/tshirt.jpg}}',
-  eyemask:'{{IMG:assets/goods/eyemask.jpg}}',tumbler:'{{IMG:assets/goods/tumbler.jpg}}'
+  keyring:'{{IMG:assets_v01/goods/keyring.jpg}}',sticker:'{{IMG:assets_v01/goods/sticker.jpg}}',headband:'{{IMG:assets_v01/goods/headband.jpg}}',
+  magnet:'{{IMG:assets_v01/goods/magnet.jpg}}',ecobag:'{{IMG:assets_v01/goods/ecobag.jpg}}',tshirt:'{{IMG:assets_v01/goods/tshirt.jpg}}',
+  eyemask:'{{IMG:assets_v01/goods/eyemask.jpg}}',tumbler:'{{IMG:assets_v01/goods/tumbler.jpg}}',
+  keyring_o:'{{IMG:assets_v01/goods/keyring_o.jpg}}',magnet_o:'{{IMG:assets_v01/goods/magnet_o.jpg}}',tshirt_o:'{{IMG:assets_v01/goods/tshirt_o.jpg}}',eyemask_o:'{{IMG:assets_v01/goods/eyemask_o.jpg}}',ecobag_blue:'{{IMG:assets_v01/goods/ecobag_blue.jpg}}',
+  headband_k:'{{IMG:assets_v01/goods/headband_k.jpg}}',headband_o:'{{IMG:assets_v01/goods/headband_o.jpg}}'
 };
 const GOODS=[
  {id:'keyring',name:'아크릴 키링',img:IMG.keyring,st:'상품 이미지 v01 · 검토용',sheet:'D-03-01',
   line:'가방에 달고 다니는 캐릭터·사투리 키링',
   talk:'가방이나 열쇠에 달고 다니는 키링이에요. 내 얼굴이 새겨진 고리 하나로 사투리까지 같이 들고 다니는 기라!',
-  pts:['캐릭터형(대키미·외지몽 성체) + 사투리형(문구와 뜻풀이) 두 종류예요','사진 속 문구: 봤제! / 와 이카노! / 니, 머라카노?','봉제 키링은 빼고 아크릴로 정했어요(2026-11-17 담당자 결정)','캐릭터형 + 사투리형을 묶은 짝 세트는 제안 단계예요']},
+  pts:['캐릭터형(대키미·외지몽 성체) + 사투리형(문구와 뜻풀이) 두 종류예요','사진 속 문구: 봤제! / 와 이카노! / 니, 머라카노?','캐릭터형 + 사투리형을 묶은 짝 세트는 제안 단계예요']},
  {id:'sticker',name:'스티커 세트',img:IMG.sticker,st:'상품 시안 v03',sheet:'D-03-02',
   line:'가장 가볍게 시작하는 입문 굿즈',
   talk:'제일 가벼운 가격대로 만나 보라고 만든 입문 굿즈예요. 노트북이나 다이어리에 붙이면 사투리가 같이 따라와요!',
@@ -73,6 +77,20 @@ const GOODS=[
   pts:['900mL와 350mL 두 가지 용량으로 디자인이 확정되어 있어요','곡면 위에서도 캐릭터·사투리·로고가 읽히게 만들어요','소재·뚜껑·곡면 인쇄 공법과 식품 접촉 안전 기준은 업체 확인이 필요해요']}
 ];
 const G=Object.fromEntries(GOODS.map(g=>[g.id,g]));
+/* 외지몽 버전 (D-03 외지몽 상품 이미지) */
+G.keyring.o={img:IMG.keyring_o,st:'양면 인쇄 검토용 v01',
+  talk:'저는 외지몽이에요! 질문하는 친구라서 제 키링 문구도 "나도 할래!", "이게 뭐야?", "아하, 그렇구나!" 같은 질문·반응 말이에요.',
+  pts:['외지몽 성체 형태로 컷한 아크릴 키링이에요(캐릭터형 옵션은 대키미·외지몽 2종)','양면 인쇄 검토용 OM-01~03: 나도 할래! / 이게 뭐야? / 아하, 그렇구나!','시트 규칙상 사투리 문구의 화자는 대키미가 기본이고, 외지몽 문구는 질문·반응 형태로 써요']};
+G.magnet.o={img:IMG.magnet_o,st:'상품 이미지 v02',
+  talk:'제 마그넷은 앞면에 제가 손을 흔들고, 뒷면에는 자석이 붙어 있어요. 냉장고에 붙이면 제가 인사해요!',
+  pts:['외지몽 단독 마그넷이에요(단독 옵션 3종 = 대키미 2 + 외지몽 1, 제안 단계)','정면은 손 흔드는 외지몽 컷, 후면은 자석이 붙는 면이에요','대키미 마그넷과 나란히 붙이면 대화가 이어지는 듀오 판매는 제안 단계예요','자석 구조·크기·안전은 업체와 운영 파트 확인이 필요해요']};
+G.tshirt.o={img:IMG.tshirt_o,st:'샘플 시안 v03 · 외지인 편',
+  talk:'저는 "외지인" 티셔츠예요! 낯선 사투리를 해석하는 질문하는 쪽이라서, 뒷면에 제 속마음이 적혀 있어요.',
+  pts:['흰 티셔츠에 초록(#008C3A) 프린트, 앞면 큰 글자 "외지인"과 왼쪽 가슴 작은 외지몽 머리예요','뒷면 문구: "지금 사투리 해석중입니다… 웃고는 있는데 무슨 말인지 잘 모르겠습니다. 두리번거리고 있다면 길을 잃은 거니 도와주세요.." (기존 시안 원문)','문구 원문 보존본과 개선안 중 무엇을 쓸지는 아직 정하지 않았어요','핏·사이즈·공법은 업체 확인이 필요해요']};
+G.eyemask.o={img:IMG.eyemask_o,st:'상품 이미지 v09',
+  talk:'제 안대는 크림색 글씨로 "졸려"라고 적혀 있어요. 대키미의 "잠와"랑 짝이라서 같은 말인데 표현이 달라요!',
+  pts:['초록색 강아지 귀 모양과 구슬 더듬이 2개가 달려 있어요(이목구비 없이 글자만)','정면 크림색 "졸려" 레터링, 후면은 밴드와 안감이 보이는 면이에요','대키미 "잠와" 안대와 짝으로 쓰는 안이에요(짝 세트는 제안 단계)','안감·밴드·소재와 안전 기준은 업체 확인이 필요해요']};
+
 
 /* ============ 컨셉 데이터 ============ */
 const CONCEPTS=[
@@ -207,16 +225,15 @@ function kwScore(qj,kw){
   }
   return best;
 }
-function matchTopic(q){
-  const qj=J(q);if(!qj)return null;
-  let best=null,bs=0;
-  for(const t of KB){
-    let s=0;
-    for(const k of t.kw){const v=kwScore(qj,k);if(v>0)s+=v*(1+Math.min(J(k).length,12)/12);}
-    if(s>bs){bs=s;best=t;}
-  }
-  return bs>=0.7?best:null;
+function rankTopics(q){
+  const qj=J(q);if(!qj)return [];
+  return KB.map(t=>{
+    let sc=0;
+    for(const k of t.kw){const v=t.exact?(qj.includes(J(k))?1:0):kwScore(qj,k);if(v>0)sc+=v*(1+Math.min(J(k).length,12)/12);}
+    return [t,sc>0?sc+(t.bonus||0):0];
+  }).filter(x=>x[1]>0).sort((a,b)=>b[1]-a[1]);
 }
+function matchTopic(q){const r=rankTopics(q);return r.length&&r[0][1]>=0.7?r[0][0]:null}
 function matchConcept(q){
   const qj=J(q);if(!qj)return null;
   let best=null,bs=0;
@@ -236,16 +253,16 @@ const KB=[
  {id:'pocha',kw:['포장마차','10미','십미','먹거리','음식','막창','납작만두','야끼우동','뭉티기','맛집','원조가게'],a:()=>({html:`<p><b>말로 주문하는 10미 포장마차</b>예요.</p><ul><li>기본안 조리 부스 15동(10미 각 1동 + 인기 5동) ${L('asm','가정')}</li><li>운영 17:00~23:00, 낮에는 폭염으로 최소 운영</li><li><b>사투리 주문 미션</b>(선택): "막창 2인분 주이소"처럼 대구말로 주문하면 스탬프 1개. 표준어 주문도 똑같이 받아요</li><li>부스마다 시내 원조가게 QR 카드 → 일요일 스탬프투어로 연결</li></ul>${SRC('03_기획안 6-3')}`,ch:[ASK('스탬프투어는?','스탬프투어 알려줘'),ASK('예산은?','예산 알려줘')]})},
  {id:'market',kw:['플리마켓','장터','소상공인','부스','마켓','로컬장터'],a:()=>({html:`<p><b>대구 로컬 장터</b>(소상공인 플리마켓)예요.</p><ul><li>기본안 몽골텐트 70동 중 플리마켓 50동 + 체험·협업 20동 ${L('asm','가정')}</li><li>선정 기준: 대구 로컬성 30 · 상품성 30 · 가격 20 · 사투리·대구 테마 연계 20(가점)</li><li>운영 15:00~22:00, 낮에는 그늘 구역 위주 배치</li></ul>${SRC('03_기획안 6-4')}`,ch:[ASK('굿즈도 팔아?','굿즈 보여줘')]})},
  {id:'budget',kw:['예산','비용','얼마','견적','돈','자금','금액'],a:()=>({html:`<p>2027 「타지에서 온 말손님」 기준 예산 3안이에요. ${L('est','추정')}</p><ul><li><b>최소</b> 3억 9,480만 원</li><li><b>기본</b> 6억 6,675만 원</li><li><b>확장</b> 9억 7,545만 원</li></ul><p>단가표가 비어 있어서 <b>전부 추정</b>이에요. 견적 확보 전에는 비교용으로만 써 주세요. 큰 항목은 안전관리 인력(7,200만), 메인 무대(5,000만), 온라인 광고(5,000만) 순이에요(기본안).</p>${SRC('03_기획안 12장')}`,ch:[ASK('예산 줄이려면?','예산을 줄이려면 어떻게 해?'),ASK('내 기획 틀 만들기','컨셉 추천해줘')]})},
- {id:'cut',kw:['줄이','절약','아끼','싸게','저렴','최소안'],a:()=>({html:`<p>최소안(3억 9,480만 ${L('est','추정')})은 이렇게 줄여요.</p><ul><li>메인 무대 규모 축소, 서브 무대(사랑방) 제외</li><li>부스 40동 · 조리 10동 · 안전 80명 · 스태프 50명</li><li>온라인은 변환기 제외, 성수 원정 팝업 제외</li></ul><p>다만 안전·폭염 대응 비용은 줄이는 데 한계가 있어요. 수입(출점 수수료, 협찬)은 확정 전이라 예산에서 빼 뒀어요.</p>${SRC('03_기획안 12장')}`,ch:[ASK('예산 전체 보기','예산 알려줘')]})},
+ {id:'cut',bonus:0.35,kw:['줄이','절약','아끼','싸게','저렴','최소안'],a:()=>({html:`<p>최소안(3억 9,480만 ${L('est','추정')})은 이렇게 줄여요.</p><ul><li>메인 무대 규모 축소, 서브 무대(사랑방) 제외</li><li>부스 40동 · 조리 10동 · 안전 80명 · 스태프 50명</li><li>온라인은 변환기 제외, 성수 원정 팝업 제외</li></ul><p>다만 안전·폭염 대응 비용은 줄이는 데 한계가 있어요. 수입(출점 수수료, 협찬)은 확정 전이라 예산에서 빼 뒀어요.</p>${SRC('03_기획안 12장')}`,ch:[ASK('예산 전체 보기','예산 알려줘')]})},
  {id:'schedule',kw:['일정','날짜','언제','기간','며칠','개최','8월','몇일','시간표'],a:()=>({html:`<p><b>2027-08-20(금) ~ 08-22(일)</b> 3일이에요. 개강 전 여유가 큰 8월 말을 골랐어요.</p><ul><li>금: 15시 장터 · 17시 포장마차 · 19시 개막식 + 토론 16강</li><li>토: 8강 · 19:30 4강 · <b>20:30 결승</b> → 시상·수료식</li><li>일: 오전 스탬프투어 · 14시 한 마디 토론 · 19시 폐막 갈라 · 21시 마감</li></ul><p>폭염 때문에 12~16시 야외 핵심 프로그램은 없어요.</p>${SRC('03_기획안 11장')}`,ch:[ASK('장소는 어디야?','장소가 어디야?'),ASK('한 해 일정은?','준비 일정 알려줘')]})},
  {id:'prep',kw:['준비일정','추진','역산','디데이','언제부터'],a:()=>({html:`<p>축제일(D-day)에서 거꾸로 센 준비 일정이에요.</p><ul><li><b>2026-11</b> 예산 확보 확인(가장 급해요)</li><li>12월 주관 기관 선정 · 2027-02 두류공원 대관 신청</li><li>3월 협력 기관 협약 · 4~7월 참가자·업체 모집</li><li><b>5월 22일(D-90)</b> 온라인 사투리 고사 오픈</li><li>6~7월 안전관리계획 제출 · 8월 13일 리허설</li></ul>${L('asm','가정')} 실제 소요 기간은 축제 후 조정해요.${SRC('01_기획조건표 8장')}`,ch:[]})},
- {id:'place',kw:['장소','두류공원','어디서','어디에서','치맥','야외음악당','구역','위치'],a:()=>({html:`<p>장소는 <b>두류공원(대구 달서구)</b>이에요. 같은 곳에서 치맥페스티벌 2024가 첫날 약 20만 명을 운영했어요 ${L('ok','확인')}(대구시 뉴스룸).</p><ul><li><b>코오롱 야외음악당</b>: 토론 대회 '말판' 메인 무대</li><li><b>2.28 자유광장</b>: 10미 포장마차 + 휴게 테이블</li><li><b>잔디광장</b>: 로컬 장터</li><li><b>실내 사랑방</b>: 대구문화예술회관 대관 가정, 냉방 쉼터 겸용</li></ul>${L('asm','가정')} 대관 가능 여부는 미확인이에요.${SRC('03_기획안 11~12장')}`,ch:[]})},
+ {id:'place',kw:['장소','두류공원','어디서','어디에서','치맥'],a:()=>({html:`<p>장소는 <b>두류공원(대구 달서구)</b>이에요. 같은 곳에서 치맥페스티벌 2024가 첫날 약 20만 명을 운영했어요 ${L('ok','확인')}(대구시 뉴스룸).</p><ul><li><b>코오롱 야외음악당</b>: 토론 대회 '말판' 메인 무대</li><li><b>2.28 자유광장</b>: 10미 포장마차 + 휴게 테이블</li><li><b>잔디광장</b>: 로컬 장터</li><li><b>실내 사랑방</b>: 대구문화예술회관 대관 가정, 냉방 쉼터 겸용</li></ul>${L('asm','가정')} 대관 가능 여부는 미확인이에요.${SRC('03_기획안 11~12장')}`,ch:[{label:'축제 지도 보기',act:'goto',sel:'#map'}]})},
  {id:'target',kw:['타깃','타겟','대상','누구','2030','손님','관객','참가자층'],a:()=>({html:`<p>메인은 <b>타지역(수도권·충청·호남 등) 2030</b>이에요. 서브는 대구·경북 2030 토박이와 개강 전 대학생이에요.</p><p>이유: 대구 유입이 경북 74.7%, 서울 1.0%라 수도권에는 첫 방문 계기가 필요해요 ${L('ok','확인')}. 다만 타지역 2030의 사투리 선호 설문은 없어서 ${L('hyp','가설')} 사전 고사 참여율로 검증해요.</p>${SRC('03_기획안 4장 · 02_조사보고서')}`,ch:[ASK('홍보는 어떻게?','홍보는 어떻게 해?')]})},
  {id:'stay',kw:['체류','숙박','1박','당일치기','일박','잠자','머물'],a:()=>({html:`<p>1순위 목표가 <b>1박 이상 체류</b>예요. 대구는 체류시간이 -1.5% ${L('ok','확인')}라 저녁·야간 프로그램이 필요해요.</p><ul><li><b>토요일 밤 결승</b>(20:30)</li><li><b>숙박 인증 혜택</b>: 대구로페이 1인 2만 원 ${L('est','추정')}</li><li><b>일요일 원조가게 스탬프투어</b>: 3곳 방문 시 1만 원 ${L('est','추정')}</li></ul>${SRC('03_기획안 2·6장')}`,ch:[ASK('내 기획 틀 만들기','컨셉 추천해줘')]})},
  {id:'stamp',kw:['스탬프','원조가게투어','투어'],a:()=>({html:`<p><b>원조가게 스탬프투어</b>(일요일 오전~)예요. 시내 10미 원조가게 3곳을 방문하면 대구로페이 1만 원을 줘요 ${L('est','추정')}. 축제장 밖 소비로 이어지는 장치지만 업소 협조가 필요해요.</p>${SRC('03_기획안 6-5')}`,ch:[]})},
- {id:'promo',kw:['홍보','마케팅','슬로건','문구','카피','sns','인스타','광고','포스터'],a:()=>({html:`<p>2027 홍보 흐름과 문구 예시예요.</p><ul><li><b>D-90</b> "대구말, 시험 함 쳐 볼래?" (온라인 고사 오픈)</li><li><b>D-80~45</b> "토박이랑 붙어 볼 말손님 구함" (숏폼 패러디)</li><li><b>D-30~1</b> "대구 가서 진짜 대구말 들어 보자" (결승 대진·숙박 혜택 공개)</li></ul><p>메인 슬로건 후보: <b>"대구말, 시험 보고 놀러 온나"</b>. 마스코트 핵심 메시지는 <b>"말이 달라도, 친구가 된다."</b>예요.</p>${SRC('03_기획안 4·10장 · Mascot IP 지침')}`,ch:[]})},
+ {id:'promo',kw:['홍보','마케팅','슬로건','문구','카피','sns','인스타','광고','포스터'],a:()=>({html:`<p>2027 홍보 흐름과 문구 예시예요.</p><ul><li><b>D-90</b> "대구말, 시험 함 쳐 볼래?" (온라인 고사 오픈)</li><li><b>D-80~45</b> "토박이랑 붙어 볼 말손님 구함" (숏폼 패러디)</li><li><b>D-30~1</b> "대구 가서 진짜 대구말 들어 보자" (결승 대진·숙박 혜택 공개)</li></ul><p>메인 슬로건 후보: <b>"대구말, 시험 보고 놀러 온나"</b>. 마스코트 핵심 메시지는 <b>"표현이 달라도, 친구가 된다."</b>예요.</p>${SRC('03_기획안 4·10장 · Mascot PART 1')}`,ch:[]})},
  {id:'heat',kw:['폭염','더위','안전','날씨','우천','온열','인파','사고','비오면'],a:()=>({html:`<p>폭염·안전 원칙이에요.</p><ul><li><b>12:00~16:00 야외 핵심 프로그램 없음</b>, 낮에는 실내 사랑방(냉방 쉼터) 중심</li><li>구급차 1대 + 의료 인력 3일 상주</li><li>순간 최대 인파 <b>3만 명 이상</b>이면 행안부 중점관리 대상이라 안전관리계획 범위를 먼저 판단해요 ${L('ok','확인')}</li><li>우천 시 텐트 연결·실내 일부 이전</li></ul>${SRC('01_기획조건표 2장 · 03_기획안 11~12장')}`,ch:[]})},
- {id:'mascot',kw:['마스코트','마스콧','마스코','대키미','외지몽','캐릭터','얼라별','우주선','대구얼라들'],a:()=>({html:`<p>공식 마스코트는 두 친구예요.</p><ul><li><b>대키미</b>: 대구 토박이 고양이 외계인(하늘색 #6DCFF5). 사투리를 알려 주는 설명하는 친구</li><li><b>외지몽</b>: 우주에서 온 강아지 외계인(초록 #008C3A). 궁금해서 질문하는 친구</li></ul><p>둘의 고향 행성이 <b>얼라별</b>이고, 외지몽은 우주선을 타고 대구에 왔어요. 핵심 메시지는 <b>"말이 달라도, 친구가 된다."</b>예요.</p>${SRC('Mascot/마스코트 기본 지침 PART 1~2 · 세계관 및 소품')}`,ch:[ASK('마스코트 굿즈는?','굿즈 보여줘')]})},
+ {id:'mascot',kw:['마스코트','마스콧','마스코','캐릭터','대구얼라들','대키미소개','외지몽소개','대키미누구','외지몽누구','대키미가누구','외지몽이누구'],a:()=>({html:`<p>공식 마스코트는 두 친구예요.</p><ul><li><b>대키미</b>: 대구 토박이 고양이 외계인(하늘색 #6DCFF5). 사투리를 알려 주는 설명하는 친구</li><li><b>외지몽</b>: 우주에서 온 강아지 외계인(초록 #008C3A). 궁금해서 질문하는 친구</li></ul><p>둘의 고향 행성이 <b>얼라별</b>이고, 외지몽은 우주선을 타고 대구에 왔어요. 핵심 메시지는 <b>"표현이 달라도, 친구가 된다."</b>예요.</p>${SRC('Mascot/마스코트 기본 지침 PART 1~2, 5 · 세계관 및 소품')}`,ch:[ASK('마스코트 굿즈는?','굿즈 보여줘')]})},
  {id:'goods',kw:['굿즈','상품','기념품','키링','티셔츠','텀블러','에코백','머리띠','마그넷','스티커','수면안대','안대','쇼핑','굿즈샵','살수'],a:()=>({html:`<p>굿즈 라인업은 <b>고정 8종</b>이에요: 아크릴 키링, 스티커, 머리띠, 마그넷, 에코백, 티셔츠, 수면안대, 텀블러. 이미지를 눌러 보세요!</p><div class="thumbs">${GOODS.map(g=>`<button data-act="shop" data-id="${g.id}" aria-label="${g.name} 보기"><img src="${g.img}" alt="${g.name}"></button>`).join('')}</div><p style="margin-top:8px">가격·수량은 아직 정해지지 않았어요. 디자인·샘플 이미지 단계예요.</p>${SRC('D 파트 지침서 D-02 · D-03')}`,ch:[{label:'굿즈샵으로 이동',act:'goto',sel:'#shop'}]})},
  {id:'dialect',kw:['사투리','대구말','방언','밥뭇나','뭐꼬','머라카노','알려줘대구말','억양'],a:()=>({html:`<p>굿즈 시안과 기획안에 나온 대구말이에요.</p><ul><li><b>밥 묵었나?</b> 안부 인사(대답을 기다리지 않는 인사 논쟁 논제이기도 해요)</li><li><b>됐나? / 됐다.</b> 두 마디로 대화가 끝나요</li><li><b>어서 오이소!</b> 환영 · <b>단디 챙기라!</b> 잘 챙겨 · <b>고맙데이!</b> 고마워</li><li><b>와 이카노!</b> 왜 그래 · <b>니, 머라카노?</b> 너, 뭐라고 하니?</li><li><b>막창 2인분 주이소</b> 주문 예시</li></ul>${SRC('굿즈 시안 이미지 · 03_기획안 6장')}`,ch:[ASK('온라인 고사는?','온라인 사투리 고사 알려줘')]})},
  {id:'recruit',kw:['모집','예선','신청','선발','접수','참가'],a:()=>({html:`<p>참가자 모집 흐름이에요.</p><ul><li><b>05-22</b> 온라인 고사 오픈 → <b>06-01~07-06</b> 예선 접수(2인 팀 3분 토론 영상)</li><li><b>07-07~16</b> 영상 심사(심사 70 + 시민 투표 30) → <b>07-24 전후</b> 온라인 모의 토론</li><li><b>08-20~21</b> 본선 현장 토너먼트</li></ul><p>모집이 저조한 사례가 있어서(영양 신청 7명 ${L('ok','확인')}) 6월 셋째 주 목표 미달 시 대학 서포터즈·고사 상위자 초대·접수 연장으로 대응해요.</p>${SRC('03_기획안 7장')}`,ch:[]})},
@@ -253,7 +270,24 @@ const KB=[
  {id:'evidence',kw:['근거','조사','데이터','왜','효과','출처','자료'],a:()=>({html:`<p>2027 기획의 근거 자료예요.</p><ul><li>${L('ok','확인')} 국립한글박물관 사투리 전시 85,764명</li><li>${L('ok','확인')} 대구 유입 경북 74.7% · 서울 1.0%</li><li>${L('ok','확인')} 대구 체류시간 -1.5%</li><li>${L('hyp','가설')} 타지역 2030 사투리 선호 설문 없음</li></ul>근거 라벨이 없는 수치는 쓰지 않아요.${SRC('02_조사보고서 · local_research')}`,ch:[]})},
  {id:'collab',kw:['협력','협업','기관','제휴','주관','주최'],a:()=>({html:`<p>주최는 <b>대구광역시</b>예요. 협력 대상은 10미 업소(대구시 식품 부서), 숙박업(관광 부서·협회), 상권(대구전통시장진흥재단), 한국관광공사(구석구석 팝업), 지역 대학 국어문화원 등이에요.</p><p>${L('hyp','확인 필요')} 협력 기관·주관 기관·인력은 아직 <b>미정</b>이에요.</p>${SRC('03_기획안 8장 · 01_기획조건표 7장')}`,ch:[]})},
  {id:'cycle',kw:['차년도','내년','순환','성과','후기','다음해','결과정리'],a:()=>({html:`<p>${L('wait','⏳')} 축제가 아직 열리지 않아서 <b>성과는 만들어 내지 않아요.</b></p><p>개최 후 운영 결과를 넣으면 → 차년도 과제로 정리하고 → 다음 해 기획 조건표의 입력으로 돌려 보내요. 그게 순환형이에요.</p>`,ch:[{label:'순환 구조 보기',act:'goto',sel:'#cycle'}]})},
- {id:'who',kw:['에이전트','너누구','뭐야','넌누구','할수있','기능','도와줘','사용법'],a:()=>({html:`<p>저는 대구 사투리 축제를 매년 열 수 있게 돕는 <b>순환형 축제 기획 에이전트</b>예요. 조건 입력 → 조사 → 기획 → 검증 → 운영 준비 → 성과 정리를 도와요. 결정·외부 연락·계약은 사람이 하고, 저는 근거 정리와 초안을 맡아요.</p><p>다만 지금은 <b>시연용 데모</b>라서 준비된 자료 범위에서만 답해요.</p>`,ch:[ASK('컨셉 추천해줘','첫 대회 컨셉 추천해줘'),ASK('굿즈 보여줘','굿즈 보여줘')]})},
+ {id:'who',kw:['에이전트','너누구','넌누구','할수있','기능','도와줘','사용법'],a:()=>({html:`<p>저는 대구 사투리 축제를 매년 열 수 있게 돕는 <b>순환형 축제 기획 에이전트</b>예요. 조건 입력 → 조사 → 기획 → 검증 → 운영 준비 → 성과 정리를 도와요. 결정·외부 연락·계약은 사람이 하고, 저는 근거 정리와 초안을 맡아요.</p><p>다만 지금은 <b>시연용 데모</b>라서 준비된 자료 범위에서만 답해요.</p>`,ch:[ASK('컨셉 추천해줘','첫 대회 컨셉 추천해줘'),ASK('굿즈 보여줘','굿즈 보여줘')]})},
+
+ {id:'age',kw:['몇살','나이','살이야','몇세','연세','생일','동갑'],a:()=>({html:`<p>이야기 속 나이를 알려 드릴게요!</p><ul><li><b>대키미(저)</b>: 부화한 때부터 나이를 세요. <b>네 살 여름</b> 축제에서 외지몽을 처음 만났고, <b>다섯 살 여름</b> 같은 축제에서 친부모를 만났어요.</li><li><b>외지몽</b>: 저를 처음 만났을 때 <b>네 살</b>이었어요. 얼라별 아이들은 지구인보다 빨리 자라서 세 살부터 우주선을 운전할 수 있대요.</li></ul><p>다만 <b>최초 재회 이후 브랜드 콘텐츠에서 쓸 기준 나이</b>는 아직 정해지지 않았어요(후속 구체화 항목). 지구 나이와 얼라별 나이를 따로 환산하지도 않아요.</p>${SRC('Mascot/마스코트 기본 지침 PART 5 · 5-1, 5-2, 5-5')}`,ch:[ASK('어떻게 만났어?','둘이 어떻게 만났어?'),ASK('키는 얼마야?','키가 얼마야?')]})},
+ {id:'height',bonus:0.4,kw:['키가','키는','신장','몇cm','몇센치','몇센티','얼마나커','얼마나큰','크기가'],a:()=>({html:`<p>공식 전체 키는 <b>대키미 103cm, 외지몽 105cm</b>예요. 안테나 구슬의 가장 높은 지점부터 발바닥까지 재요. 외지몽이 2cm(약 1.94%) 더 커요.</p><p>안테나 구슬 지름은 대키미 11.8cm, 외지몽 13.7cm예요. ${L('hyp','주의')} 원본 이미지에서 읽은 근사값과 제작 지정값을 환산한 수치라서, 정밀 규격으로 확정된 값은 아니에요.</p>${SRC('Mascot/마스코트 디자인 스펙시트/성체 … /성체_실제키와부위치수.md')}`,ch:[]})},
+ {id:'family',kw:['부모','엄마','아빠','가족','양부모','친부모','부모님','재회'],a:()=>({html:`<p>저는 <b>두 가족</b>이 있어요.</p><ul><li><b>친부모</b>: 대대로 알이 부화할 때 대구를 찾는 얼라별 집안이에요. 오는 길에 우주선이 우주 잔해와 부딪혀 대구에 긴급 착륙했고, 수리 부품을 구하러 얼라별로 돌아갔어요. 편도 4년이 걸렸어요.</li><li><b>양부모</b>: 대구의 부부가 울음소리를 듣고 저를 발견해서 가족으로 맞아 주셨어요.</li></ul><p>다섯 살 여름 축제에서 친부모와 재회했지만, 그건 양부모와의 이별이 아니에요. 두 가족 모두 제 삶에 함께해요.</p><p>${L('hyp','미정')} 부모님들의 이름·외형·직업·말투는 아직 정해지지 않았어요.</p>${SRC('PART 5 · 5-1, 5-3, 5-5')}`,ch:[ASK('리본은 뭐야?','꼬리 리본은 뭐야?'),ASK('얼라별이 뭐야?','얼라별이 뭐야?')]})},
+ {id:'ribbon',kw:['리본','핑크천','분홍리본','꼬리리본','핑크리본'],a:()=>({html:`<p>꼬리의 <b>핑크 리본</b>은 친부모가 떠나기 전 집안의 핑크색 천을 알에 묶어 준 것이에요. 양부모가 소중히 간직하다가 꼬리에 묶어 줬어요.</p><p>이 리본 덕분에 외지몽이 부모님 친구 집안의 천과 닮았다는 걸 알아봤고, 두 가족이 다시 이어졌어요. 의미는 <b>두 가족이 이어 온 보살핌과 연결</b>이에요. 핑크색만으로 가족을 단정하지 않고 천의 특징, 알을 둔 장소, 발견 시기를 함께 확인했다고 해요.</p>${SRC('PART 5 · 5-1, 5-3')}`,ch:[]})},
+ {id:'birth',kw:['부화','탄생','태어났','태어난','알에서','알을','알이'],a:()=>({html:`<p>저는 <b>대구의 뜨거운 여름</b>에 알에서 깨어났어요. 우리 집안의 알은 충분한 열기가 있어야 깨어나는데, 부모님이 탄 우주선이 고장 나면서 알이 열을 많이 받은 데다 대구 여름 열기가 더해져 예상보다 일찍 부화했어요.</p><p>부모님이 떠난 직후 깨어났고, 지나가던 대구의 부부가 울음소리를 듣고 저를 찾아 주셨어요. 인공 가열이나 임시 부화 장치는 필요하지 않았어요. ${L('hyp','미정')} 예상 부화까지의 정확한 연수는 정해지지 않았어요.</p>${SRC('PART 5 · 5-1, 5-2')}`,ch:[ASK('가족 이야기','부모님은 어떤 분이야?')]})},
+ {id:'meet',kw:['첫만남','어떻게만났','처음만난','오해','통역기','친구가됐','친구가된','만난계기','처음에는'],a:()=>({html:`<p>제가 <b>네 살이던 여름</b>, 얼라별의 여행자 외지몽이 낯선 방송 전파를 수신했어요. 대구 사투리 축제에서 흘러나오는 말이었고, 그 억양이 궁금해서 근처에 착륙했대요.</p><p>저를 발견한 외지몽이 얼라별 말로 인사했는데 저는 못 알아들었고, 두리번거리는 외지몽이 길을 잃은 줄 알고 제가 말을 걸었어요. 높낮이가 낯선 사투리가 외지몽에게는 <b>화난 목소리</b>처럼 들렸죠. 통역기를 확인하고서야 제가 걱정하며 도와주려던 걸 알았어요. 그 뒤로 축제를 함께 돌아다니며 서로 말뜻을 알려 주다 친구가 됐어요.</p><p>사투리 자체가 화난 언어라는 뜻은 아니에요. 통역기는 <b>상대의 표현과 마음을 알아 가려는 노력</b>을 뜻하는 소품이에요.</p>${SRC('PART 5 · 5-1, 5-3')}`,ch:[ASK('약속이 뭐야?','매년 여름 약속이 뭐야?')]})},
+ {id:'promise',kw:['약속','매년여름','사흘','해마다','매년만나'],a:()=>({html:`<p>저희의 약속은 <b>"매년 여름, 사투리 축제가 열리는 사흘은 꼭 대구에서 함께 보내기"</b>예요.</p><p>축제는 두 친구가 처음 만난 곳이자 두 가족이 만난 곳이에요. 해마다 그곳에서 서로의 한 해를 들려주고, 새 표현을 배우고, 다음 만남을 약속해요. 방문객도 저희와 함께 말을 배우고 오해를 풀고 추억을 만드는 참여자예요. 새해 축제에서 탄생이나 첫 재회가 처음부터 반복되는 것으로 설명하지는 않아요.</p>${SRC('PART 5 · 5-1, 5-4')}`,ch:[ASK('프로그램 보기','프로그램 알려줘')]})},
+ {id:'planet',kw:['얼라별','고향','행성','어디서왔','어디서와','출신'],a:()=>({html:`<p><b>얼라별</b>은 대키미 집안의 뿌리이자 외지몽의 고향 행성이에요. 대구는 제가 태어나고 자란 고향이고요.</p><p>행성 이름 '얼라별'에서 브랜드명 <b>'대구 얼라들'</b>로 확장됐어요. ${L('hyp','미정')} 얼라별의 탄생 이야기, 주민, 지형, 행성의 능력은 아직 정해지지 않았어요.</p>${SRC('PART 5 · 5-4 · 세계관 및 소품/얼라별 디자인시트 v01')}`,ch:[ASK('우주선은?','외지몽 우주선은 뭐야?')]})},
+ {id:'ship',kw:['우주선','운전','타고왔','비행'],a:()=>({html:`<p><b>우주선</b>은 이별의 계기이면서, 외지몽의 방문과 가족의 재회를 가능하게 한 소품이에요. 뜻은 <b>여행과 다시 만나는 여정</b>이에요.</p><ul><li>얼라별 아이들은 세 살부터 우주선을 운전할 수 있어서, 네 살 외지몽도 혼자 탐험 여행을 다녀요</li><li>새 항행 기술을 적용한 뒤 실제 편도 이동은 수 주~두 달 정도로 설정돼 있어요(정확한 일수는 미정)</li><li>연락은 우주선의 실제 이동보다 빨라요</li></ul>${SRC('PART 5 · 5-2, 5-3')}`,ch:[]})},
+ {id:'personality',kw:['성격','mbti','엠비티아이','매력','좋아하는','잘하는','허당','장점'],a:()=>({html:`<p>공식 성격 키워드예요.</p><ul><li><b>대키미</b>: 자신만만 · 허당미 · 서툰 다정함. 대구 토박이라는 자부심이 있고, 외지몽이 사투리를 못 알아들으면 답답해하지만 끝까지 설명해요. 가끔 허당 실수도 하지만 친구가 속상하면 누구보다 진심으로 챙겨요.</li><li><b>외지몽</b>: 호기심 · 솔직함 · 재도전. 모르는 말은 질문하고, 배운 표현은 직접 써 봐요. 실수하면 잠깐 시무룩하지만 다시 도전하고, 잘 쓰면 꼬리에서 기쁨이 먼저 드러나요.</li></ul>${SRC('PART 2 · 2-1, 2-2')}<small class="src">좋아하는 음식·취미 같은 세부 설정은 자료에서 찾지 못했어요.</small>`,ch:[]})},
+ {id:'name',kw:['이름뜻','이름의미','이름이뭐','무슨뜻','이름유래','이름이왜'],a:()=>({html:`<p><b>대키미</b>는 대구와 고양이의 느낌을 담은 이름이고, <b>외지몽</b>은 외지인의 의미를 담은 이름이에요.</p><p>${L('hyp','참고')} 대키미 설정보드 이미지에는 '대구지키미의 느낌을 담은 이름'으로 적혀 있어서, 지침 문서와 표기가 조금 달라요. 문서(PART 2)를 우선 기준으로 안내해요.</p>${SRC('PART 2 · 2-1, 2-2 · 대키미 캐릭터 설정보드.png')}`,ch:[]})},
+ {id:'design',kw:['생김','외형','생겼','디자인','색깔','색상','컬러','더듬이','안테나','꼬리','눈은'],a:()=>({html:`<p>공식 디자인 특징이에요.</p><ul><li><b>대키미</b>: 하늘색(#6DCFF5)의 둥글고 큰 머리와 짧은 신체 비율, 뾰족한 삼각형 고양이 귀(안쪽 분홍), 검은 큰 눈과 흰 별 하이라이트, 둥글게 말린 꼬리(분홍 리본), 구슬 더듬이 2개</li><li><b>외지몽</b>: 초록(#008C3A)의 둥글고 큰 머리, 양옆으로 늘어진 강아지 귀, 크림빛 주둥이, 위로 말린 짧은 꼬리, 구슬 더듬이 2개</li></ul><p>두 친구 모두 귀 모양을 서로 바꾸거나 꼬리 형태·색을 바꾸지 않아요.</p>${SRC('PART 2 · 2-1, 2-2 · PART 4 · 색상 팔레트 v00')}`,ch:[ASK('키는 얼마야?','키가 얼마야?')]})},
+ {id:'message',kw:['핵심메시지','메시지가','스토리','세계관','설정이','이야기해줘','이야기알려'],a:()=>({html:`<p>핵심 메시지는 <b>"표현이 달라도, 친구가 된다."</b>예요(PART 1). 대키미 설정보드 이미지에는 "말이 달라도, 친구가 된다."로 적혀 있어요.</p><p>이야기 줄거리: 대구의 여름에 알에서 깬 대키미 → 양부모가 키움 → 네 살 여름 축제에서 외지몽과 오해를 풀고 친구가 됨 → 핑크 리본 단서로 친부모 재회 → 매년 여름 사흘은 대구에서 함께 보내기로 약속.</p>${SRC('PART 1 · 1-2 · PART 5')}`,ch:[ASK('나이는?','몇 살이야?'),ASK('가족 이야기','부모님은 어떤 분이야?'),ASK('얼라별이 뭐야?','얼라별이 뭐야?')]})},
+ {id:'usage',kw:['어디에쓰','활용분야','어디활용','쓰임','사용처'],a:()=>({html:`<p>마스코트는 이런 곳에 쓰여요: 축제 공식 포스터·홍보물, SNS·숏폼, 현장 사인물, 굿즈, 인형·키링, 의류·패션 소품, 관광 콘텐츠, 체험 프로그램, 애니메이션, 디지털 콘텐츠·온라인 이벤트.</p><p>이름·종·기본 디자인·색·성격·세계관·핵심 메시지·관계는 고정이고, 의상·소품·배경·포즈·에피소드·연도별 프로그램은 해마다 바꿀 수 있어요.</p>${SRC('PART 6 · 6-1, 6-2')}`,ch:[ASK('굿즈 보여줘','굿즈 보여줘')]})},
+ {id:'dialectuse',kw:['사투리쓰는','사투리사용','젊은층','젊은사람','20대사투리','사용률','사용비율','방언유지','사투리많이','사투리줄','세대'],a:()=>({html:`<p>팀 리서치(사투리 v02)에 나온 사용 현황이에요.</p><ul><li>${L('ok','확인')} 방언을 유지하겠다는 응답 <b>59.2%</b> (국민의 언어 의식 조사, 뉴시스 2026-01-27 · 전국 참고)</li><li>${L('ok','확인')} 경상 방언을 쓰는 20대는 <b>16%</b>대로 줄었다는 보도 (매일신문 2026-10-08)</li><li>${L('ok','확인')} 경북 청년층은 부모·고향 친구와 말할 때 방언 사용 41.3%, 교수 앞 0%, 아르바이트 2.7% (경북 참고)</li><li>젊은 화자일수록 표준어에 가까워지는 경향이 연구에서 나와요</li></ul>${SRC('local_research/사투리_v02_V4/04_일상사용세대.md')}`,ch:[ASK('비슷한 축제 있어?','비슷한 사투리 축제 사례 있어?')]})},
+ {id:'precedent',kw:['선례','비슷한축제','비슷한행사','경쟁','벤치마크','강릉','제주어','백일장','굿즈사례','다른지역'],a:()=>({html:`<p>팀 리서치에서 찾은 선례예요.</p><ul><li>${L('ok','확인')} 강릉 사투리 경연대회: 30여 년 이어진 대회(개최 연도 기록이 1993/1994로 달라 확인 필요)</li><li>${L('ok','확인')} 제주어말하기 대회 2026(학생 대상), 경북대 사투리 백일장, 대구시민주간 '사투리 이쁘다 아이가'(2023)</li><li>${L('hyp','해석')} "대구 사투리 축제 2025·2026" 검색에서 사투리 주제 행사가 보이지 않았어요(검색 1회 기준, 단정 불가)</li><li>${L('hyp','미확인')} 대구 사투리를 직접 상품화한 굿즈 사례는 찾지 못했어요</li></ul>${SRC('local_research/사투리_v02_V4/08_관광축제브랜딩.md · 12_자료원본목록.csv')}`,ch:[]})},
  {id:'thanks',kw:['고마워','감사','땡큐','고맙'],a:()=>({html:`<p>도움이 됐다니 기뻐요! 고맙데이는 대구말로 "고마워"예요.</p>`,ch:[]})}
 ];
 
@@ -292,8 +326,16 @@ const scrollLog=()=>{log.scrollTop=log.scrollHeight};
 function msgEl(role,inner){
   const k=role==='bot';
   const d=document.createElement('div');d.className='msg '+(k?'bot':'user');
-  d.innerHTML=`<span class="av ${k?'k':'o'}">${sprHTML(k?'k.av':'o.av')}</span><div style="min-width:0"><div class="who">${k?'대키미':'외지몽'}</div><div class="bub">${inner}</div></div>`;
-  initSprIn(d);log.appendChild(d);scrollLog();return d;
+  const box=`<div class="mb"><div class="who">${k?'대키미':'외지몽'}</div><div class="bub">${inner}</div></div>`;
+  const pic=`<img class="pic" src="${k?PIC.k:PIC.o}" alt="">`;
+  d.innerHTML=k?pic+box:box+pic;
+  log.appendChild(d);scrollLog();return d;
+}
+const THINK_HTML=`<div class="think"><video src="${THINK_VIDEO}" autoplay loop muted playsinline aria-hidden="true"></video><span>대키미가 생각하고 있어요!</span></div>`;
+function thinkEl(){
+  const d=msgEl('bot',THINK_HTML);
+  const v=d.querySelector('video');if(v){v.muted=true;const pr=v.play();if(pr&&pr.catch)pr.catch(()=>{})}
+  return d;
 }
 const sys=t=>{const d=document.createElement('div');d.className='sys';d.textContent=t;log.appendChild(d);scrollLog()};
 
@@ -301,16 +343,14 @@ function choicesHTML(list){
   if(!list||!list.length)return '';
   return `<div class="choices">${list.map(c=>`<button class="choice" data-act="${c.act}" ${c.q?`data-q="${esc(c.q)}"`:''} ${c.id?`data-id="${c.id}"`:''} ${c.v?`data-v="${c.v}"`:''} ${c.sel?`data-sel="${c.sel}"`:''}>${esc(c.label)}${c.sub?`<small>${esc(c.sub)}</small>`:''}</button>`).join('')}</div>`;
 }
-async function botSay(html,list,{fast=false}={}){
-  const typing=msgEl('bot','<span class="typing"><i></i><i></i><i></i></span>');
-  await sleep(fast?250:Math.min(900,350+html.length/6));
-  typing.querySelector('.bub').innerHTML=html+choicesHTML(list);
-  scrollLog();return typing;
+async function botSay(html,list,{fast=false,think=false}={}){
+  const el=think?thinkEl():msgEl('bot','<span class="typing"><i></i><i></i><i></i></span>');
+  await sleep(think?2300:fast?250:Math.min(900,350+html.length/6));
+  el.querySelector('.bub').innerHTML=html+choicesHTML(list);
+  scrollLog();return el;
 }
 function userSay(text){
-  const d=document.createElement('div');d.className='msg user';
-  d.innerHTML=`<span class="av o">${sprHTML('o.av')}</span><div><div class="who">외지몽</div><div class="bub"></div></div>`;
-  d.querySelector('.bub').textContent=text;initSprIn(d);log.appendChild(d);scrollLog();
+  const d=msgEl('user','');d.querySelector('.bub').textContent=text;scrollLog();
 }
 
 /* ---- 컨셉 추천 ---- */
@@ -349,7 +389,7 @@ async function buildPlan(){
   const c=CBY[SEL.concept];
   setPhase(2);resetAgents();setAgent('orch','work','기획 틀 조립 중…');
   const wk=[['strategist','컨셉 전략…'],['flow-designer','3일 동선…'],['idea-scorer','프로그램 점검…'],['ethics-reviewer','윤리 검토…'],['evidence-auditor','근거 라벨 점검…']];
-  const typing=msgEl('bot','<span class="typing"><i></i><i></i><i></i></span>');
+  const typing=thinkEl();
   wk.forEach(([a,t])=>setAgent(a,'work',t));
   for(const [a] of wk){await sleep(420);setAgent(a,a==='evidence-auditor'?'warn':'done',a==='evidence-auditor'?'견적 필요':'완료')}
   setAgent('orch','done','완료');setPhase(3);
@@ -412,19 +452,53 @@ function animateBars(){
 document.querySelectorAll('.tab').forEach(t=>t.addEventListener('click',()=>showTab(t.dataset.tab)));
 
 /* ---- 굿즈샵 ---- */
-function renderShop(){
-  $('#shopGrid').innerHTML=GOODS.map(g=>`<button class="gcard" role="listitem" data-id="${g.id}" aria-pressed="false"><span class="rec" hidden></span><img src="${g.img}" alt="${g.name} 상품 이미지"><div class="gb"><b>${g.name}</b><p>${g.line}</p><span class="st">${g.st}</span></div></button>`).join('');
-  $('#shopGrid').addEventListener('click',e=>{const b=e.target.closest('.gcard');if(b)selectGood(b.dataset.id,false)});
-  selectGood('keyring',false,true);
+/* 머리띠: 대키미/외지몽 각각 6방향 원페이지 (D-03-03 샘플이미지) */
+G.headband.k={img:IMG.headband_k,st:'대키미 6방향 기준 원페이지',
+  talk:'제 머리띠예요! 고양이 귀 안쪽은 분홍색이고, 구슬 더듬이 두 개가 위로 솟아 있어요. 앞·옆·뒤 6방향으로 다 보여 드릴게요!',
+  pts:['대키미 머리띠: 하늘색 고양이 귀(안쪽 분홍)와 구슬 더듬이 2개예요','한 장에 정면·좌우 45°·좌우 측면·후면 6방향이 들어 있어요','문구 없이 귀·더듬이 모티브만 써요','착용한 방문객이 현장 홍보가 되는 효과를 노려요 '+L('hyp','가설'),'착용 구조·중량·소재는 업체 확인이 필요해요']};
+G.headband.o={img:IMG.headband_o,st:'외지몽 6방향 기준 원페이지',
+  talk:'제 머리띠는 축 처진 강아지 귀예요! 구슬 더듬이는 대키미랑 똑같이 두 개고요. 옆모습까지 6방향으로 볼 수 있어요!',
+  pts:['외지몽 머리띠: 초록색 늘어진 강아지 귀(안쪽 크림)와 구슬 더듬이 2개예요','한 장에 정면·좌우 45°·좌우 측면·후면 6방향이 들어 있어요','문구 없이 귀·더듬이 모티브만 써요','착용 구조·중량·소재는 업체 확인이 필요해요']};
+/* 에코백: 색상 2종 (D-03-05 확정 상품 이미지) */
+G.ecobag.colors=[
+ {id:'cream',label:'크림 아이보리',dot:'#EBDDBF',img:IMG.ecobag,st:'확정 상품 이미지 · 크림 아이보리',
+  talk:'크림 아이보리 에코백이에요. 앞에는 분홍 얼라별, 뒤에는 갈색 로고가 큼직하게 들어가요!',
+  pts:['크림 아이보리 원단에 분홍 행성(민트 고리) 앞면, 갈색 eollabyeol 로고 뒷면이에요','얼라별 행성과 로고를 일상 가방에 적용해요','단면·양면 인쇄, 원단·치수는 업체 확인이 필요해요']},
+ {id:'smoky',label:'스모키 블루',dot:'#8EA9C9',img:IMG.ecobag_blue,st:'확정 상품 이미지 · 스모키 블루',
+  talk:'스모키 블루 에코백이에요. 차분한 하늘빛 바탕에 노란 얼라별과 크림색 로고가 잘 읽혀요!',
+  pts:['스모키 블루 원단에 노란 행성(보라 고리) 앞면, 크림색 eollabyeol 로고 뒷면이에요','크림 아이보리와 함께 확정 상품 이미지 2종이에요','단면·양면 인쇄, 원단·치수는 업체 확인이 필요해요']}
+];
+let SELGOOD='keyring';
+const gv=(g,c)=>(c==='o'&&g.o)?{...g,...g.o}:(c==='k'&&g.k)?{...g,...g.k}:g;
+function drawGrid(){
+  $('#shopGrid').innerHTML=GOODS.map(g=>{
+    const tag=g.colors?'색상 2종':g.o?'대키미 · 외지몽':'두 캐릭터 함께';
+    return `<button class="gcard" role="listitem" data-id="${g.id}" aria-pressed="${g.id===SELGOOD}"><span class="rec" hidden></span><span class="who-tag both">${tag}</span><img src="${g.img}" alt="${g.name} 상품 이미지"><div class="gb"><b>${g.name}</b><p>${g.line}</p></div></button>`;
+  }).join('');
+  if(REC.length)applyRec(REC);
 }
-function selectGood(id,scroll=true,silent=false){
-  const g=G[id];if(!g)return;
+let REC=[];
+function renderShop(){
+  $('#shopGrid').addEventListener('click',e=>{const b=e.target.closest('.gcard');if(b)selectGood(b.dataset.id,false)});
+  $('#shopDetail').addEventListener('click',e=>{const b=e.target.closest('[data-char],[data-color]');if(b)selectGood(SELGOOD,false,true,b.dataset.char||b.dataset.color)});
+  drawGrid();selectGood('keyring',false,true);
+}
+function selectGood(id,scroll=true,silent=false,ch='k'){
+  const g0=G[id];if(!g0)return;SELGOOD=id;
+  const col=g0.colors?(g0.colors.find(x=>x.id===ch)||g0.colors[0]):null;
+  const c=g0.o?ch:'k',g=col?{...g0,...col}:gv(g0,c);
   document.querySelectorAll('.gcard').forEach(el=>el.setAttribute('aria-pressed',el.dataset.id===id));
-  $('#shopDetail').innerHTML=`<img class="big" src="${g.img}" alt="${g.name} 상품 이미지"><div><div class="talk"><span class="av k">${sprHTML('k.av')}</span><div class="bub" style="background:#fff;border:2px solid var(--navy);border-radius:18px 18px 18px 6px;padding:10px 14px">${esc(g.talk)}</div></div><h3 style="margin-top:14px">${g.name} <small style="font-family:var(--body);font-size:13px;color:var(--muted)">${g.sheet} · ${g.st}</small></h3><ul>${g.pts.map(p=>`<li>${p}</li>`).join('')}</ul><small class="src">출처: D 파트 세부지침안/D파트v1/D-03_품목별수치/${g.sheet}. 가격·수량 미정, 디자인 검토 단계예요.</small></div>`;
-  initSprIn($('#shopDetail'));
+  const toggle=col
+    ?`<div class="detail-toggle" role="group" aria-label="색상 고르기">${g0.colors.map(x=>`<button type="button" data-color="${x.id}" aria-pressed="${x.id===col.id}"><i class="dot" style="background:${x.dot}"></i>${x.label}</button>`).join('')}</div>`
+    :g0.o
+    ?`<div class="detail-toggle" role="group" aria-label="캐릭터 버전 고르기"><button type="button" data-char="k" aria-pressed="${c==='k'}"><img src="${PIC.k}" alt="">대키미</button><button type="button" data-char="o" aria-pressed="${c==='o'}"><img src="${PIC.o}" alt="">외지몽</button></div>`
+    :`<div class="detail-toggle"><span class="both-chip">대키미 · 외지몽 한 장에 함께</span></div>`;
+  const note=(g0.o||col)?'':`<li>이 상품 이미지에는 <b>대키미와 외지몽이 함께</b> 들어 있어서 두 캐릭터 버전이 한 장으로 나와요</li>`;
+  $('#shopDetail').innerHTML=`${toggle}<img class="big" src="${g.img}" alt="${g.name} ${col?col.label:(c==='o'?'외지몽':'대키미')} 상품 이미지"><div><div class="talk"><img class="pic" src="${c==='o'&&g0.o?PIC.o:PIC.k}" alt=""><div class="bub" style="background:#fff;border:2px solid var(--navy);border-radius:18px 18px 18px 6px;padding:10px 14px">${esc(g.talk)}</div></div><h3 style="margin-top:14px">${g.name}</h3><ul>${g.pts.map(p=>`<li>${p}</li>`).join('')}${note}</ul></div>`;
   if(scroll&&!silent)$('#shop').scrollIntoView({behavior:'smooth',block:'start'});
 }
 function applyRec(ids){
+  REC=ids;
   const cards=[...document.querySelectorAll('.gcard')];
   cards.forEach(el=>{const i=ids.indexOf(el.dataset.id);el.style.order=i<0?20:i;const r=el.querySelector('.rec');if(i<0){r.hidden=true}else{r.hidden=false;r.textContent='추천 '+(i+1)}});
   $('#shopGrid').style.display='grid';
@@ -432,22 +506,29 @@ function applyRec(ids){
 
 /* ---- 입력 처리 ---- */
 function setQuick(){
-  const q=['첫 대회 컨셉 뭘로 하면 좋을까?','프로그램은 뭐가 있어?','예산은 얼마야?','굿즈 보여줘','대구 사투리 알려줘','폭염 대응은?'];
+  const q=['첫 대회 컨셉 뭘로 하면 좋을까?','축제 지도 알려줘','식사존은 어디야?','굿즈 보여줘','대구 사투리 알려줘','예산은 얼마야?'];
   $('#quick').innerHTML=q.map(t=>`<button type="button" data-act="ask" data-q="${esc(t)}">${esc(t)}</button>`).join('');
 }
+const TN={concept:'컨셉 추천',program:'프로그램',debate:'토론 대회',pocha:'포장마차',market:'플리마켓',budget:'예산',cut:'예산 줄이기',schedule:'일정',prep:'준비 일정',place:'장소',target:'타깃',stay:'체류·숙박',stamp:'스탬프투어',promo:'홍보',heat:'폭염·안전',mascot:'마스코트 소개',goods:'굿즈',dialect:'대구 사투리',recruit:'참가자 모집',online:'온라인 고사',evidence:'조사 근거',collab:'협력 기관',cycle:'차년도·순환',who:'에이전트 소개',age:'나이',height:'키',family:'가족 이야기',ribbon:'핑크 리본',birth:'부화·탄생',meet:'첫 만남',promise:'매년 여름 약속',planet:'얼라별',ship:'우주선',personality:'성격',name:'이름 뜻',design:'생김새·색상',message:'핵심 메시지·스토리',usage:'마스코트 활용',dialectuse:'사투리 사용 현황',precedent:'비슷한 축제 사례',greet:'인사',thanks:'감사'};
+async function answerTopic(t){const a=t.a();await botSay(a.html,a.ch)}
 async function respond(text){
   const c=matchConcept(text);
   const mentionsPick=/(컨셉|콘셉|컨섭|주제|테마|할래|하자|어때|좋아)/.test(text);
-  if(c&&(!matchTopic(text)||matchTopic(text).id==='concept'||mentionsPick)){
+  const rk=rankTopics(text), top=rk[0]&&rk[0][1]>=0.7?rk[0]:null;
+  if(c&&(!top||top[0].id==='concept'||mentionsPick)){
     await botSay(`<p><b>「${esc(c.name)}」</b>을(를) 말씀하셨나요?</p><p>${L(c.src==='자료'?'ok':'hyp',c.src)} ${esc(c.tag)}</p><p>👍 ${esc(c.pros)}<br>⚠ ${esc(c.caution)}</p>`,
       [{label:'이 컨셉으로 기획 틀 만들기',act:'concept',id:c.id},{label:'다른 컨셉도 보기',act:'ask',q:'컨셉 추천해줘'}]);return;
   }
-  const t=matchTopic(text);
-  if(!t){
-    await botSay(`<p>${FALLBACK}</p><div class="fallback-chips"><button data-act="ask" data-q="첫 대회 컨셉 추천해줘">컨셉 추천</button><button data-act="ask" data-q="프로그램 알려줘">프로그램</button><button data-act="ask" data-q="예산 알려줘">예산</button><button data-act="ask" data-q="굿즈 보여줘">굿즈</button></div>`,null);return;
+  if(!top){
+    await botSay(`<p>${FALLBACK}</p><div class="fallback-chips"><button data-act="ask" data-q="첫 대회 컨셉 추천해줘">컨셉 추천</button><button data-act="ask" data-q="프로그램 알려줘">프로그램</button><button data-act="ask" data-q="예산 알려줘">예산</button><button data-act="ask" data-q="굿즈 보여줘">굿즈</button><button data-act="ask" data-q="몇 살이야?">대키미 나이</button></div>`,null,{think:true});return;
   }
-  const a=t.a();
-  await botSay(a.html,a.ch);
+  // 자료가 두 군데에서 비슷하게 걸리면(충돌) 되물어요
+  const sec=rk[1];
+  if(sec&&sec[1]>=0.92*top[1]&&sec[1]>=1.3&&top[1]<2.6){
+    await botSay(`<p>질문이 두 가지 자료와 비슷하게 맞아서 어떤 걸 찾아야 할지 헷갈려요. 어느 쪽을 알려 드릴까요?</p>`,
+      [{label:TN[top[0].id]||top[0].id,act:'topic',id:top[0].id},{label:TN[sec[0].id]||sec[0].id,act:'topic',id:sec[0].id}],{think:true});return;
+  }
+  await answerTopic(top[0]);
 }
 async function handleUser(text){
   text=text.trim();if(!text||busy||tour)return;
@@ -463,6 +544,7 @@ async function onAct(e){
   const b=e.target.closest('[data-act]');if(!b||b.disabled)return;
   const act=b.dataset.act;
   if(act==='shop'){selectGood(b.dataset.id);return}
+  if(act==='zonemap'){selectZone(b.dataset.id,{scroll:true});return}
   if(act==='goto'){const t=document.querySelector(b.dataset.sel);if(t)t.scrollIntoView({behavior:'smooth',block:'start'});return}
   if(act==='ask'){await handleUser(b.dataset.q);return}
   if(busy||tour)return;
@@ -473,7 +555,9 @@ async function onAct(e){
   const label=b.querySelector('b')?b.querySelector('b').textContent:b.childNodes[0].textContent;
   userSay(label.trim());
   try{
-    if(act==='concept')await pickConcept(b.dataset.id);
+    if(act==='zone'){const z=ZBY[b.dataset.id];if(z){selectZone(z.id,{scroll:false});await answerZone(z)}}
+    else if(act==='topic'){const t=KB.find(x=>x.id===b.dataset.id);if(t)await answerTopic(t)}
+    else if(act==='concept')await pickConcept(b.dataset.id);
     else if(act==='focus')await pickFocus(b.dataset.v);
     else if(act==='scale')await pickScale(b.dataset.v);
     else if(act==='stay')await pickStay(b.dataset.v);
@@ -544,7 +628,7 @@ function reset(keepTour){
   if(!keepTour&&tour)stopTour(true);
   runId++;busy=false;SEL.concept=SEL.focus=SEL.scale=SEL.stay=null;
   log.innerHTML='';buildSide();resetAgents();setPhase(-1);renderSel();emptyPlan();
-  document.querySelectorAll('.gcard').forEach(el=>{el.style.order='';const r=el.querySelector('.rec');if(r)r.hidden=true});
+  REC=[];document.querySelectorAll('.gcard').forEach(el=>{el.style.order='';const r=el.querySelector('.rec');if(r)r.hidden=true});
   showTab('myplan');document.querySelectorAll('.tab').forEach(t=>t.classList.remove('new'));
   field.disabled=false;sendBtn.disabled=false;field.value='';
   if(!keepTour){

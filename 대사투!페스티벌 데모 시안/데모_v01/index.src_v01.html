@@ -76,21 +76,22 @@ h1.logo .l2{font-size:.52em;margin-top:.1em;color:#22B35B;-webkit-text-stroke:5p
 .hero-char{position:relative;display:flex;justify-content:center;align-items:flex-end}
 .hero-char .spr{--dw:min(300px,28vw)}
 .hero-char.k .spr{animation:bob 3.6s ease-in-out infinite}
-.hero-char.o .spr{animation:bob 3.6s ease-in-out -1.8s infinite}
+.hero-char.o .hero-img{display:block;height:min(330px,32vw);width:auto;animation:bob 3.6s ease-in-out -1.8s infinite}
 @keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
-.bubble{position:absolute;background:#fff;border:2.5px solid var(--navy);border-radius:20px;padding:8px 14px;font-weight:800;font-size:15px;box-shadow:var(--shadow);z-index:3;white-space:nowrap}
-.bubble::after{content:"";position:absolute;bottom:-11px;width:16px;height:16px;background:#fff;border-right:2.5px solid var(--navy);border-bottom:2.5px solid var(--navy);transform:rotate(45deg)}
-.hero-char.k .bubble{top:14%;right:-6%}.hero-char.k .bubble::after{left:24px}
-.hero-char.o .bubble{top:20%;left:-4%}.hero-char.o .bubble::after{right:24px}
+.bubble{position:absolute;background:#fff;border:2.5px solid var(--navy);border-radius:20px;padding:8px 14px;font-weight:800;font-size:15px;box-shadow:var(--shadow);z-index:3;white-space:nowrap;word-break:keep-all;line-height:1.35;text-align:center}
+.bubble::after{content:"";position:absolute;bottom:-11px;left:calc(50% - 8px);width:16px;height:16px;background:#fff;border-right:2.5px solid var(--navy);border-bottom:2.5px solid var(--navy);transform:rotate(45deg)}
+.hero-char .bubble{top:-58px;left:50%;transform:translateX(-50%)}
+.hero-char.k .bubble{left:46%}
+.hero-char.o .bubble{left:42%}
 .spark{position:absolute;color:var(--yellow);font-size:28px;animation:tw 2.4s ease-in-out infinite}
 @keyframes tw{0%,100%{opacity:.35;transform:scale(.8) rotate(0)}50%{opacity:1;transform:scale(1.15) rotate(20deg)}}
 
 /* world-building props: 얼라별 + 외지몽 우주선 */
 .planet{position:absolute;left:14%;top:56px;width:clamp(86px,11vw,150px);aspect-ratio:1;z-index:1;animation:float 7s ease-in-out infinite}
-.planet img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;opacity:0;animation:rot 18s linear infinite}
-.planet img:nth-child(1){animation-delay:0s}.planet img:nth-child(2){animation-delay:-15s}.planet img:nth-child(3){animation-delay:-12s}
-.planet img:nth-child(4){animation-delay:-9s}.planet img:nth-child(5){animation-delay:-6s}.planet img:nth-child(6){animation-delay:-3s}
-@keyframes rot{0%{opacity:0}3%{opacity:1}16.66%{opacity:1}19.66%{opacity:0}100%{opacity:0}}
+.planet img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;opacity:0;will-change:opacity,transform;animation:rot 24s linear infinite}
+.planet img:nth-child(1){animation-delay:-4s}.planet img:nth-child(2){animation-delay:0s}.planet img:nth-child(3){animation-delay:-20s}
+.planet img:nth-child(4){animation-delay:-16s}.planet img:nth-child(5){animation-delay:-12s}.planet img:nth-child(6){animation-delay:-8s}
+@keyframes rot{0%{opacity:0;transform:scaleX(.9)}16.667%{opacity:1;transform:scaleX(1)}33.333%{opacity:0;transform:scaleX(.9)}100%{opacity:0;transform:scaleX(.9)}}
 @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
 .ship{position:absolute;top:34px;left:0;width:clamp(80px,9vw,120px);z-index:1;animation:fly 30s linear infinite}
 .ship img{display:block;width:100%;height:auto;animation:rock 3.2s ease-in-out infinite}
@@ -117,12 +118,11 @@ section{padding:72px 0 8px;scroll-margin-top:62px}
 .mini[aria-pressed="true"]{background:var(--navy);color:#fff}
 .log{flex:1;overflow-y:auto;padding:18px 16px;display:flex;flex-direction:column;gap:14px;background:
   radial-gradient(circle at 1px 1px,rgba(31,143,203,.12) 1.2px,transparent 1.4px) 0 0/22px 22px,var(--paper);scroll-behavior:smooth}
-.msg{display:flex;gap:10px;align-items:flex-end;max-width:94%;animation:pop .3s ease-out both}
-.msg.user{flex-direction:row-reverse;align-self:flex-end}
+.msg{display:flex;gap:6px;align-items:flex-end;max-width:96%;animation:pop .3s ease-out both}
+.msg.user{align-self:flex-end}
+.msg .mb{min-width:0}
+.pic{flex:none;width:52px;height:auto;display:block;margin-bottom:2px;user-select:none;pointer-events:none}
 @keyframes pop{from{opacity:0;transform:translateY(8px) scale(.98)}to{opacity:1;transform:none}}
-.av{flex:none;width:46px;height:46px;border-radius:50%;border:2.5px solid var(--navy);overflow:hidden;display:grid;place-items:center;background:#fff}
-.av.k{background:var(--sky-soft)}.av.o{background:var(--green-soft)}
-.av .spr{--dw:46px}
 .who{font-size:12px;font-weight:800;margin:0 4px 3px;color:var(--muted)}
 .msg.user .who{text-align:right}
 .bub{background:#fff;border:2px solid var(--navy);border-radius:20px 20px 20px 6px;padding:10px 14px;font-size:15px}
@@ -130,6 +130,11 @@ section{padding:72px 0 8px;scroll-margin-top:62px}
 .bub p{margin:0 0 6px}.bub p:last-child{margin:0}
 .bub ul{margin:6px 0 0;padding-left:18px}
 .bub li{margin:2px 0}
+.think{display:flex;flex-direction:column;align-items:center;gap:6px;padding:2px 10px 4px;min-width:170px}
+.think video{width:72px;height:72px;border-radius:18px;border:2px solid var(--navy);display:block;background:#EDE0D6;object-fit:cover}
+.think span{font-size:13.5px;font-weight:800;color:var(--navy)}
+.think span::after{content:"";display:inline-block;width:1.2em;text-align:left;animation:dots 1.2s steps(4) infinite}
+@keyframes dots{0%{content:""}25%{content:"."}50%{content:".."}75%{content:"..."}}
 .typing{display:inline-flex;gap:5px;padding:4px 2px}
 .typing i{width:8px;height:8px;border-radius:50%;background:var(--sky-deep);animation:dot 1s infinite}
 .typing i:nth-child(2){animation-delay:.15s}.typing i:nth-child(3){animation-delay:.3s}
@@ -229,6 +234,7 @@ tr:last-child td{border-bottom:0}
 /* ---------- cycle ---------- */
 .cycle{display:grid;grid-template-columns:200px minmax(0,1fr) 200px;align-items:center;gap:10px;padding:18px 20px;background:linear-gradient(180deg,#fff, var(--sky-soft))}
 .cycle .spr{--dw:190px;margin-inline:auto}
+.cyc-img{width:170px;height:auto;margin-inline:auto;display:block}
 .cycle svg{width:100%;height:auto;display:block;overflow:visible}
 .node{fill:#fff;stroke:var(--navy);stroke-width:3}
 .node.future{stroke-dasharray:6 5;fill:var(--cream)}
@@ -304,6 +310,18 @@ small.src{display:block;color:var(--muted);font-size:11.5px;margin-top:6px}
 .todo{margin:0;padding-left:18px;font-size:14px}.todo li{margin:3px 0}
 
 /* ---------- shop ---------- */
+.shop-detail{position:relative;padding-top:64px}
+.detail-toggle{position:absolute;top:14px;right:18px;display:flex;gap:8px;align-items:center;z-index:2}
+.detail-toggle button{display:flex;align-items:center;gap:6px;border:2.5px solid var(--navy);background:#fff;border-radius:999px;padding:3px 14px 3px 8px;font-weight:800;font-size:14px;color:var(--navy)}
+.detail-toggle button img{width:24px;height:auto;display:block}
+.detail-toggle button[aria-pressed="true"][data-char="k"]{background:var(--sky);box-shadow:0 3px 0 var(--navy)}
+.detail-toggle button[aria-pressed="true"][data-char="o"]{background:#6FD58F;box-shadow:0 3px 0 var(--navy)}
+.detail-toggle .dot{width:16px;height:16px;border-radius:50%;border:2px solid var(--navy);display:block;margin-left:4px}
+.detail-toggle button[data-color]{padding-left:6px}
+.detail-toggle button[data-color][aria-pressed="true"]{background:var(--yellow-soft);box-shadow:0 3px 0 var(--navy)}
+.both-chip{border:2px solid var(--navy);border-radius:999px;background:var(--cream);font-weight:800;font-size:13px;padding:3px 14px}
+.who-tag{position:absolute;top:8px;right:8px;z-index:1;border:2px solid var(--navy);border-radius:999px;font-size:11.5px;font-weight:800;padding:0 9px;background:#fff}
+.who-tag.k{background:var(--sky)}.who-tag.o{background:#6FD58F}.who-tag.both{background:var(--cream)}
 .shop-note{background:var(--yellow-soft);border:1.5px solid var(--yellow);border-radius:14px;padding:9px 14px;font-size:13.5px;margin-bottom:16px}
 .shop{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
 .gcard{position:relative;border:2.5px solid var(--navy);border-radius:20px;background:var(--paper);overflow:hidden;text-align:left;padding:0;color:var(--navy);box-shadow:0 5px 0 var(--navy);transition:transform .15s}
@@ -318,11 +336,53 @@ small.src{display:block;color:var(--muted);font-size:11.5px;margin-top:6px}
 .shop-detail{margin-top:20px;padding:20px 22px;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:22px;align-items:center}
 .shop-detail img.big{width:100%;border-radius:16px;border:2.5px solid var(--navy);display:block}
 .shop-detail .talk{display:flex;gap:12px;align-items:flex-start}
-.shop-detail .talk .av{width:56px;height:56px;flex:none}
-.shop-detail .talk .av .spr{--dw:56px}
+.shop-detail .talk .pic{width:64px}
 .shop-detail h3{margin:0 0 4px;font-family:var(--head);font-weight:400;font-size:26px}
 .shop-detail ul{margin:8px 0 0;padding-left:18px;font-size:14.5px}
 .shop-detail li{margin:3px 0}
+
+
+/* ---------- festival map ---------- */
+.zone-btns{display:grid;gap:10px;margin-bottom:16px}
+.zgrp{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.zg{flex:none;width:86px;font-weight:800;font-size:13px;color:var(--muted)}
+.zrow{display:flex;flex-wrap:wrap;gap:8px}
+.zbtn{display:flex;align-items:center;gap:8px;border:2.5px solid var(--navy);background:#fff;border-radius:999px;padding:5px 14px 5px 8px;font-weight:800;font-size:14px;color:var(--navy);text-align:left}
+.zbtn em{font-style:normal;font-size:11.5px;background:var(--cream);border-radius:999px;padding:0 7px;margin-right:6px;color:var(--muted)}
+.zdot{width:16px;height:16px;border-radius:50%;background:var(--zc);border:2px solid var(--navy);flex:none}
+.zbtn:hover{background:var(--sky-soft)}
+.zbtn[aria-pressed="true"]{background:var(--yellow-soft);box-shadow:0 3px 0 var(--navy)}
+.mapgrid{display:grid;grid-template-columns:minmax(0,1.55fr) minmax(0,1fr);gap:18px;align-items:start}
+.mapcard{padding:12px}
+.mapbar{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:10px;font-family:var(--head);font-size:18px}
+.mapbox{border:2.5px solid var(--navy);border-radius:16px;overflow:hidden;background:#dfeee0}
+#mapSvg{display:block;width:100%;height:auto}
+.hot{cursor:pointer;outline:none}
+.hot .shp{fill:transparent;stroke:transparent;stroke-width:5;transition:fill .2s,stroke .2s}
+.hot .shp.ln{fill:none;stroke-width:34;stroke-linecap:round;stroke-linejoin:round}
+.hot .shp.dash{stroke-dasharray:14 10}
+.hot:hover .shp,.hot:focus-visible .shp{fill:var(--zf);stroke:var(--zc)}
+.hot:hover .shp.ln,.hot:focus-visible .shp.ln{fill:none;stroke:var(--zc);stroke-opacity:.55}
+.hot.on .shp{fill:var(--zf);stroke:var(--zc);stroke-width:8;animation:zp 1.6s ease-in-out infinite}
+.hot.on .shp.ln{fill:none;stroke:var(--zc);stroke-opacity:.7;stroke-width:34}
+@keyframes zp{50%{stroke-opacity:.45}}
+#pills{opacity:0;pointer-events:none;transition:opacity .25s}
+#mapSvg.showpills #pills{opacity:1}
+.pill rect{fill:#fff;stroke:var(--zc);stroke-width:4}
+.pill text{font:800 25px var(--body);fill:#0F3557}
+.zdetail{padding:18px 20px;min-height:360px}
+.zempty{text-align:center;color:var(--muted);padding:20px 6px}
+.zempty .spr{margin:0 auto 6px}.zempty h3{margin:0 0 6px;color:var(--navy);font-family:var(--head);font-weight:400;font-size:24px}
+.zhint{font-size:13.5px;background:var(--yellow-soft);border-radius:12px;padding:8px 12px}
+.zhead{display:flex;align-items:center;gap:10px;margin-bottom:6px}
+.zhead h3{margin:0;font-family:var(--head);font-weight:400;font-size:25px}
+.zno{background:var(--zc);color:#fff;border:2.5px solid var(--navy);border-radius:999px;padding:1px 12px;font-weight:800;font-size:14px;min-width:34px;text-align:center}
+.zwhat{margin:0 0 8px;font-weight:700}
+.zdetail h4{margin:12px 0 4px;font-size:14px;color:var(--muted)}
+.zlist{margin:0;padding-left:18px;font-size:14.5px}.zlist li{margin:3px 0}
+.zlist.need{color:#7A4F00}
+.zact{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+.zact .link-btn{margin:0;cursor:pointer}
 
 /* ---------- responsive ---------- */
 @media (max-width:980px){
@@ -331,12 +391,14 @@ small.src{display:block;color:var(--muted);font-size:11.5px;margin-top:6px}
   .hero .wrap{grid-template-columns:1fr 1fr;min-height:0}
   .title-box{grid-column:1/-1;order:-1;padding-bottom:12px}
   .hero-char .spr{--dw:min(230px,40vw)}
+  .hero .wrap{row-gap:72px}
   .planet{left:6%;top:24px}
   .ship{top:26px}
   .cycle{grid-template-columns:1fr}
-  .cycle .spr{display:none}
+  .cycle .spr,.cyc-img{display:none}
   .grid3{grid-template-columns:1fr}
   .nav ul{display:none}
+  .mapgrid{grid-template-columns:1fr}
   .shop{grid-template-columns:repeat(2,minmax(0,1fr))}
   .shop-detail{grid-template-columns:1fr}
   .gtiles{grid-template-columns:repeat(3,minmax(0,1fr))}
@@ -350,9 +412,7 @@ small.src{display:block;color:var(--muted);font-size:11.5px;margin-top:6px}
   .gtiles{grid-template-columns:repeat(2,minmax(0,1fr))}
   .bar{grid-template-columns:54px 1fr 86px;gap:8px}
   .result{padding:16px}
-  .bubble{font-size:12.5px;padding:5px 10px;white-space:normal;max-width:150px;text-align:center}
-  .hero-char.k .bubble{top:-14%;right:auto;left:0}
-  .hero-char.o .bubble{top:-10%;left:auto;right:0}
+  .bubble{font-size:12.5px;padding:5px 10px;white-space:normal;max-width:42vw;top:-74px}
   .sim-badge{display:none}
 }
 @media (prefers-reduced-motion:reduce){
@@ -371,6 +431,7 @@ small.src{display:block;color:var(--muted);font-size:11.5px;margin-top:6px}
     <ul>
       <li><a href="#demo">에이전트 데모</a></li>
       <li><a href="#result">기획 결과</a></li>
+      <li><a href="#map">축제 지도</a></li>
       <li><a href="#shop">굿즈샵</a></li>
       <li><a href="#cycle">순환 구조</a></li>
     </ul>
@@ -387,8 +448,8 @@ small.src{display:block;color:var(--muted);font-size:11.5px;margin-top:6px}
   <span class="spark" style="left:8%;top:300px;animation-delay:-.6s;font-size:18px">✦</span>
   <span class="spark" style="right:10%;top:60px;animation-delay:-2s;font-size:22px">✦</span>
   <span class="spark" style="right:36%;top:36px;animation-delay:-1.3s;font-size:16px">✦</span>
-  <div class="planet" role="img" aria-label="얼라별: 자전하는 분홍색 행성"><img src="{{IMG:assets/planet_0.png}}" alt=""><img src="{{IMG:assets/planet_1.png}}" alt=""><img src="{{IMG:assets/planet_2.png}}" alt=""><img src="{{IMG:assets/planet_3.png}}" alt=""><img src="{{IMG:assets/planet_4.png}}" alt=""><img src="{{IMG:assets/planet_5.png}}" alt=""></div>
-  <div class="ship" title="외지몽 우주선"><img src="{{IMG:assets/ship.png}}" alt="초록색 외지몽 우주선이 하늘을 날아가는 모습"></div>
+  <div class="planet" role="img" aria-label="얼라별: 자전하는 분홍색 행성"><img src="{{IMG:assets_v01/planet_0.png}}" alt=""><img src="{{IMG:assets_v01/planet_1.png}}" alt=""><img src="{{IMG:assets_v01/planet_2.png}}" alt=""><img src="{{IMG:assets_v01/planet_3.png}}" alt=""><img src="{{IMG:assets_v01/planet_4.png}}" alt=""><img src="{{IMG:assets_v01/planet_5.png}}" alt=""></div>
+  <div class="ship" title="외지몽 우주선"><img src="{{IMG:assets_v01/ship.png}}" alt="초록색 외지몽 우주선이 하늘을 날아가는 모습"></div>
   <div class="wrap">
     <div class="hero-char k">
       <span class="bubble">이거는 말이다, 이래 하는 기라!</span>
@@ -403,7 +464,7 @@ small.src{display:block;color:var(--muted);font-size:11.5px;margin-top:6px}
     </div>
     <div class="hero-char o">
       <span class="bubble">대구말, 알려 주세요!</span>
-      <i class="spr" data-pose="o.curious" role="img" aria-label="외지몽이 고개를 갸웃하는 모습"></i>
+      <img class="hero-img" src="{{IMG:assets_v01/hero_oejimong.png}}" alt="외지몽이 대키미 쪽을 바라보는 모습">
     </div>
   </div>
 </div>
@@ -423,7 +484,7 @@ small.src{display:block;color:var(--muted);font-size:11.5px;margin-top:6px}
       <!-- chat -->
       <div class="card chat" aria-label="에이전트와의 대화">
         <div class="chat-top">
-          <span class="av k" style="width:38px;height:38px"><i class="spr" data-pose="k.av" style="--dw:52px"></i></span>
+          <img class="pic" style="width:34px;margin:0" src="{{IMG:assets_v01/av_daekimi.png}}" alt="">
           <h3>대키미 기획 에이전트</h3>
           <span class="sp"></span>
           <button class="mini" id="tourBtn" title="준비된 시나리오를 자동으로 보여 줘요">시연 투어</button>
@@ -577,15 +638,41 @@ small.src{display:block;color:var(--muted);font-size:11.5px;margin-top:6px}
   </div>
 </section>
 
+<!-- ================= MAP ================= -->
+<section id="map">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <span class="sec-kicker">STEP 3 · FESTIVAL MAP</span>
+        <h2>두류공원 <span>축제 지도</span></h2>
+      </div>
+      <p>구역을 누르면 그 구역에 무엇을 설치하고 운영하는지 알려 줘요. 대키미에게 "식사존은 어디야?"처럼 물어봐도 돼요.</p>
+    </div>
+    <div id="zoneBtns" class="zone-btns" aria-label="구역 버튼"></div>
+    <div class="mapgrid" id="mapWrap">
+      <div class="card mapcard">
+        <div class="mapbar"><span>두류공원 축제 안내도</span><button type="button" class="mini" id="pillBtn" aria-pressed="false">설치·운영 표시 켜기</button></div>
+        <div class="mapbox">
+          <svg id="mapSvg" viewBox="0 0 1448 1086" role="img" aria-label="두류공원 축제 안내도. 구역을 눌러 자세히 볼 수 있어요.">
+            <image href="{{IMG:assets_v01/festival_map.jpg}}" x="0" y="0" width="1448" height="1086"/>
+          </svg>
+        </div>
+        <small class="src">안내도는 지도 담당이 만든 그림이고 계속 업그레이드 중이에요. 실제 길 모양·거리는 위성지도 기준이에요.</small>
+      </div>
+      <div class="card zdetail" id="zoneDetail" aria-live="polite"></div>
+    </div>
+  </div>
+</section>
+
 <!-- ================= SHOP ================= -->
 <section id="shop">
   <div class="wrap">
     <div class="sec-head">
       <div>
-        <span class="sec-kicker">STEP 3 · GOODS SHOP</span>
+        <span class="sec-kicker">STEP 4 · GOODS SHOP</span>
         <h2>축제 <span>굿즈샵</span></h2>
       </div>
-      <p>D 파트 지침서의 굿즈 8종 상품 이미지예요. 카드를 누르면 대키미가 설명해 줘요. 컨셉을 고르면 어울리는 굿즈가 앞으로 와요.</p>
+      <p>D 파트 지침서의 굿즈 8종 상품 이미지예요. 카드를 누르면 대키미가 설명해 줘요. 카드를 누르면 오른쪽 위에서 대키미/외지몽 버전을 골라 볼 수 있어요. 컨셉을 고르면 어울리는 굿즈가 앞으로 와요.</p>
     </div>
     <div class="shop-note"><b>알아두세요</b> · 디자인·샘플 이미지 단계이고 <b>가격과 제작 수량은 아직 정해지지 않았어요</b>(D-2·D-4에서 결정). 양산 승인과는 별개예요.</div>
     <div class="shop" id="shopGrid" role="list"></div>
@@ -598,7 +685,7 @@ small.src{display:block;color:var(--muted);font-size:11.5px;margin-top:6px}
   <div class="wrap">
     <div class="sec-head">
       <div>
-        <span class="sec-kicker">STEP 4 · CYCLE</span>
+        <span class="sec-kicker">STEP 5 · CYCLE</span>
         <h2>한 번으로 끝나지 않는 <span>순환형</span></h2>
       </div>
       <p>축제가 끝나면 운영 결과가 차년도 과제가 되고, 그 과제가 다음 해 기획조건표의 입력으로 돌아가요.</p>
@@ -613,7 +700,7 @@ small.src{display:block;color:var(--muted);font-size:11.5px;margin-top:6px}
         </svg>
         <p class="cycle-cap"><span class="lb l-wait">⏳</span> 점선 단계는 <b>개최·실행 후에만</b> 알 수 있는 결과예요. 아직 열리지 않은 축제의 실적은 만들어 내지 않아요.</p>
       </div>
-      <i class="spr" data-pose="o.praise" role="img" aria-label="외지몽이 손을 내미는 모습"></i>
+      <img class="cyc-img" src="{{IMG:assets_v01/av_oejimong.png}}" alt="외지몽이 손을 흔드는 모습">
     </div>
   </div>
 </section>
@@ -629,7 +716,8 @@ small.src{display:block;color:var(--muted);font-size:11.5px;margin-top:6px}
 </footer>
 
 <script>
-{{JS:app.js}}
+{{JS:app_v01.js}}
+{{JS:map_v01.js}}
 </script>
 </body>
 </html>
