@@ -13,3 +13,6 @@
 설명 : 순환형 축제 기획 AI 에이전트를 웹에서 직접 실행해 볼 수 있는 데모 사이트입니다. 에이전트가 어떻게 작동하는지 살펴보고, 실행을 통해 생성된 축제 기획 결과물을 확인할 수 있습니다. 데모 사이트는 지속적으로 개선하고 있습니다.
 
 순환형 에이전트 구성도 : <https://claude.ai/artifact/HwtuFfTZmXXLN5CtmhGKkq>
+
+## 영상&이미지 자료 모음집 구글 드라이브
+영상&이미지 자료 구글드라이브 : <https://drive.google.com/drive/folders/1kNLKhrPFYJ8ky4JNlktyYssHqaXZaDuL>
