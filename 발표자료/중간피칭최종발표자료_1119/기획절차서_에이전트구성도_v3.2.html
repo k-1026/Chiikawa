@@ -151,7 +151,7 @@ tr.done td{color:#8a8a8f}tr.done td:first-child{text-decoration:line-through}
 </style>
 
 <div class="wrap">
-<span class="tag">v3.1 · 2026-11-18 · 순환 장치 · 단계별 검증 · 파일 뼈대 · 팀 확인 전</span>
+<span class="tag">v3.2 · 2026-11-20 · Y 지도 → 파트 서브에이전트 편입 · main 버전 반영 · 팀 확인 전</span>
 <h1>기획 절차서 &amp; 에이전트 구성도</h1>
 <p class="lead">사용자는 오케스트레이터에게만 말하고, 오케스트레이터가 요청을 판단해 서브에이전트에게 일을 나눠요. 결과는 검증을 거쳐 오케스트레이터가 종합해서 돌려줘요. 모든 결정과 진행 상태는 파일에 남아서, 중간에 끊겨도 이어 가고 다음 해에도 다시 읽어요.</p>
 
@@ -200,28 +200,29 @@ tr.done td{color:#8a8a8f}tr.done td:first-child{text-decoration:line-through}
   </div>
 
   <div class="grp g2">
-   <h4>🛠 파트 서브에이전트</h4><div class="gs">공통 <code>part-agent</code> 1개가 파트 글자를 받아, 그 파트 세부지침안(main)을 읽고 일해요</div>
+   <h4>🛠 파트 서브에이전트</h4><div class="gs">공통 <code>part-agent</code> 1개가 파트 글자(A~K · Y)를 받아, main <code>세부지침안/</code> 안의 그 파트 폴더를 읽고 일해요</div>
    <div class="sub">3대 핵심 프로그램</div>
    <div class="pgrid">
-    <div class="ag"><code>A</code> 사투리 콘텐츠 · v4<div>토론 · 골든벨 · 뮤지컬 · NPC · 도장 4곳</div></div>
-    <div class="ag"><code>B</code> 10미 · 7구 · v5<div>부스 · 원조 매장 · 위생</div></div>
-    <div class="ag"><code>C</code> 플리마켓 · v3<div>선정 · 수수료 5.3%</div></div>
+    <div class="ag"><code>A</code> 사투리 콘텐츠 · v6<div>토론 · 골든벨 · 뮤지컬 · NPC · 도장 4곳</div></div>
+    <div class="ag"><code>B</code> 10미 · 7구 · v8<div>부스 · 원조 매장 · 위생</div></div>
+    <div class="ag"><code>C</code> 플리마켓 · v5<div>선정 · 수수료 5.3%</div></div>
    </div>
    <div class="sub">추가 콘텐츠</div>
    <div class="pgrid">
-    <div class="ag nogd"><code>D</code> 굿즈<div>IP 규칙·검수 · 발주</div></div>
-    <div class="ag"><code>E</code> 부대 프로그램 · v1<div>유형 판정 · 후보 · 시간대</div></div>
+    <div class="ag"><code>D</code> 굿즈 · v1<div>IP 규칙·검수 · 발주</div></div>
+    <div class="ag"><code>E</code> 부대 프로그램 · v2<div>유형 판정 · 후보 · 시간대</div></div>
     <div class="ag"><code>F</code> 홍보 · v1<div>온라인 · 오프라인(F-8)</div></div>
     <div class="ag"><code>G</code> 관광 연계 · v2<div>동선 · 밖 쿠폰·혜택 · 숙박</div></div>
     <div class="ag nogd" style="grid-column:span 2"><code>K</code> 웹<div>기능 명세 · 코드 초안 · Supabase DB (스탬프는 오프라인이라 웹 스탬프 없음)</div></div>
    </div>
    <div class="sub">공통 지원</div>
    <div class="pgrid">
-    <div class="ag nogd"><code>H</code> 운영<div>예산 · 인력 · 일정 · 안전 · 스탬프 운영</div></div>
+    <div class="ag"><code>H</code> 운영 · v4<div>예산 · 인력 · 일정 · 안전 · 스탬프 운영</div></div>
     <div class="ag"><code>I</code> 성과 · v1<div>KPI · 측정 · 결과 판정 · 차년도 과제</div></div>
-    <div class="ag"><code>J</code> 사투리 · v1<div>사전 · 표기 · A·F 문구 검수</div></div>
+    <div class="ag"><code>J</code> 사투리 · v3<div>사전 · 표기 · A·F 문구 검수</div></div>
+    <div class="ag" style="grid-column:1/-1;border-color:#a9c6ec"><code>Y</code> 지도 · v3 <span class="new">v3.2</span><div>지도 원본(구역 번호 · 메인구역 구획 · 오시는 길) 읽기 · 다른 파트 배치가 지도와 맞는지 확인 · 지도 수정은 지도 담당에게 질문</div></div>
    </div>
-   <div class="legend">점선 칸 = main에 세부지침안이 아직 없는 파트 (D · H · K)</div>
+   <div class="legend">점선 칸 = main에 세부지침안이 아직 없는 파트 (K) · Y는 2026-11-20부터 <code>세부지침안/Y.지도/</code></div>
   </div>
 
   <div class="grp g3">
@@ -238,13 +239,12 @@ tr.done td{color:#8a8a8f}tr.done td:first-child{text-decoration:line-through}
  <div class="store">
   <b>🗂 공유 저장소 (GitHub)</b>
   <span class="chip">P0 공통 기본 정보</span>
-  <span class="chip">세부지침안 A~J</span>
-  <span class="chip">Y.지도 (지도 원본)</span>
+  <span class="chip">세부지침안 A~J · Y.지도</span>
   <span class="chip">local 리서치 · 통합_조사결과</span>
-  <span class="chip">연도별 01~05 산출물</span>
+  <span class="chip">대사투/ 연도별 01~05 산출물</span>
   <span class="chip cyc">00_결정기록 · 00_진행상태</span>
-  <span class="chip cyc">공통/단가표 (해마다 누적)</span>
-  <span class="chip web">Supabase = K 웹 페이지 DB</span>
+  <span class="chip cyc">대사투/공통/단가표 (해마다 누적)</span>
+  <span class="chip web">웹/ = 안내페이지 · Supabase</span>
   <span style="color:#6b6b70">← 서브에이전트는 여기서 원본을 직접 읽고, 결과도 여기에 파일로 저장해요</span>
  </div>
 
@@ -363,7 +363,7 @@ tr.done td{color:#8a8a8f}tr.done td:first-child{text-decoration:line-through}
  <tr><td>관광 · 1박</td><td>동선, 숙박, 쿠폰 금액</td><td>G → H(금액)</td><td>P0-8 페르소나</td><td>evidence</td></tr>
  <tr><td>예산 · 인력 · 안전</td><td>예산 3안, 안전 체크</td><td>H (A~G 결과 + 단가표 필요)</td><td>P0-6 대분류, 공통/단가표</td><td>conflict(합계)</td></tr>
  <tr><td>동선 · 스탬프 <span class="new">v3</span></td><td>스탬프 위치, 보상, 배부</td><td>M-6(동선·찍는 지점) → H(배부·교환·상품) → G-3(밖 쿠폰)</td><td>P0-1, P0-3, Y 지도</td><td>conflict</td></tr>
- <tr><td>지도 · 구역 <span class="new">v3</span></td><td>구역 번호, 바리게이트</td><td>부르지 않음 · Y 원본을 읽고, 바꿀 건 사용자(지도 담당)에게 질문</td><td>Y.지도</td><td>—</td></tr>
+ <tr><td>지도 · 구역 <span class="new">v3</span></td><td>구역 번호, 바리게이트</td><td>part-agent Y (지도 원본 읽기 · 배치 확인) · 바꿀 건 지도 담당에게 질문</td><td>세부지침안/Y.지도</td><td>conflict</td></tr>
  <tr><td>성과 · 설문</td><td>KPI, 설문지</td><td>I</td><td>P0-2 목표</td><td>evidence, conflict(일정)</td></tr>
  <tr><td>웹 기능</td><td>지도, 투표 화면</td><td>K (+ 데이터는 J)</td><td>P0-3, Y, M-6</td><td>format</td></tr>
  <tr><td>결정 변경 <span class="new">v3</span></td><td>"주제 A안으로 정했어"</td><td>오케스트레이터 · 00_결정기록 추가 → 영향 파일 ⚠</td><td>00_결정기록</td><td>—</td></tr>
@@ -413,10 +413,10 @@ tr.done td{color:#8a8a8f}tr.done td:first-child{text-decoration:line-through}
 <!-- ⑦ SOURCE -->
 <section id="src">
 <h2>⑦ 원본 지정 — 한 내용은 한 곳에서만</h2>
-<p class="desc">서브에이전트가 이 원본만 읽어야 결과가 서로 안 부딪혀요. 다른 파트는 링크만 걸어요. 기준: main 세부지침안 (P V11 · A v4 · B v5 · C v3 · E v1 · F v1 · G v2 · I v1 · J v1 · Y.지도), 2026-11-18.</p>
+<p class="desc">서브에이전트가 이 원본만 읽어야 결과가 서로 안 부딪혀요. 다른 파트는 링크만 걸어요. 기준: main 세부지침안 (P V14 · A v6 · B v8 · C v5 · D v1 · E v2 · F v1 · G v2 · H v4 · I v1 · J v3 · Y.지도 v3), 2026-11-20.</p>
 <div class="tw"><table>
  <tr><th>내용</th><th>원본</th><th>다른 파트에 남기는 것</th><th>상태</th></tr>
- <tr><td>지도 · 구역 번호(0~6) · 메인구역 구획</td><td class="mono">Y.지도</td><td>P0-3: 요약만, 다르면 Y 우선</td><td class="st-ok">확정 (11-18)</td></tr>
+ <tr><td>지도 · 구역 번호(0~6) · 메인구역 구획</td><td class="mono">세부지침안/Y.지도</td><td>P0-3: 요약만, 다르면 Y 우선</td><td class="st-ok">확정 (11-20 세부지침안 안으로)</td></tr>
  <tr><td>장소 · 구역 · 부스 수</td><td class="mono">P0-3</td><td>B·C: 구역 안 세부 배치</td><td class="st-ok">확정</td></tr>
  <tr><td>기간 · 운영 시간 (매일 12:00 개장 · 금토 22:00 · 일 20:00)</td><td class="mono">P0-4</td><td>E-3: 시간대 안 배치만</td><td class="st-ok">확정 (B·C 반영 11-17)</td></tr>
  <tr><td>축제장 안 동선 · 스탬프 찍는 지점</td><td class="mono">M-6</td><td>A·B·C·E: 찍어 주는 방식 한 줄</td><td class="st-ok">확정</td></tr>
@@ -467,7 +467,7 @@ tr.done td{color:#8a8a8f}tr.done td:first-child{text-decoration:line-through}
  <tr><td>ideator</td><td>없앰 · A·E가 후보를 내고 idea-scorer(M-5)가 취합</td><td>별도 에이전트</td></tr>
  <tr><td>재작업 상한</td><td>2회, 넘으면 사용자 보고</td><td>1회 · 3회</td></tr>
  <tr><td>스탬프</td><td>M-6 동선·지점 / A·B·C·E 찍는 방식 / H 운영</td><td>—</td></tr>
- <tr><td>지도(Y)</td><td>에이전트 없이 원본 파일로만</td><td>지도 에이전트</td></tr>
+ <tr><td>지도(Y)</td><td>파트 서브에이전트로 편입 (part-agent Y, 읽기 · 확인만) <span class="new">v3.2</span></td><td>에이전트 없이 원본 파일로만</td></tr>
  <tr><td>J 위치</td><td>공통 지원</td><td>추가 콘텐츠</td></tr>
  <tr><td>파트 에이전트</td><td>공통 part-agent 1개</td><td>파트별 11개</td></tr>
  <tr><td>검증 시점</td><td>단계마다 해당 Checker + S10 전체</td><td>S10에서만</td></tr>
@@ -477,7 +477,7 @@ tr.done td{color:#8a8a8f}tr.done td:first-child{text-decoration:line-through}
 <!-- ⑧ FILES -->
 <section id="files">
 <h2>⑧ 파일 뼈대 — 순환형축제에이전트/</h2>
-<p class="desc">main에 이 폴더 하나만 올리면 돌아가게 짠 구조예요. 구버전 <code>로컬에이전트/</code>는 새 에이전트가 한 바퀴 돌 때까지 참고용으로 두고, main에는 올리지 않아요. 아직 만들지 않은 설계안이에요.</p>
+<p class="desc">main에 올라가 있는 실제 구조예요. 구버전 <code>로컬에이전트/</code>는 main에 올리지 않았어요.</p>
 <pre class="tree"><span class="h">순환형축제에이전트/</span>
 ├── <span class="h">CLAUDE.md</span>                    <span class="c">← 오케스트레이터 본체 (①의 0~5단계 · 규칙 8개 · 단계 패턴)</span>
 ├── 지침/
@@ -487,23 +487,23 @@ tr.done td{color:#8a8a8f}tr.done td:first-child{text-decoration:line-through}
 │   ├── 원본지정표.md            <span class="c">← ⑦</span>
 │   ├── 근거규칙.md              <span class="c">← 구버전에서 옮김 (통일 표기 · 불일치 · [추정])</span>
 │   ├── 반환형식.md              <span class="c">← 서브에이전트 반환 6칸</span>
-│   └── 세부지침안_버전.md        <span class="c">← "A=A파트v4, B=B파트v5 …" 파트가 올라가면 여기만 고침</span>
+│   └── 세부지침안_버전.md        <span class="c">← "A=A파트v6, B=B파트v8 …" 파트가 올라가면 여기만 고침</span>
 ├── 양식/
 │   ├── <span class="v">00_결정기록.md · 00_진행상태.md</span>
 │   └── 01_기획조건표.md ~ 05_차년도과제.md   <span class="c">← 구버전 스킬에서 빼 옴</span>
 └── .claude/
     ├── agents/
     │   ├── <span class="gr">retro-reader · researcher · strategist · idea-scorer · flow-designer</span>   <span class="c">← 기획 단계 5개</span>
-    │   ├── <span class="gr">part-agent</span>                                     <span class="c">← 파트 공통 1개 (A~K)</span>
+    │   ├── <span class="gr">part-agent</span>                                     <span class="c">← 파트 공통 1개 (A~K · Y)</span>
     │   └── <span class="r">conflict · duplicate · format · evidence · ethics · reviewer</span>  <span class="c">← 검증 6개</span>
     ├── skills/
     │   └── festival-start · festival-research · festival-plan · festival-review   <span class="c">← 이어 하기 입구</span>
     └── settings.json            <span class="c">← (나중에) 게이트를 훅으로 막기</span>
 
 <span class="c">읽고 쓰는 main 폴더 (옮기지 않음)</span>
-../세부지침안/        <span class="c">← 파트 지침 · P0 (버전 색인으로 찾음)</span>
-../Y.지도/           <span class="c">← 지도 원본</span>
-../local 리서치/     <span class="c">← 통합_조사결과V1 · 팀원별 원본 · &lt;연도&gt;/00~05 · 공통/단가표</span></pre>
+../세부지침안/        <span class="c">← 파트 지침 A~K · P0 · Y.지도 (버전 색인으로 찾음)</span>
+../local 리서치/     <span class="c">← 통합_조사결과V1 · 팀원별 원본 · 가정값/ (읽기만)</span>
+../대사투/           <span class="c">← &lt;연도&gt;/00~05 · 03_파트/ · 검토/ · 공통/단가표 (에이전트가 씀)</span></pre>
 
 <h2>에이전트를 나눈 기준</h2>
 <div class="tw"><table>
@@ -639,5 +639,6 @@ document.querySelectorAll('nav button').forEach(b=>b.onclick=()=>{
  document.querySelectorAll('nav button').forEach(x=>x.classList.toggle('on',x===b));
  document.querySelectorAll('section').forEach(x=>x.classList.toggle('on',x.id===b.dataset.t));});
 </script>
+
 
 </body></html>
