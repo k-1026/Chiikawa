@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "daesatu-web",
+      "runtimeExecutable": "python3",
+      "runtimeArgs": ["-m", "http.server", "5178", "--bind", "127.0.0.1", "--directory", "대사투웹사이트"],
+      "port": 5178
+    }
+  ]
+}
