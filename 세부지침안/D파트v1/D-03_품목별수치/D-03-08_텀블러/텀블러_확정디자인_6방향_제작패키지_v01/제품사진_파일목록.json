@@ -1,0 +1,242 @@
+[
+  {
+    "sku": "DK900",
+    "view": "01_FRONT",
+    "path": "01_제품사진/DK900/DK900_01_FRONT.png",
+    "pixels": [
+      412,
+      621
+    ],
+    "sha256": "5aaa00e321a995fc5192d79c1669e1db88efc126faf1a5d6577d62f1e2fde5be"
+  },
+  {
+    "sku": "DK900",
+    "view": "02_LEFT",
+    "path": "01_제품사진/DK900/DK900_02_LEFT.png",
+    "pixels": [
+      412,
+      621
+    ],
+    "sha256": "cd5ec88f7fa2763174b15ad1f0e4b9967769274585257020c62555e9b78cf2c9"
+  },
+  {
+    "sku": "DK900",
+    "view": "03_RIGHT",
+    "path": "01_제품사진/DK900/DK900_03_RIGHT.png",
+    "pixels": [
+      412,
+      621
+    ],
+    "sha256": "364a468a9ec8e126993b1bc640c556e43c706f6f54aa130c1062ee8f75d49320"
+  },
+  {
+    "sku": "DK900",
+    "view": "04_LEFT45",
+    "path": "01_제품사진/DK900/DK900_04_LEFT45.png",
+    "pixels": [
+      412,
+      621
+    ],
+    "sha256": "e8f0abddb0093b3602c720be891730de7c437a4a236743feeb860673414468c6"
+  },
+  {
+    "sku": "DK900",
+    "view": "05_RIGHT45",
+    "path": "01_제품사진/DK900/DK900_05_RIGHT45.png",
+    "pixels": [
+      412,
+      621
+    ],
+    "sha256": "d5b7c2577cd0c53a248a57fff872602cee753cf6c44810fccba065eaf95ddf44"
+  },
+  {
+    "sku": "DK900",
+    "view": "06_BACK",
+    "path": "01_제품사진/DK900/DK900_06_BACK.png",
+    "pixels": [
+      412,
+      621
+    ],
+    "sha256": "b4ffb357826604e8cb3c0a9fe53e42bafd27d9ca0a6828935169d185a64c4cee"
+  },
+  {
+    "sku": "OM900",
+    "view": "01_FRONT",
+    "path": "01_제품사진/OM900/OM900_01_FRONT.png",
+    "pixels": [
+      412,
+      621
+    ],
+    "sha256": "26736fd19a345a821e805fc780778625eb0a8ca06a2ab534a14b941774e21333"
+  },
+  {
+    "sku": "OM900",
+    "view": "02_LEFT",
+    "path": "01_제품사진/OM900/OM900_02_LEFT.png",
+    "pixels": [
+      412,
+      621
+    ],
+    "sha256": "ee41a11bb817c17583cbf151469939630ec6121ee9aaf39b6cad43acb79170a9"
+  },
+  {
+    "sku": "OM900",
+    "view": "03_RIGHT",
+    "path": "01_제품사진/OM900/OM900_03_RIGHT.png",
+    "pixels": [
+      412,
+      621
+    ],
+    "sha256": "d28f3c06907f7719ecacee1aaf4df6b68e4646acf134f8ddd7744ef8c4e5184a"
+  },
+  {
+    "sku": "OM900",
+    "view": "04_LEFT45",
+    "path": "01_제품사진/OM900/OM900_04_LEFT45.png",
+    "pixels": [
+      412,
+      621
+    ],
+    "sha256": "fd0ab36b2139312cf29498f6c99badcc9398087092b22c6e2e03a9b9bb75df2d"
+  },
+  {
+    "sku": "OM900",
+    "view": "05_RIGHT45",
+    "path": "01_제품사진/OM900/OM900_05_RIGHT45.png",
+    "pixels": [
+      412,
+      621
+    ],
+    "sha256": "0248fe3bde41ec4161dcdf7fc1a18c08a489051ffc19f97232c7106ab9f9b70b"
+  },
+  {
+    "sku": "OM900",
+    "view": "06_BACK",
+    "path": "01_제품사진/OM900/OM900_06_BACK.png",
+    "pixels": [
+      412,
+      621
+    ],
+    "sha256": "d23673e6fe433f32419b7674d55730e3c5da68f7d35144dd0d58d355c2763e60"
+  },
+  {
+    "sku": "DK350",
+    "view": "01_FRONT",
+    "path": "01_제품사진/DK350/DK350_01_FRONT.png",
+    "pixels": [
+      412,
+      621
+    ],
+    "sha256": "0b3e60925626ade28fdabbdccd339f7923ab2fca132cdb51fb41dbf8a6263b5a"
+  },
+  {
+    "sku": "DK350",
+    "view": "02_LEFT",
+    "path": "01_제품사진/DK350/DK350_02_LEFT.png",
+    "pixels": [
+      412,
+      621
+    ],
+    "sha256": "ff40d6fa71c9560758aeb794df84e71fe2e39c6edf140ce9f10bdc102a9e5815"
+  },
+  {
+    "sku": "DK350",
+    "view": "03_RIGHT",
+    "path": "01_제품사진/DK350/DK350_03_RIGHT.png",
+    "pixels": [
+      412,
+      621
+    ],
+    "sha256": "cb02f727de33f0caf5417c28f670ac711927870cf2daaff1936b49997e1b74b3"
+  },
+  {
+    "sku": "DK350",
+    "view": "04_LEFT45",
+    "path": "01_제품사진/DK350/DK350_04_LEFT45.png",
+    "pixels": [
+      412,
+      621
+    ],
+    "sha256": "e377ad69635c62812671bc8fc009e0275b4fbda9a893ef08f557bdeca01712f7"
+  },
+  {
+    "sku": "DK350",
+    "view": "05_RIGHT45",
+    "path": "01_제품사진/DK350/DK350_05_RIGHT45.png",
+    "pixels": [
+      412,
+      621
+    ],
+    "sha256": "a3659985ce45b81ab9f343cc093203592817c83df9e14a963b1a3664501101fc"
+  },
+  {
+    "sku": "DK350",
+    "view": "06_BACK",
+    "path": "01_제품사진/DK350/DK350_06_BACK.png",
+    "pixels": [
+      412,
+      621
+    ],
+    "sha256": "21e9de8293a2bb9c9432b78aa2191408867e66f1369855af5d996b08fc2a089d"
+  },
+  {
+    "sku": "OM350",
+    "view": "01_FRONT",
+    "path": "01_제품사진/OM350/OM350_01_FRONT.png",
+    "pixels": [
+      412,
+      621
+    ],
+    "sha256": "7b1dacb1469c68de2355b0b7d72d6dd186425b2b90036539d13b528c89e151c5"
+  },
+  {
+    "sku": "OM350",
+    "view": "02_LEFT",
+    "path": "01_제품사진/OM350/OM350_02_LEFT.png",
+    "pixels": [
+      412,
+      621
+    ],
+    "sha256": "fcb587bccd7e90e7839d1a3209d6643c6e09f74913be86f1c37740daf3eee9f1"
+  },
+  {
+    "sku": "OM350",
+    "view": "03_RIGHT",
+    "path": "01_제품사진/OM350/OM350_03_RIGHT.png",
+    "pixels": [
+      412,
+      621
+    ],
+    "sha256": "8972fc114eed13f0d89785ad409a1578e1aea16aa42ce035233f27af303b5e5e"
+  },
+  {
+    "sku": "OM350",
+    "view": "04_LEFT45",
+    "path": "01_제품사진/OM350/OM350_04_LEFT45.png",
+    "pixels": [
+      412,
+      621
+    ],
+    "sha256": "c02b152f0a3560b8088cfc83ddc5f3af0dd86defc9c651a703bfe58a6bb51787"
+  },
+  {
+    "sku": "OM350",
+    "view": "05_RIGHT45",
+    "path": "01_제품사진/OM350/OM350_05_RIGHT45.png",
+    "pixels": [
+      412,
+      621
+    ],
+    "sha256": "085271731df6ff1f50691e92bd5dcf541d690dd528bf49812202fb7a7c2762c5"
+  },
+  {
+    "sku": "OM350",
+    "view": "06_BACK",
+    "path": "01_제품사진/OM350/OM350_06_BACK.png",
+    "pixels": [
+      412,
+      621
+    ],
+    "sha256": "f6b08837c459f9f0133f48d31d062c873a36f60fd789b7106ba000bc5d0e492b"
+  }
+]

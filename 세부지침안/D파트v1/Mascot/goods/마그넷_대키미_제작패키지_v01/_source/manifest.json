@@ -1,0 +1,25 @@
+{
+  "product_id": "DK-MAG-01",
+  "visual_master": "v04",
+  "document_version": "v01",
+  "source_sha256": "ebb89174d6b56f31d7edf1420dfad5003e45312051287d905ac90ab9853b98f7",
+  "source_size_px": [
+    1536,
+    1024
+  ],
+  "status": "visual reference; proposed sample dimensions; not production-approved",
+  "proposed_size_mm": [
+    55,
+    70
+  ],
+  "proposed_magnet_center_mm": [
+    27.5,
+    31.5
+  ],
+  "proposed_magnet_diameter_mm": 16,
+  "files": [
+    "03_대키미_마그넷_제작사양서_v01.pdf",
+    "02_대키미_마그넷_디자인시트_v01.pdf",
+    "01_대키미_마그넷_상품이미지_v04.png"
+  ]
+}

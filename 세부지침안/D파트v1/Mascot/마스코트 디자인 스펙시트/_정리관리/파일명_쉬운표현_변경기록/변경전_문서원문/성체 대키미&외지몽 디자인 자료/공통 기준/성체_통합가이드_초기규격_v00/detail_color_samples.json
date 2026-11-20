@@ -1,0 +1,81 @@
+{
+  "method": "3 x 3 pixel per-channel median, hero render surface samples, not independent flat swatches",
+  "characters": {
+    "daekimi": {
+      "nose": {
+        "hex": "#060A06",
+        "rgb": [
+          6,
+          10,
+          6
+        ],
+        "center_xy": [
+          562,
+          224
+        ]
+      },
+      "mouth_interior": {
+        "hex": "#2D0405",
+        "rgb": [
+          45,
+          4,
+          5
+        ],
+        "center_xy": [
+          559,
+          236
+        ]
+      },
+      "tongue": {
+        "hex": "#F17683",
+        "rgb": [
+          241,
+          118,
+          131
+        ],
+        "center_xy": [
+          559,
+          245
+        ]
+      }
+    },
+    "oejimong": {
+      "nose": {
+        "hex": "#111213",
+        "rgb": [
+          17,
+          18,
+          19
+        ],
+        "center_xy": [
+          568,
+          231
+        ]
+      },
+      "mouth_interior": {
+        "hex": "#480101",
+        "rgb": [
+          72,
+          1,
+          1
+        ],
+        "center_xy": [
+          565,
+          249
+        ]
+      },
+      "tongue": {
+        "hex": "#D04544",
+        "rgb": [
+          208,
+          69,
+          68
+        ],
+        "center_xy": [
+          568,
+          263
+        ]
+      }
+    }
+  }
+}

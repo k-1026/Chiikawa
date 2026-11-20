@@ -1,0 +1,487 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>순환형 축제 에이전트 중간 피칭</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<style>
+:root{
+  --bg:#e9eeec;--card:#fff;--ink:#1d2b28;--mut:#5b6b67;--line:#dbe4e1;
+  --teal:#2f7f77;--teal-d:#245f59;--soft:#e5f2ef;--rule:#1f5a54;--acc:#d8f0a8;
+  --red:#c0392b;--amb:#9a6410;--grn:#2f855a;--redbg:#fbeae8;--ambbg:#fbf1dc;--grnbg:#e3f3ea;
+  --todo:#8a6d1f;--todobg:#fffaf0;--wait:#4b5f8a;--waitbg:#eef1f8;
+}
+*{box-sizing:border-box}
+html,body{margin:0;height:100%;background:var(--bg);color:var(--ink);
+  font-family:"Pretendard",-apple-system,"Apple SD Gothic Neo","Noto Sans KR",sans-serif;overflow:hidden}
+#viewport{position:fixed;inset:0;display:flex;align-items:center;justify-content:center}
+#stage{width:1280px;height:720px;position:relative;transform-origin:center center;flex:none}
+.slide{position:absolute;inset:0;background:var(--card);border-radius:6px;box-shadow:0 6px 30px rgba(0,0,0,.08);
+  padding:40px 56px 56px;display:none;flex-direction:column;overflow:hidden}
+.slide.on{display:flex}
+.bar{width:40px;height:5px;background:var(--teal);border-radius:3px;margin-bottom:12px}
+.hd{display:flex;justify-content:space-between;align-items:flex-start;gap:20px}
+h1{font-size:34px;line-height:1.25;margin:0;font-weight:800;letter-spacing:-.5px}
+h1 em{font-style:normal;color:var(--teal)}
+.pill{background:var(--soft);color:var(--teal-d);font-size:14px;font-weight:700;padding:7px 16px;border-radius:99px;white-space:nowrap}
+.q{margin:8px 0 0;color:var(--mut);font-size:16px}
+.q b{color:var(--ink)}
+.body{flex:1;margin-top:16px;min-height:0}
+.foot{position:absolute;left:56px;right:56px;bottom:18px;display:flex;justify-content:space-between;align-items:center;font-size:12.5px;color:var(--mut)}
+.pg{background:var(--teal);color:#fff;font-weight:700;font-size:13px;border-radius:5px;padding:3px 9px}
+.ev{display:flex;gap:7px;align-items:center;flex-wrap:wrap}
+.ev span{font-size:12px;border:1px solid var(--line);border-radius:99px;padding:2px 10px;color:var(--mut);background:#fff}
+.ev span.k{border:0;background:none;padding:0;font-weight:700;color:var(--teal-d)}
+.grid{display:grid;gap:16px}
+.col{display:flex;flex-direction:column;gap:12px;min-width:0}
+.card{border:1px solid var(--line);border-radius:12px;padding:14px 18px;background:#fff}
+.card h3{margin:0 0 8px;font-size:16px;color:var(--teal-d)}
+.card p,.card li{font-size:15px;line-height:1.55;margin:0}
+.card ul{margin:0;padding-left:20px}
+.card li+li{margin-top:3px}
+.lab{display:inline-block;font-size:11px;font-weight:700;border-radius:4px;padding:1px 6px;margin-left:3px;vertical-align:middle;background:var(--soft);color:var(--teal-d)}
+.lab.h{background:var(--ambbg);color:var(--amb)}
+.todo{border:1.5px dashed #d6b45a;background:var(--todobg);color:var(--todo);border-radius:12px;padding:11px 16px;font-size:14.5px;line-height:1.5}
+.todo b{color:#6e5410}
+.wait{border:1.5px dashed #9aa8c8;background:var(--waitbg);color:var(--wait);border-radius:12px;padding:11px 16px;font-size:14.5px;line-height:1.5}
+.wait b{color:#33456e}
+.pair{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.rule{background:var(--rule);color:#fff;border-radius:12px;padding:14px 22px;font-size:16px;line-height:1.55}
+.rule b{color:var(--acc)}
+.st{display:inline-block;padding:2px 10px;border-radius:99px;font-size:12.5px;font-weight:700;white-space:nowrap}
+.st.r{background:var(--redbg);color:var(--red)}.st.y{background:var(--ambbg);color:var(--amb)}.st.g{background:var(--grnbg);color:var(--grn)}.st.w{background:var(--waitbg);color:var(--wait)}
+.stat .n{font-size:40px;font-weight:800;color:var(--teal);letter-spacing:-1px;line-height:1.1}
+.stat .l{font-size:14px;color:var(--mut);margin-top:4px;line-height:1.4}
+/* evidence table */
+table{width:100%;border-collapse:collapse}
+.et{border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.et th{background:var(--soft);color:var(--teal-d);font-size:13px;text-align:left;padding:9px 14px}
+.et td{font-size:15px;line-height:1.5;padding:10px 14px;vertical-align:top;border-top:1px solid var(--line)}
+.et td.nm{width:210px;font-weight:800;font-size:16px}
+.et td.nm .st{margin-top:5px;display:table}
+.et td.no{color:var(--mut)}
+.et td.no b{color:#b3581f}
+/* structure table */
+.struct{border:0}
+.struct th{background:#e2f0ed;font-size:13px;padding:13px 14px;text-align:left;color:var(--teal-d)}
+.struct td{font-size:14.5px;padding:13px 14px;border-bottom:1px solid var(--line);vertical-align:middle;line-height:1.5}
+.struct td:first-child{font-weight:800;width:104px;font-size:16px}
+.struct td.s{text-align:center;width:90px;white-space:nowrap}
+.flow{display:flex;align-items:center;gap:8px}
+.step{flex:1;border:1.5px solid var(--teal);border-radius:10px;padding:9px 8px;text-align:center;background:#fff}
+.step b{display:block;font-size:16px}
+.step small{color:var(--mut);font-size:12px}
+.step.gate{background:var(--soft)}
+.arr{color:var(--teal);font-weight:800;font-size:18px}
+.loop{margin:5px 40px 0;height:22px;border:2px solid var(--teal);border-top:0;border-radius:0 0 14px 14px;position:relative}
+.loop span{position:absolute;left:50%;bottom:-11px;transform:translateX(-50%);background:#fff;padding:0 10px;font-size:13px;font-weight:700;color:var(--teal-d);white-space:nowrap}
+.broken .loop{border-color:var(--red);border-style:dashed}.broken .loop span{color:var(--red)}
+.jr{display:flex;gap:5px}
+.jr span{flex:1;text-align:center;font-size:12px;font-weight:600;background:var(--soft);color:var(--teal-d);border-radius:6px;padding:6px 2px}
+.jr span.bad{background:var(--redbg);color:var(--red);outline:1.5px solid var(--red)}
+.bars{display:flex;flex-direction:column;gap:8px}
+.bars .r{display:grid;grid-template-columns:150px 1fr 40px;align-items:center;gap:10px;font-size:14px}
+.bars .t{height:14px;background:#eef2f1;border-radius:7px;overflow:hidden}
+.bars .t i{display:block;height:100%;background:#9cc7c1;border-radius:7px}
+.bars .r.us .t i{background:var(--teal)}.bars .r.us{font-weight:700;color:var(--teal-d)}
+.mini{font-size:12.5px;color:var(--mut)}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chips span{font-size:13.5px;padding:4px 11px;border-radius:8px;font-weight:600}
+.chips .g{background:var(--grnbg);color:var(--grn)}.chips .y{background:var(--ambbg);color:var(--amb)}.chips .r{background:var(--redbg);color:var(--red)}
+/* cover */
+.cover{background:linear-gradient(135deg,#1f5a54 0%,#2f7f77 60%,#3f998f 100%);color:#fff;justify-content:center}
+.cover h1{font-size:54px;color:#fff;letter-spacing:-1.5px}.cover h1 em{color:var(--acc)}
+.cover .sub{font-size:22px;margin-top:18px;opacity:.92}
+.cover .meta{margin-top:40px;font-size:16px;opacity:.85}
+.cover .foot{color:rgba(255,255,255,.75)}
+.cover .tagline{display:inline-block;background:rgba(255,255,255,.14);border-radius:99px;padding:7px 16px;font-size:15px;font-weight:600;margin-bottom:22px}
+/* summary page */
+.big4{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.big4 .b{border-radius:12px;padding:12px 8px;text-align:center}
+.big4 .b .n{font-size:46px;font-weight:800;line-height:1.05}
+.big4 .b .l{font-size:14px;font-weight:700;margin-top:2px}
+.big4 .b.g{background:var(--grnbg);color:var(--grn)}.big4 .b.y{background:var(--ambbg);color:var(--amb)}.big4 .b.r{background:var(--redbg);color:var(--red)}.big4 .b.w{background:var(--waitbg);color:var(--wait)}
+.chap{width:100%}
+.chap td{padding:5px 8px;font-size:14.5px;border-bottom:1px solid var(--line)}
+.chap tr:last-child td{border-bottom:0}
+.chap td.c{text-align:center;width:44px;font-weight:700}
+.sum li{font-size:15.5px;line-height:1.5}
+/* notes */
+.notes{display:none;position:absolute;right:16px;top:16px;width:440px;max-height:calc(100% - 32px);overflow:auto;
+  background:#fff;border:2px solid #d6b45a;border-radius:10px;padding:14px 16px;font-size:13px;line-height:1.6;box-shadow:0 8px 24px rgba(0,0,0,.15);z-index:5}
+.notes h4{margin:0 0 6px;font-size:13px;color:var(--todo)}
+.notes ul{margin:4px 0 8px;padding-left:18px}
+body.shownotes .notes{display:block}
+#ctl{position:fixed;left:50%;bottom:10px;transform:translateX(-50%);display:flex;gap:6px;align-items:center;font-size:12px;color:var(--mut);
+  background:rgba(255,255,255,.9);border:1px solid var(--line);border-radius:99px;padding:4px 8px;z-index:10}
+#ctl button{border:0;background:var(--soft);color:var(--teal-d);font:inherit;font-weight:700;border-radius:99px;padding:4px 11px;cursor:pointer}
+@media print{
+  html,body{overflow:visible;height:auto;background:#fff}
+  #viewport{position:static;display:block}
+  #stage{transform:none!important}
+  .slide{display:flex!important;position:relative;page-break-after:always;box-shadow:none;border-radius:0;width:1280px;height:720px}
+  #ctl,.notes{display:none!important}
+  @page{size:1280px 720px;margin:0}
+}
+</style>
+</head>
+<body>
+<div id="viewport"><div id="stage">
+
+<!-- 0 표지 -->
+<section class="slide cover">
+  <div><span class="tagline">중간 피칭 · 축제는 아직 열리지 않았고, 에이전트를 개발하는 중</span></div>
+  <h1>대구 사투리 축제를<br><em>매년 다시 여는</em> AI 에이전트</h1>
+  <div class="sub">순환형 축제 기획 에이전트 — 올해의 결과가 내년 기획의 입력이 되도록</div>
+  <div class="meta">2026. 11. 19 · L.L.M Academy · 팀 먼크이성</div>
+  <div class="foot"><span>순환형축제에이전트 · 중간 피칭 (피칭 사전정리 v03 기준)</span><span>←/→ 넘기기 · N 발표자 노트</span></div>
+  <div class="notes"><h4>발표자 노트</h4><ul><li>표지 다음은 요약·통계 → 평가 기준 → 피치 구조 → 1~7장 순서.</li><li>한 줄: 아직 열리지 않은 ‘대구 사투리 축제’를 대상으로 하는 순환형 축제 기획 AI 에이전트를 개발 중이에요.</li></ul></div>
+</section>
+
+<!-- 1 요약 + 점검결과 통계 -->
+<section class="slide">
+  <div class="bar"></div>
+  <div class="hd"><h1>요약 — 지금 어디까지 왔나, <em>점검 결과 한눈에</em></h1><span class="pill">요약 · 점검 결과</span></div>
+  <div class="body grid" style="grid-template-columns:1fr 1.1fr;gap:22px;margin-top:18px">
+    <div class="col">
+      <div class="card" style="background:var(--soft);border-color:var(--soft)"><h3>한 줄 요약</h3>
+        <p style="font-size:17px;font-weight:600;line-height:1.5">아직 열리지 않은 ‘대구 사투리 축제’를 매년 열 수 있게 돕는 <b style="color:var(--teal-d)">순환형 축제 기획 AI 에이전트</b>를 개발 중이에요.</p></div>
+      <div class="card sum"><h3>무엇을 만드나</h3>
+        <ul><li>조건 → 조사 → 기획 → 운영 준비 → 성과 정리를 에이전트가 파일로 잇고, 결과가 <b>다음 해 기획</b>으로 돌아와요</li>
+        <li>결정·외부 연락·계약은 <b>사람</b>, 근거 정리와 초안은 <b>에이전트</b></li></ul></div>
+      <div class="card sum"><h3>지금 어디까지</h3>
+        <ul><li>구성도 v3.1 설계 완료 — 에이전트 12 · 절차 S0~S11 · 게이트 5곳</li>
+        <li>파트 지침서 A~J · 공통 P V14 — <b>K(웹)·P0-11·P0-12만 없음</b></li>
+        <li>통합·검증(STEP 4)과 신구조 1바퀴 실행은 <b>다음 단계</b></li></ul></div>
+      <div class="todo"><b>가장 큰 공백</b> — ① 포지셔닝 맵 · SOM · 민감도 1위 가정 ② 에이전트 BM(누가 돈을 내나) ③ 기획 담당자 인터뷰</div>
+    </div>
+    <div class="col">
+      <div class="big4">
+        <div class="b g"><div class="n">3</div><div class="l">🟢 충족</div></div>
+        <div class="b y"><div class="n">13</div><div class="l">🟡 부분충족</div></div>
+        <div class="b r"><div class="n">3</div><div class="l">🔴 미충족</div></div>
+        <div class="b w"><div class="n">6</div><div class="l">⏳ 개최 후 검증</div></div>
+      </div>
+      <div class="mini" style="margin-top:-2px">근거 산출물 19개 기준 (⏳ 6개는 합산 제외) · 7장 모두 🟡 부분충족</div>
+      <div class="card" style="padding:8px 14px">
+        <table class="chap">
+          <tr><td style="font-size:12.5px;color:var(--mut);font-weight:700">장</td><td class="c">🟢</td><td class="c">🟡</td><td class="c">🔴</td><td style="font-size:12.5px;color:var(--mut);font-weight:700">가장 큰 빈칸</td></tr>
+          <tr><td><b>1 문제</b></td><td class="c">1</td><td class="c">2</td><td class="c">·</td><td>기획 담당자 인터뷰</td></tr>
+          <tr><td><b>2 해결</b></td><td class="c">1</td><td class="c">2</td><td class="c">·</td><td>업무 단위 AI/사람 표</td></tr>
+          <tr><td><b>3 시장</b></td><td class="c">·</td><td class="c">1</td><td class="c">2</td><td>포지셔닝 맵 · SOM</td></tr>
+          <tr><td><b>4 BM</b></td><td class="c">·</td><td class="c">3</td><td class="c">·</td><td>에이전트 BM · 견적</td></tr>
+          <tr><td><b>5 MVP</b></td><td class="c">·</td><td class="c">2</td><td class="c">·</td><td>신구조 1바퀴 실행</td></tr>
+          <tr><td><b>6 팀</b></td><td class="c">1</td><td class="c">2</td><td class="c">·</td><td>파트 ↔ 사람 표</td></tr>
+          <tr><td><b>7 요청</b></td><td class="c">·</td><td class="c">1</td><td class="c">1</td><td>민감도 1위 가정</td></tr>
+        </table>
+      </div>
+    </div>
+  </div>
+  <div class="foot"><span>자료 범위: main 저장소 · 구성도 v3.1 · 발표자료 (다른 브랜치·노션·수업 양식은 미확인)</span><span class="pg">요약</span></div>
+  <div class="notes"><h4>발표자 노트</h4><ul><li>숫자는 ‘새 작업을 했다’가 아니라 평가 기준을 바로잡은 결과(다음 장에서 설명). v02 🟢1·🟡7·🔴11 → v03 🟢3·🟡13·🔴3</li><li>장별 🟢🟡🔴 개수 합: 🟢3 · 🟡13 · 🔴3 = 19</li></ul>
+  <h4>말할 문장</h4><p>7장 점검에서 근거 산출물 19개 중 충족 3, 부분충족 13, 미충족 3이에요. 축제를 열어야만 알 수 있는 결과 6개는 판정하지 않고 검증 예정으로 따로 뒀어요.</p></div>
+</section>
+
+<!-- 2 평가 기준 -->
+<section class="slide">
+  <div class="bar"></div>
+  <div class="hd"><h1>평가 기준 — <em>개최 전에 준비할 수 있는 것</em>만 판정한다</h1><span class="pill">우리가 점검한 방식</span></div>
+  <p class="q">축제는 아직 열리지 않았어요. 그래서 <b>“지금 만들 수 있는데 빠진 것”</b>과 <b>“열어 봐야 아는 것”</b>을 나눴어요.</p>
+  <div class="body" style="display:flex;flex-direction:column;gap:14px">
+    <div class="grid" style="grid-template-columns:repeat(4,1fr);gap:12px">
+      <div class="card" style="border-top:4px solid var(--grn)"><p><span class="st g">🟢 충족</span></p><p style="margin-top:6px">근거(출처·명시된 가정·계산식·실제 명세)가 있어 <b>피칭에서 보여 줄 수 있음</b></p></div>
+      <div class="card" style="border-top:4px solid #d6a23a"><p><span class="st y">🟡 부분충족</span></p><p style="margin-top:6px">일부만 있거나, 근거가 약하거나, <b>설계만 있고 실행 결과가 없음</b></p></div>
+      <div class="card" style="border-top:4px solid var(--red)"><p><span class="st r">🔴 미충족</span></p><p style="margin-top:6px">찾지 못했고, <b>개최 전에도 만들 수 있는</b> 자료</p></div>
+      <div class="card" style="border-top:4px solid #7b8fbd"><p><span class="st w">⏳ 검증 예정</span></p><p style="margin-top:6px">축제를 <b>열어야만</b> 생기는 결과 — 판정·합산에서 제외</p></div>
+    </div>
+    <div class="card"><h3>우리가 정한 원칙 5가지</h3>
+      <div class="grid" style="grid-template-columns:1fr 1fr;gap:6px 28px">
+        <p>① <b>가설이라는 이유로 감점하지 않음</b> — 구체성과 출처로 평가</p>
+        <p>④ <b>MVP는 둘로 구분</b> — 설명 페이지 vs 실행 기능, 축제 효과 vs 에이전트 기능</p>
+        <p>② <b>BM은 세 층으로 분리</b> — 에이전트 / 축제 운영 재정 / 마스코트 수익화</p>
+        <p>⑤ <b>파일명이 아닌 내용으로</b> — spec.md가 없어도 구성도·CLAUDE.md·지침 폴더를 명세로 인정</p>
+        <p>③ <b>설계와 실행 결과를 섞지 않음</b> — [설계] / [실행 결과] 구분</p>
+        <p style="color:var(--mut)">+ 못 찾은 것은 “없다”가 아니라 <b>“확인한 범위에서 찾지 못함”</b></p>
+      </div>
+    </div>
+    <div class="grid" style="grid-template-columns:1fr 1fr;gap:14px">
+      <div class="card" style="background:var(--soft);border-color:var(--soft)"><h3>v02 → v03 (기준을 바로잡은 결과)</h3>
+        <p style="font-size:16px">🟢 1 → <b>3</b> · 🟡 7 → <b>13</b> · 🔴 11 → <b>3</b> · ⏳ 6 (신설)</p>
+        <p class="mini" style="margin-top:4px">새 작업이 완료돼서가 아니라 기준 변경 + 확인 누락 4곳 정정 (AX · 사용 도구 · 문서 생성/합계 검사 · 경쟁 비교)</p></div>
+      <div class="card"><h3>근거 라벨 — 문장마다 수준 표시</h3>
+        <p><span class="lab">확인</span> 출처 있는 사실 <span class="lab h">해석</span> 우리 해석 <span class="lab h">가설</span> 검증 전 <span class="lab h">추정</span> 계산 <span class="lab h">가정</span> 임시 값</p></div>
+    </div>
+  </div>
+  <div class="foot"><span>피칭 사전정리 v03 · 평가 기준</span><span class="pg">기준</span></div>
+  <div class="notes"><h4>발표자 노트</h4><ul><li>핵심 메시지: “못해서 🔴”가 아니라 “개최 전에도 만들 수 있는데 아직 안 만든 것만 🔴”</li><li>⏳ 6개: V1 참가 후기 · V2 실제 동선 · V3 실제 매출 · V4 체류·상권 효과 · V5 다음 해 개선 · V6 텀블벅 (부록 표)</li></ul>
+  <h4>말할 문장</h4><p>우리는 평가를 둘로 나눴어요. 지금 만들 수 있는 자료만 충족·부분충족·미충족으로 판정하고, 축제를 열어야 아는 결과는 검증 예정으로 따로 뒀어요. 그래서 미충족 숫자가 줄어든 건 새 작업이 아니라 기준을 바로잡은 결과예요.</p></div>
+</section>
+
+<!-- 3 피치 구조 (이미지 그대로) -->
+<section class="slide">
+  <div class="bar"></div>
+  <div class="hd"><h1>피치 구조 — <em>일곱 장, 장마다 증명할 것 하나</em></h1><span class="pill">2교시 · 이론 · 프레임</span></div>
+  <p class="q" style="font-size:14px">피치 = 짧은 시간에 ‘이 문제는 중요하고, 우리 해결책이 통하며, 다음 단계에 무엇이 필요한지’를 설득하는 발표. 장 순서가 곧 듣는 사람의 질문 순서</p>
+  <div class="body" style="display:flex;flex-direction:column;gap:12px;margin-top:12px">
+    <table class="struct">
+      <tr><th>장</th><th>증명할 것 — 듣는 사람의 질문</th><th>근거 산출물</th><th>평가 기준</th><th style="text-align:center">우리 현황</th></tr>
+      <tr><td>1 문제</td><td>누가, 어떤 장면에서, 얼마나 불편한가 — “정말 있는 문제인가?”</td><td>VOC 인용 · 고객 여정 · 밸류체인 병목</td><td>문제-해결 논리</td><td class="s"><span class="st y">🟡 부분</span></td></tr>
+      <tr><td>2 해결</td><td>AI로 무엇이 어떻게 달라지는가 — “왜 이 방법인가?”</td><td>AX 기회 정의 · spec.md · As-Is → To-Be</td><td>문제-해결 논리</td><td class="s"><span class="st y">🟡 부분</span></td></tr>
+      <tr><td>3 시장</td><td>누가 이미 하고, 우리가 얻을 몫은 — “충분히 큰가?”</td><td>경쟁 비교표 · 포지셔닝 맵 · SOM</td><td>시장·BM 근거</td><td class="s"><span class="st y">🟡 부분</span></td></tr>
+      <tr><td>4 BM</td><td>어떻게 돈이 남는가 — “지속 가능한가?”</td><td>BM 캔버스 · 단위 경제 · 시나리오</td><td>시장·BM 근거</td><td class="s"><span class="st y">🟡 부분</span></td></tr>
+      <tr><td>5 MVP</td><td>실제로 동작하고 반응이 있는가 — “보여 줄 수 있나?”</td><td>v1 URL 라이브 데모 · 가설 판정</td><td>MVP 동작</td><td class="s"><span class="st y">🟡 부분</span></td></tr>
+      <tr><td>6 팀</td><td>누가 무엇을 맡았고 어떤 AI로 했는가 — “이 팀이 할 수 있나?”</td><td>역할 · 사용 도구 · 작업 흔적(저장소)</td><td>발표·데모 완성도</td><td class="s"><span class="st y">🟡 부분</span></td></tr>
+      <tr><td>7 요청사항</td><td>다음 단계와 필요한 것 — “그래서 무엇을 해 주면 되나?”</td><td>results.md ‘계획’ 칸 · 민감도 1위 가정</td><td>문제-해결 논리</td><td class="s"><span class="st y">🟡 부분</span></td></tr>
+    </table>
+    <div class="rule"><b>구조의 규칙</b> — 표지 다음 바로 문제. 회사·팀 소개로 시작하지 않음. 마지막 장은 ‘감사합니다’가 아니라 요청사항 한 문장과 MVP URL</div>
+  </div>
+  <div class="foot"><span>다음 장부터 1~7장 — 장마다 같은 틀: 근거 산출물 표 → 핵심 근거 → 채울 것 / ⏳</span><span class="pg">구조</span></div>
+</section>
+
+<!-- 4 문제 -->
+<section class="slide">
+  <div class="bar"></div>
+  <div class="hd"><h1>1 문제 — 대구는 <em>스쳐 가는 도시</em>,<br>축제 결과는 다음 해로 이어지지 않는다</h1><span class="pill">1 · 문제 <span class="st y">🟡 부분충족</span></span></div>
+  <p class="q">누가, 어떤 장면에서, 얼마나 불편한가 — <b>“정말 있는 문제인가?”</b></p>
+  <div class="body" style="display:flex;flex-direction:column;gap:12px">
+    <table class="et">
+      <tr><th>근거 산출물</th><th>지금 있는 것</th><th>부족한 것</th></tr>
+      <tr><td class="nm">VOC 인용<span class="st y">🟡</span></td><td>치맥 방문객·닭똥집골목 상인회장 인용 [B 언론 2차]</td><td class="no">기획 담당자 업무 인터뷰</td></tr>
+      <tr><td class="nm">고객 여정<span class="st g">🟢</span></td><td>방문객 6단계(시점·CTA·접점·지표) + 담당자 S0~S11 [가설·설계]</td><td class="no">—</td></tr>
+      <tr><td class="nm">밸류체인 병목<span class="st y">🟡</span></td><td>대전·카카오 병목 + 예상 업무 흐름</td><td class="no">우리 업무 밸류체인 <b>한 장</b></td></tr>
+    </table>
+    <div class="grid" style="grid-template-columns:1fr 1.15fr;gap:14px">
+      <div class="grid" style="grid-template-columns:repeat(3,1fr);gap:10px">
+        <div class="card stat"><div class="n">-1.5%</div><div class="l">체류시간<br>전년 대비</div></div>
+        <div class="card stat"><div class="n">1.0%</div><div class="l">서울 유입<br>(경북 74.7%)</div></div>
+        <div class="card stat"><div class="n">93.7%</div><div class="l">지역축제 재원<br>공공 의존</div></div>
+      </div>
+      <div class="card"><h3>방문객 여정 — 가장 막히는 곳 <span class="lab h">가설</span></h3>
+        <div class="jr"><span>1 알아보기</span><span>2 관심</span><span>3 체험</span><span class="bad">4 이동·방문</span><span>5 구매</span><span>6 재방문</span></div>
+        <p style="margin-top:8px">“대구까지 갈 이유가 있나?” · “1박 하면 뭐 하지?”</p></div>
+    </div>
+    <div class="pair">
+      <div class="todo"><b>개최 전 채울 것</b><br>기획 담당자 인터뷰 1~3명 · 우리 업무 밸류체인 1장</div>
+      <div class="wait"><b>⏳ 개최 후</b><br>V1 우리 축제 참가 후기 · V2 실제 동선·병목</div>
+    </div>
+  </div>
+  <div class="foot"><div class="ev"><span class="k">평가 기준</span><span>문제-해결 논리</span><span class="k">· 출처</span><span>데이터랩(언론, 원자료 확인 중) · king sns조사 · P0-8</span></div><span class="pg">1</span></div>
+  <div class="notes"><h4>발표자 노트</h4><ul><li>체류 -1.5%·서울 유입 1.0%는 [확인·언론], 데이터랩 원자료 확인 중</li><li>대전·카카오 두 사례 모두 ‘판매·참여 데이터 → 다음 기획’ 고리 미확인 [해석]</li></ul><h4>말할 문장</h4><p>대구는 스쳐 가는 도시예요. 체류시간이 전년보다 1.5% 줄고 서울에서 오는 비율은 1.0%예요(언론 보도, 원자료 확인 중). 기획 담당자 인터뷰로 이 병목을 확인할 계획이에요.</p></div>
+</section>
+
+<!-- 5 해결 -->
+<section class="slide">
+  <div class="bar"></div>
+  <div class="hd"><h1>2 해결 — 조건부터 성과까지 <em>파일로 잇고</em>,<br>결정은 사람이 한다</h1><span class="pill">2 · 해결 <span class="st y">🟡 부분충족</span></span></div>
+  <p class="q">AI로 무엇이 어떻게 달라지는가 — <b>“왜 이 방법인가?”</b></p>
+  <div class="body" style="display:flex;flex-direction:column;gap:12px">
+    <table class="et">
+      <tr><th>근거 산출물</th><th>지금 있는 것</th><th>부족한 것</th></tr>
+      <tr><td class="nm">AX 기회 정의<span class="st y">🟡</span></td><td>사람·AI 분담 규칙 — 원칙 8개, 게이트 5개, ‘하지 않는 것’, 라우팅 표</td><td class="no">업무 단위 AI / 사람 / 아직 못 함 표</td></tr>
+      <tr><td class="nm">spec.md<span class="st g">🟢</span></td><td>구성도 v3.1 + CLAUDE.md + 지침 7종 + 에이전트 12 · skills 4 · 양식 00~05</td><td class="no">(참고) K · P0-11 · P0-12</td></tr>
+      <tr><td class="nm">As-Is → To-Be<span class="st y">🟡</span></td><td>BEFORE → AFTER 개념 대비 + 대전·카카오 고리 비교</td><td class="no">기획 업무 단위 대비 표</td></tr>
+    </table>
+    <div class="card" style="padding:10px 18px 14px">
+      <div class="flow">
+        <div class="step gate"><b>조건</b><small>S0~S1 ✅</small></div><span class="arr">→</span>
+        <div class="step"><b>조사</b><small>S2~S3</small></div><span class="arr">→</span>
+        <div class="step gate"><b>기획</b><small>S4~S6 ✅✅</small></div><span class="arr">→</span>
+        <div class="step"><b>운영 준비</b><small>S7~S9</small></div><span class="arr">→</span>
+        <div class="step gate"><b>성과</b><small>S10~S11 ✅✅</small></div>
+      </div>
+      <div class="loop"><span>↺ 04 운영결과 · 05 차년도 과제 · 단가표가 다음 해 S0 입력으로</span></div>
+      <p style="margin-top:20px;font-size:14.5px"><b>AI</b> 원본 읽기·근거 정리·초안·단계별 검사 &nbsp;|&nbsp; <b>사람</b> 게이트 승인 · 외부 연락·계약·집행·게시·인허가 &nbsp;|&nbsp; 통과 기준 예: 라벨·출처 100%, 임의 생성 0건</p>
+    </div>
+    <div class="pair">
+      <div class="todo"><b>개최 전 채울 것</b><br>업무 8~12행 AI/사람 분담표 · 기획 5단계 As-Is [가설] / To-Be [설계]</div>
+      <div class="wait"><b>⏳ 개최 후</b><br>V5 첫해 결과를 다음 해에 반영해 개선됐다는 증명</div>
+    </div>
+  </div>
+  <div class="foot"><div class="ev"><span class="k">평가 기준</span><span>문제-해결 논리</span><span class="k">· 출처</span><span>구성도 v3.1 · CLAUDE.md · 10/30 슬라이드 1 · 1109</span></div><span class="pg">2</span></div>
+  <div class="notes"><h4>발표자 노트</h4><ul><li>spec.md는 파일명이 아니라 실제 명세 내용으로 평가(🟢)</li><li>구성도 기본값 11개·게이트 5개는 팀 확인 전</li></ul><h4>말할 문장</h4><p>매년 ‘조건 확인 → 조사 → 기획 → 운영 → 성과 정리’를 에이전트가 파일로 이어 줘요. 결정은 사람이 하고, 근거 정리와 초안은 에이전트가 맡아요. 단계마다 통과 기준과 사람 확인 게이트가 있고, 끊겨도 결정기록과 진행 상태 파일에서 이어 가도록 설계했어요 [설계].</p></div>
+</section>
+
+<!-- 6 시장 -->
+<section class="slide">
+  <div class="bar"></div>
+  <div class="hd"><h1>3 시장 — 먹거리 축제는 있고,<br><em>사투리를 대표 자산으로 굳힌 사례</em>는 찾지 못했다</h1><span class="pill">3 · 시장 <span class="st y">🟡 부분충족</span></span></div>
+  <p class="q">누가 이미 하고, 우리가 얻을 몫은 — <b>“충분히 큰가?”</b></p>
+  <div class="body" style="display:flex;flex-direction:column;gap:12px">
+    <table class="et">
+      <tr><th>근거 산출물</th><th>지금 있는 것</th><th>부족한 것</th></tr>
+      <tr><td class="nm">경쟁 비교표<span class="st y">🟡</span></td><td>축제 4곳 · 마스코트 2곳(대전·카카오) 비교</td><td class="no">에이전트의 경쟁 대안(대행·용역사 · 수작업 · 범용 챗봇)</td></tr>
+      <tr><td class="nm">포지셔닝 맵<span class="st r">🔴</span></td><td>축 후보: 지역 특화↔범용 · 일회성↔매년 순환 [가설]</td><td class="no"><b>축 정의·맵 없음</b> (개최 전 작성 가능)</td></tr>
+      <tr><td class="nm">SOM<span class="st r">🔴</span></td><td>시장 수치 일부 — 공공 의존 93.7% · 상점가 100곳 7,100여 점포</td><td class="no"><b>계산식 없음</b> · 대구 축제 총예산 미확인</td></tr>
+    </table>
+    <div class="grid" style="grid-template-columns:1.3fr 1fr;gap:14px">
+      <div class="card" style="padding:12px 18px"><h3>사투리 활용 깊이 — 비교 축제 <span class="mini" style="font-weight:500">(P0-1 축 A · 0 없음 · 1 장식 · 2 체험 · 3 겨루기 · 4 교류·확산)</span></h3>
+        <div class="bars" style="gap:6px">
+          <div class="r"><span>대구치맥페스티벌</span><div class="t"><i style="width:25%"></i></div><span>0~1</span></div>
+          <div class="r"><span>한글박물관 특별전</span><div class="t"><i style="width:50%"></i></div><span>2</span></div>
+          <div class="r"><span>안동 사투리 경연</span><div class="t"><i style="width:75%"></i></div><span>3</span></div>
+          <div class="r"><span>제주어말하기 대회</span><div class="t"><i style="width:75%"></i></div><span>3</span></div>
+          <div class="r us"><span>우리 축제</span><div class="t"><i style="width:100%"></i></div><span>4</span></div>
+        </div></div>
+      <div class="col">
+        <div class="card stat" style="padding:10px 18px"><div class="n" style="font-size:30px">약 20만</div><div class="l">치맥 첫날 방문(같은 장소) <span class="lab">확인·공식</span></div></div>
+        <div class="card stat" style="padding:10px 18px"><div class="n" style="font-size:30px">85,764</div><div class="l">사투리 테스트형 콘텐츠 선례 <span class="lab">확인·공식</span></div></div>
+      </div>
+    </div>
+    <div class="todo"><b>개최 전 채울 것</b> — 에이전트 경쟁 3~5개 비교 · 축 2개로 맵 1장 · SOM ‘대구 1곳 → 인접 지자체’ + 계산식(못 채운 칸은 [가정])</div>
+  </div>
+  <div class="foot"><div class="ev"><span class="k">평가 기준</span><span>시장·BM 근거</span><span class="k">· 출처</span><span>P0-1 2-4-2 · king 축제 사례 · 1109</span></div><span class="pg">3</span></div>
+  <div class="notes"><h4>발표자 노트</h4><ul><li>‘빈자리’는 “확인한 자료 범위에서 찾지 못함”이지 “없다”는 단정이 아님 [해석]</li><li>이 장은 개최 후 검증(⏳) 항목이 없음 — 모두 지금 만들 수 있는 자료</li><li>막대는 에이전트 판단(P0-1), 매년 원문 재확인</li></ul><h4>말할 문장</h4><p>지금은 ‘먹거리·맥주 축제는 이미 있고, 사투리를 대표 자산으로 굳힌 사례는 확인한 범위에서 찾지 못했다’까지 말할 수 있어요 [해석]. 에이전트 쪽 경쟁 비교와 SOM은 개최 전에 채울 첫 과제예요.</p></div>
+</section>
+
+<!-- 7 BM -->
+<section class="slide">
+  <div class="bar"></div>
+  <div class="hd"><h1>4 BM — 돈 내는 쪽이 다른 <em>세 층</em>,<br>숫자는 지어내지 않는다</h1><span class="pill">4 · BM <span class="st y">🟡 부분충족</span></span></div>
+  <p class="q">어떻게 돈이 남는가 — <b>“지속 가능한가?”</b></p>
+  <div class="body" style="display:flex;flex-direction:column;gap:12px">
+    <table class="et">
+      <tr><th>근거 산출물</th><th>지금 있는 것</th><th>부족한 것</th></tr>
+      <tr><td class="nm">BM 캔버스<span class="st y">🟡</span></td><td>세 층 중 두 층은 구조 있음 (아래)</td><td class="no">캔버스 한 장 · <b>에이전트 BM</b></td></tr>
+      <tr><td class="nm">단위 경제<span class="st y">🟡</span></td><td>계산식·가정 명시 (수수료 = 매출 × 5.3% 등)</td><td class="no">견적·출처 있는 단가 <b>0건</b></td></tr>
+      <tr><td class="nm">시나리오<span class="st y">🟡</span></td><td>비용 3안(만 원) <b>39,480 / 66,675 / 97,545</b> <span class="lab h">추정</span> — 수량×단가→분류 합→소계 ✓</td><td class="no">수입 낮음/기본/높음</td></tr>
+    </table>
+    <div class="grid" style="grid-template-columns:repeat(3,1fr);gap:12px">
+      <div class="card" style="border-top:4px solid var(--red)"><h3>① 에이전트 BM <span class="st r">🔴</span></h3>
+        <p>이용료를 낼 주체 후보(대구시 · 위탁 주관사 · 지자체 축제 담당 조직)만 있고 <b>정해진 것 없음</b></p></div>
+      <div class="card" style="border-top:4px solid #d6a23a"><h3>② 축제 운영 재정 <span class="st y">🟡</span></h3>
+        <p>수입원 6종 중 <b>플리마켓 매출의 5.3%</b>만 확정. 나머지 금액은 미정 · 프랜차이즈 후원 약 10곳(기준액 미입력)</p></div>
+      <div class="card" style="border-top:4px solid #d6a23a"><h3>③ 마스코트 수익화 <span class="st y">🟡</span></h3>
+        <p>알리기 → 팔기 → 잇기. 굿즈 직판 · 온라인 · 라이선스 · 콜라보 [가설], 금액 미정</p></div>
+    </div>
+    <div class="pair">
+      <div class="todo"><b>개최 전 채울 것</b><br>층별 BM 캔버스 3장 · 굿즈 1종 원가·판매가 · 수입 3안(방문객 × 전환율)</div>
+      <div class="wait"><b>⏳ 개최 후</b><br>V3 실제 매출·전환율 · V6 텀블벅 실적(아직 진행 안 함)</div>
+    </div>
+  </div>
+  <div class="foot"><div class="ev"><span class="k">평가 기준</span><span>시장·BM 근거</span><span class="k">· 출처</span><span>H-9 · C-4 · D-5·D-6 · 03 기획안 12-1</span></div><span class="pg">4</span></div>
+  <div class="notes"><h4>발표자 노트</h4><ul><li>BM을 세 층으로 나눈 이유: 누가 돈을 내는지가 층마다 다름</li><li>치맥 판매액(30억→71억)은 참가 업체 매출이지 주최 수입이 아님 — 목표치로 쓰지 않음</li><li>단가표는 비어 있고 D-03 굿즈 시트는 전부 ‘업체 견적 필요’</li></ul><h4>말할 문장</h4><p>수익화는 세 층으로 나눠 설계했어요. 축제 운영 재정은 수입원 6종 중 플리마켓 수수료 5.3%만 확정이고, 나머지는 숫자를 지어내지 않고 가정·견적 전 단계로 표시했어요. 에이전트 자체의 수익 모델은 아직 정하지 않았어요.</p></div>
+</section>
+
+<!-- 8 MVP -->
+<section class="slide">
+  <div class="bar"></div>
+  <div class="hd"><h1>5 MVP — 무엇이 <em>실제로 돌았고</em>,<br>무엇이 아직 설계인가</h1><span class="pill">5 · MVP <span class="st y">🟡 부분충족</span></span></div>
+  <p class="q">실제로 동작하고 반응이 있는가 — <b>“보여 줄 수 있나?”</b></p>
+  <div class="body" style="display:flex;flex-direction:column;gap:12px">
+    <table class="et">
+      <tr><th>근거 산출물</th><th>지금 있는 것</th><th>부족한 것</th></tr>
+      <tr><td class="nm">v1 URL 라이브 데모<span class="st y">🟡</span></td><td>설명·결과물 페이지 — 구성도 v3.1 · 모바일 안내페이지</td><td class="no">기능이 실행되는 <b>데모 URL</b> (실행은 Claude Code 로컬)</td></tr>
+      <tr><td class="nm">가설 판정<span class="st y">🟡</span></td><td>문서 생성 · 합계 검사 실행 결과</td><td class="no">게이트·재개·모의 데이터는 <b>설계만</b></td></tr>
+    </table>
+    <div class="card"><h3>에이전트 기능 7개 — 실행 결과 vs 설계</h3>
+      <div class="chips">
+        <span class="g">✔ 문서 생성</span><span class="g">✔ 합계 검사</span>
+        <span class="y">△ 근거 라벨·출처</span><span class="y">△ 기록·재개</span>
+        <span class="r">○ 승인 대기(게이트)</span><span class="r">○ 모의 데이터 → 다음 해</span><span class="r">○ 검증 에이전트 6종</span>
+      </div>
+      <p class="mini" style="margin-top:8px">✔ 실행 결과 있음 · △ 일부 · ○ 설계만 — 문서 생성은 대사투/2027 00~03, 합계는 03 12-1 비용 3안 ✓ (자체 점검)</p></div>
+    <div class="card" style="background:var(--soft);border-color:var(--soft)"><h3>11/18 신구조 시나리오 1회 — B파트 「10미 포장마차」 (part-agent)</h3>
+      <p>10종 유지 · 부스 범위(25~30 / 60~70) 준수 · 근거 없는 예산·단가는 <b>‘미입력’</b>(임의 생성 0건) · 03 기획안과 지침 불일치 <b>4건</b> 발견 → 사람에게 질문</p></div>
+    <div class="pair">
+      <div class="todo"><b>개최 전 채울 것</b><br>/festival-plan 2027 1바퀴 + 단계 검증표 · 게이트 중단/재개 시연 · v1 무엇으로 보여 줄지 결정</div>
+      <div class="wait"><b>⏳ 개최 후</b><br>V4 체류·숙박·상권·사투리 인식 · V5 다음 해 개선</div>
+    </div>
+  </div>
+  <div class="foot"><div class="ev"><span class="k">평가 기준</span><span>MVP 동작</span><span class="k">· 출처</span><span>사용법.md · 대사투/2027 · B파트 테스트 결과(11/18)</span></div><span class="pg">5</span></div>
+  <div class="notes"><h4>발표자 노트</h4><ul><li>설명 페이지는 MVP로 계산하지 않음. 실행 MVP는 녹화·로컬 시연</li><li>B파트 ‘통과’는 에이전트 자체 보고 + 팀 대조(03의 ‘15동’·‘스탬프투어’ 확인). evidence-auditor 독립 검사는 다음 단계 — 말로 밝힐 것</li><li>B파트 시나리오는 v03 이후 받은 실행 결과라 판정은 v03 그대로, 근거로만 추가</li></ul><h4>말할 문장</h4><p>문서 생성과 합계 검사는 실행 결과가 있고, 승인 대기·재개·모의 데이터 반영은 설계 단계예요 [설계]. 11/18에 신구조로 B파트를 한 번 돌렸고, 임의 숫자 없이 03 기획안과의 불일치 4건을 찾아 사람에게 물었어요. 축제 효과는 개최 후 검증 예정이에요.</p></div>
+</section>
+
+<!-- 9 팀 -->
+<section class="slide">
+  <div class="bar"></div>
+  <div class="hd"><h1>6 팀 — 4명이 조사를 나누고,<br><em>11개 파트 지침서</em>를 버전으로 쌓았다</h1><span class="pill">6 · 팀 <span class="st y">🟡 부분충족</span></span></div>
+  <p class="q">누가 무엇을 맡았고 어떤 AI로 했는가 — <b>“이 팀이 할 수 있나?”</b></p>
+  <div class="body" style="display:flex;flex-direction:column;gap:12px">
+    <table class="et">
+      <tr><th>근거 산출물</th><th>지금 있는 것</th><th>부족한 것</th></tr>
+      <tr><td class="nm">역할<span class="st y">🟡</span></td><td>조사 4파트 담당표 (아래)</td><td class="no">파트 A~K ↔ 사람 대응표 · K 담당 미정</td></tr>
+      <tr><td class="nm">사용 도구<span class="st y">🟡</span></td><td>Claude Code로 실행 · AI 사용 규칙(라벨·임의 생성 금지·‘Claude 초안’ 표기)</td><td class="no">단계별 AI 사용 기록 표</td></tr>
+      <tr><td class="nm">작업 흔적(저장소)<span class="st g">🟢</span></td><td>커밋 · 브랜치 이력 · 결정기록 · 파트 버전이 main에 남아 있음</td><td class="no">—</td></tr>
+    </table>
+    <div class="grid" style="grid-template-columns:1fr 1.25fr;gap:14px">
+      <div class="card"><h3>조사 분담 4명</h3>
+        <ul><li><b>hyunhee</b> 대구 관광 · <b>king</b> 축제 사례·SNS</li><li><b>kimseunghee</b> 사투리·마스코트</li><li><b>minju</b> 팝업·캐릭터·상업연계</li></ul></div>
+      <div class="card"><h3>지침서 버전 (main)</h3>
+        <div class="chips"><span class="g">A v6</span><span class="g">B v5</span><span class="g">C v3</span><span class="g">D v1</span><span class="g">E v2</span><span class="g">F v1</span><span class="g">G v2</span><span class="g">H v3</span><span class="g">I v1</span><span class="g">J v3</span><span class="g">공통 P V14</span><span class="r">K 작성 전</span></div>
+        <p class="mini" style="margin-top:6px">발표 10/30 → 11/04 → 11/09 → 11/13 → 11/18 → 11/19</p></div>
+    </div>
+    <div class="todo"><b>개최 전 채울 것</b> — 이름 / 맡은 파트 / 쓴 AI 도구 / 사람이 판단한 것 표 · ‘AI 초안 → 사람 확인’ 사례 2~3개(커밋 링크) · 저장소 URL</div>
+  </div>
+  <div class="foot"><div class="ev"><span class="k">평가 기준</span><span>발표·데모 완성도</span><span class="k">· 출처</span><span>통합_조사결과 · P0-9 · git 이력</span></div><span class="pg">6</span></div>
+  <div class="notes"><h4>발표자 노트</h4><ul><li>이 장은 ⏳ 항목 없음</li><li>커밋 계정(skyapple11-ui·양유현·김승희·cherry3782)과 조사 담당 4명의 대응은 팀 확인 필요 — 말할 때 ‘업로드 기준’이라고 밝힐 것</li></ul><h4>말할 문장</h4><p>팀원 4명이 조사를 나눠 맡고, 11개 파트 지침서를 버전별로 쌓았어요. AI는 초안과 근거 정리에, 결정·외부 연락은 사람이 맡도록 규칙으로 고정했고 그 기록이 저장소에 남아 있어요.</p></div>
+</section>
+
+<!-- 10 요청사항 -->
+<section class="slide">
+  <div class="bar"></div>
+  <div class="hd"><h1>7 요청사항 — 지금은 지침서 단계,<br>다음은 <em>신구조로 1바퀴 돌리는 것</em></h1><span class="pill">7 · 요청사항 <span class="st y">🟡 부분충족</span></span></div>
+  <p class="q">다음 단계와 필요한 것 — <b>“그래서 무엇을 해 주면 되나?”</b></p>
+  <div class="body" style="display:flex;flex-direction:column;gap:12px">
+    <table class="et">
+      <tr><th>근거 산출물</th><th>지금 있는 것</th><th>부족한 것</th></tr>
+      <tr><td class="nm">results.md ‘계획’ 칸<span class="st y">🟡</span></td><td>다음 단계 계획(아래 ①~④) · 첫해 빈 입력값 명시</td><td class="no">수업 양식 results.md 확인</td></tr>
+      <tr><td class="nm">민감도 1위 가정<span class="st r">🔴</span></td><td>03 가정(방문객 1만~2만/일 · 인력 80/120명 · 단가)으로 계산 가능</td><td class="no"><b>민감도 분석 안 함</b> (개최 전 계산 가능)</td></tr>
+    </table>
+    <div class="grid" style="grid-template-columns:repeat(4,1fr);gap:10px">
+      <div class="card"><h3>① 지침서 완성</h3><p>K(웹) · P0-11 · P0-12</p></div>
+      <div class="card"><h3>② 신구조 1바퀴</h3><p>단계 검증표 · 게이트 중단/재개</p></div>
+      <div class="card"><h3>③ 통합·검증</h3><p>STEP 4 → 오케스트레이터</p></div>
+      <div class="card"><h3>④ 남은 수정 9건</h3><p>구성도 v3.1 14건 중</p></div>
+    </div>
+    <div class="card"><h3>요청 문장 후보 (팀 선택)</h3>
+      <ul><li>대구시·관광공사 <b>데이터랩 원자료</b>와 두류공원 대관 조건 확인 창구</li><li>실제 <b>축제 담당자 1명 인터뷰</b> 연결</li><li>K · P0-11 · P0-12 <b>지침서 피드백</b></li></ul></div>
+    <div class="rule" style="font-size:18px"><b>우리의 요청</b> — [팀이 고른 한 문장 기입] &nbsp;·&nbsp; <b>MVP</b> — [5장과 같은 v1 기입]</div>
+  </div>
+  <div class="foot"><div class="ev"><span class="k">평가 기준</span><span>문제-해결 논리</span><span class="k">· 출처</span><span>중간발표6 · 구성도 v3.1 · 03 기획안</span></div><span class="pg">7</span></div>
+  <div class="notes"><h4>발표자 노트</h4><ul><li>마지막 장은 ‘감사합니다’가 아니라 요청 한 문장 + MVP</li><li>민감도 후보: 방문객 규모 · 단가(안전·무대) · 굿즈 전환율 · 외지인 비율 · 숙박 전환율 — 숫자를 돌려 보기 전에는 1위 확정 안 함</li><li>채우는 순서(v03): 3 시장 → 4 BM → 7 민감도 → 1 인터뷰 → 5 신구조 실행 → 2 → 6</li></ul><h4>말할 문장</h4><p>(팀 결정 후 기입) 다음 단계에 필요한 것은 ○○입니다. 데모는 (MVP)에서 보실 수 있어요.</p></div>
+</section>
+
+<!-- 부록: 개최·실행 후 검증 계획 -->
+<section class="slide">
+  <div class="bar"></div>
+  <div class="hd"><h1>부록 — <em>개최·실행 후에 검증할 것</em> (⏳ 6개)</h1><span class="pill">판정·합산 제외</span></div>
+  <p class="q">결과가 없다는 이유로 미충족 처리하지 않고, 지표와 검증 방법만 계획으로 남겼어요.</p>
+  <div class="body">
+    <table class="et">
+      <tr><th style="width:50px">#</th><th>검증 예정 항목</th><th>연결 장</th><th>측정 지표</th><th style="width:130px">시점</th></tr>
+      <tr><td><b>V1</b></td><td>우리 축제 참가자의 후기·불만</td><td>1 문제</td><td>사후 설문 자유응답·불만, SNS 언급</td><td>개최 직후~D+30</td></tr>
+      <tr><td><b>V2</b></td><td>실제 방문 동선·현장 운영 병목</td><td>1 문제</td><td>입구 계수, 혼잡 시간대, 부스 대기·완판 시각, 스탬프 완성률</td><td>개최 기간~직후</td></tr>
+      <tr><td><b>V3</b></td><td>실제 매출·순이익·구매 전환율</td><td>4 BM</td><td>굿즈 매출·객단가, 셀러 매출·수수료 수입, 예산 집행 대비 실제</td><td>개최 후</td></tr>
+      <tr><td><b>V4</b></td><td>체류·숙박·상권·사투리 인식 개선</td><td>5 MVP</td><td>1박 이상 비율, 체류 시간, 쿠폰 사용 수, 사투리 콘텐츠 조회·공유 (첫해는 기준선만)</td><td>개최 후</td></tr>
+      <tr><td><b>V5</b></td><td>첫해 결과를 다음 해에 반영해 개선</td><td>2 해결 · 5 MVP</td><td>05 차년도 과제 반영 100%(S0), 전년 대비 지표 변화</td><td>2년 차 기획 이후</td></tr>
+      <tr><td><b>V6</b></td><td>텀블벅 모금액·후원자 수·판매 실적</td><td>4 BM</td><td>진행 시점에 팀이 정함 (숫자·일정을 만들지 않음)</td><td>진행 후</td></tr>
+    </table>
+  </div>
+  <div class="foot"><span>지표·검증 방법은 main I파트(KPI·측정계획·설문)와 구성도 기준</span><span class="pg">부록</span></div>
+</section>
+
+</div></div>
+
+<div id="ctl"><button id="prev">←</button><span id="cnt">1 / 12</span><button id="next">→</button><button id="nt">노트</button></div>
+
+<script>
+(function(){
+  var slides=[].slice.call(document.querySelectorAll('.slide')),i=0,stage=document.getElementById('stage');
+  function fit(){var s=Math.min(innerWidth/1300,(innerHeight-50)/740);stage.style.transform='scale('+s+')';}
+  function show(n){i=Math.max(0,Math.min(slides.length-1,n));slides.forEach(function(s,k){s.classList.toggle('on',k===i)});
+    document.getElementById('cnt').textContent=(i+1)+' / '+slides.length;try{history.replaceState(null,'','#'+(i+1))}catch(e){}}
+  addEventListener('resize',fit);fit();
+  addEventListener('keydown',function(e){
+    if(['ArrowRight','PageDown',' '].indexOf(e.key)>-1){e.preventDefault();show(i+1)}
+    else if(['ArrowLeft','PageUp'].indexOf(e.key)>-1){e.preventDefault();show(i-1)}
+    else if(e.key==='Home')show(0);else if(e.key==='End')show(slides.length-1);
+    else if(e.key==='n'||e.key==='N')document.body.classList.toggle('shownotes');});
+  document.getElementById('prev').onclick=function(){show(i-1)};
+  document.getElementById('next').onclick=function(){show(i+1)};
+  document.getElementById('nt').onclick=function(){document.body.classList.toggle('shownotes')};
+  var h=parseInt((location.hash||'').slice(1),10);show(isNaN(h)?0:h-1);
+})();
+</script>
+</body>
+</html>

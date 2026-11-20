@@ -1,0 +1,1 @@
+내장 image_gen 상품 이미지 생성 시도: HTTP 429 / usage_limit_reached. 상품 이미지는 미생성. 99_작업기록/상품이미지_생성프롬프트.txt에 프롬프트 보관.

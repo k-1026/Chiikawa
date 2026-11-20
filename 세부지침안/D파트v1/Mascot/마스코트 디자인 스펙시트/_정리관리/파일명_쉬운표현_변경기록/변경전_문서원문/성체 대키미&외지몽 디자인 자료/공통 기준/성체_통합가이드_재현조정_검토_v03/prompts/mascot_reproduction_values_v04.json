@@ -1,0 +1,144 @@
+{
+  "version": "4.0",
+  "status": "author-assigned reproduction calibration, not original measured CAD or approved final output",
+  "basis": "user authorizes choosing new sheet values after failed reproduction tests",
+  "unit": "u, total antenna-top-to-sole height=100u; positions use central vertical axis x=0 and top y=0; dimensions overlap",
+  "characters": {
+    "daekimi": {
+      "name": "대키미",
+      "height_cm": 103,
+      "head_width": 68,
+      "head_height": 48,
+      "head_depth": 50,
+      "head_top_y": 22,
+      "torso_width": 29,
+      "torso_height": 24,
+      "torso_depth": 22,
+      "torso_top_y": 69,
+      "ear_width": 15,
+      "ear_height": 22,
+      "ear_tip_radius": 0.5,
+      "ear_rim_width": 1.4,
+      "ear_top_y": 13,
+      "antenna_ball_diameter": 10.5,
+      "antenna_ball_center_spacing": 22,
+      "visible_antenna_stem_length": 13,
+      "antenna_stem_diameter": 3.5,
+      "arm_width": 8.5,
+      "arm_length": 16,
+      "leg_and_foot_width": 12.5,
+      "leg_and_foot_height": 11,
+      "foot_height": 4.5,
+      "foot_depth": 15,
+      "eye_width": 18.4,
+      "eye_height": 20,
+      "eye_center_spacing": 34,
+      "eye_center_y": 48,
+      "nose_width": 3,
+      "nose_height": 1.8,
+      "nose_center_y": 56,
+      "mouth_width": 5,
+      "mouth_height": 5,
+      "tail_length": 40,
+      "tail_diameter": 8.5,
+      "tail_curl_radius": 8
+    },
+    "oejimong": {
+      "name": "외지몽",
+      "height_cm": 105,
+      "head_width": 60,
+      "head_height": 49,
+      "head_depth": 48,
+      "head_top_y": 21,
+      "torso_width": 30,
+      "torso_height": 25,
+      "torso_depth": 22,
+      "torso_top_y": 69,
+      "ear_width": 17,
+      "ear_height": 32,
+      "ear_top_y": 27,
+      "ear_center_x_abs": 31,
+      "antenna_ball_diameter": 11,
+      "antenna_ball_center_spacing": 24,
+      "visible_antenna_stem_length": 10,
+      "antenna_stem_diameter": 3.5,
+      "arm_width": 8.5,
+      "arm_length": 16,
+      "leg_and_foot_width": 13,
+      "leg_and_foot_height": 11,
+      "foot_height": 4.5,
+      "foot_depth": 15,
+      "eye_width": 17.4,
+      "eye_height": 20,
+      "eye_center_spacing": 32,
+      "eye_center_y": 48,
+      "nose_width": 4.8,
+      "nose_height": 3,
+      "nose_center_y": 55,
+      "mouth_width": 8,
+      "mouth_height": 6.5,
+      "muzzle_width": 19,
+      "muzzle_height": 16,
+      "muzzle_center_y": 58,
+      "tail_length": 28,
+      "tail_diameter": 9
+    }
+  },
+  "render_starting_parameters": {
+    "body_roughness": 0.6,
+    "body_metallic": 0.0,
+    "body_clearcoat": 0.0,
+    "eye_roughness": 0.14,
+    "nose_roughness": 0.35,
+    "note": "generic normalized PBR starting values chosen by author; not recovered original shader; renderer conversion required"
+  },
+  "observed_render_colors": {
+    "method": "5x5 px per-channel median from original hero render; not albedo",
+    "daekimi": {
+      "forehead": {
+        "xy": [
+          580,
+          130
+        ],
+        "hex": "#A2E4FE"
+      },
+      "face": {
+        "xy": [
+          575,
+          190
+        ],
+        "hex": "#88D4FC"
+      },
+      "torso": {
+        "xy": [
+          558,
+          332
+        ],
+        "hex": "#7ECDF7"
+      }
+    },
+    "oejimong": {
+      "forehead": {
+        "xy": [
+          585,
+          125
+        ],
+        "hex": "#8DE29E"
+      },
+      "face": {
+        "xy": [
+          574,
+          179
+        ],
+        "hex": "#65C77B"
+      },
+      "torso": {
+        "xy": [
+          574,
+          348
+        ],
+        "hex": "#51B96A"
+      }
+    }
+  }
+}

@@ -1,0 +1,5 @@
+용도: 정지 스토리보드 승인 검토. 영상 실행용 프롬프트 아님.
+도구: built-in image_gen
+입력 이미지: /Users/seunghui/Desktop/대외활동/CJ AI x AX/daegu-local-festival-ai-agent/Mascot/캐릭터 영상컨텐츠/대키미&외지몽 부화영상/외지몽/외지몽_15초_가벼운얼굴눌림과근접엔딩_스토리보드_v04/외지몽_15초_원페이지_스토리보드_승인검토_v04.png
+
+undefined

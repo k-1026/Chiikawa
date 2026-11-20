@@ -1,0 +1,29 @@
+{
+  "01_크림아이보리_확정상품이미지.png": {
+    "unchanged_from_approved": true,
+    "sha256": "6d52cc22f7a2a9fe2c44f808056bf6acd2b41e58daeecf997a9549b788c4f8ed"
+  },
+  "02_스모키블루_확정상품이미지.png": {
+    "unchanged_from_approved": true,
+    "sha256": "971e50002b61353af17ee8410041ad6cda902d66bff56aa93041dc8bc0368132"
+  },
+  "03_얼라별_에코백_디자인시트_v01.pdf": {
+    "pages": 10,
+    "text_extractable": true,
+    "visual_review": "contact sheet all pages + detailed lettering, dimensions and printing pages"
+  },
+  "04_얼라별_에코백_제작사양서_v01.pdf": {
+    "pages": 11,
+    "text_extractable": true,
+    "visual_review": "contact sheet all pages + detailed lettering, dimensions and printing pages"
+  },
+  "zip": {
+    "files": [
+      "01_크림아이보리_확정상품이미지.png",
+      "02_스모키블루_확정상품이미지.png",
+      "03_얼라별_에코백_디자인시트_v01.pdf",
+      "04_얼라별_에코백_제작사양서_v01.pdf"
+    ],
+    "integrity": "OK"
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "source_front": "/Users/seunghui/Desktop/대외활동/CJ AI x AX/daegu-local-festival-ai-agent/Mascot/마스코트 디자인 스펙시트/아가버전 대키미&외지몽 디자인 스펙시트_v01/대키미 아기버전/캐릭터 디자인/대키미_무표정_팔내림_꼬리리본_2차시안_v03/레퍼런스_이미지/02_서있는자세_정면.png",
+  "source_unchanged_sha256": "9a9304514cb5a760fae257a0c8dd8240f5b17f33ec3224864f1fdaf93bc8f46f",
+  "tool": "built-in image_gen",
+  "files": [
+    {
+      "file": "01_정면.png",
+      "status": "source_copy",
+      "source": "/Users/seunghui/Desktop/대외활동/CJ AI x AX/daegu-local-festival-ai-agent/Mascot/마스코트 디자인 스펙시트/아가버전 대키미&외지몽 디자인 스펙시트_v01/대키미 아기버전/캐릭터 디자인/대키미_무표정_팔내림_꼬리리본_2차시안_v03/레퍼런스_이미지/02_서있는자세_정면.png",
+      "sha256": "9a9304514cb5a760fae257a0c8dd8240f5b17f33ec3224864f1fdaf93bc8f46f"
+    },
+    {
+      "file": "02_45도_관찰자왼쪽.png",
+      "status": "generated_pending_user_review",
+      "source": "/Users/seunghui/.codex/generated_images/01a1bdbc-3d74-7691-9595-d28f2afcaec6/exec-353820a8-2461-48b1-84a8-d9b27ee6fa84.png",
+      "sha256": "58b723702af9690b2fb00610aa39d920494228036dd7a232e56e791ff25f01c7"
+    },
+    {
+      "file": "03_45도_관찰자오른쪽.png",
+      "status": "generated_pending_user_review",
+      "source": "/Users/seunghui/.codex/generated_images/01a1bdbc-3d74-7691-9595-d28f2afcaec6/exec-2e6d2a54-e5fd-40b3-a458-2115e3d41659.png",
+      "sha256": "2ee9e2d5f4ac9ad64ed6efe938093b5641611c4c02437110024c6b6604733709"
+    },
+    {
+      "file": "04_측면_관찰자왼쪽.png",
+      "status": "NOT_GENERATED_USAGE_LIMIT",
+      "exists": false
+    },
+    {
+      "file": "05_측면_관찰자오른쪽.png",
+      "status": "NOT_GENERATED_USAGE_LIMIT",
+      "exists": false
+    },
+    {
+      "file": "06_후면.png",
+      "status": "NOT_GENERATED_USAGE_LIMIT",
+      "exists": false
+    }
+  ],
+  "limitation": "Image generation tool returned usage_limit_reached during 04 generation. No side/back images created.",
+  "observer_direction": "LEFT/RIGHT are original front observer camera positions, not anatomical side names."
+}

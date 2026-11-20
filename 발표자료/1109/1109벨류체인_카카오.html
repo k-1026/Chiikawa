@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>카카오프렌즈 밸류체인 v1</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; font-family: "Malgun Gothic", "맑은 고딕", sans-serif; }
+  body { background: #F7F5F2; }
+  .canvas { position: relative; width: 1280px; height: 720px; background: #FFFFFF; overflow: hidden; }
+
+  .title { position: absolute; left: 40px; top: 16px; font-size: 20px; font-weight: 700; color: #222; }
+  .subtitle { position: absolute; left: 40px; top: 42px; font-size: 12px; color: #777; }
+
+  .stage-header {
+    position: absolute; width: 220px; height: 30px;
+    background: #2F2A85; color: #fff; font-size: 14px; font-weight: 700;
+    display: flex; align-items: center; justify-content: center; border-radius: 6px;
+  }
+
+  .layer-label {
+    position: absolute; left: 8px; font-size: 11px; color: #999; font-weight: 700; letter-spacing: 1px;
+  }
+
+  .node {
+    position: absolute; width: 220px; min-height: 40px;
+    background: #F1F0FB; border: 1px solid #C9C6EE; border-radius: 6px;
+    font-size: 12px; color: #2A2A2A; padding: 6px 8px; line-height: 1.35;
+  }
+  .node.stake {
+    background: #FFFFFF; border: 1px solid #DDD; color: #555; font-size: 11px;
+  }
+
+  .node.bottleneck { background: #FEF3DC; border-color: #E89B00; }
+  .node.cost { background: #FCEBE5; border-color: #E8603C; }
+  .node.opp-border { outline: 2px dashed #9BD24B; outline-offset: 2px; }
+
+  .chip {
+    position: absolute; font-size: 9px; font-weight: 700; color: #fff; border-radius: 3px;
+    padding: 1px 5px; top: -8px;
+  }
+  .chip.bottleneck { background: #E89B00; }
+  .chip.cost { background: #E8603C; left: -6px; }
+  .chip.opp { background: #9BD24B; right: -6px; }
+
+  .legend {
+    position: absolute; right: 24px; bottom: 16px; width: 300px;
+    background: #FAFAFA; border: 1px solid #E5E5E5; border-radius: 6px; padding: 8px 12px;
+    font-size: 10.5px; color: #444;
+  }
+  .legend .row { display: flex; align-items: center; margin: 3px 0; }
+  .legend .swatch { width: 14px; height: 10px; border-radius: 2px; margin-right: 6px; flex-shrink: 0; }
+  .legend .line { width: 22px; height: 0; margin-right: 6px; flex-shrink: 0; }
+
+  .flow-label {
+    position: absolute; font-size: 9.5px; color: #B05A00; background: rgba(255,255,255,0.85);
+    padding: 0 3px; white-space: nowrap;
+  }
+  .flow-label.data { color: #2763C7; }
+
+  .footnote {
+    position: absolute; left: 40px; bottom: 16px; width: 760px; font-size: 10px; color: #888; line-height: 1.5;
+  }
+</style>
+</head>
+<body>
+<div class="canvas">
+
+  <div class="title">카카오프렌즈 — 밸류체인 네 층 맵 (v1)</div>
+  <div class="subtitle">근거: 03_onepager_v1.md (현희 브랜치) · 확인 2026-11-07</div>
+
+  <!-- 단계 헤더 -->
+  <div class="stage-header" style="left:40px; top:64px;">1. 인바운드</div>
+  <div class="stage-header" style="left:280px; top:64px;">2. 운영·제작</div>
+  <div class="stage-header" style="left:520px; top:64px;">3. 아웃바운드</div>
+  <div class="stage-header" style="left:760px; top:64px;">4. 마케팅·판매</div>
+  <div class="stage-header" style="left:1000px; top:64px;">5. 서비스</div>
+
+  <div class="layer-label" style="top:106px;">활동</div>
+  <div class="layer-label" style="top:324px;">이해관계자</div>
+
+  <!-- 1. 인바운드 -->
+  <div class="node" style="left:40px; top:118px;">a1. IP 세계관·파생 캐릭터 기획</div>
+  <div class="node" style="left:40px; top:168px;">a2. 상표권·디자인권 확보</div>
+  <div class="node stake" style="left:40px; top:330px; min-height:60px;">카카오(IP 기획 조직)</div>
+
+  <!-- 2. 운영·제작 -->
+  <div class="node" style="left:280px; top:118px;">b1. 이모티콘·콘텐츠 제작</div>
+  <div class="node" style="left:280px; top:168px;">b2. 직판 굿즈 제작</div>
+  <div class="node" style="left:280px; top:218px;">b3. 콜라보 상품 공동 제작</div>
+  <div class="node stake" style="left:280px; top:330px; min-height:60px;">GRS 인증 제조사 · 콜라보 파트너</div>
+
+  <!-- 3. 아웃바운드 -->
+  <div class="node cost opp-border" style="left:520px; top:118px; position:relative;">
+    <span class="chip cost">비용</span><span class="chip opp">기회</span>
+    c1. 자사+외부 채널 동시 출시
+  </div>
+  <div class="node" style="left:520px; top:168px;">c2. 해외 마스터 라이선스 유통</div>
+  <div class="node" style="left:520px; top:218px;">c3. 금융·뷰티 라이선스</div>
+  <div class="node" style="left:520px; top:268px;">c4. 호텔 공간 라이선스</div>
+  <div class="node stake" style="left:520px; top:330px; min-height:72px;">유통채널 · 해외 라이선시 · 금융·뷰티 파트너</div>
+
+  <!-- 4. 마케팅·판매 -->
+  <div class="node" style="left:760px; top:118px;">d1. 콜라보 프로모션(해리포터 등)</div>
+  <div class="node bottleneck" style="left:760px; top:168px; position:relative;">
+    <span class="chip bottleneck">병목</span>
+    d2. 스포츠 콜라보 완판(KBO)
+  </div>
+  <div class="node bottleneck" style="left:760px; top:218px; position:relative;">
+    <span class="chip bottleneck">병목</span>
+    d3. 식품 라이선스 판매(춘식이우유·맥심)
+  </div>
+  <div class="node stake" style="left:760px; top:330px; min-height:72px;">콜라보 IP 보유사 · KBO · 식품 라이선시 · 소비자</div>
+
+  <!-- 5. 서비스 -->
+  <div class="node" style="left:1000px; top:118px;">e1. 홍대 플래그십 운영</div>
+  <div class="node" style="left:1000px; top:168px;">e2. 지역 투어 운영(부산)</div>
+  <div class="node" style="left:1000px; top:218px;">e3. 호텔 체험 패키지</div>
+  <div class="node stake" style="left:1000px; top:330px; min-height:72px;">플래그십 운영팀 · 부산 수영구청·관광공사 · 호텔 파트너</div>
+
+  <!-- 돈 흐름 라벨 -->
+  <div class="flow-label" style="left:620px; top:428px;">콜라보 로열티: 비율 미공개 [I]</div>
+  <div class="flow-label" style="left:620px; top:446px;">KBO·식품 라이선스료: 금액 미공개 [U]</div>
+
+  <!-- 데이터 흐름 라벨 -->
+  <div class="flow-label data" style="left:860px; top:428px;">완판·콜라보 성과 데이터, 보유자: 카카오 [I]</div>
+  <div class="flow-label data" style="left:1010px; top:446px; font-size:9px;">투어 참여 규모, 보유자: 부산관광공사 [확인·원문미확인]</div>
+
+  <!-- SVG: 상품 흐름(실선) + 돈 흐름(굵은 역방향) + 데이터 흐름(점선) -->
+  <svg width="1280" height="720" style="position:absolute; top:0; left:0;">
+    <defs>
+      <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+        <path d="M0,0 L10,5 L0,10 z" fill="#555"/>
+      </marker>
+      <marker id="arrow-money" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+        <path d="M0,0 L10,5 L0,10 z" fill="#E89B00"/>
+      </marker>
+      <marker id="arrow-data" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+        <path d="M0,0 L10,5 L0,10 z" fill="#2763C7"/>
+      </marker>
+    </defs>
+
+    <!-- 상품/활동 흐름 (실선, 단계 간 좌→우) -->
+    <path d="M260,138 L280,138" stroke="#888" stroke-width="1.5" fill="none" marker-end="url(#arrow)"/>
+    <path d="M260,188 L280,188" stroke="#888" stroke-width="1.5" fill="none" marker-end="url(#arrow)"/>
+    <path d="M500,138 L520,138" stroke="#888" stroke-width="1.5" fill="none" marker-end="url(#arrow)"/>
+    <path d="M740,138 L760,138" stroke="#888" stroke-width="1.5" fill="none" marker-end="url(#arrow)"/>
+    <path d="M740,188 L760,218" stroke="#888" stroke-width="1.5" fill="none" marker-end="url(#arrow)"/>
+    <path d="M740,238 L760,238" stroke="#888" stroke-width="1.5" fill="none" marker-end="url(#arrow)"/>
+    <path d="M980,138 L1000,138" stroke="#888" stroke-width="1.5" fill="none" marker-end="url(#arrow)"/>
+    <path d="M980,238 L1000,238" stroke="#888" stroke-width="1.5" fill="none" marker-end="url(#arrow)"/>
+
+    <!-- 돈 흐름 (굵은 선, 우→좌 역방향, 소비자→원천) -->
+    <path d="M870,420 C700,460 500,460 290,240" stroke="#E89B00" stroke-width="3" fill="none" marker-end="url(#arrow-money)"/>
+    <path d="M870,440 C700,480 500,480 60,240" stroke="#E89B00" stroke-width="3" fill="none" marker-end="url(#arrow-money)"/>
+
+    <!-- 데이터 흐름 (점선) -->
+    <path d="M870,350 L870,420" stroke="#2763C7" stroke-width="1.5" stroke-dasharray="5,4" fill="none" marker-end="url(#arrow-data)"/>
+    <path d="M1110,330 L1110,420" stroke="#2763C7" stroke-width="1.5" stroke-dasharray="5,4" fill="none" marker-end="url(#arrow-data)"/>
+  </svg>
+
+  <div class="footnote">
+    메모 — 돈·데이터 흐름 라벨에 숫자가 없는 이유: 03_onepager_v1.md에 콜라보 로열티 비율, 라이선스 사용료 금액 등 정산 구조 숫자가 전혀 없다(onepager_v1 자체가 "A-얼마나 들어" 칸에 비공개로 명시). 병목(d2·d3) 마커는 완판 사례, 비용·기회 마커(c1)는 다채널 동시 출시의 중간 차감 중첩·정보 재입력 신호에서 가져왔다 — 전부 valuechain_v2/signals.md 근거.
+  </div>
+
+  <div class="legend">
+    <div class="row"><div class="swatch" style="background:#FEF3DC; border:1px solid #E89B00;"></div>병목 (대기·지연 — 완판형)</div>
+    <div class="row"><div class="swatch" style="background:#FCEBE5; border:1px solid #E8603C;"></div>비용 (중간 차감 중첩)</div>
+    <div class="row"><div class="swatch" style="background:#EEF7E2; border:2px dashed #9BD24B;"></div>기회 (AI 기회 유형 짝)</div>
+    <div class="row"><div class="line" style="border-top:3px solid #E89B00;"></div>돈 흐름 (소비자 → 원천, 금액 미공개)</div>
+    <div class="row"><div class="line" style="border-top:1.5px dashed #2763C7;"></div>데이터 흐름 (점선)</div>
+  </div>
+
+</div>
+</body>
+</html>

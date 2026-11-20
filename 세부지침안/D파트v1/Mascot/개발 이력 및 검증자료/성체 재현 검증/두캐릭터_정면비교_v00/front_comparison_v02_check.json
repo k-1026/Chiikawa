@@ -1,0 +1,39 @@
+{
+  "method": "built-in image_gen, one generation plus one size-calibration edit",
+  "image_size": [
+    1536,
+    1024
+  ],
+  "visual_checks": {
+    "front_view": true,
+    "two_antennae_each": true,
+    "three_explicit_highlights_per_eye": true,
+    "no_blush": true,
+    "daekimi_no_white_muzzle": true,
+    "oejimong_cream_muzzle": true
+  },
+  "silhouette_measurement_method": "saturated blue/green pixel thresholds; approximate rendered extent, not world-space dimensions",
+  "silhouette_measurements": {
+    "daekimi": {
+      "top_y_px": 109,
+      "sole_y_px": 908,
+      "height_px": 799,
+      "upper_ball_band_widths_px": [
+        94,
+        92
+      ]
+    },
+    "oejimong": {
+      "top_y_px": 87,
+      "sole_y_px": 908,
+      "height_px": 821,
+      "upper_ball_band_widths_px": [
+        122,
+        124
+      ]
+    }
+  },
+  "observed_green_to_blue_height_ratio": 1.027534418022528,
+  "target_height_ratio": 1.0194174757281553,
+  "dimension_status": "visual reference only; generated heights and sphere diameter ratios are not exact dimensional verification"
+}

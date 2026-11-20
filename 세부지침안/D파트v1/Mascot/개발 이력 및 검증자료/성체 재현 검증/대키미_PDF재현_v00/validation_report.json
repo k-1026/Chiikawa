@@ -1,0 +1,63 @@
+{
+  "status": "generated validation candidate, not approved identical design",
+  "method": "built-in image_gen; source PDF page1 and page5 plus embedded original board; no earlier AI render used",
+  "blue_mask_bbox": [
+    216,
+    84,
+    1007,
+    1194
+  ],
+  "blue_mask_height_px": 1110,
+  "measurement_note": "color mask may include colored ground-contact pixels; values are approximate screen-space comparison, not world-space validation",
+  "eye_comparison": [
+    {
+      "eye": "screen_left",
+      "bbox_xyxy_exclusive": [
+        286,
+        478,
+        524,
+        714
+      ],
+      "generated_size_u": [
+        21.44144144144144,
+        21.26126126126126
+      ],
+      "pdf_target_size_u": [
+        21.02803738317757,
+        21.02803738317757
+      ],
+      "width_relative_deviation_percent": 1.9659659659659656,
+      "height_relative_deviation_percent": 1.1091091091091076
+    },
+    {
+      "eye": "screen_right",
+      "bbox_xyxy_exclusive": [
+        673,
+        478,
+        907,
+        714
+      ],
+      "generated_size_u": [
+        21.08108108108108,
+        21.26126126126126
+      ],
+      "pdf_target_size_u": [
+        20.5607476635514,
+        21.02803738317757
+      ],
+      "width_relative_deviation_percent": 2.530712530712531,
+      "height_relative_deviation_percent": 1.1091091091091076
+    }
+  ],
+  "visual_checks": {
+    "front_full_body": true,
+    "two_antennae": true,
+    "three_intended_highlights_each_eye": true,
+    "small_sparkles_gray_not_all_white": true,
+    "blue_face_no_white_muzzle": true,
+    "no_blush": true,
+    "no_forced_thumb_in_neutral_pose": true,
+    "light_leg_gap": true
+  },
+  "unapproved_items": "Exact eye curvature, ear contour, material and local shading still require direct source comparison."
+}

@@ -1,0 +1,87 @@
+Use the connected Higgsfield tools to generate ONE video with SEEDANCE 2.5.
+First inspect the available tool parameters and use the actual Seedance 2.5 model identifier. Bind the actual uploaded reference assets. Do not silently switch models or invent unsupported parameters.
+
+SETTINGS
+Duration: 15 seconds. Aspect ratio: 16:9. Outputs: ONE.
+Use 1080p and native audio for sound effects only if supported by this connection. Report unavailable settings before submitting. No automatic additional paid attempts.
+One continuous take with a locked camera. No cuts, camera zoom, orbit or tracking.
+
+REFERENCE ROLES
+Reference 1: approved standing FRONT — primary authority for identity, proportions, green color, short tidy fur, eyes and light blush.
+Reference 2: approved three-quarter view of the SAME baby — supporting ear, muzzle and tail anatomy.
+Reference 3: approved seated view of the SAME baby — supporting palm/sole details only; do not copy the seated/waving pose.
+Reference 4: ONE egg FRONT — exact taller-than-wide cream shell, milky-mint paw and four-point star decorations, no ribbon.
+If the approved v04 storyboard is also attached, use it ONLY for action order and timing. The character references control appearance. The written instructions below control the light contact and final camera distance.
+Map these roles to the actual uploaded assets and supported reference labels. Do not leave unbound placeholder tags. Do not reproduce a reference sheet or storyboard grid. Do not use a baby image as the opening frame.
+
+VIDEO PROMPT
+A 15-second soft stylized 3D introduction of ONE affectionate, confident baby Oejimong. A puppy-like personality expressed by an upright TWO-LEGGED mascot. All walking, running and backward steps are BIPEDAL. Its ARMS balance beside its body; its LEGS provide locomotion. Hands touch the floor only to catch the single fall and help it stand up. Never walk, run or crawl on all fours.
+
+IDENTITY
+Match Reference 1 throughout: huge rounded puppy head, tiny chubby torso, hidden neck, very short limbs, approved fresh medium-bright green, extremely short dense even soft plush fuzz. Cream muzzle, belly and small rounded tail tip. Very light translucent round rose-pink blush.
+Two floppy rounded dog ears; exactly TWO tiny narrow round-ended forelocks; TWO smooth hairless antenna stems, each ending in ONE round smooth ball.
+Each fully open glossy black eye retains its large cream FOUR-point star, smaller gray FOUR-point sparkle and tiny pale diamond. Preserve the reference shapes and arrangement.
+Small black puppy nose, little pink tongue, mitten hands and oval feet with minimal digit grooves. Each visible palm/sole has ONE main cream pad plus THREE small cream ovals; no pads on handbacks or foot tops.
+ONE connected plump curved puppy tail, with its approved root, direction and small cream tip. No cat spiral. No ribbon or accessories.
+
+SCENE
+Warm pale ivory seamless studio floor and background, soft diffused light, consistent contact shadows. Fixed low front camera. The baby gets bigger through physical approach, not a camera zoom.
+
+MANDATORY HATCH ORDER
+Tail alone, wagging left/right -> antennae emerge and react -> face AND ears emerge, limbs still hidden -> BOTH arms AND BOTH legs emerge together as ALL remaining shell breaks in ONE event.
+Give each of the first three emergence stages its own visible beat. Never reveal the face before the antennae. Never reveal hands holding the shell rim during the head-only stage.
+
+CONTINUOUS TAIL MOTION
+From its FIRST appearance until the LAST frame, the tail keeps wagging left and right, including antenna reaction, head emergence, shell break, greeting, fall, recovery, fast run, contact and backward steps. Use a natural small wag during other actions. It never deliberately stops. Natural occlusion or cropping in close-up is allowed; do not move its attachment point to keep it visible.
+
+TIMELINE
+0.0–1.5s — ROLL IN AND SHAKE
+Start with an empty hatching area. ONE closed egg rolls in from off-screen, tilting naturally without changing its taller-than-wide shape. A slight crack forms. It settles upright on its broad lower end and shakes vigorously.
+
+1.5–2.5s — TAIL ONLY
+The tail breaks through a small side/rear opening FIRST and starts wagging left and right. The face, ears, antennae, arms and legs remain completely inside. Most of the shell remains intact.
+
+2.5–3.3s — ANTENNAE RECEIVE A SIGNAL
+Exactly TWO ball-tipped antennae emerge through the top. They make small responsive twitches and gentle ball bobs, as if sensing a signal. The tail continues wagging. Face, ears and all limbs are still hidden. No visible signal icons, light beams or glowing effects.
+
+3.3–4.1s — FACE AND EARS ONLY
+The upper opening expands and the face with BOTH floppy ears emerges. Antennae remain above the head; tail continues wagging. Torso, arms and legs remain inside the remaining shell. No hands on the rim.
+
+4.1–5.0s — LIMBS TOGETHER, WHOLE SHELL BREAK
+BOTH arms and BOTH legs emerge together as the entire remaining shell breaks apart at once into a few large pieces. The baby settles upright on TWO feet with a tiny balance wobble. Do not fall yet. Shell fragments fall to the floor at the hatching location.
+
+5.0–6.0s — GREETING
+The baby looks directly at the camera, smiles and makes one small curious head tilt. Tail keeps wagging.
+
+6.0–7.3s — BIPEDAL RUN AND ONE TRIP
+It starts running toward the camera on TWO short legs, arms balancing off the floor. It trips once, hands catch its forward fall and its tummy briefly meets the floor. Harmless and cute. This is one fall, not four-legged locomotion.
+
+7.3–8.0s — GET UP
+It promptly pushes up, lifts BOTH hands off the floor and regains an upright TWO-foot stance. Tail keeps wagging.
+
+8.0–10.5s — FASTER SECOND RUN
+It accelerates eagerly toward the SAME fixed camera, visibly faster than its first attempt. Rapid alternating steps on TWO legs, arms balancing, ears bouncing behind the movement. Its forward momentum carries it toward the lens before it can stop. No pause or slow motion before contact.
+
+10.5–11.0s — RAPID CLOSE APPROACH
+The nose approaches very close and becomes prominent in frame through actual forward travel. The character, not the camera, is moving.
+
+11.0–12.0s — LIGHT GLASS-LIKE CONTACT
+One soft "bonk": the nose meets an invisible flat camera plane, as if it has unexpectedly reached a clean glass door. Its forward motion is briefly blocked. Show ONLY a LITTLE compression of the nose tip and cream muzzle, with very slight cheek pressure. Hold this gentle contact briefly, about half a second.
+Keep the original face almost unchanged: no broad flattened face, stretched muzzle, bulging cheeks, huge open mouth or exaggerated squash. A small surprised expression conveys the stop. This must read as a physical barrier contact, not merely an unchanged close-up. No visible door, glass frame, glass shards or added prop. The camera remains fixed.
+
+12.0–15.0s — ONLY ONE OR TWO SMALL STEPS BACK
+It takes just ONE OR TWO tiny backward steps, enough to release the contact. Its face returns to its exact original shape as it pulls away.
+Stay CLOSE to the camera: its head and upper torso fill most of the frame, with the face, ears and antenna balls readable. Do NOT retreat to the hatching location, restore a distant full-body composition or zoom out.
+It looks directly at the viewer, smiles and gently tilts its head. The tail CONTINUES wagging through the final frame, whether visible or naturally cropped. Hold the affectionate close greeting.
+
+SHELL CONTINUITY
+After falling and settling, the same shell pieces remain at the SAME floor locations for the rest of the video. They never disappear, dissolve, multiply, reassemble or follow the baby. In the ending they may be naturally defocused, occluded or cropped in the distant background.
+
+AUDIO AND EXCLUSIONS
+Sound effects only: soft egg rolling, cracking, small footfalls, a gentle stumble and one soft contact bonk. No music, speech, narration, barking, vocal laughter or singing.
+No extra characters, eggs, limbs or antennae; no four-legged locomotion; no changed green, shaggy fur, added accessories, five-point eye stars, captions, logos, grids or watermarks.
+Preserve the exact hatch sequence, single trip and recovery, faster second run, LIGHT blocked-face contact, CLOSE one-or-two-step ending, and continuous tail wag.
+
+AFTER GENERATION
+Wait for the job to finish and return the playable result or download link. If result inspection is available, check the hatch order, bipedal locomotion, continuous tail wag, persistent shell pieces, gentle face pressure and close ending. Report deviations honestly. Do not automatically generate another paid attempt.
+
