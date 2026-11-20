@@ -1,0 +1,546 @@
+{
+  "date": "2026-11-13",
+  "rule": "주제별 독립 v00 시작; 기존 파일명과 원본 내용 보존; 분류용 README만 갱신",
+  "moves": [
+    {
+      "source": "대키미 아기버전/00_초기_6방향_디자인시트_v00/.DS_Store",
+      "destination": "대키미 아기버전/캐릭터 디자인/대키미_초기_6방향_디자인시트_v00/.DS_Store",
+      "sha256_before": "f1e4b7c6a1693c4bbab578b2437ce9dbb36160e723087c574abb9f8a56ddfe30"
+    },
+    {
+      "source": "대키미 아기버전/00_초기_6방향_디자인시트_v00/README_제작단계.md",
+      "destination": "대키미 아기버전/캐릭터 디자인/대키미_초기_6방향_디자인시트_v00/README_제작단계.md",
+      "sha256_before": "d46a65ac0812541452b899eff5278b12d0617cea9427c14259e3305cb6bad836"
+    },
+    {
+      "source": "대키미 아기버전/00_초기_6방향_디자인시트_v00/generation_prompts.json",
+      "destination": "대키미 아기버전/캐릭터 디자인/대키미_초기_6방향_디자인시트_v00/generation_prompts.json",
+      "sha256_before": "3d7d347ffe31edad3fbd6502db79ad7944ffd81297321330deca82a228d921b6"
+    },
+    {
+      "source": "대키미 아기버전/00_초기_6방향_디자인시트_v00/마스코트 디자인 스펙시트_baby.ver_v01.md",
+      "destination": "대키미 아기버전/캐릭터 디자인/대키미_초기_6방향_디자인시트_v00/마스코트 디자인 스펙시트_baby.ver_v01.md",
+      "sha256_before": "416f371849cc6b614dd30f1587f503f91339689b405e9bd8086186ae7f19ac41"
+    },
+    {
+      "source": "대키미 아기버전/00_초기_6방향_디자인시트_v00/sources/daekimi_fixed_front.png",
+      "destination": "대키미 아기버전/캐릭터 디자인/대키미_초기_6방향_디자인시트_v00/sources/daekimi_fixed_front.png",
+      "sha256_before": "2b2b710df805a4542e882ed3588710eca64f8b1d8f144483894c64500a590448"
+    },
+    {
+      "source": "대키미 아기버전/00_초기_6방향_디자인시트_v00/sources/baby_approved_fur_before_eye_fix.png",
+      "destination": "대키미 아기버전/캐릭터 디자인/대키미_초기_6방향_디자인시트_v00/sources/baby_approved_fur_before_eye_fix.png",
+      "sha256_before": "c2ebbd655f1625d25e8dabc1e96951272726f6677fdf98176c27ab69ed480f5f"
+    },
+    {
+      "source": "대키미 아기버전/00_초기_6방향_디자인시트_v00/sources/daekimi_pads_detail_only_v04.png",
+      "destination": "대키미 아기버전/캐릭터 디자인/대키미_초기_6방향_디자인시트_v00/sources/daekimi_pads_detail_only_v04.png",
+      "sha256_before": "78e22a38233040a3cb42bb0dbd20580171bda33b387068f0d6ed3a22e7fa5a93"
+    },
+    {
+      "source": "대키미 아기버전/00_초기_6방향_디자인시트_v00/sources/adult_v04_pads_spec.md",
+      "destination": "대키미 아기버전/캐릭터 디자인/대키미_초기_6방향_디자인시트_v00/sources/adult_v04_pads_spec.md",
+      "sha256_before": "e56c70c23ed23d1f8fe61c6bd008453e04cfe0c61638358fea73aaf224bff595"
+    },
+    {
+      "source": "대키미 아기버전/00_초기_6방향_디자인시트_v00/sources/user_eye_detail.png",
+      "destination": "대키미 아기버전/캐릭터 디자인/대키미_초기_6방향_디자인시트_v00/sources/user_eye_detail.png",
+      "sha256_before": "3df8093fdca843f5d9ecbd9f5adc653ed4f6538e63fc877369feb2f957c95079"
+    },
+    {
+      "source": "대키미 아기버전/00_초기_6방향_디자인시트_v00/reference/02_45_LEFT.png",
+      "destination": "대키미 아기버전/캐릭터 디자인/대키미_초기_6방향_디자인시트_v00/reference/02_45_LEFT.png",
+      "sha256_before": "c1bcb1e444bd0d13ec6a9d1f8377d3d7fe60c1f173ecb59f2779d9edcfe6aecc"
+    },
+    {
+      "source": "대키미 아기버전/00_초기_6방향_디자인시트_v00/reference/06_BACK.png",
+      "destination": "대키미 아기버전/캐릭터 디자인/대키미_초기_6방향_디자인시트_v00/reference/06_BACK.png",
+      "sha256_before": "87d3e8aef06da75ade1df6a3ec84cd80973ef5708b0b9fca83102982385e9779"
+    },
+    {
+      "source": "대키미 아기버전/00_초기_6방향_디자인시트_v00/reference/05_SIDE_RIGHT.png",
+      "destination": "대키미 아기버전/캐릭터 디자인/대키미_초기_6방향_디자인시트_v00/reference/05_SIDE_RIGHT.png",
+      "sha256_before": "a186fdecd484acc3acc570d8a9f024b12f53e846cd53dd33f556d6b9894038f8"
+    },
+    {
+      "source": "대키미 아기버전/00_초기_6방향_디자인시트_v00/reference/04_SIDE_LEFT.png",
+      "destination": "대키미 아기버전/캐릭터 디자인/대키미_초기_6방향_디자인시트_v00/reference/04_SIDE_LEFT.png",
+      "sha256_before": "2179e50bcb1b895602b88ba312ad76e341facb4112a3bd5045460e1bbc9d6b78"
+    },
+    {
+      "source": "대키미 아기버전/00_초기_6방향_디자인시트_v00/reference/01_FRONT.png",
+      "destination": "대키미 아기버전/캐릭터 디자인/대키미_초기_6방향_디자인시트_v00/reference/01_FRONT.png",
+      "sha256_before": "7a8de82d23058fe3dd3e618aa48323a895028ceb3b9488b7ba92a4caff127787"
+    },
+    {
+      "source": "대키미 아기버전/00_초기_6방향_디자인시트_v00/reference/03_45_RIGHT.png",
+      "destination": "대키미 아기버전/캐릭터 디자인/대키미_초기_6방향_디자인시트_v00/reference/03_45_RIGHT.png",
+      "sha256_before": "40081f7ec28a992d513398d8491d1ba10ecb87ddf4078619061ffa3538f9a883"
+    },
+    {
+      "source": "대키미 아기버전/03_MD단독재현_설계_v03/마스코트 디자인 스펙시트_baby.ver_v02_MD단독재현.md",
+      "destination": "대키미 아기버전/캐릭터 디자인/대키미_MD단독재현_설계_v01/마스코트 디자인 스펙시트_baby.ver_v02_MD단독재현.md",
+      "sha256_before": "fbc90a9be2a194bc8687661d05df1ceaef4785f6b7a03ae60d1127182175e8ce"
+    },
+    {
+      "source": "대키미 아기버전/03_MD단독재현_설계_v03/README_제작단계.md",
+      "destination": "대키미 아기버전/캐릭터 디자인/대키미_MD단독재현_설계_v01/README_제작단계.md",
+      "sha256_before": "e7ab0bb52da33abd20aab0a3abfd5d6f24fa8d9b8aaa0471caf33ef3712363cb"
+    },
+    {
+      "source": "대키미 아기버전/04_팔내림_꼬리리본_설계와1차시안_v04/마스코트 디자인 스펙시트_baby.ver_v03_팔내림_꼬리리본_MD단독.md",
+      "destination": "대키미 아기버전/캐릭터 디자인/대키미_팔내림_꼬리리본_설계와1차시안_v02/마스코트 디자인 스펙시트_baby.ver_v03_팔내림_꼬리리본_MD단독.md",
+      "sha256_before": "07361b02ab29bc4a5d3e1b126128d5f2b14c3990fc46c433646968af2f298c93"
+    },
+    {
+      "source": "대키미 아기버전/04_팔내림_꼬리리본_설계와1차시안_v04/마스코트 디자인 스펙시트_baby.ver_v03_팔내림_리본없음_MD단독.md",
+      "destination": "대키미 아기버전/캐릭터 디자인/대키미_팔내림_꼬리리본_설계와1차시안_v02/마스코트 디자인 스펙시트_baby.ver_v03_팔내림_리본없음_MD단독.md",
+      "sha256_before": "777b88d78c17927799e837dd6bf79d48dac8b62fec7bd9b3d308dda38461a534"
+    },
+    {
+      "source": "대키미 아기버전/04_팔내림_꼬리리본_설계와1차시안_v04/.DS_Store",
+      "destination": "대키미 아기버전/캐릭터 디자인/대키미_팔내림_꼬리리본_설계와1차시안_v02/.DS_Store",
+      "sha256_before": "87f524ee93f91dc21ffb4b2c8ad924c7811bf03a49ff8ca29f8375346232cc53"
+    },
+    {
+      "source": "대키미 아기버전/04_팔내림_꼬리리본_설계와1차시안_v04/README_제작단계.md",
+      "destination": "대키미 아기버전/캐릭터 디자인/대키미_팔내림_꼬리리본_설계와1차시안_v02/README_제작단계.md",
+      "sha256_before": "c2c3c41c39008371bfe07d17e84f9ad21d5a79fe73625e298b523f8d60614c9e"
+    },
+    {
+      "source": "대키미 아기버전/04_팔내림_꼬리리본_설계와1차시안_v04/reference/02_STANDING_FRONT.png",
+      "destination": "대키미 아기버전/캐릭터 디자인/대키미_팔내림_꼬리리본_설계와1차시안_v02/reference/02_STANDING_FRONT.png",
+      "sha256_before": "51ee2efe8123549b50165ee2c304357d7530e8bb5d1cbcddd01079033228a036"
+    },
+    {
+      "source": "대키미 아기버전/04_팔내림_꼬리리본_설계와1차시안_v04/reference/01_SITTING_FRONT.png",
+      "destination": "대키미 아기버전/캐릭터 디자인/대키미_팔내림_꼬리리본_설계와1차시안_v02/reference/01_SITTING_FRONT.png",
+      "sha256_before": "a507ad16585555746d22d1b4d851c4de7f236631151d0c44cf587f0af04d881c"
+    },
+    {
+      "source": "대키미 아기버전/04_팔내림_꼬리리본_설계와1차시안_v04/reference/generation_prompts.json",
+      "destination": "대키미 아기버전/캐릭터 디자인/대키미_팔내림_꼬리리본_설계와1차시안_v02/reference/generation_prompts.json",
+      "sha256_before": "d6bd5771324ab75dcefe81377dfd9b241a5b4519e636a2c211a793bc49b3decd"
+    },
+    {
+      "source": "대키미 아기버전/05_무표정_팔내림_꼬리리본_2차시안_v05/.DS_Store",
+      "destination": "대키미 아기버전/캐릭터 디자인/대키미_무표정_팔내림_꼬리리본_2차시안_v03/.DS_Store",
+      "sha256_before": "ecaf34bdfdd4f14e449320f1cc91b886fe32871968dc78b670c0927531546e9f"
+    },
+    {
+      "source": "대키미 아기버전/05_무표정_팔내림_꼬리리본_2차시안_v05/README_제작단계.md",
+      "destination": "대키미 아기버전/캐릭터 디자인/대키미_무표정_팔내림_꼬리리본_2차시안_v03/README_제작단계.md",
+      "sha256_before": "251eb089c5f2d794c2cc6dc9faab12eecbaec31b981837c289e14cd93cdde2c3"
+    },
+    {
+      "source": "대키미 아기버전/05_무표정_팔내림_꼬리리본_2차시안_v05/reference/리본묶임_사용자참고.png",
+      "destination": "대키미 아기버전/캐릭터 디자인/대키미_무표정_팔내림_꼬리리본_2차시안_v03/reference/리본묶임_사용자참고.png",
+      "sha256_before": "08d28ced696a9241c9a8b07f4340cdd0e31a12b5bf8d1d61d2987da76df61459"
+    },
+    {
+      "source": "대키미 아기버전/05_무표정_팔내림_꼬리리본_2차시안_v05/reference/02_STANDING_FRONT.png",
+      "destination": "대키미 아기버전/캐릭터 디자인/대키미_무표정_팔내림_꼬리리본_2차시안_v03/reference/02_STANDING_FRONT.png",
+      "sha256_before": "9a9304514cb5a760fae257a0c8dd8240f5b17f33ec3224864f1fdaf93bc8f46f"
+    },
+    {
+      "source": "대키미 아기버전/05_무표정_팔내림_꼬리리본_2차시안_v05/reference/01_SITTING_FRONT.png",
+      "destination": "대키미 아기버전/캐릭터 디자인/대키미_무표정_팔내림_꼬리리본_2차시안_v03/reference/01_SITTING_FRONT.png",
+      "sha256_before": "c2639ab40a7c34393b1eace0e3ee5bd0a4fa0546a7de3883b92bb2625e4f567d"
+    },
+    {
+      "source": "대키미 아기버전/05_무표정_팔내림_꼬리리본_2차시안_v05/reference/제작지시_생성대기.json",
+      "destination": "대키미 아기버전/캐릭터 디자인/대키미_무표정_팔내림_꼬리리본_2차시안_v03/reference/제작지시_생성대기.json",
+      "sha256_before": "eaa73d7a4a82b4ef7d9cd2bb5f7e93ed32575e53d3306f9143464ed16e715e4e"
+    },
+    {
+      "source": "대키미 아기버전/05_무표정_팔내림_꼬리리본_2차시안_v05/reference/generation_prompts.json",
+      "destination": "대키미 아기버전/캐릭터 디자인/대키미_무표정_팔내림_꼬리리본_2차시안_v03/reference/generation_prompts.json",
+      "sha256_before": "0c1b87a19579903267c9d7d72753d4430bbcdae0aff7659070f6735ee9378b15"
+    },
+    {
+      "source": "대키미 아기버전/01_알_디자인시트_레퍼런스_v01/generation_prompt.txt",
+      "destination": "대키미 아기버전/알 디자인/대키미_디자인시트_레퍼런스_v00/generation_prompt.txt",
+      "sha256_before": "8eebecf54308be396343d51bfc130dd00abd10b0755b43194135b6208771ec64"
+    },
+    {
+      "source": "대키미 아기버전/01_알_디자인시트_레퍼런스_v01/대키미 알 디자인 스펙시트_v01.md",
+      "destination": "대키미 아기버전/알 디자인/대키미_디자인시트_레퍼런스_v00/대키미 알 디자인 스펙시트_v01.md",
+      "sha256_before": "6ceb5922025797f27d47814df483dd80cd3545a5afd950f1092d743995663cc1"
+    },
+    {
+      "source": "대키미 아기버전/01_알_디자인시트_레퍼런스_v01/reference_observations.json",
+      "destination": "대키미 아기버전/알 디자인/대키미_디자인시트_레퍼런스_v00/reference_observations.json",
+      "sha256_before": "cba70220298d5ad4b2043cda5ccde246066a95cbd1519423ec2d60feca249534"
+    },
+    {
+      "source": "대키미 아기버전/01_알_디자인시트_레퍼런스_v01/대키미_알_6방향_레퍼런스_v01.png",
+      "destination": "대키미 아기버전/알 디자인/대키미_디자인시트_레퍼런스_v00/대키미_알_6방향_레퍼런스_v01.png",
+      "sha256_before": "348e4c1abe839681001280d8bc5a7e2b3eb28e48d26cc7b15de36f90e61d36ae"
+    },
+    {
+      "source": "대키미 아기버전/01_알_디자인시트_레퍼런스_v01/README_제작단계.md",
+      "destination": "대키미 아기버전/알 디자인/대키미_디자인시트_레퍼런스_v00/README_제작단계.md",
+      "sha256_before": "c6b510af0f3427e5138cb93d40d44f027de639ae2f38d59fff312feed6de48f6"
+    },
+    {
+      "source": "대키미 아기버전/01_알_디자인시트_레퍼런스_v01/six_views_generation_prompt.txt",
+      "destination": "대키미 아기버전/알 디자인/대키미_디자인시트_레퍼런스_v00/six_views_generation_prompt.txt",
+      "sha256_before": "5f1b30566b1b6c4493e9f48c35ff0064d420f15817fb99929a4281e5a9184b2e"
+    },
+    {
+      "source": "대키미 아기버전/01_알_디자인시트_레퍼런스_v01/sources/shell_reference.png",
+      "destination": "대키미 아기버전/알 디자인/대키미_디자인시트_레퍼런스_v00/sources/shell_reference.png",
+      "sha256_before": "2fe2627a25f84cbc6d0bc38bdd35613009cd462d8263b417c25d8dd88bfa40ea"
+    },
+    {
+      "source": "대키미 아기버전/01_알_디자인시트_레퍼런스_v01/sources/대키미_알_스펙_초안_보관.md",
+      "destination": "대키미 아기버전/알 디자인/대키미_디자인시트_레퍼런스_v00/sources/대키미_알_스펙_초안_보관.md",
+      "sha256_before": "dbfe3ad52b93b98612056e67d174f1ff647eb1d56b43292d04829cb2586ac1e3"
+    },
+    {
+      "source": "대키미 아기버전/01_알_디자인시트_레퍼런스_v01/reference/egg_front_validation_v01.png",
+      "destination": "대키미 아기버전/알 디자인/대키미_디자인시트_레퍼런스_v00/reference/egg_front_validation_v01.png",
+      "sha256_before": "0df6434b33d7cca29dddf53683f9c8a847482e9aee82df682ceb79c3b2ed8dc2"
+    },
+    {
+      "source": "대키미 아기버전/02_부화영상_초기결과_v02/대키미 부화 영상.mp4",
+      "destination": "대키미 아기버전/부화 영상/대키미_초기결과_v00/대키미 부화 영상.mp4",
+      "sha256_before": "04505a76f1ec0a012f06faebabae07675ceafed72bc3e345affd78306f08df8d"
+    },
+    {
+      "source": "대키미 아기버전/02_부화영상_초기결과_v02/README_제작단계.md",
+      "destination": "대키미 아기버전/부화 영상/대키미_초기결과_v00/README_제작단계.md",
+      "sha256_before": "2a33571412a8d0c7564cbe8c624ae19a6dd045f6a2596703ffbd3a515ab071f1"
+    },
+    {
+      "source": "대키미 아기버전/06_부화영상_1080p_v06/.DS_Store",
+      "destination": "대키미 아기버전/부화 영상/대키미_1080p_결과_v01/.DS_Store",
+      "sha256_before": "b72537c22932acfdedf57f5bfcad219eb3bb316c1c21e40ac8a8294338cda487"
+    },
+    {
+      "source": "대키미 아기버전/06_부화영상_1080p_v06/대키미 부화 최종_1080.mp4",
+      "destination": "대키미 아기버전/부화 영상/대키미_1080p_결과_v01/대키미 부화 최종_1080.mp4",
+      "sha256_before": "8258a485c30d3b6c3053f603855459fc067abdfbba4836200fd190a37b86f135"
+    },
+    {
+      "source": "대키미 아기버전/06_부화영상_1080p_v06/README_제작단계.md",
+      "destination": "대키미 아기버전/부화 영상/대키미_1080p_결과_v01/README_제작단계.md",
+      "sha256_before": "05869dd77293533b29d2a5b500beea87b1f9bc745e1dad7b724d63dd45430603"
+    },
+    {
+      "source": "외지몽 아기버전/00_초기_정면시안_v00/README_제작단계.md",
+      "destination": "외지몽 아기버전/캐릭터 디자인/외지몽_초기_정면시안_v00/README_제작단계.md",
+      "sha256_before": "0e797802a65858be9492bb25ada62e06c2f7e873283bf2f8cf0ff5cfe70dc220"
+    },
+    {
+      "source": "외지몽 아기버전/00_초기_정면시안_v00/prompts/generation_prompts.json",
+      "destination": "외지몽 아기버전/캐릭터 디자인/외지몽_초기_정면시안_v00/prompts/generation_prompts.json",
+      "sha256_before": "d60c87ea1c0d048d70bfc1b813bf2ab734d6d2a3868f749b4553036950cbd533"
+    },
+    {
+      "source": "외지몽 아기버전/00_초기_정면시안_v00/sources/외지몽_아기_정면_초기시안_안테나털반영전.png",
+      "destination": "외지몽 아기버전/캐릭터 디자인/외지몽_초기_정면시안_v00/sources/외지몽_아기_정면_초기시안_안테나털반영전.png",
+      "sha256_before": "fda54aa0bc0944ea68239a58450d487d1d942680a8cb77b806397856701aa356"
+    },
+    {
+      "source": "외지몽 아기버전/02_볼살_블러셔_시안_v02/README_제작단계.md",
+      "destination": "외지몽 아기버전/캐릭터 디자인/외지몽_볼살_블러셔_시안_v01/README_제작단계.md",
+      "sha256_before": "29984ab7aff410d0bb82f8a2e21c63badfd53669a6f92a173f154ea69c51e3b5"
+    },
+    {
+      "source": "외지몽 아기버전/02_볼살_블러셔_시안_v02/prompts/외지몽_아기_볼살_블러셔_v02_생성프롬프트.txt",
+      "destination": "외지몽 아기버전/캐릭터 디자인/외지몽_볼살_블러셔_시안_v01/prompts/외지몽_아기_볼살_블러셔_v02_생성프롬프트.txt",
+      "sha256_before": "ff0ea537da9f50f27abd787dd25158a124101328d91aaa2744cc3be8e4f2266e"
+    },
+    {
+      "source": "외지몽 아기버전/02_볼살_블러셔_시안_v02/reference/외지몽_아기_정면_볼살_블러셔_시안_v02.png",
+      "destination": "외지몽 아기버전/캐릭터 디자인/외지몽_볼살_블러셔_시안_v01/reference/외지몽_아기_정면_볼살_블러셔_시안_v02.png",
+      "sha256_before": "d157f1b682d3388b082ce5bd8ce106d94febfe1ea36c6232f7a13ee436c43c41"
+    },
+    {
+      "source": "외지몽 아기버전/03_앞볼살_블러셔_시안_v03/README_제작단계.md",
+      "destination": "외지몽 아기버전/캐릭터 디자인/외지몽_앞볼살_블러셔_시안_v02/README_제작단계.md",
+      "sha256_before": "1f8ed19cbce4936fd4ff95fd91a3d11c0211bc175c4db0da744dfe9736621e04"
+    },
+    {
+      "source": "외지몽 아기버전/03_앞볼살_블러셔_시안_v03/prompts/외지몽_아기_앞볼살_v03_생성프롬프트.txt",
+      "destination": "외지몽 아기버전/캐릭터 디자인/외지몽_앞볼살_블러셔_시안_v02/prompts/외지몽_아기_앞볼살_v03_생성프롬프트.txt",
+      "sha256_before": "0687d8544299ef9a1029143d561879b1d3c859bb8642a3e0d66842f0e981bd34"
+    },
+    {
+      "source": "외지몽 아기버전/03_앞볼살_블러셔_시안_v03/reference/외지몽_아기_정면_앞볼살_블러셔_시안_v03.png",
+      "destination": "외지몽 아기버전/캐릭터 디자인/외지몽_앞볼살_블러셔_시안_v02/reference/외지몽_아기_정면_앞볼살_블러셔_시안_v03.png",
+      "sha256_before": "fdecbc2b7e1802151018893cd732f801367b8e8dda2a47a52ece81dd077daa9f"
+    },
+    {
+      "source": "외지몽 아기버전/04_블러셔_앞머리2가닥_시안_v04/README_제작단계.md",
+      "destination": "외지몽 아기버전/캐릭터 디자인/외지몽_블러셔_앞머리2가닥_시안_v03/README_제작단계.md",
+      "sha256_before": "65a6a986969f0bfee0d4a313ffe522606473c58704d504cb374ead2b1b21c4c8"
+    },
+    {
+      "source": "외지몽 아기버전/04_블러셔_앞머리2가닥_시안_v04/prompts/외지몽_아기_블러셔_앞머리_v04_생성프롬프트.txt",
+      "destination": "외지몽 아기버전/캐릭터 디자인/외지몽_블러셔_앞머리2가닥_시안_v03/prompts/외지몽_아기_블러셔_앞머리_v04_생성프롬프트.txt",
+      "sha256_before": "bb0996e731427527dc4196e57be6f6e62c25df87e5b60b6e0e7ccac51e4775da"
+    },
+    {
+      "source": "외지몽 아기버전/04_블러셔_앞머리2가닥_시안_v04/reference/외지몽_아기_정면_블러셔_앞머리2가닥_시안_v04.png",
+      "destination": "외지몽 아기버전/캐릭터 디자인/외지몽_블러셔_앞머리2가닥_시안_v03/reference/외지몽_아기_정면_블러셔_앞머리2가닥_시안_v04.png",
+      "sha256_before": "748e98730b4f536b6d520f9c3df4eed30e11e52797c8e7a6c5f2423f61b1f179"
+    },
+    {
+      "source": "외지몽 아기버전/05_둥근앞머리_원형블러셔_시안_v05/README_제작단계.md",
+      "destination": "외지몽 아기버전/캐릭터 디자인/외지몽_둥근앞머리_원형블러셔_시안_v04/README_제작단계.md",
+      "sha256_before": "14262b08f9437865c836d4968ab4bef5ffd85eec97566bee9a1e2ebd5f5a7cbd"
+    },
+    {
+      "source": "외지몽 아기버전/05_둥근앞머리_원형블러셔_시안_v05/prompts/외지몽_아기_둥근앞머리_원형블러셔_v05_생성프롬프트.txt",
+      "destination": "외지몽 아기버전/캐릭터 디자인/외지몽_둥근앞머리_원형블러셔_시안_v04/prompts/외지몽_아기_둥근앞머리_원형블러셔_v05_생성프롬프트.txt",
+      "sha256_before": "ece4a0582b629ca0d1b104971dd6604eb4eefbdcc1d7836bd773dc6b7d88cd7d"
+    },
+    {
+      "source": "외지몽 아기버전/05_둥근앞머리_원형블러셔_시안_v05/reference/외지몽_아기_정면_둥근앞머리_원형블러셔_시안_v05.png",
+      "destination": "외지몽 아기버전/캐릭터 디자인/외지몽_둥근앞머리_원형블러셔_시안_v04/reference/외지몽_아기_정면_둥근앞머리_원형블러셔_시안_v05.png",
+      "sha256_before": "da43b379bf7979cf208bf25f7a03cdc279965f3aed89d1a8144d871cf3447c3f"
+    },
+    {
+      "source": "외지몽 아기버전/06_작은둥근앞머리_시안_v06/README_제작단계.md",
+      "destination": "외지몽 아기버전/캐릭터 디자인/외지몽_작은둥근앞머리_시안_v05/README_제작단계.md",
+      "sha256_before": "b5311e29ecdeec89fcb200ad9ffde4e6ba208b4f2f4f3e93a48884ad50341bc5"
+    },
+    {
+      "source": "외지몽 아기버전/06_작은둥근앞머리_시안_v06/prompts/외지몽_아기_작은둥근앞머리_v06_생성프롬프트.txt",
+      "destination": "외지몽 아기버전/캐릭터 디자인/외지몽_작은둥근앞머리_시안_v05/prompts/외지몽_아기_작은둥근앞머리_v06_생성프롬프트.txt",
+      "sha256_before": "fc690fd7ff2c65d7629881611642f52bfe5877d6bc8c9102c4330f1584585322"
+    },
+    {
+      "source": "외지몽 아기버전/06_작은둥근앞머리_시안_v06/reference/외지몽_아기_정면_작은둥근앞머리_시안_v06.png",
+      "destination": "외지몽 아기버전/캐릭터 디자인/외지몽_작은둥근앞머리_시안_v05/reference/외지몽_아기_정면_작은둥근앞머리_시안_v06.png",
+      "sha256_before": "64fbb128ba97253ec6b2ef73c1f6a9b1f4592ac2cf240a9d34c618ef479b6a40"
+    },
+    {
+      "source": "외지몽 아기버전/07_앞머리_가로폭축소_시안_v07/README_제작단계.md",
+      "destination": "외지몽 아기버전/캐릭터 디자인/외지몽_앞머리_가로폭축소_시안_v06/README_제작단계.md",
+      "sha256_before": "95013eb45e480854fb9fea083a32f95b070f5c5664104909b57d759d126ed2f2"
+    },
+    {
+      "source": "외지몽 아기버전/07_앞머리_가로폭축소_시안_v07/prompts/외지몽_아기_앞머리가로폭_v07_생성프롬프트.txt",
+      "destination": "외지몽 아기버전/캐릭터 디자인/외지몽_앞머리_가로폭축소_시안_v06/prompts/외지몽_아기_앞머리가로폭_v07_생성프롬프트.txt",
+      "sha256_before": "7fa8f485f144dcde47a9cc2868f2bac1957224cfd9d4831b916db4fd39f6fdc0"
+    },
+    {
+      "source": "외지몽 아기버전/07_앞머리_가로폭축소_시안_v07/reference/외지몽_아기_정면_앞머리가로폭축소_시안_v07.png",
+      "destination": "외지몽 아기버전/캐릭터 디자인/외지몽_앞머리_가로폭축소_시안_v06/reference/외지몽_아기_정면_앞머리가로폭축소_시안_v07.png",
+      "sha256_before": "859743dc3c951293f25a2bb7878c8dc8e362b62ee2da7ef94e41bbaf44d5ba37"
+    },
+    {
+      "source": "외지몽 아기버전/08_6방향_초기시안_v08/README_제작단계.md",
+      "destination": "외지몽 아기버전/캐릭터 디자인/외지몽_6방향_초기시안_v07/README_제작단계.md",
+      "sha256_before": "c755b617dbb2694ae80f3e48a5da5303eb41a036c0bf269a07f07b462371c3cb"
+    },
+    {
+      "source": "외지몽 아기버전/08_6방향_초기시안_v08/prompts/외지몽_아기_6방향_생성프롬프트_v01.txt",
+      "destination": "외지몽 아기버전/캐릭터 디자인/외지몽_6방향_초기시안_v07/prompts/외지몽_아기_6방향_생성프롬프트_v01.txt",
+      "sha256_before": "1cacecea14eadbbf445a91bd70475a4ff7e99612e3f04f8b6b41548dc91a2443"
+    },
+    {
+      "source": "외지몽 아기버전/08_6방향_초기시안_v08/reference/외지몽_아기_v07기준_6방향_레퍼런스_v01.png",
+      "destination": "외지몽 아기버전/캐릭터 디자인/외지몽_6방향_초기시안_v07/reference/외지몽_아기_v07기준_6방향_레퍼런스_v01.png",
+      "sha256_before": "53ddeace21e889b2636f90749a84fae5b1728e0891ee60b50c48b194e2225428"
+    },
+    {
+      "source": "외지몽 아기버전/09_서있는정면_초기시안_v09/README_제작단계.md",
+      "destination": "외지몽 아기버전/캐릭터 디자인/외지몽_서있는정면_초기시안_v08/README_제작단계.md",
+      "sha256_before": "32fb404a4b24e1512533e3efb3fb0f9aa86bd9809833549799ffb9967dbca126"
+    },
+    {
+      "source": "외지몽 아기버전/09_서있는정면_초기시안_v09/prompts/외지몽_아기_서있는정면_생성프롬프트_v01.txt",
+      "destination": "외지몽 아기버전/캐릭터 디자인/외지몽_서있는정면_초기시안_v08/prompts/외지몽_아기_서있는정면_생성프롬프트_v01.txt",
+      "sha256_before": "361219d66c30db5a128a6216dd50b6efabe649eba6e8d3aa5d710aef53c266ad"
+    },
+    {
+      "source": "외지몽 아기버전/09_서있는정면_초기시안_v09/reference/외지몽_아기_서있는정면_측정기준_시안_v01.png",
+      "destination": "외지몽 아기버전/캐릭터 디자인/외지몽_서있는정면_초기시안_v08/reference/외지몽_아기_서있는정면_측정기준_시안_v01.png",
+      "sha256_before": "1b42b6ca99e525d8fa056cd9170db249ac0d256ec20f451a42d1d2923429044e"
+    },
+    {
+      "source": "외지몽 아기버전/10_서있는정면_손발단순화_v10/README_제작단계.md",
+      "destination": "외지몽 아기버전/캐릭터 디자인/외지몽_서있는정면_손발단순화_v09/README_제작단계.md",
+      "sha256_before": "54d5b55d229e8041d62bb0bf103c35057fdbf1bbc9cda5efe794cd0f908f9bbc"
+    },
+    {
+      "source": "외지몽 아기버전/10_서있는정면_손발단순화_v10/prompts/외지몽_아기_서있는정면_손발단순화_v02_생성프롬프트.txt",
+      "destination": "외지몽 아기버전/캐릭터 디자인/외지몽_서있는정면_손발단순화_v09/prompts/외지몽_아기_서있는정면_손발단순화_v02_생성프롬프트.txt",
+      "sha256_before": "641fdece49923859c4bfd9e8be237182d41c1f58c13463c54a3019ff08f8068a"
+    },
+    {
+      "source": "외지몽 아기버전/10_서있는정면_손발단순화_v10/reference/외지몽_아기_서있는정면_손발단순화_시안_v02.png",
+      "destination": "외지몽 아기버전/캐릭터 디자인/외지몽_서있는정면_손발단순화_v09/reference/외지몽_아기_서있는정면_손발단순화_시안_v02.png",
+      "sha256_before": "c2d002e8140f4fa255a81583e15dfc1d60c702eae2c8e9c045c427a2c0604026"
+    },
+    {
+      "source": "외지몽 아기버전/11_서있는정면_연한블러셔_v11/README_제작단계.md",
+      "destination": "외지몽 아기버전/캐릭터 디자인/외지몽_서있는정면_연한블러셔_v10/README_제작단계.md",
+      "sha256_before": "c4600a9f37a270a84587f3676a54e32581ed8dc2869d10163f807130f42ef9ed"
+    },
+    {
+      "source": "외지몽 아기버전/11_서있는정면_연한블러셔_v11/prompts/외지몽_아기_둥근손발_연한블러셔_v03_생성프롬프트.txt",
+      "destination": "외지몽 아기버전/캐릭터 디자인/외지몽_서있는정면_연한블러셔_v10/prompts/외지몽_아기_둥근손발_연한블러셔_v03_생성프롬프트.txt",
+      "sha256_before": "e25ed79091728d056f0796bb1a3157f6ca4085c70305c622dda1b5352638271c"
+    },
+    {
+      "source": "외지몽 아기버전/11_서있는정면_연한블러셔_v11/reference/외지몽_아기_서있는정면_둥근손발_연한블러셔_시안_v03.png",
+      "destination": "외지몽 아기버전/캐릭터 디자인/외지몽_서있는정면_연한블러셔_v10/reference/외지몽_아기_서있는정면_둥근손발_연한블러셔_시안_v03.png",
+      "sha256_before": "999d124b5c1d4c7b8539795d86e4e19491f13f17505e505a4ddff73e30149f05"
+    },
+    {
+      "source": "외지몽 아기버전/12_기존승인_서있는정면_측정시트_v12/마스코트 디자인 측정시트_baby.ver_v01.md",
+      "destination": "외지몽 아기버전/캐릭터 디자인/외지몽_기존승인_서있는정면_측정시트_v11/마스코트 디자인 측정시트_baby.ver_v01.md",
+      "sha256_before": "778044b749fe5e9c635392994d4be8e3f288836a687dde473602de567071baf8"
+    },
+    {
+      "source": "외지몽 아기버전/12_기존승인_서있는정면_측정시트_v12/최종디자인_승인기록_v01.txt",
+      "destination": "외지몽 아기버전/캐릭터 디자인/외지몽_기존승인_서있는정면_측정시트_v11/최종디자인_승인기록_v01.txt",
+      "sha256_before": "aac7492b08553278933c0682d1aa3fa075dd1d88828cd91f6bd4e7cb76b43d66"
+    },
+    {
+      "source": "외지몽 아기버전/12_기존승인_서있는정면_측정시트_v12/패키지_사용안내_v01.txt",
+      "destination": "외지몽 아기버전/캐릭터 디자인/외지몽_기존승인_서있는정면_측정시트_v11/패키지_사용안내_v01.txt",
+      "sha256_before": "1455c4783b3d94d246886f31fdcd8891e728e0d6553359d66b9ca3c63e29a089"
+    },
+    {
+      "source": "외지몽 아기버전/12_기존승인_서있는정면_측정시트_v12/README_제작단계.md",
+      "destination": "외지몽 아기버전/캐릭터 디자인/외지몽_기존승인_서있는정면_측정시트_v11/README_제작단계.md",
+      "sha256_before": "dfd34e6dc427e4cc35d072e5b7acda8074827776d607fe91b48a2f59982e55b1"
+    },
+    {
+      "source": "외지몽 아기버전/12_기존승인_서있는정면_측정시트_v12/외지몽_아기_디자인_패키지_baby.ver_v01.zip",
+      "destination": "외지몽 아기버전/캐릭터 디자인/외지몽_기존승인_서있는정면_측정시트_v11/외지몽_아기_디자인_패키지_baby.ver_v01.zip",
+      "sha256_before": "52a5935c3531d2aab7639d58327a388ed94a215ba70b0dbbe30876d5b9e77f19"
+    },
+    {
+      "source": "외지몽 아기버전/12_기존승인_서있는정면_측정시트_v12/prompts/외지몽_아기_서있는정면_블러셔중간농도_v04_생성프롬프트.txt",
+      "destination": "외지몽 아기버전/캐릭터 디자인/외지몽_기존승인_서있는정면_측정시트_v11/prompts/외지몽_아기_서있는정면_블러셔중간농도_v04_생성프롬프트.txt",
+      "sha256_before": "717f8c70b18e14ee75599cdfb4d36cde86504bfa9be36ebe333695fc6cc5d83b"
+    },
+    {
+      "source": "외지몽 아기버전/12_기존승인_서있는정면_측정시트_v12/data/외지몽_아기_이미지관측값_v01.json",
+      "destination": "외지몽 아기버전/캐릭터 디자인/외지몽_기존승인_서있는정면_측정시트_v11/data/외지몽_아기_이미지관측값_v01.json",
+      "sha256_before": "aaed9f48a15f85c7937d2861c5fc7b5c8f7ab551157619623f6b4d7ae2a403d2"
+    },
+    {
+      "source": "외지몽 아기버전/12_기존승인_서있는정면_측정시트_v12/data/reference_manifest_v01.json",
+      "destination": "외지몽 아기버전/캐릭터 디자인/외지몽_기존승인_서있는정면_측정시트_v11/data/reference_manifest_v01.json",
+      "sha256_before": "4b29b33ede1f3d65b55fa5320d1d6c7cae402c3738bd6baf41069073344c1a58"
+    },
+    {
+      "source": "외지몽 아기버전/12_기존승인_서있는정면_측정시트_v12/data/generation_prompts_baby_v01.json",
+      "destination": "외지몽 아기버전/캐릭터 디자인/외지몽_기존승인_서있는정면_측정시트_v11/data/generation_prompts_baby_v01.json",
+      "sha256_before": "565aa8b472f8510258d8f0b2cc1d342aa74ee00d05a2b0e89a7d3a7a3ed0254b"
+    },
+    {
+      "source": "외지몽 아기버전/12_기존승인_서있는정면_측정시트_v12/reference/외지몽_아기_서있는정면_블러셔중간농도_시안_v04.png",
+      "destination": "외지몽 아기버전/캐릭터 디자인/외지몽_기존승인_서있는정면_측정시트_v11/reference/외지몽_아기_서있는정면_블러셔중간농도_시안_v04.png",
+      "sha256_before": "9c9c581b1cc96b1021bd79365d15dc9dce9be86c4b9680b0bd6584b951e2b0bf"
+    },
+    {
+      "source": "외지몽 아기버전/12_기존승인_서있는정면_측정시트_v12/reference/01_외지몽_아기_최종승인_서있는정면_v01.png",
+      "destination": "외지몽 아기버전/캐릭터 디자인/외지몽_기존승인_서있는정면_측정시트_v11/reference/01_외지몽_아기_최종승인_서있는정면_v01.png",
+      "sha256_before": "9c9c581b1cc96b1021bd79365d15dc9dce9be86c4b9680b0bd6584b951e2b0bf"
+    },
+    {
+      "source": "외지몽 아기버전/12_기존승인_서있는정면_측정시트_v12/reference/02_외지몽_아기_서있는6방향_레퍼런스_v01.png",
+      "destination": "외지몽 아기버전/캐릭터 디자인/외지몽_기존승인_서있는정면_측정시트_v11/reference/02_외지몽_아기_서있는6방향_레퍼런스_v01.png",
+      "sha256_before": "876d8c3f59ba4ced59ca2678e91a2cf5ec5c57918c6710507dce5af08481fd8f"
+    },
+    {
+      "source": "외지몽 아기버전/12_기존승인_서있는정면_측정시트_v12/reference/03_외지몽_아기_앉은정면_기준_v01.png",
+      "destination": "외지몽 아기버전/캐릭터 디자인/외지몽_기존승인_서있는정면_측정시트_v11/reference/03_외지몽_아기_앉은정면_기준_v01.png",
+      "sha256_before": "8bab3aaa276e244d6e0d8c4ab2ff83f5a52b0388e25685583f41152a62d4718d"
+    },
+    {
+      "source": "외지몽 아기버전/12_기존승인_서있는정면_측정시트_v12/reference/04_젤리패드_개수배치참고_재질수정대기_v01.png",
+      "destination": "외지몽 아기버전/캐릭터 디자인/외지몽_기존승인_서있는정면_측정시트_v11/reference/04_젤리패드_개수배치참고_재질수정대기_v01.png",
+      "sha256_before": "e81a21efa6efc8cb4ba55e92ad2ba0e191be0088b0ad25c8eca4714610b15bfc"
+    },
+    {
+      "source": "외지몽 아기버전/12_기존승인_서있는정면_측정시트_v12/reference/외지몽_아기_최종승인_서있는정면_v01.png",
+      "destination": "외지몽 아기버전/캐릭터 디자인/외지몽_기존승인_서있는정면_측정시트_v11/reference/외지몽_아기_최종승인_서있는정면_v01.png",
+      "sha256_before": "9c9c581b1cc96b1021bd79365d15dc9dce9be86c4b9680b0bd6584b951e2b0bf"
+    },
+    {
+      "source": "외지몽 아기버전/14_짧은털_색상_연한블러셔_승인샘플_v14/README_제작단계.md",
+      "destination": "외지몽 아기버전/캐릭터 디자인/외지몽_짧은털_색상_연한블러셔_승인샘플_v12/README_제작단계.md",
+      "sha256_before": "253c3cf07d66d820a20161bd322ca4c930f1a203b8154e195aa5da644127d41f"
+    },
+    {
+      "source": "외지몽 아기버전/14_짧은털_색상_연한블러셔_승인샘플_v14/generation_prompts.json",
+      "destination": "외지몽 아기버전/캐릭터 디자인/외지몽_짧은털_색상_연한블러셔_승인샘플_v12/generation_prompts.json",
+      "sha256_before": "47723c49e3666ba45f3a9c916f8fad90ed4dd59acf8009570649c89f84473c2e"
+    },
+    {
+      "source": "외지몽 아기버전/14_짧은털_색상_연한블러셔_승인샘플_v14/reference/01_SITTING_FRONT_검토.png",
+      "destination": "외지몽 아기버전/캐릭터 디자인/외지몽_짧은털_색상_연한블러셔_승인샘플_v12/reference/01_SITTING_FRONT_검토.png",
+      "sha256_before": "834a6e8b774edec1e18ba0adb4ef57109933da7c721715d61c1c114b4eac58bc"
+    },
+    {
+      "source": "외지몽 아기버전/14_짧은털_색상_연한블러셔_승인샘플_v14/reference/02_STANDING_FRONT_검토.png",
+      "destination": "외지몽 아기버전/캐릭터 디자인/외지몽_짧은털_색상_연한블러셔_승인샘플_v12/reference/02_STANDING_FRONT_검토.png",
+      "sha256_before": "f698736d640b404eff306b944c540fc525f105efc6ddf4e6d9867d9cc31f9064"
+    },
+    {
+      "source": "외지몽 아기버전/01_알_크림밀키민트_6방향_v01/외지몽_알_6방향_레퍼런스_v01.png",
+      "destination": "외지몽 아기버전/알 디자인/외지몽_크림밀키민트_6방향_v00/외지몽_알_6방향_레퍼런스_v01.png",
+      "sha256_before": "775cdf923e20659d5091a116c5eb6e339da5ca6558ecfb47036b9b7daad1b11e"
+    },
+    {
+      "source": "외지몽 아기버전/01_알_크림밀키민트_6방향_v01/README_제작단계.md",
+      "destination": "외지몽 아기버전/알 디자인/외지몽_크림밀키민트_6방향_v00/README_제작단계.md",
+      "sha256_before": "e3ebc93db699ef915e4bb4ef7fbfb8394e787de7f01ac91fbec393360fd04f0f"
+    },
+    {
+      "source": "외지몽 아기버전/01_알_크림밀키민트_6방향_v01/six_views_generation_prompt.txt",
+      "destination": "외지몽 아기버전/알 디자인/외지몽_크림밀키민트_6방향_v00/six_views_generation_prompt.txt",
+      "sha256_before": "d486b48362e2bba6ea32d4ef7509bc2f24028efd1d4c7a72d6040116bb64f229"
+    },
+    {
+      "source": "외지몽 아기버전/01_알_크림밀키민트_6방향_v01/sources/크림색_수정전_정면시안_v04.png",
+      "destination": "외지몽 아기버전/알 디자인/외지몽_크림밀키민트_6방향_v00/sources/크림색_수정전_정면시안_v04.png",
+      "sha256_before": "0f986dcb93ae491587067d960966ca28c9091a61b199e151db76fa995e981252"
+    },
+    {
+      "source": "외지몽 아기버전/13_부화영상_25초_스토리보드지시_v13/README_제작단계.md",
+      "destination": "외지몽 아기버전/부화 영상/외지몽_25초_스토리보드지시_v00/README_제작단계.md",
+      "sha256_before": "f817ed444632d894d9ad6100fd5e582c594411288aaf571a1dccfd7ae6cb1894"
+    },
+    {
+      "source": "외지몽 아기버전/13_부화영상_25초_스토리보드지시_v13/스토리보드_v01/Higgsfield_25초_영상프롬프트_EN.txt",
+      "destination": "외지몽 아기버전/부화 영상/외지몽_25초_스토리보드지시_v00/스토리보드_v01/Higgsfield_25초_영상프롬프트_EN.txt",
+      "sha256_before": "576deaee56f09944731d328ce1aa8c7838c7e349fbd8c341eec8421a82ddf2f6"
+    },
+    {
+      "source": "외지몽 아기버전/13_부화영상_25초_스토리보드지시_v13/스토리보드_v01/외지몽_25초_8컷_스토리보드_지시서.txt",
+      "destination": "외지몽 아기버전/부화 영상/외지몽_25초_스토리보드지시_v00/스토리보드_v01/외지몽_25초_8컷_스토리보드_지시서.txt",
+      "sha256_before": "de93d923ac91edb3b9d63bd6f88b65f877f1caacfc4969c930ee82731bfa4b81"
+    },
+    {
+      "source": "외지몽 아기버전/13_부화영상_25초_스토리보드지시_v13/스토리보드_v01/스토리보드_이미지생성_영문프롬프트.txt",
+      "destination": "외지몽 아기버전/부화 영상/외지몽_25초_스토리보드지시_v00/스토리보드_v01/스토리보드_이미지생성_영문프롬프트.txt",
+      "sha256_before": "bb4c8badad0a471be9ea84195f03ef171e080fad5a696ce3a7e0b0ccd714cae2"
+    },
+    {
+      "source": "외지몽 아기버전/13_부화영상_25초_스토리보드지시_v13/스토리보드_v01/Higgsfield_업로드자료/03_EGG_TURNAROUND.png",
+      "destination": "외지몽 아기버전/부화 영상/외지몽_25초_스토리보드지시_v00/스토리보드_v01/Higgsfield_업로드자료/03_EGG_TURNAROUND.png",
+      "sha256_before": "775cdf923e20659d5091a116c5eb6e339da5ca6558ecfb47036b9b7daad1b11e"
+    },
+    {
+      "source": "외지몽 아기버전/13_부화영상_25초_스토리보드지시_v13/스토리보드_v01/Higgsfield_업로드자료/01_BABY_FRONT.png",
+      "destination": "외지몽 아기버전/부화 영상/외지몽_25초_스토리보드지시_v00/스토리보드_v01/Higgsfield_업로드자료/01_BABY_FRONT.png",
+      "sha256_before": "9c9c581b1cc96b1021bd79365d15dc9dce9be86c4b9680b0bd6584b951e2b0bf"
+    },
+    {
+      "source": "외지몽 아기버전/13_부화영상_25초_스토리보드지시_v13/스토리보드_v01/Higgsfield_업로드자료/02_BABY_TURNAROUND.png",
+      "destination": "외지몽 아기버전/부화 영상/외지몽_25초_스토리보드지시_v00/스토리보드_v01/Higgsfield_업로드자료/02_BABY_TURNAROUND.png",
+      "sha256_before": "876d8c3f59ba4ced59ca2678e91a2cf5ec5c57918c6710507dce5af08481fd8f"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+Tool: built-in image_gen
+Input: 외지인_티셔츠_원페이지_샘플_v01.png
+Visual review: Korean lettering, no oval, mascot placement, front/back layout preserved. Cotton texture, seams, asymmetric folds and contact shadows visible.
+
+Edit the provided merchandise sheet to look substantially more like an actual commercial product photograph of real physical cotton tees rather than a tidy digital mockup. Preserve one-page layout with front left and back right, shirt green target #008C3A, all lettering, exact text, typography style, mascot face identity, print positions and sizes, Korean title and labels. Two naturally arranged REAL 220gsm cotton jersey T-shirts on a warm neutral matte studio tabletop, photographed from directly overhead using a full frame camera and 50mm lens. Add credible fine knitted cotton grain, slight washed-cotton matte surface, actual ribbed neckband thickness, double needle hem stitches, shoulder seams, realistic soft garment volume and subtly imperfect naturally laid-out silhouettes. Distinct asymmetric gentle folds on each tee and tiny fabric puckers at seams. Diffuse window light from upper left, rich natural midtones, contact shadows and soft occlusion under hems and sleeve edges. White screenprint ink must follow the topography of fabric folds, with subtle visible fabric grain through thin matte ink; no floating pasted lettering, no glossy vinyl, no artificial outlines. Mascot remains a small full-color printed HEAD, on wearer's left chest (viewer right), NOT a patch or embroidery, no body. Preserve all Korean text EXACTLY:
+FRONT "외지인" with NO oval or border.
+BACK:
+"지금 사투리 해석 중…"
+"웃고 있지만"
+"아직 이해한 건 아닙니다."
+"맛있는 거 먹으러 가자는 말이면"
+"일단 따라갑니다."
+Outside shirts retain restrained header "대사투 페스티벌", "외지인 티셔츠", update small version subtitle to "굿즈 디자인 샘플 · 02", labels "앞면" and "뒷면", bottom "COLOR  #008C3A    /    WHITE PRINT". Keep type sharp and print readable. No extra graphics, no people, no hangers, no props. Overall real catalog product shoot art-directed into a minimal one-page merchandise sheet.

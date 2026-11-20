@@ -1,0 +1,543 @@
+{
+  "date": "2026-11-12",
+  "design_status": "사용자 승인 앉은 정면; 파생 회전/2D/제품 목업은 검토용",
+  "reference": "reference/01_FRONT.png",
+  "size_px": [
+    1254,
+    1254
+  ],
+  "grid": {
+    "height_px": 1103,
+    "top_px": 71,
+    "floor_px": 1174,
+    "unit": "H=100; 10x10 subdivision; 1U=H/10"
+  },
+  "physical": {
+    "standing_character_setting_cm": 53,
+    "sitting_height_cm": null,
+    "plush_size_cm": 35,
+    "plush_measurement": "앉은 바닥 지지면부터 가장 높은 안테나 구슬 최고점까지, 충전 후 자연 착좌 상태의 목표35cm",
+    "lamp_size_cm": null,
+    "note": "사용자 답변: 봉제 시팅인형은 안테나 포함35cm 목표, 무드등 미정. 캐릭터 설정53cm와 제품35cm는 별개. 가봉 허용오차 미정."
+  },
+  "measurement_method": "수동 2D 투영 경계; 털 외곽±5~10px, 가려진 경계는 오차 더 큼. 실제 황금비/3D 실측 아님.",
+  "measurements": {
+    "head_core": {
+      "label": "머리 본체 (귀·안테나 제외)",
+      "bbox_xyxy_px": [
+        231,
+        273,
+        981,
+        818
+      ],
+      "width_height_px": [
+        750,
+        545
+      ],
+      "width_height_cm_at_plush_35": [
+        23.8,
+        17.29
+      ],
+      "width_height_H100": [
+        68.0,
+        49.41
+      ],
+      "center_H100_from_top": [
+        -1.18,
+        43.02
+      ]
+    },
+    "head_with_ears": {
+      "label": "귀 포함 최대 머리 폭",
+      "bbox_xyxy_px": [
+        222,
+        177,
+        1023,
+        818
+      ],
+      "width_height_px": [
+        801,
+        641
+      ],
+      "width_height_cm_at_plush_35": [
+        25.42,
+        20.34
+      ],
+      "width_height_H100": [
+        72.62,
+        58.11
+      ],
+      "center_H100_from_top": [
+        0.32,
+        38.67
+      ]
+    },
+    "torso_visible": {
+      "label": "몸통 본체 (팔·발 경계 일부 추정)",
+      "bbox_xyxy_px": [
+        423,
+        811,
+        795,
+        1133
+      ],
+      "width_height_px": [
+        372,
+        322
+      ],
+      "width_height_cm_at_plush_35": [
+        11.8,
+        10.22
+      ],
+      "width_height_H100": [
+        33.73,
+        29.19
+      ],
+      "center_H100_from_top": [
+        -0.91,
+        81.69
+      ]
+    },
+    "seated_lower_with_feet": {
+      "label": "앉은 하체·두 발 묶음",
+      "bbox_xyxy_px": [
+        342,
+        980,
+        854,
+        1174
+      ],
+      "width_height_px": [
+        512,
+        194
+      ],
+      "width_height_cm_at_plush_35": [
+        16.25,
+        6.16
+      ],
+      "width_height_H100": [
+        46.42,
+        17.59
+      ],
+      "center_H100_from_top": [
+        -1.9,
+        91.21
+      ]
+    },
+    "left_eye_viewer": {
+      "label": "화면 왼쪽 검정 눈",
+      "bbox_xyxy_px": [
+        326,
+        440,
+        555,
+        663
+      ],
+      "width_height_px": [
+        229,
+        223
+      ],
+      "width_height_cm_at_plush_35": [
+        7.27,
+        7.08
+      ],
+      "width_height_H100": [
+        20.76,
+        20.22
+      ],
+      "center_H100_from_top": [
+        -16.18,
+        43.56
+      ]
+    },
+    "right_eye_viewer": {
+      "label": "화면 오른쪽 검정 눈",
+      "bbox_xyxy_px": [
+        679,
+        438,
+        901,
+        663
+      ],
+      "width_height_px": [
+        222,
+        225
+      ],
+      "width_height_cm_at_plush_35": [
+        7.04,
+        7.14
+      ],
+      "width_height_H100": [
+        20.13,
+        20.4
+      ],
+      "center_H100_from_top": [
+        15.5,
+        43.47
+      ]
+    },
+    "nose": {
+      "label": "검정 코",
+      "bbox_xyxy_px": [
+        599,
+        596,
+        639,
+        623
+      ],
+      "width_height_px": [
+        40,
+        27
+      ],
+      "width_height_cm_at_plush_35": [
+        1.27,
+        0.86
+      ],
+      "width_height_H100": [
+        3.63,
+        2.45
+      ],
+      "center_H100_from_top": [
+        0.0,
+        48.82
+      ]
+    },
+    "closed_mouth": {
+      "label": "닫힌 입",
+      "bbox_xyxy_px": [
+        590,
+        622,
+        648,
+        664
+      ],
+      "width_height_px": [
+        58,
+        42
+      ],
+      "width_height_cm_at_plush_35": [
+        1.84,
+        1.33
+      ],
+      "width_height_H100": [
+        5.26,
+        3.81
+      ],
+      "center_H100_from_top": [
+        0.0,
+        51.86
+      ]
+    },
+    "left_hand_viewer": {
+      "label": "화면 왼쪽 손 영역",
+      "bbox_xyxy_px": [
+        371,
+        881,
+        492,
+        992
+      ],
+      "width_height_px": [
+        121,
+        111
+      ],
+      "width_height_cm_at_plush_35": [
+        3.84,
+        3.52
+      ],
+      "width_height_H100": [
+        10.97,
+        10.06
+      ],
+      "center_H100_from_top": [
+        -17.0,
+        78.47
+      ]
+    },
+    "right_hand_viewer": {
+      "label": "화면 오른쪽 손 영역",
+      "bbox_xyxy_px": [
+        710,
+        882,
+        829,
+        993
+      ],
+      "width_height_px": [
+        119,
+        111
+      ],
+      "width_height_cm_at_plush_35": [
+        3.78,
+        3.52
+      ],
+      "width_height_H100": [
+        10.79,
+        10.06
+      ],
+      "center_H100_from_top": [
+        13.64,
+        78.56
+      ]
+    },
+    "left_foot_viewer": {
+      "label": "화면 왼쪽 발",
+      "bbox_xyxy_px": [
+        342,
+        981,
+        582,
+        1174
+      ],
+      "width_height_px": [
+        240,
+        193
+      ],
+      "width_height_cm_at_plush_35": [
+        7.62,
+        6.12
+      ],
+      "width_height_H100": [
+        21.76,
+        17.5
+      ],
+      "center_H100_from_top": [
+        -14.23,
+        91.25
+      ]
+    },
+    "right_foot_viewer": {
+      "label": "화면 오른쪽 발",
+      "bbox_xyxy_px": [
+        623,
+        981,
+        854,
+        1174
+      ],
+      "width_height_px": [
+        231,
+        193
+      ],
+      "width_height_cm_at_plush_35": [
+        7.33,
+        6.12
+      ],
+      "width_height_H100": [
+        20.94,
+        17.5
+      ],
+      "center_H100_from_top": [
+        10.83,
+        91.25
+      ]
+    },
+    "upright_ball": {
+      "label": "선 안테나 구슬",
+      "bbox_xyxy_px": [
+        466,
+        71,
+        602,
+        200
+      ],
+      "width_height_px": [
+        136,
+        129
+      ],
+      "width_height_cm_at_plush_35": [
+        4.32,
+        4.09
+      ],
+      "width_height_H100": [
+        12.33,
+        11.7
+      ],
+      "center_H100_from_top": [
+        -7.71,
+        5.85
+      ]
+    },
+    "bent_ball": {
+      "label": "휜 안테나 구슬",
+      "bbox_xyxy_px": [
+        815,
+        150,
+        938,
+        268
+      ],
+      "width_height_px": [
+        123,
+        118
+      ],
+      "width_height_cm_at_plush_35": [
+        3.9,
+        3.74
+      ],
+      "width_height_H100": [
+        11.15,
+        10.7
+      ],
+      "center_H100_from_top": [
+        23.35,
+        12.51
+      ]
+    },
+    "bow_visible": {
+      "label": "정면에 보이는 리본 묶음",
+      "bbox_xyxy_px": [
+        851,
+        866,
+        1035,
+        1136
+      ],
+      "width_height_px": [
+        184,
+        270
+      ],
+      "width_height_cm_at_plush_35": [
+        5.84,
+        8.57
+      ],
+      "width_height_H100": [
+        16.68,
+        24.48
+      ],
+      "center_H100_from_top": [
+        29.37,
+        84.32
+      ]
+    },
+    "tail_visible": {
+      "label": "정면에 보이는 꼬리 부분",
+      "bbox_xyxy_px": [
+        789,
+        793,
+        982,
+        1090
+      ],
+      "width_height_px": [
+        193,
+        297
+      ],
+      "width_height_cm_at_plush_35": [
+        6.12,
+        9.42
+      ],
+      "width_height_H100": [
+        17.5,
+        26.93
+      ],
+      "center_H100_from_top": [
+        24.16,
+        78.92
+      ]
+    }
+  },
+  "palette": [
+    {
+      "id": "BODY",
+      "label": "하늘색 몸·안테나",
+      "hex": "#6DCFF5",
+      "rgb": [
+        109,
+        207,
+        245
+      ],
+      "cmyk_percent": [
+        44,
+        5,
+        2,
+        0
+      ],
+      "pantone_tcx": "미정 — 실제 원단/실 스와치 대조 후",
+      "pantone_print": "미정 — 코팅/비코팅 용지 선택 후",
+      "status": "BODY/PINK: 기존 캐릭터 규칙 계승; 나머지: 평면 응용용 제안색"
+    },
+    {
+      "id": "PINK",
+      "label": "귀 안·패드·리본",
+      "hex": "#FDB6C1",
+      "rgb": [
+        253,
+        182,
+        193
+      ],
+      "cmyk_percent": [
+        1,
+        32,
+        8,
+        0
+      ],
+      "pantone_tcx": "미정 — 실제 원단/실 스와치 대조 후",
+      "pantone_print": "미정 — 코팅/비코팅 용지 선택 후",
+      "status": "BODY/PINK: 기존 캐릭터 규칙 계승; 나머지: 평면 응용용 제안색"
+    },
+    {
+      "id": "EYE",
+      "label": "검정 눈·코·입",
+      "hex": "#171B1F",
+      "rgb": [
+        23,
+        27,
+        31
+      ],
+      "cmyk_percent": [
+        80,
+        72,
+        60,
+        67
+      ],
+      "pantone_tcx": "미정 — 실제 원단/실 스와치 대조 후",
+      "pantone_print": "미정 — 코팅/비코팅 용지 선택 후",
+      "status": "BODY/PINK: 기존 캐릭터 규칙 계승; 나머지: 평면 응용용 제안색"
+    },
+    {
+      "id": "STAR",
+      "label": "큰 별",
+      "hex": "#F7F7F5",
+      "rgb": [
+        247,
+        247,
+        245
+      ],
+      "cmyk_percent": [
+        2,
+        2,
+        2,
+        0
+      ],
+      "pantone_tcx": "미정 — 실제 원단/실 스와치 대조 후",
+      "pantone_print": "미정 — 코팅/비코팅 용지 선택 후",
+      "status": "BODY/PINK: 기존 캐릭터 규칙 계승; 나머지: 평면 응용용 제안색"
+    },
+    {
+      "id": "SPARK",
+      "label": "작은 회색 별",
+      "hex": "#A0A0A0",
+      "rgb": [
+        160,
+        160,
+        160
+      ],
+      "cmyk_percent": [
+        36,
+        30,
+        27,
+        0
+      ],
+      "pantone_tcx": "미정 — 실제 원단/실 스와치 대조 후",
+      "pantone_print": "미정 — 코팅/비코팅 용지 선택 후",
+      "status": "BODY/PINK: 기존 캐릭터 규칙 계승; 나머지: 평면 응용용 제안색"
+    },
+    {
+      "id": "DIAMOND",
+      "label": "작은 마름모",
+      "hex": "#DADDE0",
+      "rgb": [
+        218,
+        221,
+        224
+      ],
+      "cmyk_percent": [
+        12,
+        8,
+        5,
+        0
+      ],
+      "pantone_tcx": "미정 — 실제 원단/실 스와치 대조 후",
+      "pantone_print": "미정 — 코팅/비코팅 용지 선택 후",
+      "status": "BODY/PINK: 기존 캐릭터 규칙 계승; 나머지: 평면 응용용 제안색"
+    }
+  ],
+  "logo_selection": "사용자 지정: 대구 얼라들 라벨 기준 검토"
+}

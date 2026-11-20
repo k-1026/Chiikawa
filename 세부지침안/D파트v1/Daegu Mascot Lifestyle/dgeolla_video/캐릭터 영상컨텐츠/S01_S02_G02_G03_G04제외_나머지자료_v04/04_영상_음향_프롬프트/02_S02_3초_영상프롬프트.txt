@@ -1,0 +1,16 @@
+최신 입력 갱신: G05/G06을 새로 만들 때 U04_G04_사용자제공_연결기준.png의 지구/빛/비행방향을 사용한다. 기존 S02 샘플은 최신 연결 기준이 아니다.
+
+S02 · 아시아 방향과 조종석 연결 · 최종3초 / 9:16
+첨부: G05 기본 시작. 종료 입력이 실제 지원되면 G06 추가. G04는 S01 종료의 아시아 방향/빛/진행 방향 보조.
+원본 검수: R01/R02/R03. 기존 S02 패키지 v02의 지구 방향은 이 버전과 다를 수 있으므로 최신 G05/G06을 먼저 제작한 뒤 사용.
+
+EN VIDEO PROMPT
+Cut naturally from the preceding Asia-facing Earth approach into the same closed cockpit. Use G05 as the start and G06 as supported end-pose reference. Fixed interior front-left medium close-up, original cute adult green pilot on left, original controls lower-right and the SAME ASIA-facing Earth through the right window. Preserve screen direction, geographic orientation, upper-right cool Earth light, original cream seat, two green joystick stems with cream ball knobs and the low oval centre button.
+
+For the first0.3 seconds keep the forward gaze. A soft offscreen instrument reception beep occurs, then the pilot gently turns its head five to eight degrees down/right toward the existing controls between0.5 and2.2 seconds, and pauses with small calm curiosity for the remainder. Keep face/muzzle/eye shapes and fixed star motifs unchanged. Body, arms and controls remain stable. Outside Earth may continue a very slight coherent rotation, no jump or mirror of continents.
+
+No zoom, opened canopy, exterior lid/overhead arch, second glass dome, invented radar console, extra fingers, fur, blush, human mouth/teeth, talking, narration, text or speech bubbles. The question mark is a separate later2D overlay, never a required part of video generation.
+
+Camera stays inside the closed window throughout. Do not generate a second globe or Eollastar outside the wrong window. No head morphing or exaggerated mouth change.
+
+음향은 후편집: use the sound plan below; add the question-mark graphic briefly above-right away from face/antennae if desired.

@@ -1,0 +1,36 @@
+BGM / 효과음 제작 지시 · S01 8초 + S02 3초
+음성 대사·내레이션·노래·실제 발화 없음.
+의도: 호기심 어린 귀여운 우주 모험. 무섭거나 군사적·웅장한 전투 음악이 아님.
+
+BGM EN
+Create an original instrumental eleven-second cue for a cute 3D alien pilot approaching Earth. Around100 BPM, light curious adventure mood, soft warm synth pad, delicate bell/celesta notes, gentle airy strings and a very restrained rhythmic pulse. No vocals, spoken words, choir, aggressive drums, brass fanfare, known melody or copyrighted song imitation. Keep it playful, spacious and tender.
+0–2s: soft sustained pad opens with one sparse bell motif.
+2–6s: a light pulse and a few sparkling bell notes build the feeling of purposeful travel.
+6–8s: a gentle melodic lift conveys anticipation on seeing Asia, no giant climax.
+8–11s: thin the rhythm smoothly for the cockpit cut and leave room for a soft reception beep, continuing the same musical world without a new song.
+No audible hard stop at8 seconds. A short warm tail after11 seconds may be provided for editing.
+
+SFX EN
+Provide separate clean sound effects with no voices or music baked in:
+1. Soft continuous spacecraft engine hum, warm low synthetic tone with a subtle airy layer, steady enough to loop, no harsh mechanical rattles.
+2. Tiny plastic/soft mechanical joystick click, short and gentle, not a gun or alarm.
+3. Smooth restrained thruster rise/whoosh for forward acceleration, subtle, no explosive launch.
+4. Very soft sparse passing cosmic particle swishes, little stereo movement, no warp-speed tunnel.
+5. One quiet friendly two-tone instrument reception beep, clear but not startling, used only AFTER the S02 cut.
+
+초 단위 편집 위치
+0.0–8.0초: 낮은 엔진 허밍 지속. 큰 음량 변화 없이 부드럽게.
+약2.0초: 조종간 클릭1회, 조종 동작에 맞춤.
+약2.2–6.5초: 추진음이 서서히 올라갔다 안정.
+약3.5초/5.5초: 입자 스침을 아주 작게1회씩 선택.
+6.0–8.0초: BGM 기대감 조금 상승.
+8.0초: S02로 컷. 엔진음은 실내에서 더 부드럽고 조금 먹먹한 톤으로 이어짐.
+8.3–8.6초: 수신음1회. 이 소리에 외지몽이 고개를 조금 돌리기 시작.
+8.5–11.0초: 음악은 한 단계 얇게. 반응을 강조하되 음성 감탄사 없음.
+
+믹스
+효과음이 얼굴/서사보다 과하게 튀지 않도록 엔진은 음악 아래 배치.
+조종간 클릭과 수신음은 짧게 식별되게 하되 놀라게 큰 피크 금지.
+장면 전환에 같은 음악과 엔진음을 이어서 붙이고 소리 갑자기 끊기지 않게.
+선택 영상 도구에 오디오 생성/제어 기능이 없거나 정확한 타이밍이 안 맞으면 영상과 음악/SFX를 별도로 제작해 편집.
+아직 이 패키지에 실제 오디오 파일은 없음. 이 문서는 생성/편집 프롬프트.

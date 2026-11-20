@@ -1,0 +1,29 @@
+{
+  "generated_images": 0,
+  "requested_new_images": [
+    "G01",
+    "G05",
+    "G06"
+  ],
+  "excluded_from_generation": [
+    "G02",
+    "G03",
+    "G04"
+  ],
+  "user_files": [
+    {
+      "source": "/Users/seunghui/Downloads/g02.png",
+      "copy": "02_사용자제공_연결참고/U02_G02_사용자제공.png",
+      "sha256": "d39788588e6e715d36e90df61d5769e8f414e4e908fd0d92c6087ad9bcbba401",
+      "status": "사용자 제공 원본, 이번에 생성/수정하지 않음"
+    },
+    {
+      "source": "/Users/seunghui/Downloads/g04.png",
+      "copy": "02_사용자제공_연결참고/U04_G04_사용자제공_연결기준.png",
+      "sha256": "d4d786917a6e179e2619e7597a7f024819eff84065d16b7ddca6f42099b2099e",
+      "status": "사용자 제공 원본, 이번에 생성/수정하지 않음"
+    }
+  ],
+  "failure": "usage_limit_reached",
+  "video_generated": false
+}

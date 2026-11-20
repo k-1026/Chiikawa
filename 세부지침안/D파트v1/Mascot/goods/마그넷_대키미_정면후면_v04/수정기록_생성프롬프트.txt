@@ -1,0 +1,5 @@
+내장 image_gen 사용. 검토용 상품 이미지.
+수정: 둥근 앞발 유지, 작은 분홍 패드 4개 + 큰 패드 1개로 수정.
+시각 확인: 패드 수 4+1, 후면 무지 및 원형 자석 유지. 실물 제작 사양 미확정.
+
+Edit only the raised waving paw on the left blue cat in this image. Correct pink paw pad count: exactly FOUR small pink oval toe pads in a tidy arc above ONE large central pink palm pad, five pink shapes TOTAL. Current image incorrectly has FIVE small pads plus one large pad. Remove the extra leftmost small oval near x144,y541 in this 1536x1024 image and redistribute the remaining four evenly. Paw outer contour stays one smooth rounded mitten with no separate fingers, no thumb, no grooves. Keep everything else unchanged: character face, star eyes, two antennae, body, ribbon tail, flat printed magnet construction, white rear silhouette with one round black magnet, background, framing, and Korean labels. No extra elements.

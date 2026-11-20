@@ -1,0 +1,1 @@
+Built-in image_gen used. Reference: user attachment 4. Prompt: Create a 16:9 landscape pale blue square graph-paper background with restrained realistic white paper folds, no text or objects; extend the portrait reference horizontally without stretching the grid. Output: 1672 x 941 PNG; original project-bound image retained in ../assets/graph-paper-landscape.png.
