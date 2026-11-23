@@ -1,0 +1,105 @@
+{
+  "files": [
+    {
+      "file": "레퍼런스_이미지/01_정면.png",
+      "pixels": [
+        1254,
+        1254
+      ],
+      "sha256": "9a9304514cb5a760fae257a0c8dd8240f5b17f33ec3224864f1fdaf93bc8f46f",
+      "role": "primary_identity"
+    },
+    {
+      "file": "레퍼런스_이미지/02_45도_관찰자왼쪽.png",
+      "pixels": [
+        1254,
+        1254
+      ],
+      "sha256": "58b723702af9690b2fb00610aa39d920494228036dd7a232e56e791ff25f01c7",
+      "role": "rotation_support"
+    },
+    {
+      "file": "레퍼런스_이미지/03_45도_관찰자오른쪽.png",
+      "pixels": [
+        1254,
+        1254
+      ],
+      "sha256": "2ee9e2d5f4ac9ad64ed6efe938093b5641611c4c02437110024c6b6604733709",
+      "role": "rotation_support"
+    },
+    {
+      "file": "레퍼런스_이미지/04_측면_관찰자왼쪽.png",
+      "pixels": [
+        1254,
+        1254
+      ],
+      "sha256": "b6700e17102ad10c4b46def8f58903038dbed19050a4df8c7665edf85bcee11e",
+      "role": "corrected_tail_structure"
+    },
+    {
+      "file": "레퍼런스_이미지/05_측면_관찰자오른쪽.png",
+      "pixels": [
+        1254,
+        1254
+      ],
+      "sha256": "c9d8701f78f873b2253aed0fa75cd5ca4a9fe83401205206f868689d36404090",
+      "role": "rotation_support"
+    },
+    {
+      "file": "레퍼런스_이미지/06_후면.png",
+      "pixels": [
+        1254,
+        1254
+      ],
+      "sha256": "c169d1a502c511959af9cb53b9eea60563220b92dc8d31b031b24cbd5e1bf571",
+      "role": "corrected_tail_structure"
+    }
+  ],
+  "corrected_file_placement": [
+    {
+      "file": "01_정면.png",
+      "source": "/Users/seunghui/Desktop/대외활동/CJ AI x AX/daegu-local-festival-ai-agent/Mascot/마스코트 디자인 스펙시트/아가버전 대키미&외지몽 디자인 스펙시트_v01/대키미 아기버전/캐릭터 디자인/대키미_서있는자세_6방향_레퍼런스_v04/레퍼런스_이미지/01_정면.png",
+      "destination": "/Users/seunghui/Desktop/대외활동/CJ AI x AX/daegu-local-festival-ai-agent/Mascot/마스코트 디자인 스펙시트/아가버전 대키미&외지몽 디자인 스펙시트_v01/대키미 아기버전/캐릭터 디자인/대키미_무표정_팔내림_꼬리리본_2차시안_v04/레퍼런스_이미지/01_정면.png",
+      "sha256": "9a9304514cb5a760fae257a0c8dd8240f5b17f33ec3224864f1fdaf93bc8f46f",
+      "action": "copied_unchanged_to_user_named_package"
+    },
+    {
+      "file": "02_45도_관찰자왼쪽.png",
+      "source": "/Users/seunghui/Desktop/대외활동/CJ AI x AX/daegu-local-festival-ai-agent/Mascot/마스코트 디자인 스펙시트/아가버전 대키미&외지몽 디자인 스펙시트_v01/대키미 아기버전/캐릭터 디자인/대키미_서있는자세_6방향_레퍼런스_v04/레퍼런스_이미지/02_45도_관찰자왼쪽.png",
+      "destination": "/Users/seunghui/Desktop/대외활동/CJ AI x AX/daegu-local-festival-ai-agent/Mascot/마스코트 디자인 스펙시트/아가버전 대키미&외지몽 디자인 스펙시트_v01/대키미 아기버전/캐릭터 디자인/대키미_무표정_팔내림_꼬리리본_2차시안_v04/레퍼런스_이미지/02_45도_관찰자왼쪽.png",
+      "sha256": "58b723702af9690b2fb00610aa39d920494228036dd7a232e56e791ff25f01c7",
+      "action": "copied_unchanged_to_user_named_package"
+    },
+    {
+      "file": "03_45도_관찰자오른쪽.png",
+      "source": "/Users/seunghui/Desktop/대외활동/CJ AI x AX/daegu-local-festival-ai-agent/Mascot/마스코트 디자인 스펙시트/아가버전 대키미&외지몽 디자인 스펙시트_v01/대키미 아기버전/캐릭터 디자인/대키미_서있는자세_6방향_레퍼런스_v04/레퍼런스_이미지/03_45도_관찰자오른쪽.png",
+      "destination": "/Users/seunghui/Desktop/대외활동/CJ AI x AX/daegu-local-festival-ai-agent/Mascot/마스코트 디자인 스펙시트/아가버전 대키미&외지몽 디자인 스펙시트_v01/대키미 아기버전/캐릭터 디자인/대키미_무표정_팔내림_꼬리리본_2차시안_v04/레퍼런스_이미지/03_45도_관찰자오른쪽.png",
+      "sha256": "2ee9e2d5f4ac9ad64ed6efe938093b5641611c4c02437110024c6b6604733709",
+      "action": "copied_unchanged_to_user_named_package"
+    },
+    {
+      "file": "04_측면_관찰자왼쪽.png",
+      "source": "/Users/seunghui/Desktop/대외활동/CJ AI x AX/daegu-local-festival-ai-agent/Mascot/마스코트 디자인 스펙시트/아가버전 대키미&외지몽 디자인 스펙시트_v01/대키미 아기버전/캐릭터 디자인/대키미_서있는자세_6방향_레퍼런스_v04/레퍼런스_이미지/04_측면_관찰자왼쪽.png",
+      "destination": "/Users/seunghui/Desktop/대외활동/CJ AI x AX/daegu-local-festival-ai-agent/Mascot/마스코트 디자인 스펙시트/아가버전 대키미&외지몽 디자인 스펙시트_v01/대키미 아기버전/캐릭터 디자인/대키미_무표정_팔내림_꼬리리본_2차시안_v04/레퍼런스_이미지/04_측면_관찰자왼쪽.png",
+      "sha256": "b6700e17102ad10c4b46def8f58903038dbed19050a4df8c7665edf85bcee11e",
+      "action": "copied_unchanged_to_user_named_package"
+    },
+    {
+      "file": "05_측면_관찰자오른쪽.png",
+      "source": "/Users/seunghui/Desktop/대외활동/CJ AI x AX/daegu-local-festival-ai-agent/Mascot/마스코트 디자인 스펙시트/아가버전 대키미&외지몽 디자인 스펙시트_v01/대키미 아기버전/캐릭터 디자인/대키미_서있는자세_6방향_레퍼런스_v04/레퍼런스_이미지/05_측면_관찰자오른쪽.png",
+      "destination": "/Users/seunghui/Desktop/대외활동/CJ AI x AX/daegu-local-festival-ai-agent/Mascot/마스코트 디자인 스펙시트/아가버전 대키미&외지몽 디자인 스펙시트_v01/대키미 아기버전/캐릭터 디자인/대키미_무표정_팔내림_꼬리리본_2차시안_v04/레퍼런스_이미지/05_측면_관찰자오른쪽.png",
+      "sha256": "c9d8701f78f873b2253aed0fa75cd5ca4a9fe83401205206f868689d36404090",
+      "action": "copied_unchanged_to_user_named_package"
+    },
+    {
+      "file": "06_후면.png",
+      "source": "/Users/seunghui/Desktop/대외활동/CJ AI x AX/daegu-local-festival-ai-agent/Mascot/마스코트 디자인 스펙시트/아가버전 대키미&외지몽 디자인 스펙시트_v01/대키미 아기버전/캐릭터 디자인/대키미_서있는자세_6방향_레퍼런스_v04/레퍼런스_이미지/06_후면.png",
+      "destination": "/Users/seunghui/Desktop/대외활동/CJ AI x AX/daegu-local-festival-ai-agent/Mascot/마스코트 디자인 스펙시트/아가버전 대키미&외지몽 디자인 스펙시트_v01/대키미 아기버전/캐릭터 디자인/대키미_무표정_팔내림_꼬리리본_2차시안_v04/레퍼런스_이미지/06_후면.png",
+      "sha256": "c169d1a502c511959af9cb53b9eea60563220b92dc8d31b031b24cbd5e1bf571",
+      "action": "copied_unchanged_to_user_named_package"
+    }
+  ],
+  "all_six_images_exist": true,
+  "copied_reference_count": 6,
+  "original_reference_files_overwritten": false
+}

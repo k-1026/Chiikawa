@@ -1,0 +1,6 @@
+Generator: built-in image_gen, edit mode.
+Precise cleanup edit of supplied approved Daekimi twelve-pose mascot sheet. Keep the actual mascot designs and all 12 faces/poses unchanged. User clarified unwanted errors are wavy motion effect lines around heads and antennae, NOT the antennae themselves.
+REMOVE wavy/squiggly floating motion lines near heads/antennae: the navy curved vibration marks above and on either side of top-row second purring character, and pink squiggle near bottom-row second affectionate heart. Clean their areas to white. Keep "골골~" text, stars, pink heart, zzz, straight action rays and deliberate tail movement lines. Don't erase antennae.
+Maintain all 12 poses, proportions, blue material, pink ribbons, paw pads, expressions, simple soft 3D and title/captions precisely. Two complete ball-tipped antennae per mascot, no missing stalks or balls, normal head silhouettes. Do not add new wavy artifacts. Same landscape 4x3 layout and white background. Update subtitle only to "고양이 리액션 · SAMPLE 07". This is a minimal cleanup, NOT a redesign or a new composition. Keep character anatomy, eyes, body, feet, paws and tails visually identical to approved reference, with clean smooth edges.
+
+Output: white-background reference sheet, not individual transparent assets or print-ready die-cut files.

@@ -1,0 +1,393 @@
+{
+  "version": "v01",
+  "date": "2026-11-18",
+  "source_file": "01_상품이미지/상품기준원본_v03.png",
+  "source_pixels": [
+    1536,
+    1024
+  ],
+  "source_sha256": "a37b4c898a07963c689f4efb45e87894c2e5d445d147133f148d0f57d9867386",
+  "crop_coordinates": "left, top, right exclusive, bottom exclusive; origin top-left",
+  "print_dpi": 300,
+  "production_status": "sample specification; vendor vector cut paths and physical proof approval required",
+  "items": [
+    {
+      "id": "T01",
+      "name": "어서 오이소!",
+      "group": "사투리 라벨",
+      "file": "T01.png",
+      "crop": [
+        8,
+        32,
+        280,
+        278
+      ],
+      "pixels": [
+        272,
+        246
+      ],
+      "width_mm": 23.029,
+      "height_mm": 20.828,
+      "sha256": "2c53482da54307358f6b274bc149e38ef91a6088c85fe4f04720925d924001f8",
+      "row": 0,
+      "col": 0
+    },
+    {
+      "id": "T02",
+      "name": "밥 묵었나?",
+      "group": "사투리 라벨",
+      "file": "T02.png",
+      "crop": [
+        282,
+        32,
+        516,
+        278
+      ],
+      "pixels": [
+        234,
+        246
+      ],
+      "width_mm": 19.812,
+      "height_mm": 20.828,
+      "sha256": "b583ce0751ab928f2db05e569a747e14eceaa22e5e18ca18e766b9788b6181d2",
+      "row": 0,
+      "col": 1
+    },
+    {
+      "id": "T03",
+      "name": "단디 챙기라!",
+      "group": "사투리 라벨",
+      "file": "T03.png",
+      "crop": [
+        519,
+        32,
+        762,
+        278
+      ],
+      "pixels": [
+        243,
+        246
+      ],
+      "width_mm": 20.574,
+      "height_mm": 20.828,
+      "sha256": "14b96f336d6aaeb7c836c4404f7b5ee5450f38ac37913fdc91147b1a3010df5b",
+      "row": 0,
+      "col": 2
+    },
+    {
+      "id": "T04",
+      "name": "와 이래 좋노!",
+      "group": "사투리 라벨",
+      "file": "T04.png",
+      "crop": [
+        765,
+        32,
+        1015,
+        278
+      ],
+      "pixels": [
+        250,
+        246
+      ],
+      "width_mm": 21.167,
+      "height_mm": 20.828,
+      "sha256": "2bfb5f21975b67f7bfc77de360627298932770195f05adfafaef5f5200ed1961",
+      "row": 0,
+      "col": 3
+    },
+    {
+      "id": "T05",
+      "name": "쪼매 쉬었다 가자.",
+      "group": "사투리 라벨",
+      "file": "T05.png",
+      "crop": [
+        1017,
+        32,
+        1276,
+        278
+      ],
+      "pixels": [
+        259,
+        246
+      ],
+      "width_mm": 21.929,
+      "height_mm": 20.828,
+      "sha256": "444e3255561e9f6bf5fed2df1c88c69c5ebbecb8773b12f9b5c0abd8fdd28545",
+      "row": 0,
+      "col": 4
+    },
+    {
+      "id": "T06",
+      "name": "고맙데이!",
+      "group": "사투리 라벨",
+      "file": "T06.png",
+      "crop": [
+        1278,
+        32,
+        1534,
+        278
+      ],
+      "pixels": [
+        256,
+        246
+      ],
+      "width_mm": 21.675,
+      "height_mm": 20.828,
+      "sha256": "c0880d784864eaa7179cf91b07e99c579af1a27e7d02c20a00c30008667b64c1",
+      "row": 0,
+      "col": 5
+    },
+    {
+      "id": "D01",
+      "name": "별빛 냥인사",
+      "group": "대키미",
+      "file": "D01.png",
+      "crop": [
+        8,
+        308,
+        280,
+        613
+      ],
+      "pixels": [
+        272,
+        305
+      ],
+      "width_mm": 23.029,
+      "height_mm": 25.823,
+      "sha256": "eda695f8b5fe9dd12d2e268290d9bbee698eb44d0ab5e6cee8cafafdde3f05dd",
+      "row": 1,
+      "col": 0
+    },
+    {
+      "id": "D02",
+      "name": "궁금 갸우뚱",
+      "group": "대키미",
+      "file": "D02.png",
+      "crop": [
+        282,
+        308,
+        516,
+        613
+      ],
+      "pixels": [
+        234,
+        305
+      ],
+      "width_mm": 19.812,
+      "height_mm": 25.823,
+      "sha256": "6a7163b31c1fdd0bba2ba8e53dee8a2891468b96b6d38a9610d80b120ba92e48",
+      "row": 1,
+      "col": 1
+    },
+    {
+      "id": "D03",
+      "name": "냥당당",
+      "group": "대키미",
+      "file": "D03.png",
+      "crop": [
+        519,
+        308,
+        762,
+        613
+      ],
+      "pixels": [
+        243,
+        305
+      ],
+      "width_mm": 20.574,
+      "height_mm": 25.823,
+      "sha256": "4f04f3cb1eb3dcf24a0ef504a6aee85ab6ca680f00392d51a73618040751b818",
+      "row": 1,
+      "col": 2
+    },
+    {
+      "id": "D04",
+      "name": "활짝 웃음",
+      "group": "대키미",
+      "file": "D04.png",
+      "crop": [
+        765,
+        308,
+        1015,
+        613
+      ],
+      "pixels": [
+        250,
+        305
+      ],
+      "width_mm": 21.167,
+      "height_mm": 25.823,
+      "sha256": "06e09dcb80c5219d2c6e0831265e3e9837f9b2574d460b46159f5d7d1325a172",
+      "row": 1,
+      "col": 3
+    },
+    {
+      "id": "D05",
+      "name": "졸려 식빵",
+      "group": "대키미",
+      "file": "D05.png",
+      "crop": [
+        1017,
+        308,
+        1276,
+        613
+      ],
+      "pixels": [
+        259,
+        305
+      ],
+      "width_mm": 21.929,
+      "height_mm": 25.823,
+      "sha256": "00c170c33f45c17bc9c1a6b88053a6f7020c75f8ae16d6c458462637cad63183",
+      "row": 1,
+      "col": 4
+    },
+    {
+      "id": "D06",
+      "name": "애교 부비부비",
+      "group": "대키미",
+      "file": "D06.png",
+      "crop": [
+        1278,
+        308,
+        1534,
+        613
+      ],
+      "pixels": [
+        256,
+        305
+      ],
+      "width_mm": 21.675,
+      "height_mm": 25.823,
+      "sha256": "abb6ddc84048f0829cb7d0c0af5fc15c58ddd642e9f36ea45d2b91b7c9abf4bc",
+      "row": 1,
+      "col": 5
+    },
+    {
+      "id": "O01",
+      "name": "반가워 꼬리붕붕",
+      "group": "외지몽",
+      "file": "O01.png",
+      "crop": [
+        8,
+        640,
+        280,
+        954
+      ],
+      "pixels": [
+        272,
+        314
+      ],
+      "width_mm": 23.029,
+      "height_mm": 26.585,
+      "sha256": "e1307229ec50ea85de3c2b897afe820e56f1466aba62731762cb5c98f3303e0b",
+      "row": 2,
+      "col": 0
+    },
+    {
+      "id": "O02",
+      "name": "기본 미소",
+      "group": "외지몽",
+      "file": "O02.png",
+      "crop": [
+        282,
+        640,
+        516,
+        954
+      ],
+      "pixels": [
+        234,
+        314
+      ],
+      "width_mm": 19.812,
+      "height_mm": 26.585,
+      "sha256": "ed919d038c1be0e1c8b44f2c6c94d2188b2de15812d8beb12ecce8c926373c35",
+      "row": 2,
+      "col": 1
+    },
+    {
+      "id": "O03",
+      "name": "손 칭찬해",
+      "group": "외지몽",
+      "file": "O03.png",
+      "crop": [
+        517,
+        640,
+        756,
+        954
+      ],
+      "pixels": [
+        239,
+        314
+      ],
+      "width_mm": 20.235,
+      "height_mm": 26.585,
+      "sha256": "e833285e9d6e37a44e962413bb6dd481f82e070c6f4ff60af1cccb90a89578ed",
+      "row": 2,
+      "col": 2
+    },
+    {
+      "id": "O04",
+      "name": "신나서 발라당",
+      "group": "외지몽",
+      "file": "O04.png",
+      "crop": [
+        750,
+        640,
+        1026,
+        954
+      ],
+      "pixels": [
+        276,
+        314
+      ],
+      "width_mm": 23.368,
+      "height_mm": 26.585,
+      "sha256": "38e0a7af5158c16b57aef2344055f0373f930a88efb3b3d89d6276cf8d886f18",
+      "row": 2,
+      "col": 3
+    },
+    {
+      "id": "O05",
+      "name": "졸려 꾸벅",
+      "group": "외지몽",
+      "file": "O05.png",
+      "crop": [
+        1026,
+        640,
+        1258,
+        954
+      ],
+      "pixels": [
+        232,
+        314
+      ],
+      "width_mm": 19.643,
+      "height_mm": 26.585,
+      "sha256": "7cdc0b07c2109b9622b1559cc6c6ecd0f506b33feee2749a20ae9bccded481e5",
+      "row": 2,
+      "col": 4
+    },
+    {
+      "id": "O06",
+      "name": "감사 갸우뚱",
+      "group": "외지몽",
+      "file": "O06.png",
+      "crop": [
+        1259,
+        640,
+        1534,
+        954
+      ],
+      "pixels": [
+        275,
+        314
+      ],
+      "width_mm": 23.283,
+      "height_mm": 26.585,
+      "sha256": "abc5cae59c674ed4ebe9c297ea5f96c618158de505ad098f88dbc8eefd809c92",
+      "row": 2,
+      "col": 5
+    }
+  ]
+}
