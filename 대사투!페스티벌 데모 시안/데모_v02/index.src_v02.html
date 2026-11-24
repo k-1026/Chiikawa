@@ -43,6 +43,7 @@ a{color:inherit}
 .nav .wrap{display:flex;align-items:center;gap:18px;height:62px}
 .brand{font-family:var(--logo);font-size:22px;text-decoration:none;color:var(--sky-deep);-webkit-text-stroke:0;display:flex;align-items:center;gap:8px}
 .brand b{color:var(--navy);font-weight:400}
+.brand-logo{display:block;height:54px;width:auto}
 .nav ul{display:flex;gap:6px;list-style:none;margin:0 0 0 auto;padding:0}
 .nav ul a{display:block;padding:8px 14px;border-radius:999px;text-decoration:none;font-weight:600;font-size:15px}
 .nav ul a:hover{background:var(--sky-soft)}
@@ -61,6 +62,7 @@ a{color:inherit}
 .title-box{text-align:center;align-self:center;padding-bottom:40px;z-index:2}
 .eyebrow{display:inline-block;background:#fff;border:2px solid var(--sky);padding:5px 16px;border-radius:999px;font-weight:700;font-size:14px;color:var(--sky-deep);margin-bottom:10px}
 h1.logo{margin:0;font-family:var(--logo);font-weight:400;line-height:1.02;font-size:clamp(70px,11vw,134px);letter-spacing:-.02em;display:flex;flex-direction:column;align-items:center}
+h1.logo .logo-img{display:block;width:clamp(250px,34vw,420px);height:auto;filter:drop-shadow(0 12px 18px rgba(15,53,87,.18))}
 h1.logo .l1{color:var(--sky);-webkit-text-stroke:8px #fff;paint-order:stroke fill;text-shadow:0 6px 0 #3DA9DB,0 13px 22px rgba(15,53,87,.28)}
 h1.logo .l2{font-size:.52em;margin-top:.1em;color:#22B35B;-webkit-text-stroke:5px #fff;letter-spacing:.02em;paint-order:stroke fill;text-shadow:0 5px 0 #0C7A3A,0 10px 18px rgba(15,53,87,.22)}
 .tag{font-size:clamp(18px,2.2vw,24px);font-weight:700;margin:22px 0 6px}
@@ -87,16 +89,15 @@ h1.logo .l2{font-size:.52em;margin-top:.1em;color:#22B35B;-webkit-text-stroke:5p
 @keyframes tw{0%,100%{opacity:.35;transform:scale(.8) rotate(0)}50%{opacity:1;transform:scale(1.15) rotate(20deg)}}
 
 /* world-building props: 얼라별 + 외지몽 우주선 */
-.planet{position:absolute;left:14%;top:56px;width:clamp(86px,11vw,150px);aspect-ratio:1;z-index:1;animation:float 7s ease-in-out infinite}
+.planet{--ps:clamp(110px,11.5vw,160px);position:absolute;left:3%;top:12px;width:var(--ps);aspect-ratio:1;z-index:1;animation:float 7s ease-in-out infinite}
 .planet img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;opacity:0;will-change:opacity,transform;animation:rot 24s linear infinite}
 .planet img:nth-child(1){animation-delay:-4s}.planet img:nth-child(2){animation-delay:0s}.planet img:nth-child(3){animation-delay:-20s}
 .planet img:nth-child(4){animation-delay:-16s}.planet img:nth-child(5){animation-delay:-12s}.planet img:nth-child(6){animation-delay:-8s}
 @keyframes rot{0%{opacity:0;transform:scaleX(.9)}16.667%{opacity:1;transform:scaleX(1)}33.333%{opacity:0;transform:scaleX(.9)}100%{opacity:0;transform:scaleX(.9)}}
 @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
-.ship{position:absolute;top:34px;left:0;width:clamp(80px,9vw,120px);z-index:1;animation:fly 30s linear infinite}
+.ship{position:absolute;top:0;left:0;width:clamp(86px,9vw,124px);z-index:0;opacity:0;pointer-events:none;will-change:transform}
+#exhaust{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:0}
 .ship img{display:block;width:100%;height:auto;animation:rock 3.2s ease-in-out infinite}
-.ship::after{content:"✦  ✦  ✦";position:absolute;left:100%;top:42%;margin-left:8px;color:var(--yellow);font-size:14px;letter-spacing:6px;white-space:nowrap;opacity:.8}
-@keyframes fly{from{transform:translateX(100vw)}to{transform:translateX(-220px)}}
 @keyframes rock{0%,100%{transform:translateY(0) rotate(-4deg)}50%{transform:translateY(-14px) rotate(3deg)}}
 
 /* ---------- section ---------- */
@@ -395,8 +396,7 @@ small.src{display:block;color:var(--muted);font-size:11.5px;margin-top:6px}
   .title-box{grid-column:1/-1;order:-1;padding-bottom:12px}
   .hero-char .spr{--dw:min(230px,40vw)}
   .hero .wrap{row-gap:72px}
-  .planet{left:6%;top:24px}
-  .ship{top:26px}
+  .planet{--ps:clamp(90px,22vw,130px);left:8%;top:24px}
   .cycle{grid-template-columns:1fr}
   .cycle .spr,.cyc-img{display:none}
   .grid3{grid-template-columns:1fr}
@@ -419,9 +419,30 @@ small.src{display:block;color:var(--muted);font-size:11.5px;margin-top:6px}
   .sim-badge{display:none}
 }
 @media (prefers-reduced-motion:reduce){
-  .ship{left:70%}
+  .ship{opacity:1}
+  #exhaust{display:none}
   .planet img:first-child{opacity:1}
   *{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+}
+/* ---------- 기획안 미리보기 ---------- */
+.doc-cta{display:flex;align-items:center;gap:14px;flex-wrap:wrap;justify-content:space-between;background:linear-gradient(90deg,#E7F5FD,#EAF8EF);border:2.5px solid var(--navy);border-radius:18px;padding:12px 16px;margin-bottom:14px}
+.doc-cta div{display:flex;flex-direction:column;gap:2px;min-width:200px;flex:1}.doc-cta b{font-size:16px}.doc-cta span{font-size:13px;color:var(--muted)}
+.doc-modal{position:fixed;inset:0;z-index:100;background:rgba(15,35,55,.62);display:flex;flex-direction:column}
+.doc-modal[hidden]{display:none}
+.doc-bar{display:flex;align-items:center;gap:8px;flex-wrap:wrap;padding:10px 16px;background:#fff;border-bottom:2px solid var(--navy)}
+.doc-bar b{font-size:16px}.doc-hint{font-size:12.5px;color:var(--muted);margin-right:auto}
+.doc-btn{border:2px solid var(--navy);background:#fff;border-radius:999px;padding:8px 16px;font-weight:800;font-size:14px;cursor:pointer;font-family:inherit}
+.doc-btn.pri{background:var(--sky);box-shadow:0 3px 0 #3DA9DB}
+.doc-scroll{overflow:auto;flex:1;padding:22px 12px 40px}
+.doc-paper{background:#fff;color:#111;max-width:794px;margin:0 auto;padding:44px 52px;box-shadow:0 10px 40px rgba(0,0,0,.35);border-radius:4px}
+body.doc-open{overflow:hidden}
+@media (max-width:620px){.doc-paper{padding:22px 16px}.doc-hint{display:none}}
+@media print{
+  body.doc-open>*:not(#docModal){display:none!important}
+  body.doc-open .doc-modal{position:static;background:none;display:block}
+  .doc-bar{display:none}.doc-scroll{overflow:visible;padding:0}
+  .doc-paper{box-shadow:none;max-width:none;padding:0}
+  @page{size:A4;margin:16mm}
 }
 </style>
 </head>
@@ -429,7 +450,7 @@ small.src{display:block;color:var(--muted);font-size:11.5px;margin-top:6px}
 
 <header class="nav">
   <div class="wrap">
-    <a class="brand" href="#top" aria-label="대사투 페스티벌 처음으로"><b>대사투!</b>페스티벌</a>
+    <a class="brand" href="#top" aria-label="대사투 페스티벌 처음으로"><img class="brand-logo" src="{{IMG:assets_v02/logo.png}}" alt="대사투! FESTIVAL"></a>
     <span class="sim-badge">시연용 시뮬레이션</span>
     <ul>
       <li><a href="#demo">에이전트 데모</a></li>
@@ -452,7 +473,8 @@ small.src{display:block;color:var(--muted);font-size:11.5px;margin-top:6px}
   <span class="spark" style="right:10%;top:60px;animation-delay:-2s;font-size:22px">✦</span>
   <span class="spark" style="right:36%;top:36px;animation-delay:-1.3s;font-size:16px">✦</span>
   <div class="planet" role="img" aria-label="얼라별: 자전하는 분홍색 행성"><img src="{{IMG:assets_v02/planet_0.png}}" alt=""><img src="{{IMG:assets_v02/planet_1.png}}" alt=""><img src="{{IMG:assets_v02/planet_2.png}}" alt=""><img src="{{IMG:assets_v02/planet_3.png}}" alt=""><img src="{{IMG:assets_v02/planet_4.png}}" alt=""><img src="{{IMG:assets_v02/planet_5.png}}" alt=""></div>
-  <div class="ship" title="외지몽 우주선"><img src="{{IMG:assets_v02/ship.png}}" alt="초록색 외지몽 우주선이 하늘을 날아가는 모습"></div>
+  <canvas id="exhaust" aria-hidden="true"></canvas>
+  <div class="ship" title="외지몽 우주선"><img src="{{IMG:assets_v02/ship.png}}" alt="외지몽이 타고 있는 초록색 우주선이 하늘을 날아가는 모습"></div>
   <div class="wrap">
     <div class="hero-char k">
       <span class="bubble">이거는 말이다, 이래 하는 기라!</span>
@@ -460,7 +482,7 @@ small.src{display:block;color:var(--muted);font-size:11.5px;margin-top:6px}
     </div>
     <div class="title-box">
       <span class="eyebrow">순환형 축제 기획 AI 에이전트 · 데모</span>
-      <h1 class="logo" aria-label="대사투! 페스티벌"><span class="l1" aria-hidden="true">대사투!</span><span class="l2" aria-hidden="true">페스티벌</span></h1>
+      <h1 class="logo"><img class="logo-img" src="{{IMG:assets_v02/logo.png}}" alt="대사투! FESTIVAL"></h1>
       <p class="tag">축제 기획, <em>말로 시키믄</em> 된다</p>
       <p class="lead">대구 사투리 축제를 매년 열 수 있게 돕는 에이전트예요. 질문하는 외지몽, 설명하는 대키미와 함께 조건 입력부터 차년도 과제까지 돌아가 보세요.</p>
       <a class="btn btn-sky" href="#demo">데모 시작하기 ▸</a>
@@ -720,7 +742,9 @@ small.src{display:block;color:var(--muted);font-size:11.5px;margin-top:6px}
 
 <script>
 {{JS:app_v02.js}}
+{{JS:plan_doc_v02.js}}
 {{JS:map_v02.js}}
+{{JS:ship_v02.js}}
 </script>
 </body>
 </html>
