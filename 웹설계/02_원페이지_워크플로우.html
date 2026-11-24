@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>축제 웹앱 워크플로우</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#FFF8F3; --ink:#1F1A17; --muted:#6B5F57; --line:#EADBD0;
+    --red:#E8412C; --red-soft:#FDE6E1; --orange:#F59E2B; --orange-soft:#FEF0DC;
+    --blue:#2F6FEB; --blue-soft:#E3ECFD; --green:#1F9D6B; --green-soft:#DDF3EA;
+    --card:#FFFFFF;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--bg);color:var(--ink);font-family:"Noto Sans KR",system-ui,sans-serif;}
+  .page{width:1600px;margin:0 auto;padding:56px 64px 48px}
+  header{display:flex;justify-content:space-between;align-items:flex-end;border-bottom:3px solid var(--ink);padding-bottom:20px;margin-bottom:32px}
+  .eyebrow{font-size:15px;font-weight:700;color:var(--red);letter-spacing:.08em}
+  h1{font-size:46px;font-weight:900;line-height:1.15;margin-top:6px}
+  .ref{text-align:right;font-size:14px;color:var(--muted);line-height:1.6}
+  .ref b{color:var(--ink)}
+  .tagline{background:var(--ink);color:#fff;border-radius:14px;padding:18px 26px;font-size:20px;font-weight:500;margin-bottom:32px}
+  .tagline b{color:#FFB199}
+  h2{font-size:22px;font-weight:900;margin-bottom:14px;display:flex;align-items:center;gap:10px}
+  h2 .n{background:var(--red);color:#fff;width:30px;height:30px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-size:15px}
+  section{margin-bottom:32px}
+
+  /* lanes */
+  .lane{display:grid;grid-template-columns:150px 1fr;gap:16px;align-items:stretch;margin-bottom:12px}
+  .lane-label{border-radius:12px;padding:14px;font-weight:900;font-size:17px;display:flex;flex-direction:column;justify-content:center}
+  .lane-label small{font-weight:500;font-size:13px;opacity:.8;margin-top:4px}
+  .steps{display:flex;gap:8px;align-items:stretch}
+  .step{flex:1;background:var(--card);border:1.5px solid var(--line);border-radius:12px;padding:12px 12px 10px;position:relative}
+  .step:not(:last-child)::after{content:"▶";position:absolute;right:-9px;top:50%;transform:translateY(-50%);font-size:11px;color:var(--muted);z-index:2}
+  .step .k{font-size:12px;font-weight:700;color:var(--muted)}
+  .step .t{font-size:16px;font-weight:700;margin:2px 0 4px}
+  .step .d{font-size:13px;color:var(--muted);line-height:1.45}
+  .admin .lane-label{background:var(--orange-soft);color:#9A5B00}
+  .admin .step{border-color:#F6D3A2}
+  .visit .lane-label{background:var(--red-soft);color:#B42A18}
+  .visit .step{border-color:#F6C3B9}
+  .visit .step.gate{background:var(--red);border-color:var(--red);color:#fff}
+  .visit .step.gate .k,.visit .step.gate .d{color:#FFE1DA}
+  .sys .lane-label{background:var(--blue-soft);color:#1D4CB0}
+  .sys .step{border-color:#C3D5FA}
+  .sys .step::after{content:none!important}
+
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+  .grid3{display:grid;grid-template-columns:1.1fr 1fr 1fr;gap:28px}
+
+  /* open vs locked */
+  .gatebox{display:grid;grid-template-columns:1fr 70px 1fr;gap:0;align-items:center}
+  .zone{border-radius:14px;padding:16px}
+  .zone h3{font-size:16px;margin-bottom:10px}
+  .open{background:var(--green-soft)}
+  .open h3{color:var(--green)}
+  .locked{background:var(--red-soft)}
+  .locked h3{color:var(--red)}
+  .chips{display:flex;flex-wrap:wrap;gap:6px}
+  .chip{background:#fff;border-radius:999px;padding:5px 11px;font-size:13.5px;font-weight:500;border:1px solid var(--line)}
+  .arrow{text-align:center;font-size:12px;font-weight:700;color:var(--red);line-height:1.3}
+  .arrow .big{font-size:26px;display:block}
+  .note{font-size:13.5px;color:var(--muted);margin-top:10px;line-height:1.55}
+
+  /* tab bar */
+  .tabbar{display:flex;background:#fff;border:1.5px solid var(--line);border-radius:14px;overflow:hidden;margin-top:14px}
+  .tabbar div{flex:1;text-align:center;padding:10px 4px;font-size:13px;font-weight:700;border-right:1px solid var(--line)}
+  .tabbar div:last-child{border-right:none}
+  .tabbar .ic{display:block;font-size:18px;margin-bottom:2px}
+
+  /* arch */
+  .arch{display:flex;flex-direction:column;gap:8px}
+  .layer{display:grid;grid-template-columns:96px 1fr;gap:10px;align-items:center}
+  .layer .lab{font-size:13px;font-weight:900;color:var(--muted)}
+  .layer .boxes{display:flex;gap:6px;flex-wrap:wrap}
+  .box{background:#fff;border:1.5px solid var(--line);border-radius:10px;padding:7px 10px;font-size:13px;font-weight:500}
+  .box em{font-style:normal;color:var(--blue);font-weight:700}
+
+  /* roadmap */
+  .road{display:flex;flex-direction:column;gap:7px}
+  .rm{display:grid;grid-template-columns:34px 1fr;gap:10px;align-items:center;background:#fff;border:1.5px solid var(--line);border-radius:10px;padding:8px 12px}
+  .rm .no{width:28px;height:28px;border-radius:8px;background:var(--ink);color:#fff;font-weight:900;font-size:14px;display:flex;align-items:center;justify-content:center}
+  .rm .tt{font-size:15px;font-weight:700}
+  .rm .dd{font-size:12.5px;color:var(--muted)}
+  .rm.mvp .no{background:var(--red)}
+
+  /* improve */
+  .imp{display:flex;flex-direction:column;gap:8px}
+  .imp div{background:#fff;border-left:5px solid var(--orange);border-radius:8px;padding:10px 12px;font-size:14px;line-height:1.5}
+  .imp b{display:block;font-size:15px}
+
+  footer{border-top:1.5px solid var(--line);padding-top:14px;font-size:12.5px;color:var(--muted);display:flex;justify-content:space-between}
+</style>
+</head>
+<body>
+<div class="page">
+
+  <header>
+    <div>
+      <div class="eyebrow">WEB BLUEPRINT · 웹설계</div>
+      <h1>축제 웹앱 전체 워크플로우</h1>
+    </div>
+    <div class="ref">
+      참고 사례 <b>COMM.IN · 제6회 떡볶이 페스티벌 앱</b><br>
+      2026.10.23–25 · 대구iM뱅크PARK · app.commin.ai/klass/5738
+    </div>
+  </header>
+
+  <div class="tagline">
+    <b>QR 하나로 들어와</b> → 둘러보고 → <b>전화번호로 체크인</b>하고 → 주문·예약·미션·AI로 참여하고 → <b>만족도조사</b>로 끝나는, 설치 없는 모바일 웹앱
+  </div>
+
+  <section>
+    <h2><span class="n">1</span>누가 무엇을 하는가 — 3개 층 흐름</h2>
+
+    <div class="lane admin">
+      <div class="lane-label">운영자<small>축제 전 · 준비</small></div>
+      <div class="steps">
+        <div class="step"><div class="k">01</div><div class="t">축제 생성</div><div class="d">ID·URL 발급<br>축제 1개 = 앱 1개</div></div>
+        <div class="step"><div class="k">02</div><div class="t">브랜딩</div><div class="d">로고·색상·<br>마스코트</div></div>
+        <div class="step"><div class="k">03</div><div class="t">메뉴 슬롯</div><div class="d">하단 탭·홈 카드<br>extra1~10, map</div></div>
+        <div class="step"><div class="k">04</div><div class="t">콘텐츠</div><div class="d">포스터·라인업<br>시간표·지도</div></div>
+        <div class="step"><div class="k">05</div><div class="t">혜택·미션</div><div class="d">쿠폰·경품<br>후원사 이벤트</div></div>
+        <div class="step"><div class="k">06</div><div class="t">AI 지식</div><div class="d">챗봇이 답할<br>행사 정보</div></div>
+        <div class="step"><div class="k">07</div><div class="t">배포</div><div class="d">QR·URL<br>다국어</div></div>
+      </div>
+    </div>
+
+    <div class="lane visit">
+      <div class="lane-label">방문자<small>축제 중 · 사용</small></div>
+      <div class="steps">
+        <div class="step"><div class="k">①</div><div class="t">진입</div><div class="d">현장 QR·SNS 링크<br>설치 없음</div></div>
+        <div class="step"><div class="k">②</div><div class="t">둘러보기</div><div class="d">개요·시간표·지도<br>비회원 OK</div></div>
+        <div class="step gate"><div class="k">③ 관문</div><div class="t">체크인</div><div class="d">전화번호 +<br>약관 동의 2단계</div></div>
+        <div class="step"><div class="k">④</div><div class="t">참여</div><div class="d">주문·예약·커뮤니티<br>미션·AI 상담</div></div>
+        <div class="step"><div class="k">⑤</div><div class="t">보상</div><div class="d">포인트·쿠폰<br>나의 QR 인증</div></div>
+        <div class="step"><div class="k">⑥</div><div class="t">마무리</div><div class="d">만족도조사<br>제휴 쿠폰 사용</div></div>
+      </div>
+    </div>
+
+    <div class="lane sys">
+      <div class="lane-label">시스템<small>상시 · 뒷단</small></div>
+      <div class="steps">
+        <div class="step"><div class="t">DB</div><div class="d">축제·회원·주문·쿠폰</div></div>
+        <div class="step"><div class="t">실시간 채널</div><div class="d">WebSocket 주문·대기 알림</div></div>
+        <div class="step"><div class="t">파일 저장소</div><div class="d">포스터·지도 이미지</div></div>
+        <div class="step"><div class="t">AI 챗봇</div><div class="d">축제 지식 RAG</div></div>
+        <div class="step"><div class="t">분석·로그</div><div class="d">GA4·만족도 통계</div></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="grid2">
+    <section>
+      <h2><span class="n">2</span>핵심 설계 — 정보는 열고, 기능은 잠근다</h2>
+      <div class="gatebox">
+        <div class="zone open">
+          <h3>🔓 누구나 (체크인 전)</h3>
+          <div class="chips">
+            <span class="chip">행사개요</span><span class="chip">주최·후원사</span><span class="chip">라인업</span>
+            <span class="chip">무대시간표</span><span class="chip">실시간 지도</span><span class="chip">이벤트 안내</span><span class="chip">다국어</span>
+          </div>
+        </div>
+        <div class="arrow"><span class="big">➜</span>잠긴 메뉴<br>누르면<br>체크인 팝업</div>
+        <div class="zone locked">
+          <h3>🔒 체크인 후</h3>
+          <div class="chips">
+            <span class="chip">주문</span><span class="chip">입장 예약</span><span class="chip">커뮤니티</span>
+            <span class="chip">AI 챗봇</span><span class="chip">포인트·쿠폰</span><span class="chip">나의 QR</span>
+          </div>
+        </div>
+      </div>
+      <div class="tabbar">
+        <div><span class="ic">🏠</span>홈</div><div><span class="ic">🗺️</span>행사개요</div><div><span class="ic">🕒</span>무대시간표</div>
+        <div><span class="ic">👥</span>커뮤니티</div><div><span class="ic">🔳</span>나의QR</div><div><span class="ic">📝</span>만족도조사</div>
+      </div>
+      <p class="note">하단 탭 6개는 늘 같은 자리에 고정. 첫 방문자는 막힘 없이 둘러보고, 참여하는 순간 전화번호가 모여 방문자 데이터가 쌓입니다.</p>
+    </section>
+
+    <section>
+      <h2><span class="n">3</span>시스템 구조 (참고 앱 → 우리 대안)</h2>
+      <div class="arch">
+        <div class="layer"><div class="lab">화면</div><div class="boxes"><span class="box">Vue 3 + Quasar → <em>Next.js</em></span><span class="box">i18n 다국어</span><span class="box">라우트 /f/:id/p/:slot</span></div></div>
+        <div class="layer"><div class="lab">인증</div><div class="boxes"><span class="box">전화번호 체크인</span><span class="box">세션 + 나의 QR 발급</span></div></div>
+        <div class="layer"><div class="lab">데이터</div><div class="boxes"><span class="box">Firebase → <em>Supabase</em></span><span class="box">S3 → <em>Supabase Storage</em></span></div></div>
+        <div class="layer"><div class="lab">실시간</div><div class="boxes"><span class="box">STOMP WebSocket → <em>Supabase Realtime</em></span></div></div>
+        <div class="layer"><div class="lab">AI</div><div class="boxes"><span class="box">LLM</span><span class="box">벡터 DB(축제 지식)</span><span class="box">RAG API</span></div></div>
+        <div class="layer"><div class="lab">분석</div><div class="boxes"><span class="box">GA4</span><span class="box">만족도 설문</span><span class="box">주문·방문 통계</span></div></div>
+      </div>
+    </section>
+  </div>
+
+  <div class="grid2">
+    <section>
+      <h2><span class="n">4</span>구현 순서 — MVP에서 확장까지</h2>
+      <div class="road">
+        <div class="rm mvp"><div class="no">1</div><div><div class="tt">정보형 MVP</div><div class="dd">홈·개요·시간표·지도·다국어 — 로그인 없이 다 보임</div></div></div>
+        <div class="rm"><div class="no">2</div><div><div class="tt">체크인</div><div class="dd">전화번호 인증·약관·나의 QR — 잠긴 메뉴 접근 제어</div></div></div>
+        <div class="rm"><div class="no">3</div><div><div class="tt">참여·보상</div><div class="dd">미션·포인트·쿠폰 — QR 인증으로 포인트 적립</div></div></div>
+        <div class="rm"><div class="no">4</div><div><div class="tt">거래</div><div class="dd">주문·예약 대기열·실시간 알림 — 주문→부스→픽업</div></div></div>
+        <div class="rm"><div class="no">5</div><div><div class="tt">AI 챗봇</div><div class="dd">축제 지식 RAG — 시간표·위치·메뉴 질문 정답</div></div></div>
+        <div class="rm"><div class="no">6</div><div><div class="tt">운영 도구</div><div class="dd">슬롯 편집·통계·만족도 — 코드 없이 새 축제 생성</div></div></div>
+      </div>
+    </section>
+
+    <section>
+      <h2><span class="n">5</span>참고 앱보다 낫게 만들 지점</h2>
+      <div class="imp">
+        <div><b>콘텐츠를 이미지가 아닌 데이터로</b>라인업·시간표를 표/JSON으로 저장 → 검색·필터·AI 답변·번역이 쉬워짐</div>
+        <div><b>AI는 체크인 전에도 일부 열기</b>길 찾기·시간표 같은 간단한 질문은 바로 답해서 첫 방문자를 붙잡기</div>
+        <div><b>축제 밖으로 확장</b>주변 맛집·관광 동선 추천, 여러 축제를 잇는 허브 — 대구 로컬축제 에이전트의 차별점</div>
+        <div><b>실시간 혼잡도</b>지도 위에 부스별 대기 시간을 겹쳐서 표시</div>
+      </div>
+    </section>
+  </div>
+
+  <footer>
+    <span>대구 로컬축제 에이전트 · 웹설계 / 02_원페이지_워크플로우</span>
+    <span>상세: 01_전체워크플로우.md · 03_파트별_기능명세_범용템플릿.md</span>
+  </footer>
+</div>
+</body>
+</html>
