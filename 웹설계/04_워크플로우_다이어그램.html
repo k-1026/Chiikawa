@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>축제 웹앱 워크플로우</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+  :root{--bg:#FFF8F3}
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{background:var(--bg)}
+  svg{display:block;font-family:"Noto Sans KR",system-ui,sans-serif}
+  .h1{font-size:40px;font-weight:900;fill:#1F1A17}
+  .sub{font-size:16px;fill:#6B5F57}
+  .lane{font-size:20px;font-weight:900}
+  .lane-s{font-size:13px;font-weight:500}
+  .k{font-size:12px;font-weight:700;fill:#8A7D74}
+  .t{font-size:18px;font-weight:700;fill:#1F1A17}
+  .d{font-size:13px;fill:#6B5F57}
+  .w{fill:#fff}
+  .wd{fill:#FFE1DA}
+  .lbl{font-size:13px;font-weight:700}
+  .chip{font-size:12.5px;font-weight:500;fill:#1F1A17}
+</style>
+</head>
+<body>
+<svg width="1800" height="1000" viewBox="0 0 1800 1000" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1F1A17"/></marker>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#E8412C"/></marker>
+    <marker id="ab" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#2F6FEB"/></marker>
+    <marker id="ag" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1F9D6B"/></marker>
+  </defs>
+
+  <rect width="1800" height="1000" fill="#FFF8F3"/>
+
+  <!-- title -->
+  <text x="40" y="66" class="h1">축제 웹앱 워크플로우</text>
+  <text x="40" y="98" class="sub">참고: COMM.IN 제6회 떡볶이 페스티벌 앱 · 운영자가 준비하고 → 방문자가 쓰고 → 시스템이 받치고 → 데이터로 다음 운영을 개선</text>
+
+  <!-- lanes -->
+  <rect x="30" y="130" width="1740" height="148" rx="18" fill="#FEF0DC"/>
+  <rect x="30" y="318" width="1740" height="352" rx="18" fill="#FDE6E1"/>
+  <rect x="30" y="725" width="1740" height="150" rx="18" fill="#E3ECFD"/>
+
+  <text x="56" y="198" class="lane" fill="#9A5B00">운영자</text>
+  <text x="56" y="222" class="lane-s" fill="#9A5B00">축제 전 · 준비</text>
+  <text x="56" y="488" class="lane" fill="#B42A18">방문자</text>
+  <text x="56" y="512" class="lane-s" fill="#B42A18">축제 중 · 사용</text>
+  <text x="56" y="796" class="lane" fill="#1D4CB0">시스템</text>
+  <text x="56" y="820" class="lane-s" fill="#1D4CB0">상시 · 뒷단</text>
+
+  <!-- ===== operator lane ===== -->
+  <g>
+    <rect x="222" y="154" width="190" height="100" rx="12" fill="#fff" stroke="#F6D3A2" stroke-width="1.5"/>
+    <text x="238" y="178" class="k">01</text><text x="238" y="203" class="t">축제 생성</text><text x="238" y="226" class="d">ID·URL 발급</text>
+    <rect x="444" y="154" width="190" height="100" rx="12" fill="#fff" stroke="#F6D3A2" stroke-width="1.5"/>
+    <text x="460" y="178" class="k">02</text><text x="460" y="203" class="t">브랜딩</text><text x="460" y="226" class="d">로고·색상·마스코트</text>
+    <rect x="666" y="154" width="190" height="100" rx="12" fill="#fff" stroke="#F6D3A2" stroke-width="1.5"/>
+    <text x="682" y="178" class="k">03</text><text x="682" y="203" class="t">메뉴 슬롯 구성</text><text x="682" y="226" class="d">하단 탭·홈 카드</text>
+    <rect x="888" y="154" width="190" height="100" rx="12" fill="#fff" stroke="#F6D3A2" stroke-width="1.5"/>
+    <text x="904" y="178" class="k">04</text><text x="904" y="203" class="t">콘텐츠 등록</text><text x="904" y="226" class="d">라인업·시간표·지도</text>
+    <rect x="1110" y="154" width="190" height="100" rx="12" fill="#fff" stroke="#F6D3A2" stroke-width="1.5"/>
+    <text x="1126" y="178" class="k">05</text><text x="1126" y="203" class="t">혜택·미션</text><text x="1126" y="226" class="d">쿠폰·경품·후원사</text>
+    <rect x="1332" y="154" width="190" height="100" rx="12" fill="#fff" stroke="#F6D3A2" stroke-width="1.5"/>
+    <text x="1348" y="178" class="k">06</text><text x="1348" y="203" class="t">AI 지식 입력</text><text x="1348" y="226" class="d">FAQ·행사 정보</text>
+    <rect x="1554" y="154" width="190" height="100" rx="12" fill="#F59E2B"/>
+    <text x="1570" y="178" class="k" style="fill:#FFF1DC">07</text><text x="1570" y="203" class="t w">배포</text><text x="1570" y="226" class="d" style="fill:#FFF1DC">QR·URL·다국어</text>
+  </g>
+  <g stroke="#1F1A17" stroke-width="1.8" fill="none" marker-end="url(#a)">
+    <path d="M412 204 H442"/><path d="M634 204 H664"/><path d="M856 204 H886"/>
+    <path d="M1078 204 H1108"/><path d="M1300 204 H1330"/><path d="M1522 204 H1552"/>
+  </g>
+
+  <!-- deploy → visitor entry -->
+  <path d="M1649 254 V298 H307 V448" stroke="#F59E2B" stroke-width="3" fill="none" marker-end="url(#a)"/>
+  <rect x="860" y="285" width="170" height="26" rx="13" fill="#F59E2B"/>
+  <text x="945" y="303" text-anchor="middle" class="lbl" fill="#fff">QR·링크로 방문자 유입</text>
+
+  <!-- ===== visitor lane ===== -->
+  <!-- 진입 -->
+  <rect x="222" y="450" width="170" height="100" rx="12" fill="#fff" stroke="#F6C3B9" stroke-width="1.5"/>
+  <text x="238" y="474" class="k">①</text><text x="238" y="499" class="t">진입</text><text x="238" y="522" class="d">앱 설치 없음</text><text x="238" y="540" class="d">모바일 웹</text>
+
+  <!-- 둘러보기 -->
+  <rect x="432" y="400" width="230" height="190" rx="12" fill="#fff" stroke="#1F9D6B" stroke-width="2"/>
+  <text x="448" y="424" class="k">② 🔓 비회원 OK</text><text x="448" y="450" class="t">둘러보기</text>
+  <g>
+    <rect x="448" y="466" width="70" height="26" rx="13" fill="#DDF3EA"/><text x="483" y="484" text-anchor="middle" class="chip">행사개요</text>
+    <rect x="524" y="466" width="60" height="26" rx="13" fill="#DDF3EA"/><text x="554" y="484" text-anchor="middle" class="chip">라인업</text>
+    <rect x="590" y="466" width="56" height="26" rx="13" fill="#DDF3EA"/><text x="618" y="484" text-anchor="middle" class="chip">다국어</text>
+    <rect x="448" y="500" width="82" height="26" rx="13" fill="#DDF3EA"/><text x="489" y="518" text-anchor="middle" class="chip">무대시간표</text>
+    <rect x="536" y="500" width="84" height="26" rx="13" fill="#DDF3EA"/><text x="578" y="518" text-anchor="middle" class="chip">실시간 지도</text>
+    <rect x="448" y="534" width="82" height="26" rx="13" fill="#DDF3EA"/><text x="489" y="552" text-anchor="middle" class="chip">이벤트 안내</text>
+    <rect x="536" y="534" width="94" height="26" rx="13" fill="#DDF3EA"/><text x="583" y="552" text-anchor="middle" class="chip">주최·후원사</text>
+  </g>
+
+  <!-- decision -->
+  <polygon points="760,425 840,500 760,575 680,500" fill="#fff" stroke="#1F1A17" stroke-width="2"/>
+  <text x="760" y="494" text-anchor="middle" class="lbl" fill="#1F1A17">참여 기능</text>
+  <text x="760" y="514" text-anchor="middle" class="lbl" fill="#1F1A17">눌렀나?</text>
+
+  <!-- 체크인 -->
+  <rect x="880" y="440" width="170" height="120" rx="12" fill="#E8412C"/>
+  <text x="896" y="464" class="k" style="fill:#FFE1DA">③ 관문</text><text x="896" y="490" class="t w">체크인</text>
+  <text x="896" y="514" class="d wd">전화번호 입력</text><text x="896" y="533" class="d wd">약관·개인정보 동의</text><text x="896" y="552" class="d wd">→ 나의 QR 발급</text>
+
+  <!-- 참여 4 branches -->
+  <g>
+    <rect x="1100" y="340" width="200" height="62" rx="10" fill="#fff" stroke="#F6C3B9" stroke-width="1.5"/>
+    <text x="1116" y="366" class="t" style="font-size:16px">🛒 주문</text><text x="1116" y="388" class="d">부스 메뉴 → 픽업 알림</text>
+    <rect x="1100" y="416" width="200" height="62" rx="10" fill="#fff" stroke="#F6C3B9" stroke-width="1.5"/>
+    <text x="1116" y="442" class="t" style="font-size:16px">🎟 입장 예약</text><text x="1116" y="464" class="d">회차 선택 → 입장 QR</text>
+    <rect x="1100" y="492" width="200" height="62" rx="10" fill="#fff" stroke="#F6C3B9" stroke-width="1.5"/>
+    <text x="1116" y="518" class="t" style="font-size:16px">🏁 미션·커뮤니티</text><text x="1116" y="540" class="d">QR 스탬프·후기 작성</text>
+    <rect x="1100" y="568" width="200" height="62" rx="10" fill="#fff" stroke="#F6C3B9" stroke-width="1.5"/>
+    <text x="1116" y="594" class="t" style="font-size:16px">🤖 AI 챗봇 상담</text><text x="1116" y="616" class="d">위치·시간·메뉴 질문</text>
+    <text x="1100" y="332" class="k" style="fill:#B42A18">④ 참여 🔒</text>
+  </g>
+
+  <!-- 보상 -->
+  <rect x="1350" y="440" width="170" height="120" rx="12" fill="#fff" stroke="#F6C3B9" stroke-width="1.5"/>
+  <text x="1366" y="464" class="k">⑤</text><text x="1366" y="490" class="t">보상</text>
+  <text x="1366" y="514" class="d">포인트 적립</text><text x="1366" y="533" class="d">쿠폰·경품 지급</text><text x="1366" y="552" class="d">제휴 할인</text>
+
+  <!-- 만족도 -->
+  <rect x="1570" y="440" width="174" height="120" rx="12" fill="#1F1A17"/>
+  <text x="1586" y="464" class="k" style="fill:#BFB3AA">⑥ 마무리</text><text x="1586" y="490" class="t w">만족도조사</text>
+  <text x="1586" y="514" class="d" style="fill:#D9CFC7">5문항 이내</text><text x="1586" y="533" class="d" style="fill:#D9CFC7">응답 보상 쿠폰</text>
+
+  <!-- visitor arrows -->
+  <g stroke="#1F1A17" stroke-width="1.8" fill="none" marker-end="url(#a)">
+    <path d="M392 500 H430"/>
+    <path d="M662 500 H678"/>
+  </g>
+  <path d="M840 500 H878" stroke="#E8412C" stroke-width="2.4" fill="none" marker-end="url(#ar)"/>
+  <text x="852" y="490" class="lbl" fill="#E8412C">예</text>
+  <!-- no loop -->
+  <path d="M760 575 V638 H600 V592" stroke="#1F9D6B" stroke-width="2" fill="none" stroke-dasharray="6 5" marker-end="url(#ag)"/>
+  <text x="618" y="656" class="lbl" fill="#1F9D6B">아니오 → 계속 둘러보기</text>
+  <!-- fan out -->
+  <g stroke="#1F1A17" stroke-width="1.6" fill="none" marker-end="url(#a)">
+    <path d="M1050 500 C1075 500 1075 371 1098 371"/>
+    <path d="M1050 500 C1075 500 1075 447 1098 447"/>
+    <path d="M1050 500 C1075 500 1075 523 1098 523"/>
+    <path d="M1050 500 C1075 500 1075 599 1098 599"/>
+  </g>
+  <!-- fan in -->
+  <g stroke="#1F1A17" stroke-width="1.6" fill="none">
+    <path d="M1300 371 C1325 371 1325 500 1348 500"/>
+    <path d="M1300 447 C1325 447 1325 500 1348 500"/>
+    <path d="M1300 523 C1325 523 1325 500 1348 500"/>
+    <path d="M1300 599 C1325 599 1325 500 1348 500" marker-end="url(#a)"/>
+  </g>
+  <path d="M1520 500 H1568" stroke="#1F1A17" stroke-width="1.8" fill="none" marker-end="url(#a)"/>
+
+  <!-- ===== system lane ===== -->
+  <g>
+    <rect x="440" y="755" width="200" height="90" rx="12" fill="#fff" stroke="#C3D5FA" stroke-width="1.5"/>
+    <text x="456" y="790" class="t">🗂 파일 저장소</text><text x="456" y="815" class="d">포스터·지도 이미지</text>
+    <rect x="865" y="755" width="200" height="90" rx="12" fill="#fff" stroke="#C3D5FA" stroke-width="1.5"/>
+    <text x="881" y="790" class="t">🗄 데이터베이스</text><text x="881" y="815" class="d">회원·주문·쿠폰·미션</text>
+    <rect x="1100" y="755" width="200" height="90" rx="12" fill="#fff" stroke="#C3D5FA" stroke-width="1.5"/>
+    <text x="1116" y="790" class="t">⚡ 실시간 채널</text><text x="1116" y="815" class="d">주문·대기 알림</text>
+    <rect x="1335" y="755" width="200" height="90" rx="12" fill="#fff" stroke="#C3D5FA" stroke-width="1.5"/>
+    <text x="1351" y="790" class="t">🧠 AI (RAG)</text><text x="1351" y="815" class="d">축제 지식 + LLM</text>
+    <rect x="1570" y="755" width="174" height="90" rx="12" fill="#fff" stroke="#C3D5FA" stroke-width="1.5"/>
+    <text x="1586" y="790" class="t">📊 분석·로그</text><text x="1586" y="815" class="d">방문·전환·만족도</text>
+  </g>
+  <g stroke="#2F6FEB" stroke-width="1.8" fill="none" stroke-dasharray="5 5" marker-end="url(#ab)">
+    <path d="M540 753 V592"/>
+    <path d="M965 562 V753"/>
+    <path d="M1200 632 V753"/>
+    <path d="M1300 610 C1360 640 1435 680 1435 753"/>
+    <path d="M1657 562 V753"/>
+    <path d="M1435 562 C1435 640 1100 700 1040 753"/>
+  </g>
+  <g class="lbl" fill="#2F6FEB">
+    <text x="548" y="700">콘텐츠 불러오기</text>
+    <text x="973" y="700">회원 저장</text>
+    <text x="1208" y="700">상태 실시간 반영</text>
+    <text x="1665" y="700">응답 수집</text>
+  </g>
+
+  <!-- feedback loop -->
+  <path d="M1744 800 H1760 V120 H1649 V152" stroke="#9A5B00" stroke-width="2.2" fill="none" stroke-dasharray="8 6" marker-end="url(#a)"/>
+  <rect x="1532" y="108" width="208" height="26" rx="13" fill="#FFF8F3" stroke="#9A5B00"/>
+  <text x="1636" y="126" text-anchor="middle" class="lbl" fill="#9A5B00">통계 → 다음 운영 개선 ↺</text>
+
+  <!-- legend -->
+  <g transform="translate(40,915)">
+    <line x1="0" y1="10" x2="40" y2="10" stroke="#1F1A17" stroke-width="2" marker-end="url(#a)"/><text x="50" y="15" class="d">진행 흐름</text>
+    <line x1="150" y1="10" x2="190" y2="10" stroke="#2F6FEB" stroke-width="2" stroke-dasharray="5 5" marker-end="url(#ab)"/><text x="200" y="15" class="d">시스템 데이터 연동</text>
+    <line x1="340" y1="10" x2="380" y2="10" stroke="#1F9D6B" stroke-width="2" stroke-dasharray="6 5" marker-end="url(#ag)"/><text x="390" y="15" class="d">체크인 없이 계속</text>
+    <line x1="520" y1="10" x2="560" y2="10" stroke="#9A5B00" stroke-width="2" stroke-dasharray="8 6" marker-end="url(#a)"/><text x="570" y="15" class="d">운영 피드백 루프</text>
+    <text x="720" y="15" class="d">🔓 체크인 전 공개 · 🔒 체크인 후 사용</text>
+  </g>
+  <text x="1760" y="960" text-anchor="end" class="d">대구 로컬축제 에이전트 · 웹설계 / 04_워크플로우_다이어그램</text>
+</svg>
+</body>
+</html>
