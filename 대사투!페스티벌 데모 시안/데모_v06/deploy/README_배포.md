@@ -9,13 +9,13 @@
 ## 연결 상태
 | 연결 | 내용 |
 |---|---|
-| GitHub | `k-1026/Chiikawa`, 브랜치 `kimseunghee` (공개 저장소: 비밀값은 코드에 넣지 않는다) |
-| Vercel | 프로젝트 `daesatu-festival-web`, 폴더 `대사투!페스티벌 데모 시안/데모_v06`, 운영 브랜치 `kimseunghee`, `vercel.json` 이 `/api` 를 Render 로 연결 |
+| GitHub | `k-1026/Chiikawa`, 브랜치 `main` (공개 저장소: 비밀값은 코드에 넣지 않는다) |
+| Vercel | 프로젝트 `daesatu-festival-web`, 폴더 `대사투!페스티벌 데모 시안/데모_v06`, 운영 브랜치 `main`, `vercel.json` 이 `/api` 를 Render 로 연결 |
 | Render | 서비스 `daesatu-festival-api`, 저장소 루트의 `Dockerfile.v06`, `render.yaml`(Blueprint), 자동 배포 |
 | Supabase | 프로젝트 `aqtsgaeqnqppezxkidhe`, 스키마 `daesatu`(계정·기획·감사), 표 `knowledge_chunks`(지침 문서 1,031조각, pgvector) |
 
 ## 고치는 방법
-- 화면(HTML/CSS/JS) 또는 서버(Python) 수정 → GitHub `kimseunghee` 에 푸시 → Vercel·Render 가 자동 배포 (1~3분).
+- 화면(HTML/CSS/JS) 또는 서버(Python) 수정 → GitHub `main` 에 푸시 → Vercel·Render 가 자동 배포 (1~3분).
 - 서버 환경변수(`DATABASE_URL`, `GEMINI_API_KEY`, `GEMINI_MODEL`, `EMBEDDING_MODEL`, `EMBEDDING_DIM`) 는 Render 화면 Environment 에서만 바꾼다.
 - DB 구조 변경 → `supabase/` 에 SQL 파일을 추가해 Supabase 에서 실행.
 - 지침 문서 변경 → 임베딩을 다시 만든 뒤 `tools/load_knowledge_v06.py --replace`.
