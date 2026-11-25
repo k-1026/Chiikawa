@@ -6,7 +6,7 @@ import shutil
 from pathlib import Path
 
 ROOT=Path(__file__).resolve().parents[1]
-PUBLIC_FILES=('index_v06.html','app_v06.js','journey_v06.js','style_v06.css','plan_template_v06.json')
+PUBLIC_FILES=('index_v06.html','app_v06.js','journey_v06.js','goods_v06.js','style_v06.css','plan_template_v06.json')
 
 def make_conf(backend,build=False):
     """vercel.json 내용. build=True 이면 GitHub 연결 자동 빌드용(저장소 루트 vercel.json)으로 만든다."""

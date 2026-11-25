@@ -1,0 +1,32 @@
+# main 에 지침 문서(세부지침안·대사투)가 올라오면 AI 지식 DB(Supabase)를 자동으로 맞춘다.
+# 필요: 저장소 Settings → Secrets and variables → Actions 에 DATABASE_URL, GEMINI_API_KEY, EMBEDDING_MODEL, EMBEDDING_DIM 등록.
+# 비밀값이 없으면 아무것도 하지 않고 끝난다.
+name: sync-knowledge
+on:
+  push:
+    branches: [main]
+    paths: ['세부지침안/**', '대사투/**']
+  workflow_dispatch:
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    env:
+      DATABASE_URL: ${{ secrets.DATABASE_URL }}
+      GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+      EMBEDDING_MODEL: ${{ secrets.EMBEDDING_MODEL }}
+      EMBEDDING_DIM: ${{ secrets.EMBEDDING_DIM }}
+      EMBED_BATCH: '50'
+      EMBED_PAUSE: '1'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: '3.12' }
+      - name: 비밀값 확인
+        id: chk
+        run: |
+          if [ -z "$DATABASE_URL" ] || [ -z "$GEMINI_API_KEY" ]; then echo "ok=no" >> "$GITHUB_OUTPUT"; echo "Secrets 가 없어 건너뜁니다."; else echo "ok=yes" >> "$GITHUB_OUTPUT"; fi
+      - name: 지식 DB 동기화
+        if: steps.chk.outputs.ok == 'yes'
+        run: |
+          pip install -q "psycopg[binary]" google-genai numpy pyyaml
+          python3 -I "대사투!페스티벌 데모 시안/데모_v06/tools/sync_knowledge_from_repo.py" --repo . --apply

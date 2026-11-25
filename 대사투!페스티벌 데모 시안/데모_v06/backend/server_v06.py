@@ -43,7 +43,7 @@ try:
 except ImportError:pass
 def clean_env():
     """환경변수 값에 '이름=' 이나 따옴표가 같이 붙어 들어온 경우(복사 실수)를 바로잡는다. 값은 출력하지 않는다."""
-    for key in ('DATABASE_URL','GEMINI_API_KEY','GEMINI_MODEL','EMBEDDING_MODEL','EMBEDDING_DIM','PUBLIC_ORIGIN','PUBLIC_WEB_ORIGINS'):
+    for key in ('DATABASE_URL','GEMINI_API_KEY','GEMINI_MODEL','EMBEDDING_MODEL','EMBEDDING_DIM','CF_ACCOUNT_ID','CF_API_TOKEN','PUBLIC_ORIGIN','PUBLIC_WEB_ORIGINS'):
         v=os.environ.get(key)
         if v is None:continue
         c=v.strip().strip('"\'').strip()
@@ -68,6 +68,7 @@ def ai_modules():
         except ImportError:pass
         return mods
 
+from urllib.parse import parse_qs
 class Handler(BaseHTTPRequestHandler):
     server_version='Daesatu/6'
     def log_message(self,*args):pass
@@ -132,6 +133,14 @@ class Handler(BaseHTTPRequestHandler):
         if p.startswith('/api/'):
             STORE.require_access(u)
             if p=='/api/workspace':return self.output(STORE.workspace(u['id']))
+            if p=='/api/goods/list':
+                import goods_v06 as G
+                return self.output({'designs':G.list_designs(STORE,u['id']),'enabled':G.configured(),'items':{k:v[0] for k,v in G.ITEMS.items()}})
+            if p=='/api/goods/image':
+                import goods_v06 as G
+                try:raw=G.image_bytes(STORE,u['id'],parse_qs(urlsplit(self.path).query).get('id',[''])[0])
+                except G.GoodsError as e:raise Error(str(e),404)
+                return self.headers_base(200,'image/jpeg',len(raw)) or self.wfile.write(raw)
             if p=='/api/review':return self.output(review_report(STORE.workspace(u['id'])))
             if p.startswith('/api/admin/'):
                 STORE.require_owner(u)
@@ -154,7 +163,7 @@ class Handler(BaseHTTPRequestHandler):
                 page_cookie=self.raw_session();STORE.renew_session(page_cookie)
             else:page_cookie,_=STORE.new_session(old=self.raw_session())
             f=ROOT/'index_v06.html'
-        elif p in ['/style_v06.css','/app_v06.js','/journey_v06.js','/plan_template_v06.json']:f=ROOT/p[1:]
+        elif p in ['/style_v06.css','/app_v06.js','/journey_v06.js','/goods_v06.js','/plan_template_v06.json']:f=ROOT/p[1:]
         elif p.startswith('/assets_v06/'):
             f=(ROOT/p[1:]).resolve()
             if not f.is_relative_to((ROOT/'assets_v06').resolve()) or f.suffix.lower() not in ['.png','.jpg','.webp','.svg','.mp4','.vtt']:raise Error('찾을 수 없습니다.',404)
@@ -316,6 +325,16 @@ class Handler(BaseHTTPRequestHandler):
                     STORE.event(u['id'],'chat_edit' if editing else 'ai_chat' if p=='/api/chat' else 'ai_plan',detail=json.dumps({'seconds':now()-started,'calls':len(result.get('steps',[]))}))
                     return self.output(result)
             finally:_SEM.release()
+        if p=='/api/goods/design':
+            import goods_v06 as G
+            STORE.limit('goods:'+str(u['id']),12,3600)
+            try:out=G.create(STORE,u['id'],b.get('item'),b.get('concept'),b.get('count',2))
+            except G.GoodsError as e:raise Error(str(e),503)
+            STORE.event(u['id'],'goods_design',detail=str(b.get('item'))[:20]);return self.output({'designs':out})
+        if p=='/api/goods/plan':
+            import goods_v06 as G
+            try:return self.output(G.production_plan(STORE,u['id'],b.get('id'),b.get('quantity'),STORE.workspace(u['id'])))
+            except G.GoodsError as e:raise Error(str(e),400)
         if p=='/api/plan-preview':
             fields=b.get('fields')
             if not isinstance(fields,dict):raise Error('기획안 항목이 필요합니다.')
