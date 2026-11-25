@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>축제 지도</title>
+  </head>
+  <body>
+    <header class="topbar">
+      <h1>축제 지도</h1>
+    </header>
+    <main>
+      <section id="overview" aria-labelledby="overview-title" hidden>
+        <h2 id="overview-title">대사투! 페스티벌 지도</h2>
+        <img alt="구역 이름과 경계, 출입구 및 차량 통제 위치를 표시한 축제 안내도" />
+        <ul class="map-legend" aria-label="지도 범례"></ul>
+        <div class="overview-links">
+          <a class="overview-enlarge" target="_blank" rel="noopener">지도 크게 보기</a>
+          <a class="overview-download" download="대사투-페스티벌-지도.png">PNG 다운로드</a>
+          <a href="https://www.openstreetmap.org/copyright">© OpenStreetMap contributors</a>
+        </div>
+      </section>
+      <h2 id="visitor-map-title" hidden>대사투! 페스티벌 구역 및 시설 배치도</h2>
+      <div class="map-frame">
+        <div id="map"></div>
+        <div id="notice" class="notice" hidden></div>
+      </div>
+    </main>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

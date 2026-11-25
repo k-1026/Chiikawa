@@ -1,0 +1,5 @@
+node_modules/
+dist/
+# API 키가 들어 있는 파일은 깃허브에 올리지 않습니다.
+.env
+.env.local

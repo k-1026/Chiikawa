@@ -1,0 +1,286 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  height: 100%;
+  font-family: 'Pretendard', 'Malgun Gothic', system-ui, sans-serif;
+  background: #f7f7f5;
+  color: #222;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 10px 16px;
+  background: #fff;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+/* 방문객 화면: 구역을 누르면 뜨는 이름표 */
+.zone-label {
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: #fff;
+  color: #222;
+  font-size: 13px;
+  font-weight: 600;
+  white-space: nowrap;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+}
+
+.zone-label small {
+  display: block;
+  margin-top: 1px;
+  font-size: 11px;
+  font-weight: 500;
+  color: #868e96;
+  text-align: center;
+}
+
+.topbar h1 {
+  margin: 0;
+  font-size: 18px;
+}
+
+main {
+  position: relative;
+  flex: 1;
+}
+
+#map {
+  width: 100%;
+  height: 100%;
+}
+
+.map-frame {
+  position: relative;
+  height: 100%;
+}
+
+.visitor-page main {
+  width: min(100%, 1080px);
+  margin-inline: auto;
+  padding: 16px;
+}
+
+.visitor-page h2 {
+  margin: 12px 0;
+  font-size: 20px;
+}
+
+#overview > img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+
+.map-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 16px;
+  padding: 0;
+  margin: 12px 0 24px;
+  list-style: none;
+  font-size: 14px;
+}
+
+.map-legend li::before {
+  content: '';
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  margin-right: 6px;
+  border-radius: 3px;
+  background: var(--legend-color);
+}
+
+.map-legend .map-legend-icon {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.map-legend .map-legend-icon::before {
+  display: none;
+}
+
+.map-legend-icon img {
+  width: 21px;
+  height: 21px;
+}
+
+.overview-links {
+  display: flex;
+  gap: 8px 16px;
+  flex-wrap: wrap;
+  margin: -12px 0 24px;
+  font-size: 13px;
+}
+
+.overview-links a {
+  color: #35534b;
+  text-underline-offset: 3px;
+}
+
+.visitor-page .map-frame {
+  height: clamp(340px, 65vh, 740px);
+}
+
+.zone-pin {
+  width: 40px;
+  height: 40px;
+  border: 2px solid white;
+  border-radius: 12px;
+  background: #332341;
+  box-shadow: inset 0 -4px var(--zone-color), 0 1px 4px #0005;
+  color: white;
+  font: 700 16px system-ui, sans-serif;
+  cursor: pointer;
+}
+
+.zone-logo {
+  padding: 0;
+  border: 0;
+  background: none;
+  cursor: pointer;
+  line-height: 0;
+}
+
+/* 방문객 지도 위 보기 버튼(구역·시설 골라 보기) */
+.map-filter {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  right: 10px;
+  z-index: 3;
+  display: flex;
+  gap: 6px;
+  overflow-x: auto;
+  padding-bottom: 4px;
+  scrollbar-width: thin;
+}
+
+.filter-chip {
+  display: inline-flex;
+  flex: none;
+  align-items: center;
+  gap: 5px;
+  height: 32px;
+  padding: 0 12px;
+  border: 1px solid #d0d4d9;
+  border-radius: 999px;
+  background: #fff;
+  color: #343a40;
+  font: 600 13px 'Pretendard', 'Malgun Gothic', system-ui, sans-serif;
+  white-space: nowrap;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.18);
+  cursor: pointer;
+}
+
+.filter-chip img {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+}
+
+.filter-chip[aria-pressed='true'] {
+  border-color: #332341;
+  background: #332341;
+  color: #fff;
+}
+
+/* 카카오 지도 아래 지도 범례 */
+.facility-legend {
+  margin: 12px 0 24px;
+  padding: 16px 20px;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+}
+
+.facility-legend h3 {
+  margin: 0 0 14px;
+  font-size: 16px;
+}
+
+.facility-legend ul {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px 16px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.facility-legend li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.facility-legend img {
+  flex: none;
+  width: 26px;
+  height: 26px;
+  object-fit: contain;
+}
+
+.facility-legend small {
+  display: block;
+  margin-top: 1px;
+  color: #868e96;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+@media (max-width: 767px) {
+  .facility-legend ul {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.is-draggable {
+  cursor: grab;
+  touch-action: none;
+}
+
+.zone-logo img {
+  display: block;
+  height: auto;
+  filter: drop-shadow(0 1px 3px #0006);
+}
+
+.notice {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  text-align: center;
+  line-height: 1.7;
+  background: #fff;
+}
+
+.notice[hidden] {
+  display: none;
+}
+
+.notice code {
+  background: #f0f0f0;
+  padding: 2px 6px;
+  border-radius: 4px;
+}

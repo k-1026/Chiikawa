@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128">
+  <!-- 차량 통제 바리게이트: 회색 원형 배지 + 흰색 바리게이트 -->
+  <circle cx="64" cy="64" r="64" fill="#6C757D"/>
+  <g transform="translate(64 64) scale(0.85) translate(-64 -65)" fill="none" stroke="#FFFFFF" stroke-linecap="butt" stroke-linejoin="round">
+    <path d="M36 86V55a11 11 0 0 1 11-11h34a11 11 0 0 1 11 11v31" stroke-width="7"/>
+    <path d="M36 74h56" stroke-width="7"/>
+    <path d="M50 47v27M59 47v27M69 47v27M78 47v27" stroke-width="5"/>
+    <path d="M26 86h20M82 86h20" stroke-width="7"/>
+  </g>
+</svg>
