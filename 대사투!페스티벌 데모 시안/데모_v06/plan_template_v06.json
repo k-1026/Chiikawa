@@ -1,0 +1,161 @@
+{
+  "id": "daesatu-plan-v06-fixed-1",
+  "title": "대사투! 페스티벌 기획안",
+  "sections": [
+    {
+      "title": "1. 축제 개요",
+      "fields": [
+        "festival_name",
+        "period",
+        "place",
+        "host",
+        "visitors",
+        "budget_total"
+      ]
+    },
+    {
+      "title": "2. 목적 · 필요성 · 차별화 전략",
+      "fields": [
+        "goal",
+        "concept",
+        "differentiation",
+        "necessity"
+      ]
+    },
+    {
+      "title": "3. 프로그램 구성",
+      "fields": [
+        "programs",
+        "schedule",
+        "layout"
+      ]
+    },
+    {
+      "title": "4. 추진 계획",
+      "fields": [
+        "stay_link",
+        "mascot",
+        "scale",
+        "partners",
+        "prep"
+      ]
+    },
+    {
+      "title": "5. 사업비 계획",
+      "fields": [
+        "budget_items"
+      ]
+    },
+    {
+      "title": "6. 안전관리 요약",
+      "fields": [
+        "safety_staff",
+        "safety_peak",
+        "safety_org",
+        "heat",
+        "cautions"
+      ]
+    },
+    {
+      "title": "7. 기대효과 · 자체 점검",
+      "fields": [
+        "effects"
+      ]
+    },
+    {
+      "title": "8. 신청 단체 · 실적 · 확약",
+      "fields": [
+        "org_intro",
+        "track_record",
+        "commitment"
+      ]
+    }
+  ],
+  "labels": {
+    "festival_name": "축제 이름",
+    "concept": "컨셉",
+    "period": "개최 기간",
+    "place": "개최 장소",
+    "host": "주최·주관",
+    "visitors": "예상 관람객",
+    "budget_total": "총 사업비",
+    "goal": "핵심 목표",
+    "necessity": "필요성",
+    "differentiation": "차별화 전략",
+    "programs": "프로그램",
+    "schedule": "일정표",
+    "layout": "배치도",
+    "stay_link": "체류·상권 연계",
+    "mascot": "마스코트 활용",
+    "scale": "운영 규모",
+    "partners": "협력 기관",
+    "prep": "준비 일정",
+    "budget_items": "사업비 산출내역",
+    "safety_staff": "안전 인력",
+    "safety_peak": "순간 최대 인원",
+    "safety_org": "안전관리 조직",
+    "heat": "폭염 대응",
+    "cautions": "유의 사항",
+    "effects": "기대효과",
+    "org_intro": "기관 소개",
+    "track_record": "운영 실적",
+    "commitment": "자기부담 확약",
+    "missing": "추가로 확인할 사항"
+  },
+  "tables": {
+    "programs": {
+      "kind": "object",
+      "keys": [
+        "name",
+        "desc"
+      ],
+      "headers": [
+        "프로그램 이름",
+        "내용"
+      ]
+    },
+    "schedule": {
+      "kind": "array",
+      "keys": [
+        "0",
+        "1",
+        "2",
+        "3"
+      ],
+      "headers": [
+        "구분 · 시간대",
+        "금요일",
+        "토요일",
+        "일요일"
+      ]
+    },
+    "budget_items": {
+      "kind": "object",
+      "keys": [
+        "item",
+        "basis",
+        "amount"
+      ],
+      "headers": [
+        "비목",
+        "산출 근거 (단가 × 수량 × 횟수)",
+        "금액(원)"
+      ]
+    },
+    "missing": {
+      "kind": "scalar",
+      "keys": [
+        "value"
+      ],
+      "headers": [
+        "내용"
+      ]
+    }
+  },
+  "appendix": {
+    "title": "추가로 확인할 사항",
+    "fields": [
+      "missing"
+    ]
+  }
+}
