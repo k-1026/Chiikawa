@@ -51,13 +51,18 @@ def table_rows(text, header_start):
 # ---------------------------------------------------------------- J-2 목록 읽기
 j02 = (PART / "J02_표기규칙.md").read_text(encoding="utf-8")
 BLOCK, CAUTION = {}, {}
+SUFFIX_CAUTION = {}  # "-노"처럼 "-"로 시작하는 항목 = 말끝. 말끝이 그것으로 끝나는 단어·문구에 W7
 for r in table_rows(j02, "| 단어 | 위험 유형 |"):
     for part in r["스크립트용 목록"].split(" / "):
         kind, _, words = part.partition(":")
         for w in words.split(","):
+            label = f"{r['위험 유형']}({r['단어'].split('(')[0]})"
+            if w.strip().startswith("-") and kind.strip() == "주의":
+                SUFFIX_CAUTION[w.strip().lstrip("-")] = label
+                continue
             w = norm(w)
             if w:
-                (BLOCK if kind.strip() == "반려" else CAUTION)[w] = f"{r['위험 유형']}({r['단어'].split('(')[0]})"
+                (BLOCK if kind.strip() == "반려" else CAUTION)[w] = label
 STD_BLOCK = set(norm(x) for x in re.search(r"- 표준어 반려: (.+)", j02).group(1).split(","))
 STD_CAUTION = set(norm(x) for x in re.search(r"- 표준어 주의: (.+)", j02).group(1).split(","))
 BLOCK_MEANING = ["비속", "속되게", "낮잡", "얕잡"]
@@ -73,7 +78,9 @@ G_LABEL = {
     "G6": "G6 공식 자료의 경북 표시",
     "G7": "G7 공식 자료의 경상 표시(경상도 전체 — 경북 포함)",
     "G8": "G8 비공식 자료의 경북·경상 표시(InterAI 경상북도·Quizlet 경상도)",
+    "G9": "G9 D파트 굿즈 문구(대키미 대사, 작성자 제안)",
 }
+GOODS = "D파트 굿즈 문구"
 STRONG = {"G1", "G2", "G3", "G5", "G6", "G7"}
 OFFICIAL = {"우리말샘", "지역어 종합 정보", "대구광역시 공식 블로그", "매일신문"}
 GRADE = {"우리말샘": 0, "지역어 종합 정보": 1}  # 나머지(InterAI·Quizlet·블로그·언론)는 2
@@ -84,6 +91,8 @@ EXCLUDE_NOT_DIALECT = {"쌔비다": "우리말샘에서 방언이 아니라 속�
 def region_codes(site, region):
     """출처 한 행의 지역 표시 → 근거 코드들."""
     c = set()
+    if site == GOODS:
+        return {"G9"}
     gb = "경북" in region or "경상북도" in region
     gs = re.search(r"경상(?!남도)", region.replace("경상북도", "")) is not None
     if "대구" in region:
@@ -223,18 +232,31 @@ def judge(e):
             W.append(f"W7 주의 단어 — {CAUTION[t]}")
     if e["std"] and norm(e["std"]) in STD_CAUTION and not any(w.startswith("W7") for w in W):
         W.append(f"W7 주의 단어({e['std']})")
+    # 말끝 주의("-노" 등): J-1 본문표 단어(와이카노·뭐라카노)는 사람이 출처·맥락을 확인했으므로 제외
+    # 우리말샘 "'항라'의 방언"처럼 뜻이 명사인 단어는 말끝이 아니므로 제외(예: 항노)
+    is_noun_entry = bool(re.search(r"‘[^’]+’의 방언", e["meaning"])) and not (e["std"] or "").endswith(("니", "냐", "까", "나"))
+    if e["j1"] is None and not is_noun_entry and not any(w.startswith("W7") for w in W):
+        for chunk in re.split(r"[\s/,]+", e["word"]):
+            c2 = chunk.strip("?.!~…-^")
+            hit = next((s for s in SUFFIX_CAUTION if c2.endswith(s)), None)
+            if hit:
+                W.append(f"W7 주의 말끝 — {SUFFIX_CAUTION[hit]}")
+                break
     if e["j1"] is not None and "⚠️" in " ".join(e["j1"].values()) and not any(w.startswith("W7") for w in W):
         W.append("W9 J-1에 ⚠️ 사람 확인 콜아웃")
     codes = e["own"] | e["cross"]
+    only_goods = set(e["sites"]) == {GOODS}
     if not codes & STRONG:
-        if codes:
+        if codes == {"G9"} or (only_goods and not codes - {"G9"}):
+            W.append("W11 출처가 D파트 굿즈 문구(작성자 제안)뿐 — 외부 출처 확인 전")
+        elif codes:
             W.append("W1 대구·경북 근거가 비공식 자료뿐")
         elif e["cross_diff"]:
             W.append("W10 같은 표기의 대구·경북 자료가 있으나 뜻 표현이 달라 같은 말인지 사람 확인")
         elif e["weak"]:
             W.append("W8 대구·경북 자료의 문장 속에서만 확인")
     if e["j1"] is None:
-        if not set(e["sites"]) & OFFICIAL and not any(w.startswith("W1") for w in W):
+        if not set(e["sites"]) & OFFICIAL and not only_goods and not any(w.startswith("W1") for w in W):
             W.append("W1 출처가 비공식(InterAI·Quizlet)뿐")
         if set(e["word"]) & set(" ?^()~,/"):
             W.append("W2 문장·구·묶음 표제어")
@@ -294,7 +316,8 @@ for e in keep:
 
 def source_cell(e):
     links = " ".join(f"[링크{i + 1}]({u})" for i, u in enumerate(e["urls"]) if u.startswith("http"))
-    return esc(", ".join(e["sites"]) + (" · " + links if links else ""))
+    files = " · ".join(u for u in e["urls"] if u.startswith("세부지침안/"))  # 굿즈 문구: 시트 경로 + 문구 ID
+    return esc(", ".join(e["sites"]) + (" · " + links if links else "") + (" · " + files if files else ""))
 
 
 def row(e):
@@ -330,7 +353,7 @@ HEAD = """# J 대구·경북 사투리 자료집
 ## 열 설명
 
 - **ID**: D로 시작 = J-1 본문표(사람이 품사·예문까지 확인), S로 시작 = 원천자료 자동 판정(표제어·뜻으로 만든 고정 번호)
-- **근거**: G1 국립국어원 지역어 조사(대구 달성군) · G2 대구시 공식 블로그(대구 명시) · G3 대구 지역 언론·연구의 대구 사례 · G4 Quizlet "대구 사투리" 세트(비공식) · G5 대구시 블로그(경상도로 소개) · G6 공식 자료의 경북 표시 · G7 공식 자료의 경상 표시(경상도 전체, 경북 포함) · G8 비공식 자료의 경북·경상 표시. G4·G8만 있으면 ⚠️ W1(출처가 비공식이라서이지, 대구를 입증 못 해서가 아니다). 근거 칸은 어디서 확인했는지를 보여 줄 뿐이다. "교차 확인"은 같은 표기·같은 표준어의 다른 출처 행에 근거가 있다는 뜻이다.
+- **근거**: G1 국립국어원 지역어 조사(대구 달성군) · G2 대구시 공식 블로그(대구 명시) · G3 대구 지역 언론·연구의 대구 사례 · G4 Quizlet "대구 사투리" 세트(비공식) · G5 대구시 블로그(경상도로 소개) · G6 공식 자료의 경북 표시 · G7 공식 자료의 경상 표시(경상도 전체, 경북 포함) · G8 비공식 자료의 경북·경상 표시 · G9 D파트 굿즈 문구(작성자 제안, 출처 칸에 시트 경로·문구 ID). G4·G8만 있으면 ⚠️ W1, G9만 있으면 ⚠️ W11(출처가 비공식이라서이지, 대구를 입증 못 해서가 아니다). 근거 칸은 어디서 확인했는지를 보여 줄 뿐이다. "교차 확인"은 같은 표기·같은 표준어의 다른 출처 행에 근거가 있다는 뜻이다.
 - **걸린 항목**: X = 반려 사유(J-2 2-6), W = ⚠️ 사유(J-3 2-7-3).
 - 경남만 표시됐거나 지역 표시가 없는 단어는 이 파일에 넣지 않았다(`원천자료(AI 미사용)/대구경북미확인_보관.md`).
 """
