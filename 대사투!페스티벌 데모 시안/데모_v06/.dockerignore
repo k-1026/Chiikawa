@@ -4,5 +4,3 @@ backend/vendor/
 backend/__pycache__/
 tests/
 .git/
-*.mp4
-reference_v06.html
