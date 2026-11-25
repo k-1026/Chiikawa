@@ -5,8 +5,7 @@ services:
     runtime: docker
     repo: https://github.com/k-1026/Chiikawa
     branch: kimseunghee
-    rootDir: 대사투!페스티벌 데모 시안/데모_v06
-    dockerfilePath: ./Dockerfile
+    dockerfilePath: ./Dockerfile.v06
     dockerContext: .
     region: singapore
     plan: free

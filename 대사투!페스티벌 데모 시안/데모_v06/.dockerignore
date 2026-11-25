@@ -1,6 +1,0 @@
-.env
-.runtime/
-backend/vendor/
-backend/__pycache__/
-tests/
-.git/

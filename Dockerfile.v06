@@ -1,0 +1,9 @@
+# 대사투! 페스티벌 v06 서버 (Render). 저장소 루트 기준으로 빌드하고 v06 폴더만 이미지에 넣는다.
+# (Render 의 Root Directory 는 한글·특수문자 폴더명을 받지 않아서 이 방식을 쓴다.)
+FROM python:3.12-slim
+RUN apt-get update && apt-get install -y --no-install-recommends chromium fonts-noto-cjk && rm -rf /var/lib/apt/lists/*
+ENV HOST=0.0.0.0 PYTHONUNBUFFERED=1
+WORKDIR /app
+RUN pip install --no-cache-dir "psycopg[binary]" psycopg_pool python-docx python-hwpx python-dotenv google-genai pyyaml pypdf numpy
+COPY ["대사투!페스티벌 데모 시안/데모_v06/", "/app/"]
+CMD ["python3","-u","backend/server_v06.py"]
