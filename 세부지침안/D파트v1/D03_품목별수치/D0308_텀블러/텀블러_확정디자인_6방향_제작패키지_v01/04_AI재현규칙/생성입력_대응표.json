@@ -1,0 +1,40 @@
+[
+  {
+    "sku": "DK900",
+    "tool": "built-in image_gen",
+    "source_generated_filename": "exec-2dfdba20-444b-440a-af17-adcb3e2d2907.png",
+    "input_images_in_order": [
+      "00_승인기준/DK900_정면참고.png"
+    ],
+    "prompt": "04_AI재현규칙/DK900_6방향_생성프롬프트.txt"
+  },
+  {
+    "sku": "OM900",
+    "tool": "built-in image_gen",
+    "source_generated_filename": "exec-cf02220b-c7fe-4061-8cee-4f39ecb90db9.png",
+    "input_images_in_order": [
+      "00_승인기준/OM900_정면참고.png",
+      "01_제품사진/DK900/DK900_6방향_생성원본.png"
+    ],
+    "prompt": "04_AI재현규칙/OM900_6방향_생성프롬프트.txt"
+  },
+  {
+    "sku": "DK350",
+    "tool": "built-in image_gen",
+    "source_generated_filename": "exec-ff9eaf55-170b-4f40-ab68-febe42908e6e.png",
+    "input_images_in_order": [
+      "00_승인기준/DK350_정면참고.png"
+    ],
+    "prompt": "04_AI재현규칙/DK350_6방향_생성프롬프트.txt"
+  },
+  {
+    "sku": "OM350",
+    "tool": "built-in image_gen",
+    "source_generated_filename": "exec-4bf283c7-b807-4810-9f65-a2e9de467fc8.png",
+    "input_images_in_order": [
+      "00_승인기준/OM350_정면참고.png",
+      "01_제품사진/DK350/DK350_6방향_생성원본.png"
+    ],
+    "prompt": "04_AI재현규칙/OM350_6방향_생성프롬프트.txt"
+  }
+]

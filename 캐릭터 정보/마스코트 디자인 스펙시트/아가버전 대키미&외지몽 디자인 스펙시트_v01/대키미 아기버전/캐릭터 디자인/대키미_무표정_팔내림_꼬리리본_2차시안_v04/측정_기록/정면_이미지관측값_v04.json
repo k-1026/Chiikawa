@@ -1,0 +1,340 @@
+{
+  "image": "/Users/seunghui/Desktop/대외활동/CJ AI x AX/daegu-local-festival-ai-agent/Mascot/마스코트 디자인 스펙시트/아가버전 대키미&외지몽 디자인 스펙시트_v01/대키미 아기버전/캐릭터 디자인/대키미_서있는자세_6방향_레퍼런스_v04/레퍼런스_이미지/01_정면.png",
+  "pixel_dimensions": [
+    1254,
+    1254
+  ],
+  "bbox_convention": "[x0,y0,x1,y1), origin upper left",
+  "render_top_y": 69,
+  "floor_y": 1163,
+  "render_height_px": 1094,
+  "setting_height_cm": 53,
+  "cm_per_pixel_projection_only": 0.048446069469835464,
+  "method": "Eye/nose/mouth bounds are threshold-derived within manually selected ROIs; eye mark components use thresholded connected regions. Anatomical body/ear/tail rectangles are manual approximate visual landmarks, not segmented 3D dimensions. Color medians are lit-image observations, not measured base material colors.",
+  "threshold_boxes": {
+    "eye_viewer_left": [
+      324,
+      441,
+      555,
+      661
+    ],
+    "eye_viewer_right": [
+      678,
+      441,
+      930,
+      658
+    ],
+    "nose": [
+      600,
+      597,
+      638,
+      622
+    ],
+    "mouth": [
+      593,
+      622,
+      648,
+      664
+    ]
+  },
+  "eye_marks_by_area": {
+    "eye_viewer_left": [
+      {
+        "bbox_px": [
+          423,
+          470,
+          517,
+          562
+        ],
+        "area_px": 4340
+      },
+      {
+        "bbox_px": [
+          380,
+          577,
+          422,
+          620
+        ],
+        "area_px": 777
+      },
+      {
+        "bbox_px": [
+          382,
+          483,
+          402,
+          504
+        ],
+        "area_px": 219
+      }
+    ],
+    "eye_viewer_right": [
+      {
+        "bbox_px": [
+          747,
+          469,
+          842,
+          563
+        ],
+        "area_px": 4436
+      },
+      {
+        "bbox_px": [
+          820,
+          581,
+          858,
+          621
+        ],
+        "area_px": 645
+      },
+      {
+        "bbox_px": [
+          713,
+          546,
+          733,
+          567
+        ],
+        "area_px": 230
+      }
+    ]
+  },
+  "manual_approximate_boxes": {
+    "head_main_excluding_ears_approx": [
+      236,
+      270,
+      980,
+      808
+    ],
+    "torso_core_excluding_limbs_approx": [
+      420,
+      805,
+      790,
+      1075
+    ],
+    "body_with_limbs_excluding_tail_approx": [
+      365,
+      800,
+      833,
+      1163
+    ],
+    "arm_viewer_left_approx": [
+      365,
+      820,
+      493,
+      1000
+    ],
+    "arm_viewer_right_approx": [
+      718,
+      820,
+      833,
+      1002
+    ],
+    "leg_foot_viewer_left_approx": [
+      438,
+      1065,
+      589,
+      1163
+    ],
+    "leg_foot_viewer_right_approx": [
+      610,
+      1065,
+      761,
+      1163
+    ],
+    "upright_ear_approx": [
+      223,
+      178,
+      495,
+      490
+    ],
+    "folded_ear_approx": [
+      766,
+      292,
+      1020,
+      522
+    ],
+    "upright_antenna_ball_approx": [
+      467,
+      69,
+      603,
+      202
+    ],
+    "bent_antenna_ball_approx": [
+      797,
+      149,
+      935,
+      285
+    ],
+    "tail_visible_front_approx": [
+      773,
+      790,
+      967,
+      1051
+    ],
+    "ribbon_visible_front_approx": [
+      876,
+      855,
+      1012,
+      1091
+    ]
+  },
+  "observed_colors": {
+    "blue_forehead": {
+      "roi_px": [
+        560,
+        320,
+        690,
+        380
+      ],
+      "rgb_median": [
+        129,
+        216,
+        253
+      ],
+      "hex": "#81D8FD",
+      "sample_count": 7800
+    },
+    "blue_belly": {
+      "roi_px": [
+        540,
+        870,
+        650,
+        980
+      ],
+      "rgb_median": [
+        118,
+        209,
+        251
+      ],
+      "hex": "#76D1FB",
+      "sample_count": 12100
+    },
+    "pink_inner_ear": {
+      "roi_px": [
+        310,
+        285,
+        360,
+        335
+      ],
+      "rgb_median": [
+        253,
+        182,
+        198
+      ],
+      "hex": "#FDB6C6",
+      "sample_count": 2500
+    },
+    "pink_ribbon": {
+      "roi_px": [
+        925,
+        900,
+        990,
+        970
+      ],
+      "rgb_median": [
+        250,
+        162,
+        180
+      ],
+      "hex": "#FAA2B4",
+      "sample_count": 4111
+    },
+    "black_eye": {
+      "roi_px": [
+        365,
+        540,
+        400,
+        580
+      ],
+      "rgb_median": [
+        19,
+        20,
+        20
+      ],
+      "hex": "#131414",
+      "sample_count": 1400
+    },
+    "white_star": {
+      "roi_px": [
+        455,
+        500,
+        480,
+        530
+      ],
+      "rgb_median": [
+        249,
+        249,
+        249
+      ],
+      "hex": "#F9F9F9",
+      "sample_count": 750
+    },
+    "gray_sparkle": {
+      "roi_px": [
+        392,
+        596,
+        408,
+        608
+      ],
+      "rgb_median": [
+        201,
+        196,
+        198
+      ],
+      "hex": "#C9C4C6",
+      "sample_count": 192
+    },
+    "blue_antenna_ball": {
+      "roi_px": [
+        500,
+        105,
+        560,
+        155
+      ],
+      "rgb_median": [
+        122,
+        214,
+        252
+      ],
+      "hex": "#7AD6FC",
+      "sample_count": 3000
+    }
+  },
+  "manual_antenna_centerlines_px": {
+    "upright_visible_segment": [
+      [
+        539,
+        194
+      ],
+      [
+        548,
+        278
+      ]
+    ],
+    "bent_visible_segment": [
+      [
+        682,
+        281
+      ],
+      [
+        704,
+        232
+      ],
+      [
+        738,
+        198
+      ],
+      [
+        774,
+        183
+      ],
+      [
+        802,
+        184
+      ]
+    ]
+  },
+  "manual_antenna_visible_centerline_length_px": {
+    "upright_visible_segment": 84.5,
+    "bent_visible_segment": 168.8
+  }
+}

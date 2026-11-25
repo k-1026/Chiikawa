@@ -1,0 +1,91 @@
+{
+  "status": "디지털 기하만 검증 / physical sample untested",
+  "units": "mm",
+  "head_front_perimeter": 316.04105198713347,
+  "head_back_perimeter": 316.04105198713347,
+  "head_band_total": 316.04105198713347,
+  "ball_base_total": 22.081977438429362,
+  "stem_end_total": 22.081977438429362,
+  "body_outer": 163.38345153840527,
+  "body_back_outer_total": 163.38345153840527,
+  "cut_contours_self_crossing": false,
+  "checks": [
+    {
+      "id": "H01",
+      "seam_allowance_mm": 5,
+      "max_offset_line_error_mm": 9.769962616701378e-15
+    },
+    {
+      "id": "H02",
+      "seam_allowance_mm": 5,
+      "max_offset_line_error_mm": 9.769962616701378e-15
+    },
+    {
+      "id": "H03",
+      "seam_allowance_mm": 5,
+      "max_offset_line_error_mm": 0.0
+    },
+    {
+      "id": "H04",
+      "seam_allowance_mm": 5,
+      "max_offset_line_error_mm": 0.0
+    },
+    {
+      "id": "B01",
+      "seam_allowance_mm": 5,
+      "max_offset_line_error_mm": 7.993605777301127e-15
+    },
+    {
+      "id": "B02",
+      "seam_allowance_mm": 5,
+      "max_offset_line_error_mm": 6.217248937900877e-15
+    },
+    {
+      "id": "A01",
+      "seam_allowance_mm": 5,
+      "max_offset_line_error_mm": 6.217248937900877e-15
+    },
+    {
+      "id": "F01",
+      "seam_allowance_mm": 5,
+      "max_offset_line_error_mm": 2.6645352591003757e-15
+    },
+    {
+      "id": "E01",
+      "seam_allowance_mm": 5,
+      "max_offset_line_error_mm": 7.105427357601002e-15
+    },
+    {
+      "id": "E02",
+      "seam_allowance_mm": 5,
+      "max_offset_line_error_mm": 6.217248937900877e-15
+    },
+    {
+      "id": "N01",
+      "seam_allowance_mm": 5,
+      "max_offset_line_error_mm": 0.0
+    },
+    {
+      "id": "N02",
+      "seam_allowance_mm": 5,
+      "max_offset_line_error_mm": 3.552713678800501e-15
+    },
+    {
+      "id": "N03",
+      "seam_allowance_mm": 5,
+      "max_offset_line_error_mm": 2.6645352591003757e-15
+    },
+    {
+      "id": "T01",
+      "seam_allowance_mm": 5,
+      "max_offset_line_error_mm": 5.329070518200751e-15
+    }
+  ],
+  "unfinished": [
+    "실제봉제",
+    "완성치수",
+    "외형일치",
+    "원단신축",
+    "강도"
+  ]
+}

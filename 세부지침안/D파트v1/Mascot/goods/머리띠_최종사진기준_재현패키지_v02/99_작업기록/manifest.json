@@ -1,0 +1,61 @@
+{
+  "version": "v02",
+  "handoff_files": [
+    "DK-HB01_대키미_6방향_기준.png",
+    "머리띠_최종사진기준_제작사양서_v02.pdf",
+    "OM-HB01_외지몽_6방향_기준.png",
+    "머리띠_최종사진기준_디자인시트_v02.pdf"
+  ],
+  "master_sha256": {
+    "DK": "863e37360a14a78075a5993039b471fb1a0b32c6f43636689f65d3fa98f4170b",
+    "OM": "6df9cf4083fa91c26c9937549b0a1ef4fcfe096889de16771fa2cefbe833b1f3"
+  },
+  "master_status": "user-requested visual masters; no physical sample approved",
+  "numeric_status": "new engineering proposals, not measured from manufactured samples",
+  "dimensions_mm": {
+    "band_width": 140,
+    "band_height": 135,
+    "overall_height_approx": 190,
+    "ball_diameter": 28,
+    "antenna_height": 55,
+    "ball_center_spacing": 54,
+    "cat_ear": [
+      55,
+      65
+    ],
+    "dog_ear_longaxis_width": [
+      110,
+      55
+    ]
+  },
+  "pdfs": [
+    {
+      "file": "머리띠_최종사진기준_디자인시트_v02.pdf",
+      "pages": 9,
+      "titles": [
+        "머리띠 2종 | 사진 기준 디자인",
+        "대키미 | 6방향 외관 마스터",
+        "외지몽 | 6방향 외관 마스터",
+        "대키미 | 형상·배색 상세",
+        "외지몽 | 형상·배색 상세",
+        "재질·색상 | 사진의 인상을 유지",
+        "길이·배치 | 사진 비율을 먼저 고정",
+        "AI 재현 지침 | 그대로 복사해 사용",
+        "검수 기준 | 무엇이 같아야 하는가"
+      ]
+    },
+    {
+      "file": "머리띠_최종사진기준_제작사양서_v02.pdf",
+      "pages": 7,
+      "titles": [
+        "머리띠 2종 | 샘플 제작 사양",
+        "01 | 공통 치수와 좌표",
+        "02 | 대키미 부위별 배치",
+        "03 | 외지몽 부위별 배치",
+        "04 | 자재와 내부 구조 제안",
+        "05 | 봉제·조립과 외관 관리",
+        "06 | 실물 검수와 제작사 회신"
+      ]
+    }
+  ]
+}

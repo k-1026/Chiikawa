@@ -1,0 +1,135 @@
+{
+  "status": "product_images_generated_review_pending",
+  "missing": [],
+  "manufacturing_pending": [
+    "단일 벡터 칼선·타공·백색판·양면 인쇄 정합",
+    "실물 샘플 승인"
+  ],
+  "files": [
+    {
+      "path": "00_전달안내.html",
+      "bytes": 3125,
+      "sha256": "58441d56d61b3fbb255d94fae6079cbdbed7a30af1c8cc5760adfece71f9fbb1"
+    },
+    {
+      "path": "00_전달안내.md",
+      "bytes": 2044,
+      "sha256": "d7f42583d6448539dd990c36fb96efcc037fa196779aedc7d25331786324c31e"
+    },
+    {
+      "path": "01_상품이미지/대키미_3종_정면후면_상품이미지_v01.png",
+      "bytes": 2090810,
+      "sha256": "9eede28c903ffe3dab2f25eee927c27c1baac4d717becb2a0f30c6ea41c93cfa",
+      "pixel_dimensions": [
+        1536,
+        1024
+      ]
+    },
+    {
+      "path": "01_상품이미지/외지몽_3종_정면후면_상품이미지_v01.png",
+      "bytes": 2070646,
+      "sha256": "734ad18e872b94ae8ad76bc0be312e1fe521698d1acb247e27f6541706253a67",
+      "pixel_dimensions": [
+        1536,
+        1024
+      ]
+    },
+    {
+      "path": "02_디자인시트/대키미_3종_디자인시트_v02.html",
+      "bytes": 7693504,
+      "sha256": "0c1c7f43bad27a6ca6758574be7207ef25fbcfc4d462724b805c90bf31635028"
+    },
+    {
+      "path": "02_디자인시트/대키미_3종_디자인시트_v02.md",
+      "bytes": 9757,
+      "sha256": "07336710ca5ece474a9a68bc9e7f4600bc0354e9832205b953fb0bcb7578cd8f"
+    },
+    {
+      "path": "02_디자인시트/외지몽_3종_디자인시트_v02.html",
+      "bytes": 7585758,
+      "sha256": "3e65b19e565f7a140f5854a01eee04571e819a8c9be9a17c0b4fbc5fc4e05c84"
+    },
+    {
+      "path": "02_디자인시트/외지몽_3종_디자인시트_v02.md",
+      "bytes": 10674,
+      "sha256": "3219c156122f2b3db9d059ae9e9bf39750c7951833e3b7986f1a13f6a25aafe8"
+    },
+    {
+      "path": "03_제작사양서/대키미_3종_제작사양서_v02.html",
+      "bytes": 2795653,
+      "sha256": "31ed11be36926cc6af03a802e8fcc698dff52f27b11452c642ccba558c01db72"
+    },
+    {
+      "path": "03_제작사양서/대키미_3종_제작사양서_v02.md",
+      "bytes": 5986,
+      "sha256": "0d1a932e18e2371adb0b03bc72cd8c6984bed1178573bb5090f48a169e482da1"
+    },
+    {
+      "path": "03_제작사양서/외지몽_3종_제작사양서_v02.html",
+      "bytes": 2769224,
+      "sha256": "3c493c3c3437582a049013f6e351c77c5e445fb41c65a363d394aaeba1c013cc"
+    },
+    {
+      "path": "03_제작사양서/외지몽_3종_제작사양서_v02.md",
+      "bytes": 6418,
+      "sha256": "fe1a152bdcac307de515f972ffa96645aef27e4ee545a4f34618fa18ec3f1b36"
+    },
+    {
+      "path": "04_재현기준/6종_선택원본_v02.png",
+      "bytes": 2115406,
+      "sha256": "c3fe6f39d2f6adf0d3973f46b0dfed602ab7e43eff9d2f8863a6edf5974510ff",
+      "pixel_dimensions": [
+        1536,
+        1024
+      ]
+    },
+    {
+      "path": "04_재현기준/대키미_성체_v08.png",
+      "bytes": 1554977,
+      "sha256": "e944f4b679859d25ecc5c88bd08d18d33f7dc3775429256c518eb7e26e765300",
+      "pixel_dimensions": [
+        1448,
+        1086
+      ]
+    },
+    {
+      "path": "04_재현기준/외지몽_성체_확정_SAMPLE05.png",
+      "bytes": 1493695,
+      "sha256": "996b30fb14364c10554880d62c4e7eb5be304067125ef62ff4ab1be71b023d0a",
+      "pixel_dimensions": [
+        1536,
+        1024
+      ]
+    },
+    {
+      "path": "04_재현기준/외지몽_캐릭터_확정규칙_原文.md",
+      "bytes": 31380,
+      "sha256": "c91e86ee17cba1b0dd40120ffb1b0dce6f47088e2f5bbe35a5df19307e4ef100"
+    },
+    {
+      "path": "05_프롬프트/6종_선택원본.txt",
+      "bytes": 3549,
+      "sha256": "e097178975520fd59e0385903659b199b947901cf003dd87001390334acdaa69"
+    },
+    {
+      "path": "05_프롬프트/대키미_정면후면.txt",
+      "bytes": 2921,
+      "sha256": "01df50d663ac93f68e3f409a6166b1686cb26a0e8c6150b69514800e2d8b8c0e"
+    },
+    {
+      "path": "05_프롬프트/외지몽_정면후면_생성_v01.txt",
+      "bytes": 3309,
+      "sha256": "01d218141066075c1d7a9cfa89c6d72352681f576a848f43370c22030729682a"
+    },
+    {
+      "path": "05_프롬프트/외지몽_정면후면_생성대기.txt",
+      "bytes": 3309,
+      "sha256": "01d218141066075c1d7a9cfa89c6d72352681f576a848f43370c22030729682a"
+    },
+    {
+      "path": "05_프롬프트/외지몽_후면_보정이력_v01.txt",
+      "bytes": 2868,
+      "sha256": "9387efaa1c227df97db63c831419de20fdcdb02d09deeac92a81a5f1fef91903"
+    }
+  ]
+}

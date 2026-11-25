@@ -1,0 +1,50 @@
+[
+  {
+    "source": "output/imagegen/oejimong_baby_samples_v01/generation_prompts.json",
+    "copy": "외지몽 아기버전/캐릭터 디자인/외지몽_초기_정면시안_v00/prompts/generation_prompts.json"
+  },
+  {
+    "source": "output/imagegen/oejimong_baby_samples_v01/외지몽_아기_볼살_블러셔_v02_생성프롬프트.txt",
+    "copy": "외지몽 아기버전/캐릭터 디자인/외지몽_볼살_블러셔_시안_v01/prompts/외지몽_아기_볼살_블러셔_v02_생성프롬프트.txt"
+  },
+  {
+    "source": "output/imagegen/oejimong_baby_samples_v01/외지몽_아기_앞볼살_v03_생성프롬프트.txt",
+    "copy": "외지몽 아기버전/캐릭터 디자인/외지몽_앞볼살_블러셔_시안_v02/prompts/외지몽_아기_앞볼살_v03_생성프롬프트.txt"
+  },
+  {
+    "source": "output/imagegen/oejimong_baby_samples_v01/외지몽_아기_블러셔_앞머리_v04_생성프롬프트.txt",
+    "copy": "외지몽 아기버전/캐릭터 디자인/외지몽_블러셔_앞머리2가닥_시안_v03/prompts/외지몽_아기_블러셔_앞머리_v04_생성프롬프트.txt"
+  },
+  {
+    "source": "output/imagegen/oejimong_baby_samples_v01/외지몽_아기_둥근앞머리_원형블러셔_v05_생성프롬프트.txt",
+    "copy": "외지몽 아기버전/캐릭터 디자인/외지몽_둥근앞머리_원형블러셔_시안_v04/prompts/외지몽_아기_둥근앞머리_원형블러셔_v05_생성프롬프트.txt"
+  },
+  {
+    "source": "output/imagegen/oejimong_baby_samples_v01/외지몽_아기_작은둥근앞머리_v06_생성프롬프트.txt",
+    "copy": "외지몽 아기버전/캐릭터 디자인/외지몽_작은둥근앞머리_시안_v05/prompts/외지몽_아기_작은둥근앞머리_v06_생성프롬프트.txt"
+  },
+  {
+    "source": "output/imagegen/oejimong_baby_samples_v01/외지몽_아기_앞머리가로폭_v07_생성프롬프트.txt",
+    "copy": "외지몽 아기버전/캐릭터 디자인/외지몽_앞머리_가로폭축소_시안_v06/prompts/외지몽_아기_앞머리가로폭_v07_생성프롬프트.txt"
+  },
+  {
+    "source": "output/imagegen/oejimong_baby_samples_v01/외지몽_아기_6방향_생성프롬프트_v01.txt",
+    "copy": "외지몽 아기버전/캐릭터 디자인/외지몽_6방향_초기시안_v07/prompts/외지몽_아기_6방향_생성프롬프트_v01.txt"
+  },
+  {
+    "source": "output/imagegen/oejimong_baby_samples_v01/외지몽_아기_서있는정면_생성프롬프트_v01.txt",
+    "copy": "외지몽 아기버전/캐릭터 디자인/외지몽_서있는정면_초기시안_v08/prompts/외지몽_아기_서있는정면_생성프롬프트_v01.txt"
+  },
+  {
+    "source": "output/imagegen/oejimong_baby_samples_v01/외지몽_아기_서있는정면_손발단순화_v02_생성프롬프트.txt",
+    "copy": "외지몽 아기버전/캐릭터 디자인/외지몽_서있는정면_손발단순화_v09/prompts/외지몽_아기_서있는정면_손발단순화_v02_생성프롬프트.txt"
+  },
+  {
+    "source": "output/imagegen/oejimong_baby_samples_v01/외지몽_아기_둥근손발_연한블러셔_v03_생성프롬프트.txt",
+    "copy": "외지몽 아기버전/캐릭터 디자인/외지몽_서있는정면_연한블러셔_v10/prompts/외지몽_아기_둥근손발_연한블러셔_v03_생성프롬프트.txt"
+  },
+  {
+    "source": "output/imagegen/oejimong_baby_samples_v01/외지몽_아기_서있는정면_블러셔중간농도_v04_생성프롬프트.txt",
+    "copy": "외지몽 아기버전/캐릭터 디자인/외지몽_기존승인_서있는정면_측정시트_v11/prompts/외지몽_아기_서있는정면_블러셔중간농도_v04_생성프롬프트.txt"
+  }
+]

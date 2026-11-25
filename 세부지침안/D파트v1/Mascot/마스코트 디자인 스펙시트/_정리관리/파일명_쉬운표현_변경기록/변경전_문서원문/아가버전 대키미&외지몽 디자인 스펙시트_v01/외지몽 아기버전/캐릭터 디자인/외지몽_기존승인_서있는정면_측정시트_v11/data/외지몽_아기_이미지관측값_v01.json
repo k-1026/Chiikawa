@@ -1,0 +1,510 @@
+{
+  "version": "baby.ver_v01",
+  "date": "2026-11-09",
+  "source": "reference/01_외지몽_아기_최종승인_서있는정면_v01.png",
+  "source_sha256": "9c9c581b1cc96b1021bd79365d15dc9dce9be86c4b9680b0bd6584b951e2b0bf",
+  "image_size_px": [
+    1536,
+    1024
+  ],
+  "method": "Manual visible 2D bounds. Approximate projection values, not measured 3D geometry.",
+  "coordinate_system": "Origin top-left, +x right, +y down, xyxy end exclusive.",
+  "standing": {
+    "height_cm_fixed": 53,
+    "top_y_px": 96,
+    "floor_y_px": 947,
+    "height_px": 851,
+    "cm_per_px": 0.06227967097532315
+  },
+  "seated": {
+    "source": "reference/03_외지몽_아기_앉은정면_기준_v01.png",
+    "top_y_px": 96,
+    "floor_y_px": 900,
+    "head_width_alignment_factor": 1.0,
+    "height_px": 804,
+    "height_cm_approx": 50.07,
+    "design_height_cm_rounded": 50,
+    "caveat": "Head widths manually aligned (~557px each); pose estimate, not physical or rig simulation."
+  },
+  "parts": {
+    "head_core": {
+      "label": "머리 본체 — 귀·안테나 제외",
+      "bbox_xyxy_px": [
+        487,
+        220,
+        1044,
+        674
+      ],
+      "width_height_px": [
+        557,
+        454
+      ],
+      "width_height_cm_approx": [
+        34.69,
+        28.27
+      ],
+      "width_height_pct_total": [
+        65.45,
+        53.35
+      ]
+    },
+    "head_with_ears": {
+      "label": "귀를 포함한 최대 머리 폭",
+      "bbox_xyxy_px": [
+        380,
+        220,
+        1155,
+        674
+      ],
+      "width_height_px": [
+        775,
+        454
+      ],
+      "width_height_cm_approx": [
+        48.27,
+        28.27
+      ],
+      "width_height_pct_total": [
+        91.07,
+        53.35
+      ]
+    },
+    "torso": {
+      "label": "몸통 — 팔 제외, 가려진 경계 근사",
+      "bbox_xyxy_px": [
+        612,
+        668,
+        913,
+        883
+      ],
+      "width_height_px": [
+        301,
+        215
+      ],
+      "width_height_cm_approx": [
+        18.75,
+        13.39
+      ],
+      "width_height_pct_total": [
+        35.37,
+        25.26
+      ]
+    },
+    "eye_viewer_left": {
+      "label": "화면 왼쪽 눈 검정 영역",
+      "bbox_xyxy_px": [
+        527,
+        369,
+        706,
+        554
+      ],
+      "width_height_px": [
+        179,
+        185
+      ],
+      "width_height_cm_approx": [
+        11.15,
+        11.52
+      ],
+      "width_height_pct_total": [
+        21.03,
+        21.74
+      ]
+    },
+    "eye_viewer_right": {
+      "label": "화면 오른쪽 눈 검정 영역",
+      "bbox_xyxy_px": [
+        832,
+        371,
+        1011,
+        553
+      ],
+      "width_height_px": [
+        179,
+        182
+      ],
+      "width_height_cm_approx": [
+        11.15,
+        11.33
+      ],
+      "width_height_pct_total": [
+        21.03,
+        21.39
+      ]
+    },
+    "muzzle": {
+      "label": "크림색 주둥이 영역",
+      "bbox_xyxy_px": [
+        657,
+        469,
+        877,
+        644
+      ],
+      "width_height_px": [
+        220,
+        175
+      ],
+      "width_height_cm_approx": [
+        13.7,
+        10.9
+      ],
+      "width_height_pct_total": [
+        25.85,
+        20.56
+      ]
+    },
+    "nose": {
+      "label": "검정 코",
+      "bbox_xyxy_px": [
+        733,
+        485,
+        805,
+        531
+      ],
+      "width_height_px": [
+        72,
+        46
+      ],
+      "width_height_cm_approx": [
+        4.48,
+        2.86
+      ],
+      "width_height_pct_total": [
+        8.46,
+        5.41
+      ]
+    },
+    "belly": {
+      "label": "크림색 배 무늬",
+      "bbox_xyxy_px": [
+        678,
+        697,
+        846,
+        853
+      ],
+      "width_height_px": [
+        168,
+        156
+      ],
+      "width_height_cm_approx": [
+        10.46,
+        9.72
+      ],
+      "width_height_pct_total": [
+        19.74,
+        18.33
+      ]
+    },
+    "ear_viewer_left": {
+      "label": "화면 왼쪽 귀 보이는 영역",
+      "bbox_xyxy_px": [
+        380,
+        275,
+        549,
+        596
+      ],
+      "width_height_px": [
+        169,
+        321
+      ],
+      "width_height_cm_approx": [
+        10.53,
+        19.99
+      ],
+      "width_height_pct_total": [
+        19.86,
+        37.72
+      ]
+    },
+    "ear_viewer_right": {
+      "label": "화면 오른쪽 귀 보이는 영역",
+      "bbox_xyxy_px": [
+        988,
+        274,
+        1154,
+        594
+      ],
+      "width_height_px": [
+        166,
+        320
+      ],
+      "width_height_cm_approx": [
+        10.34,
+        19.93
+      ],
+      "width_height_pct_total": [
+        19.51,
+        37.6
+      ]
+    },
+    "ball_viewer_left": {
+      "label": "화면 왼쪽 안테나 구슬",
+      "bbox_xyxy_px": [
+        529,
+        96,
+        657,
+        218
+      ],
+      "width_height_px": [
+        128,
+        122
+      ],
+      "width_height_cm_approx": [
+        7.97,
+        7.6
+      ],
+      "width_height_pct_total": [
+        15.04,
+        14.34
+      ]
+    },
+    "ball_viewer_right": {
+      "label": "화면 오른쪽 안테나 구슬",
+      "bbox_xyxy_px": [
+        867,
+        99,
+        993,
+        219
+      ],
+      "width_height_px": [
+        126,
+        120
+      ],
+      "width_height_cm_approx": [
+        7.85,
+        7.47
+      ],
+      "width_height_pct_total": [
+        14.81,
+        14.1
+      ]
+    },
+    "forelock_group": {
+      "label": "앞머리 두 갈래 묶음",
+      "bbox_xyxy_px": [
+        715,
+        181,
+        818,
+        225
+      ],
+      "width_height_px": [
+        103,
+        44
+      ],
+      "width_height_cm_approx": [
+        6.41,
+        2.74
+      ],
+      "width_height_pct_total": [
+        12.1,
+        5.17
+      ]
+    },
+    "hand_viewer_left": {
+      "label": "화면 왼쪽 손 끝 영역 — 손목 경계 근사",
+      "bbox_xyxy_px": [
+        545,
+        735,
+        625,
+        810
+      ],
+      "width_height_px": [
+        80,
+        75
+      ],
+      "width_height_cm_approx": [
+        4.98,
+        4.67
+      ],
+      "width_height_pct_total": [
+        9.4,
+        8.81
+      ]
+    },
+    "hand_viewer_right": {
+      "label": "화면 오른쪽 손 끝 영역 — 손목 경계 근사",
+      "bbox_xyxy_px": [
+        893,
+        735,
+        974,
+        810
+      ],
+      "width_height_px": [
+        81,
+        75
+      ],
+      "width_height_cm_approx": [
+        5.04,
+        4.67
+      ],
+      "width_height_pct_total": [
+        9.52,
+        8.81
+      ]
+    },
+    "foot_viewer_left": {
+      "label": "화면 왼쪽 발 보이는 영역",
+      "bbox_xyxy_px": [
+        620,
+        886,
+        742,
+        947
+      ],
+      "width_height_px": [
+        122,
+        61
+      ],
+      "width_height_cm_approx": [
+        7.6,
+        3.8
+      ],
+      "width_height_pct_total": [
+        14.34,
+        7.17
+      ]
+    },
+    "foot_viewer_right": {
+      "label": "화면 오른쪽 발 보이는 영역",
+      "bbox_xyxy_px": [
+        779,
+        885,
+        896,
+        947
+      ],
+      "width_height_px": [
+        117,
+        62
+      ],
+      "width_height_cm_approx": [
+        7.29,
+        3.86
+      ],
+      "width_height_pct_total": [
+        13.75,
+        7.29
+      ]
+    },
+    "tail_visible": {
+      "label": "정면에서 보이는 꼬리 부분 — 가려진 뿌리 제외",
+      "bbox_xyxy_px": [
+        901,
+        672,
+        1038,
+        843
+      ],
+      "width_height_px": [
+        137,
+        171
+      ],
+      "width_height_cm_approx": [
+        8.53,
+        10.65
+      ],
+      "width_height_pct_total": [
+        16.1,
+        20.09
+      ]
+    },
+    "blush_viewer_left": {
+      "label": "화면 왼쪽 블러셔의 완만한 경계 근사",
+      "bbox_xyxy_px": [
+        524,
+        527,
+        603,
+        595
+      ],
+      "width_height_px": [
+        79,
+        68
+      ],
+      "width_height_cm_approx": [
+        4.92,
+        4.24
+      ],
+      "width_height_pct_total": [
+        9.28,
+        7.99
+      ]
+    },
+    "blush_viewer_right": {
+      "label": "화면 오른쪽 블러셔의 완만한 경계 근사",
+      "bbox_xyxy_px": [
+        932,
+        527,
+        1010,
+        596
+      ],
+      "width_height_px": [
+        78,
+        69
+      ],
+      "width_height_cm_approx": [
+        4.86,
+        4.3
+      ],
+      "width_height_pct_total": [
+        9.17,
+        8.11
+      ]
+    }
+  },
+  "observed_colors": {
+    "green_forehead": {
+      "sample_box_px": [
+        730,
+        290,
+        800,
+        335
+      ],
+      "observed_rgb_median": [
+        122,
+        246,
+        65
+      ],
+      "observed_hex": "#7AF641"
+    },
+    "cream_belly": {
+      "sample_box_px": [
+        729,
+        745,
+        781,
+        799
+      ],
+      "observed_rgb_median": [
+        254,
+        234,
+        218
+      ],
+      "observed_hex": "#FEEADA"
+    },
+    "blush_viewer_left": {
+      "sample_box_px": [
+        548,
+        547,
+        577,
+        574
+      ],
+      "observed_rgb_median": [
+        220,
+        152,
+        109
+      ],
+      "observed_hex": "#DC986D"
+    },
+    "antenna_lit": {
+      "sample_box_px": [
+        560,
+        125,
+        610,
+        160
+      ],
+      "observed_rgb_median": [
+        108,
+        239,
+        42
+      ],
+      "observed_hex": "#6CEF2A"
+    }
+  },
+  "uncertainty": "Soft fur boundaries about ±5–10px, occluded torso/hand boundaries may exceed this. No precise hidden depths asserted."
+}

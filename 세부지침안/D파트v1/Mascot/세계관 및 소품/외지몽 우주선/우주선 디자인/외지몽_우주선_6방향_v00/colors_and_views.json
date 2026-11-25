@@ -1,0 +1,22 @@
+{
+  "status": "review concepts, not a validated 3D turnaround",
+  "tool": "built-in image_gen",
+  "green_rendered_midtone": "#43C146",
+  "green_highlight_sample": "#7EEC83",
+  "cream_rendered_sample": "#FEF4E5",
+  "cream_spec_base": "#F8F0E4",
+  "sampling": "Front mascot panel masked green pixels G>R+40,G>B+30,80<G<230 median. Cream belly sample. Observed image colors include illumination, not recovered shader albedo.",
+  "left_right": "LEFT nose toward screen left; RIGHT nose toward screen right",
+  "review_limits": [
+    "Back is a proposed continuation of engine and hull.",
+    "Landing foot visibility and canopy depth vary between generated views."
+  ],
+  "files": [
+    "01_FRONT.png",
+    "02_45_LEFT.png",
+    "03_45_RIGHT.png",
+    "04_SIDE_LEFT.png",
+    "05_SIDE_RIGHT.png",
+    "06_BACK.png"
+  ]
+}

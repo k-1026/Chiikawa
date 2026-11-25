@@ -1,0 +1,152 @@
+[
+  {
+    "file": "대키미_아기_시팅_디자인_측정시트_v01.md",
+    "bytes": 18476,
+    "sha256": "86c8c1977b24f4336d0771f2e19c727bd9a28e24e2ba618121667dfc0f4a2410"
+  },
+  {
+    "file": "README_전달전확인.txt",
+    "bytes": 460,
+    "sha256": "4bcb100d7623b59b8572d2afc23bf7899139c3a0634b9c0bf6019f9cb3891723"
+  },
+  {
+    "file": "pdf/대키미_아기_시팅_통합디자인시트_v01.pdf",
+    "bytes": 21774619,
+    "sha256": "f2857bc7d4a9b81e30821b67fe57d32cff64dc5c5866357e623e68af06d04aab"
+  },
+  {
+    "file": "sources/대구_얼라들_승인로고.png",
+    "bytes": 1462786,
+    "sha256": "4c55b4da0db388d6d3cf1cd5040e36fc8717f109f485889bae53511dff19b795"
+  },
+  {
+    "file": "data/sRGB Profile_sha256.txt",
+    "bytes": 65,
+    "sha256": "d2023ae1fc99f3bbb8366c70f05dea2346a1ce7699aedeeb979293b58a84ffba"
+  },
+  {
+    "file": "data/generation_record.json",
+    "bytes": 2215,
+    "sha256": "687a74f1803ffb835991bb76ede250aff7552c12a429bd48c524f634560c318b"
+  },
+  {
+    "file": "data/Generic CMYK Profile_sha256.txt",
+    "bytes": 65,
+    "sha256": "5a92ac2feab6772f477b82a418cc3f128fa4c9a4c371a09e1112463325b73029"
+  },
+  {
+    "file": "data/measurement_palette_v01.json",
+    "bytes": 9404,
+    "sha256": "501183897ad9e3fc2d47a7699b76e48ac9f7aee71a1f2408f42c8505217872cc"
+  },
+  {
+    "file": "vector/face_embarrassed.svg",
+    "bytes": 10729,
+    "sha256": "3ddf4db762358689b4ff9f2d1c0a9a8d15a02eb240690781861a17f014fc4f49"
+  },
+  {
+    "file": "vector/poses_review_v01.eps",
+    "bytes": 88955,
+    "sha256": "919ed0bb9c1919f0d40e8dff37007151b081a86309e0522a9d5a12c049b04720"
+  },
+  {
+    "file": "vector/face_sleepy.svg",
+    "bytes": 8921,
+    "sha256": "cfcce3afcc8b0f8b75c9587ca4351f014528e714bde324d17611ffcbb84f781e"
+  },
+  {
+    "file": "vector/expressions_review_v01.pdf",
+    "bytes": 7001,
+    "sha256": "5f978d723ce480a0da8867714743ca38f9e44e6b310d0d4e8fb39d4c1816608b"
+  },
+  {
+    "file": "vector/face_joy.svg",
+    "bytes": 6568,
+    "sha256": "79f1e619e376d6cb1af2d92d20d8b5f7a812001c0bc7ac8c5a6d388d69dd2c69"
+  },
+  {
+    "file": "vector/front_grid_raster_reference.svg",
+    "bytes": 2611885,
+    "sha256": "0a4e97ea3ef0dd98d1a819b2f80944c15ea8f6791dadc37a171bae85cc83a504"
+  },
+  {
+    "file": "vector/face_sad.svg",
+    "bytes": 7128,
+    "sha256": "bac350700012c19839f9add190628f6b33aecb390e581777cf2041afe64762e5"
+  },
+  {
+    "file": "vector/expressions_review_v01.svg",
+    "bytes": 61355,
+    "sha256": "82888ed888fee460d59e9e615ee41020e4cce7de3be41402c5aefe947cfed2a6"
+  },
+  {
+    "file": "vector/face_wink.svg",
+    "bytes": 8253,
+    "sha256": "3da15d976dca9489b06f114cce56a55411050052aef7d51da73d3a9188543ee0"
+  },
+  {
+    "file": "vector/face_surprise.svg",
+    "bytes": 6406,
+    "sha256": "58f1625121788e87448d1fece7a5e49c07595b833faf1151648fd9ae95d091b8"
+  },
+  {
+    "file": "vector/poses_review_v01.svg",
+    "bytes": 74228,
+    "sha256": "14559c6bf765724126f69dfd8a037e97dd8c76b7e8176aec4b87284d83bd6da7"
+  },
+  {
+    "file": "vector/face_neutral.svg",
+    "bytes": 7585,
+    "sha256": "3880ae3b46e5e61d19df8ad9cc83617553227e860225b32d3efb4b60c03bb16f"
+  },
+  {
+    "file": "vector/face_confused.svg",
+    "bytes": 7120,
+    "sha256": "4bb45f892d97ff1896e486cf2e7f57310c0fcf42b58d0402b1ec611392498b52"
+  },
+  {
+    "file": "vector/expressions_review_v01.eps",
+    "bytes": 72369,
+    "sha256": "bd89d630aeaaab91d3fc5f4cafdb434df4aa7bb450e338710d54a7f67fd21331"
+  },
+  {
+    "file": "vector/poses_review_v01.pdf",
+    "bytes": 8124,
+    "sha256": "e440793a9f21a8f0ff941b5144b02f1960185731e393ba7097518df0d99c30db"
+  },
+  {
+    "file": "reference/02_45_LEFT.png",
+    "bytes": 1917337,
+    "sha256": "24575743e1ce8bd9191489e672ad1ad43a2164ca443c8014b0099a4603726a02"
+  },
+  {
+    "file": "reference/06_BACK.png",
+    "bytes": 2020647,
+    "sha256": "bbe0c1795198ae79992d51de9f622f9c545de9a7301932bbebf6e5b16fa32871"
+  },
+  {
+    "file": "reference/05_SIDE_RIGHT.png",
+    "bytes": 1907461,
+    "sha256": "f92a39f6b656a1000a41fa51e4f24af29576419a383c4ca51ac2f08c3d74ca18"
+  },
+  {
+    "file": "reference/07_무드등_소등점등_컨셉.png",
+    "bytes": 1551691,
+    "sha256": "4db643bbf7f133aaa165f2f7f7359c4da0478c14e9769e2863d9178a98e3a98f"
+  },
+  {
+    "file": "reference/04_SIDE_LEFT.png",
+    "bytes": 1908701,
+    "sha256": "65cd4acbef0caedceef782356e1b416b9d06b3a3da04471958da39d6913c61a0"
+  },
+  {
+    "file": "reference/01_FRONT.png",
+    "bytes": 1958229,
+    "sha256": "c2639ab40a7c34393b1eace0e3ee5bd0a4fa0546a7de3883b92bb2625e4f567d"
+  },
+  {
+    "file": "reference/03_45_RIGHT.png",
+    "bytes": 2029167,
+    "sha256": "e039a9a1a88c8f9a39ee62610d73766a535e5f239046872ba68b77efef91fe84"
+  }
+]

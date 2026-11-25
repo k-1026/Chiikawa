@@ -1,0 +1,160 @@
+{
+  "oejimong": {
+    "source": "character/외지몽 캐릭터 설정보드.png",
+    "sha256": "5a55a135f95318872d4ded2d38434d599c9d6ff61890a953be481e454e7b5927",
+    "image_size": [
+      793,
+      1983
+    ],
+    "swatch_samples": {
+      "body": {
+        "hex": "#028437",
+        "rgb": [
+          2,
+          132,
+          55
+        ],
+        "center_xy": [
+          623,
+          504
+        ],
+        "sample_size": [
+          9,
+          9
+        ],
+        "method": "per-channel median of swatch pixels"
+      },
+      "muzzle_and_inner_ear": {
+        "hex": "#F8F0E4",
+        "rgb": [
+          248,
+          240,
+          228
+        ],
+        "center_xy": [
+          533,
+          578
+        ],
+        "sample_size": [
+          9,
+          9
+        ],
+        "method": "per-channel median of swatch pixels"
+      },
+      "eyes": {
+        "hex": "#262524",
+        "rgb": [
+          38,
+          37,
+          36
+        ],
+        "center_xy": [
+          623,
+          587
+        ],
+        "sample_size": [
+          9,
+          9
+        ],
+        "method": "per-channel median of swatch pixels"
+      },
+      "highlights": {
+        "hex": "#FEFEFE",
+        "rgb": [
+          254,
+          254,
+          254
+        ],
+        "center_xy": [
+          717,
+          577
+        ],
+        "sample_size": [
+          9,
+          9
+        ],
+        "method": "per-channel median of swatch pixels"
+      }
+    },
+    "body_hex_printed_on_board": "#008C3A"
+  },
+  "daekimi": {
+    "source": "character/대키미 캐릭터 설정보드.png",
+    "sha256": "99f9eaf0e27627e19c1fd6cfc3307c97f4e5158b82c3111d95cd62a0a4fa3f32",
+    "image_size": [
+      793,
+      1983
+    ],
+    "swatch_samples": {
+      "body": {
+        "hex": "#73CDF7",
+        "rgb": [
+          115,
+          205,
+          247
+        ],
+        "center_xy": [
+          523,
+          489
+        ],
+        "sample_size": [
+          9,
+          9
+        ],
+        "method": "per-channel median of swatch pixels"
+      },
+      "inner_ear": {
+        "hex": "#FDB6C1",
+        "rgb": [
+          253,
+          182,
+          193
+        ],
+        "center_xy": [
+          608,
+          485
+        ],
+        "sample_size": [
+          9,
+          9
+        ],
+        "method": "per-channel median of swatch pixels"
+      },
+      "eyes": {
+        "hex": "#282727",
+        "rgb": [
+          40,
+          39,
+          39
+        ],
+        "center_xy": [
+          672,
+          485
+        ],
+        "sample_size": [
+          9,
+          9
+        ],
+        "method": "per-channel median of swatch pixels"
+      },
+      "highlights": {
+        "hex": "#FEFEFE",
+        "rgb": [
+          254,
+          254,
+          254
+        ],
+        "center_xy": [
+          736,
+          485
+        ],
+        "sample_size": [
+          9,
+          9
+        ],
+        "method": "per-channel median of swatch pixels"
+      }
+    },
+    "body_hex_printed_on_board": "#6DCFF5"
+  }
+}

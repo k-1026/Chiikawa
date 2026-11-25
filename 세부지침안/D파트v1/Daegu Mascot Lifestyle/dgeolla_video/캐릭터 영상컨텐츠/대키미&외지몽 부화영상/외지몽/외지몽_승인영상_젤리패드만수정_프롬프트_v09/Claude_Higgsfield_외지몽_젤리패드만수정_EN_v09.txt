@@ -1,0 +1,52 @@
+Use the attached APPROVED VIDEO as the base for a localized correction. This is NOT a request to generate a new hatching video.
+
+INPUTS
+Base video: hf_20261113_174025_d8d5e4d3-2722-4486-b5f5-41a7500d67a7.mp4
+Pad design reference: approved Oejimong baby seated-front image, 07_앉은자세_정면.png.
+Use that still ONLY for palm/sole pad shape, number, spacing and material. Do not transfer its seated pose, waving gesture, framing or background.
+
+CAPABILITY CHECK
+Inspect the connected Higgsfield tools before submitting.
+Use Seedance 2.5 only if the connection supports this existing-video editing task. If it does not, report that limitation and do not silently replace the task with text-to-video or image-to-video regeneration or switch models.
+If a local video editing/mask control is available, confine it to the affected hand and foot surface regions. Preserve everything outside those regions.
+Generate ONE edited output only. No automatic additional paid attempts.
+
+ONLY REQUESTED CHANGE: CORRECT THE PALM AND SOLE JELLY PADS
+The approved source video's scene, animation, character and audio are accepted.
+Correct only missing, simplified, malformed or misplaced palm/sole pads throughout the existing footage.
+
+On EACH of the two palms and EACH of the two soles, the complete design consists of:
+- ONE large soft rounded cream central pad, with the reference's gently rounded heart/triangle contour and shallow central notch along its lower edge.
+- Exactly THREE separate small cream OVAL pads above it, in a shallow arc, with the middle oval slightly higher than the two side ovals.
+- FOUR individual pads per palm/sole: 1 large + 3 small. Four anatomical surfaces in total; do not force all 16 pads to be visible simultaneously.
+
+Match the approved pad reference's relative size and spacing. Leave visible green surface between the four pads and around the pad group.
+The large pad and three small ovals must remain separate, not merge into one cream disk, ring, mitten patch or solid cream sole.
+In particular, replace the single round cream palm disks visible around the source video's 7-second and 10-second moments with the correct four-part design wherever the actual palm faces the camera.
+
+MATERIAL
+Warm cream matching the approved pad reference and the source lighting.
+Smooth, hairless, softly rounded, shallow cushion-like volume, low sheen.
+No fur on the pads, transparent gel, neon glow, hard plastic shine, deep grooves, claws or added fingers/toes.
+Do not change the hands' mitten silhouette, feet's oval silhouette, size, articulation or proportions.
+
+ANATOMICAL PLACEMENT AND TEMPORAL CONSISTENCY
+Pads exist ONLY on the palm-facing and sole-facing skin surfaces.
+No pads on handbacks, foot tops, wrists, ankles, sides of limbs or elsewhere on the body.
+If an incorrect pad appears on a back/top surface, remove that misplaced patch and restore the matching green surface in that same local region.
+Track each pad group on its actual hand or foot through the entire existing motion. Maintain the same shapes, count and placement as that surface rotates.
+Allow natural perspective foreshortening, motion blur and occlusion. Never rotate a hand/foot or change a pose to display the pads.
+When a palm or sole faces away or touches the floor, pads may be partly or completely hidden. Do not stamp the four-pad pattern onto every visible hand/foot surface.
+No flickering, drifting, floating pads, extra ovals or disappearing visible parts from frame to frame.
+
+PRESERVE THE APPROVED VIDEO
+Preserve its original duration (approximately 15.042 seconds), frame rate, aspect ratio, resolution and original audio where the editing tool permits.
+Keep the existing frame-by-frame timing, camera, composition, lighting, shadows, environment, green color, fur, face, eyes and eye motifs, blush, cream muzzle/belly/tail tip, forelocks, ears, antennae and character proportions.
+Keep the existing egg roll, emergence order, yellow antenna signal marks and their timing, shell break and floor shell fragments, continuous tail wag, smile/head tilt, single fall, upright recovery, two-legged second run and its speed, gentle face contact and close backward-step ending.
+Do not re-choreograph, retime, add cuts, reframe, zoom, change expressions, change the run, change the impact, add accessories or alter any other accepted detail.
+
+RETURN
+Return the completed edited video.
+If inspection is supported, check only the pad correction, natural visibility and preservation of the accepted source footage.
+Report any preservation limitations honestly. Do not claim pixel-identical preservation unless verified. Do not automatically generate another paid attempt.
+

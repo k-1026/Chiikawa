@@ -1,0 +1,17 @@
+{
+  "status": "unapproved calibration test; not exact reference reproduction",
+  "changes_targeted": [
+    "smaller eyes",
+    "narrower torsos and shallower belly",
+    "narrower sharper cat ears",
+    "smaller dog ears and antenna balls",
+    "reference hero midtone colors"
+  ],
+  "remaining_visual_concerns": [
+    "dog ears still appear broader/larger than intended",
+    "cat ear tips and face contour still require original-side comparison",
+    "rendered material is not yet confirmed to match the source board"
+  ],
+  "spec": "mascot_design_spec_v04.md",
+  "method": "built-in image_gen using both original boards and v04 comparison prompt"
+}

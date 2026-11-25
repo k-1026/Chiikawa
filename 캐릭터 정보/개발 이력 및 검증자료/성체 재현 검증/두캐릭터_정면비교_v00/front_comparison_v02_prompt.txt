@@ -1,0 +1,4 @@
+Generation method: built-in image_gen
+Reference: mascot_design_spec_v02.md and the two original character boards.
+
+undefined

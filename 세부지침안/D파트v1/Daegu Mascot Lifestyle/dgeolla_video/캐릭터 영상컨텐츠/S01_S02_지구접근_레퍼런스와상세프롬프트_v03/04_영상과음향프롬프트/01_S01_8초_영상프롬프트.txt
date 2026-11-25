@@ -1,0 +1,30 @@
+S01 · 지구 접근 · 최종8초 / 9:16
+첨부 기본: G01은 시작, G04는 종료. G02/G03는 실제 다중키프레임/참조 기능을 지원할 때만 각각 약2.7초/5.3초 역할을 지정.
+디자인 검증 보조: R01 외지몽 정면, R02 측면, R03 닫힌 우주선, R04 얼라별. 지원 개수 확인 후 역할별로 사용.
+한 페이지 스토리보드 전체를 영상 시작 프레임으로 넣지 않음.
+
+핵심: 얼라별은 작아지고 우주선과 외지몽·지구는 커진다. 전부 같은 비율로 확대하는 단일 줌이 아니다.
+0–2초 출발 공간 제시. 두 행성은 처음부터 느리게 자전.
+2–4초 외지몽이 조종간을 작게 조작하고 우주선이 실제로 지구 방향으로 전진.
+4–6초 얼라별은 더 멀어지고 별/입자 시차가 보임. 우주선과 지구가 각각 커짐.
+6–8초 지구의 아시아가 뚜렷하게 보이고 우주선/조종석도 가까워짐. 대기권 진입·착륙 없음. 다음 S02와 시선/빛 방향 연결.
+지구와 우주선이 함께 커지는 크기 변화는 카메라 접근과 실제 비행의 합성 연출. 고정 사진 전체 확대를 지시하지 않음.
+
+EN VIDEO PROMPT
+An eight-second continuous cute cinematic 3D space approach. Use G01 as the start and G04 as the endpoint, with G02 and G03 as supported intermediate pose/composition references only. The original adult green alien dog actively pilots the original closed green-and-cream spacecraft toward Earth at screen right, making one small joystick adjustment and a restrained forward body response. Keep its face, eye-star motifs, muzzle, drooping ears, head depth and two head antennas unchanged; keep the spacecraft's original two external antennas, single CLOSED canopy, ear-like side pods, original seat and two controls.
+
+Animate THREE independent depth trajectories simultaneously: the distant coral planet with mint ring behind at upper left recedes and SHRINKS; the spacecraft AND its pilot advance and GROW visibly together; Earth in the right foreground grows as distance to it closes. Camera approaches from the same front-side three-quarter angle while the craft travels forward. Do not simply apply one digital zoom to the entire starting still. Do not keep the spacecraft size constant.
+
+Both planets slowly rotate on their own axes with coherent surface features. Eollastar surface stars/craters drift around its sphere, its ring plane stable. Earth continent/cloud orientation changes smoothly with no land morphing, finishing clearly on ASIA: China/East Asia, Korean peninsula/Japan, India and Southeast Asia. Keep the screen-right Earth placement and upper-right blue-white Earth light so the next cockpit shot can match. Sparse nearby particles drift relative to distant stars at different speeds; no warp tunnel.
+
+0–2s establish moving space; 2–4s tiny joystick adjustment and purposeful acceleration; 4–6s stronger depth/parallax and receding planet; 6–8s gentle Earth approach ending on the Asia-facing globe and a larger readable cockpit. Maintain forward motion through the final frame, no freeze/stop, collision, landing, atmospheric entry, abrupt spin, camera-axis flip, opened canopy or scene cut.
+
+No text, map labels, pins, inset maps, overlays, logos, speech bubbles, dialogue, narration, lip-sync or altered face. Mild warm engine light pulses naturally, no violent flame.
+
+음향: 03_BGM_효과음_프롬프트.txt의8초 구간 적용. 영상 모델의 오디오 지원이 확인되지 않으면 영상과 음향을 분리 제작/편집.
+
+입력 기능에 따른 실행
+A. 실제 start/end 입력 지원: G01/G04를 역할대로 지정하고8초 연속쇼트 생성. MID는 지원되는 기능으로만.
+B. 실제 다중 시간키프레임 지원: G01/G02/G03/G04를0/2.7/5.3/8초로 지정(정확 시간 지정이 가능한 경우에만).
+C. start만 지원하거나 A에서 크기 변화를 놓침: G01→G02, G02→G03, G03→G04를 각각 짧은 구간으로 생성해 약2.7/2.6/2.7초로 편집. 끝프레임 미지원이면 목표포즈를 프롬프트로 지정. 구간 사이 카메라/비행방향/속도가 끊기면 사용하지 않고 재조정.
+생성 모델·지원 길이·입력 개수는 실행 시 확인. 특정 모델이 이 모든 기능을 지원한다고 가정하지 않음.

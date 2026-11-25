@@ -1,0 +1,17 @@
+GLOBAL PRODUCTION LOCK
+The two protagonists are cute stylized CG mascots, not realistic animals or biological creatures. Preserve the supplied adult character identity and original proportions in every shot. Oejimong height 105cm, Daekimi 103cm to antenna top at equal distance. Do not resculpt heads to increase cuteness. Use small eye-line changes, a tiny smile, natural eyelid blinks and restrained head tilts.
+Oejimong: green drooping ears, two ball-tipped antennas, exact rounded triangular black eye shapes with one large white four-point star, one small grey star and one tiny diamond per open eye; cream muzzle, almost round cream belly patch, thick rounded green tail with small cream tip via long soft gradient. No blush, fur, extra fingers or elongated limbs. Visible paw/sole pads: one main plus three small. Never put pads on hand backs.
+Daekimi: blue cat, original pink ear interiors, exact eye motifs, two antennas, pink ribbon on its curled TAIL ONLY. Adult character body and original face unchanged.
+Shots 01–03 are cute clean stylized 3D space animation. Shots 04–24 use PHOTOREAL humans, park, stage, stalls, food, utensils, cotton and products, with cute CG mascots/spacecraft integrated by physically matched light, contact shadows, reflections and depth. Do not stylize humans into toys. Human faces stay natural, restrained and mostly side/back/background; isolate the single food vendor rather than crowded prominent faces.
+Main stage is the same Duryu Kolon Outdoor Music Hall wide low slanted canopy throughout shots 07 and 24. Debate stays distant across the lawn, never a second close stage.
+No spoken dialogue or narration, no lip-sync. Symbol-only speech bubbles are added in editing. Do not generate text, logos, shirt prints or bubbles into source images. Festival signs and exact typography are post-production layers.
+Main characters never adopt merchandise baby proportions. Product keyrings/seated dolls follow their own source images and textile materials. Oejimong seated plush is an explicitly approved CONCEPT based on approved baby reference; not a finalized manufactured product.
+Keep travel direction and 180-degree screen axis consistent within each encounter. Avoid complex object transfers, face-touching, food-mouth collisions and large facial distortions. One principal action per generated clip.
+
+SHOT S07 — START FRAME, vertical 9:16, no baked text.
+REFERENCE ROLES:
+1. O: 성체 외지몽 정면 — references/O_외지몽_승인정면_v04.png
+2. OS: 성체 외지몽 측면 폭 — references/OS_외지몽_승인측면_머리폭_v04.png
+Photoreal long shot across the broad lawn of Daegu Duryu Kolon Outdoor Music Hall. The SAME actual main stage with its broad shallow slanted canopy is far away, not a separate small debate stage. Tiny real human contestants at two lecterns and a moderator, audience seen mostly from behind. Cute CG Oejimong back occupies only lower 15–20 percent foreground. Afternoon.
+NEGATIVE:
+No extra or missing limbs, fingers, antennae or ears; no merged hands; no moving eye-star patterns; no protruding belly plate; no white tail root; no neck bow; no horror or uncanny human faces; no duplicated background people; no human lips/teeth added to mascots; no giant chewing mouth; no realistic fur on CG protagonists; no toys replacing humans; no map insets, location pins or Daegu text in shot03; no spaceship side door; no close-up replacement debate stage; no unapproved branded products or invented merchant participation; no generated Korean gibberish.

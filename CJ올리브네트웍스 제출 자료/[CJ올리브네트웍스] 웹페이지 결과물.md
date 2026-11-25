@@ -1,0 +1,18 @@
+# 대구 사투리축제 웹페이지
+
+## 대구 사투리 페스티벌 공식 사이트
+
+온라인 보기 : <https://claude.ai/artifact/MHRij47baNYrrhdSx9rMER>
+
+설명 : 대구 사투리 페스티벌(대사투) 방문객이 행사 정보와 일정, 위치를 확인하고 현장 투표 등 축제 프로그램에도 직접 참여할 수 있는 웹페이지입니다. 오프라인 안내 책자를 대신해 축제 안내와 현장 참여를 한곳에서 제공하는 온라인 안내서입니다.
+
+## 순환형 축제 기획 에이전트 사이트
+
+온라인 보기 : <https://daesatu-festival-v05.vercel.app/>
+
+설명 : 순환형 축제 기획 AI 에이전트를 웹에서 직접 실행해 볼 수 있는 데모 사이트입니다. 에이전트가 어떻게 작동하는지 살펴보고, 실행을 통해 생성된 축제 기획 결과물을 확인할 수 있습니다. 데모 사이트는 지속적으로 개선하고 있습니다.
+
+순환형 에이전트 구성도 : <https://claude.ai/artifact/HwtuFfTZmXXLN5CtmhGKkq>
+
+## 영상&이미지 자료 모음집 구글 드라이브
+영상&이미지 자료 구글드라이브 : <https://drive.google.com/drive/folders/1kNLKhrPFYJ8ky4JNlktyYssHqaXZaDuL>

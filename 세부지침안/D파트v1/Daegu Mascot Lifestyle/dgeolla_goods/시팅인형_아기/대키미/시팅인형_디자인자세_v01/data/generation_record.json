@@ -1,0 +1,15 @@
+{
+  "tool": "built-in image generation",
+  "date": "2026-11-12",
+  "approved_front": "reference/01_FRONT.png",
+  "turnaround_prompt": "Produce ONE square full-body single-view reference of SAME approved seated BABY DAEKIMI from image1. Keep exact head/body proportions, compact hips and feet, broad soft chest supporting head with no pinched neck, both arms relaxed DOWN beside upper thighs, short rounded mitten hands, feet forward, seated on bottom. Same neutral upright head (not tilted), eyes original rounded black triangular outlines with each large white4point star+small GRAY4point sparkle+tiny pale diamond. No cheek blush, no smile/tongue. Small closed cat mouth. Skyblue uniform very short fine plush fur, smooth hairless antenna stems and balls. Anatomical LEFT ear folded and LEFT antenna bent outward, RIGHT ear upright and RIGHT antenna more upright. Two ears two antennae two ROUND balls. Pink ear interior and pink pads each main1+small4 only actual palm/sole surfaces. Same small plump curled blue cat tail from rear lower center curving toward anatomical LEFT (viewer right at front). ONE pink fabric bow naturally TIED around tail just before curl tip, continuous wrap band feeds into central knot, TWO folded hollow loops and TWO separate hanging tails total, fabric folds realistic and parts naturally occlude by angle, never duplicate bow or flatten all elements to camera. No loose ribbon on head/ear/body/hand/floor. Keep source style skyblue color, fine down, warm ivory studio background soft light, full silhouette all parts with margins, matching camera scale. Image2 older view is ONLY rough skull depth orientation reference, do not copy its draped ribbon, raised arms or head tilt. Not a new design. No text, labels, arrows or grid.",
+  "view_rules": {
+    "LEFT45": "nose image-left; nearer folded left ear",
+    "RIGHT45": "nose image-right; nearer upright right ear",
+    "SIDE_LEFT": "nose image-left",
+    "SIDE_RIGHT": "nose image-right",
+    "BACK": "tail, folded ear, bent antenna image-left"
+  },
+  "lamp": "AI visual concept only; unlit/lit comparison, not physically calibrated optics",
+  "status": "Derived views pending user review; approved front preserved exactly."
+}
