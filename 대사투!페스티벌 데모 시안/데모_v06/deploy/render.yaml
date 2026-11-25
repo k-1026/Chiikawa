@@ -2,7 +2,7 @@ services:
   - type: web
     name: daesatu-festival-v06-api
     runtime: docker
-    dockerfilePath: ./deploy/Dockerfile
+    dockerfilePath: ./Dockerfile
     healthCheckPath: /api/status
     envVars:
       - key: DATABASE_URL     # Supabase Session pooler 주소. Render 화면에서 직접 입력(Git에 올리지 않음)
