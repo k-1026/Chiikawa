@@ -1,0 +1,29 @@
+# Render Blueprint: 대사투! 페스티벌 v06 서버. 비밀값(sync:false)은 Render 화면에서 직접 입력한다.
+services:
+  - type: web
+    name: daesatu-festival-api
+    runtime: docker
+    repo: https://github.com/k-1026/Chiikawa
+    branch: kimseunghee
+    rootDir: 대사투!페스티벌 데모 시안/데모_v06
+    dockerfilePath: ./Dockerfile
+    dockerContext: .
+    region: singapore
+    plan: free
+    autoDeploy: true
+    healthCheckPath: /api/status
+    envVars:
+      - key: PUBLIC_ORIGIN
+        value: https://daesatu-festival-api.onrender.com
+      - key: PUBLIC_WEB_ORIGINS
+        value: https://daesatu-festival-v06.vercel.app
+      - key: DATABASE_URL
+        sync: false
+      - key: GEMINI_API_KEY
+        sync: false
+      - key: GEMINI_MODEL
+        sync: false
+      - key: EMBEDDING_MODEL
+        sync: false
+      - key: EMBEDDING_DIM
+        sync: false
