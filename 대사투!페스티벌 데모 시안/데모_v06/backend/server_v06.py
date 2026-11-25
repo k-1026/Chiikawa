@@ -41,6 +41,16 @@ try:
     from dotenv import load_dotenv
     load_dotenv(ROOT/'.env',override=False)
 except ImportError:pass
+def clean_env():
+    """환경변수 값에 '이름=' 이나 따옴표가 같이 붙어 들어온 경우(복사 실수)를 바로잡는다. 값은 출력하지 않는다."""
+    for key in ('DATABASE_URL','GEMINI_API_KEY','GEMINI_MODEL','EMBEDDING_MODEL','EMBEDDING_DIM','PUBLIC_ORIGIN','PUBLIC_WEB_ORIGINS'):
+        v=os.environ.get(key)
+        if v is None:continue
+        c=v.strip().strip('"\'').strip()
+        if c.startswith(key+'='):c=c[len(key)+1:].strip().strip('"\'').strip()
+        if c!=v:os.environ[key]=c
+clean_env()
+
 STORE=None
 _LOCK=threading.Lock();_USER_LOCKS={};_AI_LOCK=threading.Lock();_SEM=threading.BoundedSemaphore(3)
 
