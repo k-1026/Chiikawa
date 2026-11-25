@@ -15,7 +15,7 @@ services:
       - key: PUBLIC_ORIGIN
         value: https://daesatu-festival-api.onrender.com
       - key: PUBLIC_WEB_ORIGINS
-        value: https://daesatu-festival-v06.vercel.app
+        value: https://daesatu-festival-v06.vercel.app,https://daesatu-festival-web.vercel.app
       - key: DATABASE_URL
         sync: false
       - key: GEMINI_API_KEY
