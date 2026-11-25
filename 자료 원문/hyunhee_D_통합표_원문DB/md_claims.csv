@@ -42,7 +42,7 @@ CLM-D2-09-02,MD-HYUNHEE-D-V2,축 2. 장소·상권,9,fact,true,시티투어 정�
 CLM-D2-09-03,MD-HYUNHEE-D-V2,축 2. 장소·상권,9,fact,true,2026-10-21 특별코스에 간송미술관 특별전시 포함,S,시티투어 사이트,match,일치,2
 CLM-D2-10-01,MD-HYUNHEE-D-V2,축 2. 장소·상권,10,fact,true,"12경 팔공산, 대표 관광명소 동화사·갓바위·부인사·팔공산국립공원",S,tour.daegu.go.kr,match,일치,2
 CLM-D2-10-02,MD-HYUNHEE-D-V2,축 2. 장소·상권,10,fact,true,권역별 명품코스 '팔공산힐링' 2개,S,tour.daegu.go.kr,match,일치,1
-CLM-D2-10-03,MD-HYUNHEE-D-V2,축 2. 장소·상권,10,figure,true,동화사 템플스테이 요금 어른 5만 원/어린이 3만 원,S,페이지 표기,unverifiable,확인 불가,1
+CLM-D2-10-03,MD-HYUNHEE-D-V2,축 2. 장소·상권,10,figure,true,동화사 템플스테이 요금 어른 5만 원/어린이 3만 원,S,페이지 표기,match,일치,2
 CLM-D2-11-01,MD-HYUNHEE-D-V2,축 2. 장소·상권,11,fact,true,"대표 관광명소 앞산공원전망대·앞산 카페거리, 야간관광 100선 앞산공원",S,tour.daegu.go.kr,match,일치,2
 CLM-D2-11-02,MD-HYUNHEE-D-V2,축 2. 장소·상권,11,figure,true,앞산 케이블카 1974년 설치·연장 795m,S,남구 사이트,match,일치,1
 CLM-D2-12-01,MD-HYUNHEE-D-V2,축 2. 장소·상권,12,fact,true,비슬산은 12경,S,tour.daegu.go.kr,match,일치,1
@@ -59,7 +59,7 @@ CLM-D2-17-04,MD-HYUNHEE-D-V2,축 2. 장소·상권,17,fact,true,갱신 2026-09-1
 CLM-D2-18-01,MD-HYUNHEE-D-V2,축 2. 장소·상권,18,fact,true,시티투어 안내: 교동시장·따로국밥골목·동인동 찜갈비골목·안지랑곱창골목·들안길 먹거리타운,S,시티투어 사이트,match,일치,3
 CLM-D2-18-02,MD-HYUNHEE-D-V2,축 2. 장소·상권,18,fact,true,쇼핑 페이지: 평화시장 닭똥집골목·방촌시장·서부 오미가미거리,S,tour.daegu.go.kr,match,일치,1
 CLM-D2-N1-01,MD-HYUNHEE-D-V2,축 2. 장소·상권,N1,fact,true,"대구 10미: 대구따로국밥(대구육개장), 막창구이, 뭉티기, 동인동찜갈비, 논메기매운탕, 복어불고기, 누른국수, 무침회, 야끼우동, 납작만두",S,대구관광안내,match,일치,1
-CLM-D2-N2-01,MD-HYUNHEE-D-V2,축 2. 장소·상권,N2,fact,true,"대구10미데이 2025년 6~9월, 참여업소 최대 50곳 공모",B,한국경제 2025-05-09,match,일치,2
+CLM-D2-N2-01,MD-HYUNHEE-D-V2,축 2. 장소·상권,N2,fact,true,"대구10미데이 2025년 6~9월, 참여업소 최대 50곳 공모",B,한국경제 2025-05-09,match,일치,4
 CLM-D2-N2-02,MD-HYUNHEE-D-V2,축 2. 장소·상권,N2,fact,true,대구10미데이 목적: 인지도 제고·외식업 활성화,B,한국경제 2025-05-09,faithful_summary,의미를 유지한 요약,1
 CLM-D2-N3-01,MD-HYUNHEE-D-V2,축 2. 장소·상권,N3,fact,true,대구관광안내 '음식' 메뉴에 음식점가이드북 파일 링크가 있음,S,대구관광안내,match,일치,2
 CLM-D2-N4-01,MD-HYUNHEE-D-V2,축 2. 장소·상권,N4,fact,true,안심창조밸리(연꽃마을축제 8월경),S,tour.daegu.go.kr 쇼핑,match,일치,1
@@ -68,7 +68,7 @@ CLM-D2-N4-03,MD-HYUNHEE-D-V2,축 2. 장소·상권,N4,fact,true,"롯데아웃렛
 CLM-D2-N4-04,MD-HYUNHEE-D-V2,축 2. 장소·상권,N4,fact,true,"서부 오미가미거리: 2015년 5월 전국 최초 프랜차이즈 특화거리, 청년 마켓",S,tour.daegu.go.kr 쇼핑,match,일치,2
 CLM-D2-N7-01,MD-HYUNHEE-D-V2,축 2. 장소·상권,N7,figure,true,"골목형상점가 100곳·점포 7,100여 개",B,경북매일 2026-09-11,match,일치,3
 CLM-D2-N7-02,MD-HYUNHEE-D-V2,축 2. 장소·상권,N7,fact,true,유망 상권 18곳 입간판·포토존,B,경북매일 2026-09-11,match,일치,2
-CLM-D2-N7-03,MD-HYUNHEE-D-V2,축 2. 장소·상권,N7,fact,true,골목상권·전통시장 33곳 가을축제(10월 12일~),B,경북매일 2026-09-11,match,일치,3
+CLM-D2-N7-03,MD-HYUNHEE-D-V2,축 2. 장소·상권,N7,fact,true,골목상권·전통시장 33곳 가을축제(10월 12일~),B,경북매일 2026-09-11,match,일치,4
 CLM-D2-N9-01,MD-HYUNHEE-D-V2,축 2. 장소·상권,N9,fact,true,대구치맥페스티벌 'K-치맥 스트리트'에 플리마켓존 포함,B,매일신문 2026-06-29,faithful_summary,의미를 유지한 요약,3
 CLM-D2-21-01,MD-HYUNHEE-D-V2,축 3. 연결 프로그램,21,quote,true,"대구시 관계자: 방문객 숫자보다 소비로 이어지는 구조, 도심 체류형 관광 생태계",B,중도일보 2026-05-28,faithful_summary,의미를 유지한 요약,2
 CLM-D2-21-02,MD-HYUNHEE-D-V2,축 3. 연결 프로그램,21,fact,true,야간관광 발굴·제7차 대구권 관광개발계획 마무리·'지방공항 중심 5대 관광권 육성사업' 선정,B,매일신문 2026-10-11,match,일치,3
@@ -86,7 +86,7 @@ CLM-D2-25-01,MD-HYUNHEE-D-V2,축 3. 연결 프로그램,25,fact,true,대구시 �
 CLM-D2-26-01,MD-HYUNHEE-D-V2,축 3. 연결 프로그램,26,fact,true,대구시 누리집 '체험·관광·교육 프로그램' 메뉴,S,DG,faithful_summary,의미를 유지한 요약,1
 CLM-D2-27-01,MD-HYUNHEE-D-V2,축 3. 연결 프로그램,27,fact,true,"북구 스탬프투어 2026-07-15~11-30, 20곳 중 6곳 이상 방문 시 2만 원 상당 모바일 상품권",B,경북매일,overgeneralization,과도한 일반화,3
 CLM-D2-27-02,MD-HYUNHEE-D-V2,축 3. 연결 프로그램,27,fact,true,2024년 판은 11곳+코스 3개,B,뉴스서울,match,일치,1
-CLM-D2-27-03,MD-HYUNHEE-D-V2,축 3. 연결 프로그램,27,fact,true,북구 사이트: 테마여행 코스 7개,S,북구 사이트,mismatch,불일치,1
+CLM-D2-27-03,MD-HYUNHEE-D-V2,축 3. 연결 프로그램,27,fact,true,북구 사이트: 테마여행 코스 7개,S,북구 사이트,scope_mismatch,적용 범위 다름,2
 CLM-D2-28-01,MD-HYUNHEE-D-V2,축 3. 연결 프로그램,28,fact,true,2024-07 달성군 관광박람회 수상 보도(파크골프 투어상품),B,제목만,mismatch,불일치,1
 CLM-D2-29-01,MD-HYUNHEE-D-V2,축 3. 연결 프로그램,29,fact,true,2026-08-27~30 대만 여행업계·언론 30여 명 홍보여행,B,경북매일 2026-09-03,match,일치,1
 CLM-D2-29-02,MD-HYUNHEE-D-V2,축 3. 연결 프로그램,29,fact,true,"사문진주막촌 막걸리 시음, 마비정벽화마을 떡메치기",B,경북매일 2026-09-03,match,일치,2
@@ -97,7 +97,7 @@ CLM-D2-30-02,MD-HYUNHEE-D-V2,축 3. 연결 프로그램,30,fact,true,'팔공산 
 CLM-D2-30-03,MD-HYUNHEE-D-V2,축 3. 연결 프로그램,30,figure,true,"리서치웰 여론조사 2026-01: 찬성 61.4%(대구·경북 1,003명)",B,매일신문 2026-07,match,일치,2
 CLM-D2-31-01,MD-HYUNHEE-D-V2,축 3. 연결 프로그램,31,fact,true,"수성못 수상공연장 착공 2026-12 목표, 준공 2028-02 목표",B,경북매일 2026-09-28,match,일치,2
 CLM-D2-31-02,MD-HYUNHEE-D-V2,축 3. 연결 프로그램,31,fact,true,일정이 2026-06→2027→2028로 밀림,B,경북매일 2026-09-28,mismatch,불일치,2
-CLM-D2-31-03,MD-HYUNHEE-D-V2,축 3. 연결 프로그램,31,figure,true,총 300억(국 99·시 100·구 101),B,경북매일 2026-09-28,match,일치,1
+CLM-D2-31-03,MD-HYUNHEE-D-V2,축 3. 연결 프로그램,31,figure,true,총 300억(국 99·시 100·구 101),B,경북매일 2026-09-28,match,일치,3
 CLM-D2-32-01,MD-HYUNHEE-D-V2,축 3. 연결 프로그램,32,fact,true,두류공원 관광특구·국가공원 지정 추진(보도),B,출처 미기재,faithful_summary,의미를 유지한 요약,1
 CLM-D2-33-01,MD-HYUNHEE-D-V2,축 3. 연결 프로그램,33,figure,true,"동성로 상권 활성화: 2024년부터 5년 60억 원, 팝업스토어·거리공연",B,경북매일 2026-09-11,match,일치,2
 CLM-D2-34-01,MD-HYUNHEE-D-V2,축 3. 연결 프로그램,34,fact,true,대구시: 일본·대만·동남아 개별여행객 SNS 홍보·모바일 예약 연계,B,중도일보 2026-05-28,match,일치,1

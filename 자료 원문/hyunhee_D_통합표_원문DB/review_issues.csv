@@ -4,13 +4,16 @@ ISS-002,mismatch,CLM-D2-S6-01,SRC-TOUR-LANDMARKS,"대표 관광명소: MD '45곳
 ISS-003,mismatch,CLM-D2-23-06,SRC-CITY-NIGHTTOUR,야경투어 '준비중' 기록이 현재와 다름(작성 후 변경 가능),MD 갱신
 ISS-004,mismatch,CLM-D2-31-02,SRC-NEWS-KB-20260922500376,수상공연장 일정 '2026-06'은 원문에 없음(원문 '2026년 말 완공 계획'),MD 수정
 ISS-005,overgeneralization,CLM-D2-27-01,SRC-NEWS-KB-20260714500472,북구 스탬프 상품권은 매월 50명 추첨인데 MD는 조건 누락,MD 수정
-ISS-006,time_point,CLM-D2-N7-03,SRC-DG-PRESS-278733,가을 축제 33개소 '10월 12일부터'는 9월 발표값. Aside는 10-08 보도자료에서 10/15~11/29로 바뀌었다고 보고(미검증),10-08 보도자료 확인 후 MD 갱신
+ISS-006,time_point,CLM-D2-N7-03,SRC-DG-PRESS-278733;SRC-DG-PRESS-279177,가을 축제 33개소 '10월 12일부터'는 9월 발표값. 2026-10-08 대구시 보도자료는 '10월 15일부터 11월 말까지'로 바뀜(원문 대조 완료),MD에 변경 일정 반영
+ISS-023,conflict_official_vs_news,CLM-D2-31-01,SRC-NEWS-KB-20260922500376;SRC-DG-PRESS-279838,"수상공연장 규모: 경북매일 '2000석 규모' vs 대구시 보도자료(2026-11-16) '메인 객석 1,000석'. 보도자료에는 착공·준공 목표일 없음","공연장 규모는 보도자료 값 우선, 일정은 수성구 확인"
 ISS-007,mismatch,CLM-D2-28-01,SRC-NEWS-AJU-20240729114141696,"2024-07 달성군 수상은 워케이션 중심, 파크골프 언급 없음(파크골프 투어상품은 2026 출시라는 Aside 보고)",MD 수정
 ISS-008,time_point,CLM-D2-N7-01,SRC-NEWS-KB-20261001500524,"골목형상점가: 2026-09 100곳·7,100여 개(MD와 일치) → 2026-10 기사 110곳·8천여 곳",최신 값 사용 여부 결정
-ISS-009,mismatch,CLM-D2-27-03,SRC-BUK-THEME,"북구 테마여행 코스 수: MD 7개, 하위메뉴 8개, 슬라이더 6·7개",기준(하위메뉴) 정해 MD 수정
+ISS-009,scope_mismatch,CLM-D2-27-03,SRC-BUK-THEME,"북구 테마여행 코스 수: MD 7개 = 본문 카드 7개, 하위메뉴는 8개(칠곡도호부 옛길 투어)",MD에 '본문 카드 기준' 표시
 ISS-010,official_typo,CLM-D2-02-03,SRC-TOUR-NIGHTMARKET,야시장 공지 본문 운영 기간 '2025. 3. 27.'(등록일 2026-03-27과 다름),"원문 그대로 보존, 인용 시 주의"
 ISS-011,official_internal_conflict,CLM-D2-04-03,SRC-JUNG-GOLMOK,중구 4코스 소요시간: 표 '2시간 50분' vs 소개 문단 '3시간 정도',"표 값 사용, 비고 표시"
-ISS-012,mismatch,CLM-D2-10-03,SRC-TEMPLESTAY,동화사 템플스테이 요금 MD 값의 근거 미발견(Aside 보고 현행 요금은 다름),사용하지 않거나 현행 요금으로 재조사
+ISS-012,stale_value,CLM-D2-10-03,SRC-TOUR-REGIONCOURSE;SRC-TEMPLESTAY,"동화사 템플스테이 5만/3만 원은 대구관광안내 표기와 일치. 다만 templestay.com 현행 요금(휴식형 성인 80,000원 등, Aside 보고)과 달라 옛 요금일 수 있음",templestay.com 요금 페이지 저장 후 재확인
+ISS-021,official_internal_conflict,CLM-D2-11-02,SRC-NAM-CABLE;SRC-NAM-HOME,"앞산 케이블카 요금: 남구 상세 페이지 10,500원 vs 남구 첫 화면 9,500원(MD는 요금 미기재)",운영사 요금표로 확인
+ISS-022,unverified_detail,CLM-D2-47-01,,"Aside 보고: 관광지식정보시스템(know.tour.go.kr) 주요관광지점입장객통계에서 대구·군구·관광지별 내국인/외국인 조회 가능, 총원 입력 지점은 '내국인'으로 표시됨(미검증·미보관)",know.tour.go.kr 표를 내려받아 대구 행 추출
 ISS-013,aside_only,CLM-D2-03-02;CLM-D2-04-03;CLM-D2-05-02;CLM-D2-08-02,SRC-JUNG-GOLMOK,중구 골목투어 수치는 Aside로만 열람(원문 미보관) — MD 값과 일치,사람이 페이지를 저장해 originals/에 추가하면 승인 가능
 ISS-014,unverified_detail,CLM-D2-S1-01,SRC-LAW-GUNWI,법령 보관본은 머리 정보만 글자 대조. 부칙 제1조 문구는 Aside 확인,필요 시 법령 본문 PDF 저장
 ISS-015,unverified_detail,CLM-D2-47-01,SRC-KOSIS-ENTRANCE-2025,KOSIS 파일 존재는 확인. 대구 행·내외국인 구분 값은 파일 미다운로드로 미확인,파일 내려받아 대구 행 추출

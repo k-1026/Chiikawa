@@ -42,7 +42,9 @@ FIG-BUD-003,budget,수성못 수상공연장,시비,10000000000,100억원,KRW,KR
 FIG-BUD-004,budget,수성못 수상공연장,구비,10100000000,101억원,KRW,KRW,not_stated,,,,,reported,SRC-NEWS-KB-20260922500376,CHK-KB0928-003,CLM-D2-31-03,,reference_only
 FIG-BUD-005,budget,수성못 수상공연장,2026년 필요 사업비,21190000000,211억9000만원,KRW,KRW,not_stated,,2026,,,reported,SRC-NEWS-KB-20260922500376,CHK-KB0928-005,,,reference_only
 FIG-BUD-006,budget,수성못 수상공연장,2026년 확보액(기사 시점),8281000000,82억8100만원,KRW,KRW,not_stated,,2026,,,reported,SRC-NEWS-KB-20260922500376,CHK-KB0928-005,,,reference_only
-FIG-BUD-007,spec,수성못 수상공연장,좌석 규모,2000,2000석,seats,,not_stated,,,,,reported,SRC-NEWS-KB-20260922500376,CHK-KB0928-002,,,reference_only
+FIG-BUD-007,spec,수성못 수상공연장,좌석 규모(경북매일),2000,2000석,seats,,not_stated,,,,,reported,SRC-NEWS-KB-20260922500376,CHK-KB0928-002,,"대구시 보도자료는 메인 객석 1,000석 — ISS-023",reference_only
+FIG-BUD-018,spec,수성못 수상공연장,메인 객석(대구시 보도자료),1000,"메인 객석 1,000석",seats,,not_stated,,,,,reported,SRC-DG-PRESS-279838,CHK-DGP279838-001,,2026-11-16 보도자료,approved
+FIG-BUD-019,budget,수성못 수상공연장,"국비(증액 후, 보도자료)",9900000000,99억 원,KRW,KRW,not_stated,,,,,reported,SRC-DG-PRESS-279838,CHK-DGP279838-002,CLM-D2-31-03,기존 82.5억 원에서 증액,approved
 FIG-BUD-008,budget,동성로 상권활성화 사업,총사업비(5년),6000000000,60억원,KRW,KRW,not_stated,,,,2028-12-31,reported,SRC-NEWS-NSIS-20260611,CHK-NSIS-001,CLM-D2-01-03,'2028년까지 5년간'. 시작 연도는 원문에 없어 비움,reference_only
 FIG-BUD-009,budget,동성로 상권활성화 사업,국비,3000000000,국비 30억,KRW,KRW,not_stated,,,,,reported,SRC-NEWS-NSIS-20260611,CHK-NSIS-001,,,reference_only
 FIG-BUD-010,budget,동성로 상권활성화 사업,시비,1500000000,시비 15억,KRW,KRW,not_stated,,,,,reported,SRC-NEWS-NSIS-20260611,CHK-NSIS-001,,,reference_only
@@ -79,6 +81,9 @@ FIG-PRC-007,price,대구시티투어,수요일 할인율,30,30% 할인,percent,,
 FIG-PRC-008,price,대구시티투어,동대구역 승차권 소지자 할인율,20,20% 할인,percent,,not_stated,,,,,reported,SRC-CITY-COURSE,CHK-CITY-CO-002,,,approved
 FIG-PRC-009,price,대구시티투어,대구시민의 날 요금,0,무료,KRW,KRW,not_stated,대구시민 1인,,,,actual_zero,SRC-CITY-GUIDE,CHK-CITY-GD-006,,"매월 21일, 신분증 제시",approved
 FIG-PRC-010,price,앞산 케이블카,이용 요금(구청 소개 문구),10500,"10,500원",KRW,KRW,not_stated,1인(왕복·편도 표기 없음),,,,reported,SRC-NAM-CABLE,CHK-NAM-CABLE-002,,운영사 요금표로 재확인 필요,approved
+FIG-PRC-011,price,앞산 케이블카,이용 요금(남구 첫 화면 소개글),9500,"9,500원",KRW,KRW,not_stated,1인(왕복·편도 표기 없음),,,,reported,SRC-NAM-HOME,CHK-NAM-HOME-001,,"상세 페이지 10,500원과 충돌(ISS-021)",approved
+FIG-PRC-012,price,동화사 템플스테이,요금 — 어른(대구관광안내 표기),50000,50.000원,KRW,KRW,not_stated,1인,,,,reported,SRC-TOUR-REGIONCOURSE,CHK-TOUR-RC-002,CLM-D2-10-03,기준 연도·프로그램 없음. 현행 요금과 다를 수 있음,approved
+FIG-PRC-013,price,동화사 템플스테이,요금 — 어린이(대구관광안내 표기),30000,30.000원,KRW,KRW,not_stated,1인,,,,reported,SRC-TOUR-REGIONCOURSE,CHK-TOUR-RC-002,CLM-D2-10-03,기준 연도·프로그램 없음,approved
 FIG-SPC-001,spec,앞산 케이블카,운행 거리 연장,795,795m,m,,not_stated,,,,,reported,SRC-NAM-CABLE,CHK-NAM-CABLE-001,CLM-D2-11-02,,approved
 FIG-SPC-002,spec,앞산 케이블카,편도 소요 시간,5,편도 5분 정도,minutes,,not_stated,,,,,reported,SRC-NAM-CABLE,CHK-NAM-CABLE-001,,'정도' — 어림값,approved
 FIG-SPC-003,spec,앞산 케이블카,설치 연월,,1974년 5월,year_month,,not_stated,,,,,reported,SRC-NAM-CABLE,CHK-NAM-CABLE-001,CLM-D2-11-02,,approved

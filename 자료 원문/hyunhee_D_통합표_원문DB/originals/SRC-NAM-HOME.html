@@ -1,0 +1,1517 @@
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="ko">
+  <head><meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.5, minimum-scale=1">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="대구광역시 남구의회">
+  <meta property="og:description" content="대구광역시 남구 문화관광">
+  <meta property="og:url" content="http://nam.daegu.kr/tour">
+  <title>대구광역시 남구 문화관광</title>
+  <script type="text/javascript" src="/cmsh/nam.daegu.kr/js/jquery.min.js"></script>
+  <script type="text/javascript" src="/cmsh/nam.daegu.kr/js/slick.js"></script>
+    <script type="text/javascript" src="/cmsh/tour/js/jquery.magnific-popup.js"></script>
+  <script type="text/javascript" src="/cmsh/tour/js/common.js"></script>
+  <link href="/cmsh/nam.daegu.kr/css/base.css" rel="stylesheet" type="text/css" />
+    <link href="/cmsh/tour/css/magnific-popup.css" rel="stylesheet" type="text/css" />
+  <link href="/cmsh/tour/css/layout.css" rel="stylesheet" type="text/css" />
+  <link href="/cmsh/tour/css/main.css" rel="stylesheet" type="text/css" />
+    <link href="/cmsh/nam.daegu.kr/css/slick.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="wrap">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--배너존 시작-->
+<!--배너상단 들록글 없을시 빈 화면-->
+
+
+
+
+
+<!--//배너존 끝-->
+
+
+
+
+
+
+<script type="text/javascript">
+/* ********************************************************
+* 페이지 로드 시 팝업창  오픈함수 호출
+******************************************************** */
+function fn_egov_init_PopupManage(){
+	
+}
+function fn_setup_layer_popup(popupId) {
+	$.ajax({
+	    type: "POST",
+	    url: "/icms/popup/getLayerPopup.do?popup_id="+popupId,
+	    success: function(data) {
+	    	if(data != ""){
+	    		//console.log(data);	    		
+	    		//$('body').append(divLayer);
+	    		$('body').prepend(data);
+			}
+	    }
+	    , error: function(data, status, err) { 
+			alert('서버와의 통신이 실패했습니다.'); 
+		}
+	});
+
+}
+/* ********************************************************
+* 팝업창  오픈
+******************************************************** */
+function fn_egov_popupOpen_PopupManage(popupId,fileUrl,width,height,top,left,stopVewAt){
+
+	var url = "/icms/popup/openPopupPage.do?";
+	url = url + "fileUrl=" + fileUrl;
+	url = url + "&stopVewAt=" + stopVewAt;
+	url = url + "&popupId=" + popupId;
+	var name = popupId;
+	var openWindows = window.open(url,name,"width="+width+",height="+height+",top="+top+",left="+left+",toolbar=no,status=no,location=no,scrollbars=yes,menubar=no,resizable=yes");
+
+	if(window.focus && openWindows) { openWindows.focus(); }
+}
+/* ********************************************************
+* 팝업창  오픈 쿠키 정보 OPEN
+******************************************************** */
+function fnGetCookie(name) {
+	  var prefix = name + "=";
+
+	  var cookieStartIndex = document.cookie.indexOf(prefix);
+	  if (cookieStartIndex == -1) return null;
+	  var cookieEndIndex = document.cookie.indexOf(";", cookieStartIndex + prefix.length);
+	  if (cookieEndIndex == -1) cookieEndIndex = document.cookie.length;
+
+	  return unescape(document.cookie.substring(cookieStartIndex + prefix.length, cookieEndIndex));
+}
+
+window.onload = function() {
+	fn_egov_init_PopupManage();
+};
+function fnSetCookieLayer( name, value, expiredays ) {
+    var todayDate = new Date();
+    todayDate.setDate( todayDate.getDate() + expiredays );
+    //alert(todayDate.toGMTString());
+    document.cookie = name + "=" + escape( value ) + "; path=/; expires=" + todayDate.toGMTString() + ";"
+    $("#lypop_" + name).hide();
+}
+
+function closeLayer(name) {
+    $("#lypop_" + name).hide();
+}
+</script>
+
+
+<!--
+  <div id="full_layer_wrap">
+    <div style="background:#8ddcf9;">
+      <div class="inr">
+        <img src="/cmsh/nam.daegu.kr/images/main/top_popup.png" class="img_d" alt="제13회 신천돗자리음악회 7월27일 토요일부터 7월28일 일요일 오후4시에서 오후10시까지 신천둔지(중동교 남편)"/>
+        <img src="/cmsh/nam.daegu.kr/images/main/top_popup.png" class="img_m" alt="제13회 신천돗자리음악회 7월27일 토요일부터 7월28일 일요일 오후4시에서 오후10시까지 신천둔지(중동교 남편)"/>
+        <p class="top_pop_box">
+          <input type="checkbox" id="full_layer_check"><label for="full_layer_check">오늘 하루 보지 않기</label>
+          <a href="#" id="full_layer_close" class="close_btn" onfocus="this.blur();"><img src="/cmsh/nam.daegu.kr/images/main/popup_close.png" alt="상단팝업 닫기"></a>
+        </p>
+      </div>
+    </div>
+  </div>
+-->
+
+
+  <!-- Header -->
+  <div id="skip_nav"><a href="#content">본문 바로가기</a></div>
+  
+
+
+
+
+
+
+
+
+
+
+
+<div id="accessibility"><a href="#content">본문바로가기</a></div>
+	<div id="header">
+		<div class="header_t">
+			<div class="inr">
+				<div class="go_site">
+					<div class="item n1"><a href="/index.do" target="_blank">남구청</a></div>
+					<div class="item n2"><a href="/tour/index.do">문화관광</a></div>
+					<div class="item n3"><a href="/health/index.do" target="_blank">보건소</a></div>
+					<div class="item n4"><a href="/culturalcenter/index.do" target="_blank">대덕문화전당</a></div>					
+					<div class="item n5"><a href="https://council.nam.daegu.kr/namgucl" target="_blank">의회</a></div>
+					<div class="item n6"><a href="/dong/index.do" target="_blank">동행정복지센터</a></div>
+					<div class="item n7"><a href="/library/index.do" target="_blank">도서관</a></div>
+					<div class="item n8"><a href="http://nam.daegu.kr/lll/" target="_blank">평생학습관</a></div>
+					<div class="item n9"><a href="/youthlab/index.do" target="_blank">청소년창작센터</a></div>
+					<div class="item n10"><a href="/musiclab/index.do" target="_blank">음악창작소</a></div>
+					<div class="item n11"><a href="http://nam.daegu.kr/imom/" target="_blank">아이맘센터</a></div>
+				</div>
+				<div class="language_box">	
+					<button type="button">LANGUAGE</button>
+					<ul>
+						<li><a href="/eng/index.do" target="_blank">English</a></li> 
+						<li><a href="/chi/index.do" target="_blank">中文</a></li> 
+						<li><a href="/jpa/index.do" target="_blank">日本語</a></li>  
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="header_c">
+			<h1 class="logo_area">
+				<a href="/tour/index.do">
+					<img src="/cmsh/tour/images/common/logo_header.png" alt="대구광역시 남구 문화관광">
+				</a>
+			</h1>
+			<div class="gnb_wrap">
+				<ul id="gnb">
+					<li class="sub01">
+						
+
+
+
+
+
+
+
+
+
+
+
+
+	<a href="/tour/index.do?menu_id=00110300">앞산8경</a>
+
+<div>
+	<ul>
+<li>
+    <a href="/tour/index.do?menu_id=00003181">앞산전망대</a>
+</li>
+<li>
+    <a href="/tour/index.do?menu_id=00003601">고산골 공룡공원</a>
+</li>
+<li>
+    <a href="/tour/index.do?menu_id=00110303">케이블카 하늘길</a>
+</li>
+<li>
+    <a href="/tour/index.do?menu_id=00110304">앞산의 벚꽃</a>
+</li>
+<li>
+    <a href="/tour/index.do?menu_id=00110305">앞산자락길</a>
+</li>
+<li>
+    <a href="/tour/index.do?menu_id=00110306">산성산 일출</a>
+</li>
+<li>
+    <a href="/tour/index.do?menu_id=00110307">왕건 호국 역사터</a>
+</li>
+<li>
+    <a href="/tour/index.do?menu_id=00110308">앞산 맛둘레길</a>
+</li>
+</ul>
+
+</div>
+
+
+
+					</li>
+					<li class="sub02">
+						
+
+
+
+
+
+
+
+
+
+
+
+
+	<a href="/tour/index.do?menu_id=00000901">남다른 역사관광</a>
+
+<div>
+	<ul>
+<li>
+    <a href="/tour/index.do?menu_id=00000911">국가유산</a>
+</li>
+<li>
+    <a href="/tour/index.do?menu_id=00000912">기타유적</a>
+</li>
+</ul>
+
+</div>
+
+
+
+					</li>
+					<li class="sub03">
+						
+
+
+
+
+
+
+
+
+
+
+
+
+	<a href="/tour/index.do?menu_id=00000501">남다른 생태관광</a>
+
+<div>
+	<ul>
+<li>
+    <a href="/tour/index.do?menu_id=00000903">앞산자락길</a>
+</li>
+<li>
+    <a href="/tour/index.do?menu_id=00001538">앞산 고산골 공룡화석터</a>
+</li>
+<li>
+    <a href="/tour/index.do?menu_id=00001522">고산골조각공원</a>
+</li>
+<li>
+    <a href="/tour/index.do?menu_id=00001539">사진찍기 좋은 녹색명소</a>
+</li>
+<li>
+    <a href="/tour/index.do?menu_id=00001537">고산골 메타쉐콰이어길</a>
+</li>
+</ul>
+
+</div>
+
+
+
+					</li>
+					<li class="sub04">
+						
+
+
+
+
+
+
+
+
+
+
+
+
+	<a href="/tour/index.do?menu_id=00202790">남다른 음식관광</a>
+
+<div>
+	<ul>
+<li>
+    <a href="/tour/index.do?menu_id=00000904">맛집</a>
+</li>
+<li>
+    <a href="/tour/index.do?menu_id=00000906">숙박</a>
+</li>
+<li>
+    <a href="/tour/index.do?menu_id=00203044">인증업소 안내</a>
+</li>
+</ul>
+
+</div>
+
+
+
+					</li>
+					<li class="sub05">
+						
+
+
+
+
+
+
+
+
+
+
+
+
+	<a href="/tour/index.do?menu_id=00202797">남다른 문화관광</a>
+
+<div>
+	<ul>
+<li>
+    <a href="/tour/index.do?menu_id=00205041">앞산 크리스마스 축제</a>
+</li>
+<li>
+    <a href="/tour/index.do?menu_id=00001521">이천동고미술거리 </a>
+</li>
+<li>
+    <a href="/tour/index.do?menu_id=00001554">대구앞산축제(대덕제)</a>
+</li>
+<li>
+    <a href="/tour/index.do?menu_id=00001532">대명공연거리</a>
+</li>
+<li>
+    <a href="/tour/index.do?menu_id=00001536">문화ㆍ예술 생각대로</a>
+</li>
+<li>
+    <a href="/tour/index.do?menu_id=00001557">앞산 해넘이축제</a>
+</li>
+<li>
+    <a href="/tour/index.do?menu_id=00001559">정월대보름 축제</a>
+</li>
+<li>
+    <a href="/tour/index.do?menu_id=00001560">안지랑곱창 젊음의 거리축제</a>
+</li>
+<li>
+    <a href="/tour/index.do?menu_id=00000908">단체/시설</a>
+</li>
+</ul>
+
+</div>
+
+
+
+					</li>
+					<li class="sub06">
+						
+
+
+
+
+
+
+
+
+
+
+
+
+	<a href="/tour/index.do?menu_id=00202863">남다른 구석구석</a>
+
+<div>
+	<ul>
+<li>
+    <a href="/tour/index.do?menu_id=00000902">관광명소</a>
+</li>
+<li>
+    <a href="/tour/index.do?menu_id=00202830">위치기반관광서비스</a>
+</li>
+<li>
+    <a href="/tour/index.do?menu_id=00202940">남구VR</a>
+</li>
+<li>
+    <a href="/tour/index.do?menu_id=00110200">여행가이드</a>
+</li>
+</ul>
+
+</div>
+
+
+
+					</li>
+					<li class="sub07">
+						
+
+
+
+
+
+
+
+
+
+
+
+
+	<a href="/tour/index.do?menu_id=00204110">남다른 문화예술도시</a>
+
+<div>
+	<ul>
+<li>
+    <a href="/tour/index.do?menu_id=00204112">남구가 만드는 문화예술도시</a>
+</li>
+<li>
+    <a href="/tour/index.do?menu_id=00204115">문화&도시 아카이브</a>
+</li>
+<li>
+    <a href="/tour/index.do?menu_id=00204116">지역문화생태계통합구축사업(2020~2021)</a>
+</li>
+<li>
+    <a href="/tour/index.do?menu_id=00204117">대명문화마을조성사업(2018~2020)</a>
+</li>
+<li>
+    <a href="/tour/index.do?menu_id=00204118">문화가 있는 날</a>
+</li>
+</ul>
+
+</div>
+
+
+
+					</li>
+				</ul>
+				<a href="/tour/index.do?menu_id=00202881" class="sitemap">전체메뉴</a>
+			</div>
+			
+			<nav class="wholeview_wrap">
+				<h2 class="hidden">전체메뉴</h2>
+				<button type="button" aria-controls="wholeview" aria-expanded="true" class="btn_wv"><span class="sp_ui">전체메뉴 열기/닫기</span></button>
+				<div id="wholeview">
+					<div class="m_language_box">	
+						<button type="button">LANGUAGE</button>
+						<ul>
+							<li><a href="/eng/index.do" target="_blank">English</a></li> 
+							<li><a href="/chi/index.do" target="_blank">中文</a></li> 
+							<li><a href="/jpa/index.do" target="_blank">日本語</a></li>  
+						</ul>
+					</div>
+					<!-- 전체메뉴 -->
+					<ul class="nav">
+						<li class="sub01">
+						
+
+
+
+
+
+
+
+
+
+
+
+
+	<a href="/tour/index.do?menu_id=00110300">앞산8경</a>
+
+<div>
+	<ul>
+<li>
+    <a href="/tour/index.do?menu_id=00003181">앞산전망대</a>
+</li>
+<li>
+    <a href="/tour/index.do?menu_id=00003601">고산골 공룡공원</a>
+</li>
+<li>
+    <a href="/tour/index.do?menu_id=00110303">케이블카 하늘길</a>
+</li>
+<li>
+    <a href="/tour/index.do?menu_id=00110304">앞산의 벚꽃</a>
+</li>
+<li>
+    <a href="/tour/index.do?menu_id=00110305">앞산자락길</a>
+</li>
+<li>
+    <a href="/tour/index.do?menu_id=00110306">산성산 일출</a>
+</li>
+<li>
+    <a href="/tour/index.do?menu_id=00110307">왕건 호국 역사터</a>
+</li>
+<li>
+    <a href="/tour/index.do?menu_id=00110308">앞산 맛둘레길</a>
+</li>
+</ul>
+
+</div>
+
+
+
+						</li>
+						<li class="sub02">
+							
+
+
+
+
+
+
+
+
+
+
+
+
+	<a href="/tour/index.do?menu_id=00000901">남다른 역사관광</a>
+
+<div>
+	<ul>
+<li>
+    <a href="/tour/index.do?menu_id=00000911">국가유산</a>
+</li>
+<li>
+    <a href="/tour/index.do?menu_id=00000912">기타유적</a>
+</li>
+</ul>
+
+</div>
+
+
+
+						</li>
+						<li class="sub03">
+							
+
+
+
+
+
+
+
+
+
+
+
+
+	<a href="/tour/index.do?menu_id=00000501">남다른 생태관광</a>
+
+<div>
+	<ul>
+<li>
+    <a href="/tour/index.do?menu_id=00000903">앞산자락길</a>
+<ul>
+<li>
+    <a href="/tour/index.do?menu_id=00001604">자락길 구간</a>
+</li>
+<li>
+    <a href="/tour/index.do?menu_id=00001602">자락길 소개</a>
+</li>
+<li>
+    <a href="/tour/index.do?menu_id=00001603">시설물 안내</a>
+</li>
+<li>
+    <a href="http://www.daegu.go.kr/env/index.do?menu_id=00000935" target="_blank">앞산공원 소개</a>
+</li>
+<li>
+    <a href="/tour/index.do?menu_id=00001481">앞산갤러리</a>
+</li>
+</ul>
+</li>
+<li>
+    <a href="/tour/index.do?menu_id=00001538">앞산 고산골 공룡화석터</a>
+</li>
+<li>
+    <a href="/tour/index.do?menu_id=00001522">고산골조각공원</a>
+</li>
+<li>
+    <a href="/tour/index.do?menu_id=00001539">사진찍기 좋은 녹색명소</a>
+</li>
+<li>
+    <a href="/tour/index.do?menu_id=00001537">고산골 메타쉐콰이어길</a>
+</li>
+</ul>
+
+</div>
+
+
+
+						</li>
+						<li class="sub04">
+							
+
+
+
+
+
+
+
+
+
+
+
+
+	<a href="/tour/index.do?menu_id=00202790">남다른 음식관광</a>
+
+<div>
+	<ul>
+<li>
+    <a href="/tour/index.do?menu_id=00000904">맛집</a>
+<ul>
+<li>
+    <a href="/tour/index.do?menu_id=00001535">앞산맛둘레길</a>
+</li>
+<li>
+    <a href="/tour/index.do?menu_id=00001675">남구바다맛길</a>
+</li>
+<li>
+    <a href="/tour/index.do?menu_id=00001676">안지랑 곱창골목</a>
+</li>
+<li>
+    <a href="http://www.daegufood.go.kr/kor/" target="_blank">대구맛집</a>
+</li>
+<li>
+    <a href="/tour/index.do?menu_id=00001531">앞산카페거리</a>
+</li>
+</ul>
+</li>
+<li>
+    <a href="/tour/index.do?menu_id=00000906">숙박</a>
+<ul>
+<li>
+    <a href="/tour/index.do?menu_id=00001621">관광호텔</a>
+</li>
+<li>
+    <a href="/tour/index.do?menu_id=00204350">호스텔</a>
+</li>
+<li>
+    <a href="/tour/index.do?menu_id=00001622">모텔/여관</a>
+</li>
+<li>
+    <a href="/tour/index.do?menu_id=00001623">게스트하우스</a>
+</li>
+</ul>
+</li>
+<li>
+    <a href="/tour/index.do?menu_id=00203044">인증업소 안내</a>
+<ul>
+<li>
+    <a href="/tour/index.do?menu_id=00203045">믿음을 주는 식육점</a>
+</li>
+<li>
+    <a href="/tour/index.do?menu_id=00203049">어린이 기호식품 우수</a>
+</li>
+<li>
+    <a href="/tour/index.do?menu_id=00204851">안심식당</a>
+</li>
+</ul>
+</li>
+</ul>
+
+</div>
+
+
+
+						</li>
+						<li class="sub05">
+							
+
+
+
+
+
+
+
+
+
+
+
+
+	<a href="/tour/index.do?menu_id=00202797">남다른 문화관광</a>
+
+<div>
+	<ul>
+<li>
+    <a href="/tour/index.do?menu_id=00205041">앞산 크리스마스 축제</a>
+</li>
+<li>
+    <a href="/tour/index.do?menu_id=00001521">이천동고미술거리 </a>
+</li>
+<li>
+    <a href="/tour/index.do?menu_id=00001554">대구앞산축제(대덕제)</a>
+</li>
+<li>
+    <a href="/tour/index.do?menu_id=00001532">대명공연거리</a>
+</li>
+<li>
+    <a href="/tour/index.do?menu_id=00001536">문화ㆍ예술 생각대로</a>
+</li>
+<li>
+    <a href="/tour/index.do?menu_id=00001557">앞산 해넘이축제</a>
+</li>
+<li>
+    <a href="/tour/index.do?menu_id=00001559">정월대보름 축제</a>
+</li>
+<li>
+    <a href="/tour/index.do?menu_id=00001560">안지랑곱창 젊음의 거리축제</a>
+</li>
+<li>
+    <a href="/tour/index.do?menu_id=00000908">단체/시설</a>
+<ul>
+<li>
+    <a href="/tour/index.do?menu_id=00001546">남구농악단</a>
+</li>
+<li>
+    <a href="/tour/index.do?menu_id=00001547">남구청 사격팀</a>
+</li>
+<li>
+    <a href="/tour/index.do?menu_id=00001548">문화시설</a>
+</li>
+<li>
+    <a href="/tour/index.do?menu_id=00001549">체육시설</a>
+</li>
+</ul>
+</li>
+</ul>
+
+</div>
+
+
+
+						</li>
+						<li class="sub06">
+							
+
+
+
+
+
+
+
+
+
+
+
+
+	<a href="/tour/index.do?menu_id=00202863">남다른 구석구석</a>
+
+<div>
+	<ul>
+<li>
+    <a href="/tour/index.do?menu_id=00000902">관광명소</a>
+<ul>
+<li>
+    <a href="/tour/index.do?menu_id=00203950">앞산 해넘이전망대</a>
+</li>
+<li>
+    <a href="/tour/index.do?menu_id=00001524">앞산빨래터공원</a>
+</li>
+<li>
+    <a href="/tour/index.do?menu_id=00001533">삼각지네거리테마공원</a>
+</li>
+<li>
+    <a href="/tour/index.do?menu_id=00001534">성당못역 만남의광장</a>
+</li>
+<li>
+    <a href="/tour/index.do?menu_id=00202864">주요시장상가</a>
+</li>
+</ul>
+</li>
+<li>
+    <a href="/tour/index.do?menu_id=00202830">위치기반관광서비스</a>
+</li>
+<li>
+    <a href="/tour/index.do?menu_id=00202940">남구VR</a>
+</li>
+<li>
+    <a href="/tour/index.do?menu_id=00110200">여행가이드</a>
+<ul>
+<li>
+    <a href="/tour/index.do?menu_id=00110201">관광안내지도</a>
+</li>
+<li>
+    <a href="/tour/index.do?menu_id=00203951">앞산 해넘이전망대 안내</a>
+</li>
+<li>
+    <a href="/tour/index.do?menu_id=00202840">관광안내지도신청</a>
+</li>
+<li>
+    <a href="/tour/index.do?menu_id=00110202">관광가이드북</a>
+</li>
+<li>
+    <a href="/tour/index.do?menu_id=00110280">홍보동영상</a>
+</li>
+</ul>
+</li>
+</ul>
+
+</div>
+
+
+
+						</li>
+						<li class="sub07">
+						    
+
+
+
+
+
+
+
+
+
+
+
+
+	<a href="/tour/index.do?menu_id=00204110">남다른 문화예술도시</a>
+
+<div>
+	<ul>
+<li>
+    <a href="/tour/index.do?menu_id=00204112">남구가 만드는 문화예술도시</a>
+</li>
+<li>
+    <a href="/tour/index.do?menu_id=00204115">문화&도시 아카이브</a>
+</li>
+<li>
+    <a href="/tour/index.do?menu_id=00204116">지역문화생태계통합구축사업(2020~2021)</a>
+</li>
+<li>
+    <a href="/tour/index.do?menu_id=00204117">대명문화마을조성사업(2018~2020)</a>
+</li>
+<li>
+    <a href="/tour/index.do?menu_id=00204118">문화가 있는 날</a>
+</li>
+</ul>
+
+</div>
+
+
+
+					</li>
+					</ul>
+					<!-- 전체메뉴 -->
+				</div>
+				<div class="dim_wv"></div>
+			</nav>		
+		</div>
+		<div class="gnb_bg"></div>
+		
+		
+	</div>
+
+  <!-- //Header -->
+    <div id="container">
+      <!-- Main -->
+      <div id="content" class="cont_main">
+
+        <!-- 비주얼 영역 -->
+        <div class="s_visual">
+          <div class="slickwrap visualzone">
+            <div class="slider">
+              
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="item" style="background-image:url(/cms_images/banner/20230130032051495uht.jpg);">
+</div>
+
+<div class="item" style="background-image:url(/cms_images/banner/20230130032105375l32.jpg);">
+</div>
+
+<div class="item" style="background-image:url(/cms_images/banner/20230130032120214uv9.jpg);">
+</div>
+
+<div class="item" style="background-image:url(/cms_images/banner/20230130032133696sr0.jpg);">
+</div>
+
+<div class="item" style="background-image:url(/cms_images/banner/202301300321496993e2.jpg);">
+</div>
+
+<div class="item" style="background-image:url(/cms_images/banner/20230130032203479q98.jpg);">
+</div>
+
+            </div>
+            <div class="cont_visual">
+              <div class="inr">
+                <strong><img src="/cmsh/tour/images/main/txt_visual01.png" alt="남다른 구석구석으로 떠나볼까요? 대명동에서... 안지랑 지나 앞산 정상까지... 이천동 건너 봉덕동으로..."></strong>
+                <div class="area_ctr">
+                  <div class="pager"></div>
+                  <button type="button" class="pause">정지</button>
+                  <button type="button" class="play">재생</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- //비주얼 영역 -->
+
+        <!-- 바로가기 메뉴 -->
+        <div class="s_quick">
+          <div class="inr">
+            <ul class="lst">
+              <li class="item1"><a href="/tour/index.do?menu_id=00110202"><strong><em class="ib">남구 관광</em> <em class="ib">가이드북</em></strong><span>남다른 구석구석 관광가이드북</span></a></li>
+              <li class="item2"><a href="/tour/index.do?menu_id=00110201"><strong><em class="ib">남구 관광</em> <em class="ib">안내지도</em></strong><span>남다른 구석구석 지도로 보기</span></a></li>
+              <li class="item3"><a href="/tour/index.do?menu_id=00202940"><strong><em class="ib">남구 관광</em> <em class="ib">명소VR</em></strong><span>남다른 구석구석 VR파노라마</span></a></li>
+              <li class="item4"><a href=""><strong><em class="ib">관광통역</em> <em class="ib">안내문의(1330)</em></strong><span>관광통역안내문의</span></a></li>
+              <li class="item5"><a href="https://tour.daegu.go.kr/index.do" target="_blank" title="새창열림"><strong><em class="ib">대구 관광 안내</em></strong><span>대구를 한눈에</span></a></li>
+            </ul>
+          </div>
+        </div>
+        <!-- //바로가기 메뉴 -->
+
+        <!-- 이벤트 배너 영역 -->
+        <div class="s_bnr">
+          <div class="inr">
+            <div class="slickwrap">
+              <div class="slider">
+                <!-- <div class="item">
+                  <div class="img"><img src="/cmsh/tour/images/temp/bnr01.jpg" alt="대구할로윈축제"></div>
+                </div>
+                <div class="item">
+                  <div class="img"><img src="/cmsh/tour/images/temp/bnr01.jpg" alt="대구할로윈축제"></div>
+                </div> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--스팟존 시작-->
+     
+     
+     
+     
+		 
+			<div class="item">
+				<div class="img">
+				<img alt="남구문화관광"   src="/cms_images/banner/20230130031727103fot.jpg"/>
+			    </div>
+			    </div>
+		
+		
+	
+		
+		
+			<div class="item">	
+			 	<div class="img">
+				 	<a href="#" target="_self">
+				    <img alt="남구관광" src="/cms_images/banner/202302010524598542xo.jpg"/></a>
+		    	</div>
+		    </div>
+		
+	
+		 
+			<div class="item">
+				<div class="img">
+				<img alt="고산골공룡공원"   src="/cms_images/banner/20230130031741463yrz.jpg"/>
+			    </div>
+			    </div>
+		
+		
+	
+		 
+			<div class="item">
+				<div class="img">
+				<img alt="앞산해넘이전망대"   src="/cms_images/banner/202301300318011546us.jpg"/>
+			    </div>
+			    </div>
+		
+		
+	
+		 
+			<div class="item">
+				<div class="img">
+				<img alt="남구문화관광"   src="/cms_images/banner/202301300318246982cy.jpg"/>
+			    </div>
+			    </div>
+		
+		
+	
+		 
+			<div class="item">
+				<div class="img">
+				<img alt="남구문화관광"   src="/cms_images/banner/20230130031903352d8q.jpg"/>
+			    </div>
+			    </div>
+		
+		
+	
+<!--//스팟존 끝-->
+
+<!-- <div class="item">
+									<div class="img"><img src="/cmsh/tour/images/temp/bnr01.jpg" alt="대구할로윈축제"></div>
+								</div>
+								<div class="item">
+									<div class="img"><img src="/cmsh/tour/images/temp/bnr01.jpg" alt="대구할로윈축제">
+									</div></div> -->
+
+              </div>
+              <div class="area_ctr">
+                <div class="ctr_round">
+                  <button type="button" class="pause">정지</button>
+                  <button type="button" class="play">재생</button>
+                  <div class="pager"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- //이벤트 배너 영역 -->
+
+        <!-- 남다른 문화관광 : 관광 명소 -->
+        <div class="s_spots">
+          <div class="hd">
+            <span class="desc">남구의 'Hot'한 관광명소를 한눈에!</span>
+            <h3 class="title">남다른 문화관광</h3>
+          </div>
+          <div class="slickwrap">
+            <div class="slider">
+              <div class="item">
+                <a href="/tour/index.do?menu_id=00203950" class="wrapper">
+                  <div class="img"><img src="/cmsh/tour/images/temp/sp01.jpg" alt="앞산해넘이전망대"></div>
+                  <div class="cont"><p>일몰과 함께 대구의 경관을 한눈에 담을 수 있는 ‘앞산 해넘이전망대’는 남구의 앞산 빨래터공원에 위치한다. 앞산빨래터공원</p></div>
+                </a>
+              </div>
+              <div class="item">
+                <a href="/tour/index.do?menu_id=00001524" class="wrapper">
+                  <div class="img"><img src="/cmsh/tour/images/temp/sp02.jpg" alt="앞산빨래터공원"></div>
+                  <div class="cont"><p>앞산순환도로 확장으로 인해 기능을 상실한 도시공원이 추억의 명소인 빨래터와 함께 체육시설, 분수대 및 편의시설을 갖추어 인근 주민들의 휴식처로 탈바꿈하였다. 또한 앞산빨래터 공원 일원에서는 매년 4~5월경 “앞산 빨래터 축제”가 개최되어 풍성한 볼거리, 즐길거리가 제공된다.</p></div>
+                </a>
+              </div>
+              <div class="item">
+                <a href="/tour/index.do?menu_id=00110303" class="wrapper">
+                  <div class="img"><img src="/cmsh/tour/images/temp/sp03.jpg" alt="앞산케이블카"></div>
+                  <div class="cont"><p>1974년 5월에 설치된 앞산 케이블카는 운행 거리 연장 795m에 편도 5분 정도가 소요된다. 1인당 9,500원만 투자한다면 케이블카를 타고 오르내리면서 앞산 큰골의 수려한 자연풍광과 대구 시가지를 동시에 조망할 수 있다.</p></div>
+                </a>
+              </div>
+              <div class="item">
+                <a href="/tour/index.do?menu_id=00003601" class="wrapper">
+                  <div class="img"><img src="/cmsh/tour/images/temp/sp04.jpg" alt="고산골공룡공원"></div>
+                  <div class="cont"><p>2006년 앞산 고산골에서 1억만년 전 중생대 백악기 초식공룡의 것으로 추정되는 발자국 화석이 발견되어 조성된 공원으로 이곳에는 티라노사우루스, 스피노사우루스, 스테고사우르스, 브라키오사우루스, 파키케팔로사우루스의 로봇공룡이 실물과 비슷한 크기로 제작되었다.</p></div>
+                </a>
+              </div>
+              <div class="item">
+                <a href="/tour/index.do?menu_id=00001604" class="wrapper">
+                  <div class="img"><img src="/cmsh/tour/images/temp/sp05.jpg" alt="앞산자락길"></div>
+                  <div class="cont"><p>2009년 조성된 앞산자락길은 총 6개 구간으로 메타세쿼이아길, 맨발산책길, 이팝나무길, 호국선열의 길, 꽃무릇길, 소원성취길 등 다양한 길이 이루어져 있고 곳곳에 숨은 이야기들이 있어서 힐링하기 좋은 도심 산책코스이다.</p></div>
+                </a>
+              </div>
+               <div class="item">
+                <a href="#" class="wrapper">
+                  <div class="img"><img src="/cmsh/tour/images/temp/sp06.jpg" alt="앞산별자리이야기터널"></div>
+                  <div class="cont"><p>수만개의 별이 새까만 천장을 수놓은 앞산 앞산별자리이야기터널, 천장에 반짝 반짝 빛나는 별자리와 귀여운 어린왕자를 볼 수 있다.  </p></div>
+                </a>
+              </div>
+               <div class="item">
+                <a href="/tour/index.do?menu_id=00001676" class="wrapper">
+                  <div class="img"><img src="/cmsh/tour/images/temp/sp07.jpg" alt="안지랑곱창골목"></div>
+                  <div class="cont"><p>안지랑오거리에서 앞산 안지랑골로 통하는 길 중간에 형성된 안지랑곱창골목은 서민들이 부담없이 즐길수 있는 휴식처이자, 젊은층이 주도하는 젊음의 거리로 발전 </p></div>
+                </a>
+              </div>
+
+              <div class="item">
+                <a href="/tour/index.do?menu_id=00110308" class="wrapper">
+                  <div class="img"><img src="/cmsh/tour/images/temp/sp08.jpg" alt="앞산맛둘레길"></div>
+                  <div class="cont"><p>앞산 맛둘레길은 현충삼거리에서 앞산빨래터 공원 일대의 먹거리 타운을 이야기하는 곳으로 한식, 중식, 양식 등 다양한 먹거리가..</p></div>
+                </a>
+              </div>
+              <div class="item">
+                <a href="/tour/index.do?menu_id=00001531" class="wrapper">
+                  <div class="img"><img src="/cmsh/tour/images/temp/sp09.jpg" alt="앞산카페거리"></div>
+                  <div class="cont"><p>대명남로와 현충로가 만나는 남명삼거리 주변의 앞산 카페거리는 앞산을 바라보는 조망 속에서 이탈리아 요리, 일본 가정식 등의 식사가 가능하고, 아기자기한 카페나 대형 프렌차이즈 카페 등 다양한 카페가 모여 있어 차 한잔의 여유로 힐링할 수 있는 공간이다. </p></div>
+                </a>
+              </div>
+
+                <div class="item">
+                <a href="/tour/index.do?menu_id=00001532" class="wrapper">
+                  <div class="img"><img src="/cmsh/tour/images/temp/sp10.jpg" alt="대명공연거리"></div>
+                  <div class="cont"><p>계명대학교 대명캠퍼스 주변 연극 극단, 음악가, 개인화실, 게임제작·배급업소, 예술기획사, 악기사 등 다양한 장르의 예술인 및 예술단체가 생기기 시작하여 공연문화 특화거리로서 자생적 기반을 마련하고 다양한 예술 활동을 펼치고 있다.</p></div>
+                </a>
+              </div>
+              <div class="item">
+                <a href="/tour/index.do?menu_id=00001521" class="wrapper">
+                  <div class="img"><img src="/cmsh/tour/images/temp/sp11.jpg" alt="이천동고미술거리"></div>
+                  <div class="cont"><p>1960년대부터 형성된 문화재매매업소가 모여있는 곳으로 과거 우리선인들이 사용한 민속품,도자기,고가구를 많이 보유하고 있고,현대인에게 생소한 조상들의 생필품들이 가득하여 구경하는 재미가 솔솔하다.</p></div>
+                </a>
+              </div>
+              <div class="item">
+                <a href="/tour/index.do?menu_id=00204112" class="wrapper">
+                  <div class="img"><img src="/cmsh/tour/images/temp/sp12.jpg" alt="공연문화도시남구"></div>
+                  <div class="cont"><p>문화예술로 주민들의 삶이 더욱 풍요롭고 아름다운 도시를 만들고자 합니다. 일상 속에 함께하는 문화예술을 통해 살고 싶은 도시, 삶이 즐거운 도시 대구광역시 남구!</p></div>
+                </a>
+              </div>
+              <div class="item">
+                <a href="/tour/index.do?menu_id=00202798" class="wrapper">
+                  <div class="img"><img src="/cmsh/tour/images/temp/sp13.jpg" alt="대구할로윈축제"></div>
+                  <div class="cont"><p>전국에서 처음으로 미육군 대구기지, 대구YWCA, 안지랑곱창골목 및 앞산카페거리 상가번영회, 예술인의 참여로 개최,  슈퍼호박 콘테스트, 페이스페인팅, 트릭 오어 트릿, EDM파티 등 다채로운 행사로 많은 시민들의 사랑을 받고 있다.</p></div>
+                </a>
+              </div>
+
+              <!--div class="item">
+                <a href="/tour/index.do?menu_id=00001538" class="wrapper">
+                  <div class="img"><img src="/cmsh/tour/images/temp/spot02.jpg" alt=""><strong class="tit">앞산 고산골 공룡화석터</strong></div>
+                  <div class="cont"><p>앞산 고산골에 나타나는 공룡발자국 화석은 약 1억 만 년 전 중생대 백악기의 것으로 등산로 아래 개울가의 넓이 23∼26㎡의 평탄한 암반(퇴적암) 하상에 4∼5개 나타난다. 이 공룡 발자국 화석은 세 개의 발가락 흔적이 보이는 조각류와 원형의 용각류에 속하는 초식공룡으로 추정되며, 발자국의 크기는 20∼30㎝ 정도 내외다.</p></div>
+                </a>
+              </div>
+              <div class="item">
+                <a href="/tour/index.do?menu_id=00003181" class="wrapper">
+                  <div class="img"><img src="/cmsh/tour/images/temp/spot03.jpg" alt=""><strong class="tit">앞산전망대</strong></div>
+                  <div class="cont"><p>앞산전망대는 대구 시가지를 한눈에 조망할 수 있는 관광명소로 앞산전망대의 건축물은 도시와 자연, 역사와 미래를 함께 엮어낸 성공적인 건축물로 평가되고 있다.</p></div>
+                </a>
+              </div>            
+             
+              
+
+              <div class="item">
+                <a href="/tour/index.do?menu_id=00110304" class="wrapper">
+                  <div class="img"><img src="/cmsh/tour/images/temp/spot10.jpg" alt=""><strong class="tit">앞산의 벚꽃</strong></div>
+                  <div class="cont"><p>앞산을 대표하는 큰골 벚꽃길과 고산골 벚꽃 능선길은 벚꽃과 야간의 오색찬란한 가로등을 즐기면서 산책할 수 있고 고산골을 따라 오르면 만나는 능선부 약 700여 m에 걸쳐 나타나는 앞산 능선에 위치하는 하늘 벚꽃길을 만날 수가 있다.</p></div>
+                </a>
+              </div>
+              
+              <div class="item">
+                <a href="/tour/index.do?menu_id=00001537" class="wrapper">
+                  <div class="img"><img src="/cmsh/tour/images/temp/spot12.jpg" alt=""><strong class="tit">고산골 메타쉐콰이어길</strong></div>
+                  <div class="cont"><p>연간 350만명이 이용하는 앞산 공원 진입로인 고산골에 시민의 건강과 휴식을 위하여 환경친화적, 저탄소 녹색성장 개발방식으로 자연과 조화를 이루도록 250여M의 메타쉐콰이어 숲길을 조성하였다.</p></div>
+                </a>
+              </div>
+               <div class="item">
+                <a href="/tour/index.do?menu_id=00001536" class="wrapper">
+                  <div class="img"><img src="/cmsh/tour/images/temp/spot08.jpg" alt=""><strong class="tit">문화ㆍ예술 생각대로</strong></div>
+                  <div class="cont"><p>중앙대로(영대네거리~명덕네거리) 및 주변구간을 안전하고 쾌적한 거리, 다양한 테마가 공존하는 보행자 중심의 거리로 조성하고자 차선축소 및 보도공간을 확보하여 보행자 중심의 특화거리를 조성하였고, 옹변개선 및 그린아케이드 조성으로 모일 수 있는 공간을 창출하였다.</p></div>
+                </a>
+              </div-->
+            </div>
+            <div class="area_ctr">
+              <div class="ctr_round">
+                <button type="button" class="pause">정지</button>
+                <button type="button" class="play">재생</button>
+                <div class="pager"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- //남다른 문화관광 : 관광 명소 -->
+
+
+
+ <!-- 남다른 축제 -->
+<div class="s_festival">
+  <div class="hd">            
+	<h3 class="title">남다른 축제</h3>
+  </div>
+ 
+	
+  <div class="slickwrap">
+	<div class="slider">
+
+	  <div class="item">
+		<a href="/tour/index.do?menu_id=00001554" class="wrapper">
+		  <div class="img"><img src="/cmsh/tour/images/festival/f_post01-01.jpg" alt="2025 앞산축제"></div>
+		  <div class="cont"><p>2025 앞산축제</p></div>
+		</a>
+	  </div>
+	  
+	  <div class="item">
+		<a href="/tour/index.do?menu_id=00205041" class="wrapper">
+		  <div class="img"><img src="/cmsh/tour/images/festival/f_post02.jpg" alt="2024 앞산 크리스마스축제"></div>
+		  <div class="cont"><p>2024 앞산 크리스마스축제</p></div>
+		</a>
+	  </div>
+
+	  <div class="item">
+		<a href="/tour/index.do?menu_id=00001554" class="wrapper">
+		  <div class="img"><img src="/cmsh/tour/images/festival/f_post03.jpg" alt="2024 앞산축제"></div>
+		  <div class="cont"><p>2024 앞산축제</p></div>
+		</a>
+	  </div>
+
+	  <div class="item">
+		<a href="/tour/index.do?menu_id=00205041" class="wrapper">
+		  <div class="img"><img src="/cmsh/tour/images/festival/f_post04.jpg" alt="2024 앞산 겨울정원"></div>
+		  <div class="cont"><p>2024 앞산 겨울정원</p></div>
+		</a>
+	  </div>
+
+	  <div class="item">
+		<a href="/tour/index.do?menu_id=00001557" class="wrapper">
+		  <div class="img"><img src="/cmsh/tour/images/festival/f_post05.jpg" alt="2024 앞산해넘이축제"></div>
+		  <div class="cont"><p>2024 앞산해넘이축제</p></div>
+		</a>
+	  </div>
+
+	  <div class="item">
+		<a href="/tour/index.do?menu_id=00001554" class="wrapper">
+		  <div class="img"><img src="/cmsh/tour/images/festival/f_post06.jpg" alt="2023 앞산축제"></div>
+		  <div class="cont"><p>2023 앞산축제</p></div>
+		</a>
+	  </div>
+
+	  <div class="item">
+		<a href="/tour/index.do?menu_id=00205041" class="wrapper">
+		  <div class="img"><img src="/cmsh/tour/images/festival/f_post07.jpg" alt="2023 앞산 크리스마스축제"></div>
+		  <div class="cont"><p>2023 앞산 크리스마스축제</p></div>
+		</a>
+	  </div>
+	 
+
+
+	</div>
+
+	<div class="area_ctr">
+	  <div class="ctr_round">
+		<button type="button" class="pause">정지</button>
+		<button type="button" class="play">재생</button>
+		<div class="pager"></div>
+	  </div>
+	</div>
+
+ </div>	
+
+
+</div>
+
+      
+<!-- 축제/공모전/관광/지도기반 관광서비스 -->
+        <div class="s_links" style="background:#f7f3e8;">
+          <div class="inr">
+            
+
+
+            <!-- 앞산자락길 -->
+            <div class="s_jarak">
+              <div class="wrapper">
+                <div class="tit_jarak">
+                  <p class="desc">대구 여행, 앞산 전망대만 가봤다면 자락길은 어떠세요?</p>
+                  <strong class="tit"><a href="/tour/index.do?menu_id=00000903"><img src="/cmsh/tour/images/main/jarak_tit.png" alt="앞산자락길"></a></strong>
+                </div>
+                <div class="slickwrap">
+                  <div class="slider">
+                    <div class="item1">
+                      <div class="course"><a href="/tour/index.do?menu_id=00001605"><span class="num">1구간</span><strong class="tit">메타세콰이어길</strong></a></div>
+                      <div class="desc"><a href="/tour/index.do?menu_id=00001605"><span class="section">고산골 메타세콰이어길 ~ 고산골 수덕사</span><span class="distance">0.9km/18분</span></a></div>
+                    </div>
+                    <div class="item2">
+                      <div class="course"><a href="/tour/index.do?menu_id=00001606"><span class="num">2구간</span><strong class="tit">맨발산책길</strong></a></div>
+                      <div class="desc"><a href="/tour/index.do?menu_id=00001606"><span class="section">고산골수덕사 ~ 맨발산책길입구</span><span class="distance">0.9km/18분</span></a></div>
+                    </div>
+                    <div class="item3">
+                      <div class="course"><a href="/tour/index.do?menu_id=00001607"><span class="num">3구간</span><strong class="tit">이팝나무길</strong></a></div>
+                      <div class="desc"><a href="/tour/index.do?menu_id=00001607"><span class="section">맨발산책길 입구 ~ 케이블카</span><span class="distance">2.3km/50분</span></a></div>
+                    </div>
+                    <div class="item4">
+                      <div class="course"><a href="/tour/index.do?menu_id=00001608"><span class="num">4구간</span><strong class="tit">호국 선열의 길</strong></a></div>
+                      <div class="desc"><a href="/tour/index.do?menu_id=00001608"><span class="section">케이블카 ~ 충혼탑</span><span class="distance">1.1km/22분</span></a></div>
+                    </div>
+                    <div class="item5">
+                      <div class="course"><a href="/tour/index.do?menu_id=00001609"><span class="num">5구간</span><strong class="tit">꽃무릇길</strong></a></div>
+                      <div class="desc"><a href="/tour/index.do?menu_id=00001609"><span class="section">충혼탑 ~ 안지랑골</span><span class="distance">1.3km/26분</span></a></div>
+                    </div>
+                    <div class="item6">
+                      <div class="course"><a href="/tour/index.do?menu_id=00001610"><span class="num">6구간</span><strong class="tit">소원성취 길</strong></a></div>
+                      <div class="desc"><a href="/tour/index.do?menu_id=00001610"><span class="section">안지랑골 ~ 매자골 황룡사</span><span class="distance">1.1km/22분</span></a></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- //앞산자락길 -->
+          </div>
+        </div>
+        <!-- //축제/공모전/관광/지도기반 관광서비스 -->
+
+        <!-- 남구 갤러리 -->
+        <div class="s_gallery">
+          <div class="inr">
+            <div class="hd">
+              <span class="desc">남구여행! 남구 축제ㆍ명소와 함께하는 사진 갤러리</span>
+              <h3 class="title">남구 한컷!</h3>
+            </div>
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<ul class="lst">
+		
+				<li>
+					<a href="/cms_images/banner/202112090221207410g7.jpg" class="img"  alt="고산골 메타세콰이어숲길" >
+						<img src="/cms_images/banner/202112090221207410g7.jpg" alt="고산골 메타세콰이어숲길"  >
+					</a>
+				</li>
+		
+				<li>
+					<a href="/cms_images/banner/20211209022137904n41.jpg" class="img"  alt="공룡공원" >
+						<img src="/cms_images/banner/20211209022137904n41.jpg" alt="공룡공원"  >
+					</a>
+				</li>
+		
+				<li>
+					<a href="/cms_images/banner/202102091015176363r8.jpg" class="img"  alt="빨래 축제" >
+						<img src="/cms_images/banner/202102091015176363r8.jpg" alt="빨래 축제"  >
+					</a>
+				</li>
+		
+				<li>
+					<a href="/cms_images/banner/20210209102616200zrg.jpg" class="img"  alt="벗꽃아래" >
+						<img src="/cms_images/banner/20210209102616200zrg.jpg" alt="벗꽃아래"  >
+					</a>
+				</li>
+		
+				<li>
+					<a href="/cms_images/banner/20210209101616878va8.jpg" class="img"  alt="벗꽃아래 버스" >
+						<img src="/cms_images/banner/20210209101616878va8.jpg" alt="벗꽃아래 버스"  >
+					</a>
+				</li>
+		
+				<li>
+					<a href="/cms_images/banner/20210209101818332887.jpg" class="img"  alt="앞산전망대" >
+						<img src="/cms_images/banner/20210209101818332887.jpg" alt="앞산전망대"  >
+					</a>
+				</li>
+		
+				<li>
+					<a href="/cms_images/banner/20211209022253059nt9.jpg" class="img"  alt="가을숲길" >
+						<img src="/cms_images/banner/20211209022253059nt9.jpg" alt="가을숲길"  >
+					</a>
+				</li>
+		
+				<li>
+					<a href="/cms_images/banner/202112090223207140n1.jpg" class="img"  alt="해넘이전망대" >
+						<img src="/cms_images/banner/202112090223207140n1.jpg" alt="해넘이전망대"  >
+					</a>
+				</li>
+		
+				<li>
+					<a href="/cms_images/banner/20211209022335820k1a.jpg" class="img"  alt="신천야경" >
+						<img src="/cms_images/banner/20211209022335820k1a.jpg" alt="신천야경"  >
+					</a>
+				</li>
+		
+				<li>
+					<a href="/cms_images/banner/2021120902234949361e.jpg" class="img"  alt="약수터가는길" >
+						<img src="/cms_images/banner/2021120902234949361e.jpg" alt="약수터가는길"  >
+					</a>
+				</li>
+		
+				<li>
+					<a href="/cms_images/banner/20211209022226131689.jpg" class="img"  alt="소프라전망대" >
+						<img src="/cms_images/banner/20211209022226131689.jpg" alt="소프라전망대"  >
+					</a>
+				</li>
+		
+				<li>
+					<a href="/cms_images/banner/202102091025050610oi.jpg" class="img"  alt="앞산전망대" >
+						<img src="/cms_images/banner/202102091025050610oi.jpg" alt="앞산전망대"  >
+					</a>
+				</li>
+		
+				<li>
+					<a href="/cms_images/banner/20210209102527655gpu.jpg" class="img"  alt="앞산전망대" >
+						<img src="/cms_images/banner/20210209102527655gpu.jpg" alt="앞산전망대"  >
+					</a>
+				</li>
+		
+	</ul>
+
+
+          </div>
+        </div>
+        <!-- //남구 갤러리 -->
+
+      </div>
+      <!-- // Main -->
+    </div>
+
+
+    <!-- Footer -->
+    <footer id="footer">
+
+      <!-- 푸터 인포 -->
+      <div class="footer_info">
+        <div class="inr">
+          <div class="logo"><img src="/cmsh/nam.daegu.kr/images/common/logo_footer.gif" alt="대구광역시 남구"></div>
+          <div class="info">
+            <!-- 푸터 메뉴 -->
+            <div class="footer_menu">
+              <ul class="fm_lst">
+                <li><a href="/?menu_id=00000943" target="_blank">청사안내</a></li>
+                <li><a href="/?menu_id=00000946" target="_blank">전화번호안내</a></li>
+                <li><a href="/?menu_id=00000988" target="_blank"><strong style="color:#fcf000;">개인정보처리방침</strong></a></li>
+                <li><a href="/?menu_id=00000999" target="_blank">이메일무단수집거부</a></li>
+                <li><a href="/?menu_id=00001001" target="_blank">뷰어다운로드</a></li>
+                <li class="rss"><a href="/?menu_id=00001002" target="_blank">RSS</a></li>
+                <li><a href="http://www.daegu.go.kr/index.do?menu_id=00933969" target="_blank" title="새창">공공앱소개</a></li>
+                <li><a href="/?menu_id=00110074" target="_blank" title="새창">저작권 정책</a></li>
+              </ul>
+              <div class="wrap_slt">
+                <button>메뉴 바로가기</button>
+                <ul>
+                  <li><a href="/?menu_id=00000943" target="_blank">청사안내</a></li>
+                  <li><a href="/?menu_id=00000946" target="_blank">전화번호안내</a></li>
+                  <li><a href="/?menu_id=00000988" target="_blank">개인정보처리방침</a></li>
+                  <li><a href="/?menu_id=00000999" target="_blank">이메일무단수집거부</a></li>
+                  <li><a href="/?menu_id=00001001" target="_blank">뷰어다운로드</a></li>
+                  <li><a href="/?menu_id=00001002" target="_blank">RSS</a></li>
+                  <li><a href="http://www.daegu.go.kr/index.do?menu_id=00933969" title="새창" target="_blank">공공앱소개</a></li>
+                  <li><a href="/?menu_id=00110074" title="새창" target="_blank">저작권 정책</a></li>
+                </ul>
+              </div>
+            </div>
+            <!-- // 푸터 메뉴 -->
+            <!-- Copyright -->
+            <div class="area_copy">
+              <span>[42429] 대구광역시 남구 이천로 51 (봉덕동)</span>
+              <span>대표전화 053-664-2000</span>
+              <span>팩스 053-664-3030</span>
+              <p>Copyright © 대구광역시 남구청 All rights reserved</p>
+            </div>
+            <!-- a href="http://www.webwatch.or.kr/Situation/WA_Situation.html?MenuCD=110&amp;skey=1&amp;sval=%EB%8C%80%EA%B5%AC%EA%B4%91%EC%97%AD%EC%8B%9C%20%EB%82%A8%EA%B5%AC%EC%B2%AD&amp;search_btn=%EA%B2%80%EC%83%89" target="_blank" title="새창" class="web_acc"><img src="/cmsh/nam.daegu.kr/images/common/web_acc.png" alt="미래창조과학부 WEB ACCESSIBILITY 마크(웹 접근성 품질인증 마크)" title="국가 공인 인증기관 : 웹와치"></a -->
+            <!-- // Copyright -->
+          </div>
+
+        </div>
+
+      </div>
+      <!-- // 푸터 인포 -->
+    </footer>
+    <!-- // Footer -->
+
+  </div>
+  <script>
+
+  </script>
+</body>
+</html>

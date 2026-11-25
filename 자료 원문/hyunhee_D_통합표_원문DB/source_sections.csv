@@ -15,6 +15,7 @@ SEC-CITY-NOTICE-00,SRC-CITY-NOTICE,,document,0,대구시티투어 공지사항 �
 SEC-CITY-NIGHTTOUR-00,SRC-CITY-NIGHTTOUR,,document,0,대구시티투어 야경 투어,,문서 전체
 SEC-CITY-HOME-00,SRC-CITY-HOME,,document,0,대구시티투어 첫 화면(메뉴),,문서 전체
 SEC-NAM-CABLE-00,SRC-NAM-CABLE,,document,0,앞산8경 > 케이블카 하늘길,,문서 전체
+SEC-NAM-HOME-00,SRC-NAM-HOME,,document,0,대구광역시 남구 문화관광 첫 화면,,문서 전체
 SEC-DATA-NAMGU-00,SRC-DATA-NAMGU,,document,0,대구광역시 남구_관광 명소 현황_20260918,,문서 전체
 SEC-LAW-GUNWI-00,SRC-LAW-GUNWI,,document,0,경상북도와 대구광역시 간 관할구역 변경에 관한 법률,,문서 전체
 SEC-KOSIS-ENTRANCE-2025-00,SRC-KOSIS-ENTRANCE-2025,,document,0,(파일) 2025년 주요관광지점입장객통계,,문서 전체
@@ -23,6 +24,9 @@ SEC-JUNG-GOLMOK-00,SRC-JUNG-GOLMOK,,document,0,대구 중구 골목투어 정기
 SEC-DG-PRESS-278733-00,SRC-DG-PRESS-278733,,document,0,"추경호 시장, ""전방위 대책으로 민생경제 활력 불어넣는다!""",,문서 전체
 SEC-DG-PRESS-277733-00,SRC-DG-PRESS-277733,,document,0,"대구치맥페스티벌 열기, 골목상권까지 이어간다",,문서 전체
 SEC-DG-PRESS-277734-00,SRC-DG-PRESS-277734,,document,0,'2026 대구치맥페스티벌' 7월 1일 개막… 글로벌 축제로 힘찬 이륙!,,문서 전체
+SEC-DG-PRESS-271451-00,SRC-DG-PRESS-271451,,document,0,"대구10미(味)데이, 함께할 맛집을 찾습니다!",,문서 전체
+SEC-DG-PRESS-279177-00,SRC-DG-PRESS-279177,,document,0,'대구대박세일' 전통시장에서 장 보고 온누리상품권 받자!,,문서 전체
+SEC-DG-PRESS-279838-00,SRC-DG-PRESS-279838,,document,0,"대구시-수성구, 합의서 체결… 수성못 수상공연장 조성 궤도에 올라, 새 랜드마크 기대",,문서 전체
 SEC-TOUR-FESTIVAL-00,SRC-TOUR-FESTIVAL,,document,0,연간축제일정,,문서 전체
 SEC-TOUR-NIGHTMARKET-00,SRC-TOUR-NIGHTMARKET,,document,0,서문·칠성야시장 개장 안내(3/27~),,문서 전체
 SEC-CITY-NOTICE-1834-00,SRC-CITY-NOTICE-1834,,document,0,"[특별코스] '판타지아페스타, 예술로 물드는 대구' 운행 안내",,문서 전체
@@ -30,7 +34,7 @@ SEC-DG-FOOD-00,SRC-DG-FOOD,,document,0,대구푸드,,문서 전체
 SEC-DG-EXP-00,SRC-DG-EXP,,document,0,체험·관광·교육 (첫 하위메뉴 앞산공원 숲해설사),,문서 전체
 SEC-BUK-THEME-00,SRC-BUK-THEME,,document,0,테마여행,,문서 전체
 SEC-DATALAB-00,SRC-DATALAB,,document,0,한국관광 데이터랩 원자료,,문서 전체
-SEC-TEMPLESTAY-00,SRC-TEMPLESTAY,,document,0,동화사 템플스테이 요금 — MD 값(어른 5만/어린이 3만)의 근거 페이지 미발견,,문서 전체
+SEC-TEMPLESTAY-00,SRC-TEMPLESTAY,,document,0,동화사 템플스테이 예약 페이지(templestay.com) — 현행 요금,,문서 전체
 SEC-NEWS-KB-20260709500236-00,SRC-NEWS-KB-20260709500236,,document,0,붐비긴 했지만 머물진 않았다…TK 관광의 불편한 성적표,,문서 전체
 SEC-NEWS-IM-2026012116093612359-00,SRC-NEWS-IM-2026012116093612359,,document,0,'폭싹' 나온 계산성당·BTS 거리…대구도 외국인 관광객 북적,,문서 전체
 SEC-NEWS-IM-2026100816300616103-00,SRC-NEWS-IM-2026100816300616103,,document,0,'TK-관광' 치맥축제·야간명소…외국인들 '하룻밤' 붙잡아라!,,문서 전체
@@ -73,6 +77,7 @@ BLK-TOUR-SHOPPING-01-06,SRC-TOUR-SHOPPING,SEC-TOUR-SHOPPING-01,block,6,서부 �
 BLK-TOUR-SHOPPING-01-07,SRC-TOUR-SHOPPING,SEC-TOUR-SHOPPING-01,block,7,신천4동 카페골목 카드,card,쇼핑 > 신천4동 카페골목
 SEC-TOUR-REGIONCOURSE-01,SRC-TOUR-REGIONCOURSE,SEC-TOUR-REGIONCOURSE-00,section,1,권역별명품코스,,권역별명품코스
 BLK-TOUR-REGIONCOURSE-01-01,SRC-TOUR-REGIONCOURSE,SEC-TOUR-REGIONCOURSE-01,block,1,팔공산힐링,list,명품관광코스 > 권역별명품코스 > 팔공산힐링
+BLK-TOUR-REGIONCOURSE-01-02,SRC-TOUR-REGIONCOURSE,SEC-TOUR-REGIONCOURSE-01,block,2,동화사 템플스테이 카드,card,명품관광코스 > 권역별명품코스 > 팔공산힐링 > 동화사 템플스테이
 SEC-TOUR-HOME-01,SRC-TOUR-HOME,SEC-TOUR-HOME-00,section,1,첫 화면 메뉴,,첫 화면 메뉴
 BLK-TOUR-HOME-01-01,SRC-TOUR-HOME,SEC-TOUR-HOME-01,block,1,전체 메뉴,list,tour.daegu.go.kr 상단·전체 메뉴
 SEC-CITY-TIMETABLE-01,SRC-CITY-TIMETABLE,SEC-CITY-TIMETABLE-00,section,1,운행 시간표,,운행 시간표
@@ -104,6 +109,8 @@ BLK-CITY-NIGHTTOUR-01-01,SRC-CITY-NIGHTTOUR,SEC-CITY-NIGHTTOUR-01,block,1,운행
 BLK-CITY-NIGHTTOUR-01-02,SRC-CITY-NIGHTTOUR,SEC-CITY-NIGHTTOUR-01,block,2,코스 소개,list,야경 투어 > 코스 소개
 SEC-NAM-CABLE-01,SRC-NAM-CABLE,SEC-NAM-CABLE-00,section,1,앞산8경,,앞산8경
 BLK-NAM-CABLE-01-01,SRC-NAM-CABLE,SEC-NAM-CABLE-01,block,1,제 3 경 케이블카 하늘길,paragraph,앞산8경 > 제3경 본문 1문장
+SEC-NAM-HOME-01,SRC-NAM-HOME,SEC-NAM-HOME-00,section,1,첫 화면,,첫 화면
+BLK-NAM-HOME-01-01,SRC-NAM-HOME,SEC-NAM-HOME-01,block,1,앞산 소개글,paragraph,nam.daegu.kr/tour 첫 화면 소개글
 SEC-DATA-NAMGU-01,SRC-DATA-NAMGU,SEC-DATA-NAMGU-00,section,1,파일데이터 정보,,파일데이터 정보
 BLK-DATA-NAMGU-01-01,SRC-DATA-NAMGU,SEC-DATA-NAMGU-01,block,1,기본 정보,table,data.go.kr 15061583 > 기본 정보
 BLK-DATA-NAMGU-01-02,SRC-DATA-NAMGU,SEC-DATA-NAMGU-01,block,2,데이터 항목(컬럼) 정보,table,data.go.kr 15061583 > 데이터 항목(컬럼) 정보
@@ -171,6 +178,13 @@ BLK-DG-PRESS-277733-01-02,SRC-DG-PRESS-277733,SEC-DG-PRESS-277733-01,block,2,스
 BLK-DG-PRESS-277733-01-03,SRC-DG-PRESS-277733,SEC-DG-PRESS-277733-01,block,3,SNS 챌린지 문단,sentence,보도자료 본문
 SEC-DG-PRESS-277734-01,SRC-DG-PRESS-277734,SEC-DG-PRESS-277734-00,section,1,보도자료 본문,,보도자료 본문
 BLK-DG-PRESS-277734-01-01,SRC-DG-PRESS-277734,SEC-DG-PRESS-277734-01,block,1,행사장 구성 문단,sentence,보도자료 본문
+SEC-DG-PRESS-271451-01,SRC-DG-PRESS-271451,SEC-DG-PRESS-271451-00,section,1,보도자료 본문,,보도자료 본문
+BLK-DG-PRESS-271451-01-01,SRC-DG-PRESS-271451,SEC-DG-PRESS-271451-01,block,1,공모 문단,sentence,보도자료 본문
+SEC-DG-PRESS-279177-01,SRC-DG-PRESS-279177,SEC-DG-PRESS-279177-00,section,1,보도자료 본문,,보도자료 본문
+BLK-DG-PRESS-279177-01-01,SRC-DG-PRESS-279177,SEC-DG-PRESS-279177-01,block,1,가을축제 문단,sentence,보도자료 본문
+SEC-DG-PRESS-279838-01,SRC-DG-PRESS-279838,SEC-DG-PRESS-279838-00,section,1,보도자료 본문,,보도자료 본문
+BLK-DG-PRESS-279838-01-01,SRC-DG-PRESS-279838,SEC-DG-PRESS-279838-01,block,1,사업 개요 문단,sentence,보도자료 본문
+BLK-DG-PRESS-279838-01-02,SRC-DG-PRESS-279838,SEC-DG-PRESS-279838-01,block,2,국비 문단,sentence,보도자료 본문
 SEC-LAW-GUNWI-01,SRC-LAW-GUNWI,SEC-LAW-GUNWI-00,section,1,법령 머리,,법령 머리
 BLK-LAW-GUNWI-01-01,SRC-LAW-GUNWI,SEC-LAW-GUNWI-01,block,1,법령 정보,meta,law.go.kr 법령 본문 머리
 SEC-KOSIS-ENTRANCE-2025-01,SRC-KOSIS-ENTRANCE-2025,SEC-KOSIS-ENTRANCE-2025-00,section,1,파일통계표,,파일통계표
@@ -191,6 +205,7 @@ SEC-DG-EXP-01,SRC-DG-EXP,SEC-DG-EXP-00,section,1,체험·관광·교육,,체험�
 BLK-DG-EXP-01-01,SRC-DG-EXP,SEC-DG-EXP-01,block,1,메뉴,list,daegu.go.kr/cts menu_id=00000863
 SEC-BUK-THEME-01,SRC-BUK-THEME,SEC-BUK-THEME-00,section,1,테마여행,,테마여행
 BLK-BUK-THEME-01-01,SRC-BUK-THEME,SEC-BUK-THEME-01,block,1,하위메뉴,list,buk.daegu.kr/tour 테마여행 메뉴
+BLK-BUK-THEME-01-02,SRC-BUK-THEME,SEC-BUK-THEME-01,block,2,본문 코스 카드,list,buk.daegu.kr/tour 테마여행 본문
 SEC-JUNG-GOLMOK-01,SRC-JUNG-GOLMOK,SEC-JUNG-GOLMOK-00,section,1,골목투어 정기코스,,골목투어 정기코스
 BLK-JUNG-GOLMOK-01-01,SRC-JUNG-GOLMOK,SEC-JUNG-GOLMOK-01,block,1,제1코스 경상감영달성길,card,jung.daegu.kr tour/page.html?mc=0038
 BLK-JUNG-GOLMOK-01-02,SRC-JUNG-GOLMOK,SEC-JUNG-GOLMOK-01,block,2,제2코스 근대문화골목,card,jung.daegu.kr tour/page.html?mc=0789

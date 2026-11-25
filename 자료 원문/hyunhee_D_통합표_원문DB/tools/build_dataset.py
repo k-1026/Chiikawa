@@ -114,6 +114,11 @@ SOURCES = [
          pub="", pub_basis="게시일 표기 없음", period="", ver="확인일 현재 웹페이지", retrieval="curl", ostatus="stored",
          snapshot="", approval="approved", rights="공공기관 웹페이지(공공누리 표시 페이지 포함)",
          notes="요금 10,500원은 운영사 요금표가 아니라 구청 소개 문장. 왕복·편도 구분 없음"),
+    dict(id="SRC-NAM-HOME", title="대구광역시 남구 문화관광 첫 화면", publisher="대구광역시 남구 (남구 문화관광)",
+         doc_type="official_web", grade="S", url="https://nam.daegu.kr/tour/index.do", attach="", pub="",
+         pub_basis="게시일 표기 없음", period="", ver="확인일 현재 웹페이지", retrieval="curl", ostatus="stored",
+         snapshot="", approval="approved", rights="공공기관 웹페이지",
+         notes="첫 화면 소개글의 케이블카 요금은 9,500원 — 상세 페이지(SRC-NAM-CABLE) 10,500원과 다름(Aside 재실행에서 발견)"),
     dict(id="SRC-DATA-NAMGU", title="대구광역시 남구_관광 명소 현황_20260918", publisher="대구광역시 남구 (공공데이터포털)",
          doc_type="open_data", grade="A", url="https://www.data.go.kr/data/15061583/fileData.do", attach="",
          pub="2026-09-18", pub_basis="포털 '수정일' 값", period="", ver="파일데이터명 _20260918",
@@ -160,6 +165,24 @@ SOURCES = [
          url="https://info.daegu.go.kr/newshome/mtnmain.php?mtnkey=articleview&mkey=scatelist&mkey2=1&aid=277734", attach="",
          pub="2026-06-29", pub_basis="페이지 '핫이슈 2026-06-29'", period="2026-07-01~", ver="확인일 현재 게시물",
          retrieval="aside + curl", ostatus="stored", snapshot="", approval="approved", rights="공공기관 보도자료", notes=""),
+    dict(id="SRC-DG-PRESS-271451", title="대구10미(味)데이, 함께할 맛집을 찾습니다!", publisher="대구광역시 (대구시 뉴스룸)",
+         doc_type="press_release", grade="S",
+         url="https://info.daegu.go.kr/newshome/mtnmain.php?mtnkey=articleview&mkey=scatelist&mkey2=26&aid=271451", attach="",
+         pub="2025-05-09", pub_basis="페이지 '핫이슈 2025-05-09'", period="2025-06~2025-09", ver="확인일 현재 게시물",
+         retrieval="aside + curl", ostatus="stored", snapshot="", approval="approved", rights="공공기관 보도자료",
+         notes="Aside 재실행에서 발견. 한국경제 2025-05-09 기사의 원 보도자료"),
+    dict(id="SRC-DG-PRESS-279177", title="'대구대박세일' 전통시장에서 장 보고 온누리상품권 받자!", publisher="대구광역시 (대구시 뉴스룸)",
+         doc_type="press_release", grade="S",
+         url="https://info.daegu.go.kr/newshome/mtnmain.php?mtnkey=articleview&mkey=scatelist&mkey2=26&aid=279177", attach="",
+         pub="2026-10-08", pub_basis="페이지 '시정소식 2026-10-08'", period="가을축제 2026-10-15~11월 말", ver="확인일 현재 게시물",
+         retrieval="aside + curl", ostatus="stored", snapshot="", approval="approved", rights="공공기관 보도자료",
+         notes="가을축제 시작일이 9월 발표(10월 12일)에서 10월 15일로 바뀜"),
+    dict(id="SRC-DG-PRESS-279838", title="대구시-수성구, 합의서 체결… 수성못 수상공연장 조성 궤도에 올라, 새 랜드마크 기대",
+         publisher="대구광역시 (대구시 뉴스룸)", doc_type="press_release", grade="S",
+         url="https://info.daegu.go.kr/newshome/mtnmain.php?mtnkey=articleview&mkey=scatelist&mkey2=26&aid=279838", attach="",
+         pub="2026-11-16", pub_basis="페이지 '핫이슈 2026-11-16'", period="", ver="확인일 현재 게시물",
+         retrieval="aside + curl", ostatus="stored", snapshot="", approval="approved", rights="공공기관 보도자료",
+         notes="총사업비 300억·국비 99억은 있으나 시비·구비 내역, 착공·준공 목표일은 없음. 메인 객석 1,000석(경북매일 기사 '2000석 규모'와 다름)"),
     dict(id="SRC-TOUR-FESTIVAL", title="연간축제일정", publisher="대구광역시 (대구관광안내)", doc_type="official_web", grade="S",
          url="https://tour.daegu.go.kr/index.do?menu_id=00002932", attach="", pub="", pub_basis="게시일 표기 없음", period="",
          ver="확인일 현재 웹페이지", retrieval="aside + curl", ostatus="stored", snapshot="", approval="approved",
@@ -191,11 +214,12 @@ SOURCES = [
          url="https://datalab.visitkorea.or.kr/", attach="", pub="", pub_basis="미확인", period="", ver="미확인",
          retrieval="not_retrieved", ostatus="not_retrieved", snapshot="", approval="pending", rights="",
          notes="MD도 '별도 진행'으로 남겨 둔 자료. 이번에 열지 않음"),
-    dict(id="SRC-TEMPLESTAY", title="동화사 템플스테이 요금 — MD 값(어른 5만/어린이 3만)의 근거 페이지 미발견",
+    dict(id="SRC-TEMPLESTAY", title="동화사 템플스테이 예약 페이지(templestay.com) — 현행 요금",
          publisher="대한불교조계종 한국불교문화사업단(templestay.com)", doc_type="official_web", grade="S",
-         url="https://donghwasa.templestay.com/", attach="", pub="", pub_basis="미확인", period="", ver="",
-         retrieval="aside", ostatus="not_retrieved", snapshot="", approval="pending", rights="",
-         notes="Aside 보고: 현행 프로그램 성인 80,000~100,000원, 단체 당일형 50,000원 등. MD 값과 같은 요금표는 못 찾음(미검증)"),
+         url="https://www.templestay.com/fe/MI000000000000000062/reserve/view.do?templeId=Donghwasa&templestaySeq=15837",
+         attach="", pub="", pub_basis="미확인", period="", ver="", retrieval="aside", ostatus="not_retrieved",
+         snapshot="", approval="pending", rights="",
+         notes="Aside 보고만 있음(미보관): 휴식형 1박 성인 80,000·중고생 70,000·초등생 60,000·미취학 40,000원. MD 값(5만/3만)은 대구관광안내 팔공산힐링 표기와 일치"),
 ]
 
 def news(id_, title, publisher, url, pub, basis, snapshot, sha, notes=""):
@@ -397,6 +421,10 @@ ch("CHK-TOUR-SHOP-012", "SRC-TOUR-SHOPPING", "쇼핑", "신천4동 카페골목 
 ch("CHK-TOUR-RC-001", "SRC-TOUR-REGIONCOURSE", "권역별명품코스", "팔공산힐링", "list", "fact", "팔공산힐링 코스 2개",
    "팔공산힐링\n힐링코스 1\n힐링코스 2\n팔공산으로 가는 타박타박 시간여행",
    "권역별명품코스 '팔공산힐링' 안의 힐링코스 1·2", applies="동구 팔공산 권역", loc="명품관광코스 > 권역별명품코스 > 팔공산힐링")
+ch("CHK-TOUR-RC-002", "SRC-TOUR-REGIONCOURSE", "권역별명품코스", "동화사 템플스테이 카드", "card", "figure", "동화사 템플스테이 요금(대구관광안내 표기)",
+   "어른 50.000원 어린이 30.000원",
+   "대구관광안내 팔공산힐링의 동화사 템플스테이 요금. 표기는 원문 그대로(쉼표 대신 마침표). 기준 연도 없음 — templestay.com 현행 요금과 다르다는 Aside 보고가 있어 사용 전 재확인",
+   applies="동구 동화사 템플스테이", loc="명품관광코스 > 권역별명품코스 > 팔공산힐링 > 동화사 템플스테이")
 # ---- 첫 화면 메뉴
 ch("CHK-TOUR-HOME-001", "SRC-TOUR-HOME", "첫 화면 메뉴", "전체 메뉴", "list", "fact", "대구관광안내 주요 메뉴 존재",
    "대구 12경\n대표 관광명소\n대구 10미\n음식점가이드북\n야간관광\n올레길/둘레길 코스\n자전거투어 코스",
@@ -508,6 +536,10 @@ ch("CHK-NAM-CABLE-002", "SRC-NAM-CABLE", "앞산8경", "제 3 경 케이블카 �
    "1인당 10,500원만 투자한다면 케이블카를 타고 오르내리면서 앞산 큰골의 수려한 자연풍광과 대구 시가지를 동시에 조망할 수 있다.",
    "구청 소개 문장의 요금 10,500원. 왕복·편도, 기준 연도 표기 없음 — 운영사 요금표로 재확인 필요",
    applies="남구 앞산 케이블카", loc="앞산8경 > 제3경 본문 2문장", rel=("CHK-NAM-CABLE-001",))
+ch("CHK-NAM-HOME-001", "SRC-NAM-HOME", "첫 화면", "앞산 소개글", "paragraph", "figure", "앞산 케이블카 요금(첫 화면 표기)",
+   "1인당 9,500원만 투자한다면 케이블카를 타고 오르내리면서",
+   "남구 문화관광 첫 화면 소개글의 요금 9,500원. 상세 페이지는 10,500원 — 공식 자료끼리 충돌",
+   applies="남구 앞산 케이블카", loc="nam.daegu.kr/tour 첫 화면 소개글")
 # ---- 남구 공공데이터
 ch("CHK-DATA-NAMGU-001", "SRC-DATA-NAMGU", "파일데이터 정보", "기본 정보", "table", "fact", "남구 관광명소 데이터 이름",
    "파일데이터명 대구광역시 남구_관광 명소 현황_20260918", "공공데이터포털 파일데이터명", applies="대구 남구",
@@ -762,6 +794,24 @@ ch("CHK-DGP277734-001", "SRC-DG-PRESS-277734", "보도자료 본문", "행사장
    "두류공원 로드 일대에 조성되는 ‘K-치맥 스트리트’에는 입장과 동시에 축제 분위기를 느낄 수 있는 치맥 웰컴로드를 비롯해 치맥 놀이동산, 플리마켓존 등이 마련돼 관람객들에게 다양한 즐길 거리를 제공한다.",
    "2026 대구치맥페스티벌 K-치맥 스트리트 안에 플리마켓존 등이 마련됨", applies="2026 대구치맥페스티벌(두류공원)",
    period="2026-07-01~", loc="보도자료 본문")
+ch("CHK-DGP271451-001", "SRC-DG-PRESS-271451", "보도자료 본문", "공모 문단", "sentence", "fact", "대구10미데이 기간·목적(보도자료)",
+   "대구광역시는 대구의 대표 음식 브랜드인 ‘대구10미(味)*’의 인지도를 높이고 외식업계에 활력을 불어넣고자 오는 6월부터 9월까지 4개월간 진행되는 미식 이벤트 ‘대구10미(味)데이’에 함께할 참여업소를 공개 모집한다.",
+   "2025년 대구10미데이 6~9월, 목적: 10미 인지도·외식업 활력", applies="대구", period="2025-06~2025-09",
+   loc="보도자료 본문", rel=("CHK-DGP271451-002",))
+ch("CHK-DGP271451-002", "SRC-DG-PRESS-271451", "보도자료 본문", "공모 문단", "sentence", "figure", "대구10미데이 참여업소 상한(보도자료)",
+   "대구시는 최대 50개소의 업소를 선정해 이벤트를 운영할 계획이며, 참여업소에는 행사 포스터와 실외 배너 등 다양한 홍보물도 지원할 예정이다.",
+   "참여업소 최대 50개소(계획)", applies="대구", loc="보도자료 본문", rel=("CHK-DGP271451-001",))
+ch("CHK-DGP279177-001", "SRC-DG-PRESS-279177", "보도자료 본문", "가을축제 문단", "sentence", "fact", "가을축제 일정 변경(10월 15일~)",
+   "이와 함께 10월 15일부터 11월 말까지 전통시장과 골목상권 33개소에서 상권별 특색을 살린 가을축제도 이어진다.",
+   "2026-10-08 발표: 33개소 가을축제 10월 15일~11월 말(9월 발표의 10월 12일에서 바뀜)", applies="대구 전통시장·골목상권",
+   period="2026-10-15~2026-11 말", loc="보도자료 본문")
+ch("CHK-DGP279838-001", "SRC-DG-PRESS-279838", "보도자료 본문", "사업 개요 문단", "sentence", "figure", "수상공연장 총사업비·객석(보도자료)",
+   "총사업비 300억 원을 투입해 대구의 대표적인 자연·문화·관광 공간인 수성못에 메인 객석 1,000석 규모의 공연장을 조성하고, 공연·축제·관광·시민 여가를 연계한 복합 문화관광 거점으로 만들 계획이다.",
+   "총사업비 300억 원, 메인 객석 1,000석(경북매일은 '2000석 규모')", applies="수성구 수성못", loc="보도자료 본문",
+   rel=("CHK-DGP279838-002",))
+ch("CHK-DGP279838-002", "SRC-DG-PRESS-279838", "보도자료 본문", "국비 문단", "sentence", "figure", "수상공연장 국비 증액",
+   "국토교통부와의 협의를 통해 국비를 기존 82.5억 원에서 99억 원으로 증액했다.", "국비 82.5억 → 99억 원", applies="수성구 수성못",
+   loc="보도자료 본문", rel=("CHK-DGP279838-001",))
 # ---- 법령·통계
 ch("CHK-LAW-GUNWI-001", "SRC-LAW-GUNWI", "법령 머리", "법령 정보", "meta", "fact", "법률 번호·공포일·시행일",
    "[시행 2023. 7. 1.] [법률 제19155호, 2023. 1. 3., 제정]", "군위군 대구 편입 근거 법률: 2023-01-03 공포, 2023-07-01 시행",
@@ -798,7 +848,12 @@ ch("CHK-DG-EXP-001", "SRC-DG-EXP", "체험·관광·교육", "메뉴", "list", "
    loc="daegu.go.kr/cts menu_id=00000863")
 ch("CHK-BUK-THEME-001", "SRC-BUK-THEME", "테마여행", "하위메뉴", "list", "fact", "북구 테마여행 하위메뉴(8개)",
    "경제신화 도보길\n데이트코스\n금호강바람코스\n북구역사속으로\n시장여행길\n동화천역사탐방로\n근대산업거리\n칠곡도호부 옛길 투어",
-   "북구 문화관광 테마여행 하위메뉴 8개(슬라이더 표기는 6·7개로 다름)", applies="북구", loc="buk.daegu.kr/tour 테마여행 메뉴")
+   "북구 문화관광 테마여행 왼쪽 하위메뉴 8개(본문 코스 카드는 7개)", applies="북구", loc="buk.daegu.kr/tour 테마여행 메뉴",
+   rel=("CHK-BUK-THEME-002",))
+ch("CHK-BUK-THEME-002", "SRC-BUK-THEME", "테마여행", "본문 코스 카드", "list", "fact", "북구 테마여행 본문 코스 카드(7개)",
+   "Love Trail\n데이트코스\nGeumhogang Trail\n금호강바람코스\nBukgu History Trail\n북구역사속으로\nTraditional Markets Tour Trail\n시장여행길\nDonghwacheon History Trail\n동화천역사탐방로\nModern Industrial Street\n근대산업거리\n경제신화 도보길\n거리\n4km\n시간\n3시간",
+   "본문 카드 7개: 경제신화 도보길(4km·3시간), 데이트코스, 금호강바람코스, 북구역사속으로, 시장여행길, 동화천역사탐방로, 근대산업거리. 칠곡도호부 옛길 투어는 메뉴에만 있음",
+   applies="북구", loc="buk.daegu.kr/tour 테마여행 본문", rel=("CHK-BUK-THEME-001",))
 # ---- 중구 골목투어 (Aside 열람만, 원문 미보관)
 for n_, (mc, name, dist, tm) in enumerate([("0038", "경상감영달성길", "3.25km", "2시간 30분"), ("0789", "근대문화골목", "1.64km", "2시간"),
                                            ("0227", "패션한방길", "2.65km", "2시간"), ("0228", "삼덕봉산문화길", "4.95km", "2시간 50분")], 1):
@@ -992,7 +1047,8 @@ cl("CLM-D2-10-01", A2, "10", "fact", "12경 팔공산, 대표 관광명소 동�
 cl("CLM-D2-10-02", A2, "10", "fact", "권역별 명품코스 '팔공산힐링' 2개", "S", "tour.daegu.go.kr",
    [("SRC-TOUR-REGIONCOURSE", "CHK-TOUR-RC-001", ORI, "match", "")])
 cl("CLM-D2-10-03", A2, "10", "figure", "동화사 템플스테이 요금 어른 5만 원/어린이 3만 원", "S", "페이지 표기",
-   [("SRC-TEMPLESTAY", "", UNV, "unverifiable", "같은 요금표를 못 찾음. Aside 보고로는 현행 성인 8만~10만 원 등(미검증). MD도 재확인 필요로 표시")])
+   [("SRC-TOUR-REGIONCOURSE", "CHK-TOUR-RC-002", ORI, "match", "대구관광안내 팔공산힐링 표기 '어른 50.000원 어린이 30.000원'(Aside 재실행으로 위치 확인 후 보관 원문에서 대조)"),
+    ("SRC-TEMPLESTAY", "", ALT, "unverifiable", "templestay.com 현행 요금(휴식형 성인 80,000원 등)은 Aside 보고만 있고 미보관 — 대구관광 표기가 옛 요금일 수 있음")])
 cl("CLM-D2-11-01", A2, "11", "fact", "대표 관광명소 앞산공원전망대·앞산 카페거리, 야간관광 100선 앞산공원", "S", "tour.daegu.go.kr",
    [("SRC-TOUR-LANDMARKS", "CHK-TOUR-LM-001", ORI, "match", ""),
     ("SRC-TOUR-NIGHT", "CHK-TOUR-NIGHT-001", ORI, "match", "")])
@@ -1033,7 +1089,9 @@ cl("CLM-D2-N1-01", A2, "N1", "fact", "대구 10미: 대구따로국밥(대구육
    [("SRC-TOUR-10MI", "CHK-TOUR-10MI-001", ORI, "match", "목록 탭 표기는 '누른 국수', '무침 회'(띄어쓰기), 카드 표기는 붙여 씀")])
 cl("CLM-D2-N2-01", A2, "N2", "fact", "대구10미데이 2025년 6~9월, 참여업소 최대 50곳 공모", "B", "한국경제 2025-05-09",
    [("SRC-NEWS-HK-202505092401h", "CHK-HK0509-001", ORI, "match", ""),
-    ("SRC-NEWS-HK-202505092401h", "CHK-HK0509-002", ORI, "match", "")])
+    ("SRC-NEWS-HK-202505092401h", "CHK-HK0509-002", ORI, "match", ""),
+    ("SRC-DG-PRESS-271451", "CHK-DGP271451-001", ALT, "match", "대구시 원 보도자료(Aside 재실행에서 발견)"),
+    ("SRC-DG-PRESS-271451", "CHK-DGP271451-002", ALT, "match", "")])
 cl("CLM-D2-N2-02", A2, "N2", "fact", "대구10미데이 목적: 인지도 제고·외식업 활성화", "B", "한국경제 2025-05-09",
    [("SRC-NEWS-HK-202505092401h", "CHK-HK0509-003", ORI, "faithful_summary", "")])
 cl("CLM-D2-N3-01", A2, "N3", "fact", "대구관광안내 '음식' 메뉴에 음식점가이드북 파일 링크가 있음", "S", "대구관광안내",
@@ -1058,8 +1116,9 @@ cl("CLM-D2-N7-02", A2, "N7", "fact", "유망 상권 18곳 입간판·포토존",
     ("SRC-DG-PRESS-278733", "CHK-DGP278733-002", ALT, "match", "")])
 cl("CLM-D2-N7-03", A2, "N7", "fact", "골목상권·전통시장 33곳 가을축제(10월 12일~)", "B", "경북매일 2026-09-11",
    [("SRC-NEWS-KB-20260910500407", "CHK-KB0911-003", ORI, "match", "기사는 '다음 달 12일부터'"),
-    ("SRC-DG-PRESS-278733", "CHK-DGP278733-003", ALT, "match", "세부 일정은 9월말 확정 예정이라고 함. Aside는 10-08 보도자료에서 10/15~11/29로 바뀌었다고 보고(미검증)"),
-    ("SRC-NEWS-IN24-2014037", "CHK-IN24-001", ALT, "scope_mismatch", "10-12 기사는 33곳 축제를 '내달 말까지'로만 적음")])
+    ("SRC-DG-PRESS-278733", "CHK-DGP278733-003", ALT, "match", "세부 일정은 9월말 확정 예정이라고 함"),
+    ("SRC-NEWS-IN24-2014037", "CHK-IN24-001", ALT, "scope_mismatch", "10-12 기사는 33곳 축제를 '내달 말까지'로만 적음"),
+    ("SRC-DG-PRESS-279177", "CHK-DGP279177-001", ALT, "scope_mismatch", "2026-10-08 대구시 보도자료는 '10월 15일부터 11월 말까지' — 9월 발표 이후 일정이 바뀜")])
 cl("CLM-D2-N9-01", A2, "N9", "fact", "대구치맥페스티벌 'K-치맥 스트리트'에 플리마켓존 포함", "B", "매일신문 2026-06-29",
    [("SRC-NEWS-IM-2026062909000480016", "CHK-IM0629-001", ORI, "faithful_summary", "K-치맥 스트리트 조성 문장 바로 뒤에 플리마켓존 열거"),
     ("SRC-DG-PRESS-277734", "CHK-DGP277734-001", ALT, "match", "대구시 보도자료가 'K-치맥 스트리트에는 … 플리마켓존 등이 마련'이라고 명시"),
@@ -1105,7 +1164,8 @@ cl("CLM-D2-27-01", A3, "27", "fact", "북구 스탬프투어 2026-07-15~11-30, 2
 cl("CLM-D2-27-02", A3, "27", "fact", "2024년 판은 11곳+코스 3개", "B", "뉴스서울",
    [("SRC-NEWS-NS-1065583233696423", "CHK-NS2024-001", ORI, "match", "")])
 cl("CLM-D2-27-03", A3, "27", "fact", "북구 사이트: 테마여행 코스 7개", "S", "북구 사이트",
-   [("SRC-BUK-THEME", "CHK-BUK-THEME-001", ORI, "mismatch", "확인일 하위메뉴는 8개. Aside 보고로는 메인 슬라이더 7개·테마여행 슬라이더 6개로 페이지마다 다름")])
+   [("SRC-BUK-THEME", "CHK-BUK-THEME-002", ORI, "match", "본문 코스 카드 7개와 일치"),
+    ("SRC-BUK-THEME", "CHK-BUK-THEME-001", ORI, "scope_mismatch", "왼쪽 하위메뉴는 8개(칠곡도호부 옛길 투어 추가) — 어느 기준인지 MD에 표시 필요")])
 cl("CLM-D2-28-01", A3, "28", "fact", "2024-07 달성군 관광박람회 수상 보도(파크골프 투어상품)", "B", "제목만",
    [("SRC-NEWS-AJU-20240729114141696", "CHK-AJU-001", ALT, "mismatch", "2024-07 수상 기사는 워케이션 중심, 파크골프 언급 없음. Aside 보고: 파크골프 투어상품은 2026-04 달성군 보도자료로 처음 출시(미검증)")])
 cl("CLM-D2-29-01", A3, "29", "fact", "2026-08-27~30 대만 여행업계·언론 30여 명 홍보여행", "B", "경북매일 2026-09-03",
@@ -1132,7 +1192,9 @@ cl("CLM-D2-31-02", A3, "31", "fact", "일정이 2026-06→2027→2028로 밀림"
    [("SRC-NEWS-KB-20260922500376", "CHK-KB0928-006", ORI, "mismatch", "원문은 '2026년 말 완공 계획'. '2026-06'은 원문에 없음"),
     ("SRC-NEWS-KB-20260922500376", "CHK-KB0928-004", ORI, "match", "")])
 cl("CLM-D2-31-03", A3, "31", "figure", "총 300억(국 99·시 100·구 101)", "B", "경북매일 2026-09-28",
-   [("SRC-NEWS-KB-20260922500376", "CHK-KB0928-003", ORI, "match", "")])
+   [("SRC-NEWS-KB-20260922500376", "CHK-KB0928-003", ORI, "match", ""),
+    ("SRC-DG-PRESS-279838", "CHK-DGP279838-001", ALT, "faithful_summary", "2026-11-16 대구시 보도자료: 총사업비 300억은 같고 시비·구비 내역은 없음"),
+    ("SRC-DG-PRESS-279838", "CHK-DGP279838-002", ALT, "match", "국비 99억 원")])
 cl("CLM-D2-32-01", A3, "32", "fact", "두류공원 관광특구·국가공원 지정 추진(보도)", "B", "출처 미기재",
    [("SRC-NEWS-KB-20260315500354", "CHK-KB0316-001", ALT, "faithful_summary", "MD에 출처가 없어 다른 기사로 확인. 추진(협력) 단계이며 지정 확정 아님")])
 cl("CLM-D2-33-01", A3, "33", "figure", "동성로 상권 활성화: 2024년부터 5년 60억 원, 팝업스토어·거리공연", "B", "경북매일 2026-09-11",
@@ -1232,7 +1294,9 @@ fg("FIG-BUD-003", "budget", "수성못 수상공연장", "시비", "10000000000"
 fg("FIG-BUD-004", "budget", "수성못 수상공연장", "구비", "10100000000", "101억원", "KRW", cur="KRW", sid="SRC-NEWS-KB-20260922500376", cid="CHK-KB0928-003", clm="CLM-D2-31-03")
 fg("FIG-BUD-005", "budget", "수성못 수상공연장", "2026년 필요 사업비", "21190000000", "211억9000만원", "KRW", cur="KRW", year="2026", sid="SRC-NEWS-KB-20260922500376", cid="CHK-KB0928-005")
 fg("FIG-BUD-006", "budget", "수성못 수상공연장", "2026년 확보액(기사 시점)", "8281000000", "82억8100만원", "KRW", cur="KRW", year="2026", sid="SRC-NEWS-KB-20260922500376", cid="CHK-KB0928-005")
-fg("FIG-BUD-007", "spec", "수성못 수상공연장", "좌석 규모", "2000", "2000석", "seats", sid="SRC-NEWS-KB-20260922500376", cid="CHK-KB0928-002")
+fg("FIG-BUD-007", "spec", "수성못 수상공연장", "좌석 규모(경북매일)", "2000", "2000석", "seats", sid="SRC-NEWS-KB-20260922500376", cid="CHK-KB0928-002", note="대구시 보도자료는 메인 객석 1,000석 — ISS-023")
+fg("FIG-BUD-018", "spec", "수성못 수상공연장", "메인 객석(대구시 보도자료)", "1000", "메인 객석 1,000석", "seats", sid="SRC-DG-PRESS-279838", cid="CHK-DGP279838-001", note="2026-11-16 보도자료")
+fg("FIG-BUD-019", "budget", "수성못 수상공연장", "국비(증액 후, 보도자료)", "9900000000", "99억 원", "KRW", cur="KRW", sid="SRC-DG-PRESS-279838", cid="CHK-DGP279838-002", clm="CLM-D2-31-03", note="기존 82.5억 원에서 증액")
 fg("FIG-BUD-008", "budget", "동성로 상권활성화 사업", "총사업비(5년)", "6000000000", "60억원", "KRW", cur="KRW", pe="2028-12-31", sid="SRC-NEWS-NSIS-20260611", cid="CHK-NSIS-001", clm="CLM-D2-01-03", note="'2028년까지 5년간'. 시작 연도는 원문에 없어 비움")
 fg("FIG-BUD-009", "budget", "동성로 상권활성화 사업", "국비", "3000000000", "국비 30억", "KRW", cur="KRW", sid="SRC-NEWS-NSIS-20260611", cid="CHK-NSIS-001")
 fg("FIG-BUD-010", "budget", "동성로 상권활성화 사업", "시비", "1500000000", "시비 15억", "KRW", cur="KRW", sid="SRC-NEWS-NSIS-20260611", cid="CHK-NSIS-001")
@@ -1271,6 +1335,9 @@ fg("FIG-PRC-007", "price", "대구시티투어", "수요일 할인율", "30", "3
 fg("FIG-PRC-008", "price", "대구시티투어", "동대구역 승차권 소지자 할인율", "20", "20% 할인", "percent", sid="SRC-CITY-COURSE", cid="CHK-CITY-CO-002")
 fg("FIG-PRC-009", "price", "대구시티투어", "대구시민의 날 요금", "0", "무료", "KRW", cur="KRW", status="actual_zero", qty="대구시민 1인", sid="SRC-CITY-GUIDE", cid="CHK-CITY-GD-006", note="매월 21일, 신분증 제시")
 fg("FIG-PRC-010", "price", "앞산 케이블카", "이용 요금(구청 소개 문구)", "10500", "10,500원", "KRW", cur="KRW", qty="1인(왕복·편도 표기 없음)", sid="SRC-NAM-CABLE", cid="CHK-NAM-CABLE-002", note="운영사 요금표로 재확인 필요")
+fg("FIG-PRC-011", "price", "앞산 케이블카", "이용 요금(남구 첫 화면 소개글)", "9500", "9,500원", "KRW", cur="KRW", qty="1인(왕복·편도 표기 없음)", sid="SRC-NAM-HOME", cid="CHK-NAM-HOME-001", note="상세 페이지 10,500원과 충돌(ISS-021)")
+fg("FIG-PRC-012", "price", "동화사 템플스테이", "요금 — 어른(대구관광안내 표기)", "50000", "50.000원", "KRW", cur="KRW", qty="1인", sid="SRC-TOUR-REGIONCOURSE", cid="CHK-TOUR-RC-002", clm="CLM-D2-10-03", note="기준 연도·프로그램 없음. 현행 요금과 다를 수 있음")
+fg("FIG-PRC-013", "price", "동화사 템플스테이", "요금 — 어린이(대구관광안내 표기)", "30000", "30.000원", "KRW", cur="KRW", qty="1인", sid="SRC-TOUR-REGIONCOURSE", cid="CHK-TOUR-RC-002", clm="CLM-D2-10-03", note="기준 연도·프로그램 없음")
 fg("FIG-SPC-001", "spec", "앞산 케이블카", "운행 거리 연장", "795", "795m", "m", sid="SRC-NAM-CABLE", cid="CHK-NAM-CABLE-001", clm="CLM-D2-11-02")
 fg("FIG-SPC-002", "spec", "앞산 케이블카", "편도 소요 시간", "5", "편도 5분 정도", "minutes", sid="SRC-NAM-CABLE", cid="CHK-NAM-CABLE-001", note="'정도' — 어림값")
 fg("FIG-SPC-003", "spec", "앞산 케이블카", "설치 연월", "", "1974년 5월", "year_month", sid="SRC-NAM-CABLE", cid="CHK-NAM-CABLE-001", clm="CLM-D2-11-02")
@@ -1338,13 +1405,16 @@ ISSUES = [
     ("ISS-003", "mismatch", "CLM-D2-23-06", "SRC-CITY-NIGHTTOUR", "야경투어 '준비중' 기록이 현재와 다름(작성 후 변경 가능)", "MD 갱신"),
     ("ISS-004", "mismatch", "CLM-D2-31-02", "SRC-NEWS-KB-20260922500376", "수상공연장 일정 '2026-06'은 원문에 없음(원문 '2026년 말 완공 계획')", "MD 수정"),
     ("ISS-005", "overgeneralization", "CLM-D2-27-01", "SRC-NEWS-KB-20260714500472", "북구 스탬프 상품권은 매월 50명 추첨인데 MD는 조건 누락", "MD 수정"),
-    ("ISS-006", "time_point", "CLM-D2-N7-03", "SRC-DG-PRESS-278733", "가을 축제 33개소 '10월 12일부터'는 9월 발표값. Aside는 10-08 보도자료에서 10/15~11/29로 바뀌었다고 보고(미검증)", "10-08 보도자료 확인 후 MD 갱신"),
+    ("ISS-006", "time_point", "CLM-D2-N7-03", "SRC-DG-PRESS-278733;SRC-DG-PRESS-279177", "가을 축제 33개소 '10월 12일부터'는 9월 발표값. 2026-10-08 대구시 보도자료는 '10월 15일부터 11월 말까지'로 바뀜(원문 대조 완료)", "MD에 변경 일정 반영"),
+    ("ISS-023", "conflict_official_vs_news", "CLM-D2-31-01", "SRC-NEWS-KB-20260922500376;SRC-DG-PRESS-279838", "수상공연장 규모: 경북매일 '2000석 규모' vs 대구시 보도자료(2026-11-16) '메인 객석 1,000석'. 보도자료에는 착공·준공 목표일 없음", "공연장 규모는 보도자료 값 우선, 일정은 수성구 확인"),
     ("ISS-007", "mismatch", "CLM-D2-28-01", "SRC-NEWS-AJU-20240729114141696", "2024-07 달성군 수상은 워케이션 중심, 파크골프 언급 없음(파크골프 투어상품은 2026 출시라는 Aside 보고)", "MD 수정"),
     ("ISS-008", "time_point", "CLM-D2-N7-01", "SRC-NEWS-KB-20261001500524", "골목형상점가: 2026-09 100곳·7,100여 개(MD와 일치) → 2026-10 기사 110곳·8천여 곳", "최신 값 사용 여부 결정"),
-    ("ISS-009", "mismatch", "CLM-D2-27-03", "SRC-BUK-THEME", "북구 테마여행 코스 수: MD 7개, 하위메뉴 8개, 슬라이더 6·7개", "기준(하위메뉴) 정해 MD 수정"),
+    ("ISS-009", "scope_mismatch", "CLM-D2-27-03", "SRC-BUK-THEME", "북구 테마여행 코스 수: MD 7개 = 본문 카드 7개, 하위메뉴는 8개(칠곡도호부 옛길 투어)", "MD에 '본문 카드 기준' 표시"),
     ("ISS-010", "official_typo", "CLM-D2-02-03", "SRC-TOUR-NIGHTMARKET", "야시장 공지 본문 운영 기간 '2025. 3. 27.'(등록일 2026-03-27과 다름)", "원문 그대로 보존, 인용 시 주의"),
     ("ISS-011", "official_internal_conflict", "CLM-D2-04-03", "SRC-JUNG-GOLMOK", "중구 4코스 소요시간: 표 '2시간 50분' vs 소개 문단 '3시간 정도'", "표 값 사용, 비고 표시"),
-    ("ISS-012", "mismatch", "CLM-D2-10-03", "SRC-TEMPLESTAY", "동화사 템플스테이 요금 MD 값의 근거 미발견(Aside 보고 현행 요금은 다름)", "사용하지 않거나 현행 요금으로 재조사"),
+    ("ISS-012", "stale_value", "CLM-D2-10-03", "SRC-TOUR-REGIONCOURSE;SRC-TEMPLESTAY", "동화사 템플스테이 5만/3만 원은 대구관광안내 표기와 일치. 다만 templestay.com 현행 요금(휴식형 성인 80,000원 등, Aside 보고)과 달라 옛 요금일 수 있음", "templestay.com 요금 페이지 저장 후 재확인"),
+    ("ISS-021", "official_internal_conflict", "CLM-D2-11-02", "SRC-NAM-CABLE;SRC-NAM-HOME", "앞산 케이블카 요금: 남구 상세 페이지 10,500원 vs 남구 첫 화면 9,500원(MD는 요금 미기재)", "운영사 요금표로 확인"),
+    ("ISS-022", "unverified_detail", "CLM-D2-47-01", "", "Aside 보고: 관광지식정보시스템(know.tour.go.kr) 주요관광지점입장객통계에서 대구·군구·관광지별 내국인/외국인 조회 가능, 총원 입력 지점은 '내국인'으로 표시됨(미검증·미보관)", "know.tour.go.kr 표를 내려받아 대구 행 추출"),
     ("ISS-013", "aside_only", "CLM-D2-03-02;CLM-D2-04-03;CLM-D2-05-02;CLM-D2-08-02", "SRC-JUNG-GOLMOK", "중구 골목투어 수치는 Aside로만 열람(원문 미보관) — MD 값과 일치", "사람이 페이지를 저장해 originals/에 추가하면 승인 가능"),
     ("ISS-014", "unverified_detail", "CLM-D2-S1-01", "SRC-LAW-GUNWI", "법령 보관본은 머리 정보만 글자 대조. 부칙 제1조 문구는 Aside 확인", "필요 시 법령 본문 PDF 저장"),
     ("ISS-015", "unverified_detail", "CLM-D2-47-01", "SRC-KOSIS-ENTRANCE-2025", "KOSIS 파일 존재는 확인. 대구 행·내외국인 구분 값은 파일 미다운로드로 미확인", "파일 내려받아 대구 행 추출"),
@@ -1515,7 +1585,7 @@ def main():
         for r in c["related"]:
             rel_rows.append(dict(from_chunk_id=c["chunk_id"], to_chunk_id=r, relation="must_read_with"))
     # 충돌 관계
-    for a, b in [("CHK-CITY-TT-002", "CHK-CITY-GD-002")]:
+    for a, b in [("CHK-CITY-TT-002", "CHK-CITY-GD-002"), ("CHK-NAM-CABLE-002", "CHK-NAM-HOME-001")]:
         rel_rows.append(dict(from_chunk_id=a, to_chunk_id=b, relation="conflicts_with"))
         rel_rows.append(dict(from_chunk_id=b, to_chunk_id=a, relation="conflicts_with"))
     # 예외 관계

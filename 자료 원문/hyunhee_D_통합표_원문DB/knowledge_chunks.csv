@@ -98,6 +98,7 @@ CHK-TOUR-RC-001,SRC-TOUR-REGIONCOURSE,MD-HYUNHEE-D-V2,SEC-TOUR-REGIONCOURSE-01,B
 힐링코스 1
 힐링코스 2
 팔공산으로 가는 타박타박 시간여행",false,lines,권역별명품코스 '팔공산힐링' 안의 힐링코스 1·2,,,동구 팔공산 권역,,,명품관광코스 > 권역별명품코스 > 팔공산힐링,,S,verified_in_stored_original,verified,approved,v1,38
+CHK-TOUR-RC-002,SRC-TOUR-REGIONCOURSE,MD-HYUNHEE-D-V2,SEC-TOUR-REGIONCOURSE-01,BLK-TOUR-REGIONCOURSE-01-02,2,figure,동화사 템플스테이 요금(대구관광안내 표기),어른 50.000원 어린이 30.000원,false,text,대구관광안내 팔공산힐링의 동화사 템플스테이 요금. 표기는 원문 그대로(쉼표 대신 마침표). 기준 연도 없음 — templestay.com 현행 요금과 다르다는 Aside 보고가 있어 사용 전 재확인,,,동구 동화사 템플스테이,,,명품관광코스 > 권역별명품코스 > 팔공산힐링 > 동화사 템플스테이,,S,verified_in_stored_original,verified,approved,v1,22
 CHK-TOUR-HOME-001,SRC-TOUR-HOME,MD-HYUNHEE-D-V2,SEC-TOUR-HOME-01,BLK-TOUR-HOME-01-01,1,fact,대구관광안내 주요 메뉴 존재,"대구 12경
 대표 관광명소
 대구 10미
@@ -175,6 +176,7 @@ CHK-CITY-NIGHT-002,SRC-CITY-NIGHTTOUR,MD-HYUNHEE-D-V2,SEC-CITY-NIGHTTOUR-01,BLK-
 서문시장(야시장)",false,lines,야경투어 코스 소개 5곳,,,대구시티투어 야경 투어,,,야경 투어 > 코스 소개,CHK-CITY-NIGHT-001,S,verified_in_stored_original,verified,approved,v1,34
 CHK-NAM-CABLE-001,SRC-NAM-CABLE,MD-HYUNHEE-D-V2,SEC-NAM-CABLE-01,BLK-NAM-CABLE-01-01,1,figure,앞산 케이블카 설치·연장,1974년 5월에 설치된 앞산 케이블카는 운행 거리 연장 795m에 편도 5분 정도가 소요된다.,false,text,"앞산 케이블카: 1974년 5월 설치, 연장 795m, 편도 약 5분",,,남구 앞산 케이블카,,,앞산8경 > 제3경 본문 1문장,CHK-NAM-CABLE-002,S,verified_in_stored_original,verified,approved,v1,53
 CHK-NAM-CABLE-002,SRC-NAM-CABLE,MD-HYUNHEE-D-V2,SEC-NAM-CABLE-01,BLK-NAM-CABLE-01-01,2,figure,앞산 케이블카 이용 요금(소개 문구),"1인당 10,500원만 투자한다면 케이블카를 타고 오르내리면서 앞산 큰골의 수려한 자연풍광과 대구 시가지를 동시에 조망할 수 있다.",false,text,"구청 소개 문장의 요금 10,500원. 왕복·편도, 기준 연도 표기 없음 — 운영사 요금표로 재확인 필요",,,남구 앞산 케이블카,,,앞산8경 > 제3경 본문 2문장,CHK-NAM-CABLE-001,S,verified_in_stored_original,verified,approved,v1,73
+CHK-NAM-HOME-001,SRC-NAM-HOME,MD-HYUNHEE-D-V2,SEC-NAM-HOME-01,BLK-NAM-HOME-01-01,1,figure,앞산 케이블카 요금(첫 화면 표기),"1인당 9,500원만 투자한다면 케이블카를 타고 오르내리면서",false,text,"남구 문화관광 첫 화면 소개글의 요금 9,500원. 상세 페이지는 10,500원 — 공식 자료끼리 충돌",,,남구 앞산 케이블카,,,nam.daegu.kr/tour 첫 화면 소개글,,S,verified_in_stored_original,verified,approved,v1,33
 CHK-DATA-NAMGU-001,SRC-DATA-NAMGU,MD-HYUNHEE-D-V2,SEC-DATA-NAMGU-01,BLK-DATA-NAMGU-01-01,1,fact,남구 관광명소 데이터 이름,파일데이터명 대구광역시 남구_관광 명소 현황_20260918,false,text,공공데이터포털 파일데이터명,,,대구 남구,,,data.go.kr 15061583 > 기본 정보,,A,verified_in_stored_original,verified,approved,v1,33
 CHK-DATA-NAMGU-002,SRC-DATA-NAMGU,MD-HYUNHEE-D-V2,SEC-DATA-NAMGU-01,BLK-DATA-NAMGU-01-01,2,rule,남구 관광명소 데이터 갱신 주기,"업데이트 주기 연간
 차기 등록 예정일 2027-09-19",false,lines,"연간 갱신, 다음 등록 예정일 2027-09-19",,,대구 남구,,,data.go.kr 15061583 > 기본 정보,CHK-DATA-NAMGU-004,A,verified_in_stored_original,verified,approved,v1,31
@@ -265,6 +267,11 @@ CHK-DGP277733-002,SRC-DG-PRESS-277733,MD-HYUNHEE-D-V2,SEC-DG-PRESS-277733-01,BLK
 CHK-DGP277733-003,SRC-DG-PRESS-277733,MD-HYUNHEE-D-V2,SEC-DG-PRESS-277733-01,BLK-DG-PRESS-277733-01-02,3,condition,스탬프 페이백 조건,"행사 기간 중 참여 점포에서 1만 원 이상 주문 시 스탬프가 적립되며, 2회 이상 이용한 소비자에게는 5천 원 상당의 페이백 쿠폰을 지급한다.",false,text,1만 원 이상 주문 2회 이상 → 5천 원 쿠폰,,,대구로 앱 온누리 가맹점,,,보도자료 본문,,S,verified_in_stored_original,verified,approved,v1,79
 CHK-DGP277733-004,SRC-DG-PRESS-277733,MD-HYUNHEE-D-V2,SEC-DG-PRESS-277733-01,BLK-DG-PRESS-277733-01-03,4,condition,썸머 소비 인증 챌린지 조건,지역 소상공인 점포에서 2만 원 이상 이용한 고객을 대상으로 ‘대구 썸머 소비! 인증 챌린지’도 진행한다.,false,text,2만 원 이상 이용 고객 대상 SNS 인증 챌린지(경품은 추첨),,,대구 소상공인 점포,,,보도자료 본문,,S,verified_in_stored_original,verified,approved,v1,59
 CHK-DGP277734-001,SRC-DG-PRESS-277734,MD-HYUNHEE-D-V2,SEC-DG-PRESS-277734-01,BLK-DG-PRESS-277734-01-01,1,fact,K-치맥 스트리트 구성(플리마켓존 포함),"두류공원 로드 일대에 조성되는 ‘K-치맥 스트리트’에는 입장과 동시에 축제 분위기를 느낄 수 있는 치맥 웰컴로드를 비롯해 치맥 놀이동산, 플리마켓존 등이 마련돼 관람객들에게 다양한 즐길 거리를 제공한다.",false,text,2026 대구치맥페스티벌 K-치맥 스트리트 안에 플리마켓존 등이 마련됨,,,2026 대구치맥페스티벌(두류공원),,2026-07-01~,보도자료 본문,,S,verified_in_stored_original,verified,approved,v1,113
+CHK-DGP271451-001,SRC-DG-PRESS-271451,MD-HYUNHEE-D-V2,SEC-DG-PRESS-271451-01,BLK-DG-PRESS-271451-01-01,1,fact,대구10미데이 기간·목적(보도자료),대구광역시는 대구의 대표 음식 브랜드인 ‘대구10미(味)*’의 인지도를 높이고 외식업계에 활력을 불어넣고자 오는 6월부터 9월까지 4개월간 진행되는 미식 이벤트 ‘대구10미(味)데이’에 함께할 참여업소를 공개 모집한다.,false,text,"2025년 대구10미데이 6~9월, 목적: 10미 인지도·외식업 활력",,,대구,,2025-06~2025-09,보도자료 본문,CHK-DGP271451-002,S,verified_in_stored_original,verified,approved,v1,122
+CHK-DGP271451-002,SRC-DG-PRESS-271451,MD-HYUNHEE-D-V2,SEC-DG-PRESS-271451-01,BLK-DG-PRESS-271451-01-01,2,figure,대구10미데이 참여업소 상한(보도자료),"대구시는 최대 50개소의 업소를 선정해 이벤트를 운영할 계획이며, 참여업소에는 행사 포스터와 실외 배너 등 다양한 홍보물도 지원할 예정이다.",false,text,참여업소 최대 50개소(계획),,,대구,,,보도자료 본문,CHK-DGP271451-001,S,verified_in_stored_original,verified,approved,v1,78
+CHK-DGP279177-001,SRC-DG-PRESS-279177,MD-HYUNHEE-D-V2,SEC-DG-PRESS-279177-01,BLK-DG-PRESS-279177-01-01,1,fact,가을축제 일정 변경(10월 15일~),이와 함께 10월 15일부터 11월 말까지 전통시장과 골목상권 33개소에서 상권별 특색을 살린 가을축제도 이어진다.,false,text,2026-10-08 발표: 33개소 가을축제 10월 15일~11월 말(9월 발표의 10월 12일에서 바뀜),,,대구 전통시장·골목상권,,2026-10-15~2026-11 말,보도자료 본문,,S,verified_in_stored_original,verified,approved,v1,64
+CHK-DGP279838-001,SRC-DG-PRESS-279838,MD-HYUNHEE-D-V2,SEC-DG-PRESS-279838-01,BLK-DG-PRESS-279838-01-01,1,figure,수상공연장 총사업비·객석(보도자료),"총사업비 300억 원을 투입해 대구의 대표적인 자연·문화·관광 공간인 수성못에 메인 객석 1,000석 규모의 공연장을 조성하고, 공연·축제·관광·시민 여가를 연계한 복합 문화관광 거점으로 만들 계획이다.",false,text,"총사업비 300억 원, 메인 객석 1,000석(경북매일은 '2000석 규모')",,,수성구 수성못,,,보도자료 본문,CHK-DGP279838-002,S,verified_in_stored_original,verified,approved,v1,113
+CHK-DGP279838-002,SRC-DG-PRESS-279838,MD-HYUNHEE-D-V2,SEC-DG-PRESS-279838-01,BLK-DG-PRESS-279838-01-02,2,figure,수상공연장 국비 증액,국토교통부와의 협의를 통해 국비를 기존 82.5억 원에서 99억 원으로 증액했다.,false,text,국비 82.5억 → 99억 원,,,수성구 수성못,,,보도자료 본문,CHK-DGP279838-001,S,verified_in_stored_original,verified,approved,v1,45
 CHK-LAW-GUNWI-001,SRC-LAW-GUNWI,MD-HYUNHEE-D-V2,SEC-LAW-GUNWI-01,BLK-LAW-GUNWI-01-01,1,fact,법률 번호·공포일·시행일,"[시행 2023. 7. 1.] [법률 제19155호, 2023. 1. 3., 제정]",false,text,"군위군 대구 편입 근거 법률: 2023-01-03 공포, 2023-07-01 시행",,,군위군,,2023-07-01 시행,law.go.kr 법령 본문 머리,,S,verified_in_stored_original,verified,approved,v1,46
 CHK-KOSIS-2025-001,SRC-KOSIS-ENTRANCE-2025,MD-HYUNHEE-D-V2,SEC-KOSIS-ENTRANCE-2025-01,BLK-KOSIS-ENTRANCE-2025-01-01,1,fact,2025년 주요관광지점입장객통계 파일 존재·갱신일,"출처 : 문화체육관광부,「주요관광지점입장객통계」자료갱신일 : 2026-07-28 / 수록기간 : 년 2025~2025",false,text,KOSIS 파일통계표 2025년판. 파일 자체는 미다운로드,,,전국(시도·내외국인 구분은 Aside 미리보기 확인),,2025,KOSIS 파일통계표 조회 > 주석 정보,,A,verified_in_stored_original,verified,approved,v1,65
 CHK-KOSIS-2024-001,SRC-KOSIS-ENTRANCE-2024,MD-HYUNHEE-D-V2,SEC-KOSIS-ENTRANCE-2024-01,BLK-KOSIS-ENTRANCE-2024-01-01,1,fact,2024년 주요관광지점입장객통계 파일 존재·갱신일,"출처 : 문화체육관광부,「주요관광지점입장객통계」자료갱신일 : 2025-09-17 / 수록기간 : 년 2024~2024",false,text,KOSIS 파일통계표 2024년판. 파일 자체는 미다운로드,,,전국(시도·내외국인 구분은 Aside 미리보기 확인),,2024,KOSIS 파일통계표 조회 > 주석 정보,,A,verified_in_stored_original,verified,approved,v1,65
@@ -289,7 +296,24 @@ CHK-BUK-THEME-001,SRC-BUK-THEME,MD-HYUNHEE-D-V2,SEC-BUK-THEME-01,BLK-BUK-THEME-0
 시장여행길
 동화천역사탐방로
 근대산업거리
-칠곡도호부 옛길 투어",false,lines,북구 문화관광 테마여행 하위메뉴 8개(슬라이더 표기는 6·7개로 다름),,,북구,,,buk.daegu.kr/tour 테마여행 메뉴,,S,verified_in_stored_original,verified,approved,v1,64
+칠곡도호부 옛길 투어",false,lines,북구 문화관광 테마여행 왼쪽 하위메뉴 8개(본문 코스 카드는 7개),,,북구,,,buk.daegu.kr/tour 테마여행 메뉴,CHK-BUK-THEME-002,S,verified_in_stored_original,verified,approved,v1,64
+CHK-BUK-THEME-002,SRC-BUK-THEME,MD-HYUNHEE-D-V2,SEC-BUK-THEME-01,BLK-BUK-THEME-01-02,2,fact,북구 테마여행 본문 코스 카드(7개),"Love Trail
+데이트코스
+Geumhogang Trail
+금호강바람코스
+Bukgu History Trail
+북구역사속으로
+Traditional Markets Tour Trail
+시장여행길
+Donghwacheon History Trail
+동화천역사탐방로
+Modern Industrial Street
+근대산업거리
+경제신화 도보길
+거리
+4km
+시간
+3시간",false,lines,"본문 카드 7개: 경제신화 도보길(4km·3시간), 데이트코스, 금호강바람코스, 북구역사속으로, 시장여행길, 동화천역사탐방로, 근대산업거리. 칠곡도호부 옛길 투어는 메뉴에만 있음",,,북구,,,buk.daegu.kr/tour 테마여행 본문,CHK-BUK-THEME-001,S,verified_in_stored_original,verified,approved,v1,197
 CHK-JUNG-C1-001,SRC-JUNG-GOLMOK,MD-HYUNHEE-D-V2,SEC-JUNG-GOLMOK-01,BLK-JUNG-GOLMOK-01-01,1,figure,골목투어 1코스 거리·소요시간,(3.25km / 탐방소요시간 2시간 30분),false,text,"중구 골목투어 제1코스 경상감영달성길: 3.25km, 2시간 30분",,,중구 골목투어 1코스,,,jung.daegu.kr tour/page.html?mc=0038,,S,reported_by_aside_not_stored,aside_reported,pending,v1,25
 CHK-JUNG-C2-001,SRC-JUNG-GOLMOK,MD-HYUNHEE-D-V2,SEC-JUNG-GOLMOK-01,BLK-JUNG-GOLMOK-01-02,2,figure,골목투어 2코스 거리·소요시간,(1.64km / 탐방소요시간 2시간),false,text,"중구 골목투어 제2코스 근대문화골목: 1.64km, 2시간",,,중구 골목투어 2코스,,,jung.daegu.kr tour/page.html?mc=0789,,S,reported_by_aside_not_stored,aside_reported,pending,v1,21
 CHK-JUNG-C3-001,SRC-JUNG-GOLMOK,MD-HYUNHEE-D-V2,SEC-JUNG-GOLMOK-01,BLK-JUNG-GOLMOK-01-03,3,figure,골목투어 3코스 거리·소요시간,(2.65km / 탐방소요시간 2시간),false,text,"중구 골목투어 제3코스 패션한방길: 2.65km, 2시간",,,중구 골목투어 3코스,,,jung.daegu.kr tour/page.html?mc=0227,,S,reported_by_aside_not_stored,aside_reported,pending,v1,21
