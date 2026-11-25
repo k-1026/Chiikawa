@@ -1,0 +1,446 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>파일통계표 조회</title>
+<script type="text/javascript" src="/nsibsHtmlSvc/websquare/externalJS/jquery/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="/nsibsHtmlSvc/websquare/externalJS/jquery/jquery-ui-1.9.2.custom.min.js"></script>
+<link href="/nsibsHtmlSvc/ext/css/nsi/bs/fileview/fileview.css" rel="stylesheet" type="text/css" />
+<link href="/nsibsHtmlSvc/ext/css/nsi/bs/fileview/popup.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+.close_btn {
+	background: url(/nsibsHtmlSvc/ext/images/nsi/com/base/bg_btn_sky_right.gif) no-repeat left center;
+	padding: 0 10px;
+	font-size:12px;
+	line-height: 21px; 
+	display:block; 
+	color:#fff !important; 
+	border:0px;
+	cursor : pointer;
+}
+</style>
+<script type="text/javascript">
+	var file_prev_obj = {};
+
+	$(window).load(function(){
+		//iframe 호출 완료후 진행바 없애기 (미리보기) 
+		$('#ifrm_fileview').on('load', function(){
+			file_prev_obj.fn_hide_progressbar();
+		});
+
+		var fileCnt = Number('2');
+		if(fileCnt > 0)
+			file_prev_obj.fn_file_preview('1','Y');
+	});
+	
+	//진행바 작업중
+	file_prev_obj.fn_show_progressbar = function(){
+		$('body').css('overflow', 'hidden');
+		$('#modal2').css('visibility', 'visible');
+		$('#div_processbar').css('display', 'block');
+	};
+	file_prev_obj.fn_hide_progressbar = function(){
+		$('body').css('overflow', '');
+		$('#modal2').css('visibility', 'hidden');
+		$('#div_processbar').css('display', 'none');
+	};
+	
+	// 미리보기 조회
+	// 미리보기파일:JPEG, imgYn = Y/ 다른 모든 파일:N
+	file_prev_obj.fn_file_preview = function (file_sn, img_yn){
+		$('#ul').find('div').each(function(){
+			if($(this).attr('id') == 'ul_div_'+file_sn){
+				$(this).css('font-weight', 'bold');
+			}else{
+				$(this).css('font-weight', '');
+			}
+		});
+		
+		var linkUrl = $(location).attr('href');
+		if(linkUrl.indexOf("&fileSvc", 10)>-1){ 
+			$('#fileSvc').val("Y");
+		}
+		
+		$('#file_sn').val(file_sn);
+		$('#img_yn').val(img_yn);
+		$('#frm_param').attr('action', '/nsibsHtmlSvc/fileView/FileStbl/fileStblPreview.do');
+		$('#frm_param').attr('target', 'ifrm_fileview');
+
+		file_prev_obj.fn_show_progressbar();
+		$('#frm_param').submit();
+	};
+
+	// 파일 다운로드 (진행바 보여주려고 서버에 파일 만들고 내려받음) , 20260805 웹취약수정
+	file_prev_obj.fn_fileitm_download = function(file_sn){
+		var url = '/nsibsHtmlSvc/fileView/FileStbl/fileItmDownload.do';
+		var nowUrl = $(location).attr('href');
+		var fileSvc = nowUrl.indexOf("fileSvc=Y");
+		
+		if(nowUrl.indexOf("fileSvc=Y") > -1){ // 문자열있음!
+			fileSvcVal = "Y";
+		}else{
+			fileSvcVal = "";
+		}
+		
+		var param = {
+			vw_cd : 'NULL',
+			list_id : 'NULL',
+			org_id : '113',
+			tbl_id : 'DT_113005_FILE2025', 
+			file_svc : fileSvcVal,
+			file_sn : file_sn,
+			conn_path : 'E1'
+		};
+		var fn_success = function (rst_data){
+			if(rst_data.dwldFileSize > 0){
+				$('#file_path').val(rst_data.dwldFilePath);
+				$('#file_name').val(rst_data.dwldFileNm);
+				$('#srvcNm').val(rst_data.srvcNm);
+				$('#org_id').val(rst_data.orgId);
+				$('#tbl_id').val(rst_data.tblId);
+				$('#file_sn').val(rst_data.fileSn);
+				$('#fileSvc').val(fileSvcVal);
+				$('#frm_param').attr('action', '/nsibsHtmlSvc/fileView/FileStbl/dwldServerFile.do');
+				$('#frm_param').attr('target', 'ifrm_filedown');
+	
+				$('#frm_param').submit();
+			}else{
+				alert('Could not get file name : '+rst_data.srvcNm);
+			}
+		};
+		file_prev_obj.fn_ajax_send(url, param, fn_success);
+	};
+	
+	// 팝업 컨트롤 (주석, URL)
+	file_prev_obj.fn_popup_control = function(div_id, view){ 
+		
+		var linkUrl = $(location).attr('href');
+		
+		if(linkUrl.indexOf("&fileSvc", 10)>-1){ // 내부->외부 파일서비스 조회이면
+			var len = linkUrl.indexOf("&fileSvc", 10);
+			linkUrl = linkUrl.substring(0, len);
+			
+			$('#copyUrl').val(linkUrl+'&fileSvc=Y&tab_yn=N&conn_path=I2');
+		}else{
+			if(linkUrl.indexOf("in_org_id")>-1) {
+				$('#copyUrl').val(linkUrl);
+			} else {
+				$('#copyUrl').val(linkUrl+'?in_org_id=113&in_tbl_id=DT_113005_FILE2025');
+			}
+		}
+		
+		//$('#copyUrl').val($(location).attr('href')+'?in_org_id=113&in_tbl_id=DT_113005_FILE2025');
+		//test :::::  $('#copyUrl').val(linkUrl+'?in_org_id=113&in_tbl_id=DT_113005_FILE2025');
+		if(view == 'show'){
+			$('body').css('overflow', 'hidden');
+			$('#modal').css('visibility', 'visible');	
+			$('#popup_outer').css('visibility', 'visible');
+			$('#' + div_id).css('display', 'block');		
+		}else{
+			$('body').css('overflow', '');
+			$('#modal').css('visibility', 'hidden');
+			$('#popup_outer').css('visibility', 'hidden');
+			$('#' + div_id).css('display', 'none');
+		}
+	};
+
+	//통계설명자료, 온라인간행물, 보도자료 클릭 시
+	file_prev_obj.fn_window_open = function(url){
+		window.open( url, '_blank', '');
+	};
+
+	//출처 더보기 버튼 클릭 시 팝업 호출(SIGA 함수 속성을 그대로 적용)
+	file_prev_obj.fn_open_more_stat = function(url){
+		var s_status = '';
+		s_status=s_status + 'toolbar=no,';
+		s_status=s_status + 'location=no,';
+		s_status=s_status + 'directories=no,';
+		s_status=s_status + 'status=no,';
+		s_status=s_status + 'menubar=no,';
+		s_status=s_status + 'scrollbars=yes,';
+		s_status=s_status + 'resizable=yes,';
+		s_status=s_status + 'width=820,';
+		s_status=s_status + 'height=700';
+
+		window.open(url,'statNso',s_status);
+	};
+	
+	//문의처 클릭 시
+	file_prev_obj.fn_open_inquire = function (url) {
+		var s_status = '';
+		s_status=s_status + 'location=yes,';
+		s_status=s_status + 'toolbar=yes,';
+		s_status=s_status + 'directories=yes,';
+		s_status=s_status + 'status=yes,';
+		s_status=s_status + 'menubar=yes,';
+		s_status=s_status + 'scrollbars=yes,';
+		s_status=s_status + 'resizable=yes,';
+		s_status=s_status + 'width=1024,';
+		s_status=s_status + 'height=768';
+		
+		window.open( url,'inquire',s_status);	
+	};
+	
+	//주기 선택
+	file_prev_obj.fn_reload_preview = function(){
+		var linkUrlRe = $(location).attr('href');
+		
+		var url = '/nsibsHtmlSvc/fileView/FileStbl/fileStblView.do?';
+		url += 'in_org_id=113';
+		url += '&in_tbl_id=DT_113005_FILE2025';
+		url += '&in_prd_se='+$('#sel_prd_se').val();
+		
+		if(linkUrlRe.indexOf("&fileSvc", 10)>-1){ // 내부->외부 파일서비스 조회이면
+			var len = linkUrlRe.indexOf("&fileSvc", 10);
+			linkUrlRe = linkUrlRe.substring(0, len);
+			
+			url =  linkUrlRe+'&fileSvc=Y&in_prd_se='+$('#sel_prd_se').val()+'&tab_yn=N&conn_path=I2';
+		}
+		
+		
+		url += '&in_tab_yn=Y';
+		
+		
+		url += '&in_lng_se=1211910';
+		
+		
+		url += '&in_vw_cd=NULL';
+		
+		
+		url += '&in_list_id=NULL';
+		
+		
+		
+		$(location).attr('href', url);
+	};
+	
+	//AJAX 전송 
+	file_prev_obj.fn_ajax_send = function(ajax_url, ajax_data, fn_success){
+		$.ajax({
+			url : ajax_url,
+			type : 'POST',
+			data : ajax_data,
+			dataType: 'json',
+			cache : false,
+			beforeSend : function(){
+				file_prev_obj.fn_show_progressbar();
+			},
+			success : function(data){
+				file_prev_obj.fn_hide_progressbar();
+				if(fn_success != null){
+					if(data.success){
+						fn_success(data.resultMap);
+					}else{
+						alert( '알 수 없는 에러가 발생햇습니다.' );
+					}
+				}
+			},
+			error : function(data){ 
+				file_prev_obj.fn_hide_progressbar();
+				alert( '서버 통신 중 에러가 발생 하였습니다.' );
+			}
+		});
+	};
+</script>
+</head>
+
+<body>
+	<div id="wrap">
+		<!-- 상단타이틀 (TAB_YN) -->
+		
+		<!-- //상단타이틀 -->
+		<!-- popup -->
+		<div id="modal">
+		</div>
+		<!-- 진행바 -->
+		<div id="modal2" class="modal2">
+		</div>
+		<div id="div_processbar" class="disPlayBox">
+			<iframe id="ifrm_processbar" frameborder="0" scrolling="no" style="width: 64px; height: 64px; overflow: hidden;" src="/nsibsHtmlSvc/websquare/message/processMsg.html"></iframe>
+		</div>
+		<!-- //진행바 -->
+		<div id="popup_outer">
+			<!-- 주석전체보기 -->
+			<div id="pop_cmmt">
+				<div id="pop_cmmt2">
+					<div class="pop_top">
+						주석정보<span class="closeBtn"><a href="javascript:file_prev_obj.fn_popup_control('pop_cmmt', 'hide');">X 닫기</a></span>
+					</div>
+					<div class="pop_content">
+						<div class="pop_title">
+							<h1 class="bu_circle">(파일) 2025년 주요관광지점입장객통계</h1>
+						</div>
+						<div id="cmmtAll" class="con_lay2">
+							
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- 주소보기 -->
+		<div id="pop_url">
+			<div id="pop_url2">
+				<div class="pop_top">
+					주소정보<span class="closeBtn"><a href="javascript:file_prev_obj.fn_popup_control('pop_url', 'hide');">X 닫기</a></span>
+				</div>
+				<div class="pop_content">
+					<input type="text" id="copyUrl" name="copyUrl" style="width:664px;height:20px;font-size:12px;" readonly/>
+				</div>
+			</div>
+		</div>
+		<!-- //popup -->
+		<!-- 스크랩
+		<div id="divScrapPop" class="pop_scrap"></div>
+		 -->
+		<!-- Top -->
+		<div id="header">
+			<div class="titleCenter">
+				<div class="titleLeft">
+					<div class="titleRight">
+						<h1 class="title">
+							(파일) 2025년 주요관광지점입장객통계
+						</h1>
+						<ul class="title_utill">
+							
+							<li class="none">
+								<!-- 2024.05 주,부 통계명으로 인해 주 통계명만 통계설명자료만 링크이동이 가능하기떄문에 ORG_ID를 제거해서 부 통계명도 가능하도록 수정  -->
+								<a href="javascript:file_prev_obj.fn_window_open('https://www.k-stat.go.kr/metasvc/msba100/statsdcdta?statsConfmNo=113005');" style="color:#000000">통계설명자료</a>
+							</li>	
+							
+							
+							<li>
+								<a href="javascript:file_prev_obj.fn_window_open('https://stat.mcst.go.kr/portal/info/statReport');" style="color:#000000">온라인간행물</a>
+							</li>
+							
+								
+						</ul>
+					</div>
+				</div>
+			</div>
+			<!-- 2013.12.20 출처 수정 -->
+			<p class="more">
+				
+					<!-- 출처 : 문화체육관광부, 주요관광지점입장객통계 -->
+					출처 : 문화체육관광부,「주요관광지점입장객통계」
+					
+					<a href="javascript:file_prev_obj.fn_open_more_stat('https://www.k-stat.go.kr/metasvc/msea100/statsdcdta-popup?orgId=113&statsConfmNo=113005');"><img src="/nsibsHtmlSvc/ext/images/nsi/bs/fileview/btn_more.gif" alt="더보기" title="더보기"/></a>
+					
+				
+			</p>
+			<h2 class="bu_2circle">자료갱신일 : 2026-07-28 / 수록기간 : 년 2025~2025 / 
+				
+					
+					<!-- 문의처 : <a href="javascript:file_prev_obj.fn_open_inquire('https://www.mcst.go.kr/')">문화체육관광부 010-****-****</a> -->
+					<!-- 2018.09.06 범미희사무관요청으로 기관명 제거 -->
+					문의처 : <a href="javascript:file_prev_obj.fn_open_inquire('https://www.mcst.go.kr/')"> 010-****-****</a>
+					
+					
+				
+			</h2>	
+			<div id="changeAttribute" class="cont_line">
+				<p id="stblUnit" style="float:left;height:27px; margin-top:5px;">
+					주기 :
+					<select id="sel_prd_se" name="sel_prd_se" onchange="javascript:file_prev_obj.fn_reload_preview();">
+						<option value="">전체</option>
+						
+						<option value="Y" >년</option>
+						
+					</select>
+				</p>
+				<div class="icoalign" style="margin-top:5px;">
+					<ul>
+						
+						
+						
+							<li>
+							
+							<a href="javascript:file_prev_obj.fn_popup_control('pop_url', 'show');"><img src="/nsibsHtmlSvc/ext/images/nsi/bs/fileview/btn_addView.gif" alt="주소보기" title="주소보기" /></a></li>
+						
+						<li class="gap"><a href="javascript:alert('KOSIS 포털사이트에서 사용가능합니다.');"><img src="/nsibsHtmlSvc/ext/images/nsi/bs/fileview/ico_myscrap.gif" title="스크랩" /></a></li>
+						<li><a href="javascript:window.print();"><img src="/nsibsHtmlSvc/ext/images/nsi/bs/fileview/ico_print.gif" title="출력" /></a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!-- //Top -->
+		<div class="contents">
+			<div class="leftList">
+				<ul id="ul">
+					
+						<li>
+							<div id="ul_div_1" style="width:200px;overflow:hidden;white-space:nowrap;text-overflow:ellipsis; cursor:hand;">
+								<a title="&lt;2025&gt; 2025년 주요관광지점 입장객통계(전국)" href="javascript:file_prev_obj.fn_file_preview('1','Y')">
+								&lt;2025&gt; 2025년 주요관광지점 입장객통계(전국)
+								</a>
+							</div>
+						<span class="fileIcon">
+							
+								<a href="javascript:file_prev_obj.fn_fileitm_download('1');"><img src="/nsibsHtmlSvc/ext/images/nsi/bs/fileview/icon_xls.gif" width="16" height="16" border="0" alt="파일 다운로드"></a>
+							
+							
+							
+							
+						</span>
+						</li>
+					
+						<li>
+							<div id="ul_div_2" style="width:200px;overflow:hidden;white-space:nowrap;text-overflow:ellipsis; cursor:hand;">
+								<a title="&lt;2025&gt; 2025년 주요관광지점 입장객통계(지역별 상위지점)" href="javascript:file_prev_obj.fn_file_preview('2','Y')">
+								&lt;2025&gt; 2025년 주요관광지점 입장객통계(지역별 상위지점)
+								</a>
+							</div>
+						<span class="fileIcon">
+							
+								<a href="javascript:file_prev_obj.fn_fileitm_download('2');"><img src="/nsibsHtmlSvc/ext/images/nsi/bs/fileview/icon_xls.gif" width="16" height="16" border="0" alt="파일 다운로드"></a>
+							
+							
+							
+							
+						</span>
+						</li>
+					
+				</ul>
+			</div>
+			<div style="height:20px;">
+				<img src="/nsibsHtmlSvc/ext/images/nsi/bs/fileview/ico_blue_box.png" width="13" height="13" border="0" alt="타이틀">
+				<strong>이 통계표는 파일 형태로 서비스하고 있으며, 아래는 미리보기 화면입니다.</strong>
+			</div>
+			<form id="frm_param" method="post" name="frm_param" action="" target="">
+				<input id="org_id"  name="org_id"  type="hidden"  value="113" />
+				<input id="tbl_id"  name="tbl_id"  type="hidden"  value="DT_113005_FILE2025" />
+				<input id="file_sn" name="file_sn" type="hidden"  value="" />
+				<input id="img_yn"  name="img_yn"  type="hidden"  value="" />
+				<input id="fileSvc"  name="fileSvc"  type="hidden"  value="" />
+				<input id="file_path" name="file_path" type="hidden" value="" />
+				<input id="file_name" name="file_name" type="hidden" value="" />
+				<input id="srvcNm" name="srvcNm" type="hidden" value="" />
+			</form>
+			<iframe id="ifrm_fileview" title = "상세내용은 엑셀 다운을 통해 확인하실 수 있습니다." name="ifrm_fileview" src="" width="704px" height="576px" scrolling="auto" frameborder="0"></iframe>
+			<iframe id="ifrm_filedown" name="ifrm_filedown" src="" width="0px" height="0px" frameborder="0"></iframe>
+		</div>
+		<div class="icoalign" style="margin-top:5px; margin-right: 5px;">
+			<ul>
+				<li><button class="close_btn" onclick="window.close();" alt="닫기" title="닫기">
+					닫기
+				</button></li>
+			</ul>
+		</div>
+		<!-- footer -->
+		<!-- footer -->
+		<!-- 2021.06.02 김현아, 손상호 주무관님 요청으로 주석
+		<div id="footer">
+			<ul class="footer_wrap">
+				<li class="right">
+					<a href="javascript:file_prev_obj.fn_window_open('http://kostat.go.kr/portal/korea/kor_cc/2/1/index.action');" style="color: #000000">
+						<img src="/nsibsHtmlSvc/ext/images/nsi/bs/fileview/ico_data.gif" alt="자료문의" />자료문의
+					</a>
+				</li>
+			</ul>
+		</div>
+		-->
+	</div>	
+</body>
+</html>

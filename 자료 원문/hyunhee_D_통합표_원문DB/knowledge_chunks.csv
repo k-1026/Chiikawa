@@ -1,0 +1,322 @@
+chunk_id,source_id,md_id,parent_section_id,source_block_id,order_no,info_type,short_title,text_original,text_is_excerpt,text_format,search_context,summary,author_interpretation,applies_to,condition_text,period_text,locator,related_chunk_ids,source_grade,text_check,verification_status,approval_status,version,char_count
+CHK-TOUR-10MI-001,SRC-TOUR-10MI,MD-HYUNHEE-D-V2,SEC-TOUR-10MI-01,BLK-TOUR-10MI-01-01,1,fact,대구 10미 목록(10종),"대구따로국밥(대구육개장)
+막창구이
+뭉티기
+동인동찜갈비
+논메기매운탕
+복어불고기
+누른 국수
+무침 회
+야끼우동
+납작만두",false,lines,"대구시 관광안내 사이트가 '대구 10미'로 게시한 음식 10종 목록(표기 그대로, 띄어쓰기 원문 유지)",,,대구 전체,,,tour.daegu.go.kr 대구 10미 > 전체 탭,CHK-TOUR-10MI-002,S,verified_in_stored_original,verified,approved,v1,63
+CHK-TOUR-10MI-002,SRC-TOUR-10MI,MD-HYUNHEE-D-V2,SEC-TOUR-10MI-01,BLK-TOUR-10MI-01-02,2,fact,대구 10미 소개 문구,"10가지 별미
+대구에 와야 그 참맛을 느낄 수 있는 본고장 향토음식",false,lines,10미 목록 위의 소개 문구. 선정 주체·선정 연도는 페이지에 없음,,,대구 전체,,,대구 10미 > 소개 영역,CHK-TOUR-10MI-001,S,verified_in_stored_original,verified,approved,v1,37
+CHK-TOUR-12G-001,SRC-TOUR-12GYEONG,MD-HYUNHEE-D-V2,SEC-TOUR-12GYEONG-01,BLK-TOUR-12GYEONG-01-01,1,fact,대구 12경 목록(12곳),"비슬산
+강정고령보
+신천
+국채보상운동 기념공원
+팔공산
+수성못
+83타워
+서문시장
+대구스타디움
+동성로
+달성토성
+경상감영과 옛골목",false,lines,대구시 관광안내 사이트의 '대구 12경' 12곳 목록(페이지 표시 순서),,,대구 전체,,,tour.daegu.go.kr 관광명소 > 대구 12경,,S,verified_in_stored_original,verified,approved,v1,68
+CHK-TOUR-LM-001,SRC-TOUR-LANDMARKS,MD-HYUNHEE-D-V2,SEC-TOUR-LANDMARKS-01,BLK-TOUR-LANDMARKS-01-01,1,fact,대구 대표 관광명소 목록(44곳),"대구 근대골목
+대구약령시
+도동서원
+이월드
+앞산공원전망대
+갓바위
+대구미술관
+동화사
+김광석 다시그리기길과 방천시장
+마비정벽화마을
+녹동서원
+대구사격장
+대구수목원
+대구시민안전테마파크
+국립대구과학관
+국립대구박물관
+들안길 먹거리타운
+부인사
+옻골마을(경주최씨 종가)
+불로동 고분군
+도동 측백나무숲
+동촌유원지
+봉무공원
+앞산 카페거리
+하중도
+남평문씨 본리 세거지 (인흥마을)
+화원유원지
+계명대학교 동산의료원 의료선교박물관
+대구향교
+수태골 계곡
+신숭겸장군 유적지
+묘골마을(육신사)
+이상화, 서상돈 고택
+파계사
+염불암 계곡
+스파밸리
+사유원
+서문시장
+안지랑곱골목
+팔공산국립공원
+수성못
+에스투뷰텍 뷰라운지
+모명재
+대구간송미술관",false,lines,대구시 관광안내 사이트 '대표 관광명소' 페이지에 카드로 표시된 명소 이름(확인일 기준). 두 줄로 나뉜 이름은 한 항목으로 합침,,,대구 전체,,,tour.daegu.go.kr 관광명소 > 대표 관광명소,,S,verified_in_stored_original,verified,approved,v1,337
+CHK-TOUR-NIGHT-001,SRC-TOUR-NIGHT,MD-HYUNHEE-D-V2,SEC-TOUR-NIGHT-01,BLK-TOUR-NIGHT-01-01,1,fact,야간관광 100선 선정 5곳,"한국관광공사‘야간관광 100선’에 아양기찻길(동구), 앞산공원(남구), 수성못(수성구), 김광석 다시 그리기 길(중구), 서문시장 야시장(중구) 5개 야간관광 명소가 선정되었다.",false,text,대구시 페이지가 적은 한국관광공사 '야간관광 100선' 대구 선정 5곳. 선정 연도는 페이지에 없음,,,대구 전체,,,tour.daegu.go.kr 명품관광코스 > 야간관광 첫 문단,,S,verified_in_stored_original,verified,approved,v1,99
+CHK-TOUR-NIGHT-002,SRC-TOUR-NIGHT,MD-HYUNHEE-D-V2,SEC-TOUR-NIGHT-01,BLK-TOUR-NIGHT-01-02,2,fact,동구 야간관광 명소,동구에는 아름다운 일몰과 낭만적인 밤을 즐길 수 있는 아양기찻길과 각종 음식점과 위락시설이 갖춰져 있는 동촌유원지를 즐길 수 있다.,false,text,동구의 야간관광 명소 소개,,,동구,,,야간관광 > 동구 문단,,S,verified_in_stored_original,verified,approved,v1,73
+CHK-TOUR-NIGHT-003,SRC-TOUR-NIGHT,MD-HYUNHEE-D-V2,SEC-TOUR-NIGHT-01,BLK-TOUR-NIGHT-01-02,3,fact,수성구 야간관광 명소,수성구는 야간관광100선의 수성못과 경관조명 시설을 설치로 야경을 즐길 수 있도록 조성한 영남제일관을 만나 볼 수 있다.,false,text,수성구의 야간관광 명소 소개,,,수성구,,,야간관광 > 수성구 문단,,S,verified_in_stored_original,verified,approved,v1,67
+CHK-TOUR-NIGHT-004,SRC-TOUR-NIGHT,MD-HYUNHEE-D-V2,SEC-TOUR-NIGHT-01,BLK-TOUR-NIGHT-01-02,4,fact,남구 야간관광 명소와 앞산 사업,"남구에는 대구시가지를 한눈에 조망할 수 있는 앞산전망대를 전국 최고의 야간 명소로 조성하기 위해 달토끼가 안내하는 소원길이라는 주제로 앞산관광명소화 사업이 진행 중이며, 2018 한국관광의 별로 선정된 안지랑곱창골목과 낭만이 가득한 앞산 카페거리를 즐길 수 있다.",false,text,남구 야간관광 소개. '사업 진행 중'은 페이지 작성 시점 기준이며 작성일은 표시되지 않음,,,남구,,,야간관광 > 남구 문단,,S,verified_in_stored_original,verified,approved,v1,147
+CHK-TOUR-NIGHT-005,SRC-TOUR-NIGHT,MD-HYUNHEE-D-V2,SEC-TOUR-NIGHT-01,BLK-TOUR-NIGHT-01-02,5,fact,중구 야간관광 명소,"중구는 한국관광100선에도 선정된 김광석 다시 그리기 길과 서문시장 야시장, 근대골목(청라언덕)과 더불어 젊음의 쇼핑거리 동성로에 위치한 도심테마파크 대관람차를 즐길 수 있다.",false,text,중구 야간관광 소개,,,중구,,,야간관광 > 중구 문단,,S,verified_in_stored_original,verified,approved,v1,98
+CHK-TOUR-NIGHT-006,SRC-TOUR-NIGHT,MD-HYUNHEE-D-V2,SEC-TOUR-NIGHT-01,BLK-TOUR-NIGHT-01-02,6,fact,달서구 야간관광 명소,"달서구는 유럽식 종합테마파크 이월드, 대구시내를 한눈에 볼 수 있는 전망대와 스카이 라운지가 있는 83타워, 대구 전경과 자연풍경, 아름다운 야경을 동시에 즐길 수 있는 도심속 힐링장소 달서별빛캠프 캠핑장을 만나 볼 수 있다.",false,text,달서구 야간관광 소개(이월드·83타워·달서별빛캠프),,,달서구,,,야간관광 > 달서구 문단,,S,verified_in_stored_original,verified,approved,v1,126
+CHK-TOUR-NIGHT-007,SRC-TOUR-NIGHT,MD-HYUNHEE-D-V2,SEC-TOUR-NIGHT-01,BLK-TOUR-NIGHT-01-02,7,fact,달성군 야간관광 명소,"달성군는 세계적 건축가가 설계하여 밤이면 무지개빛으로 변하는 경관조명으로 아름다운 디아크, 수상불빛조형물, 하트터널 등 오색찬란한 불빛들이 수놓는 송해공원 LED테마정원을 만나 볼 수 있다.",false,text,달성군 야간관광 소개(디아크·송해공원 LED테마정원). '달성군는'은 원문 표기 그대로,,,달성군,,,야간관광 > 달성군 문단,,S,verified_in_stored_original,verified,approved,v1,106
+CHK-TOUR-SHOP-001,SRC-TOUR-SHOPPING,MD-HYUNHEE-D-V2,SEC-TOUR-SHOPPING-01,BLK-TOUR-SHOPPING-01-01,1,fact,쇼핑 목록 1쪽 항목,"안심창조밸리
+불로전통시장
+롯데아웃렛
+현대시티아울렛
+신천4동 카페골목
+평화시장(닭똥집 골목)
+방촌시장
+서부 오미가미거리
+동성로",false,lines,대구시 관광안내 '쇼핑' 목록 1쪽(전체 3쪽)에 나온 항목,,,대구 전체,,,쇼핑 > 목록 1/3쪽,,S,verified_in_stored_original,verified,approved,v1,69
+CHK-TOUR-SHOP-002,SRC-TOUR-SHOPPING,MD-HYUNHEE-D-V2,SEC-TOUR-SHOPPING-01,BLK-TOUR-SHOPPING-01-02,2,fact,안심창조밸리 소개,금호강과 연근재배단지 일원을 친환경 생태문화공간으로 조성,false,text,동구 안심창조밸리 소개 문구,,,동구 안심창조밸리,,,쇼핑 > 안심창조밸리,CHK-TOUR-SHOP-003,S,verified_in_stored_original,verified,approved,v1,31
+CHK-TOUR-SHOP-003,SRC-TOUR-SHOPPING,MD-HYUNHEE-D-V2,SEC-TOUR-SHOPPING-01,BLK-TOUR-SHOPPING-01-02,3,fact,안심창조밸리 연꽃 마을 축제 시기,안심창조밸리 연꽃 마을 축제(8월 경),false,text,축제 시기는 '8월 경'으로만 표기(정확한 날짜 없음),,,동구 안심창조밸리,,8월 경(연도 표기 없음),쇼핑 > 안심창조밸리,CHK-TOUR-SHOP-002,S,verified_in_stored_original,verified,approved,v1,21
+CHK-TOUR-SHOP-004,SRC-TOUR-SHOPPING,MD-HYUNHEE-D-V2,SEC-TOUR-SHOPPING-01,BLK-TOUR-SHOPPING-01-03,4,figure,불로전통시장 점포 수,대구의 전통시장으로 약 130개 점포 보유,false,text,점포 수는 '약 130개'(어림값),,,동구 불로전통시장,,,쇼핑 > 불로전통시장,CHK-TOUR-SHOP-005,S,verified_in_stored_original,verified,approved,v1,23
+CHK-TOUR-SHOP-005,SRC-TOUR-SHOPPING,MD-HYUNHEE-D-V2,SEC-TOUR-SHOPPING-01,BLK-TOUR-SHOPPING-01-03,5,condition,불로전통시장 장날,"5일장(장날 5일, 10일)",false,text,"5일장. 장날은 매달 5일·10일로 끝나는 날로 보이나 원문은 '5일, 10일'만 적음",,,동구 불로전통시장,,,쇼핑 > 불로전통시장,CHK-TOUR-SHOP-004,S,verified_in_stored_original,verified,approved,v1,15
+CHK-TOUR-SHOP-006,SRC-TOUR-SHOPPING,MD-HYUNHEE-D-V2,SEC-TOUR-SHOPPING-01,BLK-TOUR-SHOPPING-01-04,6,fact,평화시장 닭똥집골목 소개,40년 전통의 특화거리로 특화된 닭똥집 단일메뉴 개발 판매 등 닭요리 전문 골목,false,text,동구 평화시장 닭똥집골목 소개,,,동구 평화시장,,,쇼핑 > 평화시장(닭똥집 골목),CHK-TOUR-SHOP-007,S,verified_in_stored_original,verified,approved,v1,44
+CHK-TOUR-SHOP-007,SRC-TOUR-SHOPPING,MD-HYUNHEE-D-V2,SEC-TOUR-SHOPPING-01,BLK-TOUR-SHOPPING-01-04,7,fact,평화시장 명품테마로드 조성 예정,평화시장 닭똥집골목 명품테마로드(3.6.5 날마다 치맥축제 문화가 있는 테마골목) 조성 예정,false,text,'조성 예정'이라는 계획 문구. 시점 표기 없음,,,동구 평화시장,,,쇼핑 > 평화시장(닭똥집 골목),CHK-TOUR-SHOP-006,S,verified_in_stored_original,verified,approved,v1,51
+CHK-TOUR-SHOP-008,SRC-TOUR-SHOPPING,MD-HYUNHEE-D-V2,SEC-TOUR-SHOPPING-01,BLK-TOUR-SHOPPING-01-05,8,fact,방촌시장 소개,대구의 소형 전통시장 원조 떡볶이와 한우 국밥이 유명하고,false,text,동구 방촌시장 소개,,,동구 방촌시장,,,쇼핑 > 방촌시장,,S,verified_in_stored_original,verified,approved,v1,31
+CHK-TOUR-SHOP-009,SRC-TOUR-SHOPPING,MD-HYUNHEE-D-V2,SEC-TOUR-SHOPPING-01,BLK-TOUR-SHOPPING-01-06,9,fact,'오미가미' 이름 뜻(사투리),"'오미가미'는 '오고 가면서 맛을 느낀다'는 뜻으로, 경상도 특유의 사투리를 딴 이름이재미있는 먹거리골목이다.",false,text,서구 서부 오미가미거리 이름 유래. 경상도 사투리에서 따온 이름이라는 설명,,,서구 서부시장,,,쇼핑 > 서부 오미가미거리,CHK-TOUR-SHOP-010;CHK-TOUR-SHOP-011,S,verified_in_stored_original,verified,approved,v1,61
+CHK-TOUR-SHOP-010,SRC-TOUR-SHOPPING,MD-HYUNHEE-D-V2,SEC-TOUR-SHOPPING-01,BLK-TOUR-SHOPPING-01-06,10,fact,오미가미거리 조성 시기·성격,2015년 5월 전국 최초로 지역 외식 프랜차이즈와 전통시장을 접목한 프랜차이즈 특화거리로,false,text,"조성 시기 2015년 5월, '전국 최초' 프랜차이즈 특화거리라는 대구시 페이지 표현(전국 최초 여부의 다른 근거는 미확인)",,,서구 서부시장,,2015년 5월,쇼핑 > 서부 오미가미거리,CHK-TOUR-SHOP-009,S,verified_in_stored_original,verified,approved,v1,50
+CHK-TOUR-SHOP-011,SRC-TOUR-SHOPPING,MD-HYUNHEE-D-V2,SEC-TOUR-SHOPPING-01,BLK-TOUR-SHOPPING-01-06,11,fact,오미가미거리 청년 마켓,열정 가득한 청년 마켓 그리고 현대화사업으로 깔끔해진 전통시장까지,false,text,오미가미거리에 청년 마켓이 있다는 소개 문구(운영 요일·규모 없음),,,서구 서부시장,,,쇼핑 > 서부 오미가미거리,CHK-TOUR-SHOP-009,S,verified_in_stored_original,verified,approved,v1,36
+CHK-TOUR-SHOP-012,SRC-TOUR-SHOPPING,MD-HYUNHEE-D-V2,SEC-TOUR-SHOPPING-01,BLK-TOUR-SHOPPING-01-07,12,fact,신천4동 카페골목 위치,"동대구역, 신세계백화점 맞은 편 골목에 다양한 카페들이 밀집되어 있어 접근성이 용이함",false,text,동구 신천4동 카페골목 위치 설명,,,동구 신천4동,,,쇼핑 > 신천4동 카페골목,,S,verified_in_stored_original,verified,approved,v1,47
+CHK-TOUR-RC-001,SRC-TOUR-REGIONCOURSE,MD-HYUNHEE-D-V2,SEC-TOUR-REGIONCOURSE-01,BLK-TOUR-REGIONCOURSE-01-01,1,fact,팔공산힐링 코스 2개,"팔공산힐링
+힐링코스 1
+힐링코스 2
+팔공산으로 가는 타박타박 시간여행",false,lines,권역별명품코스 '팔공산힐링' 안의 힐링코스 1·2,,,동구 팔공산 권역,,,명품관광코스 > 권역별명품코스 > 팔공산힐링,,S,verified_in_stored_original,verified,approved,v1,38
+CHK-TOUR-HOME-001,SRC-TOUR-HOME,MD-HYUNHEE-D-V2,SEC-TOUR-HOME-01,BLK-TOUR-HOME-01-01,1,fact,대구관광안내 주요 메뉴 존재,"대구 12경
+대표 관광명소
+대구 10미
+음식점가이드북
+야간관광
+올레길/둘레길 코스
+자전거투어 코스",false,lines,"대구관광안내 메뉴에 있는 항목(메뉴 존재만 확인, 하위 내용은 별도). 올레길·자전거 메뉴는 daegu.go.kr로 연결",,,대구 전체,,,tour.daegu.go.kr 상단·전체 메뉴,,S,verified_in_stored_original,verified,approved,v1,54
+CHK-CITY-TT-001,SRC-CITY-TIMETABLE,MD-HYUNHEE-D-V2,SEC-CITY-TIMETABLE-01,BLK-CITY-TIMETABLE-01-01,1,rule,시티투어 운행일·휴무,"매일 운행(매주 월요일, 설・추석 당일 휴무)",false,text,도심순환 운행일. 월요일과 설·추석 당일은 휴무,,,대구시티투어 도심순환,,,운행 시간표 > 운행 안내,CHK-CITY-TT-002;CHK-CITY-GD-001,S,verified_in_stored_original,verified,approved,v1,25
+CHK-CITY-TT-002,SRC-CITY-TIMETABLE,MD-HYUNHEE-D-V2,SEC-CITY-TIMETABLE-01,BLK-CITY-TIMETABLE-01-01,2,figure,시티투어 운행 시간·횟수(시간표),"9:30 ~ 17:50, 1일 7회 운행",false,text,운행 시간표 페이지 값. 이용 안내 페이지는 '09:30 ~ 17:30'으로 다름,,,대구시티투어 도심순환,,,운행 시간표 > 운행 시간,CHK-CITY-TT-003;CHK-CITY-GD-002,S,verified_in_stored_original,verified,approved,v1,22
+CHK-CITY-TT-003,SRC-CITY-TIMETABLE,MD-HYUNHEE-D-V2,SEC-CITY-TIMETABLE-01,BLK-CITY-TIMETABLE-01-02,3,exception,운행 시간 지연 가능,운행 시간표(차량 정체로 인해 운행 시간이 지연될 수 있습니다.),false,text,시간표 예외 조건: 차량 정체 시 지연,,,대구시티투어 도심순환,,,운행 시간표 > 표 제목,CHK-CITY-TT-002,S,verified_in_stored_original,verified,approved,v1,36
+CHK-CITY-GD-001,SRC-CITY-GUIDE,MD-HYUNHEE-D-V2,SEC-CITY-GUIDE-01,BLK-CITY-GUIDE-01-01,1,rule,시티투어 주 6일 운행,"대구시티투어는 매주 화 ~ 일요일 주 6일 운행합니다.(매주 월요일, 설·추석 당일 휴무)",false,text,이용 안내의 운행 요일,,,대구시티투어,,,이용 안내 > 이용 안내 첫 항목,CHK-CITY-TT-001,S,verified_in_stored_original,verified,approved,v1,50
+CHK-CITY-GD-002,SRC-CITY-GUIDE,MD-HYUNHEE-D-V2,SEC-CITY-GUIDE-01,BLK-CITY-GUIDE-01-02,2,figure,시티투어 운행시간(이용 안내),"운행시간 : 09:30 ~ 17:30 (매주 월요일, 설날, 추석 당일 휴무)",false,text,이용 안내 페이지의 운행시간. 운행 시간표 페이지(17:50)와 끝 시각이 다름 — 어느 쪽이 맞는지 미확인,,,대구시티투어,,,이용 안내 > 하단 운행시간,CHK-CITY-TT-002,S,verified_in_stored_original,verified,approved,v1,43
+CHK-CITY-GD-003,SRC-CITY-GUIDE,MD-HYUNHEE-D-V2,SEC-CITY-GUIDE-01,BLK-CITY-GUIDE-01-03,3,exception,예고 없는 코스변경·운휴,"교통 혼잡, 축제, 날씨 등에 따라 예고없이 코스변경, 운휴(휴무) 또는 시간이 지연될 수 있으며, 승차한 경우 요금은 반환되지 않습니다.",false,text,운행 예외와 환불 불가 조건,,,대구시티투어,,,이용 안내 > 유의 사항,,S,verified_in_stored_original,verified,approved,v1,77
+CHK-CITY-GD-004,SRC-CITY-GUIDE,MD-HYUNHEE-D-V2,SEC-CITY-GUIDE-02,BLK-CITY-GUIDE-02-01,4,figure,시티투어 정상요금,"구분
+성인
+청소년
+경로, 어린이, 장애인, 국가유공자
+정상요금
+10,000원
+8,000원
+6,000원",false,lines,"요금표 1행: 정상요금 성인 10,000원·청소년 8,000원·경로/어린이/장애인/국가유공자 6,000원. 부가세 포함 여부 표기 없음",,,대구시티투어,,,이용 안내 > 요금 안내 표 1행,CHK-CITY-GD-005,S,verified_in_stored_original,verified,approved,v1,56
+CHK-CITY-GD-005,SRC-CITY-GUIDE,MD-HYUNHEE-D-V2,SEC-CITY-GUIDE-02,BLK-CITY-GUIDE-02-01,5,figure,시티투어 할인 대상 요금,"10인 이상 단체
+당일 열차 승차권 소지자
+당일 고속버스 승차권 소지자
+당일 항공권 소지자
+외국인 대상 숙박권 소지자
+(호텔, 게스트하우스, 한옥체험시설 등)
+8,000원
+6,400원
+4,800원",false,lines,요금표 2행: 단체·당일 승차권·항공권·외국인 숙박권 소지자 대상 금액(성인·청소년·경로 등 순서로 보임). 행 제목 셀은 텍스트로 추출되지 않음,,,대구시티투어,10인 이상 단체 또는 당일 승차권·항공권·외국인 숙박권 소지,,이용 안내 > 요금 안내 표 2행,CHK-CITY-GD-004,S,verified_in_stored_original,verified,approved,v1,109
+CHK-CITY-GD-006,SRC-CITY-GUIDE,MD-HYUNHEE-D-V2,SEC-CITY-GUIDE-01,BLK-CITY-GUIDE-01-03,6,condition,대구시민의 날 무료 탑승,"매월 21일, 대구시민에 한하여 '대구시민의 날 무료 탑승 이벤트' 진행(대구시민임을 확인 할 수 있는 신분증 제시)",false,text,매월 21일 대구시민 무료(신분증 필요),,,대구시티투어,"대구시민, 신분증 제시",매월 21일,이용 안내 > 유의 사항,,S,verified_in_stored_original,verified,approved,v1,65
+CHK-CITY-GD-007,SRC-CITY-GUIDE,MD-HYUNHEE-D-V2,SEC-CITY-GUIDE-01,BLK-CITY-GUIDE-01-03,7,condition,수요일 30% 할인,매주 수요일 탑승요금 30% 할인 이벤트 진행,false,text,매주 수요일 30% 할인 이벤트,,,대구시티투어,,매주 수요일,이용 안내 > 유의 사항,,S,verified_in_stored_original,verified,approved,v1,25
+CHK-CITY-GD-008,SRC-CITY-GUIDE,MD-HYUNHEE-D-V2,SEC-CITY-GUIDE-01,BLK-CITY-GUIDE-01-03,8,condition,영유아 무료 조건,보호자 1인당 영유아(48개월 미만) 1인 무료,false,text,48개월 미만 영유아는 보호자 1인당 1인 무료,,,대구시티투어,"48개월 미만, 보호자 1인당 1인",,이용 안내 > 유의 사항,,S,verified_in_stored_original,verified,approved,v1,26
+CHK-CITY-CO-001,SRC-CITY-COURSE,MD-HYUNHEE-D-V2,SEC-CITY-COURSE-01,BLK-CITY-COURSE-01-01,1,fact,도심순환 정류장 12곳,"동대구역
+김광석 다시그리기길
+동성로∙중앙로역
+근대문화골목
+서문시장∙청라언덕역
+두류공원∙이월드
+앞산해넘이전망대
+앞산공원∙앞산전망대
+고산골공룡공원∙메타세콰이어길
+수성못
+대구미술관∙대구간송미술관
+동촌유원지",false,lines,대구시티투어 도심순환형 코스 정류장 01~12(순서대로),,,대구시티투어 도심순환,,,코스 안내 > 01~12,,S,verified_in_stored_original,verified,approved,v1,111
+CHK-CITY-CO-002,SRC-CITY-COURSE,MD-HYUNHEE-D-V2,SEC-CITY-COURSE-01,BLK-CITY-COURSE-01-02,2,condition,동대구역 탑승 20% 할인 조건,"※ 당일 철도, 고속버스 승차권 또는 도시철도 영수증 소지 탑승객에 한해 20% 할인",false,text,동대구역 정류장 안내의 할인 조건,,,대구시티투어 도심순환,당일 철도·고속버스 승차권 또는 도시철도 영수증 소지,,코스 안내 > 01 동대구역,,S,verified_in_stored_original,verified,approved,v1,47
+CHK-CITY-CO-003,SRC-CITY-COURSE,MD-HYUNHEE-D-V2,SEC-CITY-COURSE-01,BLK-CITY-COURSE-01-03,3,fact,동성로 정류장 설명,"동성로는 대구를 대표하는 가장 번화한 거리로 쇼핑몰, 영화관, 공연장, 맛집 등 쇼핑, 외식, 문화공간이 곳곳에 자리해 있다.",false,text,동성로 정류장 소개 문장,,,중구 동성로,,,코스 안내 > 03,CHK-CITY-CO-004,S,verified_in_stored_original,verified,approved,v1,70
+CHK-CITY-CO-004,SRC-CITY-COURSE,MD-HYUNHEE-D-V2,SEC-CITY-COURSE-01,BLK-CITY-COURSE-01-03,4,fact,동성로 정류장 주변 먹거리,"먹거리
+교동시장, 따로국밥골목, 동인동 찜갈비골목, 카페골목, 떡볶이 골목",false,lines,동성로 정류장 '먹거리' 항목(관광지–먹거리 연결 사례),,,중구 동성로 일대,,,코스 안내 > 03 > 먹거리,CHK-CITY-CO-003,S,verified_in_stored_original,verified,approved,v1,41
+CHK-CITY-CO-005,SRC-CITY-COURSE,MD-HYUNHEE-D-V2,SEC-CITY-COURSE-01,BLK-CITY-COURSE-01-04,5,fact,근대문화골목 정류장 설명,"1900년대 선교사들이 살았던 지역을 중심으로 만들어진 동산선교사 주택을 지나 3‧1 만세운동길과 계산성당, 이상화‧서상돈 고택, 제일교회, 약령시, 진골목을 거쳐 종로까지 이어지는 대구 100년의 역사가 남아 있는 골목길이다.",false,text,근대문화골목 정류장 소개(거리·소요시간은 없음),,,중구 근대골목,,,코스 안내 > 04,,S,verified_in_stored_original,verified,approved,v1,127
+CHK-CITY-CO-006,SRC-CITY-COURSE,MD-HYUNHEE-D-V2,SEC-CITY-COURSE-01,BLK-CITY-COURSE-01-05,6,figure,서문시장 상가 수,"포목, 주단 등 섬유 관련 품목을 비롯하여 5천여 개의 상가가 있어 없는 것이 없을 정도다.",false,text,"서문시장 상가 수 '5천여 개'(어림값, 기준 연도 없음)",,,중구 서문시장,,,코스 안내 > 05,,S,verified_in_stored_original,verified,approved,v1,51
+CHK-CITY-CO-007,SRC-CITY-COURSE,MD-HYUNHEE-D-V2,SEC-CITY-COURSE-01,BLK-CITY-COURSE-01-06,7,fact,두류공원에서 열리는 축제,"두류공원에는 문화예술회관, 야외음악당 등이 자리 해있으며, 대구치맥페스티벌, 판타지아 대구페스타의 주요 축제 등 문화예술 축제가 연중 열리고 있다.",false,text,두류공원 정류장 소개: 치맥페스티벌·판타지아 대구페스타 개최지,,,달서구 두류공원,,,코스 안내 > 06,CHK-CITY-CO-008,S,verified_in_stored_original,verified,approved,v1,82
+CHK-CITY-CO-008,SRC-CITY-COURSE,MD-HYUNHEE-D-V2,SEC-CITY-COURSE-01,BLK-CITY-COURSE-01-06,8,fact,두류공원 정류장 주변관광,"두류공원, 이월드, 83타워, 대구문화예술회관, 코오롱야외음악당",false,text,두류공원 정류장 '주변관광' 항목,,,달서구 두류공원 일대,,,코스 안내 > 06 > 주변관광,CHK-CITY-CO-007,S,verified_in_stored_original,verified,approved,v1,35
+CHK-CITY-CO-009,SRC-CITY-COURSE,MD-HYUNHEE-D-V2,SEC-CITY-COURSE-01,BLK-CITY-COURSE-01-07,9,fact,앞산 정류장 주변 먹거리,"앞산카페거리, 앞산 맛둘레길, 안지랑곱창골목",false,text,앞산공원 정류장 '먹거리' 항목,,,남구 앞산 일대,,,코스 안내 > 08 > 먹거리,,S,verified_in_stored_original,verified,approved,v1,24
+CHK-CITY-CO-010,SRC-CITY-COURSE,MD-HYUNHEE-D-V2,SEC-CITY-COURSE-01,BLK-CITY-COURSE-01-08,10,fact,수성못 영상음악분수쇼 시기,"수성못에서는 5월부터 10월까지 영상음악분수쇼를 볼 수 있고, 버스킹과 수성못페스티벌 등 다채로운 축제가 펼쳐진다.",false,text,"수성못 분수쇼 운영 시기 5~10월(연도 표기 없음, 매년 운영으로 읽힘)",,,수성구 수성못,,5월~10월,코스 안내 > 10,CHK-CITY-CO-011,S,verified_in_stored_original,verified,approved,v1,64
+CHK-CITY-CO-011,SRC-CITY-COURSE,MD-HYUNHEE-D-V2,SEC-CITY-COURSE-01,BLK-CITY-COURSE-01-08,11,fact,수성못 정류장 주변 먹거리,"들안길 먹거리타운, 수성못 카페거리",false,text,수성못 정류장 '먹거리' 항목,,,수성구,,,코스 안내 > 10 > 먹거리,CHK-CITY-CO-010,S,verified_in_stored_original,verified,approved,v1,19
+CHK-CITY-CO-012,SRC-CITY-COURSE,MD-HYUNHEE-D-V2,SEC-CITY-COURSE-02,BLK-CITY-COURSE-02-01,12,fact,시티투어 운영 주체,상호 : 특수법인 대구광역시관광협회,false,text,사이트 하단 상호 표기(운영 주체 근거),,,대구시티투어,,,코스 안내 페이지 하단,,S,verified_in_stored_original,verified,approved,v1,19
+CHK-CITY-HOME-001,SRC-CITY-HOME,MD-HYUNHEE-D-V2,SEC-CITY-HOME-01,BLK-CITY-HOME-01-01,1,fact,시티투어 테마코스 메뉴,"팔공산 투어
+군위군 돋보기 투어
+낙동강 투어
+사시사철 투어
+전통시장 투어
+야경 투어
+시즌 투어 산으로
+시즌 투어 강으로",false,lines,"시티투어 테마코스 메뉴(시즌 투어는 산으로·강으로 2개). 메뉴 존재만 확인, 운영 시기는 각 페이지 별도",,,대구시티투어 테마코스,,,daegucitytour.com 메뉴,,S,verified_in_stored_original,verified,approved,v1,66
+CHK-CITY-NT-001,SRC-CITY-NOTICE,MD-HYUNHEE-D-V2,SEC-CITY-NOTICE-01,BLK-CITY-NOTICE-01-01,1,fact,홈페이지 임시 중단 공지,"[공지] 대구시티투어 홈페이지 서비스 임시 중단 안내
+10.28",false,lines,"공지 목록에 10.28 게시로 표시(연도 표기 없음, 본문 미열람)",,,대구시티투어 홈페이지,,,공지사항 목록 1쪽,,S,verified_in_stored_original,verified,approved,v1,35
+CHK-CITY-NT-002,SRC-CITY-NOTICE,MD-HYUNHEE-D-V2,SEC-CITY-NOTICE-01,BLK-CITY-NOTICE-01-01,2,fact,판타지아페스타 특별코스 공지,"[특별코스] '판타지아페스타, 예술로 물드는 대구' 운행 안내
+10.14",false,lines,공지 목록에 10.14 게시로 표시(연도 표기 없음). 운행일·코스 구성은 본문 미열람으로 미확인,,,대구시티투어 특별코스,,,공지사항 목록 1쪽,,S,verified_in_stored_original,verified,approved,v1,40
+CHK-CITY-NIGHT-001,SRC-CITY-NIGHTTOUR,MD-HYUNHEE-D-V2,SEC-CITY-NIGHTTOUR-01,BLK-CITY-NIGHTTOUR-01-01,1,condition,야경투어 동절기 운행 요일,"야경투어 동절기 (금,토 운행)",false,text,확인일 기준 야경투어는 동절기 금·토 운행으로 안내,,,대구시티투어 야경 투어,,동절기,야경 투어 > 운행 안내,CHK-CITY-NIGHT-002,S,verified_in_stored_original,verified,approved,v1,17
+CHK-CITY-NIGHT-002,SRC-CITY-NIGHTTOUR,MD-HYUNHEE-D-V2,SEC-CITY-NIGHTTOUR-01,BLK-CITY-NIGHTTOUR-01-02,2,fact,야경투어 코스,"김광석다시그리기길
+83타워
+수성못
+앞산전망대
+서문시장(야시장)",false,lines,야경투어 코스 소개 5곳,,,대구시티투어 야경 투어,,,야경 투어 > 코스 소개,CHK-CITY-NIGHT-001,S,verified_in_stored_original,verified,approved,v1,34
+CHK-NAM-CABLE-001,SRC-NAM-CABLE,MD-HYUNHEE-D-V2,SEC-NAM-CABLE-01,BLK-NAM-CABLE-01-01,1,figure,앞산 케이블카 설치·연장,1974년 5월에 설치된 앞산 케이블카는 운행 거리 연장 795m에 편도 5분 정도가 소요된다.,false,text,"앞산 케이블카: 1974년 5월 설치, 연장 795m, 편도 약 5분",,,남구 앞산 케이블카,,,앞산8경 > 제3경 본문 1문장,CHK-NAM-CABLE-002,S,verified_in_stored_original,verified,approved,v1,53
+CHK-NAM-CABLE-002,SRC-NAM-CABLE,MD-HYUNHEE-D-V2,SEC-NAM-CABLE-01,BLK-NAM-CABLE-01-01,2,figure,앞산 케이블카 이용 요금(소개 문구),"1인당 10,500원만 투자한다면 케이블카를 타고 오르내리면서 앞산 큰골의 수려한 자연풍광과 대구 시가지를 동시에 조망할 수 있다.",false,text,"구청 소개 문장의 요금 10,500원. 왕복·편도, 기준 연도 표기 없음 — 운영사 요금표로 재확인 필요",,,남구 앞산 케이블카,,,앞산8경 > 제3경 본문 2문장,CHK-NAM-CABLE-001,S,verified_in_stored_original,verified,approved,v1,73
+CHK-DATA-NAMGU-001,SRC-DATA-NAMGU,MD-HYUNHEE-D-V2,SEC-DATA-NAMGU-01,BLK-DATA-NAMGU-01-01,1,fact,남구 관광명소 데이터 이름,파일데이터명 대구광역시 남구_관광 명소 현황_20260918,false,text,공공데이터포털 파일데이터명,,,대구 남구,,,data.go.kr 15061583 > 기본 정보,,A,verified_in_stored_original,verified,approved,v1,33
+CHK-DATA-NAMGU-002,SRC-DATA-NAMGU,MD-HYUNHEE-D-V2,SEC-DATA-NAMGU-01,BLK-DATA-NAMGU-01-01,2,rule,남구 관광명소 데이터 갱신 주기,"업데이트 주기 연간
+차기 등록 예정일 2027-09-19",false,lines,"연간 갱신, 다음 등록 예정일 2027-09-19",,,대구 남구,,,data.go.kr 15061583 > 기본 정보,CHK-DATA-NAMGU-004,A,verified_in_stored_original,verified,approved,v1,31
+CHK-DATA-NAMGU-003,SRC-DATA-NAMGU,MD-HYUNHEE-D-V2,SEC-DATA-NAMGU-01,BLK-DATA-NAMGU-01-02,3,fact,남구 관광명소 데이터 컬럼,"관광지명
+관광지구분
+소재지도로명주소
+위도
+경도
+주차가능수
+관광지소개
+관리기관전화번호
+관리기관명
+데이터기준일자",false,lines,데이터 컬럼 10개. 방문객 수 컬럼은 없음,,,대구 남구,,,data.go.kr 15061583 > 데이터 항목(컬럼) 정보,,A,verified_in_stored_original,verified,approved,v1,60
+CHK-DATA-NAMGU-004,SRC-DATA-NAMGU,MD-HYUNHEE-D-V2,SEC-DATA-NAMGU-01,BLK-DATA-NAMGU-01-03,4,figure,남구 관광명소 데이터 행 수·날짜,"확장자 CSV
+전체 행 15
+등록일 2020-07-07
+수정일 2026-09-18",false,lines,"CSV 15행, 등록 2020-07-07, 수정 2026-09-18",,,대구 남구,,,data.go.kr 15061583 > 상세 정보,CHK-DATA-NAMGU-002;CHK-DATA-NAMGU-005,A,verified_in_stored_original,verified,approved,v1,45
+CHK-DATA-NAMGU-005,SRC-DATA-NAMGU,MD-HYUNHEE-D-V2,SEC-DATA-NAMGU-01,BLK-DATA-NAMGU-01-04,5,exception,주차가능수 공란 주의,데이터 미집계로 인한 주차가능수 데이터에 공란이 다수 존재합니다.,false,text,주차가능수 공란은 '0'이 아니라 미집계,,,대구 남구 관광명소 데이터,,,data.go.kr 15061583 > 기타 유의사항,CHK-DATA-NAMGU-004,A,verified_in_stored_original,verified,approved,v1,36
+CHK-DATA-NAMGU-006,SRC-DATA-NAMGU,MD-HYUNHEE-D-V2,SEC-DATA-NAMGU-01,BLK-DATA-NAMGU-01-05,6,rule,남구 관광명소 데이터 이용 조건,"비용부과유무
+무료
+이용허락범위 제한 없음",false,lines,"무료, 이용허락범위 제한 없음",,,대구 남구 관광명소 데이터,,,data.go.kr 15061583 > 이용 조건 및 라이선스,,A,verified_in_stored_original,verified,approved,v1,22
+CHK-KB0709-001,SRC-NEWS-KB-20260709500236,MD-HYUNHEE-D-V2,SEC-NEWS-KB-20260709500236-01,BLK-NEWS-KB-20260709500236-01-01,1,fact,통계 출처 표시,12일 문화체육관광부와 한국관광공사 한국관광데이터랩에 따르면,true,text,기사가 밝힌 수치 출처: 한국관광데이터랩. 집계 기간은 기사에 없음,,,대구,,,본문,CHK-KB0709-002;CHK-KB0709-003;CHK-KB0709-004,B,verified_in_snapshot_not_stored,verified,reference_only,v1,33
+CHK-KB0709-002,SRC-NEWS-KB-20260709500236,MD-HYUNHEE-D-V2,SEC-NEWS-KB-20260709500236-01,BLK-NEWS-KB-20260709500236-01-01,2,figure,대구 방문자 유입 증감,대구의 방문자 유입은 전년 동기 대비 6.0% 증가했다.,true,text,대구 방문자 유입 전년 동기 대비 +6.0%(집계 기간 미표기),,,대구,,,본문,CHK-KB0709-001,B,verified_in_snapshot_not_stored,verified,reference_only,v1,31
+CHK-KB0709-003,SRC-NEWS-KB-20260709500236,MD-HYUNHEE-D-V2,SEC-NEWS-KB-20260709500236-01,BLK-NEWS-KB-20260709500236-01-01,3,figure,숙박 방문자 비율·관광소비 증감,"숙박 방문자 비율은 4.1%, 관광소비는 1.9% 늘었다.",true,text,"숙박 방문자 비율 +4.1%, 관광소비 +1.9%(전년 동기 대비)",,,대구,,,본문,CHK-KB0709-001,B,verified_in_snapshot_not_stored,verified,reference_only,v1,32
+CHK-KB0709-004,SRC-NEWS-KB-20260709500236,MD-HYUNHEE-D-V2,SEC-NEWS-KB-20260709500236-01,BLK-NEWS-KB-20260709500236-01-01,4,figure,체류시간·목적지 검색량 감소,반면 평균 체류시간은 1.5% 감소했고 목적지 검색량도 1.9% 줄었다.,true,text,"평균 체류시간 -1.5%, 목적지 검색량 -1.9%",,,대구,,,본문,CHK-KB0709-001,B,verified_in_snapshot_not_stored,verified,reference_only,v1,40
+CHK-KB0709-005,SRC-NEWS-KB-20260709500236,MD-HYUNHEE-D-V2,SEC-NEWS-KB-20260709500236-01,BLK-NEWS-KB-20260709500236-01-02,5,figure,2025년 10월 방문객 수,지난해 10월 1106만637명으로 최근 1년 가운데 가장 많은 방문객을 기록했다.,true,text,"2025년 10월 대구 방문객 11,060,637명(기사 기준 '지난해'=2025년)",,,대구,,2025-10,본문,CHK-KB0709-006,B,verified_in_snapshot_not_stored,verified,reference_only,v1,46
+CHK-KB0709-006,SRC-NEWS-KB-20260709500236,MD-HYUNHEE-D-V2,SEC-NEWS-KB-20260709500236-01,BLK-NEWS-KB-20260709500236-01-02,6,figure,2025년 10월 전년 동월 대비,전년 동월보다 30.5% 증가한 수치다.,true,text,앞 문장(2025년 10월 방문객)의 전년 동월 대비 +30.5%,,,대구,,2025-10,본문,CHK-KB0709-005,B,verified_in_snapshot_not_stored,verified,reference_only,v1,22
+CHK-KB0709-007,SRC-NEWS-KB-20260709500236,MD-HYUNHEE-D-V2,SEC-NEWS-KB-20260709500236-01,BLK-NEWS-KB-20260709500236-01-02,7,figure,2026년 5월 방문객 수,가장 최근인 2026년 5월에는 984만7859명으로 전년 동월 대비 9.1% 감소했다.,true,text,"2026년 5월 대구 방문객 9,847,859명, 전년 동월 대비 -9.1%",,,대구,,2026-05,본문,,B,verified_in_snapshot_not_stored,verified,reference_only,v1,49
+CHK-KB0709-008,SRC-NEWS-KB-20260709500236,MD-HYUNHEE-D-V2,SEC-NEWS-KB-20260709500236-01,BLK-NEWS-KB-20260709500236-01-03,8,figure,대구 방문객 유입 지역 1위,대구 방문객의 유입 지역은 경북이 74.7%로 가장 높은 비중을 차지했다.,true,text,유입 지역 비중 경북 74.7%,,,대구,,,본문,CHK-KB0709-009,B,verified_in_snapshot_not_stored,verified,reference_only,v1,41
+CHK-KB0709-009,SRC-NEWS-KB-20260709500236,MD-HYUNHEE-D-V2,SEC-NEWS-KB-20260709500236-01,BLK-NEWS-KB-20260709500236-01-03,9,figure,대구 방문객 유입 지역 2~5위,"이어 경남 11.1%, 부산 3.9%, 경기 2.4%, 서울 1.0% 순이었다.",true,text,유입 지역 비중 경남·부산·경기·서울,,,대구,,,본문,CHK-KB0709-008,B,verified_in_snapshot_not_stored,verified,reference_only,v1,44
+CHK-IM0121-001,SRC-NEWS-IM-2026012116093612359,MD-HYUNHEE-D-V2,SEC-NEWS-IM-2026012116093612359-01,BLK-NEWS-IM-2026012116093612359-01-01,1,figure,대구 외국인 관광객 수 2023~2025,"대구시에 따르면 외국인 관광객 수는 2023년 36만461명에서 2024년 39만8천132명으로 늘었고, 2025년 11월까지 37만7천443명으로 집계됐다.",true,text,"대구시 집계 외국인 관광객: 2023 360,461 / 2024 398,132 / 2025년 1~11월 377,443. 원자료 문서명 없음",,,대구,,2023~2025년 11월,본문,,B,verified_in_snapshot_not_stored,verified,reference_only,v1,88
+CHK-IM1011-001,SRC-NEWS-IM-2026100816300616103,MD-HYUNHEE-D-V2,SEC-NEWS-IM-2026100816300616103-01,BLK-NEWS-IM-2026100816300616103-01-01,1,fact,'2년 새 80% 증가' 소제목,외국인 방문 2년 새 80% 증가,true,text,기사 소제목 문구. 기준 연도·지역 범위·출처 없음 — MD 규칙상 사용 금지,,,대구경북(범위 불명),,,본문,,B,verified_in_snapshot_not_stored,verified,reference_only,v1,18
+CHK-IM1011-002,SRC-NEWS-IM-2026100816300616103,MD-HYUNHEE-D-V2,SEC-NEWS-IM-2026100816300616103-01,BLK-NEWS-IM-2026100816300616103-01-02,2,fact,대구시 야간관광 자원 발굴,치맥페스티벌 등 축제·미식을 관광상품화하고 야간관광 자원을 발굴하는,true,text,대구시 관광 정책 방향(기사 서술),,,대구,,,본문,,B,verified_in_snapshot_not_stored,verified,reference_only,v1,37
+CHK-IM1011-003,SRC-NEWS-IM-2026100816300616103,MD-HYUNHEE-D-V2,SEC-NEWS-IM-2026100816300616103-01,BLK-NEWS-IM-2026100816300616103-01-02,3,fact,제7차 대구권 관광개발계획 마무리,올해는 관광자원 개발 등을 담은 제7차 대구권 관광개발계획이 마무리되는 해이기도 하다.,true,text,기사 기준 '올해'=2026년,,,대구,,2026,본문,,B,verified_in_snapshot_not_stored,verified,reference_only,v1,48
+CHK-IM1011-004,SRC-NEWS-IM-2026100816300616103,MD-HYUNHEE-D-V2,SEC-NEWS-IM-2026100816300616103-01,BLK-NEWS-IM-2026100816300616103-01-02,4,fact,지방공항 중심 5대 관광권 육성사업 선정,지난달 '지방공항 중심 5대 관광권 육성사업'에 선정되면서,true,text,"기사 기준 '지난달'(2026년 9월로 읽힘, 정확한 선정일 미확인)",,,대구경북,,,본문,,B,verified_in_snapshot_not_stored,verified,reference_only,v1,32
+CHK-SBS-001,SRC-NEWS-SBS-20000248223,MD-HYUNHEE-D-V2,SEC-NEWS-SBS-20000248223-01,BLK-NEWS-SBS-20000248223-01-01,1,fact,조사 의뢰 기관,이 조사는 모노리서치에 의뢰해,true,text,한경협 국내·해외여행 선호도 조사의 조사 수행 기관,,,전국,,,본문,CHK-SBS-002;CHK-SBS-003,B,verified_in_snapshot_not_stored,verified,reference_only,v1,16
+CHK-SBS-002,SRC-NEWS-SBS-20000248223,MD-HYUNHEE-D-V2,SEC-NEWS-SBS-20000248223-01,BLK-NEWS-SBS-20000248223-01-01,2,condition,조사 대상과 표본,만 18세 이상 남녀 1천명을 대상으로 이뤄졌습니다.,true,text,"표본 1,000명(최근 3년 이내 국내·해외여행 모두 경험자). 전국 단위, 대구 분리 불가",,,전국,,,본문,CHK-SBS-001,B,verified_in_snapshot_not_stored,verified,reference_only,v1,29
+CHK-SBS-003,SRC-NEWS-SBS-20000248223,MD-HYUNHEE-D-V2,SEC-NEWS-SBS-20000248223-01,BLK-NEWS-SBS-20000248223-01-02,3,figure,국내여행 불만 이유 상위 항목,"높은 관광지 물가(45.1％), 특색 있는 지역 관광 콘텐츠 부족(19.4％)",true,text,"국내여행이 해외보다 만족스럽지 않은 이유: 물가 45.1%, 지역 특색 콘텐츠 부족 19.4%",,,전국,,,본문,CHK-SBS-002,B,verified_in_snapshot_not_stored,verified,reference_only,v1,43
+CHK-HK0509-001,SRC-NEWS-HK-202505092401h,MD-HYUNHEE-D-V2,SEC-NEWS-HK-202505092401h-01,BLK-NEWS-HK-202505092401h-01-01,1,fact,대구10미데이 기간·모집,대구광역시는 오는 6월부터 9월까지 4개월간 진행되는 미식 이벤트 ‘대구10미(味)데이’에 함께할 참여업소를 오는 16일까지 모집한다.,true,text,"2025년 대구10미데이: 6~9월, 참여업소 모집 마감 5월 16일(기사 날짜 2025-05-09 기준)",,,대구,,2025-06~2025-09,본문,CHK-HK0509-002;CHK-HK0509-003,B,verified_in_snapshot_not_stored,verified,reference_only,v1,75
+CHK-HK0509-002,SRC-NEWS-HK-202505092401h,MD-HYUNHEE-D-V2,SEC-NEWS-HK-202505092401h-01,BLK-NEWS-HK-202505092401h-01-01,2,figure,대구10미데이 참여업소 수 상한,대구시는 최대 50개소의 업소를 선정해 이벤트를 운영할 계획이며,true,text,참여업소 최대 50개소(계획),,,대구,,,본문,CHK-HK0509-001,B,verified_in_snapshot_not_stored,verified,reference_only,v1,35
+CHK-HK0509-003,SRC-NEWS-HK-202505092401h,MD-HYUNHEE-D-V2,SEC-NEWS-HK-202505092401h-01,BLK-NEWS-HK-202505092401h-01-01,3,fact,대구10미데이 목적,대구의 대표 음식 브랜드인 대구10미(味)의 인지도를 높이고 외식업계에 활력을 불어넣기위한 이벤트다.,true,text,행사 목적,,,대구,,,본문,CHK-HK0509-001,B,verified_in_snapshot_not_stored,verified,reference_only,v1,56
+CHK-KB0928-001,SRC-NEWS-KB-20260922500376,MD-HYUNHEE-D-V2,SEC-NEWS-KB-20260922500376-01,BLK-NEWS-KB-20260922500376-01-01,1,fact,수상공연장 착공 시기,수성못 수상공연장 12월 첫 삽,true,text,기사 제목. 2026년 12월 착공 목표로 읽힘,,,수성구 수성못,,2026-12(목표),본문,CHK-KB0928-002,B,verified_in_snapshot_not_stored,verified,reference_only,v1,17
+CHK-KB0928-002,SRC-NEWS-KB-20260922500376,MD-HYUNHEE-D-V2,SEC-NEWS-KB-20260922500376-01,BLK-NEWS-KB-20260922500376-01-01,2,figure,수상공연장 규모·준공 목표,총 300억 투입 2000석 규모…2028년 2월 준공 목표,true,text,"총사업비 300억 원, 2000석, 준공 목표 2028년 2월",,,수성구 수성못,,2028-02(목표),본문,CHK-KB0928-003;CHK-KB0928-004,B,verified_in_snapshot_not_stored,verified,reference_only,v1,33
+CHK-KB0928-003,SRC-NEWS-KB-20260922500376,MD-HYUNHEE-D-V2,SEC-NEWS-KB-20260922500376-01,BLK-NEWS-KB-20260922500376-01-02,3,figure,수상공연장 재원 구성,"총사업비 300억원은 국비 99억원, 시비 100억원, 구비 101억원으로 구성된다.",true,text,재원: 국비 99억·시비 100억·구비 101억(원),,,수성구 수성못,,,본문,CHK-KB0928-002;CHK-KB0928-005,B,verified_in_snapshot_not_stored,verified,reference_only,v1,47
+CHK-KB0928-005,SRC-NEWS-KB-20260922500376,MD-HYUNHEE-D-V2,SEC-NEWS-KB-20260922500376-01,BLK-NEWS-KB-20260922500376-01-02,4,figure,올해 필요액과 확보액,올해 필요한 사업비는 211억9000만원이지만 현재 확보액은 82억8100만원으로,true,text,"2026년 필요 211억9000만 원, 확보 82억8100만 원(기사 시점)",,,수성구 수성못,,2026,본문,CHK-KB0928-003,B,verified_in_snapshot_not_stored,verified,reference_only,v1,45
+CHK-KB0928-004,SRC-NEWS-KB-20260922500376,MD-HYUNHEE-D-V2,SEC-NEWS-KB-20260922500376-01,BLK-NEWS-KB-20260922500376-01-03,5,fact,준공 목표 변경 이력,2027년 준공을 거쳐 현재는 2028년 2월로 목표가 다시 조정됐다.,true,text,준공 목표가 2027년을 거쳐 2028년 2월로 조정,,,수성구 수성못,,,본문,CHK-KB0928-006,B,verified_in_snapshot_not_stored,verified,reference_only,v1,39
+CHK-KB0928-006,SRC-NEWS-KB-20260922500376,MD-HYUNHEE-D-V2,SEC-NEWS-KB-20260922500376-01,BLK-NEWS-KB-20260922500376-01-03,6,fact,2026년 말 완공 계획(이전),지난해 9월 주민설명회에서도 2026년 말 완공 계획이 나왔다.,true,text,이전 계획: 2026년 말 완공(2025년 9월 주민설명회),,,수성구 수성못,,,본문,CHK-KB0928-004,B,verified_in_snapshot_not_stored,verified,reference_only,v1,35
+CHK-IM0708-001,SRC-NEWS-IM-2026070811204948205,MD-HYUNHEE-D-V2,SEC-NEWS-IM-2026070811204948205-01,BLK-NEWS-IM-2026070811204948205-01-01,1,figure,구름다리 사업비,사업비는 180억원 규모였으며 국비 25억원까지 확보했다.,true,text,"팔공산 구름다리 사업비 180억 원, 국비 25억 원 확보(과거 사업)",,,동구 팔공산,,,본문,CHK-IM0708-002,B,verified_in_snapshot_not_stored,verified,reference_only,v1,32
+CHK-IM0708-002,SRC-NEWS-IM-2026070811204948205,MD-HYUNHEE-D-V2,SEC-NEWS-IM-2026070811204948205-01,BLK-NEWS-IM-2026070811204948205-01-01,2,fact,구름다리 2022년 중단,대구시는 2022년 시공사 선정까지 마치고 착공을 준비했지만 환경단체와 불교계의 반대로 결국 사업을 접었다.,true,text,구름다리는 2022년 시공사 선정 후 반대로 중단,,,동구 팔공산,,2022,본문,CHK-IM0708-001,B,verified_in_snapshot_not_stored,verified,reference_only,v1,60
+CHK-IM0708-003,SRC-NEWS-IM-2026070811204948205,MD-HYUNHEE-D-V2,SEC-NEWS-IM-2026070811204948205-01,BLK-NEWS-IM-2026070811204948205-01-02,3,fact,팔공산 관광활성화 기본계획 수립 용역,대구시는 지난해 6월부터 '팔공산 관광활성화 기본계획 수립 용역'을 진행하며,true,text,기사(2026-07-08) 기준 '지난해 6월'=2025년 6월부터 진행,,,동구 팔공산,,2025-06~,본문,,B,verified_in_snapshot_not_stored,verified,reference_only,v1,42
+CHK-IM0708-004,SRC-NEWS-IM-2026070811204948205,MD-HYUNHEE-D-V2,SEC-NEWS-IM-2026070811204948205-01,BLK-NEWS-IM-2026070811204948205-01-03,4,fact,갓바위 케이블카 백지화,홍준표 전 대구시장도 종교계와 협의가 어렵다고 판단해 사업 백지화를 공식화했고,true,text,갓바위 케이블카 백지화 공식화(과거),,,동구 팔공산,,,본문,CHK-IM0708-005,B,verified_in_snapshot_not_stored,verified,reference_only,v1,43
+CHK-IM0708-005,SRC-NEWS-IM-2026070811204948205,MD-HYUNHEE-D-V2,SEC-NEWS-IM-2026070811204948205-01,BLK-NEWS-IM-2026070811204948205-01-03,5,figure,갓바위 케이블카 여론조사 찬성률,갓바위 케이블카 설치에 찬성한다는 응답이 61.4%로 반대(27.0%)의 두 배를 넘었다.,true,text,"찬성 61.4%, 반대 27.0%",,,대구·경북 시도민,,,본문,CHK-IM0708-006;CHK-IM0708-007,B,verified_in_snapshot_not_stored,verified,reference_only,v1,50
+CHK-IM0708-006,SRC-NEWS-IM-2026070811204948205,MD-HYUNHEE-D-V2,SEC-NEWS-IM-2026070811204948205-01,BLK-NEWS-IM-2026070811204948205-01-03,6,condition,여론조사 기관·표본,리서치웰이 올해 1월 대구·경북 시도민 1천3명을 대상으로 실시한 조사에서는,true,text,"리서치웰, 2026년 1월, 대구·경북 1,003명",,,대구·경북 시도민,,2026-01,본문,CHK-IM0708-005,B,verified_in_snapshot_not_stored,verified,reference_only,v1,42
+CHK-IM0708-007,SRC-NEWS-IM-2026070811204948205,MD-HYUNHEE-D-V2,SEC-NEWS-IM-2026070811204948205-01,BLK-NEWS-IM-2026070811204948205-01-03,7,figure,대구 시민만의 찬성률,대구 시민만 보면 찬성률은 64.9%로 더 높았다.,true,text,대구 시민 한정 찬성률 64.9%(소제목의 '64%'는 이 값으로 보임),,,대구 시민,,,본문,CHK-IM0708-005,B,verified_in_snapshot_not_stored,verified,reference_only,v1,28
+CHK-KB0903-001,SRC-NEWS-KB-20260902500343,MD-HYUNHEE-D-V2,SEC-NEWS-KB-20260902500343-01,BLK-NEWS-KB-20260902500343-01-01,1,fact,달성군 대만 홍보여행 개요,달성군은 지난달 27~30일 대만 주요 여행업계와 언론사 15곳 관계자 30여 명을 초청해 공동 홍보여행을 진행했다.,true,text,"기사(2026-09-03) 기준 '지난달'=2026년 8월 27~30일, 15곳 30여 명",,,달성군,,2026-08-27~2026-08-30,본문,CHK-KB0903-002;CHK-KB0903-003,B,verified_in_snapshot_not_stored,verified,reference_only,v1,65
+CHK-KB0903-002,SRC-NEWS-KB-20260902500343,MD-HYUNHEE-D-V2,SEC-NEWS-KB-20260902500343-01,BLK-NEWS-KB-20260902500343-01-02,2,example,사문진주막촌 막걸리 체험,사문진주막촌에서는 막걸리를 맛보며,true,text,홍보여행 중 사문진주막촌 막걸리 시음,,,달성군 사문진주막촌,,,본문,CHK-KB0903-001,B,verified_in_snapshot_not_stored,verified,reference_only,v1,18
+CHK-KB0903-003,SRC-NEWS-KB-20260902500343,MD-HYUNHEE-D-V2,SEC-NEWS-KB-20260902500343-01,BLK-NEWS-KB-20260902500343-01-02,3,example,마비정벽화마을 떡메치기 체험,마비정벽화마을에서는 떡메치기를 통해,true,text,홍보여행 중 마비정벽화마을 떡메치기,,,달성군 마비정벽화마을,,,본문,CHK-KB0903-001,B,verified_in_snapshot_not_stored,verified,reference_only,v1,19
+CHK-KB0903-004,SRC-NEWS-KB-20260902500343,MD-HYUNHEE-D-V2,SEC-NEWS-KB-20260902500343-01,BLK-NEWS-KB-20260902500343-01-03,4,figure,1분기 대만 관광객 증가율,한국관광공사에 따르면 올해 1분기 한국을 찾은 대만 관광객은 전년 같은 기간보다 37.7% 늘어,true,text,전국(한국) 방문 대만 관광객 2026년 1분기 +37.7%,,,한국 전체,,2026 1분기,본문,,B,verified_in_snapshot_not_stored,verified,reference_only,v1,53
+CHK-KB0903-005,SRC-NEWS-KB-20260902500343,MD-HYUNHEE-D-V2,SEC-NEWS-KB-20260902500343-01,BLK-NEWS-KB-20260902500343-01-04,5,fact,관광상품 개발 계획 단계,달성군은 현지 여행업계와 연계한 관광상품 개발을 확대할 계획이다.,true,text,상품은 확정이 아니라 개발 계획,,,달성군,,,본문,,B,verified_in_snapshot_not_stored,verified,reference_only,v1,36
+CHK-KB0714-001,SRC-NEWS-KB-20260714500472,MD-HYUNHEE-D-V2,SEC-NEWS-KB-20260714500472-01,BLK-NEWS-KB-20260714500472-01-01,1,fact,북구 스탬프 투어 기간,대구 북구는 15일부터 11월 30일까지,true,text,기사(2026-07-14) 기준 2026년 7월 15일~11월 30일,,,북구,,2026-07-15~2026-11-30,본문,CHK-KB0714-002,B,verified_in_snapshot_not_stored,verified,reference_only,v1,22
+CHK-KB0714-002,SRC-NEWS-KB-20260714500472,MD-HYUNHEE-D-V2,SEC-NEWS-KB-20260714500472-01,BLK-NEWS-KB-20260714500472-01-01,2,condition,상품권 지급 조건,투어 장소 20곳 가운데 6곳 이상을 방문해 스탬프를 모은 참가자를 대상으로 2만 원 상당의 모바일 상품권을 증정하는 이벤트도 진행한다.,true,text,20곳 중 6곳 이상 방문 시 응모 대상. 실제 지급은 다음 청크의 추첨 조건을 함께 봐야 함,,,북구,,,본문,CHK-KB0714-003,B,verified_in_snapshot_not_stored,verified,reference_only,v1,76
+CHK-KB0714-003,SRC-NEWS-KB-20260714500472,MD-HYUNHEE-D-V2,SEC-NEWS-KB-20260714500472-01,BLK-NEWS-KB-20260714500472-01-01,3,exception,상품권 추첨·인원 제한,매월 참여자 가운데 50명을 추첨해 경품을 지급하며,true,text,상품권은 매월 50명 추첨(전원 지급 아님),,,북구,,,본문,CHK-KB0714-002,B,verified_in_snapshot_not_stored,verified,reference_only,v1,28
+CHK-KB1002-001,SRC-NEWS-KB-20261001500524,MD-HYUNHEE-D-V2,SEC-NEWS-KB-20261001500524-01,BLK-NEWS-KB-20261001500524-01-01,1,figure,대구 골목형상점가 수,현재 대구에는 골목형상점가 110곳이 지정돼 있으며,true,text,기사(2026-10-02) 시점 골목형상점가 110곳,,,대구,,2026-10 기준,본문,CHK-KB1002-002,B,verified_in_snapshot_not_stored,verified,reference_only,v1,28
+CHK-KB1002-002,SRC-NEWS-KB-20261001500524,MD-HYUNHEE-D-V2,SEC-NEWS-KB-20261001500524-01,BLK-NEWS-KB-20261001500524-01-02,2,figure,홍보 사업 예산·점포 수,8억4000만원 투입해 8천여 점포 깃발·스티커 설치,true,text,"홍보 사업비 8억4000만 원, 대상 점포 8천여 곳",,,대구,,,본문,CHK-KB1002-001;CHK-KB1002-003,B,verified_in_snapshot_not_stored,verified,reference_only,v1,29
+CHK-KB1002-003,SRC-NEWS-KB-20261001500524,MD-HYUNHEE-D-V2,SEC-NEWS-KB-20261001500524-01,BLK-NEWS-KB-20261001500524-01-02,3,figure,입간판·포토존 설치 상점가 수,18개 상점가엔 입간판·포토존,true,text,입간판·포토존 설치 대상 18개 골목형상점가('유망 상권' 표현은 없음),,,대구,,,본문,CHK-KB1002-002,B,verified_in_snapshot_not_stored,verified,reference_only,v1,16
+CHK-IN24-001,SRC-NEWS-IN24-2014037,MD-HYUNHEE-D-V2,SEC-NEWS-IN24-2014037-01,BLK-NEWS-IN24-2014037-01-01,1,fact,대박세일 환급·33곳 가을축제,12일부터 온누리상품권 최대 1만 원 환급…전통시장·골목상권 33곳 가을축제도 내달 말까지,true,text,"기사(2026-10-12): '12일부터'는 환급 행사 시작, 33곳 가을축제는 '내달 말까지'",,,대구,,2026-10-12~2026-11 말,본문,,B,verified_in_snapshot_not_stored,verified,reference_only,v1,50
+CHK-NSIS-001,SRC-NEWS-NSIS-20260611,MD-HYUNHEE-D-V2,SEC-NEWS-NSIS-20260611-01,BLK-NEWS-NSIS-20260611-01-01,1,figure,동성로 상권활성화 사업비,"오는 2028년까지 5년간 총 60억원(국비 30억, 시비 15억, 구비 15억)의 사업비를 투입해 '동성로 상권활성화 사업'을 추진하며",true,text,동성로 상권활성화: 2028년까지 5년간 60억 원(국30·시15·구15). 시작 연도는 문장에 없음,,,중구 동성로,,~2028(5년),본문,,B,verified_in_snapshot_not_stored,verified,reference_only,v1,76
+CHK-IM0616-001,SRC-NEWS-IM-2026061613283712235,MD-HYUNHEE-D-V2,SEC-NEWS-IM-2026061613283712235-01,BLK-NEWS-IM-2026061613283712235-01-01,1,fact,교동 글로컬상권 선정,대구 중구 교동상권과 수성구 들안길상권이 정부의 '글로컬상권',true,text,"교동상권 글로컬상권, 들안길상권 로컬테마상권 선정(2026-06)",,,중구 교동,,,본문,CHK-IM0616-002,B,verified_in_snapshot_not_stored,verified,reference_only,v1,34
+CHK-IM0616-002,SRC-NEWS-IM-2026061613283712235,MD-HYUNHEE-D-V2,SEC-NEWS-IM-2026061613283712235-01,BLK-NEWS-IM-2026061613283712235-01-02,2,figure,글로컬상권 지원 한도,글로컬상권 선정 상권에는 2년간 최대 50억원의 사업비가 지원된다.,true,text,글로컬상권 일반 지원 한도(교동 확정 배정액 아님),,,글로컬상권 선정 상권,,2년,본문,CHK-IM0616-001,B,verified_in_snapshot_not_stored,verified,reference_only,v1,37
+CHK-SG0629-001,SRC-NEWS-SG-20260629514188,MD-HYUNHEE-D-V2,SEC-NEWS-SG-20260629514188-01,BLK-NEWS-SG-20260629514188-01-01,1,fact,대구 STAY & 골목 PLAY 사업,다른 지역 관광객의 체류를 유도하기 위해 ‘대구 스테이(STAY) & 골목 플레이(PLAY)’ 사업도 함께 추진한다.,true,text,치맥페스티벌 연계 소비 진작 사업,,,대구,,2026년 치맥페스티벌 기간,본문,CHK-SG0629-002;CHK-SG0629-003,B,verified_in_snapshot_not_stored,verified,reference_only,v1,65
+CHK-SG0629-002,SRC-NEWS-SG-20260629514188,MD-HYUNHEE-D-V2,SEC-NEWS-SG-20260629514188-01,BLK-NEWS-SG-20260629514188-01-01,2,condition,웰컴 패키지 대상·장소,‘웰컴 패키지’를 신청한 외지 관광객 5000여명을 대상으로 동대구역 관광안내소에서 특별 혜택을 제공하는 내용이다.,true,text,"사전 신청 외지 관광객 5000여 명, 동대구역 관광안내소",,,외지 관광객,사전 신청,,본문,CHK-SG0629-001,B,verified_in_snapshot_not_stored,verified,reference_only,v1,64
+CHK-SG0629-003,SRC-NEWS-SG-20260629514188,MD-HYUNHEE-D-V2,SEC-NEWS-SG-20260629514188-01,BLK-NEWS-SG-20260629514188-01-01,3,figure,웰컴페이 2만원,‘대구로페이’ 실물카드 2만원을 ‘웰컴페이’로 즉시 지급받을 수 있다.,true,text,숙박 인증 시 대구로페이 2만 원 지급,,,외지 관광객,당일 숙박 인증(숙박 바우처·영수증),,본문,CHK-SG0629-001,B,verified_in_snapshot_not_stored,verified,reference_only,v1,39
+CHK-SG0629-004,SRC-NEWS-SG-20260629514188,MD-HYUNHEE-D-V2,SEC-NEWS-SG-20260629514188-01,BLK-NEWS-SG-20260629514188-01-02,4,condition,SNS 인증 이벤트 조건,지역 소상공인 점포에서 2만원 이상 이용한 고객이 개인 사회관게망서비스(SNS)에 필수 해시태그,true,text,2만 원 이상 이용 후 SNS 인증(원문 오탈자 '관게망' 그대로),,,대구 소상공인 점포,,,본문,CHK-SG0629-005,B,verified_in_snapshot_not_stored,verified,reference_only,v1,53
+CHK-SG0629-005,SRC-NEWS-SG-20260629514188,MD-HYUNHEE-D-V2,SEC-NEWS-SG-20260629514188-01,BLK-NEWS-SG-20260629514188-01-02,5,figure,SNS 이벤트 경품,추첨을 통해 ‘대구로페이’ 1만원을 증정하는,true,text,추첨으로 대구로페이 1만 원,,,대구 소상공인 점포,,,본문,CHK-SG0629-004,B,verified_in_snapshot_not_stored,verified,reference_only,v1,24
+CHK-SG0629-006,SRC-NEWS-SG-20260629514188,MD-HYUNHEE-D-V2,SEC-NEWS-SG-20260629514188-01,BLK-NEWS-SG-20260629514188-01-03,6,condition,스탬프 페이백 조건,"앱 내 온누리상품권 가맹점 중 축제 참여 점포에서 1만원 이상 주문하면 스탬프가 적립되며, 2회 이상 이용한 소비자에게는 5000원 상당의 페이백 쿠폰을 선착순으로 지급한다.",true,text,"대구로 앱, 1만 원 이상 주문 2회 이상 시 5000원 쿠폰(선착순)",,,대구로 앱 이용자,,2026-07-01~,본문,,B,verified_in_snapshot_not_stored,verified,reference_only,v1,97
+CHK-KUK0629-001,SRC-NEWS-KUK-202606290108,MD-HYUNHEE-D-V2,SEC-NEWS-KUK-202606290108-01,BLK-NEWS-KUK-202606290108-01-01,1,fact,치맥페스티벌 참여형 콘텐츠 목록,"행사장 곳곳에는 치맥 떼창 클럽, K-치맥 스트리트, 플리마켓, 스탬프 랠리, 체험형 챌린지 등 참여형 콘텐츠를 확대했다.",true,text,2026 대구치맥페스티벌 콘텐츠 목록. 플리마켓은 K-치맥 스트리트와 나란히 열거됨(포함 관계 표기 없음),,,2026 대구치맥페스티벌,,2026-07-01~2026-07-05,본문,,B,verified_in_snapshot_not_stored,verified,reference_only,v1,68
+CHK-IM1223-001,SRC-NEWS-IM-2025122316251975329,MD-HYUNHEE-D-V2,SEC-NEWS-IM-2025122316251975329-01,BLK-NEWS-IM-2025122316251975329-01-01,1,fact,대구시 외국인 관광객 만족도 조사 기간,지난 2024년 4월부터 12월 사이 대구를 방문한 외국인 관광객의 만족도 조사를 실시했다.,true,text,"대구시 조사, 2024년 4~12월",,,대구,,2024-04~2024-12,본문,CHK-IM1223-002,B,verified_in_snapshot_not_stored,verified,reference_only,v1,51
+CHK-IM1223-002,SRC-NEWS-IM-2025122316251975329,MD-HYUNHEE-D-V2,SEC-NEWS-IM-2025122316251975329-01,BLK-NEWS-IM-2025122316251975329-01-01,2,figure,만족도 조사 응답자 수,응답자는 총 1천10명으로,true,text,"응답자 1,010명",,,대구,,,본문,CHK-IM1223-001,B,verified_in_snapshot_not_stored,verified,reference_only,v1,14
+CHK-KB0316-001,SRC-NEWS-KB-20260315500354,MD-HYUNHEE-D-V2,SEC-NEWS-KB-20260315500354-01,BLK-NEWS-KB-20260315500354-01-01,1,fact,두류공원 관광특구·국가공원 추진 협력,두류공원 관광특구·국가공원 추진 협력,true,text,달서구–이월드 업무협약 내용(2026-03-13 체결). 지정 확정 아님,,,달서구 두류공원,,2026-03,본문,,B,verified_in_snapshot_not_stored,verified,reference_only,v1,20
+CHK-AJU-001,SRC-NEWS-AJU-20240729114141696,MD-HYUNHEE-D-V2,SEC-NEWS-AJU-20240729114141696-01,BLK-NEWS-AJU-20240729114141696-01-01,1,fact,달성군 2024 관광박람회 수상 내용,달성군은 문화체육관광부 주관의 공모사업인 ‘2024 워케이션 활성화 사업’을 중심으로,true,text,2024년 7월 수상 부스의 홍보 중심은 워케이션(파크골프 언급 없음),,,달성군,,2024-07,본문,,B,verified_in_snapshot_not_stored,verified,reference_only,v1,47
+CHK-DGP278733-001,SRC-DG-PRESS-278733,MD-HYUNHEE-D-V2,SEC-DG-PRESS-278733-01,BLK-DG-PRESS-278733-01-01,1,figure,골목형 상점가 수·점포 수(2026-09),"온누리상품권 사용이 가능한 대구 골목형 상점가는 현재 100개소 7,100여 개 점포로 대폭 확대되고 있지만, 시민 인지도는 여전히 낮다.",false,text,"2026-09-10 기준 골목형 상점가 100개소, 점포 7,100여 개",,,대구,,2026-09 기준,보도자료 본문,CHK-DGP278733-002,S,verified_in_stored_original,verified,approved,v1,77
+CHK-DGP278733-002,SRC-DG-PRESS-278733,MD-HYUNHEE-D-V2,SEC-DG-PRESS-278733-01,BLK-DG-PRESS-278733-01-01,2,fact,유망 상권 18개소 랜드마크 지원,"유망 상권 18개소는 입간판·포토존 등 상권별 랜드마크 설치를 지원하고, 전체 골목형상점가에는 온누리상품권 가맹점 깃발과 스티커를 배부한다.",false,text,"유망 상권 18개소 입간판·포토존, 전체에는 깃발·스티커",,,대구 골목형상점가,,,보도자료 본문,CHK-DGP278733-001,S,verified_in_stored_original,verified,approved,v1,78
+CHK-DGP278733-003,SRC-DG-PRESS-278733,MD-HYUNHEE-D-V2,SEC-DG-PRESS-278733-01,BLK-DG-PRESS-278733-01-02,3,fact,골목상권·전통시장 33개소 가을 축제,"10월 12일부터 골목상권과 전통시장 총 33개소에서 버스킹, 체험형 프로그램 등 상권별 특성을 반영한 가을 축제도 개최하며, 세부 일정은 9월말 확정해 추가적인 상세 안내가 있을 예정이다.",false,text,2026-10-12부터 33개소 가을 축제(세부 일정 9월말 확정 예정 — 이후 변경 가능),,,대구 골목상권·전통시장,세부 일정은 9월말 확정 예정,2026-10-12~,보도자료 본문,,S,verified_in_stored_original,verified,approved,v1,106
+CHK-DGP278733-004,SRC-DG-PRESS-278733,MD-HYUNHEE-D-V2,SEC-DG-PRESS-278733-01,BLK-DG-PRESS-278733-01-03,4,figure,동성로 상권 활성화 사업비·내용,"동성로는 24년부터 5년간 60억 원이 투입되는 상권 활성화 사업이 진행 중이며, 상인회에서 주도해 운영 중인 ‘동성로 놀장’과 연계해 팝업스토어·거리공연 등 참여형 콘텐츠를 강화하는 등 상인회와 끊임없이 협력해 사업의 효과성을 높여나갈 계획이다.",false,text,"동성로: 2024년부터 5년간 60억 원, 팝업스토어·거리공연(동성로 놀장 연계)",,,중구 동성로,,2024~2028(5년),보도자료 본문,,S,verified_in_stored_original,verified,approved,v1,138
+CHK-DGP278733-005,SRC-DG-PRESS-278733,MD-HYUNHEE-D-V2,SEC-DG-PRESS-278733-01,BLK-DG-PRESS-278733-01-03,5,figure,교동 글로컬상권 사업비·내용,"교동은 올해 6월 공모 선정된 ‘글로컬상권 육성사업’을 본격 추진한다. 내년까지 총 38억 원이 투입되며, 올해는 △외국인 유학생 페스티벌 △교동 테마투어 △상권 통합브랜드 개발 등을 추진할 예정이다.",false,text,"교동: 글로컬상권 육성사업, 2027년까지 총 38억 원(보도자료 기준 '내년'), 2026년 추진 내용 3가지",,,중구 교동,,~2027,보도자료 본문,,S,verified_in_stored_original,verified,approved,v1,112
+CHK-DGP277733-001,SRC-DG-PRESS-277733,MD-HYUNHEE-D-V2,SEC-DG-PRESS-277733-01,BLK-DG-PRESS-277733-01-01,1,condition,STAY & 골목 PLAY 대상,"‘대구 STAY & 골목 PLAY 웰컴 패키지’를 신청한 선착순 관광객 5,000여 명을 대상으로 동대구역 관광안내소에서 혜택을 제공한다.",false,text,"사전 신청 선착순 5,000여 명, 동대구역 관광안내소",,,외지 관광객,"사전 신청, 선착순",,보도자료 본문,CHK-DGP277733-002,S,verified_in_stored_original,verified,approved,v1,77
+CHK-DGP277733-002,SRC-DG-PRESS-277733,MD-HYUNHEE-D-V2,SEC-DG-PRESS-277733-01,BLK-DG-PRESS-277733-01-01,2,figure,웰컴페이 2만 원,"대구로페이(실물카드) 2만 원을 ‘웰컴페이’로 즉시 지급하고, 이와 함께 상권지도와 치맥페스티벌 홍보물을 배부해 전통시장과 골목상권 방문을 유도할 계획이다.",false,text,숙박 확인 시 대구로페이 2만 원,,,외지 관광객,숙박 확인,,보도자료 본문,CHK-DGP277733-001,S,verified_in_stored_original,verified,approved,v1,87
+CHK-DGP277733-003,SRC-DG-PRESS-277733,MD-HYUNHEE-D-V2,SEC-DG-PRESS-277733-01,BLK-DG-PRESS-277733-01-02,3,condition,스탬프 페이백 조건,"행사 기간 중 참여 점포에서 1만 원 이상 주문 시 스탬프가 적립되며, 2회 이상 이용한 소비자에게는 5천 원 상당의 페이백 쿠폰을 지급한다.",false,text,1만 원 이상 주문 2회 이상 → 5천 원 쿠폰,,,대구로 앱 온누리 가맹점,,,보도자료 본문,,S,verified_in_stored_original,verified,approved,v1,79
+CHK-DGP277733-004,SRC-DG-PRESS-277733,MD-HYUNHEE-D-V2,SEC-DG-PRESS-277733-01,BLK-DG-PRESS-277733-01-03,4,condition,썸머 소비 인증 챌린지 조건,지역 소상공인 점포에서 2만 원 이상 이용한 고객을 대상으로 ‘대구 썸머 소비! 인증 챌린지’도 진행한다.,false,text,2만 원 이상 이용 고객 대상 SNS 인증 챌린지(경품은 추첨),,,대구 소상공인 점포,,,보도자료 본문,,S,verified_in_stored_original,verified,approved,v1,59
+CHK-DGP277734-001,SRC-DG-PRESS-277734,MD-HYUNHEE-D-V2,SEC-DG-PRESS-277734-01,BLK-DG-PRESS-277734-01-01,1,fact,K-치맥 스트리트 구성(플리마켓존 포함),"두류공원 로드 일대에 조성되는 ‘K-치맥 스트리트’에는 입장과 동시에 축제 분위기를 느낄 수 있는 치맥 웰컴로드를 비롯해 치맥 놀이동산, 플리마켓존 등이 마련돼 관람객들에게 다양한 즐길 거리를 제공한다.",false,text,2026 대구치맥페스티벌 K-치맥 스트리트 안에 플리마켓존 등이 마련됨,,,2026 대구치맥페스티벌(두류공원),,2026-07-01~,보도자료 본문,,S,verified_in_stored_original,verified,approved,v1,113
+CHK-LAW-GUNWI-001,SRC-LAW-GUNWI,MD-HYUNHEE-D-V2,SEC-LAW-GUNWI-01,BLK-LAW-GUNWI-01-01,1,fact,법률 번호·공포일·시행일,"[시행 2023. 7. 1.] [법률 제19155호, 2023. 1. 3., 제정]",false,text,"군위군 대구 편입 근거 법률: 2023-01-03 공포, 2023-07-01 시행",,,군위군,,2023-07-01 시행,law.go.kr 법령 본문 머리,,S,verified_in_stored_original,verified,approved,v1,46
+CHK-KOSIS-2025-001,SRC-KOSIS-ENTRANCE-2025,MD-HYUNHEE-D-V2,SEC-KOSIS-ENTRANCE-2025-01,BLK-KOSIS-ENTRANCE-2025-01-01,1,fact,2025년 주요관광지점입장객통계 파일 존재·갱신일,"출처 : 문화체육관광부,「주요관광지점입장객통계」자료갱신일 : 2026-07-28 / 수록기간 : 년 2025~2025",false,text,KOSIS 파일통계표 2025년판. 파일 자체는 미다운로드,,,전국(시도·내외국인 구분은 Aside 미리보기 확인),,2025,KOSIS 파일통계표 조회 > 주석 정보,,A,verified_in_stored_original,verified,approved,v1,65
+CHK-KOSIS-2024-001,SRC-KOSIS-ENTRANCE-2024,MD-HYUNHEE-D-V2,SEC-KOSIS-ENTRANCE-2024-01,BLK-KOSIS-ENTRANCE-2024-01-01,1,fact,2024년 주요관광지점입장객통계 파일 존재·갱신일,"출처 : 문화체육관광부,「주요관광지점입장객통계」자료갱신일 : 2025-09-17 / 수록기간 : 년 2024~2024",false,text,KOSIS 파일통계표 2024년판. 파일 자체는 미다운로드,,,전국(시도·내외국인 구분은 Aside 미리보기 확인),,2024,KOSIS 파일통계표 조회 > 주석 정보,,A,verified_in_stored_original,verified,approved,v1,65
+CHK-TOUR-FEST-001,SRC-TOUR-FESTIVAL,MD-HYUNHEE-D-V2,SEC-TOUR-FESTIVAL-01,BLK-TOUR-FESTIVAL-01-01,1,fact,비슬산참꽃문화제 시기,"비슬산참꽃문화제
+축제기간
+04월중",false,lines,비슬산참꽃문화제는 4월 중(정확한 날짜 없음),,,달성군 비슬산,,4월 중,연간축제일정 > 비슬산참꽃문화제,,S,verified_in_stored_original,verified,approved,v1,18
+CHK-TOUR-FEST-002,SRC-TOUR-FESTIVAL,MD-HYUNHEE-D-V2,SEC-TOUR-FESTIVAL-01,BLK-TOUR-FESTIVAL-01-01,2,fact,동성로 축제 시기,"동성로 축제
+축제기간
+05월중",false,lines,동성로 축제는 5월 중(정확한 날짜 없음),,,중구 동성로,,5월 중,연간축제일정 > 동성로 축제,,S,verified_in_stored_original,verified,approved,v1,16
+CHK-TOUR-NM-001,SRC-TOUR-NIGHTMARKET,MD-HYUNHEE-D-V2,SEC-TOUR-NIGHTMARKET-01,BLK-TOUR-NIGHTMARKET-01-01,1,fact,서문·칠성 야시장 운영 재개일,서문·칠성 야시장이 동절기 휴장을 마치고 3월 27일(금)부터 운영을 재개합니다.,false,text,등록일 2026-03-27 공지. 3월 27일(금)은 2026년 날짜와 맞음,,,중구 서문야시장·북구 칠성야시장,,2026-03-27~,공지 본문,CHK-TOUR-NM-002,S,verified_in_stored_original,verified,approved,v1,45
+CHK-TOUR-NM-002,SRC-TOUR-NIGHTMARKET,MD-HYUNHEE-D-V2,SEC-TOUR-NIGHTMARKET-01,BLK-TOUR-NIGHTMARKET-01-02,2,condition,서문야시장 운영 기간·요일,서문야시장 : 2025. 3. 27.(금) ~ 12월 / 매주 금·토·일,false,text,본문의 '2025'는 등록일(2026)과 다름 — 원문 오기로 보이며 그대로 보존,,,중구 서문야시장,,"~12월, 매주 금·토·일",공지 본문 > 운영 기간,CHK-TOUR-NM-001,S,verified_in_stored_original,verified,approved,v1,40
+CHK-CITY-N1834-001,SRC-CITY-NOTICE-1834,MD-HYUNHEE-D-V2,SEC-CITY-NOTICE-1834-01,BLK-CITY-NOTICE-1834-01-01,1,condition,판타지아페스타 특별코스 운행일·인원,※ 운행일자 : 2026. 10. 21.(수) [최소 인원 10인(최대 40인) 이상 모객 시 출발],false,text,"2026-10-21 운행, 최소 10인 모객 시 출발(최대 40인)",,,대구시티투어 특별코스,10인 이상 모객 시 출발,2026-10-21,공지 본문,CHK-CITY-N1834-002,S,verified_in_stored_original,verified,approved,v1,56
+CHK-CITY-N1834-002,SRC-CITY-NOTICE-1834,MD-HYUNHEE-D-V2,SEC-CITY-NOTICE-1834-01,BLK-CITY-NOTICE-1834-01-02,2,fact,특별코스에 대구간송미술관 포함,'대구간송미술관 및 오페라SHOWCASE공연'이 포함된 코스로,false,text,특별코스에 대구간송미술관(특별전 겸재 정선) 포함,,,대구시티투어 특별코스,,,공지 본문,CHK-CITY-N1834-001,S,verified_in_stored_original,verified,approved,v1,34
+CHK-DG-FOOD-001,SRC-DG-FOOD,MD-HYUNHEE-D-V2,SEC-DG-FOOD-01,BLK-DG-FOOD-01-01,1,fact,대구시 누리집 '대구푸드' 메뉴,"대구푸드
+대구의 다양하고 특색있는 음식들을 만나보세요!",false,lines,daegu.go.kr 분야별 문화·관광 > 대구푸드 메뉴 존재,,,대구 전체,,,daegu.go.kr/cts menu_id=00800254,,S,verified_in_stored_original,verified,approved,v1,30
+CHK-DG-EXP-001,SRC-DG-EXP,MD-HYUNHEE-D-V2,SEC-DG-EXP-01,BLK-DG-EXP-01-01,1,fact,대구시 누리집 '체험·관광·교육' 메뉴,"체험·관광·교육
+숲해설사 신청",false,lines,"메뉴명 '체험·관광·교육', 하위에 숲해설사 신청 등",,,대구 전체,,,daegu.go.kr/cts menu_id=00000863,,S,verified_in_stored_original,verified,approved,v1,16
+CHK-BUK-THEME-001,SRC-BUK-THEME,MD-HYUNHEE-D-V2,SEC-BUK-THEME-01,BLK-BUK-THEME-01-01,1,fact,북구 테마여행 하위메뉴(8개),"경제신화 도보길
+데이트코스
+금호강바람코스
+북구역사속으로
+시장여행길
+동화천역사탐방로
+근대산업거리
+칠곡도호부 옛길 투어",false,lines,북구 문화관광 테마여행 하위메뉴 8개(슬라이더 표기는 6·7개로 다름),,,북구,,,buk.daegu.kr/tour 테마여행 메뉴,,S,verified_in_stored_original,verified,approved,v1,64
+CHK-JUNG-C1-001,SRC-JUNG-GOLMOK,MD-HYUNHEE-D-V2,SEC-JUNG-GOLMOK-01,BLK-JUNG-GOLMOK-01-01,1,figure,골목투어 1코스 거리·소요시간,(3.25km / 탐방소요시간 2시간 30분),false,text,"중구 골목투어 제1코스 경상감영달성길: 3.25km, 2시간 30분",,,중구 골목투어 1코스,,,jung.daegu.kr tour/page.html?mc=0038,,S,reported_by_aside_not_stored,aside_reported,pending,v1,25
+CHK-JUNG-C2-001,SRC-JUNG-GOLMOK,MD-HYUNHEE-D-V2,SEC-JUNG-GOLMOK-01,BLK-JUNG-GOLMOK-01-02,2,figure,골목투어 2코스 거리·소요시간,(1.64km / 탐방소요시간 2시간),false,text,"중구 골목투어 제2코스 근대문화골목: 1.64km, 2시간",,,중구 골목투어 2코스,,,jung.daegu.kr tour/page.html?mc=0789,,S,reported_by_aside_not_stored,aside_reported,pending,v1,21
+CHK-JUNG-C3-001,SRC-JUNG-GOLMOK,MD-HYUNHEE-D-V2,SEC-JUNG-GOLMOK-01,BLK-JUNG-GOLMOK-01-03,3,figure,골목투어 3코스 거리·소요시간,(2.65km / 탐방소요시간 2시간),false,text,"중구 골목투어 제3코스 패션한방길: 2.65km, 2시간",,,중구 골목투어 3코스,,,jung.daegu.kr tour/page.html?mc=0227,,S,reported_by_aside_not_stored,aside_reported,pending,v1,21
+CHK-JUNG-C4-001,SRC-JUNG-GOLMOK,MD-HYUNHEE-D-V2,SEC-JUNG-GOLMOK-01,BLK-JUNG-GOLMOK-01-04,4,figure,골목투어 4코스 거리·소요시간,(4.95km / 탐방소요시간 2시간 50분),false,text,"중구 골목투어 제4코스 삼덕봉산문화길: 4.95km, 2시간 50분 (같은 페이지 소개 문단은 '3시간 정도')",,,중구 골목투어 4코스,,,jung.daegu.kr tour/page.html?mc=0228,,S,reported_by_aside_not_stored,aside_reported,pending,v1,25
+CHK-KB0911-001,SRC-NEWS-KB-20260910500407,MD-HYUNHEE-D-V2,SEC-NEWS-KB-20260910500407-01,BLK-NEWS-KB-20260910500407-01-01,1,figure,골목형상점가 100곳·7100여개,"100곳, 7100여개 점포까지 늘었다.",true,text,"기사(2026-09-11) 시점 골목형상점가 100곳, 7,100여 점포",,,대구,,,본문,CHK-KB0911-002,B,verified_in_snapshot_not_stored,verified,reference_only,v1,22
+CHK-KB0911-002,SRC-NEWS-KB-20260910500407,MD-HYUNHEE-D-V2,SEC-NEWS-KB-20260910500407-01,BLK-NEWS-KB-20260910500407-01-01,2,fact,유망 상권 18곳 랜드마크,시는 이 가운데 유망 상권 18곳에 입간판과 포토존 등 랜드마크 설치를 지원하고,true,text,유망 상권 18곳 입간판·포토존,,,대구,,,본문,CHK-KB0911-001,B,verified_in_snapshot_not_stored,verified,reference_only,v1,44
+CHK-KB0911-003,SRC-NEWS-KB-20260910500407,MD-HYUNHEE-D-V2,SEC-NEWS-KB-20260910500407-01,BLK-NEWS-KB-20260910500407-01-01,3,fact,33곳 가을축제,다음 달 12일부터는 골목상권과 전통시장 33곳에서 버스킹과 체험 프로그램 등을 포함한 가을축제도 연다.,true,text,기사 기준 '다음 달 12일'=2026-10-12,,,대구,,2026-10-12~,본문,,B,verified_in_snapshot_not_stored,verified,reference_only,v1,58
+CHK-KB0911-004,SRC-NEWS-KB-20260910500407,MD-HYUNHEE-D-V2,SEC-NEWS-KB-20260910500407-01,BLK-NEWS-KB-20260910500407-01-01,4,figure,동성로 60억·교동 38억,"동성로에는 2024년부터 5년간 60억원을 투입해 팝업스토어와 거리공연 등 체류형 콘텐츠를 강화하고, 교동에는 내년까지 38억원을 투입해 외국인 유학생 페스티벌과 테마투어, 통합브랜드 개발 등을 추진한다.",true,text,"동성로 2024년부터 5년 60억, 교동 내년(2027)까지 38억",,,중구 동성로·교동,,,본문,,B,verified_in_snapshot_not_stored,verified,reference_only,v1,114
+CHK-JD0528-001,SRC-NEWS-JD-20260528010007810,MD-HYUNHEE-D-V2,SEC-NEWS-JD-20260528010007810-01,BLK-NEWS-JD-20260528010007810-01-01,1,fact,대구시 관계자 발언(소비 구조),관광은 단순 방문객 숫자보다 실제 지역 소비로 이어지는 구조가 중요하다,true,text,대구시 관계자 인용(실명 없음),,,대구,,,본문,,B,verified_in_snapshot_not_stored,verified,reference_only,v1,39
+CHK-JD0528-002,SRC-NEWS-JD-20260528010007810,MD-HYUNHEE-D-V2,SEC-NEWS-JD-20260528010007810-01,BLK-NEWS-JD-20260528010007810-01-02,2,fact,도심 야간관광 코스 개발 추진,우선 동성로·교동·서문시장 일대를 연계한 '도심 야간관광 코스' 개발이 추진된다.,true,text,추진 단계(확정 코스 아님),,,중구,,,본문,,B,verified_in_snapshot_not_stored,verified,reference_only,v1,45
+CHK-JD0528-003,SRC-NEWS-JD-20260528010007810,MD-HYUNHEE-D-V2,SEC-NEWS-JD-20260528010007810-01,BLK-NEWS-JD-20260528010007810-01-02,3,fact,모바일 결제·다국어 안내 검토,또 외국인 관광객의 소비 편의를 높이기 위해 모바일 결제와 다국어 안내 시스템 확대도 검토 중이다.,true,text,검토 단계,,,대구,,,본문,,B,verified_in_snapshot_not_stored,verified,reference_only,v1,55
+CHK-JD0528-004,SRC-NEWS-JD-20260528010007810,MD-HYUNHEE-D-V2,SEC-NEWS-JD-20260528010007810-01,BLK-NEWS-JD-20260528010007810-01-02,4,fact,일본·대만·동남아 SNS 홍보·모바일 예약,특히 일본·대만·동남아 관광객을 대상으로 SNS 기반 홍보와 모바일 예약 서비스 연계를 강화해 자유여행 수요를 적극 흡수할 계획이다.,true,text,계획 단계,,,대구,,,본문,,B,verified_in_snapshot_not_stored,verified,reference_only,v1,74
+CHK-JD0528-005,SRC-NEWS-JD-20260528010007810,MD-HYUNHEE-D-V2,SEC-NEWS-JD-20260528010007810-01,BLK-NEWS-JD-20260528010007810-01-03,5,fact,도심 체류형 관광 생태계 조성(부제),도심 체류형 관광 생태계 조성,true,text,기사 부제,,,대구,,,본문,,B,verified_in_snapshot_not_stored,verified,reference_only,v1,16
+CHK-IM0629-001,SRC-NEWS-IM-2026062909000480016,MD-HYUNHEE-D-V2,SEC-NEWS-IM-2026062909000480016-01,BLK-NEWS-IM-2026062909000480016-01-01,1,fact,K-치맥 스트리트와 플리마켓존,"두류공원 로드 일대에는 'K-치맥 스트리트'가 조성된다. 치맥 웰컴로드와 치맥 놀이동산, 플리마켓존을 비롯해",true,text,K-치맥 스트리트 조성 문장 바로 뒤에 플리마켓존 열거,,,2026 대구치맥페스티벌,,,본문,,B,verified_in_snapshot_not_stored,verified,reference_only,v1,60
+CHK-IM0629-002,SRC-NEWS-IM-2026062909000480016,MD-HYUNHEE-D-V2,SEC-NEWS-IM-2026062909000480016-01,BLK-NEWS-IM-2026062909000480016-01-02,2,fact,스탬프 페이백 이벤트,'스탬프 페이백' 이벤트를 진행한다,true,text,,,,대구,,,본문,,B,verified_in_snapshot_not_stored,verified,reference_only,v1,19
+CHK-IM0629-003,SRC-NEWS-IM-2026062909000480016,MD-HYUNHEE-D-V2,SEC-NEWS-IM-2026062909000480016-01,BLK-NEWS-IM-2026062909000480016-01-02,3,fact,STAY & 골목 PLAY,'대구 STAY ＆ 골목 PLAY' 사업도 추진된다,true,text,원문은 전각 ＆,,,대구,,,본문,,B,verified_in_snapshot_not_stored,verified,reference_only,v1,28
+CHK-IM0629-004,SRC-NEWS-IM-2026062909000480016,MD-HYUNHEE-D-V2,SEC-NEWS-IM-2026062909000480016-01,BLK-NEWS-IM-2026062909000480016-01-02,4,figure,SNS 인증 추첨 경품,추첨을 통해 대구로페이 1만원을 지급한다.,true,text,,,,대구,,,본문,,B,verified_in_snapshot_not_stored,verified,reference_only,v1,23
+CHK-NS2024-001,SRC-NEWS-NS-1065583233696423,MD-HYUNHEE-D-V2,SEC-NEWS-NS-1065583233696423-01,BLK-NEWS-NS-1065583233696423-01-01,1,fact,2024 북구 스탬프 투어 구성,"11개 관광명소와 ‘경제신화 도보길’, ‘칠곡도호부 옛길’ 등 3개 관광코스를 스탬프 존으로 구성했다.",true,text,2024년 판: 관광명소 11곳 + 코스 3개,,,북구,,2024,본문,,B,verified_in_snapshot_not_stored,verified,reference_only,v1,57
+CHK-MD-001,SRC-MD-HYUNHEE-D-V2,MD-HYUNHEE-D-V2,SEC-MD-HYUNHEE-D-V2-01,BLK-MD-HYUNHEE-D-V2-01-01,1,rule,출처 등급별 확정 여부,"**S(공식)·A(통계)**는 직접 열어 확인한 것이고, **B(언론)** 는 기사로 전해진 내용이라 **확정 사실이 아니다**.",false,text,작성자 규칙: B등급(언론) 수치는 확정 사실로 쓰지 않음,,,이 조사(1번 파트),,,MD §0 먼저 읽을 것,,U,verified_in_stored_original,verified,internal,v1,72
+CHK-MD-002,SRC-MD-HYUNHEE-D-V2,MD-HYUNHEE-D-V2,SEC-MD-HYUNHEE-D-V2-01,BLK-MD-HYUNHEE-D-V2-01-01,2,rule,공식 사이트 정보 재확인,공식 사이트 확인은 **메뉴·목록 수준**이다. 요금·운영시간은 바뀔 수 있어 사용 전 재확인이 필요하다.,false,text,작성자 규칙: 요금·운영시간은 사용 전 재확인,,,이 조사(1번 파트),,,MD §0 먼저 읽을 것,,U,verified_in_stored_original,verified,internal,v1,59
+CHK-MD-003,SRC-MD-HYUNHEE-D-V2,MD-HYUNHEE-D-V2,SEC-MD-HYUNHEE-D-V2-02,BLK-MD-HYUNHEE-D-V2-02-01,3,rule,조사 지역 범위,대구광역시 (7개 구 + 2개 군). 타지역·해외 사례는 제외,false,text,작성자 규칙: 대구 밖 사례 제외,,,이 조사(1번 파트),,,MD §1 조사 범위와 규칙,,U,verified_in_stored_original,verified,internal,v1,34
+CHK-MD-004,SRC-MD-HYUNHEE-D-V2,MD-HYUNHEE-D-V2,SEC-MD-HYUNHEE-D-V2-02,BLK-MD-HYUNHEE-D-V2-02-01,4,rule,조사 기간,"2024~2026 (현황·통계는 가장 최신 연도 기준, 기준 연도를 적음)",false,text,"작성자 규칙: 2024~2026, 기준 연도 기록",,,이 조사(1번 파트),,,MD §1 조사 범위와 규칙,,U,verified_in_stored_original,verified,internal,v1,41
+CHK-MD-005,SRC-MD-HYUNHEE-D-V2,MD-HYUNHEE-D-V2,SEC-MD-HYUNHEE-D-V2-02,BLK-MD-HYUNHEE-D-V2-02-01,5,rule,군위군 자료 범위,"2023-07-01 대구 편입. 편입 이후 자료만 사용 (편입일은 기사 근거 B, 법령 원문 확인 전)",false,text,작성자 규칙: 군위군은 편입 이후 자료만. 편입일 자체는 법령 원문 미확인,,,이 조사(1번 파트),,,MD §1 조사 범위와 규칙,,U,verified_in_stored_original,verified,internal,v1,57
+CHK-MD-006,SRC-MD-HYUNHEE-D-V2,MD-HYUNHEE-D-V2,SEC-MD-HYUNHEE-D-V2-02,BLK-MD-HYUNHEE-D-V2-02-01,6,rule,내국인·외국인 분리,내국인/외국인 분리 기록. 합산값만 있으면 '분리 불가',false,text,작성자 규칙: 합산값은 '분리 불가'로 표시,,,이 조사(1번 파트),,,MD §1 조사 범위와 규칙,,U,verified_in_stored_original,verified,internal,v1,31
+CHK-MD-007,SRC-MD-HYUNHEE-D-V2,MD-HYUNHEE-D-V2,SEC-MD-HYUNHEE-D-V2-02,BLK-MD-HYUNHEE-D-V2-02-01,7,rule,출처 등급 정의,S 공식 · A 통계 · B 언론 · D 개인 · E AI생성 (C 없음). 'B등급 이상'은 S·A·B,false,text,출처 등급 코드 정의,,,이 조사(1번 파트),,,MD §1 조사 범위와 규칙,,U,verified_in_stored_original,verified,internal,v1,58
+CHK-MD-008,SRC-MD-HYUNHEE-D-V2,MD-HYUNHEE-D-V2,SEC-MD-HYUNHEE-D-V2-03,BLK-MD-HYUNHEE-D-V2-03-01,8,rule,'2년 새 80%' 사용 금지,외국인 방문 '2년 새 80% 증가'(2026-10-11 기사)는 근거 없어 사용 금지.,false,text,작성자 규칙: 해당 수치 사용 금지,,,이 조사(1번 파트),,,MD 축 1. 수요 #46,CHK-IM1011-001,U,verified_in_stored_original,verified,internal,v1,49
+CHK-MD-009,SRC-MD-HYUNHEE-D-V2,MD-HYUNHEE-D-V2,SEC-MD-HYUNHEE-D-V2-04,BLK-MD-HYUNHEE-D-V2-04-01,9,rule,구미 사례 제외,**구미 '소상공인 희망 플리마켓'**: 대구가 아니라 범위 밖.,false,text,작성자 규칙: 구미 사례 제외,,,이 조사(1번 파트),,,MD §4 제외한 정보,,U,verified_in_stored_original,verified,internal,v1,36
+CHK-MD-010,SRC-MD-HYUNHEE-D-V2,MD-HYUNHEE-D-V2,SEC-MD-HYUNHEE-D-V2-04,BLK-MD-HYUNHEE-D-V2-04-01,10,rule,평가성 표현 근거 금지,"평가성 표현('맛집', '핫플') 자체는 근거로 쓰지 않음.",false,text,작성자 규칙: 평가성 표현은 근거 아님,,,이 조사(1번 파트),,,MD §4 제외한 정보,,U,verified_in_stored_original,verified,internal,v1,33
+CHK-MD-011,SRC-MD-HYUNHEE-D-V2,MD-HYUNHEE-D-V2,SEC-MD-HYUNHEE-D-V2-04,BLK-MD-HYUNHEE-D-V2-04-01,11,rule,블로그·개인 글 근거 금지,블로그·개인 글(D)은 이번에 근거로 쓰지 않음.,false,text,작성자 규칙: D등급 근거 금지,,,이 조사(1번 파트),,,MD §4 제외한 정보,,U,verified_in_stored_original,verified,internal,v1,27
+CHK-MD-012,SRC-MD-HYUNHEE-D-V2,MD-HYUNHEE-D-V2,SEC-MD-HYUNHEE-D-V2-05,BLK-MD-HYUNHEE-D-V2-05-01,12,rule,데이터랩 수집 방법,공식 Excel/CSV 다운로드만 허용(크롤링 금지).,false,text,작성자 규칙: 데이터랩은 공식 다운로드만,,,이 조사(1번 파트),,,MD §7 열람 불가·확인 필요,,U,verified_in_stored_original,verified,internal,v1,30

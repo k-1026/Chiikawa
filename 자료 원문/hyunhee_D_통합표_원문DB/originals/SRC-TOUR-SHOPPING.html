@@ -1,0 +1,3513 @@
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no"/>
+<meta name="robots" content="index,follow">
+<meta property="og:type" content="website" id="mtype">
+<meta property="og:title" content="권역별 관광명소 &lt; 관광명소 검색 &lt; 관광명소 &lt; 대구관광안내 DAEGU TOURIST INFORMATION" id="mtitle">
+<meta property="og:url" content="https://tour.daegu.go.kr/" id="murls">
+<title>쇼핑 | 대구관광안내 DAEGU TOURIST INFORMATION</title>
+
+	
+<link type="text/css" rel="stylesheet" href="/cmsh/tour.daegu.go.kr/css/common.css?ver=20261125223011683"/>	
+<link type="text/css" rel="stylesheet" href="/cmsh/tour.daegu.go.kr/css/content.css?ver=20261125223011683"/>
+<link type="text/css" rel="stylesheet" href="/cmsh/tour.daegu.go.kr/css/custom.css?ver=20261125223011683"/>
+<link type="text/css" rel="stylesheet" href="/cmsh/tour.daegu.go.kr/css/common_icms.css?ver=20261125223011683"/>	
+<link type="text/css" rel="stylesheet" href="/cmsh/tour.daegu.go.kr/css/sub.css?ver=20261125223011683"/>
+<link type="text/css" rel="stylesheet" href="/cmsh/tour.daegu.go.kr/css/sub_common.css?ver=20261125223011683"/>	
+<link type="text/css" rel="stylesheet" href="/cmsh/tour.daegu.go.kr/css/slick.css?ver=20261125223011683"/>		
+<script src="/cmsh/tour.daegu.go.kr/js/jquery-1.8.3.min.js" type="text/javascript"></script>
+<script src="/cmsh/tour.daegu.go.kr/js/common.js?ver=20261125223011683" type="text/javascript"></script>		
+<script src="/cmsh/tour.daegu.go.kr/js/mobie_common.js?ver=20261125223011683" type="text/javascript"></script>
+<script src="/cmsh/tour.daegu.go.kr/js/main.js" type="text/javascript"></script>
+<script src="/cmsh/tour.daegu.go.kr/js/slick.js" type="text/javascript"></script>		
+<!-- 모바일 버전 1012추가 -->
+<script src="/cmsh/tour.daegu.go.kr/js/ui.js" type="text/javascript"></script>
+<!-- 모바일 버전 1012추가 -->
+<script src="/cmsh/tour.daegu.go.kr/js/sub_tab.js" type="text/javascript"></script>
+<script src="/cmsh/tour.daegu.go.kr/js/bs_leftnavi.js" type="text/javascript"></script>
+<script src="/cmsh/tour.daegu.go.kr/js/manager.common.js" type="text/javascript"></script>	
+	
+
+	
+	
+<script>
+   function web_focus() {
+      $(".menuBg").slideDown(100);
+      $(".SS").slideDown(100);
+}
+   $('.header_select').click(function () {
+       $('.select_down').slideToggle('slow', function () {
+       });
+   });
+   function web_blur1(){
+		$(".select_down").slideUp(100);
+	}
+   function fnMove1(obj){
+	  if(event.keyCode == '13'){
+	     $('.onkey2').removeAttr("href");
+	  	 $('.allWrap').css("display","block");
+		}
+	}
+</script>
+<script type="text/javascript">
+	/* 햄버거 메뉴바 설정 javascript */
+		$(function(){
+			$('.mbMenu img').click(function(){
+				$('.allWrap').show();
+				$('.mbMenu img').scrollTop();
+			});
+			$('.1qa').click(function(){
+				$('.allWrap').hide();
+			});
+		});
+		$(document).on("click", ".mbMenu img", function(){
+			$(window).scroll(function(){
+				var position = $(window).scrollTop();
+				if(position>800){
+					$('html, body').scrollTop(800);
+				}
+			});
+		});
+		$(document).on("click", ".close_box .1qa", function(){
+			$(window).off("scroll");
+		});
+		function web_blur(){
+			$(".menuBg").slideUp(100);
+			$(".SS").slideUp(100);
+		}
+		$(".mbMenu_img1").focusin(function(){
+			$(".SS").slideUp(100);
+			$(".menuBg").slideUp(100);
+		})
+		$(".MM a").focusin(function(){
+			$(".SS").slideDown(100);
+			$(".menuBg").slideDown(100);
+		})
+		function web_blurhv1_1(){
+			$(".menuBg").slideUp(100);
+			$(".SS").slideUp(100);
+		}
+</script>
+</head>
+<body class="c00002902 c00004080">
+
+
+<span class="js-icms-csrf-token-source" style="display:none;"><input type="hidden" name="ICMS_CSRF_TOKEN" value="69a5ad6ef9009c13b09b4298f2ee1dc15c1761b3ba3dd8237e0650b3104ebf56" /></span>
+<script type="text/javascript">
+(function() {
+	function findSourceInput(className) {
+		var nodes = document.getElementsByClassName ? document.getElementsByClassName(className) : [];
+		if (!nodes.length) {
+			var spans = document.getElementsByTagName("span");
+			nodes = [];
+			for (var i = 0; i < spans.length; i++) {
+				if ((" " + spans[i].className + " ").indexOf(" " + className + " ") > -1) {
+					nodes[nodes.length] = spans[i];
+				}
+			}
+		}
+		return nodes.length ? nodes[0].getElementsByTagName("input")[0] : null;
+	}
+	function hasInputByName(form, name) {
+		var inputs = form.getElementsByTagName("input");
+		for (var i = 0; i < inputs.length; i++) {
+			if (inputs[i].getAttribute("name") === name) {
+				return true;
+			}
+		}
+		return false;
+	}
+	function appendHidden(form, name, value) {
+		if (hasInputByName(form, name)) {
+			return;
+		}
+		var input = document.createElement("input");
+		input.type = "hidden";
+		input.name = name;
+		input.value = value;
+		form.insertBefore(input, form.firstChild);
+	}
+	function isSameOriginAction(form) {
+		var action = form.getAttribute("action");
+		if (!action) {
+			return true;
+		}
+		action = action.replace(/^\s+|\s+$/g, "");
+		if (!action || action.charAt(0) === "#" || action.charAt(0) === "?") {
+			return true;
+		}
+		if (action.indexOf("//") === 0 || /^[a-z][a-z0-9+.-]*:/i.test(action)) {
+			var link = document.createElement("a");
+			link.href = action.indexOf("//") === 0 ? window.location.protocol + action : action;
+			return link.protocol === window.location.protocol && link.host === window.location.host;
+		}
+		return true;
+	}
+	function appendActionToken(form, name, value) {
+		var action = form.getAttribute("action") || (window.location.pathname + window.location.search);
+		var hash = "";
+		var hashIndex = action.indexOf("#");
+		if (hashIndex > -1) {
+			hash = action.substring(hashIndex);
+			action = action.substring(0, hashIndex);
+		}
+		if (action.indexOf(encodeURIComponent(name) + "=") > -1 || action.indexOf(name + "=") > -1) {
+			return;
+		}
+		action += (action.indexOf("?") > -1 ? "&" : "?") + encodeURIComponent(name) + "=" + encodeURIComponent(value);
+		form.setAttribute("action", action + hash);
+	}
+	function isMultipart(form) {
+		var enctype = (form.getAttribute("enctype") || form.encoding || "").toLowerCase();
+		return enctype.indexOf("multipart/form-data") > -1;
+	}
+	function isUnsafeMethod(form) {
+		var method = (form.getAttribute("method") || "get").toLowerCase();
+		return method !== "get";
+	}
+	function applyCsrfToken(form) {
+		var sourceInput = findSourceInput("js-icms-csrf-token-source");
+		if (!sourceInput) {
+			return;
+		}
+		var tokenName = sourceInput.getAttribute("name");
+		var tokenValue = sourceInput.value;
+		if (!isSameOriginAction(form) || !isUnsafeMethod(form)) {
+			return;
+		}
+		appendHidden(form, tokenName, tokenValue);
+		if (isMultipart(form)) {
+			appendActionToken(form, tokenName, tokenValue);
+		}
+	}
+	window.icmsApplyCsrfToken = applyCsrfToken;
+	function addCsrfToken() {
+		var forms = document.getElementsByTagName("form");
+		for (var i = 0; i < forms.length; i++) {
+			applyCsrfToken(forms[i]);
+		}
+	}
+	if (document.readyState === "loading") {
+		document.addEventListener("DOMContentLoaded", addCsrfToken);
+	} else {
+		addCsrfToken();
+	}
+})();
+</script>
+
+
+<!-- 스킵네비게이션 -->
+<div id="skip_navigation">
+	<ul>
+		<li><a class="accessibility" href="#printArea">본문으로 건너뛰기</a></li>
+	</ul>
+</div>
+<!-- //스킵네비게이션 -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+<span class="js-icms-csrf-token-source" style="display:none;"><input type="hidden" name="ICMS_CSRF_TOKEN" value="69a5ad6ef9009c13b09b4298f2ee1dc15c1761b3ba3dd8237e0650b3104ebf56" /></span>
+<script type="text/javascript">
+(function() {
+	function findSourceInput(className) {
+		var nodes = document.getElementsByClassName ? document.getElementsByClassName(className) : [];
+		if (!nodes.length) {
+			var spans = document.getElementsByTagName("span");
+			nodes = [];
+			for (var i = 0; i < spans.length; i++) {
+				if ((" " + spans[i].className + " ").indexOf(" " + className + " ") > -1) {
+					nodes[nodes.length] = spans[i];
+				}
+			}
+		}
+		return nodes.length ? nodes[0].getElementsByTagName("input")[0] : null;
+	}
+	function hasInputByName(form, name) {
+		var inputs = form.getElementsByTagName("input");
+		for (var i = 0; i < inputs.length; i++) {
+			if (inputs[i].getAttribute("name") === name) {
+				return true;
+			}
+		}
+		return false;
+	}
+	function appendHidden(form, name, value) {
+		if (hasInputByName(form, name)) {
+			return;
+		}
+		var input = document.createElement("input");
+		input.type = "hidden";
+		input.name = name;
+		input.value = value;
+		form.insertBefore(input, form.firstChild);
+	}
+	function isSameOriginAction(form) {
+		var action = form.getAttribute("action");
+		if (!action) {
+			return true;
+		}
+		action = action.replace(/^\s+|\s+$/g, "");
+		if (!action || action.charAt(0) === "#" || action.charAt(0) === "?") {
+			return true;
+		}
+		if (action.indexOf("//") === 0 || /^[a-z][a-z0-9+.-]*:/i.test(action)) {
+			var link = document.createElement("a");
+			link.href = action.indexOf("//") === 0 ? window.location.protocol + action : action;
+			return link.protocol === window.location.protocol && link.host === window.location.host;
+		}
+		return true;
+	}
+	function appendActionToken(form, name, value) {
+		var action = form.getAttribute("action") || (window.location.pathname + window.location.search);
+		var hash = "";
+		var hashIndex = action.indexOf("#");
+		if (hashIndex > -1) {
+			hash = action.substring(hashIndex);
+			action = action.substring(0, hashIndex);
+		}
+		if (action.indexOf(encodeURIComponent(name) + "=") > -1 || action.indexOf(name + "=") > -1) {
+			return;
+		}
+		action += (action.indexOf("?") > -1 ? "&" : "?") + encodeURIComponent(name) + "=" + encodeURIComponent(value);
+		form.setAttribute("action", action + hash);
+	}
+	function isMultipart(form) {
+		var enctype = (form.getAttribute("enctype") || form.encoding || "").toLowerCase();
+		return enctype.indexOf("multipart/form-data") > -1;
+	}
+	function isUnsafeMethod(form) {
+		var method = (form.getAttribute("method") || "get").toLowerCase();
+		return method !== "get";
+	}
+	function applyCsrfToken(form) {
+		var sourceInput = findSourceInput("js-icms-csrf-token-source");
+		if (!sourceInput) {
+			return;
+		}
+		var tokenName = sourceInput.getAttribute("name");
+		var tokenValue = sourceInput.value;
+		if (!isSameOriginAction(form) || !isUnsafeMethod(form)) {
+			return;
+		}
+		appendHidden(form, tokenName, tokenValue);
+		if (isMultipart(form)) {
+			appendActionToken(form, tokenName, tokenValue);
+		}
+	}
+	window.icmsApplyCsrfToken = applyCsrfToken;
+	function addCsrfToken() {
+		var forms = document.getElementsByTagName("form");
+		for (var i = 0; i < forms.length; i++) {
+			applyCsrfToken(forms[i]);
+		}
+	}
+	if (document.readyState === "loading") {
+		document.addEventListener("DOMContentLoaded", addCsrfToken);
+	} else {
+		addCsrfToken();
+	}
+})();
+</script>
+
+
+<script>
+		
+		function fn_search(){
+			var frm = document.getElementById("searchfrm");
+			frm.action ='/icms/search.do';
+			frm.method = 'get';
+			frm.submit();
+		}
+	</script>
+<div id="header">
+	<div class="header_c">
+		<h1 class="logo_area">
+		<a href="/index.do">
+		<img src="/cmsh/tour.daegu.go.kr/img_2020/common/logo.png" alt="대구트립로드 DAEGU TOURIST INFORMATION">
+		</a>
+		</h1>
+		<div class="gnb_wrap">
+			<ul id="gnb">
+				<li class="c00002890">
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+
+
+
+
+
+
+
+
+
+
+<a href="/index.do?menu_id=00002890"><span>명품관광코스</span></a>
+
+	<div class="inner">
+		<div>
+			<!-- <div class="gnb_left">
+				<p>
+					지역명소, 명품관광, 힐링체험 등<br/>다양한 문화체험이 가능한<br/>다이나믹한 대구여행!
+				</p>
+			</div> -->
+			
+
+
+
+
+
+
+
+
+
+
+<ul>
+<li>
+    <a href="/index.do?menu_id=00002905">대표관광코스</a>
+<ul>
+<li>
+    <a href="/index.do?menu_id=00002934">대구명품코스</a>
+</li>
+<li>
+    <a href="/index.do?menu_id=00002935">권역별명품코스</a>
+</li>
+</ul>
+</li>
+<li>
+    <a href="/index.do?menu_id=00002980">야간관광</a>
+</li>
+<li>
+    <a href="http://www.daegu.go.kr/cts/index.do?menu_id=00000876" target="_blank" title="새 창">올레길/둘레길 코스</a>
+</li>
+<li>
+    <a href="http://www.daegu.go.kr/cts/index.do?menu_id=00000892" target="_blank" title="새 창">자전거투어 코스</a>
+</li>
+<li>
+    <a href="/index.do?menu_id=00000123">건축문화기행</a>
+</li>
+</ul>
+
+			<!--
+			<div class="daegu12">
+				<div>
+					<img src="/cmsh/tour.daegu.go.kr/img_2020/common/daegu_map.png" alt="여기는 대구 12경입니다!"/>
+					<a href="/index.do?menu_id=00002913&menu_link=/front/tour/tourMapsView.do?tourId=KOATTR_226" class="n1">강정고령보</a>
+					<a href="/index.do?menu_id=00002913&menu_link=/front/tour/tourMapsView.do?tourId=KOATTR_128" class="n2">경상감영과 옛골목</a>
+					<a href="/index.do?menu_id=00002913&menu_link=/front/tour/tourMapsView.do?tourId=KOATTR_216" class="n3">83타워</a>
+					<a href="/index.do?menu_id=00002913&menu_link=/front/tour/tourMapsView.do?tourId=KOATTR_229" class="n4">서문시장</a>
+					<a href="/index.do?menu_id=00002913&menu_link=/front/tour/tourMapsView.do?tourId=KOATTR_221" class="n5">동성로</a>
+					<a href="/index.do?menu_id=00002913&menu_link=/front/tour/tourMapsView.do?tourId=KOATTR_129" class="n6">팔공산</a>
+					<a href="/index.do?menu_id=00002913&menu_link=/front/tour/tourMapsView.do?tourId=KOATTR_258" class="n7">신천</a>
+					<a href="/index.do?menu_id=00002913&menu_link=/front/tour/tourMapsView.do?tourId=KOATTR_328" class="n8">대구스타디움</a>
+					<a href="/index.do?menu_id=00002913&menu_link=/front/tour/tourMapsView.do?tourId=KOATTR_123" class="n9">국채보상운동 기념공원</a>
+					<a href="/index.do?menu_id=00002913&menu_link=/front/tour/tourMapsView.do?tourId=KOATTR_120" class="n10">수성못</a>
+					<a href="/index.do?menu_id=00002913&menu_link=/front/tour/tourMapsView.do?tourId=KOATTR_124" class="n11">달성토성</a>
+					<a href="/index.do?menu_id=00002913&menu_link=/front/tour/tourMapsView.do?tourId=KOATTR_74" class="n12">비슬산</a>
+				</div>
+			</div>
+			-->
+		</div>
+	</div>
+
+
+	<!--  -->
+	
+</li>
+				<li class="c00002900">
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+
+
+
+
+
+
+
+
+
+
+<a href="/index.do?menu_id=00002900"><span>관광명소</span></a>
+
+	<div class="inner">
+		<div>
+			<!-- <div class="gnb_left">
+				<p>
+					지역명소, 명품관광, 힐링체험 등<br/>다양한 문화체험이 가능한<br/>다이나믹한 대구여행!
+				</p>
+			</div> -->
+			
+
+
+
+
+
+
+
+
+
+
+<ul>
+<li>
+    <a href="/index.do?menu_id=00002911">대구 12경</a>
+</li>
+<li>
+    <a href="/index.do?menu_id=00002912">대표 관광명소</a>
+</li>
+<li>
+    <a href="/index.do?menu_id=00002915">관광명소 검색</a>
+<ul>
+<li>
+    <a href="/index.do?menu_id=00002943">관광명소 추천검색</a>
+</li>
+</ul>
+</li>
+</ul>
+
+			<!--
+			<div class="daegu12">
+				<div>
+					<img src="/cmsh/tour.daegu.go.kr/img_2020/common/daegu_map.png" alt="여기는 대구 12경입니다!"/>
+					<a href="/index.do?menu_id=00002913&menu_link=/front/tour/tourMapsView.do?tourId=KOATTR_226" class="n1">강정고령보</a>
+					<a href="/index.do?menu_id=00002913&menu_link=/front/tour/tourMapsView.do?tourId=KOATTR_128" class="n2">경상감영과 옛골목</a>
+					<a href="/index.do?menu_id=00002913&menu_link=/front/tour/tourMapsView.do?tourId=KOATTR_216" class="n3">83타워</a>
+					<a href="/index.do?menu_id=00002913&menu_link=/front/tour/tourMapsView.do?tourId=KOATTR_229" class="n4">서문시장</a>
+					<a href="/index.do?menu_id=00002913&menu_link=/front/tour/tourMapsView.do?tourId=KOATTR_221" class="n5">동성로</a>
+					<a href="/index.do?menu_id=00002913&menu_link=/front/tour/tourMapsView.do?tourId=KOATTR_129" class="n6">팔공산</a>
+					<a href="/index.do?menu_id=00002913&menu_link=/front/tour/tourMapsView.do?tourId=KOATTR_258" class="n7">신천</a>
+					<a href="/index.do?menu_id=00002913&menu_link=/front/tour/tourMapsView.do?tourId=KOATTR_328" class="n8">대구스타디움</a>
+					<a href="/index.do?menu_id=00002913&menu_link=/front/tour/tourMapsView.do?tourId=KOATTR_123" class="n9">국채보상운동 기념공원</a>
+					<a href="/index.do?menu_id=00002913&menu_link=/front/tour/tourMapsView.do?tourId=KOATTR_120" class="n10">수성못</a>
+					<a href="/index.do?menu_id=00002913&menu_link=/front/tour/tourMapsView.do?tourId=KOATTR_124" class="n11">달성토성</a>
+					<a href="/index.do?menu_id=00002913&menu_link=/front/tour/tourMapsView.do?tourId=KOATTR_74" class="n12">비슬산</a>
+				</div>
+			</div>
+			-->
+		</div>
+	</div>
+
+
+	<!--  -->
+	
+</li>
+				<li class="c00002901">
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+
+
+
+
+
+
+
+
+
+
+<a href="/index.do?menu_id=00002901"><span>축제</span></a>
+
+	<div class="inner">
+		<div>
+			<!-- <div class="gnb_left">
+				<p>
+					지역명소, 명품관광, 힐링체험 등<br/>다양한 문화체험이 가능한<br/>다이나믹한 대구여행!
+				</p>
+			</div> -->
+			
+
+
+
+
+
+
+
+
+
+
+<ul>
+<li>
+    <a href="/index.do?menu_id=00002932">연간축제일정</a>
+</li>
+<li>
+    <a href="https://fantasiafesta.or.kr/" target="_blank" title="새 창">판타지아 대구페스타</a>
+<ul>
+<li>
+    <a href="https://www.pwf.or.kr" target="_blank" title="새 창">파워풀대구페스티벌</a>
+</li>
+</ul>
+</li>
+<li>
+    <a href="https://dgfca.or.kr/event/all/list" target="_blank" title="새 창">축제/공연전시정보</a>
+</li>
+</ul>
+
+			<!--
+			<div class="daegu12">
+				<div>
+					<img src="/cmsh/tour.daegu.go.kr/img_2020/common/daegu_map.png" alt="여기는 대구 12경입니다!"/>
+					<a href="/index.do?menu_id=00002913&menu_link=/front/tour/tourMapsView.do?tourId=KOATTR_226" class="n1">강정고령보</a>
+					<a href="/index.do?menu_id=00002913&menu_link=/front/tour/tourMapsView.do?tourId=KOATTR_128" class="n2">경상감영과 옛골목</a>
+					<a href="/index.do?menu_id=00002913&menu_link=/front/tour/tourMapsView.do?tourId=KOATTR_216" class="n3">83타워</a>
+					<a href="/index.do?menu_id=00002913&menu_link=/front/tour/tourMapsView.do?tourId=KOATTR_229" class="n4">서문시장</a>
+					<a href="/index.do?menu_id=00002913&menu_link=/front/tour/tourMapsView.do?tourId=KOATTR_221" class="n5">동성로</a>
+					<a href="/index.do?menu_id=00002913&menu_link=/front/tour/tourMapsView.do?tourId=KOATTR_129" class="n6">팔공산</a>
+					<a href="/index.do?menu_id=00002913&menu_link=/front/tour/tourMapsView.do?tourId=KOATTR_258" class="n7">신천</a>
+					<a href="/index.do?menu_id=00002913&menu_link=/front/tour/tourMapsView.do?tourId=KOATTR_328" class="n8">대구스타디움</a>
+					<a href="/index.do?menu_id=00002913&menu_link=/front/tour/tourMapsView.do?tourId=KOATTR_123" class="n9">국채보상운동 기념공원</a>
+					<a href="/index.do?menu_id=00002913&menu_link=/front/tour/tourMapsView.do?tourId=KOATTR_120" class="n10">수성못</a>
+					<a href="/index.do?menu_id=00002913&menu_link=/front/tour/tourMapsView.do?tourId=KOATTR_124" class="n11">달성토성</a>
+					<a href="/index.do?menu_id=00002913&menu_link=/front/tour/tourMapsView.do?tourId=KOATTR_74" class="n12">비슬산</a>
+				</div>
+			</div>
+			-->
+		</div>
+	</div>
+
+
+	<!--  -->
+	
+</li>
+				<li class="c00002902">
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+
+
+
+
+
+
+
+
+
+
+<a href="/index.do?menu_id=00002902"><span>숙박/음식/쇼핑</span></a>
+
+	<div class="inner">
+		<div>
+			<!-- <div class="gnb_left">
+				<p>
+					지역명소, 명품관광, 힐링체험 등<br/>다양한 문화체험이 가능한<br/>다이나믹한 대구여행!
+				</p>
+			</div> -->
+			
+
+
+
+
+
+
+
+
+
+
+<ul>
+<li>
+    <a href="/index.do?menu_id=00002930">숙박</a>
+<ul>
+<li>
+    <a href="/index.do?menu_id=00002945">숙박정보</a>
+</li>
+</ul>
+</li>
+<li>
+    <a href="/index.do?menu_id=00002931">음식</a>
+<ul>
+<li>
+    <a href="/index.do?menu_id=00004040">음식관광</a>
+<ul>
+<li>
+    <a href="/index.do?menu_id=00002947">대구 10미</a>
+</li>
+<li>
+    <a href="https://tour.daegu.go.kr/icms/cmm/fms/FileDown.do?atchFileId=fz/E4gp3C69b3mXrsS37FNhOFiFybFULVcwTVMfgcJk=&fileSn=0" title="다운로드">음식점가이드북</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+    <a href="/index.do?menu_id=00004031">쇼핑</a>
+<ul>
+<li>
+    <a href="/index.do?menu_id=00004080">쇼핑</a>
+</li>
+<li>
+    <a href="/index.do?menu_id=00002920">대구관광 기념품</a>
+</li>
+</ul>
+</li>
+<li>
+    <a href="/index.do?menu_id=00000110">대구여행상점</a>
+</li>
+</ul>
+
+			<!--
+			<div class="daegu12">
+				<div>
+					<img src="/cmsh/tour.daegu.go.kr/img_2020/common/daegu_map.png" alt="여기는 대구 12경입니다!"/>
+					<a href="/index.do?menu_id=00002913&menu_link=/front/tour/tourMapsView.do?tourId=KOATTR_226" class="n1">강정고령보</a>
+					<a href="/index.do?menu_id=00002913&menu_link=/front/tour/tourMapsView.do?tourId=KOATTR_128" class="n2">경상감영과 옛골목</a>
+					<a href="/index.do?menu_id=00002913&menu_link=/front/tour/tourMapsView.do?tourId=KOATTR_216" class="n3">83타워</a>
+					<a href="/index.do?menu_id=00002913&menu_link=/front/tour/tourMapsView.do?tourId=KOATTR_229" class="n4">서문시장</a>
+					<a href="/index.do?menu_id=00002913&menu_link=/front/tour/tourMapsView.do?tourId=KOATTR_221" class="n5">동성로</a>
+					<a href="/index.do?menu_id=00002913&menu_link=/front/tour/tourMapsView.do?tourId=KOATTR_129" class="n6">팔공산</a>
+					<a href="/index.do?menu_id=00002913&menu_link=/front/tour/tourMapsView.do?tourId=KOATTR_258" class="n7">신천</a>
+					<a href="/index.do?menu_id=00002913&menu_link=/front/tour/tourMapsView.do?tourId=KOATTR_328" class="n8">대구스타디움</a>
+					<a href="/index.do?menu_id=00002913&menu_link=/front/tour/tourMapsView.do?tourId=KOATTR_123" class="n9">국채보상운동 기념공원</a>
+					<a href="/index.do?menu_id=00002913&menu_link=/front/tour/tourMapsView.do?tourId=KOATTR_120" class="n10">수성못</a>
+					<a href="/index.do?menu_id=00002913&menu_link=/front/tour/tourMapsView.do?tourId=KOATTR_124" class="n11">달성토성</a>
+					<a href="/index.do?menu_id=00002913&menu_link=/front/tour/tourMapsView.do?tourId=KOATTR_74" class="n12">비슬산</a>
+				</div>
+			</div>
+			-->
+		</div>
+	</div>
+
+
+	<!--  -->
+	
+</li>
+				<li class="c00002903">
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+
+
+
+
+
+
+
+
+
+
+<a href="/index.do?menu_id=00002903"><span>어울림대구</span></a>
+
+	<div class="inner">
+		<div>
+			<!-- <div class="gnb_left">
+				<p>
+					지역명소, 명품관광, 힐링체험 등<br/>다양한 문화체험이 가능한<br/>다이나믹한 대구여행!
+				</p>
+			</div> -->
+			
+
+
+
+
+
+
+
+
+
+
+<ul>
+<li>
+    <a href="/index.do?menu_id=00002923">여행도우미</a>
+<ul>
+<li>
+    <a href="/index.do?menu_id=00002951">관광안내소</a>
+</li>
+<li>
+    <a href="/index.do?menu_id=00002955">관광안내지도 신청</a>
+</li>
+<li>
+    <a href="/index.do?menu_id=00002952">문화관광해설사 안내</a>
+</li>
+<li>
+    <a href="http://ebook.daegu.go.kr/html/book/index/gallery/latest/9/1" target="_blank" title="새 창">대구관광안내책자</a>
+</li>
+</ul>
+</li>
+<li>
+    <a href="/index.do?menu_id=00002924">미리보는 대구</a>
+<ul>
+<li>
+    <a href="/index.do?menu_id=00002958">항공VR</a>
+</li>
+<li>
+    <a href="/index.do?menu_id=00002959">관광VR</a>
+</li>
+<li>
+    <a href="https://info.daegu.go.kr/newshome/mtnmain.php?mtnkey=scatelist&mkey=47" target="_blank" title="새 창">대구영상</a>
+</li>
+<li>
+    <a href="/index.do?menu_id=00002960">대구사진</a>
+<ul>
+<li>
+    <a href="/index.do?menu_id=00000010">아카이브</a>
+</li>
+<li>
+    <a href="https://info.daegu.go.kr/newshome/mtnmain.php?mtnkey=scatelist&mkey=5" target="_blank" title="새 창">대구화보</a>
+</li>
+<li>
+    <a href="https://visitdaegu.or.kr/gallery" target="_blank" title="새 창">고화질대구</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+			<!--
+			<div class="daegu12">
+				<div>
+					<img src="/cmsh/tour.daegu.go.kr/img_2020/common/daegu_map.png" alt="여기는 대구 12경입니다!"/>
+					<a href="/index.do?menu_id=00002913&menu_link=/front/tour/tourMapsView.do?tourId=KOATTR_226" class="n1">강정고령보</a>
+					<a href="/index.do?menu_id=00002913&menu_link=/front/tour/tourMapsView.do?tourId=KOATTR_128" class="n2">경상감영과 옛골목</a>
+					<a href="/index.do?menu_id=00002913&menu_link=/front/tour/tourMapsView.do?tourId=KOATTR_216" class="n3">83타워</a>
+					<a href="/index.do?menu_id=00002913&menu_link=/front/tour/tourMapsView.do?tourId=KOATTR_229" class="n4">서문시장</a>
+					<a href="/index.do?menu_id=00002913&menu_link=/front/tour/tourMapsView.do?tourId=KOATTR_221" class="n5">동성로</a>
+					<a href="/index.do?menu_id=00002913&menu_link=/front/tour/tourMapsView.do?tourId=KOATTR_129" class="n6">팔공산</a>
+					<a href="/index.do?menu_id=00002913&menu_link=/front/tour/tourMapsView.do?tourId=KOATTR_258" class="n7">신천</a>
+					<a href="/index.do?menu_id=00002913&menu_link=/front/tour/tourMapsView.do?tourId=KOATTR_328" class="n8">대구스타디움</a>
+					<a href="/index.do?menu_id=00002913&menu_link=/front/tour/tourMapsView.do?tourId=KOATTR_123" class="n9">국채보상운동 기념공원</a>
+					<a href="/index.do?menu_id=00002913&menu_link=/front/tour/tourMapsView.do?tourId=KOATTR_120" class="n10">수성못</a>
+					<a href="/index.do?menu_id=00002913&menu_link=/front/tour/tourMapsView.do?tourId=KOATTR_124" class="n11">달성토성</a>
+					<a href="/index.do?menu_id=00002913&menu_link=/front/tour/tourMapsView.do?tourId=KOATTR_74" class="n12">비슬산</a>
+				</div>
+			</div>
+			-->
+		</div>
+	</div>
+
+
+	<!--  -->
+	
+</li>
+				<li class="c00002904">
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+
+
+
+
+
+
+
+
+
+
+<a href="/index.do?menu_id=00002904"><span>대구관광</span></a>
+
+	<div class="inner">
+		<div>
+			<!-- <div class="gnb_left">
+				<p>
+					지역명소, 명품관광, 힐링체험 등<br/>다양한 문화체험이 가능한<br/>다이나믹한 대구여행!
+				</p>
+			</div> -->
+			
+
+
+
+
+
+
+
+
+
+
+<ul>
+<li>
+    <a href="/index.do?menu_id=00002917">여행소식</a>
+<ul>
+<li>
+    <a href="/index.do?menu_id=00002963">공지사항</a>
+</li>
+<li>
+    <a href="/index.do?menu_id=00002964">여행뉴스</a>
+</li>
+</ul>
+</li>
+<li>
+    <a href="/index.do?menu_id=00002918">관광서비스</a>
+<ul>
+<li>
+    <a href="https://www.daegucitytour.com/" target="_blank" title="새 창">시티투어버스</a>
+</li>
+<li>
+    <a href="/index.do?menu_id=00002966">관광안내1330</a>
+</li>
+<li>
+    <a href="https://knto.or.kr/TouristComplaint" target="_blank" title="새 창">관광불편신고센터</a>
+</li>
+</ul>
+</li>
+<li>
+    <a href="/index.do?menu_id=00002919">교통</a>
+<ul>
+<li>
+    <a href="/index.do?menu_id=00002969">공항/역/터미널</a>
+</li>
+<li>
+    <a href="/index.do?menu_id=00002970">시내대중교통 안내</a>
+<ul>
+<li>
+    <a href="/index.do?menu_id=00004060">대구도시철도</a>
+</li>
+<li>
+    <a href="/index.do?menu_id=00004061">시내버스노선</a>
+</li>
+</ul>
+</li>
+<li>
+    <a href="https://pis.daegu.go.kr" target="_blank" title="새 창">주차안내</a>
+</li>
+<li>
+    <a href="https://www.daegu.go.kr/tra/index.do?menu_id=00000350" target="_blank" title="새 창">렌터카 안내</a>
+</li>
+</ul>
+</li>
+<li>
+    <a href="/index.do?menu_id=00002928">문의</a>
+</li>
+<li>
+    <a href="/index.do?menu_id=00002929">자주묻는 질문</a>
+</li>
+</ul>
+
+			<!--
+			<div class="daegu12">
+				<div>
+					<img src="/cmsh/tour.daegu.go.kr/img_2020/common/daegu_map.png" alt="여기는 대구 12경입니다!"/>
+					<a href="/index.do?menu_id=00002913&menu_link=/front/tour/tourMapsView.do?tourId=KOATTR_226" class="n1">강정고령보</a>
+					<a href="/index.do?menu_id=00002913&menu_link=/front/tour/tourMapsView.do?tourId=KOATTR_128" class="n2">경상감영과 옛골목</a>
+					<a href="/index.do?menu_id=00002913&menu_link=/front/tour/tourMapsView.do?tourId=KOATTR_216" class="n3">83타워</a>
+					<a href="/index.do?menu_id=00002913&menu_link=/front/tour/tourMapsView.do?tourId=KOATTR_229" class="n4">서문시장</a>
+					<a href="/index.do?menu_id=00002913&menu_link=/front/tour/tourMapsView.do?tourId=KOATTR_221" class="n5">동성로</a>
+					<a href="/index.do?menu_id=00002913&menu_link=/front/tour/tourMapsView.do?tourId=KOATTR_129" class="n6">팔공산</a>
+					<a href="/index.do?menu_id=00002913&menu_link=/front/tour/tourMapsView.do?tourId=KOATTR_258" class="n7">신천</a>
+					<a href="/index.do?menu_id=00002913&menu_link=/front/tour/tourMapsView.do?tourId=KOATTR_328" class="n8">대구스타디움</a>
+					<a href="/index.do?menu_id=00002913&menu_link=/front/tour/tourMapsView.do?tourId=KOATTR_123" class="n9">국채보상운동 기념공원</a>
+					<a href="/index.do?menu_id=00002913&menu_link=/front/tour/tourMapsView.do?tourId=KOATTR_120" class="n10">수성못</a>
+					<a href="/index.do?menu_id=00002913&menu_link=/front/tour/tourMapsView.do?tourId=KOATTR_124" class="n11">달성토성</a>
+					<a href="/index.do?menu_id=00002913&menu_link=/front/tour/tourMapsView.do?tourId=KOATTR_74" class="n12">비슬산</a>
+				</div>
+			</div>
+			-->
+		</div>
+	</div>
+
+
+	<!--  -->
+	
+</li>
+
+				<!--
+				<li>
+				<a href="#">축제&amp;문화</a>
+				<div>
+					<ul>
+						<li>
+						<div class="gnb_left">
+							<h3>축제&amp;문화</h3>
+							<p>
+								지역명소, 명품관광, 힐링체험 등<br/>다양한 문화체험이 가능한<br/>다이나믹한 대구여행!
+							</p>
+						</div>
+						<ul>
+							<li><a href="#">대구명소 만나보기</a>
+							<ul>
+								<li><a href="#">3차메뉴 정보</a></li>
+								<li><a href="#">3차메뉴 정보</a></li>
+								<li><a href="#">3차메뉴 정보</a></li>
+							</ul>
+							</li>
+							<li><a href="#" target="_blank">명소30선</a>
+							<ul>
+								<li><a href="#">3차메뉴 정보</a></li>
+								<li><a href="#">3차메뉴 정보</a></li>
+								<li><a href="#">3차메뉴 정보</a></li>
+							</ul>
+							</li>
+							<li><a href="#">대구12경</a>
+							<ul>
+								<li><a href="#">3차메뉴 정보</a></li>
+								<li><a href="#">3차메뉴 정보</a></li>
+								<li><a href="#">3차메뉴 정보</a></li>
+							</ul>
+							</li>
+							<li><a href="#">체험관광</a>
+							<ul>
+								<li><a href="#">3차메뉴 정보</a></li>
+								<li><a href="#">3차메뉴 정보</a></li>
+								<li><a href="#">3차메뉴 정보</a></li>
+							</ul>
+							</li>
+							<li><a href="#">드라마 촬영지</a>
+							<ul>
+								<li><a href="#">3차메뉴 정보</a></li>
+								<li><a href="#">3차메뉴 정보</a></li>
+								<li><a href="#">3차메뉴 정보</a></li>
+							</ul>
+							</li>
+							<li><a href="#">관역권 명소</a></li>
+							<li><a href="#">내주변 관광지</a></li>
+							<li><a href="#">드라마 촬영지</a></li>
+						</ul>
+						</li>
+					</ul>
+					<div class="daegu12 open">
+						<div>
+							<img src="/cmsh/tour.daegu.go.kr/img_2020/common/daegu_map.png" alt="여기는 대구 12경입니다!"/>
+							<a href="#" class="n1">강정고령보</a>
+							<a href="#" class="n2">경상감영과 옛골목</a>
+							<a href="#" class="n3">83타워</a>
+							<a href="#" class="n4">서문시장</a>
+							<a href="#" class="n5">동성로</a>
+							<a href="#" class="n6">팔공산</a>
+							<a href="#" class="n7">신천</a>
+							<a href="#" class="n8">대구스타디움</a>
+							<a href="#" class="n9">국채보상운동 기념공원</a>
+							<a href="#" class="n10">수성못</a>
+							<a href="#" class="n11">달성토성</a>
+							<a href="#" class="n12">비슬산</a>
+						</div>
+					</div>
+				</div>
+				</li>
+				-->
+			</ul>
+			
+		</div>
+		<div class="gnb_bg"></div>
+		<div class="h_right">
+			
+
+
+
+
+
+
+
+
+
+
+
+<span class="js-icms-csrf-token-source" style="display:none;"><input type="hidden" name="ICMS_CSRF_TOKEN" value="69a5ad6ef9009c13b09b4298f2ee1dc15c1761b3ba3dd8237e0650b3104ebf56" /></span>
+<script type="text/javascript">
+(function() {
+	function findSourceInput(className) {
+		var nodes = document.getElementsByClassName ? document.getElementsByClassName(className) : [];
+		if (!nodes.length) {
+			var spans = document.getElementsByTagName("span");
+			nodes = [];
+			for (var i = 0; i < spans.length; i++) {
+				if ((" " + spans[i].className + " ").indexOf(" " + className + " ") > -1) {
+					nodes[nodes.length] = spans[i];
+				}
+			}
+		}
+		return nodes.length ? nodes[0].getElementsByTagName("input")[0] : null;
+	}
+	function hasInputByName(form, name) {
+		var inputs = form.getElementsByTagName("input");
+		for (var i = 0; i < inputs.length; i++) {
+			if (inputs[i].getAttribute("name") === name) {
+				return true;
+			}
+		}
+		return false;
+	}
+	function appendHidden(form, name, value) {
+		if (hasInputByName(form, name)) {
+			return;
+		}
+		var input = document.createElement("input");
+		input.type = "hidden";
+		input.name = name;
+		input.value = value;
+		form.insertBefore(input, form.firstChild);
+	}
+	function isSameOriginAction(form) {
+		var action = form.getAttribute("action");
+		if (!action) {
+			return true;
+		}
+		action = action.replace(/^\s+|\s+$/g, "");
+		if (!action || action.charAt(0) === "#" || action.charAt(0) === "?") {
+			return true;
+		}
+		if (action.indexOf("//") === 0 || /^[a-z][a-z0-9+.-]*:/i.test(action)) {
+			var link = document.createElement("a");
+			link.href = action.indexOf("//") === 0 ? window.location.protocol + action : action;
+			return link.protocol === window.location.protocol && link.host === window.location.host;
+		}
+		return true;
+	}
+	function appendActionToken(form, name, value) {
+		var action = form.getAttribute("action") || (window.location.pathname + window.location.search);
+		var hash = "";
+		var hashIndex = action.indexOf("#");
+		if (hashIndex > -1) {
+			hash = action.substring(hashIndex);
+			action = action.substring(0, hashIndex);
+		}
+		if (action.indexOf(encodeURIComponent(name) + "=") > -1 || action.indexOf(name + "=") > -1) {
+			return;
+		}
+		action += (action.indexOf("?") > -1 ? "&" : "?") + encodeURIComponent(name) + "=" + encodeURIComponent(value);
+		form.setAttribute("action", action + hash);
+	}
+	function isMultipart(form) {
+		var enctype = (form.getAttribute("enctype") || form.encoding || "").toLowerCase();
+		return enctype.indexOf("multipart/form-data") > -1;
+	}
+	function isUnsafeMethod(form) {
+		var method = (form.getAttribute("method") || "get").toLowerCase();
+		return method !== "get";
+	}
+	function applyCsrfToken(form) {
+		var sourceInput = findSourceInput("js-icms-csrf-token-source");
+		if (!sourceInput) {
+			return;
+		}
+		var tokenName = sourceInput.getAttribute("name");
+		var tokenValue = sourceInput.value;
+		if (!isSameOriginAction(form) || !isUnsafeMethod(form)) {
+			return;
+		}
+		appendHidden(form, tokenName, tokenValue);
+		if (isMultipart(form)) {
+			appendActionToken(form, tokenName, tokenValue);
+		}
+	}
+	window.icmsApplyCsrfToken = applyCsrfToken;
+	function addCsrfToken() {
+		var forms = document.getElementsByTagName("form");
+		for (var i = 0; i < forms.length; i++) {
+			applyCsrfToken(forms[i]);
+		}
+	}
+	if (document.readyState === "loading") {
+		document.addEventListener("DOMContentLoaded", addCsrfToken);
+	} else {
+		addCsrfToken();
+	}
+})();
+</script>
+
+
+<span class="js-csrf-token-source" style="display:none;"><input type='hidden' name='egovframework.double.submit.preventer.parameter.name' value='A016267E-FCCD-445F-BBA6-6723C5BA4C96'/></span>
+<script type="text/javascript">
+(function() {
+	function hasInputByName(form, name) {
+		var inputs = form.getElementsByTagName("input");
+		for (var i = 0; i < inputs.length; i++) {
+			if (inputs[i].getAttribute("name") === name) {
+				return true;
+			}
+		}
+		return false;
+	}
+	function appendHidden(form, name, value) {
+		if (hasInputByName(form, name)) {
+			return;
+		}
+		var input = document.createElement("input");
+		input.type = "hidden";
+		input.name = name;
+		input.value = value;
+		form.insertBefore(input, form.firstChild);
+	}
+	function isSameOriginAction(form) {
+		var action = form.getAttribute("action");
+		if (!action) {
+			return true;
+		}
+		action = action.replace(/^\s+|\s+$/g, "");
+		if (!action || action.charAt(0) === "#" || action.charAt(0) === "?") {
+			return true;
+		}
+		if (action.indexOf("//") === 0 || /^[a-z][a-z0-9+.-]*:/i.test(action)) {
+			var link = document.createElement("a");
+			link.href = action.indexOf("//") === 0 ? window.location.protocol + action : action;
+			return link.protocol === window.location.protocol && link.host === window.location.host;
+		}
+		return true;
+	}
+	function addCsrfTokens() {
+		var sources = document.getElementsByClassName ? document.getElementsByClassName("js-csrf-token-source") : [];
+		if (!sources.length) {
+			return;
+		}
+		var sourceInput = sources[0].getElementsByTagName("input")[0];
+		if (!sourceInput) {
+			return;
+		}
+		var tokenName = sourceInput.getAttribute("name");
+		var tokenValue = sourceInput.value;
+		var forms = document.getElementsByTagName("form");
+		for (var i = 0; i < forms.length; i++) {
+			var method = (forms[i].getAttribute("method") || "get").toLowerCase();
+			if (method === "post" && isSameOriginAction(forms[i])) {
+				appendHidden(forms[i], tokenName, tokenValue);
+				appendHidden(forms[i], "CSRFToken", tokenValue);
+			}
+		}
+	}
+	if (document.readyState === "loading") {
+		document.addEventListener("DOMContentLoaded", addCsrfTokens);
+	} else {
+		addCsrfTokens();
+	}
+})();
+</script>
+
+
+<div class="weather">
+	<a href="#" class="temp" title="확장">
+		<img src="/cmsh/tour.daegu.go.kr/img_2020/common/weather_icon_.png" alt="날씨 : 흐림">흐림<strong>19</strong>℃
+	</a>
+	<div id="weather" class="pop_weather">
+		<dl>
+			<dt><a href="http://air.daegu.go.kr/" title="대구광역시 실시간 대기정보 시스템 새창" target="_blank">미세먼지</a></dt>
+			
+			<dd data-dust-text="좋음">23 μg/㎥(<strong>좋음</strong>)</dd>
+			
+			
+			
+		</dl>
+		<dl>
+			<dt><a href="http://air.daegu.go.kr/" title="대구광역시 실시간 대기정보 시스템 새창" target="_blank">초미세먼지</a></dt>
+			
+			<dd data-dust-text="좋음">12 μg/㎥(<strong>좋음</strong>)</dd>
+			
+			
+			
+		</dl>
+		<dl>
+			<dt><a href="http://air.daegu.go.kr/" title="대구광역시 실시간 대기정보 시스템 새창" target="_blank">오존(ozone)</a></dt>
+			
+			
+			<dd data-dust-text="보통">0.0701 ppm(<strong>보통</strong>)</dd>
+			
+			
+		</dl>
+		<a href="http://air.daegu.go.kr/" title="대구광역시 실시간 대기정보 시스템 새창" target="_blank" class="more_weather">일기예보 자세히 보기</a>
+	</div>
+</div>
+			<a href="/index.do?menu_id=00002993" class="sitemap">사이트맵</a>
+			<a href="#" class="language_k">KOR</a>
+			<div class="language_box">
+				<a href="/eng/index.do" target="_blank" title="새 창">English</a>
+				<a href="/big5chn/index.do" target="_blank" title="새 창">中文(繁體)</a>
+				<a href="/chn/index.do" target="_blank" title="새 창">中文(简体)</a>
+				<a href="/jpn/index.do" target="_blank" title="새 창">日本語</a>
+			</div>
+			<!-- 
+			<a href="/icms/search.do" class="search">검색</a>
+			 -->
+ 		</div>
+		<nav class="wholeview_wrap">
+		<h2 class="hidden">전체메뉴</h2>
+		<button type="button" aria-controls="wholeview" aria-expanded="true" class="btn_wv"><span class="sp_ui">전체메뉴 열기/닫기</span></button>
+		<div id="wholeview">
+			<!-- 전체메뉴 -->
+			<ul class="nav">
+				<li class="c00002890">
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+
+
+
+
+
+
+
+
+
+
+<a href="/index.do?menu_id=00002890"><span>명품관광코스</span></a>
+
+	<div class="inner">
+		<div>
+			<!-- <div class="gnb_left">
+				<p>
+					지역명소, 명품관광, 힐링체험 등<br/>다양한 문화체험이 가능한<br/>다이나믹한 대구여행!
+				</p>
+			</div> -->
+			
+
+
+
+
+
+
+
+
+
+
+<ul>
+<li>
+    <a href="/index.do?menu_id=00002905">대표관광코스</a>
+<ul>
+<li>
+    <a href="/index.do?menu_id=00002934">대구명품코스</a>
+</li>
+<li>
+    <a href="/index.do?menu_id=00002935">권역별명품코스</a>
+</li>
+</ul>
+</li>
+<li>
+    <a href="/index.do?menu_id=00002980">야간관광</a>
+</li>
+<li>
+    <a href="http://www.daegu.go.kr/cts/index.do?menu_id=00000876" target="_blank" title="새 창">올레길/둘레길 코스</a>
+</li>
+<li>
+    <a href="http://www.daegu.go.kr/cts/index.do?menu_id=00000892" target="_blank" title="새 창">자전거투어 코스</a>
+</li>
+<li>
+    <a href="/index.do?menu_id=00000123">건축문화기행</a>
+</li>
+</ul>
+
+			<!--
+			<div class="daegu12">
+				<div>
+					<img src="/cmsh/tour.daegu.go.kr/img_2020/common/daegu_map.png" alt="여기는 대구 12경입니다!"/>
+					<a href="/index.do?menu_id=00002913&menu_link=/front/tour/tourMapsView.do?tourId=KOATTR_226" class="n1">강정고령보</a>
+					<a href="/index.do?menu_id=00002913&menu_link=/front/tour/tourMapsView.do?tourId=KOATTR_128" class="n2">경상감영과 옛골목</a>
+					<a href="/index.do?menu_id=00002913&menu_link=/front/tour/tourMapsView.do?tourId=KOATTR_216" class="n3">83타워</a>
+					<a href="/index.do?menu_id=00002913&menu_link=/front/tour/tourMapsView.do?tourId=KOATTR_229" class="n4">서문시장</a>
+					<a href="/index.do?menu_id=00002913&menu_link=/front/tour/tourMapsView.do?tourId=KOATTR_221" class="n5">동성로</a>
+					<a href="/index.do?menu_id=00002913&menu_link=/front/tour/tourMapsView.do?tourId=KOATTR_129" class="n6">팔공산</a>
+					<a href="/index.do?menu_id=00002913&menu_link=/front/tour/tourMapsView.do?tourId=KOATTR_258" class="n7">신천</a>
+					<a href="/index.do?menu_id=00002913&menu_link=/front/tour/tourMapsView.do?tourId=KOATTR_328" class="n8">대구스타디움</a>
+					<a href="/index.do?menu_id=00002913&menu_link=/front/tour/tourMapsView.do?tourId=KOATTR_123" class="n9">국채보상운동 기념공원</a>
+					<a href="/index.do?menu_id=00002913&menu_link=/front/tour/tourMapsView.do?tourId=KOATTR_120" class="n10">수성못</a>
+					<a href="/index.do?menu_id=00002913&menu_link=/front/tour/tourMapsView.do?tourId=KOATTR_124" class="n11">달성토성</a>
+					<a href="/index.do?menu_id=00002913&menu_link=/front/tour/tourMapsView.do?tourId=KOATTR_74" class="n12">비슬산</a>
+				</div>
+			</div>
+			-->
+		</div>
+	</div>
+
+
+	<!--  -->
+	
+</li>
+				<li class="c00002900">
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+
+
+
+
+
+
+
+
+
+
+<a href="/index.do?menu_id=00002900"><span>관광명소</span></a>
+
+	<div class="inner">
+		<div>
+			<!-- <div class="gnb_left">
+				<p>
+					지역명소, 명품관광, 힐링체험 등<br/>다양한 문화체험이 가능한<br/>다이나믹한 대구여행!
+				</p>
+			</div> -->
+			
+
+
+
+
+
+
+
+
+
+
+<ul>
+<li>
+    <a href="/index.do?menu_id=00002911">대구 12경</a>
+</li>
+<li>
+    <a href="/index.do?menu_id=00002912">대표 관광명소</a>
+</li>
+<li>
+    <a href="/index.do?menu_id=00002915">관광명소 검색</a>
+<ul>
+<li>
+    <a href="/index.do?menu_id=00002943">관광명소 추천검색</a>
+</li>
+</ul>
+</li>
+</ul>
+
+			<!--
+			<div class="daegu12">
+				<div>
+					<img src="/cmsh/tour.daegu.go.kr/img_2020/common/daegu_map.png" alt="여기는 대구 12경입니다!"/>
+					<a href="/index.do?menu_id=00002913&menu_link=/front/tour/tourMapsView.do?tourId=KOATTR_226" class="n1">강정고령보</a>
+					<a href="/index.do?menu_id=00002913&menu_link=/front/tour/tourMapsView.do?tourId=KOATTR_128" class="n2">경상감영과 옛골목</a>
+					<a href="/index.do?menu_id=00002913&menu_link=/front/tour/tourMapsView.do?tourId=KOATTR_216" class="n3">83타워</a>
+					<a href="/index.do?menu_id=00002913&menu_link=/front/tour/tourMapsView.do?tourId=KOATTR_229" class="n4">서문시장</a>
+					<a href="/index.do?menu_id=00002913&menu_link=/front/tour/tourMapsView.do?tourId=KOATTR_221" class="n5">동성로</a>
+					<a href="/index.do?menu_id=00002913&menu_link=/front/tour/tourMapsView.do?tourId=KOATTR_129" class="n6">팔공산</a>
+					<a href="/index.do?menu_id=00002913&menu_link=/front/tour/tourMapsView.do?tourId=KOATTR_258" class="n7">신천</a>
+					<a href="/index.do?menu_id=00002913&menu_link=/front/tour/tourMapsView.do?tourId=KOATTR_328" class="n8">대구스타디움</a>
+					<a href="/index.do?menu_id=00002913&menu_link=/front/tour/tourMapsView.do?tourId=KOATTR_123" class="n9">국채보상운동 기념공원</a>
+					<a href="/index.do?menu_id=00002913&menu_link=/front/tour/tourMapsView.do?tourId=KOATTR_120" class="n10">수성못</a>
+					<a href="/index.do?menu_id=00002913&menu_link=/front/tour/tourMapsView.do?tourId=KOATTR_124" class="n11">달성토성</a>
+					<a href="/index.do?menu_id=00002913&menu_link=/front/tour/tourMapsView.do?tourId=KOATTR_74" class="n12">비슬산</a>
+				</div>
+			</div>
+			-->
+		</div>
+	</div>
+
+
+	<!--  -->
+	
+</li>
+				<li class="c00002901">
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+
+
+
+
+
+
+
+
+
+
+<a href="/index.do?menu_id=00002901"><span>축제</span></a>
+
+	<div class="inner">
+		<div>
+			<!-- <div class="gnb_left">
+				<p>
+					지역명소, 명품관광, 힐링체험 등<br/>다양한 문화체험이 가능한<br/>다이나믹한 대구여행!
+				</p>
+			</div> -->
+			
+
+
+
+
+
+
+
+
+
+
+<ul>
+<li>
+    <a href="/index.do?menu_id=00002932">연간축제일정</a>
+</li>
+<li>
+    <a href="https://fantasiafesta.or.kr/" target="_blank" title="새 창">판타지아 대구페스타</a>
+<ul>
+<li>
+    <a href="https://www.pwf.or.kr" target="_blank" title="새 창">파워풀대구페스티벌</a>
+</li>
+</ul>
+</li>
+<li>
+    <a href="https://dgfca.or.kr/event/all/list" target="_blank" title="새 창">축제/공연전시정보</a>
+</li>
+</ul>
+
+			<!--
+			<div class="daegu12">
+				<div>
+					<img src="/cmsh/tour.daegu.go.kr/img_2020/common/daegu_map.png" alt="여기는 대구 12경입니다!"/>
+					<a href="/index.do?menu_id=00002913&menu_link=/front/tour/tourMapsView.do?tourId=KOATTR_226" class="n1">강정고령보</a>
+					<a href="/index.do?menu_id=00002913&menu_link=/front/tour/tourMapsView.do?tourId=KOATTR_128" class="n2">경상감영과 옛골목</a>
+					<a href="/index.do?menu_id=00002913&menu_link=/front/tour/tourMapsView.do?tourId=KOATTR_216" class="n3">83타워</a>
+					<a href="/index.do?menu_id=00002913&menu_link=/front/tour/tourMapsView.do?tourId=KOATTR_229" class="n4">서문시장</a>
+					<a href="/index.do?menu_id=00002913&menu_link=/front/tour/tourMapsView.do?tourId=KOATTR_221" class="n5">동성로</a>
+					<a href="/index.do?menu_id=00002913&menu_link=/front/tour/tourMapsView.do?tourId=KOATTR_129" class="n6">팔공산</a>
+					<a href="/index.do?menu_id=00002913&menu_link=/front/tour/tourMapsView.do?tourId=KOATTR_258" class="n7">신천</a>
+					<a href="/index.do?menu_id=00002913&menu_link=/front/tour/tourMapsView.do?tourId=KOATTR_328" class="n8">대구스타디움</a>
+					<a href="/index.do?menu_id=00002913&menu_link=/front/tour/tourMapsView.do?tourId=KOATTR_123" class="n9">국채보상운동 기념공원</a>
+					<a href="/index.do?menu_id=00002913&menu_link=/front/tour/tourMapsView.do?tourId=KOATTR_120" class="n10">수성못</a>
+					<a href="/index.do?menu_id=00002913&menu_link=/front/tour/tourMapsView.do?tourId=KOATTR_124" class="n11">달성토성</a>
+					<a href="/index.do?menu_id=00002913&menu_link=/front/tour/tourMapsView.do?tourId=KOATTR_74" class="n12">비슬산</a>
+				</div>
+			</div>
+			-->
+		</div>
+	</div>
+
+
+	<!--  -->
+	
+</li>
+				<li class="c00002902">
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+
+
+
+
+
+
+
+
+
+
+<a href="/index.do?menu_id=00002902"><span>숙박/음식/쇼핑</span></a>
+
+	<div class="inner">
+		<div>
+			<!-- <div class="gnb_left">
+				<p>
+					지역명소, 명품관광, 힐링체험 등<br/>다양한 문화체험이 가능한<br/>다이나믹한 대구여행!
+				</p>
+			</div> -->
+			
+
+
+
+
+
+
+
+
+
+
+<ul>
+<li>
+    <a href="/index.do?menu_id=00002930">숙박</a>
+<ul>
+<li>
+    <a href="/index.do?menu_id=00002945">숙박정보</a>
+</li>
+</ul>
+</li>
+<li>
+    <a href="/index.do?menu_id=00002931">음식</a>
+<ul>
+<li>
+    <a href="/index.do?menu_id=00004040">음식관광</a>
+<ul>
+<li>
+    <a href="/index.do?menu_id=00002947">대구 10미</a>
+</li>
+<li>
+    <a href="https://tour.daegu.go.kr/icms/cmm/fms/FileDown.do?atchFileId=fz/E4gp3C69b3mXrsS37FNhOFiFybFULVcwTVMfgcJk=&fileSn=0" title="다운로드">음식점가이드북</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+    <a href="/index.do?menu_id=00004031">쇼핑</a>
+<ul>
+<li>
+    <a href="/index.do?menu_id=00004080">쇼핑</a>
+</li>
+<li>
+    <a href="/index.do?menu_id=00002920">대구관광 기념품</a>
+</li>
+</ul>
+</li>
+<li>
+    <a href="/index.do?menu_id=00000110">대구여행상점</a>
+</li>
+</ul>
+
+			<!--
+			<div class="daegu12">
+				<div>
+					<img src="/cmsh/tour.daegu.go.kr/img_2020/common/daegu_map.png" alt="여기는 대구 12경입니다!"/>
+					<a href="/index.do?menu_id=00002913&menu_link=/front/tour/tourMapsView.do?tourId=KOATTR_226" class="n1">강정고령보</a>
+					<a href="/index.do?menu_id=00002913&menu_link=/front/tour/tourMapsView.do?tourId=KOATTR_128" class="n2">경상감영과 옛골목</a>
+					<a href="/index.do?menu_id=00002913&menu_link=/front/tour/tourMapsView.do?tourId=KOATTR_216" class="n3">83타워</a>
+					<a href="/index.do?menu_id=00002913&menu_link=/front/tour/tourMapsView.do?tourId=KOATTR_229" class="n4">서문시장</a>
+					<a href="/index.do?menu_id=00002913&menu_link=/front/tour/tourMapsView.do?tourId=KOATTR_221" class="n5">동성로</a>
+					<a href="/index.do?menu_id=00002913&menu_link=/front/tour/tourMapsView.do?tourId=KOATTR_129" class="n6">팔공산</a>
+					<a href="/index.do?menu_id=00002913&menu_link=/front/tour/tourMapsView.do?tourId=KOATTR_258" class="n7">신천</a>
+					<a href="/index.do?menu_id=00002913&menu_link=/front/tour/tourMapsView.do?tourId=KOATTR_328" class="n8">대구스타디움</a>
+					<a href="/index.do?menu_id=00002913&menu_link=/front/tour/tourMapsView.do?tourId=KOATTR_123" class="n9">국채보상운동 기념공원</a>
+					<a href="/index.do?menu_id=00002913&menu_link=/front/tour/tourMapsView.do?tourId=KOATTR_120" class="n10">수성못</a>
+					<a href="/index.do?menu_id=00002913&menu_link=/front/tour/tourMapsView.do?tourId=KOATTR_124" class="n11">달성토성</a>
+					<a href="/index.do?menu_id=00002913&menu_link=/front/tour/tourMapsView.do?tourId=KOATTR_74" class="n12">비슬산</a>
+				</div>
+			</div>
+			-->
+		</div>
+	</div>
+
+
+	<!--  -->
+	
+</li>
+				<li class="c00002903">
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+
+
+
+
+
+
+
+
+
+
+<a href="/index.do?menu_id=00002903"><span>어울림대구</span></a>
+
+	<div class="inner">
+		<div>
+			<!-- <div class="gnb_left">
+				<p>
+					지역명소, 명품관광, 힐링체험 등<br/>다양한 문화체험이 가능한<br/>다이나믹한 대구여행!
+				</p>
+			</div> -->
+			
+
+
+
+
+
+
+
+
+
+
+<ul>
+<li>
+    <a href="/index.do?menu_id=00002923">여행도우미</a>
+<ul>
+<li>
+    <a href="/index.do?menu_id=00002951">관광안내소</a>
+</li>
+<li>
+    <a href="/index.do?menu_id=00002955">관광안내지도 신청</a>
+</li>
+<li>
+    <a href="/index.do?menu_id=00002952">문화관광해설사 안내</a>
+</li>
+<li>
+    <a href="http://ebook.daegu.go.kr/html/book/index/gallery/latest/9/1" target="_blank" title="새 창">대구관광안내책자</a>
+</li>
+</ul>
+</li>
+<li>
+    <a href="/index.do?menu_id=00002924">미리보는 대구</a>
+<ul>
+<li>
+    <a href="/index.do?menu_id=00002958">항공VR</a>
+</li>
+<li>
+    <a href="/index.do?menu_id=00002959">관광VR</a>
+</li>
+<li>
+    <a href="https://info.daegu.go.kr/newshome/mtnmain.php?mtnkey=scatelist&mkey=47" target="_blank" title="새 창">대구영상</a>
+</li>
+<li>
+    <a href="/index.do?menu_id=00002960">대구사진</a>
+<ul>
+<li>
+    <a href="/index.do?menu_id=00000010">아카이브</a>
+</li>
+<li>
+    <a href="https://info.daegu.go.kr/newshome/mtnmain.php?mtnkey=scatelist&mkey=5" target="_blank" title="새 창">대구화보</a>
+</li>
+<li>
+    <a href="https://visitdaegu.or.kr/gallery" target="_blank" title="새 창">고화질대구</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+			<!--
+			<div class="daegu12">
+				<div>
+					<img src="/cmsh/tour.daegu.go.kr/img_2020/common/daegu_map.png" alt="여기는 대구 12경입니다!"/>
+					<a href="/index.do?menu_id=00002913&menu_link=/front/tour/tourMapsView.do?tourId=KOATTR_226" class="n1">강정고령보</a>
+					<a href="/index.do?menu_id=00002913&menu_link=/front/tour/tourMapsView.do?tourId=KOATTR_128" class="n2">경상감영과 옛골목</a>
+					<a href="/index.do?menu_id=00002913&menu_link=/front/tour/tourMapsView.do?tourId=KOATTR_216" class="n3">83타워</a>
+					<a href="/index.do?menu_id=00002913&menu_link=/front/tour/tourMapsView.do?tourId=KOATTR_229" class="n4">서문시장</a>
+					<a href="/index.do?menu_id=00002913&menu_link=/front/tour/tourMapsView.do?tourId=KOATTR_221" class="n5">동성로</a>
+					<a href="/index.do?menu_id=00002913&menu_link=/front/tour/tourMapsView.do?tourId=KOATTR_129" class="n6">팔공산</a>
+					<a href="/index.do?menu_id=00002913&menu_link=/front/tour/tourMapsView.do?tourId=KOATTR_258" class="n7">신천</a>
+					<a href="/index.do?menu_id=00002913&menu_link=/front/tour/tourMapsView.do?tourId=KOATTR_328" class="n8">대구스타디움</a>
+					<a href="/index.do?menu_id=00002913&menu_link=/front/tour/tourMapsView.do?tourId=KOATTR_123" class="n9">국채보상운동 기념공원</a>
+					<a href="/index.do?menu_id=00002913&menu_link=/front/tour/tourMapsView.do?tourId=KOATTR_120" class="n10">수성못</a>
+					<a href="/index.do?menu_id=00002913&menu_link=/front/tour/tourMapsView.do?tourId=KOATTR_124" class="n11">달성토성</a>
+					<a href="/index.do?menu_id=00002913&menu_link=/front/tour/tourMapsView.do?tourId=KOATTR_74" class="n12">비슬산</a>
+				</div>
+			</div>
+			-->
+		</div>
+	</div>
+
+
+	<!--  -->
+	
+</li>
+				<li class="c00002904">
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+
+
+
+
+
+
+
+
+
+
+<a href="/index.do?menu_id=00002904"><span>대구관광</span></a>
+
+	<div class="inner">
+		<div>
+			<!-- <div class="gnb_left">
+				<p>
+					지역명소, 명품관광, 힐링체험 등<br/>다양한 문화체험이 가능한<br/>다이나믹한 대구여행!
+				</p>
+			</div> -->
+			
+
+
+
+
+
+
+
+
+
+
+<ul>
+<li>
+    <a href="/index.do?menu_id=00002917">여행소식</a>
+<ul>
+<li>
+    <a href="/index.do?menu_id=00002963">공지사항</a>
+</li>
+<li>
+    <a href="/index.do?menu_id=00002964">여행뉴스</a>
+</li>
+</ul>
+</li>
+<li>
+    <a href="/index.do?menu_id=00002918">관광서비스</a>
+<ul>
+<li>
+    <a href="https://www.daegucitytour.com/" target="_blank" title="새 창">시티투어버스</a>
+</li>
+<li>
+    <a href="/index.do?menu_id=00002966">관광안내1330</a>
+</li>
+<li>
+    <a href="https://knto.or.kr/TouristComplaint" target="_blank" title="새 창">관광불편신고센터</a>
+</li>
+</ul>
+</li>
+<li>
+    <a href="/index.do?menu_id=00002919">교통</a>
+<ul>
+<li>
+    <a href="/index.do?menu_id=00002969">공항/역/터미널</a>
+</li>
+<li>
+    <a href="/index.do?menu_id=00002970">시내대중교통 안내</a>
+<ul>
+<li>
+    <a href="/index.do?menu_id=00004060">대구도시철도</a>
+</li>
+<li>
+    <a href="/index.do?menu_id=00004061">시내버스노선</a>
+</li>
+</ul>
+</li>
+<li>
+    <a href="https://pis.daegu.go.kr" target="_blank" title="새 창">주차안내</a>
+</li>
+<li>
+    <a href="https://www.daegu.go.kr/tra/index.do?menu_id=00000350" target="_blank" title="새 창">렌터카 안내</a>
+</li>
+</ul>
+</li>
+<li>
+    <a href="/index.do?menu_id=00002928">문의</a>
+</li>
+<li>
+    <a href="/index.do?menu_id=00002929">자주묻는 질문</a>
+</li>
+</ul>
+
+			<!--
+			<div class="daegu12">
+				<div>
+					<img src="/cmsh/tour.daegu.go.kr/img_2020/common/daegu_map.png" alt="여기는 대구 12경입니다!"/>
+					<a href="/index.do?menu_id=00002913&menu_link=/front/tour/tourMapsView.do?tourId=KOATTR_226" class="n1">강정고령보</a>
+					<a href="/index.do?menu_id=00002913&menu_link=/front/tour/tourMapsView.do?tourId=KOATTR_128" class="n2">경상감영과 옛골목</a>
+					<a href="/index.do?menu_id=00002913&menu_link=/front/tour/tourMapsView.do?tourId=KOATTR_216" class="n3">83타워</a>
+					<a href="/index.do?menu_id=00002913&menu_link=/front/tour/tourMapsView.do?tourId=KOATTR_229" class="n4">서문시장</a>
+					<a href="/index.do?menu_id=00002913&menu_link=/front/tour/tourMapsView.do?tourId=KOATTR_221" class="n5">동성로</a>
+					<a href="/index.do?menu_id=00002913&menu_link=/front/tour/tourMapsView.do?tourId=KOATTR_129" class="n6">팔공산</a>
+					<a href="/index.do?menu_id=00002913&menu_link=/front/tour/tourMapsView.do?tourId=KOATTR_258" class="n7">신천</a>
+					<a href="/index.do?menu_id=00002913&menu_link=/front/tour/tourMapsView.do?tourId=KOATTR_328" class="n8">대구스타디움</a>
+					<a href="/index.do?menu_id=00002913&menu_link=/front/tour/tourMapsView.do?tourId=KOATTR_123" class="n9">국채보상운동 기념공원</a>
+					<a href="/index.do?menu_id=00002913&menu_link=/front/tour/tourMapsView.do?tourId=KOATTR_120" class="n10">수성못</a>
+					<a href="/index.do?menu_id=00002913&menu_link=/front/tour/tourMapsView.do?tourId=KOATTR_124" class="n11">달성토성</a>
+					<a href="/index.do?menu_id=00002913&menu_link=/front/tour/tourMapsView.do?tourId=KOATTR_74" class="n12">비슬산</a>
+				</div>
+			</div>
+			-->
+		</div>
+	</div>
+
+
+	<!--  -->
+	
+</li>
+
+			</ul>
+			<!-- 전체메뉴 -->
+		</div>
+		<div class="dim_wv">
+		</div>
+		</nav>
+		<!-- 모바일 검색 -->
+		<div class="wv_srch_wrap">
+			<button type="button" aria-controls="wv_srch" aria-expanded="false" class="btn_open"><span class="sp_ui">검색</span></button>
+			<div id="wv_srch" class="wv_srch_area">
+				<div class="searchBox">
+					<!-- <form action="/kor/search.do?IDX=77&seIDX=77&grIDX=9" id="frmsub" name="frmsub" class="input_ser" method="post">
+						<input type="hidden" id="IDX" name="IDX" value="77">
+						<input type="hidden" id="seIDX" name="seIDX" value="77">
+						<input type="hidden" id="grIDX" name="grIDX" value="9">
+						<label for="Keyword" style="position: absolute; left: -10000px; top: auto; width: 1px; height: 1px; overflow: hidden;">검색어를 입력하세요</label>
+						<input type="text" placeholder="검색어를 입력하세요" id="Keyword" name="Keyword" class="serch" onfocus="web_blur();"/>
+						<a href="#" onclick="frm_sub(); return false;`" class="serchBtn"><img src="/cmsh/tour.daegu.go.kr/img_2020/main/search_btn.png" alt="검색"/></a>
+					</form> -->
+					<form action="/icms/search.do" id="searchfrm" name="searchfrm" class="input_ser" method="get">
+                    <label for="Keyword" style="position: absolute; left: -10000px; top: auto; width: 1px; height: 1px; overflow: hidden;">검색어를 입력하세요</label>
+                    <input type="text" title="검색어" placeholder="검색어를 입력하세요" id="searchKeyword" name="searchKeyword" class="serch" onfocus="web_blur();"/>
+                    <a href="#" onclick="fn_search(); return false;" class="serchBtn"><img src="/cmsh/tour.daegu.go.kr/img_2020/main/search_btn.png" alt="검색"/></a>
+                </form>
+				</div>
+				<div class="search_bottom">
+					<ul>
+						<li><a href="/icms/search.do?searchKeyword=동성로">#동성로</a></li>
+						<li><a href="/icms/search.do?searchKeyword=팔공산">#팔공산</a></li>
+						<li><a href="/icms/search.do?searchKeyword=역사">#역사</a></li>
+						<li><a href="/icms/search.do?searchKeyword=이월드">#이월드</a></li>
+						<li><a href="/icms/search.do?searchKeyword=공원">#공원</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!-- 모바일 검색 -->
+		
+	</div>
+</div>
+
+<!-- //header_Wrap -->
+<script type="text/javascript" src="/cmsh/tour.daegu.go.kr/js/printThis.js"></script>
+<script type="text/javascript">
+$(document).ready(function () {
+	$('#printBtn').click(function(){
+		$("#printArea").printThis({
+			  debug: false,              //* show the iframe for debugging
+			  importCSS: true,           //* import page CSS
+			  printContainer: true,      //* grab outer container as well as the contents of the selector
+			  loadCSS: "/css/front/sub.css", //* path to additional css file
+			  pageTitle: "",             //* add title to print page
+			  removeInline: false        //* remove all inline styles from print elements
+		});
+	});
+});
+</script>
+<script type="text/javascript">
+        //<![CDATA[
+        /**
+         *    Tab Control (made by 킴민재)
+         *
+         *    tabName 탭의 id
+         *    contentName 은 탭에 따라 나오는 영역의 id
+         *    tabLength 는 탭의 갯수
+         *
+         *    해당 엘리멘트의 ID는 tabName + 숫자, contentName + 숫자와 동일해야한다.
+         */
+        var tabName = '';
+        var contentName = '';
+        var tabLength = 0;
+        function setTab(t, c, l) {
+            tabName = t;
+            contentName = c;
+            tabLength = l;
+            //addTabEvent();
+        }
+        function addTabEvent() {
+            for (var i = 1 ; i <= tabLength ; i++) {
+                var tabObj = document.getElementById(tabName + i);
+                tabObj.getElementsByTagName("a")[0].onclick = onTab;
+                //console.log(tabObj.getElementsByTagName("a")[0]);
+                tabObj.getElementsByTagName("a")[0].onfocus = onTab;
+            }
+        }
+        function onTab() {
+            for (var i = 1 ; i <= tabLength ; i++) {
+                var tabObj = document.getElementById(tabName + i);
+                //console.log(tabObj);
+                tabObj.className = "";
+            }
+            this.parentNode.className = "On";
+			console.log($(this).parent().next().children().children('.tab_som'));
+            var seq = this.parentNode.id.substring(7);	/* substring(9) ID 준 id="s4_2_1area1" 글자갯수 1은 아님 */
+            for (var i = 1 ; i <= tabLength ; i++) {
+                tabObj = document.getElementById(contentName + i);
+                tabObj.className = "";
+            }
+            $(this).parent().next().children().children('.tab_som').addClass('on2');
+            $(this).parent().next().children().children('.area_som').css('display','block');
+            document.getElementById(contentName + seq).className = "Visible";	/* seq 넘버 증가 */
+        }
+        //]]>
+</script>
+<script src="/cmsh/tour.daegu.go.kr//js/tab_in_tab.js" type="text/javascript"></script>
+<script>
+        /*04_04FAQ*/
+        $(document).ready(function () {
+            $(".faq > h3 > a").on("click", function () {
+            	//console.log($(this));
+            	var tabA = $(this).attr("class");
+                $(".faq > h3").attr("id","").find("a").attr("title","비활성");
+                $(this).parent().attr("id","on2").find("a").attr("title","활성");
+                $(".faq div[data-tab-type='" + tabA + "']").show().siblings(".areaIn").hide();
+                // $(this).focus().find( ".areaIn li_som" ).css( "display", "block" );
+                $(this).parent().next('a').css("color", "#999898");
+                return false;
+            });
+        });
+        
+        function copy_url() {
+        	var urls = "https://tour.daegu.go.kr/index.do?menu_id=00004080";
+            var IE=(document.all)?true:false;
+            if (IE) {
+                if(confirm("현재 페이지의 주소를 클립보드에 복사하시겠습니까?"))
+                window.clipboardData.setData("Text", urls);
+            } else {
+                temp = prompt("이 기사의 주소입니다. Ctrl+C를 눌러 클립보드로 복사하세요", urls);
+            }
+        }
+    </script>
+<style>
+/*css수정*/
+
+
+
+</style>
+<div class="sub_topBar" id="sub_topBar11">
+	<!-- <div class="sub_top">
+		<h1>관광명소</h1>
+		<span class="location">
+		<span>HOME</span><span>관광명소</span><span>관광명소 검색</span><span>권역별 관광명소</span>
+		</span>
+	</div> -->
+	
+
+
+
+
+
+
+
+
+
+
+
+<div class="sub_top">
+	<h1>숙박/음식/쇼핑</h1>
+	<div class="location_wrap">
+		<span class="inr">
+		<span class="home">HOME</span>
+		
+			<span>숙박/음식/쇼핑</span>
+		
+			<span>쇼핑</span>
+		
+			<span>쇼핑</span>
+		
+		</span>
+	</div>	
+</div>
+</div>
+<script>
+function frm_sub(){
+	$('#frmsub').submit();
+}
+</script>
+<div class="sub_wrap">
+	<div class="leftWrap">
+		<!--left메뉴-->
+		<!-- <div class="snb_wrap">
+			<ul class="snb">
+				<li><a href="/kor/contents.do?IDX=19&seIDX=19&grIDX=4">대구12경</a></li>
+				<li><a href="/kor/contents.do?IDX=20&seIDX=20&grIDX=4">대표 관광명소30선</a></li>
+				<li><a href="/kor/attractList.do?BRD_ID=attract&SUB=1&gubun=Z&IDX=21&seIDX=21&grIDX=4&gubun=I">체험형 관광</a></li>
+				<li><a href="/kor/bbsList.do?BRD_ID=drama&IDX=22&seIDX=22&grIDX=4">드라마 촬영지</a></li>
+				<li class="open start"><a href="#" class="parent on">관광명소 검색</a>
+				<ul>
+					<li class="open start"><a href="/kor/attractList.do?BRD_ID=attract&SUB=2&IDX=49&seIDX=23&grIDX=4" class="on">권역별 관광명소</a></li>
+					<li><a href="/kor/attractList.do?BRD_ID=attract&SUB=3&IDX=50&seIDX=23&grIDX=4">관광명소 추천검색</a></li>
+					<li><a href="/kor/attractList.do?BRD_ID=attract&SUB=5&IDX=78&seIDX=23&grIDX=4">테마코스추천검색</a></li>
+				</ul>
+				</li>
+				<li><a href="https://tour.daegu.go.kr/kor/tourSight/selectNearTourSightList.do">내주변 관광지</a></li>
+			</ul>
+		</div> -->
+		
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="snb_wrap">
+	<!-- <ul class="snb">
+		<li><a href="/kor/contents.do?IDX=19&seIDX=19&grIDX=4">대구12경</a></li>
+		<li><a href="/kor/contents.do?IDX=20&seIDX=20&grIDX=4">대표 관광명소30선</a></li>
+		<li><a href="/kor/attractList.do?BRD_ID=attract&SUB=1&gubun=Z&IDX=21&seIDX=21&grIDX=4&gubun=I">체험형 관광</a></li>
+		<li><a href="/kor/bbsList.do?BRD_ID=drama&IDX=22&seIDX=22&grIDX=4">드라마 촬영지</a></li>
+		<li class="open start"><a href="#" class="parent on">관광명소 검색</a>
+		<ul>
+			<li class="open start"><a href="/kor/attractList.do?BRD_ID=attract&SUB=2&IDX=49&seIDX=23&grIDX=4" class="on">권역별 관광명소</a></li>
+			<li><a href="/kor/attractList.do?BRD_ID=attract&SUB=3&IDX=50&seIDX=23&grIDX=4">관광명소 추천검색</a></li>
+			<li><a href="/kor/attractList.do?BRD_ID=attract&SUB=5&IDX=78&seIDX=23&grIDX=4">테마코스추천검색</a></li>
+		</ul>
+		</li>
+		<li><a href="https://tour.daegu.go.kr/kor/tourSight/selectNearTourSightList.do">내주변 관광지</a></li>
+	</ul> -->
+	<ul class='snb'>
+<li>
+    <a href="/index.do?menu_id=00002930">숙박</a>
+<ul>
+<li>
+    <a href="/index.do?menu_id=00002945">숙박정보</a>
+</li>
+</ul>
+</li>
+<li>
+    <a href="/index.do?menu_id=00002931">음식</a>
+<ul>
+<li>
+    <a href="/index.do?menu_id=00004040">음식관광</a>
+<ul>
+<li>
+    <a href="/index.do?menu_id=00002947">대구 10미</a>
+</li>
+<li>
+    <a href="https://tour.daegu.go.kr/icms/cmm/fms/FileDown.do?atchFileId=fz/E4gp3C69b3mXrsS37FNhOFiFybFULVcwTVMfgcJk=&fileSn=0" title="다운로드">음식점가이드북</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+    <a href="/index.do?menu_id=00004031" class=on>쇼핑</a>
+<ul>
+<li>
+    <a href="/index.do?menu_id=00004080" class=on>쇼핑</a>
+</li>
+<li>
+    <a href="/index.do?menu_id=00002920">대구관광 기념품</a>
+</li>
+</ul>
+</li>
+<li>
+    <a href="/index.do?menu_id=00000110">대구여행상점</a>
+</li>
+</ul>
+
+</div>
+		
+
+
+		<!--left메뉴끝-->
+		<div class="leftQuick">
+			<div class="leftQ">
+				<a href="/index.do?menu_id=00002971">관광지도</a>
+			</div>
+			<div class="leftQ">
+				<a href="/index.do?menu_id=00002958">파노라마</a>
+			</div>
+			<div class="leftQ">
+				<a href="http://www.daegucitytour.com/" target="_blank" title="새창열기">시티투어버스</a>
+			</div>
+		</div>
+		<!-- 레프트배너 -->
+		<div class="lnb_banner_wrap">
+		</div>
+		<!-- 레프트배너 끝 -->
+	</div>
+	<div class="contentsWrap" id="printArea">
+		<div class="contentsTitle">
+			<h2 id="subTitle">
+				
+				
+					쇼핑
+				
+			</h2>
+			<span class="print">
+			<a href="javascript:copy_url();" >
+			<img src="/cmsh/tour.daegu.go.kr/images/img/front/sub/link.png" alt="주소복사"/>
+			</a>
+			&nbsp;
+			<a href="#this" id="printBtn">
+			<img src="/cmsh/tour.daegu.go.kr/images/img/front/sub/print.png" alt="프린트"/>
+			</a>
+			</span>
+			<span class="print" style="margin-left:10px;"><a href="javascript:history.back();"><img src="/cmsh/tour.daegu.go.kr/images/img/front/sub/back.png" alt="Back"></a></span>
+		</div>
+		<div id="subContents" class="marnon">
+			<div class="Visible">
+				<!-- <div class="tab01 position">
+					<ul>
+						<li><a href="#" class="on">전체</a></li>
+						<li><a href="#">중구</a></li>
+						<li><a href="#">동구</a></li>
+						<li><a href="#">서구</a></li>
+						<li><a href="#">남구</a></li>
+						<li><a href="#">북구</a></li>
+						<li><a href="#">수성구</a></li>
+						<li><a href="#">달서구</a></li>
+						<li><a href="#">달성군</a></li>
+					</ul>
+				</div> -->
+				
+				
+					
+					
+				
+
+
+
+
+
+
+
+
+
+
+
+<span class="js-icms-csrf-token-source" style="display:none;"><input type="hidden" name="ICMS_CSRF_TOKEN" value="69a5ad6ef9009c13b09b4298f2ee1dc15c1761b3ba3dd8237e0650b3104ebf56" /></span>
+<script type="text/javascript">
+(function() {
+	function findSourceInput(className) {
+		var nodes = document.getElementsByClassName ? document.getElementsByClassName(className) : [];
+		if (!nodes.length) {
+			var spans = document.getElementsByTagName("span");
+			nodes = [];
+			for (var i = 0; i < spans.length; i++) {
+				if ((" " + spans[i].className + " ").indexOf(" " + className + " ") > -1) {
+					nodes[nodes.length] = spans[i];
+				}
+			}
+		}
+		return nodes.length ? nodes[0].getElementsByTagName("input")[0] : null;
+	}
+	function hasInputByName(form, name) {
+		var inputs = form.getElementsByTagName("input");
+		for (var i = 0; i < inputs.length; i++) {
+			if (inputs[i].getAttribute("name") === name) {
+				return true;
+			}
+		}
+		return false;
+	}
+	function appendHidden(form, name, value) {
+		if (hasInputByName(form, name)) {
+			return;
+		}
+		var input = document.createElement("input");
+		input.type = "hidden";
+		input.name = name;
+		input.value = value;
+		form.insertBefore(input, form.firstChild);
+	}
+	function isSameOriginAction(form) {
+		var action = form.getAttribute("action");
+		if (!action) {
+			return true;
+		}
+		action = action.replace(/^\s+|\s+$/g, "");
+		if (!action || action.charAt(0) === "#" || action.charAt(0) === "?") {
+			return true;
+		}
+		if (action.indexOf("//") === 0 || /^[a-z][a-z0-9+.-]*:/i.test(action)) {
+			var link = document.createElement("a");
+			link.href = action.indexOf("//") === 0 ? window.location.protocol + action : action;
+			return link.protocol === window.location.protocol && link.host === window.location.host;
+		}
+		return true;
+	}
+	function appendActionToken(form, name, value) {
+		var action = form.getAttribute("action") || (window.location.pathname + window.location.search);
+		var hash = "";
+		var hashIndex = action.indexOf("#");
+		if (hashIndex > -1) {
+			hash = action.substring(hashIndex);
+			action = action.substring(0, hashIndex);
+		}
+		if (action.indexOf(encodeURIComponent(name) + "=") > -1 || action.indexOf(name + "=") > -1) {
+			return;
+		}
+		action += (action.indexOf("?") > -1 ? "&" : "?") + encodeURIComponent(name) + "=" + encodeURIComponent(value);
+		form.setAttribute("action", action + hash);
+	}
+	function isMultipart(form) {
+		var enctype = (form.getAttribute("enctype") || form.encoding || "").toLowerCase();
+		return enctype.indexOf("multipart/form-data") > -1;
+	}
+	function isUnsafeMethod(form) {
+		var method = (form.getAttribute("method") || "get").toLowerCase();
+		return method !== "get";
+	}
+	function applyCsrfToken(form) {
+		var sourceInput = findSourceInput("js-icms-csrf-token-source");
+		if (!sourceInput) {
+			return;
+		}
+		var tokenName = sourceInput.getAttribute("name");
+		var tokenValue = sourceInput.value;
+		if (!isSameOriginAction(form) || !isUnsafeMethod(form)) {
+			return;
+		}
+		appendHidden(form, tokenName, tokenValue);
+		if (isMultipart(form)) {
+			appendActionToken(form, tokenName, tokenValue);
+		}
+	}
+	window.icmsApplyCsrfToken = applyCsrfToken;
+	function addCsrfToken() {
+		var forms = document.getElementsByTagName("form");
+		for (var i = 0; i < forms.length; i++) {
+			applyCsrfToken(forms[i]);
+		}
+	}
+	if (document.readyState === "loading") {
+		document.addEventListener("DOMContentLoaded", addCsrfToken);
+	} else {
+		addCsrfToken();
+	}
+})();
+</script>
+
+
+<span class="js-csrf-token-source" style="display:none;"><input type='hidden' name='egovframework.double.submit.preventer.parameter.name' value='A016267E-FCCD-445F-BBA6-6723C5BA4C96'/></span>
+<script type="text/javascript">
+(function() {
+	function hasInputByName(form, name) {
+		var inputs = form.getElementsByTagName("input");
+		for (var i = 0; i < inputs.length; i++) {
+			if (inputs[i].getAttribute("name") === name) {
+				return true;
+			}
+		}
+		return false;
+	}
+	function appendHidden(form, name, value) {
+		if (hasInputByName(form, name)) {
+			return;
+		}
+		var input = document.createElement("input");
+		input.type = "hidden";
+		input.name = name;
+		input.value = value;
+		form.insertBefore(input, form.firstChild);
+	}
+	function isSameOriginAction(form) {
+		var action = form.getAttribute("action");
+		if (!action) {
+			return true;
+		}
+		action = action.replace(/^\s+|\s+$/g, "");
+		if (!action || action.charAt(0) === "#" || action.charAt(0) === "?") {
+			return true;
+		}
+		if (action.indexOf("//") === 0 || /^[a-z][a-z0-9+.-]*:/i.test(action)) {
+			var link = document.createElement("a");
+			link.href = action.indexOf("//") === 0 ? window.location.protocol + action : action;
+			return link.protocol === window.location.protocol && link.host === window.location.host;
+		}
+		return true;
+	}
+	function addCsrfTokens() {
+		var sources = document.getElementsByClassName ? document.getElementsByClassName("js-csrf-token-source") : [];
+		if (!sources.length) {
+			return;
+		}
+		var sourceInput = sources[0].getElementsByTagName("input")[0];
+		if (!sourceInput) {
+			return;
+		}
+		var tokenName = sourceInput.getAttribute("name");
+		var tokenValue = sourceInput.value;
+		var forms = document.getElementsByTagName("form");
+		for (var i = 0; i < forms.length; i++) {
+			var method = (forms[i].getAttribute("method") || "get").toLowerCase();
+			if (method === "post" && isSameOriginAction(forms[i])) {
+				appendHidden(forms[i], tokenName, tokenValue);
+				appendHidden(forms[i], "CSRFToken", tokenValue);
+			}
+		}
+	}
+	if (document.readyState === "loading") {
+		document.addEventListener("DOMContentLoaded", addCsrfTokens);
+	} else {
+		addCsrfTokens();
+	}
+})();
+</script>
+
+
+
+
+				<!-- 컨텐츠 -->
+				
+				
+
+
+
+
+
+
+
+
+
+
+
+				
+				
+				
+
+
+
+
+
+
+
+
+
+
+
+<span class="js-icms-csrf-token-source" style="display:none;"><input type="hidden" name="ICMS_CSRF_TOKEN" value="69a5ad6ef9009c13b09b4298f2ee1dc15c1761b3ba3dd8237e0650b3104ebf56" /></span>
+<script type="text/javascript">
+(function() {
+	function findSourceInput(className) {
+		var nodes = document.getElementsByClassName ? document.getElementsByClassName(className) : [];
+		if (!nodes.length) {
+			var spans = document.getElementsByTagName("span");
+			nodes = [];
+			for (var i = 0; i < spans.length; i++) {
+				if ((" " + spans[i].className + " ").indexOf(" " + className + " ") > -1) {
+					nodes[nodes.length] = spans[i];
+				}
+			}
+		}
+		return nodes.length ? nodes[0].getElementsByTagName("input")[0] : null;
+	}
+	function hasInputByName(form, name) {
+		var inputs = form.getElementsByTagName("input");
+		for (var i = 0; i < inputs.length; i++) {
+			if (inputs[i].getAttribute("name") === name) {
+				return true;
+			}
+		}
+		return false;
+	}
+	function appendHidden(form, name, value) {
+		if (hasInputByName(form, name)) {
+			return;
+		}
+		var input = document.createElement("input");
+		input.type = "hidden";
+		input.name = name;
+		input.value = value;
+		form.insertBefore(input, form.firstChild);
+	}
+	function isSameOriginAction(form) {
+		var action = form.getAttribute("action");
+		if (!action) {
+			return true;
+		}
+		action = action.replace(/^\s+|\s+$/g, "");
+		if (!action || action.charAt(0) === "#" || action.charAt(0) === "?") {
+			return true;
+		}
+		if (action.indexOf("//") === 0 || /^[a-z][a-z0-9+.-]*:/i.test(action)) {
+			var link = document.createElement("a");
+			link.href = action.indexOf("//") === 0 ? window.location.protocol + action : action;
+			return link.protocol === window.location.protocol && link.host === window.location.host;
+		}
+		return true;
+	}
+	function appendActionToken(form, name, value) {
+		var action = form.getAttribute("action") || (window.location.pathname + window.location.search);
+		var hash = "";
+		var hashIndex = action.indexOf("#");
+		if (hashIndex > -1) {
+			hash = action.substring(hashIndex);
+			action = action.substring(0, hashIndex);
+		}
+		if (action.indexOf(encodeURIComponent(name) + "=") > -1 || action.indexOf(name + "=") > -1) {
+			return;
+		}
+		action += (action.indexOf("?") > -1 ? "&" : "?") + encodeURIComponent(name) + "=" + encodeURIComponent(value);
+		form.setAttribute("action", action + hash);
+	}
+	function isMultipart(form) {
+		var enctype = (form.getAttribute("enctype") || form.encoding || "").toLowerCase();
+		return enctype.indexOf("multipart/form-data") > -1;
+	}
+	function isUnsafeMethod(form) {
+		var method = (form.getAttribute("method") || "get").toLowerCase();
+		return method !== "get";
+	}
+	function applyCsrfToken(form) {
+		var sourceInput = findSourceInput("js-icms-csrf-token-source");
+		if (!sourceInput) {
+			return;
+		}
+		var tokenName = sourceInput.getAttribute("name");
+		var tokenValue = sourceInput.value;
+		if (!isSameOriginAction(form) || !isUnsafeMethod(form)) {
+			return;
+		}
+		appendHidden(form, tokenName, tokenValue);
+		if (isMultipart(form)) {
+			appendActionToken(form, tokenName, tokenValue);
+		}
+	}
+	window.icmsApplyCsrfToken = applyCsrfToken;
+	function addCsrfToken() {
+		var forms = document.getElementsByTagName("form");
+		for (var i = 0; i < forms.length; i++) {
+			applyCsrfToken(forms[i]);
+		}
+	}
+	if (document.readyState === "loading") {
+		document.addEventListener("DOMContentLoaded", addCsrfToken);
+	} else {
+		addCsrfToken();
+	}
+})();
+</script>
+
+
+<span class="js-csrf-token-source" style="display:none;"><input type='hidden' name='egovframework.double.submit.preventer.parameter.name' value='A016267E-FCCD-445F-BBA6-6723C5BA4C96'/></span>
+<script type="text/javascript">
+(function() {
+	function hasInputByName(form, name) {
+		var inputs = form.getElementsByTagName("input");
+		for (var i = 0; i < inputs.length; i++) {
+			if (inputs[i].getAttribute("name") === name) {
+				return true;
+			}
+		}
+		return false;
+	}
+	function appendHidden(form, name, value) {
+		if (hasInputByName(form, name)) {
+			return;
+		}
+		var input = document.createElement("input");
+		input.type = "hidden";
+		input.name = name;
+		input.value = value;
+		form.insertBefore(input, form.firstChild);
+	}
+	function isSameOriginAction(form) {
+		var action = form.getAttribute("action");
+		if (!action) {
+			return true;
+		}
+		action = action.replace(/^\s+|\s+$/g, "");
+		if (!action || action.charAt(0) === "#" || action.charAt(0) === "?") {
+			return true;
+		}
+		if (action.indexOf("//") === 0 || /^[a-z][a-z0-9+.-]*:/i.test(action)) {
+			var link = document.createElement("a");
+			link.href = action.indexOf("//") === 0 ? window.location.protocol + action : action;
+			return link.protocol === window.location.protocol && link.host === window.location.host;
+		}
+		return true;
+	}
+	function addCsrfTokens() {
+		var sources = document.getElementsByClassName ? document.getElementsByClassName("js-csrf-token-source") : [];
+		if (!sources.length) {
+			return;
+		}
+		var sourceInput = sources[0].getElementsByTagName("input")[0];
+		if (!sourceInput) {
+			return;
+		}
+		var tokenName = sourceInput.getAttribute("name");
+		var tokenValue = sourceInput.value;
+		var forms = document.getElementsByTagName("form");
+		for (var i = 0; i < forms.length; i++) {
+			var method = (forms[i].getAttribute("method") || "get").toLowerCase();
+			if (method === "post" && isSameOriginAction(forms[i])) {
+				appendHidden(forms[i], tokenName, tokenValue);
+				appendHidden(forms[i], "CSRFToken", tokenValue);
+			}
+		}
+	}
+	if (document.readyState === "loading") {
+		document.addEventListener("DOMContentLoaded", addCsrfTokens);
+	} else {
+		addCsrfTokens();
+	}
+})();
+</script>
+
+<script type="text/javascript">
+function fn_list(pageNum){
+	var frm = document.getElementById("icmsTourVO");
+	frm.action ='/index.do?menu_id=00004080';
+	$("#pageIndex").val(pageNum);
+	frm.submit();
+}
+
+
+function fn_area(area){
+	var frm = document.getElementById("icmsTourVO");
+	frm.action ='/index.do?menu_id=00004080';
+	$("#pageIndex").val(1);
+	$("#searchCondition3").val(area);
+	frm.submit();
+}
+
+function fn_search_keyword(order,str){
+	var frm = document.getElementById("icmsTourVO");
+	frm.action ='/index.do?menu_id=00004080';
+	$("#pageIndex").val(1);
+	$("#view_keyword").val(str);
+	$("#searchCondition4").val(order);
+	frm.submit();
+}
+
+function fn_search_category2(order,str){
+	var frm = document.getElementById("icmsTourVO");
+	frm.action ='/index.do?menu_id=00004080';
+	$("#pageIndex").val(1);
+	$("#view_category2").val(str);
+	$("#searchCondition4").val(order);
+	frm.submit();
+}
+
+
+function fn_view(tourId){
+	var frm = document.getElementById("icmsTourVO");
+	$("#tourId").val(tourId);
+	frm.action ='/index.do?menu_id=00004080&menu_link=/front/tour/tourMapsView.do';
+	frm.submit();
+}
+var menu_id = '00004080';
+
+function fn_select_tour(order){
+	$("#searchCondition").val(order);
+	$("#searchKeyword").val("");
+	$("#distance").val("");
+	
+	fn_list(1);
+}
+</script>
+
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+
+<form id="icmsTourVO" action="/index.do;jsessionid=CA393064691A35EB173CF3E2148A641C.tomcat_2?menu_id=00004080&amp;servletPath=%2Findex.do" method="post">
+	<input id="tourId" name="tourId" type="hidden" value=""/>
+	<input id="pageIndex" name="pageIndex" type="hidden" value="1"/>
+	<input id="searchCondition2" name="searchCondition2" value="1" type="hidden" value=""/>
+	<input id="searchCondition3" name="searchCondition3" type="hidden" value=""/>
+	<input id="searchCondition4" name="searchCondition4" type="hidden" value=""/>
+	<input id="view_keyword" name="view_keyword" type="hidden" value=""/>
+	<input id="view_category2" name="view_category2" type="hidden" value=""/>
+	<input id="keyword" name="keyword" type="hidden" value=""/>
+	
+	
+	
+
+		
+
+
+
+
+
+
+
+
+
+
+
+<span class="js-icms-csrf-token-source" style="display:none;"><input type="hidden" name="ICMS_CSRF_TOKEN" value="69a5ad6ef9009c13b09b4298f2ee1dc15c1761b3ba3dd8237e0650b3104ebf56" /></span>
+<script type="text/javascript">
+(function() {
+	function findSourceInput(className) {
+		var nodes = document.getElementsByClassName ? document.getElementsByClassName(className) : [];
+		if (!nodes.length) {
+			var spans = document.getElementsByTagName("span");
+			nodes = [];
+			for (var i = 0; i < spans.length; i++) {
+				if ((" " + spans[i].className + " ").indexOf(" " + className + " ") > -1) {
+					nodes[nodes.length] = spans[i];
+				}
+			}
+		}
+		return nodes.length ? nodes[0].getElementsByTagName("input")[0] : null;
+	}
+	function hasInputByName(form, name) {
+		var inputs = form.getElementsByTagName("input");
+		for (var i = 0; i < inputs.length; i++) {
+			if (inputs[i].getAttribute("name") === name) {
+				return true;
+			}
+		}
+		return false;
+	}
+	function appendHidden(form, name, value) {
+		if (hasInputByName(form, name)) {
+			return;
+		}
+		var input = document.createElement("input");
+		input.type = "hidden";
+		input.name = name;
+		input.value = value;
+		form.insertBefore(input, form.firstChild);
+	}
+	function isSameOriginAction(form) {
+		var action = form.getAttribute("action");
+		if (!action) {
+			return true;
+		}
+		action = action.replace(/^\s+|\s+$/g, "");
+		if (!action || action.charAt(0) === "#" || action.charAt(0) === "?") {
+			return true;
+		}
+		if (action.indexOf("//") === 0 || /^[a-z][a-z0-9+.-]*:/i.test(action)) {
+			var link = document.createElement("a");
+			link.href = action.indexOf("//") === 0 ? window.location.protocol + action : action;
+			return link.protocol === window.location.protocol && link.host === window.location.host;
+		}
+		return true;
+	}
+	function appendActionToken(form, name, value) {
+		var action = form.getAttribute("action") || (window.location.pathname + window.location.search);
+		var hash = "";
+		var hashIndex = action.indexOf("#");
+		if (hashIndex > -1) {
+			hash = action.substring(hashIndex);
+			action = action.substring(0, hashIndex);
+		}
+		if (action.indexOf(encodeURIComponent(name) + "=") > -1 || action.indexOf(name + "=") > -1) {
+			return;
+		}
+		action += (action.indexOf("?") > -1 ? "&" : "?") + encodeURIComponent(name) + "=" + encodeURIComponent(value);
+		form.setAttribute("action", action + hash);
+	}
+	function isMultipart(form) {
+		var enctype = (form.getAttribute("enctype") || form.encoding || "").toLowerCase();
+		return enctype.indexOf("multipart/form-data") > -1;
+	}
+	function isUnsafeMethod(form) {
+		var method = (form.getAttribute("method") || "get").toLowerCase();
+		return method !== "get";
+	}
+	function applyCsrfToken(form) {
+		var sourceInput = findSourceInput("js-icms-csrf-token-source");
+		if (!sourceInput) {
+			return;
+		}
+		var tokenName = sourceInput.getAttribute("name");
+		var tokenValue = sourceInput.value;
+		if (!isSameOriginAction(form) || !isUnsafeMethod(form)) {
+			return;
+		}
+		appendHidden(form, tokenName, tokenValue);
+		if (isMultipart(form)) {
+			appendActionToken(form, tokenName, tokenValue);
+		}
+	}
+	window.icmsApplyCsrfToken = applyCsrfToken;
+	function addCsrfToken() {
+		var forms = document.getElementsByTagName("form");
+		for (var i = 0; i < forms.length; i++) {
+			applyCsrfToken(forms[i]);
+		}
+	}
+	if (document.readyState === "loading") {
+		document.addEventListener("DOMContentLoaded", addCsrfToken);
+	} else {
+		addCsrfToken();
+	}
+})();
+</script>
+
+
+<span class="js-csrf-token-source" style="display:none;"><input type='hidden' name='egovframework.double.submit.preventer.parameter.name' value='A016267E-FCCD-445F-BBA6-6723C5BA4C96'/></span>
+<script type="text/javascript">
+(function() {
+	function hasInputByName(form, name) {
+		var inputs = form.getElementsByTagName("input");
+		for (var i = 0; i < inputs.length; i++) {
+			if (inputs[i].getAttribute("name") === name) {
+				return true;
+			}
+		}
+		return false;
+	}
+	function appendHidden(form, name, value) {
+		if (hasInputByName(form, name)) {
+			return;
+		}
+		var input = document.createElement("input");
+		input.type = "hidden";
+		input.name = name;
+		input.value = value;
+		form.insertBefore(input, form.firstChild);
+	}
+	function isSameOriginAction(form) {
+		var action = form.getAttribute("action");
+		if (!action) {
+			return true;
+		}
+		action = action.replace(/^\s+|\s+$/g, "");
+		if (!action || action.charAt(0) === "#" || action.charAt(0) === "?") {
+			return true;
+		}
+		if (action.indexOf("//") === 0 || /^[a-z][a-z0-9+.-]*:/i.test(action)) {
+			var link = document.createElement("a");
+			link.href = action.indexOf("//") === 0 ? window.location.protocol + action : action;
+			return link.protocol === window.location.protocol && link.host === window.location.host;
+		}
+		return true;
+	}
+	function addCsrfTokens() {
+		var sources = document.getElementsByClassName ? document.getElementsByClassName("js-csrf-token-source") : [];
+		if (!sources.length) {
+			return;
+		}
+		var sourceInput = sources[0].getElementsByTagName("input")[0];
+		if (!sourceInput) {
+			return;
+		}
+		var tokenName = sourceInput.getAttribute("name");
+		var tokenValue = sourceInput.value;
+		var forms = document.getElementsByTagName("form");
+		for (var i = 0; i < forms.length; i++) {
+			var method = (forms[i].getAttribute("method") || "get").toLowerCase();
+			if (method === "post" && isSameOriginAction(forms[i])) {
+				appendHidden(forms[i], tokenName, tokenValue);
+				appendHidden(forms[i], "CSRFToken", tokenValue);
+			}
+		}
+	}
+	if (document.readyState === "loading") {
+		document.addEventListener("DOMContentLoaded", addCsrfTokens);
+	} else {
+		addCsrfTokens();
+	}
+})();
+</script>
+
+
+
+
+	
+	
+
+	
+	
+
+	
+	
+
+	
+	
+
+	
+	
+
+
+
+
+
+
+
+
+
+
+
+
+		<div class="searform_pos">			
+			<input id="searchKeyword" name="searchKeyword" class="serinput" title="검색어" placeholder="검색어를 입력해주세요" type="text" value=""/>
+			<button type="submit" class="serbtn"name="button"><img src="/cmsh/tour.daegu.go.kr/images/img/front/serch.jpg" alt="검색" /></button>
+		</div>
+		<div class="tabInWrap">
+			<h3 class="tabIn tab_som" id="on2"><a href="#" class="on2_tabsom"><span style="position:absolute; top:-9999em;">썸네일형 보기</span></a></h3>
+			<h3 class="tabIn tab_li"><a href="#" class="on2_tabli"><span style="position:absolute; top:-9999em;">리스트형 보기</span></a></h3>
+		</div>	
+		<br>
+		<div class="areaIn area_som" data-tab-type="on2_tabsom" style="display: block;">
+			
+				
+				<div class="ch_box_list_nav hotellist_nav">
+					<div class="imghover_box hotelimg_hov">
+						<a href="javascript:;" onclick="fn_view('tour_00004653');">
+							<img src="/icms/tour/file/getImage.do?atchFileId=TOURFILE_000001050" alt="안심창조밸리" onError="this.src='/cms_images/bbs/noimages.jpg'" />
+						</a>
+						<div class="hover_disp">
+							<a href="#this">안심창조밸리</a>
+							<span>+</span>
+						</div>
+					</div>
+
+					<a href="javascript:;" onclick="fn_view('tour_00004653');" class="sub_box_title_nav">안심창조밸리</a>
+					
+					<div class="black_line_sun"></div>
+					<p class="black_line_ct">금호강과 연근재배단지 일원을 친환경      생태문화공간으로 조성      테마거리·금강역·금강동행복마을·점새늪·      가남지, 연갤러리, 연꽃생태공원 등      안심창조밸리 연꽃 마을 축제(8월 경)      연근쿠키, 연근부침개 등 로컬푸드 </p>
+					<div class="adress_color1">
+						<span class="color-t">문의처</span>
+						<span class="adress1"></span>
+					</div>
+					<div class="adress_color">
+						<span class="color-a">주소</span>
+						<span class="adress">대구광역시 동구 금강로 153</span>
+					</div>
+					
+				</div>
+			
+				
+				<div class="ch_box_list_nav hotellist_nav">
+					<div class="imghover_box hotelimg_hov">
+						<a href="javascript:;" onclick="fn_view('tour_00004652');">
+							<img src="/icms/tour/file/getImage.do?atchFileId=TOURFILE_000001038" alt="불로전통시장" onError="this.src='/cms_images/bbs/noimages.jpg'" />
+						</a>
+						<div class="hover_disp">
+							<a href="#this">불로전통시장</a>
+							<span>+</span>
+						</div>
+					</div>
+
+					<a href="javascript:;" onclick="fn_view('tour_00004652');" class="sub_box_title_nav">불로전통시장</a>
+					
+					<div class="black_line_sun"></div>
+					<p class="black_line_ct">대구의 전통시장으로 약 130개 점포 보유       5일장(장날 5일, 10일)      시장 내 어울림 소극장      (버스킹, 각설이 공연 등)</p>
+					<div class="adress_color1">
+						<span class="color-t">문의처</span>
+						<span class="adress1"></span>
+					</div>
+					<div class="adress_color">
+						<span class="color-a">주소</span>
+						<span class="adress">대구광역시 동구 팔공로26길 9-1</span>
+					</div>
+					
+				</div>
+			
+				
+				<div class="ch_box_list_nav hotellist_nav">
+					<div class="imghover_box hotelimg_hov">
+						<a href="javascript:;" onclick="fn_view('tour_00004650');">
+							<img src="/icms/tour/file/getImage.do?atchFileId=TOURFILE_000001031" alt="롯데아웃렛" onError="this.src='/cms_images/bbs/noimages.jpg'" />
+						</a>
+						<div class="hover_disp">
+							<a href="#this">롯데아웃렛</a>
+							<span>+</span>
+						</div>
+					</div>
+
+					<a href="javascript:;" onclick="fn_view('tour_00004650');" class="sub_box_title_nav">롯데아웃렛</a>
+					
+					<div class="black_line_sun"></div>
+					<p class="black_line_ct">.</p>
+					<div class="adress_color1">
+						<span class="color-t">문의처</span>
+						<span class="adress1">053-945-2500</span>
+					</div>
+					<div class="adress_color">
+						<span class="color-a">주소</span>
+						<span class="adress">대구광역시 동구 팔공로49길 16</span>
+					</div>
+					
+						<div class="adress_color">
+							<span class="color-a" style="background-color: #c83e8f;" >홈페이지</span>
+							<span class="adress"><a href="https://www.lotteshopping.com/branchShopGuide/floorGuideSub?cstr=0338"  target="_blank" title="새 창">https://www.lotteshopping.com/branchShopGuide/floorGuideSub?cstr=0338</a></span>
+						</div>
+					
+				</div>
+			
+				
+				<div class="ch_box_list_nav hotellist_nav">
+					<div class="imghover_box hotelimg_hov">
+						<a href="javascript:;" onclick="fn_view('tour_00004660');">
+							<img src="/icms/tour/file/getImage.do?atchFileId=TOURFILE_000001027" alt="현대시티아울렛" onError="this.src='/cms_images/bbs/noimages.jpg'" />
+						</a>
+						<div class="hover_disp">
+							<a href="#this">현대시티아울렛</a>
+							<span>+</span>
+						</div>
+					</div>
+
+					<a href="javascript:;" onclick="fn_view('tour_00004660');" class="sub_box_title_nav">현대시티아울렛</a>
+					
+					<div class="black_line_sun"></div>
+					<p class="black_line_ct">.</p>
+					<div class="adress_color1">
+						<span class="color-t">문의처</span>
+						<span class="adress1">053-430-2233</span>
+					</div>
+					<div class="adress_color">
+						<span class="color-a">주소</span>
+						<span class="adress">대구광역시 동구 동대구로 454</span>
+					</div>
+					
+				</div>
+			
+				
+				<div class="ch_box_list_nav hotellist_nav">
+					<div class="imghover_box hotelimg_hov">
+						<a href="javascript:;" onclick="fn_view('tour_00004661');">
+							<img src="/icms/tour/file/getImage.do?atchFileId=TOURFILE_000001029" alt="신천4동 카페골목" onError="this.src='/cms_images/bbs/noimages.jpg'" />
+						</a>
+						<div class="hover_disp">
+							<a href="#this">신천4동 카페골목</a>
+							<span>+</span>
+						</div>
+					</div>
+
+					<a href="javascript:;" onclick="fn_view('tour_00004661');" class="sub_box_title_nav">신천4동 카페골목</a>
+					
+					<div class="black_line_sun"></div>
+					<p class="black_line_ct">KEEP ON, Wit bakery, 사파키친,      피어나 플라워카페, 커피집, 재이의 비밀정원,      인문공학, our hours, 샤이라멘 등      카페가 모여 있는 골목동대구역, 신세계백화점 맞은 편 골목에 다양한 카페들이 밀집되어 있어 접근성이 용이함</p>
+					<div class="adress_color1">
+						<span class="color-t">문의처</span>
+						<span class="adress1"></span>
+					</div>
+					<div class="adress_color">
+						<span class="color-a">주소</span>
+						<span class="adress">대구광역시 동구 동부로34길 2</span>
+					</div>
+					
+				</div>
+			
+				
+				<div class="ch_box_list_nav hotellist_nav">
+					<div class="imghover_box hotelimg_hov">
+						<a href="javascript:;" onclick="fn_view('tour_00004662');">
+							<img src="/icms/tour/file/getImage.do?atchFileId=TOURFILE_000001042" alt="평화시장(닭똥집 골목)" onError="this.src='/cms_images/bbs/noimages.jpg'" />
+						</a>
+						<div class="hover_disp">
+							<a href="#this">평화시장(닭똥집 골목)</a>
+							<span>+</span>
+						</div>
+					</div>
+
+					<a href="javascript:;" onclick="fn_view('tour_00004662');" class="sub_box_title_nav">평화시장(닭똥집 골목)</a>
+					
+					<div class="black_line_sun"></div>
+					<p class="black_line_ct">40년 전통의 특화거리로 특화된 닭똥집      단일메뉴 개발 판매 등 닭요리 전문 골목      평화시장 닭똥집골목 명품테마로드(3.6.5      날마다 치맥축제 문화가 있는 테마골목)      조성 예정</p>
+					<div class="adress_color1">
+						<span class="color-t">문의처</span>
+						<span class="adress1"></span>
+					</div>
+					<div class="adress_color">
+						<span class="color-a">주소</span>
+						<span class="adress">대구광역시 동구 아양로9길 10</span>
+					</div>
+					
+				</div>
+			
+				
+				<div class="ch_box_list_nav hotellist_nav">
+					<div class="imghover_box hotelimg_hov">
+						<a href="javascript:;" onclick="fn_view('tour_00004651');">
+							<img src="/icms/tour/file/getImage.do?atchFileId=TOURFILE_000001034" alt="방촌시장" onError="this.src='/cms_images/bbs/noimages.jpg'" />
+						</a>
+						<div class="hover_disp">
+							<a href="#this">방촌시장</a>
+							<span>+</span>
+						</div>
+					</div>
+
+					<a href="javascript:;" onclick="fn_view('tour_00004651');" class="sub_box_title_nav">방촌시장</a>
+					
+					<div class="black_line_sun"></div>
+					<p class="black_line_ct">대구의 소형 전통시장 원조 떡볶이와 한우 국밥이 유명하고, 특히 덕볶이의 경우 ‘방떡’으로 불리우며 방송 등에 출연. 반찬, 생선, 건어물, 모종, 한우, 국밥, 떡볶이, 꼬지 등 다양한 음식</p>
+					<div class="adress_color1">
+						<span class="color-t">문의처</span>
+						<span class="adress1"></span>
+					</div>
+					<div class="adress_color">
+						<span class="color-a">주소</span>
+						<span class="adress">대구광역시 동구 동촌로46길 2</span>
+					</div>
+					
+				</div>
+			
+				
+				<div class="ch_box_list_nav hotellist_nav">
+					<div class="imghover_box hotelimg_hov">
+						<a href="javascript:;" onclick="fn_view('tour_00004551');">
+							<img src="/icms/tour/file/getImage.do?atchFileId=TOURFILE_000000745" alt="서부 오미가미거리" onError="this.src='/cms_images/bbs/noimages.jpg'" />
+						</a>
+						<div class="hover_disp">
+							<a href="#this">서부 오미가미거리</a>
+							<span>+</span>
+						</div>
+					</div>
+
+					<a href="javascript:;" onclick="fn_view('tour_00004551');" class="sub_box_title_nav">서부 오미가미거리</a>
+					
+					<div class="black_line_sun"></div>
+					<p class="black_line_ct">&#039;오미가미&#039;는 &#039;오고 가면서 맛을 느낀다&#039;는 뜻으로, 경상도 특유의 사투리를 딴 이름이재미있는 먹거리골목이다. 2015년 5월 전국 최초로 지역 외식 프랜차이즈와 전통시장을 접목한 프랜차이즈 특화거리로 다양한 국적의 음식과 더불어 독특한 메뉴들도 함께즐길 수 있다. 열정 가득한 청년 마켓 그리고 현대화사업으로 깔끔해진 전통시장까지먹거리 발걸음을 유혹하고 있으며 이색포토존과 재미있는 트릭아트까지 볼거리 또한넘치는 곳이다.</p>
+					<div class="adress_color1">
+						<span class="color-t">문의처</span>
+						<span class="adress1">053-663-2643</span>
+					</div>
+					<div class="adress_color">
+						<span class="color-a">주소</span>
+						<span class="adress">대구광역시 서구 국채보상로75길 25-1</span>
+					</div>
+					
+						<div class="adress_color">
+							<span class="color-a" style="background-color: #c83e8f;" >홈페이지</span>
+							<span class="adress"><a href="https://www.dgs.go.kr/tour/contents.do?mid=0201000000"  target="_blank" title="새 창">https://www.dgs.go.kr/tour/contents.do?mid=0201000000</a></span>
+						</div>
+					
+				</div>
+			
+				
+				<div class="ch_box_list_nav hotellist_nav">
+					<div class="imghover_box hotelimg_hov">
+						<a href="javascript:;" onclick="fn_view('tour_00004540');">
+							<img src="/icms/tour/file/getImage.do?atchFileId=TOURFILE_000000613" alt="동성로" onError="this.src='/cms_images/bbs/noimages.jpg'" />
+						</a>
+						<div class="hover_disp">
+							<a href="#this">동성로</a>
+							<span>+</span>
+						</div>
+					</div>
+
+					<a href="javascript:;" onclick="fn_view('tour_00004540');" class="sub_box_title_nav">동성로</a>
+					
+					<div class="black_line_sun"></div>
+					<p class="black_line_ct">‘젊음과 패션의 거리’ 동성로는 대구의 도심 한복판에 위치하고 있으며, 최신 유행의 의류와 화장품, 주얼리, 악세서리 등을 판매하는 다양한 상점이 즐비하고 볼거리, 먹을거리, 즐길 거리가 많아서, 서울의 명동에 견줄 만한 대구의 대표적인 쇼핑 거리라 할 수 있다. </p>
+					<div class="adress_color1">
+						<span class="color-t">문의처</span>
+						<span class="adress1"></span>
+					</div>
+					<div class="adress_color">
+						<span class="color-a">주소</span>
+						<span class="adress">대구광역시 중구 동성로3가 56-3</span>
+					</div>
+					
+				</div>
+			
+			<div class="pagination">
+				<div class="normal_pagination"><a href="?pageIndex=1" class="page_prevend" onclick="fn_list(1,'');return false; "><span>처음</span></a>&#160;<a href="?pageIndex=1" class="page_prev" onclick="fn_list(1,'');return false; "><span>이전</span></a>&#160;<strong>1</strong>&#160;<a href="?pageIndex=2" onclick="fn_list(2,'');return false; ">2</a>&#160;<a href="?pageIndex=3" onclick="fn_list(3,'');return false; ">3</a>&#160;<a href="?pageIndex=3" class="page_next" onclick="fn_list(3,'');return false; "><span>다음</span></a>&#160;<a href="?pageIndex=3" class="page_nextend" onclick="fn_list(3,'');return false; "><span>마지막</span></a>&#160;</div><div class="mobile_pagination"><a href="?pageIndex=1" class="page_prevend" onclick="fn_list(1,'');return false; "><span>처음</span></a>&#160;<a href="?pageIndex=1" class="page_prev" onclick="fn_list(1,'');return false; "><span>이전</span></a>&#160;<strong>1</strong>&#160;<a href="?pageIndex=2" onclick="fn_list(2,'');return false; ">2</a>&#160;<a href="?pageIndex=3" onclick="fn_list(3,'');return false; ">3</a>&#160;<a href="?pageIndex=3" class="page_next" onclick="fn_list(3,'');return false; "><span>다음</span></a>&#160;<a href="?pageIndex=3" class="page_nextend" onclick="fn_list(3,'');return false; "><span>마지막</span></a>&#160;</div>
+
+			</div>
+		</div>
+	</div>
+</form>
+				
+				
+				
+
+
+
+
+
+
+
+
+
+
+
+				
+				<!-- // 컨텐츠 -->
+			</div>
+			<!--서브컨텐츠끝-->
+		</div>
+		<div class="quickFix">
+			<ul>
+				<li><a href="http://blog.naver.com/daeguvisit" target="_blank" title="새창열기">
+					<span class="qF_txt">공식블로그</span>
+					<span class="qF_img">
+				<img src="/cmsh/tour.daegu.go.kr/images/img/front/sub/qF1.png" alt="공식블로그"/></span></a></li>
+				<li><a href="/index.do?menu_id=00002951">
+					<span class="qF_txt">관광안내소</span>
+					<span class="qF_img">
+				<img src="/cmsh/tour.daegu.go.kr/images/img/front/sub/qF2.png" alt="관광안내소"/></span></a></li>
+				<li><a href="/index.do?menu_id=00002952">
+					<span class="qF_txt">문화관광해설사</span>
+					<span class="qF_img">
+				<img src="/cmsh/tour.daegu.go.kr/images/img/front/sub/qF3.png" alt="문화관광해설사"/></span></a></li>
+				<li><a href="/index.do?menu_id=00002966">
+					<span class="qF_txt">관광안내1330</span>
+					<span class="qF_img">
+				<img src="/cmsh/tour.daegu.go.kr/images/img/front/sub/qF4.png" alt="관광안내1330"/></span></a></li>
+				<li class="goTop"><a href="javascript:window.scrollTo(0,0)" title="상단으로">↑</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+<script type="text/javascript">
+	window.onload = function () {
+		setTab('s1_8tab', 's1_8area', 9);
+	}
+</script>
+<script>
+$(document).ready(function(){
+	$('#btn_first').on('click', function(e){
+		e.preventDefault();
+		fn_first();
+	});
+	$('#rowSize').change(function(e){
+		e.preventDefault();
+		fn_rowSize($('#rowSize option:selected').val());
+	});
+	if('A' == null || 'A' == 'ALL' ){
+		$('#s1_8tab1').attr("class","On");
+	}else if('A' == 'A'){
+		$('#s1_8tab2').attr("class","On");
+	}else if('A' == 'B'){
+		$('#s1_8tab3').attr("class","On");
+	}else if('A' == 'C'){
+		$('#s1_8tab4').attr("class","On");
+	}else if('A' == 'D'){
+		$('#s1_8tab5').attr("class","On");
+	}else if('A' == 'E'){
+		$('#s1_8tab6').attr("class","On");
+	}else if('A' == 'F'){
+		$('#s1_8tab7').attr("class","On");
+	}else if('A' == 'G'){
+		$('#s1_8tab8').attr("class","On");
+	}else if('A' == 'H'){
+		$('#s1_8tab9').attr("class","On");
+	}
+	if(1 != '1'){
+		$('.tab_som').attr("id","");
+		$('.tab_li').attr("id","on2");
+		$('.tabIn tab_som').attr("class","tabIn tab_som");
+		$('.area_som').css("display","none");
+		$('.li_som').css("display","block");
+	}
+	//탭 활성화 표시
+	$("#s1_8tab_area h2 a").attr("title","비활성");
+	$("#s1_8tab_area h2.On a").attr("title","활성");
+});
+function fn_first(){
+	var comSubmit = new ComSubmit('frm');
+	var IDX = 49;
+	var seIDX = 23;
+	var grIDX = 4;
+	var gubun = 'A';
+	var tab = $('.tab_som').attr("id");
+	$('#page').val(1);
+	if(tab == 'on2'){
+		comSubmit.setUrl("/kor/attractList.do?BRD_ID=attract&SUB=2&IDX="+IDX+"&seIDX="+seIDX+"&grIDX="+grIDX+"&gubun="+gubun);
+	}else{
+		comSubmit.setUrl("/kor/attractList.do?BRD_ID=attract&SUB=2&IDX="+IDX+"&seIDX="+seIDX+"&grIDX="+grIDX+"&gubun="+gubun+"&TAB=2");
+	}
+	comSubmit.addParam("BRD_ID", "attract");
+	comSubmit.submit();
+}
+function fn_before(page){
+	var comSubmit = new ComSubmit('frm');
+	var IDX = 49;
+	var seIDX = 23;
+	var grIDX = 4;
+	var gubun = 'A';
+	var tab = $('.tab_som').attr("id");
+	$('#page').val(page);
+	if(tab == 'on2'){
+		comSubmit.setUrl("/kor/attractList.do?BRD_ID=attract&SUB=2&IDX="+IDX+"&seIDX="+seIDX+"&grIDX="+grIDX+"&gubun="+gubun);
+	}else{
+		comSubmit.setUrl("/kor/attractList.do?BRD_ID=attract&SUB=2&IDX="+IDX+"&seIDX="+seIDX+"&grIDX="+grIDX+"&gubun="+gubun+"&TAB=2");
+	}
+	comSubmit.addParam("BRD_ID", "attract");
+	comSubmit.submit();
+}
+function fn_goPage(page){
+	var comSubmit = new ComSubmit('frm');
+	var IDX = 49;
+	var seIDX = 23;
+	var grIDX = 4;
+	var gubun = 'A';
+	var tab = $('.tab_som').attr("id");
+	$('#page').val(page);
+	if(tab == 'on2'){
+		comSubmit.setUrl("/kor/attractList.do?BRD_ID=attract&SUB=2&IDX="+IDX+"&seIDX="+seIDX+"&grIDX="+grIDX+"&gubun="+gubun);
+	}else{
+		comSubmit.setUrl("/kor/attractList.do?BRD_ID=attract&SUB=2&IDX="+IDX+"&seIDX="+seIDX+"&grIDX="+grIDX+"&gubun="+gubun+"&TAB=2");
+	}
+	comSubmit.addParam("BRD_ID", "attract");
+	comSubmit.submit();
+}
+function fn_goPage5(){
+	var comSubmit = new ComSubmit('frm');
+	var IDX = 49;
+	var seIDX = 23;
+	var grIDX = 4;
+	var gubun = 'A';
+	var tab = $('.tab_som').attr("id");
+	var page = document.getElementById('pagesearch').value;
+	$('#page').val(page);
+	if(tab == 'on2'){
+		comSubmit.setUrl("/kor/attractList.do?BRD_ID=attract&SUB=2&IDX="+IDX+"&seIDX="+seIDX+"&grIDX="+grIDX+"&gubun="+gubun);
+	}else{
+		comSubmit.setUrl("/kor/attractList.do?BRD_ID=attract&SUB=2&IDX="+IDX+"&seIDX="+seIDX+"&grIDX="+grIDX+"&gubun="+gubun+"&TAB=2");
+	}
+	comSubmit.addParam("BRD_ID", "attract");
+	comSubmit.submit();
+}
+function fn_next(page){
+	var comSubmit = new ComSubmit('frm');
+	var IDX = 49;
+	var seIDX = 23;
+	var grIDX = 4;
+	var gubun = 'A';
+	var tab = $('.tab_som').attr("id");
+	$('#page').val(page);
+	if(tab == 'on2'){
+		comSubmit.setUrl("/kor/attractList.do?BRD_ID=attract&SUB=2&IDX="+IDX+"&seIDX="+seIDX+"&grIDX="+grIDX+"&gubun="+gubun);
+	}else{
+		comSubmit.setUrl("/kor/attractList.do?BRD_ID=attract&SUB=2&IDX="+IDX+"&seIDX="+seIDX+"&grIDX="+grIDX+"&gubun="+gubun+"&TAB=2");
+	}
+	comSubmit.addParam("BRD_ID", "attract");
+	comSubmit.submit();
+}
+function fn_end(page){
+	var comSubmit = new ComSubmit('frm');
+	var IDX = 49;
+	var seIDX = 23;
+	var grIDX = 4;
+	var gubun = 'A';
+	var tab = $('.tab_som').attr("id");
+	$('#page').val(page);
+	if(tab == 'on2'){
+		comSubmit.setUrl("/kor/attractList.do?BRD_ID=attract&SUB=2&IDX="+IDX+"&seIDX="+seIDX+"&grIDX="+grIDX+"&gubun="+gubun);
+	}else{
+		comSubmit.setUrl("/kor/attractList.do?BRD_ID=attract&SUB=2&IDX="+IDX+"&seIDX="+seIDX+"&grIDX="+grIDX+"&gubun="+gubun+"&TAB=2");
+	}
+	comSubmit.addParam("BRD_ID", "attract");
+	comSubmit.submit();
+}
+function fn_rowSize(rowSize){
+	var comSubmit = new ComSubmit('frm');
+	var IDX = 49;
+	var seIDX = 23;
+	var grIDX = 4;
+	var gubun = 'A';
+	var tab = $('.tab_som').attr("id");
+	$('#page').val(1);
+	$('#rowSize').val(rowSize);
+	if(tab == 'on2'){
+		comSubmit.setUrl("/kor/attractList.do?BRD_ID=attract&SUB=2&IDX="+IDX+"&seIDX="+seIDX+"&grIDX="+grIDX+"&gubun="+gubun);
+	}else{
+		comSubmit.setUrl("/kor/attractList.do?BRD_ID=attract&SUB=2&IDX="+IDX+"&seIDX="+seIDX+"&grIDX="+grIDX+"&gubun="+gubun+"&TAB=2");
+	}
+	comSubmit.addParam("BRD_ID", "attract");
+	comSubmit.submit();
+}
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="footer_Wrap">
+	<div class="footer_TopWrap">
+		<div class="footer_T1box">
+			<ul class="footer_T1">
+				<li><a href="/index.do?menu_id=00002991">개인정보처리방침</a></li>
+				<li><a href="/index.do?menu_id=00002992">행정서비스헌장</a></li>
+				<li><a href="/index.do?menu_id=00002993" class="site_mapout">사이트맵</a></li>
+			</ul>
+			<ul class="footer_T2">
+				<li class="footer_select footerC2"><a href="#this">관련사이트</a>
+					<ul class="selectF_down footerD2">
+						<li><a href="http://www.daegu.go.kr" class="select_url" target="_blank" title="새창열기">대구시청</a></li>
+						<li><a href="http://www.mcst.go.kr/main.jsp" class="select_url" target="_blank" title="새창열기">문화체육관광부</a></li>
+						<li><a href="http://www.daegutravel.or.kr/" class="select_url" target="_blank" title="새창열기">대구광역시관광협회</a></li>
+						<li><a href="http://www.daegutour.or.kr/" class="select_url" target="_blank" title="새창열기">대구관광정보센터</a></li>
+						<li><a href="http://www.daeguartmuseum.org/main/index.html" class="select_url" target="_blank" title="새창열기">대구미술관</a></li>
+						<li><a href="http://eng.templestay.com/" class="select_url" target="_blank" title="새창열기">템플스테이</a></li>
+						<li><a href="http://www.tour.go.kr/" class="select_url" target="_blank" title="새창열기">관광지식정보시스템</a></li>
+						<li><a href="http://www.patakorea.org/" class="select_url" target="_blank" title="새창열기">한국관광협회중앙회</a></li>
+						<li><a href="http://www.juso.go.kr/openIndexPage.do" class="select_url" target="_blank" title="새창열기">도로명주소안내시스템</a></li>
+						<li><a href="http://www.daegucvb.com/mice/main/" class="select_url" target="_blank" title="새창열기">대구컨벤션관광뷰로</a></li>
+						<li><a href="http://kto.visitkorea.or.kr/kor.kto" class="select_url" target="_blank" title="새창열기">한국관광공사</a></li>
+						<li><a href="http://www.wheeltour.or.kr/" class="select_url" target="_blank" title="새창열기">장애인관광</a></li>
+						<li><a href="http://www.dtro.or.kr/" class="select_url" target="_blank" title="새창열기">대구도시철도공사</a></li>
+						<li><a href="http://korean.visitkorea.or.kr/kor/bz15/addOn/main/publish/index.jsp" class="select_url" target="_blank" title="새창열기">대한민국구석구석 </a></li>
+						<li><a href="http://www.dgfc.or.kr" class="select_url" target="_blank" title="새창열기">대구문화예술진흥원</a></li>
+						<li><a href="https://daeguartscenter.or.kr/" class="select_url" target="_blank" title="새창열기">대구문화예술회관</a></li>
+					</ul>
+				</li>
+			</ul>
+			<ul class="footer_T2 footer_T2_last">
+				<li class="footer_select footerC1"><a href="#this">기관사이트</a>
+					<ul class="selectF_down footerD1">
+						<li><a href="http://gu.jung.daegu.kr/new/culture/pages/main/" class="select_url" target="_blank" title="새창열기">중구문화관광</a></li>
+						<li><a href="http://www.dong.daegu.kr/main/page.htm?mnu_siteid=dongu_k&amp;mnu_uid=52" class="select_url" target="_blank" title="새창열기">동구문화관광</a></li>
+						<li><a href="http://www.dgs.go.kr/tour/" class="select_url" target="_blank" title="새창열기">서구문화관광</a></li>
+						<li><a href="https://nam.daegu.kr/tour/index.do" class="select_url" target="_blank" title="새창열기">남구문화관광</a></li>
+						<li><a href="http://www.buk.daegu.kr/tour/index.do" class="select_url" target="_blank" title="새창열기">북구문화관광</a></li>
+						<li><a href="http://www.suseong.kr/" class="select_url" target="_blank" title="새창열기">수성구문화관광</a></li>
+						<li><a href="https://dalseo.daegu.kr/tour/index.do" class="select_url" target="_blank" title="새창열기">달서구문화관광</a></li>
+						<li><a href="https://www.dalseong.daegu.kr/culture/index.do" class="select_url footerC1_out" target="_blank" title="새창열기">달성군문화관광</a></li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class="footer_bottomWrap">
+		<div class="footer_logo">
+			<img src="/cmsh/tour.daegu.go.kr/img_2020/common/footer_logo.png" alt="대구광역시"/>
+		</div>
+		<div class="copyWrap">
+			<p>
+				(41911) 대구광역시 중구 공평로 88 (동인동1가) | 전화 : 053.803.6514
+			</p>
+			<p>
+				Copyright(c) DAEGU METROPOLITAN CITY. All rights reserved.
+			</p>
+			<p>
+				본 홈페이지에 게시된 이메일주소의 자동 수집을 거부하며 이를 위반시 정보통신망법에 의해 처벌됨을 유념하시기 바랍니다.
+			</p>
+		</div>
+		<div class="footer_qr">
+			<a href="http://www.webwatch.or.kr/Situation/WA_Situation.html?MenuCD=110" class="wa_mark" title="국가 공인 인증기관 : 웹와치"><img src="/cmsh/tour.daegu.go.kr/img_2020/common/img_wa.png" alt="과학기술정보통신부 WEB ACCESSIBILITY 마크(웹 접근성 품질인증 마크)"></a>
+		</div>
+		<!-- <div class="footer_web">
+                    <a href="#this">
+                        <img style="display:none;" src="/cmsh/tour.daegu.go.kr/images/img/front/sub/web_acc.png" alt="web acc" /></a>
+                </div> -->
+	</div>
+</div>
+
+<script type="text/javascript" src="https://wcs.naver.net/wcslog.js"></script>
+<script type="text/javascript">
+	if(!wcs_add) var wcs_add = {};
+	wcs_add["wa"] = "73b8e01b6d7dd4";
+	wcs_do();
+	</script>
+</body>
+</html>

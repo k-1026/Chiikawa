@@ -1,0 +1,179 @@
+{
+  "template_id": "TPL-HYUNHEE-D-V2",
+  "md_id": "MD-HYUNHEE-D-V2",
+  "description": "hyunhee_D_통합표_조사결과_v2.md 고정 양식(조사 통합표 구조). 값이 아니라 양식만 담음",
+  "front_matter": [
+    "작성일",
+    "상위 키워드",
+    "기준 지침",
+    "문서 성격"
+  ],
+  "sections": [
+    {
+      "key": "S0",
+      "title": "먼저 읽을 것",
+      "kind": "notes"
+    },
+    {
+      "key": "S1",
+      "title": "조사 범위와 규칙",
+      "kind": "key_value_table",
+      "columns": [
+        "항목",
+        "내용"
+      ]
+    },
+    {
+      "key": "S2",
+      "title": "재편 방향 (지침 v1 → 3축)",
+      "kind": "table",
+      "columns": [
+        "축",
+        "답하는 질문",
+        "지침 v1에서의 쓰임"
+      ]
+    },
+    {
+      "key": "S3",
+      "title": "지침 v1 대비 현황",
+      "kind": "table",
+      "columns": [
+        "지침 v1이 필요로 하는 것",
+        "지금 상태"
+      ]
+    },
+    {
+      "key": "AX1",
+      "title": "축 1. 수요 — 통합표",
+      "kind": "survey_table",
+      "columns_ref": "survey_columns"
+    },
+    {
+      "key": "AX2",
+      "title": "축 2. 장소·상권 — 통합표",
+      "kind": "survey_table",
+      "columns_ref": "survey_columns"
+    },
+    {
+      "key": "AX3",
+      "title": "축 3. 연결 프로그램 — 통합표",
+      "kind": "survey_table",
+      "columns_ref": "survey_columns"
+    },
+    {
+      "key": "BND",
+      "title": "경계 항목",
+      "kind": "table",
+      "columns": [
+        "#",
+        "키워드",
+        "겹치는 파트"
+      ]
+    },
+    {
+      "key": "HLD",
+      "title": "보류 항목",
+      "kind": "table",
+      "columns": [
+        "#",
+        "키워드",
+        "보류 이유"
+      ]
+    },
+    {
+      "key": "S4",
+      "title": "제외한 정보",
+      "kind": "list"
+    },
+    {
+      "key": "S5",
+      "title": "이전 기록에서 정정한 내용",
+      "kind": "table",
+      "columns": [
+        "이전",
+        "확인 결과"
+      ]
+    },
+    {
+      "key": "S6",
+      "title": "구·군 공식 사이트 지도",
+      "kind": "table",
+      "columns": [
+        "구·군",
+        "문화관광 메뉴",
+        "확인한 내용"
+      ]
+    },
+    {
+      "key": "S7",
+      "title": "열람 불가·확인 필요",
+      "kind": "grouped_list",
+      "groups": [
+        "③-a",
+        "③-b 협조 요청 후보",
+        "③-d",
+        "확인 필요한 B 정보"
+      ],
+      "subtable_columns": [
+        "자료명(추정)",
+        "보유 기관",
+        "존재 근거",
+        "접근 제한 사유"
+      ]
+    },
+    {
+      "key": "S8",
+      "title": "다음 할 일",
+      "kind": "ordered_list"
+    }
+  ],
+  "survey_columns": [
+    {
+      "name": "#",
+      "field": "row_key",
+      "type": "string",
+      "note": "숫자 또는 N+숫자"
+    },
+    {
+      "name": "키워드",
+      "field": "keyword",
+      "type": "string"
+    },
+    {
+      "name": "지역",
+      "field": "region",
+      "type": "string",
+      "note": "'(추정)' 표기 가능"
+    },
+    {
+      "name": "판정",
+      "field": "judgement",
+      "type": "enum",
+      "values": [
+        "후보",
+        "확인",
+        "정보",
+        "미열람",
+        "미확인"
+      ]
+    },
+    {
+      "name": "확인된 내용 (등급)",
+      "field": "findings",
+      "type": "text",
+      "note": "문장 끝에 (S)/(A)/(B) 등급"
+    },
+    {
+      "name": "근거 상태",
+      "field": "evidence_state",
+      "type": "enum_prefix",
+      "values_ref": "evidence_state_codes"
+    },
+    {
+      "name": "비고·태그",
+      "field": "tags",
+      "type": "string",
+      "note": "유형 · 상태 · 상설/시즌 · 주체"
+    }
+  ]
+}

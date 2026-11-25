@@ -1,0 +1,2 @@
+md_id,repo_path,git_branch,last_commit_sha,branch_head_sha,git_blob_sha,file_sha256,title,written_date,md_version,source_id,notes
+MD-HYUNHEE-D-V2,local 리서치/hyunhee_D_통합표_조사결과_v2.md,main,5f61dc486f15fe7db07c025d9e9d065fcc32dda0,7f6a6edf599ca9088596a9ac0472cbc4a8cf574c,e8bde6e82773482188dfb00bea996488644e3585,9b79bb23a3ac95d8102a62e8e8c5c9bfb4bc6c7c3070d66ac21f434f15d1ae62,1번 파트 자료조사 2차 — 대구 관광 관련 사업 통합표,2026-10-29,v2,SRC-MD-HYUNHEE-D-V2,2026-11-25 main 기준. 원본은 originals/SRC-MD-HYUNHEE-D-V2.md

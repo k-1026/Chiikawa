@@ -1,0 +1,99 @@
+record_id,domain,subject,metric,value_numeric,value_text,unit,currency,vat_basis,quantity_basis,base_year,period_start,period_end,value_status,source_id,chunk_id,claim_id,note,approval_status
+FIG-STAT-001,statistic,대구 방문자,방문자 유입 전년 동기 대비 증감률,6.0,6.0% 증가,percent,,not_stated,,,,,reported,SRC-NEWS-KB-20260709500236,CHK-KB0709-002,CLM-D2-44-01,집계 기간 미표기,reference_only
+FIG-STAT-002,statistic,대구 방문자,숙박 방문자 비율 증감률,4.1,4.1% 늘었다,percent,,not_stated,,,,,reported,SRC-NEWS-KB-20260709500236,CHK-KB0709-003,,,reference_only
+FIG-STAT-003,statistic,대구 관광,관광소비 증감률,1.9,1.9% 늘었다,percent,,not_stated,,,,,reported,SRC-NEWS-KB-20260709500236,CHK-KB0709-003,CLM-D2-44-03,,reference_only
+FIG-STAT-004,statistic,대구 방문자,평균 체류시간 증감률,-1.5,1.5% 감소,percent,,not_stated,,,,,reported,SRC-NEWS-KB-20260709500236,CHK-KB0709-004,CLM-D2-44-02,,reference_only
+FIG-STAT-005,statistic,대구 목적지,목적지 검색량 증감률,-1.9,1.9% 줄었다,percent,,not_stated,,,,,reported,SRC-NEWS-KB-20260709500236,CHK-KB0709-004,CLM-D2-44-02,,reference_only
+FIG-STAT-006,statistic,대구 방문객,월 방문객 수,11060637,1106만637명,persons,,not_stated,,2025,2025-10-01,2025-10-31,reported,SRC-NEWS-KB-20260709500236,CHK-KB0709-005,CLM-D2-44-04,,reference_only
+FIG-STAT-007,statistic,대구 방문객,전년 동월 대비 증감률,30.5,30.5% 증가,percent,,not_stated,,2025,2025-10-01,2025-10-31,reported,SRC-NEWS-KB-20260709500236,CHK-KB0709-006,CLM-D2-44-04,,reference_only
+FIG-STAT-008,statistic,대구 방문객,월 방문객 수,9847859,984만7859명,persons,,not_stated,,2026,2026-05-01,2026-05-31,reported,SRC-NEWS-KB-20260709500236,CHK-KB0709-007,CLM-D2-44-05,,reference_only
+FIG-STAT-009,statistic,대구 방문객,전년 동월 대비 증감률,-9.1,9.1% 감소,percent,,not_stated,,2026,2026-05-01,2026-05-31,reported,SRC-NEWS-KB-20260709500236,CHK-KB0709-007,CLM-D2-44-05,,reference_only
+FIG-STAT-011,statistic,대구 방문객 유입 지역,유입 비중 — 경북,74.7,74.7%,percent,,not_stated,,,,,reported,SRC-NEWS-KB-20260709500236,CHK-KB0709-008,CLM-D2-45-01,,reference_only
+FIG-STAT-012,statistic,대구 방문객 유입 지역,유입 비중 — 경남,11.1,11.1%,percent,,not_stated,,,,,reported,SRC-NEWS-KB-20260709500236,CHK-KB0709-009,CLM-D2-45-01,,reference_only
+FIG-STAT-013,statistic,대구 방문객 유입 지역,유입 비중 — 부산,3.9,3.9%,percent,,not_stated,,,,,reported,SRC-NEWS-KB-20260709500236,CHK-KB0709-009,CLM-D2-45-01,,reference_only
+FIG-STAT-014,statistic,대구 방문객 유입 지역,유입 비중 — 경기,2.4,2.4%,percent,,not_stated,,,,,reported,SRC-NEWS-KB-20260709500236,CHK-KB0709-009,CLM-D2-45-01,,reference_only
+FIG-STAT-015,statistic,대구 방문객 유입 지역,유입 비중 — 서울,1.0,1.0%,percent,,not_stated,,,,,reported,SRC-NEWS-KB-20260709500236,CHK-KB0709-009,CLM-D2-45-01,,reference_only
+FIG-STAT-021,statistic,대구 외국인 관광객,외국인 관광객 수(대구시 집계),360461,36만461명,persons,,not_stated,,2023,2023-01-01,2023-12-31,reported,SRC-NEWS-IM-2026012116093612359,CHK-IM0121-001,CLM-D2-46-01,,reference_only
+FIG-STAT-022,statistic,대구 외국인 관광객,외국인 관광객 수(대구시 집계),398132,39만8천132명,persons,,not_stated,,2024,2024-01-01,2024-12-31,reported,SRC-NEWS-IM-2026012116093612359,CHK-IM0121-001,CLM-D2-46-01,,reference_only
+FIG-STAT-023,statistic,대구 외국인 관광객,외국인 관광객 수(대구시 집계),377443,37만7천443명,persons,,not_stated,,2025,2025-01-01,2025-11-30,reported,SRC-NEWS-IM-2026012116093612359,CHK-IM0121-001,CLM-D2-46-01,2025년은 11월까지,reference_only
+FIG-STAT-031,statistic,국내여행 불만 이유(전국),높은 관광지 물가 응답 비율,45.1,45.1％,percent,,not_stated,,2025,,,reported,SRC-NEWS-SBS-20000248223,CHK-SBS-003,CLM-D2-50-02,"표본 1,000명, 전국",reference_only
+FIG-STAT-032,statistic,국내여행 불만 이유(전국),특색 있는 지역 관광 콘텐츠 부족 응답 비율,19.4,19.4％,percent,,not_stated,,2025,,,reported,SRC-NEWS-SBS-20000248223,CHK-SBS-003,CLM-D2-50-02,,reference_only
+FIG-STAT-033,statistic,국내·해외여행 선호도 조사,표본 수,1000,1천명,persons,,not_stated,,2025,,,reported,SRC-NEWS-SBS-20000248223,CHK-SBS-002,CLM-D2-50-01,,reference_only
+FIG-STAT-034,statistic,대구 외국인 관광객 만족도 조사,응답자 수,1010,1천10명,persons,,not_stated,,2024,2024-04-01,2024-12-31,reported,SRC-NEWS-IM-2025122316251975329,CHK-IM1223-002,,MD의 '매일신문 2026-01-15' 출처와 다른 날짜 기사,reference_only
+FIG-STAT-035,statistic,갓바위 케이블카 여론조사,설치 찬성 비율,61.4,61.4%,percent,,not_stated,,2026,2026-01-01,2026-01-31,reported,SRC-NEWS-IM-2026070811204948205,CHK-IM0708-005,CLM-D2-30-03,"대구·경북 1,003명",reference_only
+FIG-STAT-036,statistic,갓바위 케이블카 여론조사,설치 반대 비율,27.0,27.0%,percent,,not_stated,,2026,,,reported,SRC-NEWS-IM-2026070811204948205,CHK-IM0708-005,,,reference_only
+FIG-STAT-037,statistic,갓바위 케이블카 여론조사,대구 시민 찬성 비율,64.9,64.9%,percent,,not_stated,,2026,,,reported,SRC-NEWS-IM-2026070811204948205,CHK-IM0708-007,,,reference_only
+FIG-STAT-038,statistic,갓바위 케이블카 여론조사,표본 수,1003,1천3명,persons,,not_stated,,2026,,,reported,SRC-NEWS-IM-2026070811204948205,CHK-IM0708-006,CLM-D2-30-03,,reference_only
+FIG-STAT-039,statistic,방한 대만 관광객(한국 전체),1분기 전년 동기 대비 증감률,37.7,37.7% 늘어,percent,,not_stated,,2026,2026-01-01,2026-03-31,reported,SRC-NEWS-KB-20260902500343,CHK-KB0903-004,CLM-D2-29-04,"한국관광공사 인용, 대구 단위 아님",reference_only
+FIG-STAT-040,statistic,대구 골목형상점가,지정 상점가 수(2026-10 기사),110,110곳,places,,not_stated,,2026,,,reported,SRC-NEWS-KB-20261001500524,CHK-KB1002-001,,2026-09 보도자료 100개소에서 늘어난 값,reference_only
+FIG-STAT-041,statistic,대구 골목형상점가,점포 수(2026-10 기사),,8천여,stores,,not_stated,,2026,,,reported,SRC-NEWS-KB-20261001500524,CHK-KB1002-002,,어림값이라 숫자 칸 비움,reference_only
+FIG-STAT-045,statistic,대구 골목형상점가,지정 상점가 수(2026-09 보도자료),100,100개소,places,,not_stated,,2026,,,reported,SRC-DG-PRESS-278733,CHK-DGP278733-001,CLM-D2-N7-01,,approved
+FIG-STAT-046,statistic,대구 골목형상점가,점포 수(2026-09 보도자료),,"7,100여 개",stores,,not_stated,,2026,,,reported,SRC-DG-PRESS-278733,CHK-DGP278733-001,CLM-D2-N7-01,어림값이라 숫자 칸 비움,approved
+FIG-STAT-047,statistic,대구 유망 상권,랜드마크 지원 상권 수,18,18개소,places,,not_stated,,2026,,,reported,SRC-DG-PRESS-278733,CHK-DGP278733-002,CLM-D2-N7-02,,approved
+FIG-STAT-048,program,골목상권·전통시장 가을 축제,개최 상권 수,33,총 33개소,places,,not_stated,,2026,2026-10-12,,reported,SRC-DG-PRESS-278733,CHK-DGP278733-003,CLM-D2-N7-03,세부 일정 9월말 확정 예정 — 이후 변경 보고 있음(미검증),approved
+FIG-STAT-049,statistic,2024년 북구 스탬프 투어,스탬프 존 구성,,관광명소 11곳 + 관광코스 3개,places,,not_stated,,2024,,,reported,SRC-NEWS-NS-1065583233696423,CHK-NS2024-001,CLM-D2-27-02,,reference_only
+FIG-STAT-050,statistic,북구 테마여행,하위메뉴 코스 수,8,8개,courses,,not_stated,,,,,reported,SRC-BUK-THEME,CHK-BUK-THEME-001,CLM-D2-27-03,MD 7개와 다름,approved
+FIG-STAT-042,statistic,남구 관광 명소 현황 데이터,전체 행 수,15,15,rows,,not_stated,,2026,,,reported,SRC-DATA-NAMGU,CHK-DATA-NAMGU-004,CLM-D2-17-01,,approved
+FIG-STAT-043,statistic,대구 외국인 관광객 원자료,대구시 원자료 문서,,,,,not_stated,,,,,unconfirmed,,,,기사가 '대구시에 따르면'만 적어 원자료 미확보,pending
+FIG-STAT-044,statistic,대구시티투어,이용객 수,,,persons,,not_stated,,,,,not_available,SRC-CITY-HOME,,,운영 사이트에 이용객 수치가 없음(MD 기록과 같음),pending
+FIG-BUD-001,budget,수성못 수상공연장,총사업비,30000000000,300억원,KRW,KRW,not_stated,,,,,reported,SRC-NEWS-KB-20260922500376,CHK-KB0928-003,CLM-D2-31-03,,reference_only
+FIG-BUD-002,budget,수성못 수상공연장,국비,9900000000,99억원,KRW,KRW,not_stated,,,,,reported,SRC-NEWS-KB-20260922500376,CHK-KB0928-003,CLM-D2-31-03,,reference_only
+FIG-BUD-003,budget,수성못 수상공연장,시비,10000000000,100억원,KRW,KRW,not_stated,,,,,reported,SRC-NEWS-KB-20260922500376,CHK-KB0928-003,CLM-D2-31-03,,reference_only
+FIG-BUD-004,budget,수성못 수상공연장,구비,10100000000,101억원,KRW,KRW,not_stated,,,,,reported,SRC-NEWS-KB-20260922500376,CHK-KB0928-003,CLM-D2-31-03,,reference_only
+FIG-BUD-005,budget,수성못 수상공연장,2026년 필요 사업비,21190000000,211억9000만원,KRW,KRW,not_stated,,2026,,,reported,SRC-NEWS-KB-20260922500376,CHK-KB0928-005,,,reference_only
+FIG-BUD-006,budget,수성못 수상공연장,2026년 확보액(기사 시점),8281000000,82억8100만원,KRW,KRW,not_stated,,2026,,,reported,SRC-NEWS-KB-20260922500376,CHK-KB0928-005,,,reference_only
+FIG-BUD-007,spec,수성못 수상공연장,좌석 규모,2000,2000석,seats,,not_stated,,,,,reported,SRC-NEWS-KB-20260922500376,CHK-KB0928-002,,,reference_only
+FIG-BUD-008,budget,동성로 상권활성화 사업,총사업비(5년),6000000000,60억원,KRW,KRW,not_stated,,,,2028-12-31,reported,SRC-NEWS-NSIS-20260611,CHK-NSIS-001,CLM-D2-01-03,'2028년까지 5년간'. 시작 연도는 원문에 없어 비움,reference_only
+FIG-BUD-009,budget,동성로 상권활성화 사업,국비,3000000000,국비 30억,KRW,KRW,not_stated,,,,,reported,SRC-NEWS-NSIS-20260611,CHK-NSIS-001,,,reference_only
+FIG-BUD-010,budget,동성로 상권활성화 사업,시비,1500000000,시비 15억,KRW,KRW,not_stated,,,,,reported,SRC-NEWS-NSIS-20260611,CHK-NSIS-001,,,reference_only
+FIG-BUD-011,budget,동성로 상권활성화 사업,구비,1500000000,구비 15억,KRW,KRW,not_stated,,,,,reported,SRC-NEWS-NSIS-20260611,CHK-NSIS-001,,,reference_only
+FIG-BUD-012,budget,글로컬상권 육성사업,선정 상권 지원 한도(2년),5000000000,최대 50억원,KRW,KRW,not_stated,상권 1곳당,,,,reported,SRC-NEWS-IM-2026061613283712235,CHK-IM0616-002,,교동 확정 배정액 아님,reference_only
+FIG-BUD-013,budget,교동 글로컬상권 육성사업,총사업비(~2027),3800000000,총 38억 원,KRW,KRW,not_stated,,,,2027-12-31,reported,SRC-DG-PRESS-278733,CHK-DGP278733-005,CLM-D2-N6-01,보도자료(2026-09-10) 기준 '내년까지',approved
+FIG-BUD-017,budget,동성로 상권 활성화 사업,총사업비(보도자료),6000000000,60억 원,KRW,KRW,not_stated,,,2024-01-01,2028-12-31,reported,SRC-DG-PRESS-278733,CHK-DGP278733-004,CLM-D2-01-03,'24년부터 5년간' — 종료 연도는 5년 계산(2028),approved
+FIG-BUD-014,budget,골목형상점가 홍보 사업,사업비,840000000,8억4000만원,KRW,KRW,not_stated,,2026,,,reported,SRC-NEWS-KB-20261001500524,CHK-KB1002-002,,,reference_only
+FIG-BUD-015,budget,팔공산 구름다리(과거 사업),사업비,18000000000,180억원 규모,KRW,KRW,not_stated,,,,,reported,SRC-NEWS-IM-2026070811204948205,CHK-IM0708-001,,,reference_only
+FIG-BUD-016,budget,팔공산 구름다리(과거 사업),확보 국비,2500000000,국비 25억원,KRW,KRW,not_stated,,,,,reported,SRC-NEWS-IM-2026070811204948205,CHK-IM0708-001,,,reference_only
+FIG-PRG-001,program,대구10미데이 2025,참여업소 상한,50,최대 50개소,establishments,,not_stated,,2025,2025-06-01,2025-09-30,reported,SRC-NEWS-HK-202505092401h,CHK-HK0509-002,CLM-D2-N2-01,,reference_only
+FIG-PRG-002,program,북구 모바일 스탬프 투어 2026,투어 장소 수,20,20곳,places,,not_stated,,2026,2026-07-15,2026-11-30,reported,SRC-NEWS-KB-20260714500472,CHK-KB0714-002,CLM-D2-27-01,,reference_only
+FIG-PRG-003,program,북구 모바일 스탬프 투어 2026,응모 기준 방문 수,6,6곳 이상,places,,not_stated,,2026,,,reported,SRC-NEWS-KB-20260714500472,CHK-KB0714-002,CLM-D2-27-01,,reference_only
+FIG-PRG-004,program,북구 모바일 스탬프 투어 2026,경품 금액,20000,2만 원 상당,KRW,KRW,not_stated,1인,2026,,,reported,SRC-NEWS-KB-20260714500472,CHK-KB0714-002,CLM-D2-27-01,모바일 상품권,reference_only
+FIG-PRG-005,program,북구 모바일 스탬프 투어 2026,월 추첨 인원,50,50명,persons,,not_stated,매월,2026,,,reported,SRC-NEWS-KB-20260714500472,CHK-KB0714-003,CLM-D2-27-01,,reference_only
+FIG-PRG-006,program,대구 STAY & 골목 PLAY,대상 인원,,5000여명,persons,,not_stated,,2026,,,reported,SRC-NEWS-SG-20260629514188,CHK-SG0629-002,CLM-D2-N8-03,어림값,reference_only
+FIG-PRG-007,program,대구 STAY & 골목 PLAY,웰컴페이 지급액,20000,2만원,KRW,KRW,not_stated,1인,2026,,,reported,SRC-NEWS-SG-20260629514188,CHK-SG0629-003,CLM-D2-N8-03,,reference_only
+FIG-PRG-008,program,소상공인 SNS 인증 이벤트,응모 기준 이용 금액,20000,2만원 이상,KRW,KRW,not_stated,,2026,,,reported,SRC-NEWS-SG-20260629514188,CHK-SG0629-004,CLM-D2-N8-01,,reference_only
+FIG-PRG-009,program,소상공인 SNS 인증 이벤트,경품 금액,10000,1만원,KRW,KRW,not_stated,,2026,,,reported,SRC-NEWS-SG-20260629514188,CHK-SG0629-005,CLM-D2-N8-01,,reference_only
+FIG-PRG-010,program,대구로 스탬프 페이백,페이백 쿠폰 금액,5000,5000원 상당,KRW,KRW,not_stated,,2026,,,reported,SRC-NEWS-SG-20260629514188,CHK-SG0629-006,CLM-D2-N8-02,"1만원 이상 주문 2회 이상, 선착순",reference_only
+FIG-PRG-011,program,달성군 대만 홍보여행,초청 인원,,30여 명,persons,,not_stated,,2026,2026-08-27,2026-08-30,reported,SRC-NEWS-KB-20260902500343,CHK-KB0903-001,CLM-D2-29-01,어림값,reference_only
+FIG-OPS-001,operation,대구시티투어 도심순환,운행 시작 시각,,9:30,time,,not_stated,,,,,reported,SRC-CITY-TIMETABLE,CHK-CITY-TT-002,CLM-D2-23-03,,approved
+FIG-OPS-002,operation,대구시티투어 도심순환,운행 끝 시각(시간표),,17:50,time,,not_stated,,,,,reported,SRC-CITY-TIMETABLE,CHK-CITY-TT-002,CLM-D2-23-03,이용 안내 페이지는 17:30 — 충돌,approved
+FIG-OPS-003,operation,대구시티투어 도심순환,운행 끝 시각(이용 안내),,17:30,time,,not_stated,,,,,reported,SRC-CITY-GUIDE,CHK-CITY-GD-002,,시간표 페이지는 17:50 — 충돌,approved
+FIG-OPS-004,operation,대구시티투어 도심순환,1일 운행 횟수,7,1일 7회,runs_per_day,,not_stated,,,,,reported,SRC-CITY-TIMETABLE,CHK-CITY-TT-002,CLM-D2-23-03,,approved
+FIG-OPS-005,operation,대구시티투어 도심순환,정류장 수,12,01~12,stops,,not_stated,,,,,reported,SRC-CITY-COURSE,CHK-CITY-CO-001,CLM-D2-23-02,,approved
+FIG-PRC-001,price,대구시티투어,정상요금 — 성인,10000,"10,000원",KRW,KRW,not_stated,1인 1회 승차권(당일 자유 승하차),,,,reported,SRC-CITY-GUIDE,CHK-CITY-GD-004,,,approved
+FIG-PRC-002,price,대구시티투어,정상요금 — 청소년,8000,"8,000원",KRW,KRW,not_stated,1인 1회 승차권(당일 자유 승하차),,,,reported,SRC-CITY-GUIDE,CHK-CITY-GD-004,,,approved
+FIG-PRC-003,price,대구시티투어,정상요금 — 경로·어린이·장애인·국가유공자,6000,"6,000원",KRW,KRW,not_stated,1인 1회 승차권(당일 자유 승하차),,,,reported,SRC-CITY-GUIDE,CHK-CITY-GD-004,,,approved
+FIG-PRC-004,price,대구시티투어,단체·승차권 소지자 등 요금 — 성인,8000,"8,000원",KRW,KRW,not_stated,1인,,,,reported,SRC-CITY-GUIDE,CHK-CITY-GD-005,,행 제목 셀 미추출. 대상 구분 순서는 정상요금 열과 같은 것으로 보임,approved
+FIG-PRC-005,price,대구시티투어,단체·승차권 소지자 등 요금 — 청소년,6400,"6,400원",KRW,KRW,not_stated,1인,,,,reported,SRC-CITY-GUIDE,CHK-CITY-GD-005,,행 제목 셀 미추출. 대상 구분 순서는 정상요금 열과 같은 것으로 보임,approved
+FIG-PRC-006,price,대구시티투어,단체·승차권 소지자 등 요금 — 경로·어린이·장애인·국가유공자,4800,"4,800원",KRW,KRW,not_stated,1인,,,,reported,SRC-CITY-GUIDE,CHK-CITY-GD-005,,행 제목 셀 미추출. 대상 구분 순서는 정상요금 열과 같은 것으로 보임,approved
+FIG-PRC-007,price,대구시티투어,수요일 할인율,30,30% 할인,percent,,not_stated,,,,,reported,SRC-CITY-GUIDE,CHK-CITY-GD-007,,,approved
+FIG-PRC-008,price,대구시티투어,동대구역 승차권 소지자 할인율,20,20% 할인,percent,,not_stated,,,,,reported,SRC-CITY-COURSE,CHK-CITY-CO-002,,,approved
+FIG-PRC-009,price,대구시티투어,대구시민의 날 요금,0,무료,KRW,KRW,not_stated,대구시민 1인,,,,actual_zero,SRC-CITY-GUIDE,CHK-CITY-GD-006,,"매월 21일, 신분증 제시",approved
+FIG-PRC-010,price,앞산 케이블카,이용 요금(구청 소개 문구),10500,"10,500원",KRW,KRW,not_stated,1인(왕복·편도 표기 없음),,,,reported,SRC-NAM-CABLE,CHK-NAM-CABLE-002,,운영사 요금표로 재확인 필요,approved
+FIG-SPC-001,spec,앞산 케이블카,운행 거리 연장,795,795m,m,,not_stated,,,,,reported,SRC-NAM-CABLE,CHK-NAM-CABLE-001,CLM-D2-11-02,,approved
+FIG-SPC-002,spec,앞산 케이블카,편도 소요 시간,5,편도 5분 정도,minutes,,not_stated,,,,,reported,SRC-NAM-CABLE,CHK-NAM-CABLE-001,,'정도' — 어림값,approved
+FIG-SPC-003,spec,앞산 케이블카,설치 연월,,1974년 5월,year_month,,not_stated,,,,,reported,SRC-NAM-CABLE,CHK-NAM-CABLE-001,CLM-D2-11-02,,approved
+FIG-SPC-004,spec,불로전통시장,점포 수,,약 130개,stores,,not_stated,,,,,reported,SRC-TOUR-SHOPPING,CHK-TOUR-SHOP-004,CLM-D2-N4-02,어림값이라 숫자 칸 비움,approved
+FIG-SPC-005,spec,서문시장,상가 수,,5천여 개,stores,,not_stated,,,,,reported,SRC-CITY-COURSE,CHK-CITY-CO-006,CLM-D2-02-04,어림값이라 숫자 칸 비움,approved
+FIG-SPC-012,spec,중구 골목투어 1코스 경상감영달성길,코스 거리,3.25,3.25km,km,,not_stated,,,,,reported,SRC-JUNG-GOLMOK,CHK-JUNG-C1-001,CLM-D2-08-02,"Aside 열람값, 원문 미보관 — 승인 보류",pending
+FIG-SPC-013,spec,중구 골목투어 1코스 경상감영달성길,탐방 소요시간,150,,minutes,,not_stated,,,,,reported,SRC-JUNG-GOLMOK,CHK-JUNG-C1-001,CLM-D2-08-02,원문 '시간 분' 표기를 분으로 환산,pending
+FIG-SPC-014,spec,중구 골목투어 2코스 근대문화골목,코스 거리,1.64,1.64km,km,,not_stated,,,,,reported,SRC-JUNG-GOLMOK,CHK-JUNG-C2-001,CLM-D2-03-02,"Aside 열람값, 원문 미보관 — 승인 보류",pending
+FIG-SPC-015,spec,중구 골목투어 2코스 근대문화골목,탐방 소요시간,120,,minutes,,not_stated,,,,,reported,SRC-JUNG-GOLMOK,CHK-JUNG-C2-001,CLM-D2-03-02,원문 '시간 분' 표기를 분으로 환산,pending
+FIG-SPC-016,spec,중구 골목투어 3코스 패션한방길,코스 거리,2.65,2.65km,km,,not_stated,,,,,reported,SRC-JUNG-GOLMOK,CHK-JUNG-C3-001,CLM-D2-05-02,"Aside 열람값, 원문 미보관 — 승인 보류",pending
+FIG-SPC-017,spec,중구 골목투어 3코스 패션한방길,탐방 소요시간,120,,minutes,,not_stated,,,,,reported,SRC-JUNG-GOLMOK,CHK-JUNG-C3-001,CLM-D2-05-02,원문 '시간 분' 표기를 분으로 환산,pending
+FIG-SPC-018,spec,중구 골목투어 4코스 삼덕봉산문화길,코스 거리,4.95,4.95km,km,,not_stated,,,,,reported,SRC-JUNG-GOLMOK,CHK-JUNG-C4-001,CLM-D2-04-03,"Aside 열람값, 원문 미보관 — 승인 보류",pending
+FIG-SPC-019,spec,중구 골목투어 4코스 삼덕봉산문화길,탐방 소요시간,170,,minutes,,not_stated,,,,,reported,SRC-JUNG-GOLMOK,CHK-JUNG-C4-001,CLM-D2-04-03,원문 '시간 분' 표기를 분으로 환산. 같은 페이지 소개 문단은 '3시간 정도',pending
+FIG-PRG-012,program,"시티투어 특별코스 '판타지아페스타, 예술로 물드는 대구'",출발 최소 인원,10,최소 인원 10인,persons,,not_stated,,,2026-10-21,2026-10-21,reported,SRC-CITY-NOTICE-1834,CHK-CITY-N1834-001,CLM-D2-09-03,,approved
+FIG-PRG-013,program,"시티투어 특별코스 '판타지아페스타, 예술로 물드는 대구'",최대 인원,40,최대 40인,persons,,not_stated,,,2026-10-21,2026-10-21,reported,SRC-CITY-NOTICE-1834,CHK-CITY-N1834-001,CLM-D2-09-03,,approved
+FIG-PRG-014,program,대구 STAY & 골목 PLAY(보도자료),대상 인원,,"선착순 5,000여 명",persons,,not_stated,,2026,,,reported,SRC-DG-PRESS-277733,CHK-DGP277733-001,CLM-D2-N8-03,어림값,approved
+FIG-PRG-015,program,대구 STAY & 골목 PLAY(보도자료),웰컴페이 지급액,20000,2만 원,KRW,KRW,not_stated,1인,2026,,,reported,SRC-DG-PRESS-277733,CHK-DGP277733-002,CLM-D2-N8-03,,approved
+FIG-SPC-007,spec,축제 개최 후보지(두류공원·수성못·동성로),수용 인원·대관 조건·안전 기준,,,,,not_stated,,,,,unconfirmed,,,,MD N10: 미조사. 관리 기관 자료 필요,pending
