@@ -331,6 +331,11 @@ class Handler(BaseHTTPRequestHandler):
             try:out=G.create(STORE,u['id'],b.get('item'),b.get('concept'),b.get('count',2))
             except G.GoodsError as e:raise Error(str(e),503)
             STORE.event(u['id'],'goods_design',detail=str(b.get('item'))[:20]);return self.output({'designs':out})
+        if p=='/api/goods/recommend':
+            import goods_v06 as G
+            STORE.limit('goodsrec:'+str(u['id']),30,3600)
+            try:return self.output(G.recommend(b.get('concept'),STORE.workspace(u['id'])))
+            except G.GoodsError as e:raise Error(str(e),400)
         if p=='/api/goods/plan':
             import goods_v06 as G
             try:return self.output(G.production_plan(STORE,u['id'],b.get('id'),b.get('quantity'),STORE.workspace(u['id'])))

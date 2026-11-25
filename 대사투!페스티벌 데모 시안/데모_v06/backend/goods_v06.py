@@ -15,6 +15,55 @@ ITEMS={
 }
 class GoodsError(Exception):pass
 
+# 컨셉·대상·예산 글에서 키워드를 찾아 굿즈 종류에 점수를 준다(AI가 안 될 때도 추천은 나온다).
+RULES=[
+ (('어린이','아이','가족','초등','유아'),{'sticker':3,'keyring':2,'magnet':1},'가족·어린이 대상'),
+ (('청년','mz','sns','인스타','사진','포토','인증'),{'keyring':3,'sticker':3,'magnet':1},'SNS 인증·수집 성향'),
+ (('기념','소장','한정','공식','굿즈샵','판매'),{'tshirt':3,'poster':2,'keyring':1},'소장·판매 목적'),
+ (('실용','일상','친환경','제로웨이스트','장바구니'),{'ecobag':3,'tshirt':1},'실용·친환경 방향'),
+ (('우주','사투리','캐릭터','마스코트','대키미','외지몽'),{'keyring':2,'sticker':2,'poster':1},'캐릭터 중심 컨셉'),
+ (('관광','외지인','여행','기념품','방문'),{'magnet':3,'poster':1,'keyring':1},'관광·기념품 수요'),
+ (('행사장','현장','무료','증정','참여','스탬프'),{'sticker':2,'keyring':1},'현장 증정·스탬프 보상'),
+]
+NOTE={'keyring':'휴대·수집이 쉬운 대표 굿즈예요','sticker':'단가가 낮고 많이 나눠 주기 좋아요','poster':'소장·전시용으로 컨셉을 크게 보여줘요','ecobag':'일상에서 계속 쓰여 홍보 효과가 오래가요','tshirt':'스태프·참가자 단체복으로도 쓸 수 있어요','magnet':'부피가 작아 관광 기념품으로 좋아요'}
+def recommend_rules(text,budget_text=''):
+    t=(text or '').lower();score={k:0 for k in ITEMS};why={k:[] for k in ITEMS}
+    for keys,pts,reason in RULES:
+        if any(k in t for k in keys):
+            for it,v in pts.items():score[it]+=v;why[it].append(reason)
+    if any(k in (budget_text or '') for k in ('적','소액','저예산','천만')):
+        for it in ('sticker','magnet'):score[it]+=1;why[it].append('예산이 작은 조건')
+    base={'keyring':2,'sticker':2,'poster':1,'magnet':1,'ecobag':1,'tshirt':0}  # 아무 단서가 없을 때의 기본 순서
+    ranked=sorted(ITEMS,key=lambda k:(-(score[k]+base[k]),k))[:3]
+    return [{'item':k,'name':ITEMS[k][0],'reason':((why[k][0]+'에 맞고, ' if why[k] else '')+NOTE[k])} for k in ranked]
+
+def recommend_ai(concept,context):
+    """Gemini 가 컨셉을 읽고 굿즈 3종과 이유를 고른다. 실패하면 None."""
+    key,model=os.getenv('GEMINI_API_KEY'),os.getenv('GEMINI_MODEL')
+    if not key or not model:return None
+    names=', '.join('%s(%s)'%(k,v[0]) for k,v in ITEMS.items())
+    prompt=('대구 지역 축제 굿즈 기획자입니다. 아래 컨셉과 조건에 가장 잘 맞는 굿즈 종류 3개를 골라 JSON 배열로만 답하세요. '
+            '형식: [{"item":"keyring","reason":"한 문장(한국어, 50자 이내)"}]. item 은 반드시 다음 중에서만: '+names+'\n컨셉: '+concept+'\n조건: '+context)
+    try:
+        url='https://generativelanguage.googleapis.com/v1beta/models/%s:generateContent'%model
+        body={'contents':[{'parts':[{'text':prompt}]}],'generationConfig':{'responseMimeType':'application/json'}}
+        with _post(url,body,{'Content-Type':'application/json','x-goog-api-key':key},20) as r:
+            arr=json.loads(json.load(r)['candidates'][0]['content']['parts'][0]['text'])
+        out=[]
+        for a in arr:
+            if a.get('item') in ITEMS and a['item'] not in [o['item'] for o in out]:
+                out.append({'item':a['item'],'name':ITEMS[a['item']][0],'reason':str(a.get('reason',''))[:120]})
+        return out[:3] or None
+    except Exception:return None
+
+def recommend(concept,workspace):
+    concept=str(concept or '').strip()[:300]
+    if len(concept)<2:raise GoodsError('컨셉을 먼저 입력해 주세요.')
+    c=(workspace.get('conditions') or {});plan=workspace.get('plan') or {}
+    ctx=' / '.join('%s: %s'%(k,v) for k,v in (('대상',c.get('target') or plan.get('target')),('예산',c.get('budget_total') or plan.get('budget_total')),('규모',c.get('scale') or plan.get('scale')),('테마',c.get('theme'))) if v)
+    ai=recommend_ai(concept,ctx)
+    return {'recommendations':ai or recommend_rules(concept+' '+ctx,str(c.get('budget_total') or '')),'by':'ai' if ai else 'rules'}
+
 def ensure_table(store):
     if store.pg:return  # Supabase 는 supabase/003_goods.sql 로 미리 만든다
     with store.db() as db:
