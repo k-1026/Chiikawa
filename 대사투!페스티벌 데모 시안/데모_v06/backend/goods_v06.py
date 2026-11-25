@@ -1,5 +1,6 @@
 """굿즈 시안 이미지(Cloudflare Workers AI · FLUX)와 시안에 맞춘 제작 계획서(md)."""
-import base64,json,os,secrets,ssl,time,urllib.error,urllib.request
+import base64,json,os,secrets,ssl,sys,time,urllib.error,urllib.request
+sys.path.insert(0,os.path.join(os.path.dirname(os.path.abspath(__file__)),'vendor'))
 
 MODEL='@cf/black-forest-labs/flux-1-schnell'
 MASCOT=('Two original alien mascots: Daekimi, a sky-blue cat alien with big round eyes and a small antenna, '
@@ -97,9 +98,17 @@ def english_concept(concept):
         return t[:300] or concept
     except Exception:return concept
 
+BG={  # 캐릭터는 넣지 않는다(원본 이미지를 따로 합성). 배경·제품 사진만 만든다.
+ 'keyring':'A dreamy festival backdrop scene, soft focus, empty center, {c}.',
+ 'poster':'A vivid festival poster background illustration, large empty area in the lower center, {c}.',
+ 'magnet':'A soft pastel festival backdrop with bokeh lights, empty center, {c}.',
+ 'ecobag':'A plain blank cream canvas tote bag, front view, flat lay product photo on a soft background, no print, no logo.',
+ 'tshirt':'A plain blank white t-shirt, front view, flat lay product photo on a soft background, no print, no logo.',
+}
+NEEDS_BG=('ecobag','tshirt')  # 제품 사진이 없으면 만들 수 없는 종류
 def make_prompt(item,concept):
-    name,desc,_,_=ITEMS[item]
-    return '%s %s Festival concept: %s. Absolutely no text, letters, numbers or writing anywhere in the image.'%(desc[0].upper()+desc[1:]+'.',MASCOT,english_concept(concept))
+    if item not in BG:return ''
+    return BG[item].format(c=english_concept(concept))+' No characters, no animals, no people, no text, no letters, no writing.'
 
 def generate_image(prompt):
     a,t=os.getenv('CF_ACCOUNT_ID'),os.getenv('CF_API_TOKEN')
@@ -115,19 +124,25 @@ def generate_image(prompt):
     if not img:raise GoodsError('시안 이미지를 받지 못했습니다.')
     return img  # base64 JPEG
 
-def create(store,uid,item,concept,count):
+def create(store,uid,item,concept,count,who='both'):
+    import goods_compose_v06 as C
     if item not in ITEMS:raise GoodsError('지원하지 않는 굿즈 종류입니다.')
+    if who not in ('both','daekimi','oejimong'):who='both'
     concept=str(concept or '').strip()[:300]
     if len(concept)<2:raise GoodsError('컨셉을 입력해 주세요.')
     count=max(1,min(3,int(count or 2)))
     ensure_table(store)
     prompt=make_prompt(item,concept);out=[]
-    poses=['','Different pose and composition.','Alternative layout, mascots in a new arrangement.']
     for i in range(count):
-        img=generate_image((prompt+' '+poses[i]).strip())
+        raw=None
+        if prompt:
+            try:raw=base64.b64decode(generate_image(prompt))
+            except GoodsError:
+                if item in NEEDS_BG:raise
+        img=C.compose(item,who,raw,i)
         did=secrets.token_hex(8)
         with store.db() as db:
-            db.execute('INSERT INTO goods_designs(id,user_id,item,concept,prompt,image,created_at) VALUES(?,?,?,?,?,?,?)',(did,uid,item,concept,prompt,img,int(time.time())))
+            db.execute('INSERT INTO goods_designs(id,user_id,item,concept,prompt,image,created_at) VALUES(?,?,?,?,?,?,?)',(did,uid,item,concept,(prompt or '(배경 없음: 캐릭터 원본 합성)')+' | 캐릭터: '+who,img,int(time.time())))
         out.append({'id':did,'item':item,'concept':concept})
     return out
 
@@ -156,7 +171,7 @@ def production_plan(store,uid,did,quantity,workspace):
     fest=plan.get('festival_name') or '(축제명 미정)'
     md=f"""# {fest} · {name} 제작 계획서 (초안)
 
-> 이 문서는 AI가 만든 시안에 맞춘 **초안**입니다. 표시한 [추정]·[확인 필요] 항목은 실제 업체 견적과 담당자 확인 뒤 확정해 주세요.
+> 이 문서는 공식 캐릭터 시안에 맞춘 **초안**입니다. 표시한 [추정]·[확인 필요] 항목은 실제 업체 견적과 담당자 확인 뒤 확정해 주세요.
 
 ## 1. 개요
 - 축제: {fest}
@@ -166,9 +181,9 @@ def production_plan(store,uid,did,quantity,workspace):
 - 계획 수량: {qty:,}개 [가정: 담당자 입력값]
 
 ## 2. 시안 설명
-- 마스코트(대키미·외지몽)를 컨셉에 맞게 표현한 AI 생성 시안입니다.
-- 시안 그대로 인쇄하기 어렵습니다. 최종 제작용 벡터 파일(AI/PDF)은 디자이너가 다시 정리해야 합니다 [확인 필요].
-- 생성 지시문(영문): {r['prompt']}
+- 공식 캐릭터 원본 이미지(대키미·외지몽)를 그대로 굿즈 모양에 올린 시안입니다. 캐릭터는 AI가 다시 그리지 않았고, 배경·제품 사진만 AI가 만들었습니다.
+- 이 시안은 보기용 이미지(해상도 1024px)입니다. 인쇄용 고해상도·벡터(AI/PDF) 파일은 디자이너가 원본으로 다시 정리해야 합니다 [확인 필요].
+- 배경·제품 사진 생성 지시문(영문): {r['prompt']}
 
 ## 3. 사양
 - 규격·재질: {spec}
