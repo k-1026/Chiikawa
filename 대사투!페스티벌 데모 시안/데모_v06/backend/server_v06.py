@@ -22,17 +22,20 @@ from attachments_v06 import Attachments,AttachmentError,answer_with_files
 
 ROOT=Path(__file__).resolve().parent.parent
 PUBLIC_ORIGIN_FILE=ROOT/'.runtime'/'public_origin.json'
+ORIGIN_RE=r'https://[a-z0-9-]+\.(?:trycloudflare\.com|onrender\.com)'
 def public_origin():
-    try:
-        value=json.loads(PUBLIC_ORIGIN_FILE.read_text()).get('origin','')
-        return value if isinstance(value,str) and re.fullmatch(r'https://[a-z0-9-]+\.trycloudflare\.com',value) else ''
-    except (OSError,ValueError,TypeError,AttributeError):return ''
+    """이 서버의 공개 주소. 클라우드에서는 환경변수 PUBLIC_ORIGIN, 컴퓨터에서는 .runtime/public_origin.json 을 쓴다."""
+    value=os.getenv('PUBLIC_ORIGIN','').strip()
+    if not value:
+        try:value=json.loads(PUBLIC_ORIGIN_FILE.read_text()).get('origin','')
+        except (OSError,ValueError,TypeError,AttributeError):return ''
+    return value if isinstance(value,str) and re.fullmatch(ORIGIN_RE,value) else ''
 def public_web_origins():
-    """Exact Vercel production hosts; never trust arbitrary forwarded headers."""
-    try:
-        values=json.loads(PUBLIC_ORIGIN_FILE.read_text()).get('web_origins',[])
-        return {v for v in values if isinstance(v,str) and re.fullmatch(r'https://[a-z0-9-]+\.vercel\.app',v)} if isinstance(values,list) else set()
-    except (OSError,ValueError,TypeError,AttributeError):return set()
+    """Exact Vercel production hosts; never trust arbitrary forwarded headers. 환경변수 PUBLIC_WEB_ORIGINS(쉼표로 구분) 또는 .runtime/public_origin.json."""
+    values=[v.strip() for v in os.getenv('PUBLIC_WEB_ORIGINS','').split(',') if v.strip()]
+    try:values+=json.loads(PUBLIC_ORIGIN_FILE.read_text()).get('web_origins',[])
+    except (OSError,ValueError,TypeError,AttributeError):pass
+    return {v for v in values if isinstance(v,str) and re.fullmatch(r'https://[a-z0-9-]+\.vercel\.app',v)}
 
 try:
     from dotenv import load_dotenv
