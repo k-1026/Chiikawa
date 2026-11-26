@@ -329,7 +329,7 @@ class Handler(BaseHTTPRequestHandler):
         if p=='/api/goods/design':
             import goods_v06 as G
             STORE.limit('goods:'+str(u['id']),12,3600)
-            try:out=G.create(STORE,u['id'],b.get('item'),b.get('concept'),b.get('count',2),b.get('who','both'))
+            try:out=G.create(STORE,u['id'],b.get('item'),b.get('concept'),b.get('count',2),b.get('who','both'),G.design_year(STORE.workspace(u['id'])),'default' if b.get('pose_mode')=='default' else 'auto')
             except G.GoodsError as e:raise Error(str(e),503)
             STORE.event(u['id'],'goods_design',detail=str(b.get('item'))[:20]);return self.output({'designs':out})
         if p=='/api/goods/select':

@@ -1,0 +1,293 @@
+{
+ "note": "공식 표정·자세 시트에서 그대로 오린 포즈입니다. 생김새·색은 원본과 같습니다.",
+ "poses": [
+  {
+   "id": "oejimong_01",
+   "char": "oejimong",
+   "name": "기본 미소",
+   "use": "general",
+   "size": [
+    221,
+    265
+   ],
+   "sheet": "캐릭터 정보/character/외지몽_성체_표정자세_확정본_v01/외지몽_성체_표정자세_확정레퍼런스_v01.png",
+   "status": "확정 (사용자 확정 2026-11-18)"
+  },
+  {
+   "id": "oejimong_02",
+   "char": "oejimong",
+   "name": "활짝 웃음",
+   "use": "general",
+   "size": [
+    244,
+    264
+   ],
+   "sheet": "캐릭터 정보/character/외지몽_성체_표정자세_확정본_v01/외지몽_성체_표정자세_확정레퍼런스_v01.png",
+   "status": "확정 (사용자 확정 2026-11-18)"
+  },
+  {
+   "id": "oejimong_03",
+   "char": "oejimong",
+   "name": "깜짝 놀람",
+   "use": "general",
+   "size": [
+    258,
+    258
+   ],
+   "sheet": "캐릭터 정보/character/외지몽_성체_표정자세_확정본_v01/외지몽_성체_표정자세_확정레퍼런스_v01.png",
+   "status": "확정 (사용자 확정 2026-11-18)"
+  },
+  {
+   "id": "oejimong_04",
+   "char": "oejimong",
+   "name": "시무룩·서운",
+   "use": "avoid",
+   "size": [
+    227,
+    246
+   ],
+   "sheet": "캐릭터 정보/character/외지몽_성체_표정자세_확정본_v01/외지몽_성체_표정자세_확정레퍼런스_v01.png",
+   "status": "확정 (사용자 확정 2026-11-18)"
+  },
+  {
+   "id": "oejimong_05",
+   "char": "oejimong",
+   "name": "반가워 꼬리붕붕",
+   "use": "general",
+   "size": [
+    251,
+    267
+   ],
+   "sheet": "캐릭터 정보/character/외지몽_성체_표정자세_확정본_v01/외지몽_성체_표정자세_확정레퍼런스_v01.png",
+   "status": "확정 (사용자 확정 2026-11-18)"
+  },
+  {
+   "id": "oejimong_06",
+   "char": "oejimong",
+   "name": "궁금해 가우뚱",
+   "use": "general",
+   "size": [
+    219,
+    266
+   ],
+   "sheet": "캐릭터 정보/character/외지몽_성체_표정자세_확정본_v01/외지몽_성체_표정자세_확정레퍼런스_v01.png",
+   "status": "확정 (사용자 확정 2026-11-18)"
+  },
+  {
+   "id": "oejimong_07",
+   "char": "oejimong",
+   "name": "쿵쿵 발견",
+   "use": "general",
+   "size": [
+    271,
+    192
+   ],
+   "sheet": "캐릭터 정보/character/외지몽_성체_표정자세_확정본_v01/외지몽_성체_표정자세_확정레퍼런스_v01.png",
+   "status": "확정 (사용자 확정 2026-11-18)"
+  },
+  {
+   "id": "oejimong_08",
+   "char": "oejimong",
+   "name": "손! 칭찬해",
+   "use": "general",
+   "size": [
+    233,
+    263
+   ],
+   "sheet": "캐릭터 정보/character/외지몽_성체_표정자세_확정본_v01/외지몽_성체_표정자세_확정레퍼런스_v01.png",
+   "status": "확정 (사용자 확정 2026-11-18)"
+  },
+  {
+   "id": "oejimong_09",
+   "char": "oejimong",
+   "name": "놀아줘 앞발쪽",
+   "use": "general",
+   "size": [
+    243,
+    214
+   ],
+   "sheet": "캐릭터 정보/character/외지몽_성체_표정자세_확정본_v01/외지몽_성체_표정자세_확정레퍼런스_v01.png",
+   "status": "확정 (사용자 확정 2026-11-18)"
+  },
+  {
+   "id": "oejimong_10",
+   "char": "oejimong",
+   "name": "신나서 발라당",
+   "use": "general",
+   "size": [
+    283,
+    235
+   ],
+   "sheet": "캐릭터 정보/character/외지몽_성체_표정자세_확정본_v01/외지몽_성체_표정자세_확정레퍼런스_v01.png",
+   "status": "확정 (사용자 확정 2026-11-18)"
+  },
+  {
+   "id": "oejimong_11",
+   "char": "oejimong",
+   "name": "으르렁 경계",
+   "use": "avoid",
+   "size": [
+    269,
+    260
+   ],
+   "sheet": "캐릭터 정보/character/외지몽_성체_표정자세_확정본_v01/외지몽_성체_표정자세_확정레퍼런스_v01.png",
+   "status": "확정 (사용자 확정 2026-11-18)"
+  },
+  {
+   "id": "oejimong_12",
+   "char": "oejimong",
+   "name": "졸려 꾸벅",
+   "use": "sleep",
+   "size": [
+    234,
+    256
+   ],
+   "sheet": "캐릭터 정보/character/외지몽_성체_표정자세_확정본_v01/외지몽_성체_표정자세_확정레퍼런스_v01.png",
+   "status": "확정 (사용자 확정 2026-11-18)"
+  },
+  {
+   "id": "daekimi_01",
+   "char": "daekimi",
+   "name": "별빛 냥인사",
+   "use": "general",
+   "size": [
+    269,
+    286
+   ],
+   "sheet": "캐릭터 정보/character/대키미_성체_표정자세_v01/대키미_성체_표정자세_레퍼런스_v01.png",
+   "status": "시트 v01 (승인 상태 확인 필요)"
+  },
+  {
+   "id": "daekimi_02",
+   "char": "daekimi",
+   "name": "골골 행복",
+   "use": "general",
+   "size": [
+    211,
+    285
+   ],
+   "sheet": "캐릭터 정보/character/대키미_성체_표정자세_v01/대키미_성체_표정자세_레퍼런스_v01.png",
+   "status": "시트 v01 (승인 상태 확인 필요)"
+  },
+  {
+   "id": "daekimi_03",
+   "char": "daekimi",
+   "name": "꾹꾹 좋아",
+   "use": "general",
+   "size": [
+    263,
+    246
+   ],
+   "sheet": "캐릭터 정보/character/대키미_성체_표정자세_v01/대키미_성체_표정자세_레퍼런스_v01.png",
+   "status": "시트 v01 (승인 상태 확인 필요)"
+  },
+  {
+   "id": "daekimi_04",
+   "char": "daekimi",
+   "name": "냥당당",
+   "use": "general",
+   "size": [
+    224,
+    281
+   ],
+   "sheet": "캐릭터 정보/character/대키미_성체_표정자세_v01/대키미_성체_표정자세_레퍼런스_v01.png",
+   "status": "시트 v01 (승인 상태 확인 필요)"
+  },
+  {
+   "id": "daekimi_05",
+   "char": "daekimi",
+   "name": "사냥 집중",
+   "use": "avoid",
+   "size": [
+    291,
+    222
+   ],
+   "sheet": "캐릭터 정보/character/대키미_성체_표정자세_v01/대키미_성체_표정자세_레퍼런스_v01.png",
+   "status": "시트 v01 (승인 상태 확인 필요)"
+  },
+  {
+   "id": "daekimi_06",
+   "char": "daekimi",
+   "name": "깜짝 꼬리펑",
+   "use": "general",
+   "size": [
+    257,
+    253
+   ],
+   "sheet": "캐릭터 정보/character/대키미_성체_표정자세_v01/대키미_성체_표정자세_레퍼런스_v01.png",
+   "status": "시트 v01 (승인 상태 확인 필요)"
+  },
+  {
+   "id": "daekimi_07",
+   "char": "daekimi",
+   "name": "하악! 저리가",
+   "use": "avoid",
+   "size": [
+    278,
+    254
+   ],
+   "sheet": "캐릭터 정보/character/대키미_성체_표정자세_v01/대키미_성체_표정자세_레퍼런스_v01.png",
+   "status": "시트 v01 (승인 상태 확인 필요)"
+  },
+  {
+   "id": "daekimi_08",
+   "char": "daekimi",
+   "name": "삐짐 꼬리탁",
+   "use": "avoid",
+   "size": [
+    262,
+    260
+   ],
+   "sheet": "캐릭터 정보/character/대키미_성체_표정자세_v01/대키미_성체_표정자세_레퍼런스_v01.png",
+   "status": "시트 v01 (승인 상태 확인 필요)"
+  },
+  {
+   "id": "daekimi_09",
+   "char": "daekimi",
+   "name": "눈치 슬쩍",
+   "use": "general",
+   "size": [
+    239,
+    293
+   ],
+   "sheet": "캐릭터 정보/character/대키미_성체_표정자세_v01/대키미_성체_표정자세_레퍼런스_v01.png",
+   "status": "시트 v01 (승인 상태 확인 필요)"
+  },
+  {
+   "id": "daekimi_10",
+   "char": "daekimi",
+   "name": "애교 부비부비",
+   "use": "general",
+   "size": [
+    243,
+    289
+   ],
+   "sheet": "캐릭터 정보/character/대키미_성체_표정자세_v01/대키미_성체_표정자세_레퍼런스_v01.png",
+   "status": "시트 v01 (승인 상태 확인 필요)"
+  },
+  {
+   "id": "daekimi_11",
+   "char": "daekimi",
+   "name": "메롱 장난",
+   "use": "general",
+   "size": [
+    262,
+    290
+   ],
+   "sheet": "캐릭터 정보/character/대키미_성체_표정자세_v01/대키미_성체_표정자세_레퍼런스_v01.png",
+   "status": "시트 v01 (승인 상태 확인 필요)"
+  },
+  {
+   "id": "daekimi_12",
+   "char": "daekimi",
+   "name": "졸려 식빵",
+   "use": "sleep",
+   "size": [
+    261,
+    234
+   ],
+   "sheet": "캐릭터 정보/character/대키미_성체_표정자세_v01/대키미_성체_표정자세_레퍼런스_v01.png",
+   "status": "시트 v01 (승인 상태 확인 필요)"
+  }
+ ]
+}

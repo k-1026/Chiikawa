@@ -37,3 +37,30 @@ class GoodsDocTests(unittest.TestCase):
 
 if __name__ == '__main__':
     unittest.main()
+
+
+class PoseTests(unittest.TestCase):
+    def test_pose_library_and_yearly_rotation(self):
+        lib = G.pose_library()
+        self.assertEqual(len([p for p in lib if p['char'] == 'daekimi']), 12)
+        self.assertEqual(len([p for p in lib if p['char'] == 'oejimong']), 12)
+        a = G.choose_poses('both', 'keyring', 2027, 0, set())
+        b = G.choose_poses('both', 'keyring', 2028, 0, set())
+        self.assertNotEqual(a, b)                       # 해마다 다른 포즈
+        for pid in list(a.values()) + list(b.values()):
+            p = next(x for x in lib if x['id'] == pid)
+            self.assertEqual(p['use'], 'general')      # 경계·삐짐·시무룩 같은 분위기는 추천에서 제외
+        used = set(a.values())
+        c = G.choose_poses('both', 'keyring', 2027, 0, used)
+        self.assertFalse(set(c.values()) & used)       # 이미 쓴 포즈는 피함
+        self.assertTrue(C.compose('keyring', 'both', None, 0, a))
+
+    def test_recommendation_excludes_fixed_items(self):
+        seen = []
+        for _ in range(2):
+            out = G.recommend('우주 사투리 가족 청년', {'plan': {}, 'conditions': {}}, seen, [])
+            ks = [x['item'] for x in out['recommendations']]
+            self.assertFalse(set(ks) & set(G.FIXED))
+            self.assertEqual(len(ks), len(set(ks)))
+            self.assertFalse(set(ks) & set(seen))
+            seen += ks

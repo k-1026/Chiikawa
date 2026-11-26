@@ -172,7 +172,49 @@ def generate_image(prompt):
     if not img:raise GoodsError('시안 이미지를 받지 못했습니다.')
     return img  # base64 JPEG
 
-def create(store,uid,item,concept,count,who='both'):
+# ───────── 포즈 라이브러리 (공식 표정·자세 시트에서 오린 포즈)
+POSE_FILE=os.path.join(os.path.dirname(os.path.abspath(__file__)),'..','assets_v06','poses','poses.json')
+def pose_library():
+    try:return json.load(open(POSE_FILE,encoding='utf-8'))['poses']
+    except Exception:return []
+
+def pose_names(pose_field):
+    names={p['id']:p['name'] for p in pose_library()}
+    ids=[x for x in str(pose_field or '').split('|') if x]
+    return [names.get(i,i) for i in ids]
+
+def design_year(workspace):
+    import goods_doc_v06 as D
+    d=D.festival_date(workspace)
+    if d:return d.year
+    for src in ((workspace.get('plan') or {}).get('period'),(workspace.get('conditions') or {}).get('year'),(workspace.get('conditions') or {}).get('period')):
+        import re
+        m=re.search(r'(20\d{2})',str(src or ''))
+        if m:return int(m.group(1))
+    return time.localtime().tm_year
+
+def used_pose_ids(store,uid):
+    ensure_table(store)
+    with store.db() as db:
+        rows=db.execute("SELECT pose FROM goods_designs WHERE user_id=? AND pose<>''",(uid,)).fetchall()
+    out=set()
+    for r in rows:out.update(x for x in str(r['pose']).split('|') if x)
+    return out
+
+def choose_poses(who,item,year,variant,used,taken=()):
+    """연도·변형 번호로 돌려 가며 고르되, 지금까지 쓴 포즈는 피한다. 생김새는 같고 포즈만 달라진다."""
+    lib=pose_library();chars=['daekimi','oejimong'] if who=='both' else [who];out={}
+    for ch in chars:
+        pool=[p for p in lib if p['char']==ch and (p['use']=='general' or (p['use']=='sleep' and item in ('blanket',)))]
+        if not pool:continue
+        pool.sort(key=lambda p:p['id'])
+        start=(year-2027+variant*3+(7 if ch=='oejimong' else 0))%len(pool)
+        order=pool[start:]+pool[:start]
+        pick=next((p for p in order if p['id'] not in used and p['id'] not in taken),None) or next((p for p in order if p['id'] not in taken),order[0])
+        out[ch]=pick['id']
+    return out
+
+def create(store,uid,item,concept,count,who='both',year=None,pose_mode='auto'):
     import goods_compose_v06 as C
     if item not in ITEMS:raise GoodsError('지원하지 않는 굿즈 종류입니다.')
     if who not in ('both','daekimi','oejimong'):who='both'
@@ -181,16 +223,19 @@ def create(store,uid,item,concept,count,who='both'):
     count=max(1,min(3,int(count or 2)))
     ensure_table(store)
     prompt=make_prompt(item,concept);out=[]
+    used=used_pose_ids(store,uid) if pose_mode=='auto' else set();taken=set()
     for i in range(count):
         raw=None
         if prompt:
             try:raw=base64.b64decode(generate_image(prompt))
             except GoodsError:
                 if item in NEEDS_BG:raise
-        img=C.compose(item,who,raw,i)
+        poses=choose_poses(who,item,year or time.localtime().tm_year,i,used,taken) if pose_mode=='auto' else {}
+        taken.update(poses.values())
+        img=C.compose(item,who,raw,i,poses)
         did=secrets.token_hex(8)
         with store.db() as db:
-            db.execute('INSERT INTO goods_designs(id,user_id,item,concept,prompt,image,created_at,who,pose) VALUES(?,?,?,?,?,?,?,?,?)',(did,uid,item,concept,(prompt or '(배경 없음: 캐릭터 원본 합성)'),img,int(time.time()),who,''))
+            db.execute('INSERT INTO goods_designs(id,user_id,item,concept,prompt,image,created_at,who,pose) VALUES(?,?,?,?,?,?,?,?,?)',(did,uid,item,concept,(prompt or '(배경 없음: 캐릭터 원본 합성)'),img,int(time.time()),who,'|'.join(poses.values())))
         out.append({'id':did,'item':item,'concept':concept})
     return out
 
@@ -198,7 +243,7 @@ def list_designs(store,uid):
     ensure_table(store)
     with store.db() as db:
         rows=db.execute('SELECT id,item,concept,created_at,selected,who,pose FROM goods_designs WHERE user_id=? ORDER BY created_at DESC LIMIT 60',(uid,)).fetchall()
-    return [{'id':r['id'],'item':r['item'],'concept':r['concept'],'created_at':r['created_at'],'selected':bool(r['selected']),'who':r['who'],'pose':r['pose'],'item_name':ITEMS.get(r['item'],('굿즈',))[0]} for r in rows]
+    return [{'id':r['id'],'item':r['item'],'concept':r['concept'],'created_at':r['created_at'],'selected':bool(r['selected']),'who':r['who'],'pose':r['pose'],'pose_names':pose_names(r['pose']),'item_name':ITEMS.get(r['item'],('굿즈',))[0]} for r in rows]
 
 def history_items(store,uid):
     """지금까지 담당자가 선택한 품목(새 후보 추천에서 뺀다)."""
@@ -245,7 +290,9 @@ def _plan_info(store,uid,did,quantity,workspace):
     except (TypeError,ValueError):raise GoodsError('수량을 숫자로 입력해 주세요.')
     plan=workspace.get('plan') or {};cond=workspace.get('conditions') or {}
     name,_,spec,_=ITEMS[r['item']]
-    return {'item_key':r['item'],'item_name':name,'spec':spec,'concept':r['concept'],'did':str(did)[:40],'image_b64':r['image'],'who':r['who'],'pose':r['pose'],
+    lib={p['id']:p for p in pose_library()}
+    pose_txt=' / '.join('%s — %s (%s)'%({'daekimi':'대키미','oejimong':'외지몽'}.get(lib[i]['char'],''),lib[i]['name'],lib[i]['status']) for i in str(r['pose']).split('|') if i in lib)
+    return {'item_key':r['item'],'item_name':name,'spec':spec,'concept':r['concept'],'did':str(did)[:40],'image_b64':r['image'],'who':r['who'],'pose':pose_txt,
             'qty':qty,'festival_name':plan.get('festival_name') or '(축제명 미정)','host':plan.get('host') or cond.get('host') or '','budget_total':plan.get('budget_total') or cond.get('budget_total') or '',
             'festival':D.festival_date(workspace),'selected':bool(r['selected'])}
 

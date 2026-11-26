@@ -1,6 +1,6 @@
 """굿즈 시안 합성: 공식 캐릭터 원본 이미지(투명 PNG)를 그대로 굿즈 모양에 올린다.
 AI(FLUX)는 배경·제품 사진만 만들고, 캐릭터는 AI가 다시 그리지 않으므로 원본과 같다."""
-import base64,io,math
+import base64,io,math,threading
 from pathlib import Path
 from PIL import Image,ImageChops,ImageDraw,ImageFilter,ImageOps
 
@@ -8,10 +8,23 @@ ASSETS=Path(__file__).resolve().parents[1]/'assets_v06'
 CHARS={'daekimi':'hero_daekimi.png','oejimong':'hero_oejimong.png'}
 SIZE=1024
 
+_ctx=threading.local()   # 요청마다 다른 포즈를 쓰므로 스레드별로 보관한다
+POSE_DIR=ASSETS/'poses'
+
 def load(name):
+    """공식 캐릭터 이미지. 포즈 ID가 지정되면 공식 표정·자세 시트에서 오린 포즈를, 아니면 기본 포즈(hero)를 쓴다."""
+    pid=(getattr(_ctx,'poses',None) or {}).get(name)
+    f=POSE_DIR/(pid+'.png') if pid else None
+    if f and f.exists():
+        im=Image.open(f).convert('RGBA')
+        if im.height<420:   # 시트에서 오린 포즈는 작아서 2배로 키우고 살짝 선명하게 한다
+            im=im.resize((im.width*2,im.height*2),Image.LANCZOS).filter(ImageFilter.UnsharpMask(radius=1.4,percent=55,threshold=2))
+        return im
     return Image.open(ASSETS/CHARS[name]).convert('RGBA')
 
 def fit_h(img,h):
+    if img.width>img.height:   # 누운 포즈처럼 가로로 긴 그림은 가로를 기준으로 맞춘다
+        w=int(h*0.95);return img.resize((w,max(1,round(img.height*w/img.width))),Image.LANCZOS)
     w=round(img.width*h/img.height);return img.resize((w,h),Image.LANCZOS)
 
 def outline(img,px,color=(255,255,255,255)):
@@ -115,8 +128,12 @@ def magnet(who,bg_raw,variant=0):
 RENDER={'keyring':keyring,'sticker':sticker,'poster':poster,'ecobag':lambda w,b,v=0:worn(w,b,v,0.27,0.60),
         'tshirt':lambda w,b,v=0:worn(w,b,v,0.27,0.46),'magnet':magnet}
 
-def compose(item,who,bg_raw,variant=0):
-    img=RENDER[item](who,bg_raw,variant).convert('RGB')
+def compose(item,who,bg_raw,variant=0,poses=None):
+    _ctx.poses=poses or {}
+    try:
+        img=RENDER[item](who,bg_raw,variant).convert('RGB')
+    finally:
+        _ctx.poses={}
     buf=io.BytesIO();img.save(buf,'JPEG',quality=90);return base64.b64encode(buf.getvalue()).decode()
 
 
