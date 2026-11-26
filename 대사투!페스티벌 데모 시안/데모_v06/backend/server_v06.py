@@ -364,7 +364,7 @@ class Handler(BaseHTTPRequestHandler):
             import goods_v06 as G
             return self.output(plan_model(fields,goods=G.selected_designs(STORE,u['id']),part='summary' if b.get('part')=='summary' else 'full'))
         if p=='/api/export':
-            STORE.limit('export:'+str(u['id']),12,3600)
+            STORE.limit('export:'+str(u['id']),40,3600)  # 미리보기·다운로드가 모두 세어지므로 넉넉하게
             fields=b.get('fields') or STORE.workspace(u['id'])['plan']
             if not isinstance(fields,dict):raise Error('먼저 기획안을 작성해 주세요.')
             from urllib.parse import parse_qs
