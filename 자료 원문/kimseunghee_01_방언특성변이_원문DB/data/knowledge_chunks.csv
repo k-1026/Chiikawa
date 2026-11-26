@@ -1,0 +1,47 @@
+chunk_id,source_id,md_id,parent_section_id,source_block_id,order_no,info_type,short_title,text_original,text_is_excerpt,text_format,search_context,summary,author_interpretation,applies_to,condition_text,period_text,locator,related_chunk_ids,source_grade,text_check,verification_status,approval_status,version,char_count
+CHK-K01-NK98-001,SRC-K01-NKLIFE1998,MD-K01,SEC-K01-NKLIFE1998-01,BLK-K01-NKLIFE1998-01-01,1,fact,글 제목·필자,"동남 방언
+李相揆 경북대학교 국어국문학과 교수",false,lines,"새국어생활 '동남 방언', 필자 이상규(李相揆, 경북대 교수). 원문의 '李'는 호환 한자(U+F9E1) 그대로 둠. 발행 연도는 본문에 없음",,,경상 방언,,,새국어생활 1998_4/8-6 머리,,S,verified_in_stored_original,verified,approved,v1,25
+CHK-K01-NK98-002,SRC-K01-NKLIFE1998,MD-K01,SEC-K01-NKLIFE1998-01,BLK-K01-NKLIFE1998-01-02,2,fact,낙동강 경계 방언 분화,김해-밀양-창녕-의령-합천-고령-성주-칠곡-선산-상주로 이어지는 낙동강을 경계로 하여 동과 서로 구분되고 있어 자연 환경과 방언 분화의 상관 관계를 알 수 있다.,false,text,경상 방언이 낙동강을 경계로 동·서로 나뉨,,,경상 방언,,,본문,CHK-K01-NK98-003,S,verified_in_stored_original,verified,approved,v1,90
+CHK-K01-NK98-003,SRC-K01-NKLIFE1998,MD-K01,SEC-K01-NKLIFE1998-01,BLK-K01-NKLIFE1998-01-03,3,fact,ㅅ/ㅆ 비변별 지역,"청도, 경산, 달성, 칠곡, 고령,  군위, 영천, 경주, 청송, 포항, 영덕 지역, 곧 낙동강의 동쪽 지역으로 'ㅅ'과 'ㅆ'이 비변별적이다.",false,text,대구를 중심으로 한 낙동강 동쪽 지역은 ㅅ·ㅆ을 구별하지 않음(문장 앞부분 '대구를 중심으로 하여'와 이어짐),,,대구·경북 동남부,,,본문(각주 5 앞),CHK-K01-NK98-002;CHK-K01-NK98-004,S,verified_in_stored_original,verified,approved,v1,80
+CHK-K01-NK98-004,SRC-K01-NKLIFE1998,MD-K01,SEC-K01-NKLIFE1998-01,BLK-K01-NKLIFE1998-01-04,4,fact,서재극 ㅅ/ㅆ 구획선(각주),"서재극(19620), ｢경북 방언 연구｣,『어문학』 8호. p. 73. 에서 /ㅅ/ : /ㅆ/ 변별 방언권을 의성, 안동, 영양, 청송을 연결하는 지역과 대구, 경산, 영천, 경주를 연결하는 구획선으로 끊고 있다.",false,text,이상규 글의 각주 5가 인용한 서재극 『어문학』 8호의 ㅅ/ㅆ 구획선. 연도 '19620'은 원문 오기(1962로 읽힘),,,경북,,,각주 5,CHK-K01-NK98-003,S,verified_in_stored_original,verified,approved,v1,119
+CHK-K01-NK98-005,SRC-K01-NKLIFE1998,MD-K01,SEC-K01-NKLIFE1998-01,BLK-K01-NKLIFE1998-01-05,5,fact,하소체 어미 '-는구마',"'집에 가는 구마', '집에 가느마'라고 하여 '-는구마' 또는 '-느마'를 하소체 어미로 특별히 쓴다.",false,text,해당 지역의 하소체 어미 '-는구마/-느마'(앞 문장의 지역 지시는 원문 문맥 참고),,,대구 지역 말,,,본문 어미 설명,,S,verified_in_stored_original,verified,approved,v1,58
+CHK-K01-KU-001,SRC-K01-KU-125264,MD-K01,SEC-K01-KU-125264-01,BLK-K01-KU-125264-01-01,1,fact,논문 서지,"장혜진;차재은;신지영
+발행일
+2008
+저널명
+한국어학
+권
+41
+페이지
+381 ~ 402
+출판사
+한국어학회",false,lines,"한국어학 41권 381~402쪽, 2008, 한국어학회",,,학술,,,고려대 학술 저장소 상세,CHK-K01-KU-002,A,verified_in_stored_original,verified,approved,v1,58
+CHK-K01-KU-002,SRC-K01-KU-125264,MD-K01,SEC-K01-KU-125264-02,BLK-K01-KU-125264-02-01,2,fact,젊은 층이 /ɯ/·/ʌ/를 더 잘 지각,The younger subjects perceive these vowels better than the older subjects.,false,text,대구 방언 화자 중 젊은 층(20대)이 나이 든 층(40대 이상)보다 /ㅡ/·/ㅓ/를 더 잘 지각,,,대구 방언 화자,,,초록(영문),CHK-K01-KU-001;CHK-K01-KU-003,A,verified_in_stored_original,verified,approved,v1,74
+CHK-K01-KU-003,SRC-K01-KU-125264,MD-K01,SEC-K01-KU-125264-02,BLK-K01-KU-125264-02-02,3,procedure,실험 I: 인명 지각,Experiment I is a perception test on human names.,false,text,실험 I은 사람 이름 자극,,,대구 방언 화자,,,초록(영문),CHK-K01-KU-002,A,verified_in_stored_original,verified,approved,v1,49
+CHK-K01-KS-001,SRC-K01-KS-2026,MD-K01,SEC-K01-KS-2026-01,BLK-K01-KS-2026-01-01,1,fact,논문 서지,"Phonetics and Speech Sciences(말소리와 음성과학)
+Volume 18
+Issue 2/Pages.13-25/2026
+Published : 2026.06.30",false,lines,"말소리와 음성과학 18권 2호 13~25쪽, 2026-06-30",,,학술,,,KoreaScience 상세,CHK-K01-KS-002,A,verified_in_stored_original,verified,approved,v1,98
+CHK-K01-KS-002,SRC-K01-KS-2026,MD-K01,SEC-K01-KS-2026-02,BLK-K01-KS-2026-02-01,2,fact,젊은 세대일수록 평음 VOT 증가,"The results show that VOT values for lenis stops increase in younger generations, leading to a gradual convergence between the VOT of lenis and aspirated stops.",false,text,경북 방언 1950~2000년대생 비교: 젊을수록 평음 VOT가 길어져 격음과 가까워짐. 초록에 '대구' 명시 없음,,,경북 방언 화자,,,초록(영문),CHK-K01-KS-001,A,verified_in_stored_original,verified,approved,v1,160
+CHK-K01-KB0715-001,SRC-K01-NEWS-KB-20240715,MD-K01,SEC-K01-NEWS-KB-20240715-01,BLK-K01-NEWS-KB-20240715-01-01,1,fact,경북 방언 3개 권역,의문형어미를 중심으로 3개 권역으로 나누어진다.,true,text,이상규 칼럼: 경북 방언은 의문형 어미 기준 3개 권역,,,경북,,,본문,CHK-K01-KB0715-002,B,verified_in_snapshot_not_stored,verified,reference_only,v1,26
+CHK-K01-KB0715-002,SRC-K01-NEWS-KB-20240715,MD-K01,SEC-K01-NEWS-KB-20240715-01,BLK-K01-NEWS-KB-20240715-01-01,2,fact,권역별 의문형 어미,"안동을 중심으로 경북북부권은 ‘-니껴’권이고 대구경주권은 ‘-능교’(-능게)권이다. 낙동강 우측 선산에서 김천, 의성 일부지역은 ‘-여’권으로 나누어진다.",true,text,"북부 -니껴, 대구·경주 -능교(-능게), 선산~김천·의성 일부 -여",,,경북,,,본문,CHK-K01-KB0715-001,B,verified_in_snapshot_not_stored,verified,reference_only,v1,86
+CHK-K01-MD-001,SRC-K01-MD,MD-K01,SEC-K01-MD-01,BLK-K01-MD-01-01,1,rule,기간 예외 적용,기간 예외: 언어적 특성 설명용 과거 연구는 허용(지침 v2 §1),false,text,작성자 규칙: 언어 특성 과거 연구는 2022년 이전이어도 사용,,,사투리 조사 01(언어 특성),,,MD 머리말,,U,verified_in_stored_original,verified,internal,v1,37
+CHK-K01-MD-002,SRC-K01-MD,MD-K01,SEC-K01-MD-02,BLK-K01-MD-02-01,2,fact,대구 어미 표기 차이 메모,"01-01은 `-는구마`(하소체 어미), 01-07은 `-능교`(대구·경주권 의문형)로 표기",false,text,작성자 교차검증 메모: 두 자료의 어미 범주가 다를 수 있음,,,사투리 조사 01(언어 특성),,,MD 2. 교차검증·불일치,,U,verified_in_stored_original,verified,internal,v1,51
+CHK-K01-MD-003,SRC-K01-MD,MD-K01,SEC-K01-MD-02,BLK-K01-MD-02-01,3,fact,세대 간 모음 비교 보류,"01-03(2008, 대구 20대가 더 구별)과 01-06(2026, 경북 젊은층은 서울형으로 수렴)은 대상 변수가 달라 비교 불가",false,text,작성자 판단: 변수가 달라 비교 보류,,,사투리 조사 01(언어 특성),,,MD 2. 교차검증·불일치,,U,verified_in_stored_original,verified,internal,v1,73
+CHK-K01-MD-004,SRC-K01-MD,MD-K01,SEC-K01-MD-03,BLK-K01-MD-03-01,4,fact,언어 특성 자료는 정보,"01-01~01-07 모두 **정보** (활용성 수치 없음, 반복·운영 개념에 해당하지 않음)",false,text,작성자 판정,,,사투리 조사 01(언어 특성),,,MD 3. 자산/정보 판정,,U,verified_in_stored_original,verified,internal,v1,52
+CHK-K01-MD-005,SRC-K01-MD,MD-K01,SEC-K01-MD-04,BLK-K01-MD-04-01,5,fact,부족한 자료 목록,대구 시내 구·군별 변이 자료,false,text,작성자: 미확보 자료,,,사투리 조사 01(언어 특성),,,MD 4. 부족한 점,,U,verified_in_stored_original,verified,internal,v1,16
+CHK-K01-TOC-001,SRC-K01-NKLIFE1998-TOC,MD-K01,SEC-K01-NKLIFE1998-TOC-01,BLK-K01-NKLIFE1998-TOC-01-01,1,fact,목차의 '동남 방언' 필자,"동남 방언
+李相揆",false,lines,새국어생활 1998_4 목차의 '동남 방언 … 李相揆',,,학술,,,1998_4 목차,,S,verified_in_stored_original,verified,approved,v1,9
+CHK-K01-NK05-001,SRC-K01-NKLIFE2005,MD-K01,SEC-K01-NKLIFE2005-01,BLK-K01-NKLIFE2005-01-01,1,fact,의문형 종결 어미 기준 3가지 말씨,의문형 종결 어미의 사용 양상에 따라 대개 3가지 말씨로,false,text,"Aside 인용: 안동 중심 북동부 '하니껴체', 경주 중심 남동부 '하능교체', 상주·김천 중심 서북부 '해여체'. 대구는 따로 언급 없음",,,경북,,,"새국어생활 2005-4, 123~129쪽(쪽 미상)",,S,reported_by_aside_not_stored,aside_reported,pending,v1,31
+CHK-K01-RISS04-001,SRC-K01-RISS-0104,MD-K01,SEC-K01-RISS-0104-01,BLK-K01-RISS-0104-01-01,1,fact,학위논문 서지,"한국어 방언의 문말 억양 연구 : 대구 방언과 광주 방언의 문말 억양 비교
+이승현
+大邱 : 慶北大學校, 2000
+학위논문(석사) --경북대학교 대학원,국어국문학과 현대문학전공, 2000",false,lines,이승현 2000 경북대 석사. 제목은 '문말 억양'(MD의 '문미억양' 아님),,,대구·광주 방언,,,RISS 상세,,A,verified_in_stored_original,verified,approved,v1,103
+CHK-K01-RISS05-001,SRC-K01-RISS-0105,MD-K01,SEC-K01-RISS-0105-01,BLK-K01-RISS-0105-01-01,1,fact,논문 서지,"대구 방언 20대 화자의 단모음 실현 양상에 나타난 표준어 지향성의 성별적 차이
+Vol.36No.-[2007]
+289-314(26쪽)",false,lines,"장혜진·신지영, 한국어학 36, 289~314쪽, 2007",,,대구 방언 20대,,,RISS 상세,,A,verified_in_stored_original,verified,approved,v1,74
+CHK-K01-KSPDF-001,SRC-K01-KS-2026-PDF,MD-K01,SEC-K01-KS-2026-PDF-01,BLK-K01-KS-2026-PDF-01-01,1,condition,화자 출신 지역,대구시 및 경상북도에서 태어나 자란,false,text,"Aside 인용: 경북 방언 여성 모어 화자 50명(1950~2000년대생), 대구 출신 수는 미기재",,,경북 방언 화자(대구 포함),,,본문 연구 방법(쪽 미상),,A,reported_by_aside_not_stored,aside_reported,pending,v1,19
+CHK-K01-KCI-001,SRC-K01-KCI-SEARCH,MD-K01,SEC-K01-KCI-SEARCH-01,BLK-K01-KCI-SEARCH-01-01,1,fact,2022~2026 대구 방언 음운·억양 관련 논문(Aside),"대구 방언 /ㅡ/와 /ㅓ/의 세대별 음운 지각 및 산출 양상
+Tonology of Daegu Korean and an OT solution
+韓国語大邱･慶州方言の複合名詞アクセント
+지역민의 방언 의식에 기반한 대표 방언 어휘 선정을 위한 시론-대구광역시의 사례를 중심으로-",false,lines,"Aside가 KCI에서 찾은 2022~2026 논문 제목(박지윤 2022 언어연구 38(2), 손재현 2022·2023, 이재섭·강민지 2024 공공언어학 12). 개별 논문은 미대조",,,대구 방언,,2022~2026,KCI 검색 결과,,A,reported_by_aside_not_stored,aside_reported,pending,v1,150

@@ -1,0 +1,56 @@
+{
+  "template_id": "TPL-K01-TOPIC",
+  "md_id": "MD-K01",
+  "description": "kimseunghee 하위 키워드 문서(01~09) 고정 양식. 값이 아니라 양식만 담음",
+  "front_matter": [
+    "확장 키워드",
+    "자료 기준일·출처 등급",
+    "기간 예외"
+  ],
+  "sections": [
+    {
+      "key": "S0",
+      "title": "0. 핵심 요약",
+      "kind": "list",
+      "item_label": "[라벨] 내용"
+    },
+    {
+      "key": "S1",
+      "title": "1. (주제별 절)",
+      "kind": "grade_tables",
+      "subsections": [
+        "① 공식·학술",
+        "② 기사",
+        "③ 비공식"
+      ],
+      "columns": [
+        "ID",
+        "자료",
+        "내용",
+        "수치",
+        "라벨",
+        "출처"
+      ]
+    },
+    {
+      "key": "S2",
+      "title": "2. 교차검증·불일치",
+      "kind": "table",
+      "columns": [
+        "항목",
+        "내용",
+        "상태"
+      ]
+    },
+    {
+      "key": "S3",
+      "title": "3. 자산/정보 판정 (v1 3질문)",
+      "kind": "list"
+    },
+    {
+      "key": "S4",
+      "title": "4. 부족한 점",
+      "kind": "list"
+    }
+  ]
+}

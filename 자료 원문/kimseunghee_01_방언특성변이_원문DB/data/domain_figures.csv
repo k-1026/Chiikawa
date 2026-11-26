@@ -1,0 +1,6 @@
+record_id,domain,subject,metric,value_numeric,value_text,unit,currency,vat_basis,quantity_basis,base_year,period_start,period_end,value_status,source_id,chunk_id,claim_id,note,approval_status
+FIG-K01-001,spec,장혜진 외(2008) 한국어학 41,수록 쪽,,381 ~ 402,pages,,not_stated,,2008,,,reported,SRC-K01-KU-125264,CHK-K01-KU-001,CLM-K01-0103-01,,approved
+FIG-K01-002,spec,장혜진·신지영(2007) 한국어학 36,수록 쪽,,289-314(26쪽),pages,,not_stated,,2007,,,reported,SRC-K01-RISS-0105,CHK-K01-RISS05-001,CLM-K01-0105-01,,approved
+FIG-K01-003,spec,서민정(2026) 말소리와 음성과학 18(2),수록 쪽,,13-25,pages,,not_stated,,2026,,,reported,SRC-K01-KS-2026,CHK-K01-KS-001,CLM-K01-0106-01,,approved
+FIG-K01-004,statistic,서민정(2026) 연구 대상,화자 수,,,persons,,not_stated,,2026,,,unconfirmed,SRC-K01-KS-2026-PDF,CHK-K01-KSPDF-001,,"Aside 보고 50명(여성, 1950년대 8·60년대 6·70년대 7·80년대 7·90년대 12·2000년대 10) — 원문 미보관",pending
+FIG-K01-005,statistic,장혜진 외(2008) 초록,실험 수치,,,,,not_stated,,,,,not_available,SRC-K01-KU-125264,CHK-K01-KU-002,,초록에 수치 없음(MD와 같음),approved

@@ -1,0 +1,4 @@
+rule_id,rule_scope,rule_text,enforcement,condition_text,rule_source_id,rule_chunk_id,target_chunk_ids,approval_status
+RULE-K01-001,region,경북 방언 연구(01-06·01-07 등)는 대구 방언의 사실로 일반화하지 않는다. 대구 포함 여부는 원문 표본 정의로 확인한다.,warn,applies_to 에 경북·경상,SRC-K01-MD,CHK-K01-MD-001,,approved
+RULE-K01-002,citation,서지가 확인되지 않은 논문은 인용하지 않는다(01-04·01-05는 RISS로 서지 확인 후 사용).,block,서지 미확인,,,,approved
+RULE-K01-003,independence,같은 필자(이상규)의 글은 독립 근거 1건으로 센다(01-01·01-02·01-07).,warn,필자 동일,,,,approved

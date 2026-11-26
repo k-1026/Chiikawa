@@ -1,0 +1,10 @@
+issue_id,issue_type,claim_ids,source_ids,description,next_action
+ISS-K01-001,mismatch,CLM-K01-S0-01,SRC-K01-KCI-SEARCH,'2022~2026 대구 방언 음운·억양 연구 못 찾음' → Aside KCI 검색에서 박지윤(2022)·손재현(2022·2023) 등 발견,"MD 갱신, 개별 논문 원문 확인"
+ISS-K01-002,title_mismatch,CLM-K01-0104-01,SRC-K01-RISS-0104,"01-04 제목 '문미억양' → 실제 '문말 억양 연구', 경북대 석사 2000",MD 서지 보완
+ISS-K01-003,resolved,CLM-K01-0105-01,SRC-K01-RISS-0105,"01-05 서지 확인: 한국어학 36, 289~314쪽, 2007",MD 서지 보완
+ISS-K01-004,scope_mismatch,CLM-K01-0106-03,SRC-K01-KS-2026-PDF,"01-06 본문은 '대구시 및 경상북도' 출신 화자 — 대구 포함(Aside, 미보관)",MD 라벨 '대구 포함 가능성' → '대구 포함(인원 미상)'
+ISS-K01-005,resolved,CLM-K01-0102-01,SRC-K01-NKLIFE2005,"01-02 PDF 확인(Aside): 이상규, 15권 4호(2005 겨울) 123~129쪽, 3가지 말씨 — 대구는 따로 언급 없음",PDF 저장 후 인용 보류 해제 검토
+ISS-K01-006,official_typo,CLM-K01-0101-04,SRC-K01-NKLIFE1998,1998 글 각주의 서재극 연도가 '19620'으로 오기,인용 시 1962로 표기하고 원문 오기 주석
+ISS-K01-007,resolved_note,CLM-K01-X-01,SRC-K01-NKLIFE1998;SRC-K01-NEWS-KB-20240715,'-는구마'(하소체)와 '-능교'(의문형)는 원문상 다른 범주 — '부분 일치' 판단 해소 가능,MD 2절 갱신
+ISS-K01-008,broken_links,,SRC-K01-MD,MD의 [00_개요.md] 링크가 파일명 정리 이후 없는 경로(실제 kimseunghee_00_개요.md),링크 수정
+ISS-K01-009,ocr_unreviewed,,,"OCR 대상 없음. 단, Aside 보고로 1998 PDF 일부 쪽 머리글에 OCR 오류가 있음(이 패키지는 HTML판 사용)",

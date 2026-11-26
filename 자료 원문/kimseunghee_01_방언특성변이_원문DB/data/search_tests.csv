@@ -1,0 +1,12 @@
+test_id,query,include_reference,expected_chunk_id,note
+ST-K01-01,낙동강,false,CHK-K01-NK98-002,낙동강 경계
+ST-K01-02,비변별,false,CHK-K01-NK98-003,ㅅ/ㅆ 비변별 지역
+ST-K01-03,서재극,false,CHK-K01-NK98-004,구획선 각주
+ST-K01-04,하소체,false,CHK-K01-NK98-005,-는구마
+ST-K01-05,perceive,false,CHK-K01-KU-002,모음 지각 결과
+ST-K01-06,한국어학,false,CHK-K01-KU-001,2008 서지
+ST-K01-07,VOT,false,CHK-K01-KS-002,세대별 VOT
+ST-K01-08,문말 억양,false,CHK-K01-RISS04-001,이승현 석사
+ST-K01-09,성별적 차이,false,CHK-K01-RISS05-001,장혜진·신지영 2007
+ST-K01-10,능교,true,CHK-K01-KB0715-002,3권역 의문형 어미(칼럼)
+ST-K01-11,이상규,false,CHK-K01-NK98-001,필자(검색 보조 설명의 한글 이름)

@@ -1,0 +1,2 @@
+md_id,repo_path,git_branch,last_commit_sha,branch_head_sha,git_blob_sha,file_sha256,title,written_date,md_version,source_id,notes
+MD-K01,local 리서치/kimseunghee_01_방언특성변이.md,main,5f61dc486f15fe7db07c025d9e9d065fcc32dda0,4e59da85f1885e108881d939448706f18b049a90,c05200d409356beb086acf2a686f40641a43f121,89c88b8848bfe38d231d26d0fe97a4b86c2c2ad4a6e1748f7654cebe3ced567f,01. 대구 방언의 언어적 특성 및 지역별 변이,2026-10-31,사투리_v02_V4,SRC-K01-MD,written_date 는 문서의 '자료 기준일'. 2026-11-26 main 기준. 원본은 originals/SRC-K01-MD.md

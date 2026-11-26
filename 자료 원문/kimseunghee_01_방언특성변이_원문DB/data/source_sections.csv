@@ -1,0 +1,49 @@
+section_id,source_id,parent_section_id,level,order_no,title,block_type,locator
+SEC-K01-MD-00,SRC-K01-MD,,document,0,01. 대구 방언의 언어적 특성 및 지역별 변이 (kimseunghee_01_방언특성변이.md),,문서 전체
+SEC-K01-NKLIFE1998-00,SRC-K01-NKLIFE1998,,document,0,동남 방언,,문서 전체
+SEC-K01-KU-125264-00,SRC-K01-KU-125264,,document,0,대구 방언 화자의 /ㅡ/와 /ㅓ/ 지각에 관한 연구,,문서 전체
+SEC-K01-KS-2026-00,SRC-K01-KS-2026,,document,0,경북 방언 어두 폐쇄음 음향 특징의 세대별 변화 양상 연구,,문서 전체
+SEC-K01-NEWS-KB-20240715-00,SRC-K01-NEWS-KB-20240715,,document,0,"민경탁 시인의 ""다음 김천 장날 또 바여""(이상규의 詩와 方言이야기)",,문서 전체
+SEC-K01-NKLIFE1998-TOC-00,SRC-K01-NKLIFE1998-TOC,,document,0,새국어생활 1998년 4호 목차,,문서 전체
+SEC-K01-NKLIFE2005-00,SRC-K01-NKLIFE2005,,document,0,"경상북도 방언 이야기(새국어생활 제15권 제4호, 2005 겨울, 123~129쪽)",,문서 전체
+SEC-K01-RISS-0104-00,SRC-K01-RISS-0104,,document,0,한국어 방언의 문말 억양 연구 : 대구 방언과 광주 방언의 문말 억양 비교,,문서 전체
+SEC-K01-RISS-0105-00,SRC-K01-RISS-0105,,document,0,대구 방언 20대 화자의 단모음 실현 양상에 나타난 표준어 지향성의 성별적 차이,,문서 전체
+SEC-K01-KS-2026-PDF-00,SRC-K01-KS-2026-PDF,,document,0,경북 방언 어두 폐쇄음 음향 특징의 세대별 변화 양상 연구(본문 PDF),,문서 전체
+SEC-K01-KCI-SEARCH-00,SRC-K01-KCI-SEARCH,,document,0,"KCI 논문검색 결과(2026-11-26): '대구 방언'·'대구 지역어', 2022~2026",,문서 전체
+SEC-K01-NKLIFE1998-01,SRC-K01-NKLIFE1998,SEC-K01-NKLIFE1998-00,section,1,동남 방언,,동남 방언
+BLK-K01-NKLIFE1998-01-01,SRC-K01-NKLIFE1998,SEC-K01-NKLIFE1998-01,block,1,머리,meta,새국어생활 1998_4/8-6 머리
+BLK-K01-NKLIFE1998-01-02,SRC-K01-NKLIFE1998,SEC-K01-NKLIFE1998-01,block,2,방언 분화 문단,sentence,본문
+BLK-K01-NKLIFE1998-01-03,SRC-K01-NKLIFE1998,SEC-K01-NKLIFE1998-01,block,3,음운 문단,sentence,본문(각주 5 앞)
+BLK-K01-NKLIFE1998-01-04,SRC-K01-NKLIFE1998,SEC-K01-NKLIFE1998-01,block,4,각주 5,footnote,각주 5
+BLK-K01-NKLIFE1998-01-05,SRC-K01-NKLIFE1998,SEC-K01-NKLIFE1998-01,block,5,어미 문단,sentence,본문 어미 설명
+SEC-K01-KU-125264-01,SRC-K01-KU-125264,SEC-K01-KU-125264-00,section,1,서지,,서지
+BLK-K01-KU-125264-01-01,SRC-K01-KU-125264,SEC-K01-KU-125264-01,block,1,서지 정보,meta,고려대 학술 저장소 상세
+SEC-K01-KU-125264-02,SRC-K01-KU-125264,SEC-K01-KU-125264-00,section,2,초록(영문),,초록(영문)
+BLK-K01-KU-125264-02-01,SRC-K01-KU-125264,SEC-K01-KU-125264-02,block,1,결과 문단,sentence,초록(영문)
+BLK-K01-KU-125264-02-02,SRC-K01-KU-125264,SEC-K01-KU-125264-02,block,2,실험 문단,sentence,초록(영문)
+SEC-K01-KS-2026-01,SRC-K01-KS-2026,SEC-K01-KS-2026-00,section,1,서지,,서지
+BLK-K01-KS-2026-01-01,SRC-K01-KS-2026,SEC-K01-KS-2026-01,block,1,서지 정보,meta,KoreaScience 상세
+SEC-K01-KS-2026-02,SRC-K01-KS-2026,SEC-K01-KS-2026-00,section,2,초록(영문),,초록(영문)
+BLK-K01-KS-2026-02-01,SRC-K01-KS-2026,SEC-K01-KS-2026-02,block,1,결과 문단,sentence,초록(영문)
+SEC-K01-NEWS-KB-20240715-01,SRC-K01-NEWS-KB-20240715,SEC-K01-NEWS-KB-20240715-00,section,1,기사 본문,,기사 본문
+BLK-K01-NEWS-KB-20240715-01-01,SRC-K01-NEWS-KB-20240715,SEC-K01-NEWS-KB-20240715-01,block,1,권역 문단,sentence,본문
+SEC-K01-MD-01,SRC-K01-MD,SEC-K01-MD-00,section,1,머리말,,머리말
+BLK-K01-MD-01-01,SRC-K01-MD,SEC-K01-MD-01,block,1,머리말,md_text,MD 머리말
+SEC-K01-MD-02,SRC-K01-MD,SEC-K01-MD-00,section,2,2. 교차검증·불일치,,2. 교차검증·불일치
+BLK-K01-MD-02-01,SRC-K01-MD,SEC-K01-MD-02,block,1,2. 교차검증·불일치,md_text,MD 2. 교차검증·불일치
+SEC-K01-MD-03,SRC-K01-MD,SEC-K01-MD-00,section,3,3. 자산/정보 판정,,3. 자산/정보 판정
+BLK-K01-MD-03-01,SRC-K01-MD,SEC-K01-MD-03,block,1,3. 자산/정보 판정,md_text,MD 3. 자산/정보 판정
+SEC-K01-MD-04,SRC-K01-MD,SEC-K01-MD-00,section,4,4. 부족한 점,,4. 부족한 점
+BLK-K01-MD-04-01,SRC-K01-MD,SEC-K01-MD-04,block,1,4. 부족한 점,md_text,MD 4. 부족한 점
+SEC-K01-NKLIFE1998-TOC-01,SRC-K01-NKLIFE1998-TOC,SEC-K01-NKLIFE1998-TOC-00,section,1,목차,,목차
+BLK-K01-NKLIFE1998-TOC-01-01,SRC-K01-NKLIFE1998-TOC,SEC-K01-NKLIFE1998-TOC-01,block,1,특집·방언,list,1998_4 목차
+SEC-K01-NKLIFE2005-01,SRC-K01-NKLIFE2005,SEC-K01-NKLIFE2005-00,section,1,본문,,본문
+BLK-K01-NKLIFE2005-01-01,SRC-K01-NKLIFE2005,SEC-K01-NKLIFE2005-01,block,1,말씨권 문단,sentence,"새국어생활 2005-4, 123~129쪽(쪽 미상)"
+SEC-K01-RISS-0104-01,SRC-K01-RISS-0104,SEC-K01-RISS-0104-00,section,1,서지,,서지
+BLK-K01-RISS-0104-01-01,SRC-K01-RISS-0104,SEC-K01-RISS-0104-01,block,1,서지 정보,meta,RISS 상세
+SEC-K01-RISS-0105-01,SRC-K01-RISS-0105,SEC-K01-RISS-0105-00,section,1,서지,,서지
+BLK-K01-RISS-0105-01-01,SRC-K01-RISS-0105,SEC-K01-RISS-0105-01,block,1,서지 정보,meta,RISS 상세
+SEC-K01-KS-2026-PDF-01,SRC-K01-KS-2026-PDF,SEC-K01-KS-2026-PDF-00,section,1,본문,,본문
+BLK-K01-KS-2026-PDF-01-01,SRC-K01-KS-2026-PDF,SEC-K01-KS-2026-PDF-01,block,1,연구 대상,sentence,본문 연구 방법(쪽 미상)
+SEC-K01-KCI-SEARCH-01,SRC-K01-KCI-SEARCH,SEC-K01-KCI-SEARCH-00,section,1,검색 결과,,검색 결과
+BLK-K01-KCI-SEARCH-01-01,SRC-K01-KCI-SEARCH,SEC-K01-KCI-SEARCH-01,block,1,2022~2026 음운·억양·어휘,list,KCI 검색 결과
