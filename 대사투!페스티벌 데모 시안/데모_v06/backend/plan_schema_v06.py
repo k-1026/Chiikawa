@@ -6,6 +6,11 @@ from pathlib import Path
 TEMPLATE=json.loads((Path(__file__).resolve().parent.parent/'plan_template_v06.json').read_text())
 KEYS=tuple(k for s in TEMPLATE['sections'] for k in s['fields'])+('missing',)
 TABLES=TEMPLATE['tables']
+# 설명 글을 쓰는 장 (저장 키, 장 제목). 고정 양식의 순서와 같다.
+NARRATIVE_CHAPTERS=(('overview','사업 요약'),('background','1. 추진 배경 · 필요성'),('purpose','2. 목적 · 컨셉 · 차별화'),('outline','3. 축제 개요'),
+    ('programs','4. 프로그램 운영 계획'),('space','5. 공간 구성 · 동선'),('organization','6. 추진 체계 · 일정'),('promotion','7. 홍보 계획'),
+    ('safety','8. 안전관리 계획'),('budget','9. 사업비 계획'),('effects','10. 기대효과 · 성과 측정'),('goods','11. 굿즈 운영 계획'))
+NARR_MAX=7000
 def text(value):
     if value is None:return ''
     if isinstance(value,(dict,list)):return json.dumps(value,ensure_ascii=False)
@@ -20,6 +25,9 @@ def normalize_plan(fields):
         if spec['kind']=='scalar':result[key]=[text(v) for v in rows if not isinstance(v,(dict,list))]
         elif spec['kind']=='array':result[key]=[[text(row[i]) if i<len(row) else '' for i in range(len(spec['keys']))] for row in rows if isinstance(row,list)]
         else:result[key]=[{col:text(row.get(col)) for col in spec['keys']} for row in rows if isinstance(row,dict)]
+    narr=source.get('narr') if isinstance(source.get('narr'),dict) else {}
+    written={k:str(narr[k])[:NARR_MAX] for k,_ in NARRATIVE_CHAPTERS if isinstance(narr.get(k),str) and narr[k].strip()}
+    if written:result['narr']=written
     if isinstance(source.get('_searches'),list):result['_searches']=[v for v in source['_searches'] if isinstance(v,str)]
     return result
 
@@ -48,6 +56,37 @@ def apply_fixed(fields,generated=False):
         done={TEMPLATE['labels'].get(k) for k in list(FIXED['always'])+list(FIXED['when_blank'])}
         out['missing']=[v for v in out['missing'] if v not in done]
     return out
+CONDITION_KEYS=('period','place','host','concept','goal','visitors','budget_total')
+def condition_values(conditions):
+    """담당자가 02 조건 선택에 저장한 값 중 기획안에 그대로 써야 하는 것. '산정 요청'처럼 값이 아닌 것은 뺀다."""
+    c=conditions if isinstance(conditions,dict) else {}
+    get=lambda k:str(c.get(k) or '').strip()
+    out={k:get(k) for k in ('place','host','concept','goal') if not is_blank(get(k))}
+    year=re.sub(r'\D','',get('year'));period=get('period')
+    if period and not is_blank(period):
+        out['period']=period if not year or year in period else year+'년 '+period
+    m=re.search(r'[\d,]+\s*(?:천|만)?\s*명[^·]*',get('scale'))
+    if m:out['visitors']=m.group(0).strip()
+    budget=get('budget_total')
+    if budget and not is_blank(budget) and '산정' not in budget:out['budget_total']=budget
+    return out
+def apply_conditions(fields,conditions):
+    """AI가 새로 쓴 초안에 조건 값을 덮어쓴다. 조건에 적은 프로그램이 빠졌으면 이름을 넣는다."""
+    out=dict(fields);out.update(condition_values(conditions))
+    wanted=[v.strip() for v in re.split(r'\s*(?:·|,|/|\n)\s*',str((conditions or {}).get('programs') or '')) if v.strip() and not is_blank(v.strip())]
+    rows=[dict(r) for r in (out.get('programs') or []) if isinstance(r,dict)]
+    have=[''.join(str(r.get('name','')).split()) for r in rows]
+    missing=[{'name':w,'desc':''} for w in wanted if not any(''.join(w.split()) in n or (n and n in ''.join(w.split())) for n in have)]
+    if wanted:out['programs']=missing+rows
+    if isinstance(out.get('missing'),list):
+        done={TEMPLATE['labels'].get(k) for k in condition_values(conditions)}
+        out['missing']=[v for v in out['missing'] if v not in done]
+    return out
+def previous_for_ai(plan):
+    """이전 초안을 AI에게 줄 때, 조건에서 오는 값과 긴 설명 글은 뺀다(예전 값이 새 조건을 이기지 않게)."""
+    if not isinstance(plan,dict):return plan
+    return {k:v for k,v in plan.items() if k not in CONDITION_KEYS+('narr',)}
+
 def map_blocks():
     m=FIXED['map'];path=ROOT/m['image']
     blocks=[{'t':'h3','text':m['title']}]
@@ -87,7 +126,7 @@ def summary_model(fields,goods):
         'foot':'대사투! 페스티벌 · 요약본'}
 
 def plan_model(fields,goods=None,part='full',final=None):
-    fields=apply_fixed(normalize_plan(fields));sections=[]
+    fields=apply_fixed(normalize_plan(fields))
     if part=='summary':
         model=summary_model(fields,goods)
         if final:
@@ -95,28 +134,5 @@ def plan_model(fields,goods=None,part='full',final=None):
             tail['blocks']=tail['blocks'][:-1]
             return mark_final(model,final)
         return model
-    for section in TEMPLATE['sections']:
-        blocks=[]
-        for key in section['fields']:
-            value=fields[key]
-            if key in TABLES:
-                spec=TABLES[key];rows=value or ([['']*len(spec['keys'])] if spec['kind']=='array' else [{}])
-                rows=[[text(row.get(c)) for c in spec['keys']] if isinstance(row,dict) else row for row in rows]
-                blocks.extend([{'t':'h3','text':TEMPLATE['labels'][key]},{'t':'table','hdr':'col','rows':[spec['headers']]+rows}])
-            else:blocks.append({'t':'table','hdr':'row','rows':[[TEMPLATE['labels'][key],value]]})
-        if section['title'].startswith('3.'):
-            blocks.extend(map_blocks())
-        if section['title'].startswith('5.'):
-            blocks.insert(0,{'t':'table','hdr':'row','rows':[['총 사업비',fields['budget_total']]]})
-        if section['title'].startswith('7.') and not final:
-            blocks.append({'t':'table','hdr':'col','rows':[['점검 항목','상태'],['예산 편성','초안 있음' if fields['budget_total'] else '미정'],['전담 인력 편성','초안 있음' if fields['safety_staff'] or fields['scale'] else '미정'],['방문객 추산','초안 있음' if fields['visitors'] else '미정'],['안전계획 수립','별도 확인 필요']]})
-        if section['title'].startswith('8.'):
-            tail=[['서약서 · 개인정보 동의서','공고 서식으로 별도 작성']]
-            if not final:tail.append(['추가로 확인할 사항','\n'.join(fields['missing'])])
-            blocks.append({'t':'table','hdr':'row','rows':tail})
-        title=section['title'].replace('자체 점검','성과지표') if final else section['title']
-        sections.append({'h':title,'blocks':blocks})
-    import goods_doc_v06 as GD
-    sections.append({'h':'9. 굿즈 운영 및 성과품 납품','blocks':GD.goods_part_blocks(goods,fields['concept'],final=bool(final))})
-    model={'title':TEMPLATE['title'],'subtitle':'검토용 초안 · 고정 양식 · 본문','warn':['공식 제출 서식이 아닌 검토용 초안입니다. 미정·가정·추정 항목과 해당 공고의 제출 양식을 확인해 주세요.'],'sections':sections,'foot':'대사투! 페스티벌 · v06 · 고정 양식'}
-    return mark_final(model,final) if final else model
+    import plan_form_v06 as FORM
+    return FORM.build(fields,goods=goods,final=final)

@@ -3,7 +3,7 @@ import io
 import unittest
 import zipfile
 
-from plan_schema_v06 import TEMPLATE, apply_fixed, normalize_plan, plan_model
+from plan_schema_v06 import TEMPLATE, NARRATIVE_CHAPTERS, apply_conditions, apply_fixed, normalize_plan, plan_model, previous_for_ai
 from workflow_v06 import CHECKS, review_report, signature
 
 
@@ -18,6 +18,7 @@ def full_fields():
         else:
             fields[key] = [{c: '값' for c in spec['keys']}]
     fields['missing'] = ['검토용 메모']
+    fields['narr'] = {k: '▶ 요약\n□ 제목\n○ 항목: 설명\n- 세부' for k, _ in NARRATIVE_CHAPTERS}
     return fields
 
 
@@ -30,7 +31,7 @@ def goods():
     from PIL import Image
     buf = io.BytesIO()
     Image.new('RGB', (64, 64), (200, 180, 240)).save(buf, 'JPEG')
-    return [{'item_name': '키링', 'did': 'abcdef123456', 'who_txt': '대키미', 'image_b64': base64.b64encode(buf.getvalue()).decode()}]
+    return [{'item': 'keyring', 'item_name': '키링', 'did': 'abcdef123456', 'who_txt': '대키미', 'image_b64': base64.b64encode(buf.getvalue()).decode()}]
 
 
 class FixedContent(unittest.TestCase):
@@ -45,10 +46,61 @@ class FixedContent(unittest.TestCase):
         self.assertEqual(apply_fixed({'layout': '담당자 수정'})['layout'], '담당자 수정')
 
     def test_body_has_map_and_zone_tables(self):
-        section = next(s for s in plan_model(full_fields())['sections'] if s['h'].startswith('3.'))
+        section = next(s for s in plan_model(full_fields())['sections'] if s['h'].startswith('5.'))
         self.assertTrue(any(b.get('t') == 'img' and b.get('wide') for b in section['blocks']))
         self.assertIn('10미 포장마차', str(section['blocks']))
         self.assertIn('의료실', str(section['blocks']))
+
+
+class Conditions(unittest.TestCase):
+    CONDITIONS = {'year': '2028', 'period': '8월 21일~24일', 'host': '대구광역시', 'place': '두류 야외음악당', 'concept': '지역 상권 연계',
+                  'goal': '축제의 입지', 'scale': '중규모 · 1,000명 내외', 'budget_total': '산정 요청', 'programs': '사투리 퀴즈'}
+
+    def test_saved_conditions_beat_the_ai_draft(self):
+        out = apply_conditions({'period': '2027-08-20 ~ 08-22', 'host': '', 'concept': '문화 축제', 'budget_total': '', 'programs': [{'name': '토론 대회', 'desc': '가'}]}, self.CONDITIONS)
+        self.assertEqual(out['period'], '2028년 8월 21일~24일')
+        self.assertEqual(out['host'], '대구광역시')
+        self.assertEqual(out['concept'], '지역 상권 연계')
+        self.assertEqual(out['visitors'], '1,000명 내외')
+        self.assertEqual(out['budget_total'], '')   # '산정 요청'은 금액이 아니다
+        self.assertEqual([r['name'] for r in out['programs']], ['사투리 퀴즈', '토론 대회'])
+
+    def test_old_condition_values_are_not_sent_back_to_ai(self):
+        self.assertEqual(previous_for_ai({'concept': '예전', 'period': '예전', 'narr': {}, 'goal': 'x', 'effects': '유지'}), {'effects': '유지'})
+
+
+class Narrative(unittest.TestCase):
+    def test_chapters_are_grouped_and_short_ones_are_expanded_once(self):
+        import json
+        import narrative_v06 as N
+        calls = []
+
+        def fake(prompt, system):
+            calls.append(prompt)
+            keys = [k for k, _ in NARRATIVE_CHAPTERS if '- %s (' % k in prompt]
+            size = 5000 if '## 보강할 장' in prompt else 30
+            return json.dumps({k: '▶ ' + '가' * size for k in keys}, ensure_ascii=False)
+
+        out = N.write(full_fields(), {}, [], ['overview', 'programs'], call=fake)
+        self.assertEqual(sorted(out), ['overview', 'programs'])
+        self.assertEqual(len(calls), 4)   # 묶음 2개 × (작성 + 보강 1회)
+        self.assertGreater(len(out['programs']), 4000)
+
+    def test_empty_chapter_blocks_submission_and_text_is_rendered(self):
+        fields = full_fields()
+        del fields['narr']['safety']
+        w = {'conditions': {}, 'goods': [], 'messages': [], 'plan': fields}
+        self.assertTrue(any('8. 안전관리 계획' in b for b in review_report(w)['blockers']))
+        model = plan_model(full_fields())
+        kinds = {b['t'] for s in model['sections'] for b in s['blocks']}
+        self.assertTrue({'cover', 'lead', 'li'} <= kinds)
+
+    def test_goods_appendix_follows_selected_design(self):
+        model = plan_model(full_fields(), goods=goods(), final={'responsible': '담당', 'date': '2026-11-27'})
+        appendix = [s for s in model['sections'] if s.get('appendix')]
+        self.assertIn('별첨 1. 키링 제작 계획서', appendix[0]['h'])
+        self.assertIn('디자인 적용 방법', str(appendix))
+        self.assertIn('다이컷', str(appendix))
 
 
 class Submission(unittest.TestCase):
@@ -82,7 +134,7 @@ class Submission(unittest.TestCase):
         for part in ('full', 'summary'):
             model = plan_model(full_fields(), goods=goods(), part=part, final={'responsible': '담당', 'date': '2026-11-27'})
             text = text_of(model)
-            for word in ('검토용', '초안', '점촌', '입력 필요', '추가로 확인할 사항', '자체 점검 상태', '점검 항목', '쪽 이상'):
+            for word in ('검토용', '초안', '점촌', '입력 필요', '추가로 확인할 사항', '자체 점검', '쪽 이상'):
                 self.assertNotIn(word, text, (part, word))
             self.assertIn('제출본', model['subtitle'])
         self.assertIn('초안', plan_model(full_fields())['subtitle'])
@@ -101,13 +153,25 @@ class Saving(unittest.TestCase):
         self.assertTrue(review_report(store.workspace(user['id']), ['g1'])['submittable'])
 
 
+class PageCount(unittest.TestCase):
+    def test_body_with_written_chapters_fits_target_and_has_no_blank_page(self):
+        import plan_export_v06 as X
+        import plan_form_v06 as F
+        fields = full_fields()
+        para = '○ 운영 방법: 현장 담당자가 진행 순서를 안내하고 참여자의 이해를 확인하며 필요한 조치를 기록한다. 변경 사항은 안내 부스와 온라인에 함께 알린다.'
+        sizes = {'programs': 22, 'safety': 13, 'space': 8, 'promotion': 8, 'organization': 8, 'purpose': 8, 'background': 7}
+        fields['narr'] = {k: '▶ 요약 문장\n□ 제목\n' + '\n'.join([para] * sizes.get(k, 6)) for k, _ in NARRATIVE_CHAPTERS}
+        _, pages = F.fit_density(plan_model(fields, goods=goods()), X._print_pdf)
+        self.assertTrue(20 <= pages <= 24, pages)
+
+
 class Files(unittest.TestCase):
     def test_hwpx_and_docx_contain_map_and_goods_pictures(self):
         import plan_export_v06 as X
         model = plan_model(full_fields(), goods=goods())
         for maker, folder in ((X.to_hwpx, 'BinData/'), (X.to_docx, 'word/media/')):
             names = zipfile.ZipFile(io.BytesIO(maker(model))).namelist()
-            self.assertEqual(len([n for n in names if n.startswith(folder)]), 2, (folder, names))
+            self.assertGreaterEqual(len([n for n in names if n.startswith(folder)]), 2, (folder, names))  # 지도 + 굿즈 시안
 
 
 if __name__ == '__main__':

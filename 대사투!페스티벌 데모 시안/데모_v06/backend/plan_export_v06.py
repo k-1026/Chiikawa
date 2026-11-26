@@ -40,6 +40,14 @@ th{background:#EEE8F7;color:#413053;font-weight:700}tbody tr:nth-child(even) td{
 .blank{color:#8F4929;background:#FFF0E6;padding:0 3px;font-size:9pt}
 .compact{font-size:9.2pt;line-height:1.4}.compact h1{font-size:16pt;margin-bottom:6px}.compact h2{font-size:11.5pt;margin:9px 0 4px;padding:3px 7px}.compact table{margin:4px 0 7px;font-size:8.8pt}.compact th,.compact td{padding:3px 6px}.compact .warn{padding:5px 9px;font-size:8.5pt;margin:5px 0}.compact p{margin:3px 0}.compact .foot{margin-top:8px;padding-top:4px}
 .pb{break-after:page;page-break-after:always;height:0;margin:0}
+.cover{text-align:center;padding-top:60mm}.cover p{font-size:13pt;margin:10px 0}.cover p:first-child{font-size:19pt;font-weight:700;margin-bottom:26px}
+.lead{background:#F6F3FC;border-left:3px solid #7955AE;padding:7px 11px;margin:6px 0;break-inside:avoid}
+.li1{margin:5px 0 3px 4mm;padding-left:4.5mm;text-indent:-4.5mm}.li2{margin:2px 0 2px 10mm;padding-left:3mm;text-indent:-3mm}
+.form{line-height:1.6}.form table{margin:6px 0 9px}.form th,.form td{padding:5px 8px}.form h2{margin-top:12px}.form h3{margin:9px 0 4px}
+.form.d-1{font-size:10.2pt;line-height:1.52}.form.d-1 table{font-size:9.1pt}.form.d-1 th,.form.d-1 td{padding:4px 7px}
+.form.d-2{font-size:9.9pt;line-height:1.45}.form.d-2 table{font-size:8.9pt}.form.d-2 th,.form.d-2 td{padding:3px 6px}.form.d-2 .fig.wide img{width:90%}
+.form.d1{font-size:11pt;line-height:1.75}.form.d2{font-size:11.4pt;line-height:1.9}
+.newpage{break-before:page;page-break-before:always;margin-top:0}
 .fig.wide img{width:100%}.fig{text-align:center;margin:8px 0;break-inside:avoid}.fig img{width:44%;max-width:100%;border:1px solid #8B7D9B}.fig small{display:block;color:#70677F;font-size:9pt}
 .foot{text-align:center;color:#81788D;font-size:9pt;margin-top:18px;border-top:1px solid #C9BED8;padding-top:8px;break-inside:avoid}
 """
@@ -63,7 +71,8 @@ def model_to_html(m: dict, full=True) -> str:
         o.append(f'<p class="meta">{html.escape(m["meta"])}</p>')
     for s in m.get("sections", []):
         if s.get("h"):
-            o.append(f'<h2>{html.escape(s.get("h",""))}</h2>')
+            # 새 쪽 시작은 제목에 건다: 따로 둔 쪽 나눔은 앞 내용이 쪽을 꽉 채우면 빈 쪽을 만든다
+            o.append(('<h2 class="newpage">' if s.get("break") else '<h2>') + html.escape(s.get("h","")) + '</h2>')
         for b in s.get("blocks", []):
             t = b.get("t")
             if t == "table":
@@ -83,6 +92,12 @@ def model_to_html(m: dict, full=True) -> str:
                 o.append("<table>"+cols+header+"<tbody>"+"".join(bodyrows)+"</tbody></table>")
             elif t == "pagebreak":
                 o.append('<div class="pb"></div>')
+            elif t == "cover":
+                o.append('<div class="cover">' + "".join(f'<p>{html.escape(str(v))}</p>' for v in b.get("rows", [])) + '</div>')
+            elif t == "lead":
+                o.append(f'<p class="lead">{html.escape(b.get("text",""))}</p>')
+            elif t == "li":
+                o.append(f'<p class="li{b.get("level",1)}">{html.escape(b.get("text",""))}</p>')
             elif t == "img":
                 o.append('<p class="fig'+(' wide' if b.get('wide') else '')+'"><img src="'+html.escape(b.get("src",""),quote=True)+'" alt="">'+('<small>'+html.escape(b.get("caption",""))+'</small>' if b.get("caption") else '')+'</p>')
             elif t == "h3":
@@ -96,10 +111,17 @@ def model_to_html(m: dict, full=True) -> str:
     body = "\n".join(o)
     if not full:
         return body
-    return f'<!doctype html><html lang="ko"><head><meta charset="utf-8"><title>{html.escape(m.get("title",""))}</title><style>{CSS}</style></head><body'+(' class="compact"' if m.get('compact') else '')+f'>{body}</body></html>'
+    return f'<!doctype html><html lang="ko"><head><meta charset="utf-8"><title>{html.escape(m.get("title",""))}</title><style>{CSS}</style></head><body'+(' class="compact"' if m.get('compact') else ' class="form d%s"'%m.get('density',0) if m.get('form') else '')+f'>{body}</body></html>'
 
 
 def to_pdf(m: dict) -> bytes:
+    if m.get('form') and m.get('title') and 'density' not in m:   # 고정 양식 전체 문서는 본문 20~24쪽에 맞춘다
+        import plan_form_v06 as F
+        m, _ = F.fit_density(m, _print_pdf)
+    return _print_pdf(m)
+
+
+def _print_pdf(m: dict) -> bytes:
     chrome = next((c for c in CHROME if c and Path(c).exists()), None)
     if not chrome:
         raise RuntimeError("PDF를 만들 Chrome을 찾지 못했어요. 브라우저 인쇄(PDF로 저장)를 쓰세요.")
@@ -154,6 +176,8 @@ def to_docx(m: dict) -> bytes:
         p = d.add_paragraph(m["meta"]); p.alignment = WD_ALIGN_PARAGRAPH.RIGHT
         p.runs[0].font.size = Pt(9)
     for s in m.get("sections", []):
+        if s.get("break"):
+            d.add_page_break()
         if s.get("h"):
             h = d.add_paragraph(); rh = h.add_run(s.get("h", "")); rh.bold = True; rh.font.size = Pt(13)
         for b in s.get("blocks", []):
@@ -190,6 +214,15 @@ def to_docx(m: dict) -> bytes:
                 d.add_paragraph()
             elif tp == "pagebreak":
                 d.add_page_break()
+            elif tp == "cover":
+                for i, v in enumerate(b.get("rows", [])):
+                    c = d.add_paragraph(); c.alignment = WD_ALIGN_PARAGRAPH.CENTER
+                    run = c.add_run(str(v)); run.font.size = Pt(18 if i == 0 else 13); run.bold = i == 0
+            elif tp == "lead":
+                d.add_paragraph("▶ " + b.get("text", ""))
+            elif tp == "li":
+                p = d.add_paragraph(b.get("text", ""))
+                p.paragraph_format.left_indent = Cm(0.5 if b.get("level", 1) == 1 else 1.2)
             elif tp == "img":
                 import base64
                 try:
@@ -240,6 +273,8 @@ def to_hwpx(m: dict) -> bytes:
     if m.get("meta"):
         d.add_paragraph(m["meta"])
     for s in m.get("sections", []):
+        if s.get("break"):
+            d.add_paragraph("").element.set("pageBreak", "1")
         if s.get("h"):
             d.add_paragraph("")
             d.add_paragraph(s.get("h", ""))
@@ -255,7 +290,14 @@ def to_hwpx(m: dict) -> bytes:
                     for ci in range(nc):
                         tb.set_cell_text(ri, ci, _c(r[ci] if ci < len(r) else ""))
             elif tp == "pagebreak":
-                pass
+                d.add_paragraph("").element.set("pageBreak", "1")
+            elif tp == "cover":
+                for v in b.get("rows", []):
+                    d.add_paragraph(str(v))
+            elif tp == "lead":
+                d.add_paragraph("▶ " + b.get("text", ""))
+            elif tp == "li":
+                d.add_paragraph(("  " if b.get("level", 1) == 1 else "      ") + b.get("text", ""))
             elif tp == "img":
                 _hwpx_picture(d, b)
                 if b.get("caption"):

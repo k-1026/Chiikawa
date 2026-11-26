@@ -13,6 +13,8 @@ POSE_DIR=ASSETS/'poses'
 
 def load(name):
     """공식 캐릭터 이미지. 포즈 ID가 지정되면 공식 표정·자세 시트에서 오린 포즈를, 아니면 기본 포즈(hero)를 쓴다."""
+    used=getattr(_ctx,'used',None)
+    if used is not None:used.add(name)
     pid=(getattr(_ctx,'poses',None) or {}).get(name)
     f=POSE_DIR/(pid+'.png') if pid else None
     if f and f.exists():
@@ -128,12 +130,16 @@ def magnet(who,bg_raw,variant=0):
 RENDER={'keyring':keyring,'sticker':sticker,'poster':poster,'ecobag':lambda w,b,v=0:worn(w,b,v,0.27,0.60),
         'tshirt':lambda w,b,v=0:worn(w,b,v,0.27,0.46),'magnet':magnet}
 
+def last_used():
+    """방금 compose 한 시안에 실제로 그린 캐릭터."""
+    return getattr(_ctx,'last',())
+
 def compose(item,who,bg_raw,variant=0,poses=None):
-    _ctx.poses=poses or {}
+    _ctx.poses=poses or {};_ctx.used=set()
     try:
         img=RENDER[item](who,bg_raw,variant).convert('RGB')
     finally:
-        _ctx.poses={}
+        _ctx.last=tuple(sorted(_ctx.used));_ctx.poses={};_ctx.used=None
     buf=io.BytesIO();img.save(buf,'JPEG',quality=90);return base64.b64encode(buf.getvalue()).decode()
 
 

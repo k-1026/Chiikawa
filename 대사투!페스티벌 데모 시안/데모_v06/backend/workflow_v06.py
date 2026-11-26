@@ -2,7 +2,7 @@
 import hashlib
 import json
 import re
-from plan_schema_v06 import TEMPLATE,normalize_plan,apply_fixed,has_gap
+from plan_schema_v06 import TEMPLATE,normalize_plan,apply_fixed,has_gap,NARRATIVE_CHAPTERS
 CHECKS=('missing','evidence','budget','responsibility')
 def signature(w):
     return hashlib.sha256(json.dumps({k:w.get(k) for k in ('conditions','plan','goods','messages')},sort_keys=True,ensure_ascii=False).encode()).hexdigest()
@@ -25,5 +25,7 @@ def review_report(w,goods_ids=None):
     blockers=[]
     if not plan:blockers.append('기획안 초안이 없습니다.')
     if missing:blockers.append('미입력 %d개를 채워 주세요: %s'%(len(missing),', '.join(missing)))
+    empty=[t for k,t in NARRATIVE_CHAPTERS if not str((fields.get('narr') or {}).get(k,'')).strip()] if plan else []
+    if empty:blockers.append('설명 글이 없는 장 %d개: %s'%(len(empty),', '.join(empty)))
     if plan and not complete:blockers.append('07 최종 검토에서 확인 항목 4개와 검토 담당자를 저장해 주세요.'+(' (검토 뒤에 내용이 바뀌었습니다.)' if r and not fresh else ''))
     return {'blank_keys':blank,'blockers':blockers,'submittable':not blockers,'has_plan':bool(plan),'missing':missing,'open_questions':[q for q in fields.get('missing',[]) if not any(q==TEMPLATE['labels'].get(k) and not has_gap(v) for k,v in fields.items() if k!='missing')],'evidence':evidence[:60], 'checks':checks,'responsible':r.get('responsible',''),'note':r.get('note',''),'at':r.get('at') if fresh else None,'stale':bool(r) and not fresh,'complete':complete,'signature':signature(w)}

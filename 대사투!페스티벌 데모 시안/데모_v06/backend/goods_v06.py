@@ -284,9 +284,12 @@ def create(store,uid,item,concept,count,who='both',year=None,pose_mode='auto'):
         poses=choose_poses(who,item,year or time.localtime().tm_year,i,used,taken) if pose_mode=='auto' else {}
         taken.update(poses.values())
         img=C.compose(item,who,raw,i,poses)
+        drawn=C.last_used()
+        shown=drawn[0] if len(drawn)==1 else who   # 한 캐릭터만 그리는 품목은 실제로 그린 캐릭터를 기록한다
+        poses={k:v for k,v in poses.items() if not drawn or k in drawn}
         did=secrets.token_hex(8)
         with store.db() as db:
-            db.execute('INSERT INTO goods_designs(id,user_id,item,concept,prompt,image,created_at,who,pose) VALUES(?,?,?,?,?,?,?,?,?)',(did,uid,item,concept,(prompt or '(배경 없음: 캐릭터 원본 합성)'),img,int(time.time()),who,'|'.join(poses.values())))
+            db.execute('INSERT INTO goods_designs(id,user_id,item,concept,prompt,image,created_at,who,pose) VALUES(?,?,?,?,?,?,?,?,?)',(did,uid,item,concept,(prompt or '(배경 없음: 캐릭터 원본 합성)'),img,int(time.time()),shown,'|'.join(poses.values())))
         out.append({'id':did,'item':item,'concept':concept,'bg_failed':bg_failed})
     return out
 
@@ -319,6 +322,10 @@ def image_bytes(store,uid,did):
     return base64.b64decode(r['image'])
 
 WHO_TXT={'both':'대키미 + 외지몽','daekimi':'대키미','oejimong':'외지몽'}
+SINGLE_CHAR_ITEMS=('magnet','pinbutton','griptok','notebook','phonecase')   # 한 시안에 캐릭터 한 명만 그린다
+def who_label(item,who):
+    if who=='both' and item in SINGLE_CHAR_ITEMS:return '대키미·외지몽 중 한 캐릭터 (시안 그림 기준)'
+    return WHO_TXT.get(who,'대키미 + 외지몽')
 
 def selected_designs(store,uid,workspace=None):
     """담당자가 선택한 시안(기획안의 굿즈 파트에 쓴다)."""
@@ -328,8 +335,17 @@ def selected_designs(store,uid,workspace=None):
     out=[]
     for r in rows:
         name,_,spec,_=ITEMS.get(r['item'],('굿즈','','',''))
-        out.append({'did':r['id'],'item':r['item'],'item_name':name,'concept':r['concept'],'image_b64':r['image'],'who':r['who'],'who_txt':WHO_TXT.get(r['who'],'대키미 + 외지몽'),'spec':spec,'pose':r['pose']})
+        out.append({'did':r['id'],'item':r['item'],'item_name':name,'concept':r['concept'],'image_b64':r['image'],'who':r['who'],'who_txt':who_label(r['item'],r['who']),'spec':spec,'pose':r['pose'],'pose_txt':pose_label(r['item'],r['pose'],r['who']),'selected':True})
     return out
+
+def pose_text(pose_field,who='both'):
+    lib={p['id']:p for p in pose_library()}
+    ids=[i for i in str(pose_field or '').split('|') if i in lib and (who=='both' or lib[i]['char']==who)]
+    return ' / '.join('%s — %s (%s)'%({'daekimi':'대키미','oejimong':'외지몽'}.get(lib[i]['char'],''),lib[i]['name'],lib[i]['status']) for i in ids)
+
+def pose_label(item,pose_field,who):
+    text=pose_text(pose_field,who)
+    return ('시안에 그린 캐릭터의 포즈 (그림 기준, 저장 후보: %s)'%text) if text and who=='both' and item in SINGLE_CHAR_ITEMS else text
 
 def _plan_info(store,uid,did,quantity,workspace):
     import goods_doc_v06 as D
@@ -341,9 +357,8 @@ def _plan_info(store,uid,did,quantity,workspace):
     except (TypeError,ValueError):raise GoodsError('수량을 숫자로 입력해 주세요.')
     plan=workspace.get('plan') or {};cond=workspace.get('conditions') or {}
     name,_,spec,_=ITEMS[r['item']]
-    lib={p['id']:p for p in pose_library()}
-    pose_txt=' / '.join('%s — %s (%s)'%({'daekimi':'대키미','oejimong':'외지몽'}.get(lib[i]['char'],''),lib[i]['name'],lib[i]['status']) for i in str(r['pose']).split('|') if i in lib)
-    return {'item_key':r['item'],'item_name':name,'spec':spec,'concept':r['concept'],'did':str(did)[:40],'image_b64':r['image'],'who':r['who'],'pose':pose_txt,
+    pose_txt=pose_label(r['item'],r['pose'],r['who'])
+    return {'item_key':r['item'],'item_name':name,'spec':spec,'concept':r['concept'],'did':str(did)[:40],'image_b64':r['image'],'who':r['who'],'who_txt':who_label(r['item'],r['who']),'pose':pose_txt,
             'qty':qty,'festival_name':plan.get('festival_name') or '(축제명 미정)','host':plan.get('host') or cond.get('host') or '','budget_total':plan.get('budget_total') or cond.get('budget_total') or '',
             'festival':D.festival_date(workspace),'selected':bool(r['selected'])}
 

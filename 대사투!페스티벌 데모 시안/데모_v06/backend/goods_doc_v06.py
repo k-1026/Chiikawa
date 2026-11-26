@@ -81,13 +81,44 @@ def _schedule_rows(festival):
             ['⑦', '시안 선택', '현재 단계', '담당자', '진행 중']]
 
 
+# 시안 합성 코드(goods_compose_v06)가 품목마다 하는 일을 그대로 적은 기록. (구성, 인쇄·제작 대상, 화면 연출용)
+LAYOUT = {
+    'keyring': ('캐릭터 윤곽을 따라 흰 테두리를 두른 다이컷. 윤곽의 가장 높은 지점에 고리 구멍 탭과 금속 고리를 배치', '흰 테두리를 포함한 캐릭터 다이컷, 고리 구멍 위치', '흐리게 처리한 배경, 그림자'),
+    'sticker': ('흰 시트 위에 큰 캐릭터 2개와 작은 캐릭터 4개를 각각 흰 테두리로 배치(일부는 좌우 반전, 조금씩 기울임)', '낱개 스티커 6개와 칼선, 시트', '시트 바깥 바탕색'),
+    'poster': ('배경 위에 옅은 흰 막을 덮고 아래쪽에 캐릭터를 배치, 흰 외곽 테두리', '배경·캐릭터·테두리 전체 (배경은 인쇄용으로 다시 제작)', '없음'),
+    'ecobag': ('무지 에코백 사진의 가운데 아래 인쇄 영역에 캐릭터를 배치', '캐릭터 그래픽과 인쇄 위치', '에코백 제품 사진, 천 질감 표현'),
+    'tshirt': ('무지 티셔츠 사진의 가슴 인쇄 영역에 캐릭터를 배치', '캐릭터 그래픽과 인쇄 위치', '티셔츠 제품 사진, 천 질감 표현'),
+    'magnet': ('캐릭터 한 명을 두꺼운 흰 테두리로 두른 다이컷, 약간 기울여 표시', '흰 테두리를 포함한 캐릭터 다이컷', '흐린 배경, 그림자, 기울기'),
+    'pinbutton': ('원형 파스텔 바탕에 캐릭터 한 명을 크게 넣고 흰·금속 가장자리를 두름', '원형 앞면(바탕색과 캐릭터), 재단 원', '흐린 배경, 그림자, 금속 가장자리 표현'),
+    'griptok': ('원형 배지 형태의 그립 윗면에 캐릭터 한 명을 배치', '원형 윗면 그래픽', '휴대전화 모형, 배경, 그림자'),
+    'acrylic_stand': ('흰 테두리를 두른 캐릭터 아크릴 몸체와 아래 받침', '캐릭터 인쇄면, 흰 여백, 받침 형태', '배경, 그림자'),
+    'postcard': ('흰 테두리의 가로형 카드 안에 파스텔 바탕과 캐릭터를 아래쪽에 배치', '카드 앞면 전체', '카드 바깥 배경, 그림자, 기울기'),
+    'maskingtape': ('파스텔 띠에 캐릭터를 번갈아(좌우 반전 포함) 반복 배치', '반복 패턴 띠', '테이프 롤 연출, 바탕'),
+    'blanket': ('무지 담요 사진 위에 캐릭터를 배치', '캐릭터 그래픽과 위치', '담요 제품 사진'),
+}
+WORN = ('무지 제품 사진 위에 캐릭터를 배치', '캐릭터 그래픽과 인쇄 위치', '제품 사진')
+
+
+def design_application(info):
+    comp, print_part, staging = LAYOUT.get(info['item_key'], WORN)
+    return [_tbl([['구분', '내용'],
+                  ['시안 구성', comp],
+                  ['캐릭터', info.get('who_txt') or '시안 그림 기준'],
+                  ['포즈·표정', info.get('pose') or '공식 이미지의 기본 포즈'],
+                  ['인쇄·제작 대상', print_part],
+                  ['화면 연출용 (제작하지 않음)', staging],
+                  ['바꾸지 않는 요소', '캐릭터의 생김새·색상·비례. 공식 원본 이미지를 사용한다']]),
+            _note('위 구성은 시안을 만든 합성 방식의 기록입니다. 시안은 화면용(1024px)이라 그대로 인쇄하지 않고, 공식 고해상도 원본으로 인쇄용 파일을 새로 만듭니다.')]
+
+
 def goods_plan_model(info):
     """info: item_key, item_name, concept, did, image_b64, who, qty, festival_name, host, budget_total, festival(date|None), selected(bool)"""
     key, name = info['item_key'], info['item_name']
     cat = CATALOG.get(key) or {}
     fest, did, qty = info['festival_name'], info['did'], info['qty']
     today = datetime.date.today().isoformat()
-    who_txt = {'both': '대키미 + 외지몽', 'daekimi': '대키미', 'oejimong': '외지몽'}.get(info.get('who', 'both'), '대키미 + 외지몽')
+    qty_txt = '%s개' % format(qty, ',') if qty else '발주 전 확정'
+    who_txt = info.get('who_txt') or {'both': '대키미 + 외지몽', 'daekimi': '대키미', 'oejimong': '외지몽'}.get(info.get('who', 'both'), '대키미 + 외지몽')
     spec_rows, official = _spec_rows(key, info)
     fixed = cat.get('fixed_change_ban') or [['구분', '내용'],
                                             ['고정', '성체 대키미·외지몽의 생김새와 대표색(대키미 하늘색, 외지몽 초록), 승인 문구의 표기, 승인 로고의 구조'],
@@ -127,7 +158,7 @@ def goods_plan_model(info):
               ['품목군 수', '1 (%s)' % name, '확정'],
               ['디자인 옵션(캐릭터)', who_txt, '제안'],
               ['SKU 수', '품목군 × 옵션 × 사이즈 (사이즈·옵션 확정 후 계산)', NEED],
-              ['제작 수량', '%s개' % format(qty, ','), '팀 입력값(임의 설정) — 출처: 화면 입력']])]})
+              ['제작 수량', qty_txt, '담당자 입력값' if qty else '미정']])]})
     blocks.append({'h': '2. 기준 자료', 'blocks': [
         _tbl([['항목', '값'],
               ['캐릭터 버전', '성체 (굿즈는 성체 기준 — 담당자 결정 2026-11-17)'],
@@ -144,6 +175,7 @@ def goods_plan_model(info):
         {'t': 'img', 'src': 'data:image/jpeg;base64,' + info['image_b64'], 'caption': '시안 번호 %s · %s' % (did, name)},
         _p('공식 캐릭터 원본 이미지를 굿즈 모양에 올린 시안입니다. 캐릭터는 AI가 다시 그리지 않았고, 배경·제품 사진만 AI가 만들었습니다.'),
         _note('이 시안은 보기용 이미지(1024px)입니다. 인쇄용 고해상도·벡터 파일은 디자이너가 원본으로 다시 정리해야 합니다 [확인 필요].')]})
+    blocks.append({'h': '', 'blocks': [_h3('디자인 적용 방법 (선택한 시안 기준)')] + design_application(info)})
     blocks.append({'h': '', 'blocks': [_h3('면 · 그래픽 배치'), _tbl(faces),
                                         _note('필요한 면은 별도 컷으로 확인합니다. 한 시점으로 모든 면을 검증하지 않습니다.')]})
     blocks.append({'h': '', 'blocks': [PB]})
@@ -155,7 +187,7 @@ def goods_plan_model(info):
         _note('근거 없이 "생산 가능"이라고 쓰지 않습니다. 재단선·도련·최소 획·색상 수는 업체 템플릿을 받은 뒤 확정합니다.')]})
     blocks.append({'h': '6. 수량 · 예산', 'blocks': [
         _tbl([['항목', '내용', '상태'],
-              ['제작 수량', '%s개' % format(qty, ','), '팀 입력값(임의 설정)'],
+              ['제작 수량', qty_txt, '담당자 입력값' if qty else '미정'],
               ['단가', NEED, '업체 3곳 이상 견적 비교'],
               ['제작비 합계', '단가 × 수량', '견적 후 계산'],
               ['예비 수량', NEED, '담당자 결정 (임의 비율을 넣지 않음)'],
@@ -184,7 +216,7 @@ def goods_plan_model(info):
         _p('개조식으로 간결하게 쓰고 표와 사진 위주로 구성한다. 값마다 근거와 상태([확인]·[추정]·[가정])를 적는다. 모든 표기는 한글과 아라비아 숫자, 길이 단위는 mm로 한다.'),
         _h3('10-2. 납품 목록'),
         _tbl([['구분', '내용', '규격', '수량', '비고'],
-              ['완제품', name, '위 5장 사양', '%s개 (팀 입력값)' % format(qty, ','), '개별 포장·포장 방식은 업체와 협의'],
+              ['완제품', name, '위 5장 사양', qty_txt, '개별 포장·포장 방식은 업체와 협의'],
               ['샘플', '본 제작 전 1차 샘플', '동일 사양', NEED, '샘플 승인 후 본 제작'],
               ['인쇄용 원본 파일', '벡터 또는 충분한 해상도 파일 (글꼴은 윤곽선 처리)', 'AI·PDF', '1식', '업체 템플릿 기준'],
               ['시안·승인 기록', '최종 시안과 샘플 승인본을 한 파일로 묶음', 'PDF', '1식', '분쟁 예방'],
@@ -241,41 +273,24 @@ def goods_part_blocks(designs, concept, final=False):
     rows = [['구분', '내용', '규격', '수량', '비고']]
     for d in designs:
         rows.append([d['item_name'], '컨셉 「%s」 · 캐릭터 %s · 시안 %s' % ((concept or NEED)[:40], d['who_txt'], d['did'][:8]),
-                     d.get('spec') or VENDOR, d.get('qty') or NEED, '제작 계획서 별도 (A4 6쪽 이상)'])
+                     d.get('spec') or VENDOR, d.get('qty') or NEED, '별첨 참고'])
     blocks = [
-        _p('굿즈 파트는 점촌점빵길 과업지시서의 「성과품 작성 및 납품」 방식(작성기준·납품 목록·원본자료·정량평가)으로 정리한다.'),
-        _h3('가. 작성 기준'),
-        _p('개조식으로 간결하게 쓰고 표와 시안 이미지 위주로 구성한다. 값마다 근거와 상태([확인]·[추정]·[가정])를 적고, 모르는 값은 "입력 필요"로 둔다.'),
-        _h3('나. 담당자가 선택한 컨셉과 시안'),
+        _h3('가. 담당자가 선택한 컨셉과 시안'),
         _tbl([['항목', '내용'], ['컨셉', concept or NEED], ['선택 시안 수', '%d종' % len(designs)]], hdr='row')]
-    for d in designs[:4]:
+    for d in designs[:3]:
         blocks.append({'t': 'img', 'src': 'data:image/jpeg;base64,' + d['image_b64'], 'caption': '%s · 시안 %s' % (d['item_name'], d['did'][:8])})
     blocks += [
-        _h3('다. 납품 목록'), _tbl(rows),
-        _h3('라. 원본 자료 (폴더별 저장)'),
+        _h3('나. 납품 목록'), _tbl(rows),
+        _h3('다. 원본 자료 (폴더별 저장)'),
         _p('시안, 인쇄용 파일(AI·PDF), 시안·샘플 승인 기록, 검수 기록, 정량평가 자료를 폴더로 나눠 함께 제출한다.'),
-        _h3('마. 정량평가 항목'),
+        _h3('라. 정량평가 항목'),
         _tbl([['지표', '측정 방법', '목표값'], ['굿즈 판매량', '품목·SKU별 판매 수량 기록', NEED], ['재고·소진율', '입고 수량 대비 잔여 수량', NEED], ['방문객 반응', '현장 후기·SNS 반응 수집', NEED]]),
-        _note('품목별 상세는 굿즈 제작 계획서(시안별 별도 문서)에 있습니다.')]
-    return _submission(blocks) if final else blocks
-
-
-def _submission(blocks):
-    """제출본: 작성 방법을 설명하는 안내 글을 빼고, 아직 정하지 않은 칸은 '발주 전 확정'으로 적는다(값을 지어내지 않는다)."""
-    start = next(i for i, b in enumerate(blocks) if b.get('text', '').startswith('나.'))
-    out = []
-    for b in blocks[start:]:
-        b = dict(b)
-        if b.get('t') == 'table':
-            b['rows'] = [[('발주 전 확정' if (not str(c).strip() or str(c).strip() in (NEED, VENDOR)) else '제작 계획서 별도' if str(c).startswith('제작 계획서 별도') else c) for c in r] for r in b['rows']]
-        out.append(b)
-    names = ['가.', '나.', '다.', '라.', '마.']
-    n = 0
-    for b in out:
-        if b.get('t') == 'h3':
-            b['text'] = names[n] + b['text'][2:]
-            n += 1
-    return out
+        _note('품목별 상세는 이 문서의 별첨(굿즈 제작 계획서)에 있습니다.')]
+    if final:
+        for b in blocks:
+            if b.get('t') == 'table':
+                b['rows'] = [[('발주 전 확정' if str(c).strip() in ('', NEED, VENDOR) else c) for c in r] for r in b['rows']]
+    return blocks
 
 
 def model_to_md(m):

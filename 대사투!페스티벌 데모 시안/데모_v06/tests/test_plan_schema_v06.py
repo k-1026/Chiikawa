@@ -1,7 +1,7 @@
 import sys,unittest,tempfile
 from pathlib import Path
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]/'backend'))
-from plan_schema_v06 import TEMPLATE,KEYS,normalize_plan,plan_model
+from plan_schema_v06 import TEMPLATE,KEYS,normalize_plan,plan_model,NARRATIVE_CHAPTERS
 from auth_v06 import Store
 
 class FixedPlanTests(unittest.TestCase):
@@ -16,12 +16,13 @@ class FixedPlanTests(unittest.TestCase):
         self.assertEqual(list(f['programs'][0]),['name','desc'])
         self.assertEqual(f['schedule'],[['오후','가','나','다']])
         self.assertEqual(f['budget_items'][0],{'item':'장비','basis':'','amount':'100'})
-    def test_eight_sections_and_headers_stay_fixed(self):
+    def test_chapters_and_table_headers_stay_fixed(self):
         def skeleton(model):
-            return [(s['h'],[(b['t'],b.get('hdr'),b['rows'][0] if b['t']=='table' and b['hdr']=='col' else b.get('text')) for b in s['blocks']]) for s in model['sections']]
+            return [(s['h'],[b['rows'][0] for b in s['blocks'] if b['t']=='table' and b.get('hdr')=='col' and s['h']!='목차']) for s in model['sections'] if not s.get('appendix')]
         a=plan_model({});b=plan_model({'festival_name':'야간 축제','programs':[{'name':'야간 산책'}],'budget_items':[{'item':'무대','amount':'100'}],'secret_section':'no'})
-        self.assertEqual(len(a['sections']),9);self.assertEqual(skeleton(a),skeleton(b))
-        self.assertEqual([s['h'] for s in b['sections']],[s['title'] for s in TEMPLATE['sections']]+['9. 굿즈 운영 및 성과품 납품'])  # 9장은 선택한 시안으로 자동 생성
+        self.assertEqual(skeleton(a),skeleton(b))
+        headings=[s['h'] for s in b['sections'][2:]]
+        self.assertEqual(headings,[t for _,t in NARRATIVE_CHAPTERS]+['12. 신청 단체 · 확약'])
         self.assertIn('야간 축제',str(b));self.assertNotIn('secret_section',str(b))
     def test_existing_and_edited_plans_share_canonical_shape(self):
         with tempfile.TemporaryDirectory() as folder:
