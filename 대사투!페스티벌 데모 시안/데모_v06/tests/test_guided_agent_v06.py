@@ -13,7 +13,8 @@ class GuidedTests(unittest.TestCase):
         with patch.object(agent,'extract_brief',return_value={'intent':'plan','conditions':{'scale':'500명','year':'2027','host':'기획팀','budget_total':'산정 요청'}}),patch.object(agent,'research_answer',return_value={'reply':'근거를 참고한 초안입니다.\n\n추가로 조정하고 싶으신 조건이 있으시면 편하게 말씀해 주세요!','steps':[]}):
             result=agent.run_guided(None,planner,w,'가족 축제를 기획해줘','',[])
         self.assertEqual(len(calls),1);self.assertEqual(result['workspace']['conditions']['scale'],'500명')
-        self.assertEqual(result['workspace']['plan']['concept'],'가족 체험');self.assertEqual(result['next_action']['page'],'review')
+        self.assertEqual(result['workspace']['plan']['concept'],COMPLETE['concept']);  # 저장한 조건이 AI 초안보다 우선
+        self.assertEqual(result['next_action']['page'],'review')
         self.assertNotIn('편하게 말씀',result['answer']);self.assertIn('담당자',result['answer']);self.assertEqual(w['messages'],[])
         self.assertIn('확인 필요',calls[0][1]['approval_state'])
     def test_partial_question_does_not_replace_plan(self):

@@ -4,7 +4,7 @@ No approval is inferred from an AI recommendation. Missing figures remain missin
 import json
 import re
 from conditions_v06 import require_conditions
-from plan_schema_v06 import normalize_plan,apply_fixed
+from plan_schema_v06 import normalize_plan,apply_fixed,apply_conditions,previous_for_ai,schedule_headers,condition_values
 KEYS=('year','host','concept','programs','scale','theme','period','place','budget_total','target','goal','stay_link')
 RULES='''
 당신은 단순 질의응답 챗봇이 아니라 지침에 따라 축제 기획을 진행하는 대키미 에이전트이다.
@@ -55,11 +55,11 @@ def run_guided(orch,planner,w,question,file_context,attachments):
     w={**w,'conditions':conditions,'messages':[*w['messages'],{'role':'user','content':question,'attachments':attachments},{'role':'assistant','content':str(answer)}]}
     stages=[{'label':'사용자 요청·조건 정리','status':'done'},{'label':'지침·근거를 참고한 답변 작성','status':'done'}]
     if brief['intent']=='plan':
-        selections={'conditions':conditions,'selected_goods':w['goods'],'previous_draft':w['plan'],'user_attachments_reference_only':file_context,'workflow_rules':RULES,'research_report_reference_only':str(answer)[:30000],'approval_state':'검토용 초안. 담당자가 확정하지 않은 조건·주제·아이디어·예산·최종 승인은 확인 필요로 표시한다.'}
+        selections={'conditions':conditions,'selected_goods':w['goods'],'previous_draft':previous_for_ai(w['plan']),'schedule_days':schedule_headers(condition_values(conditions).get('period','')),'user_attachments_reference_only':file_context,'workflow_rules':RULES,'research_report_reference_only':str(answer)[:30000],'approval_state':'검토용 초안. 담당자가 확정하지 않은 조건·주제·아이디어·예산·최종 승인은 확인 필요로 표시한다.'}
         transcript=[{'role':m['role'],'text':m['content']} for m in w['messages']]
         fields=planner.write_plan(transcript,json.dumps(selections,ensure_ascii=False))
         if not isinstance(fields,dict):raise ValueError('invalid plan')
-        w['plan']=apply_fixed(normalize_plan(fields),generated=True)
+        w['plan']=apply_fixed(normalize_plan(apply_conditions(fields,conditions)),generated=True)
         stages.append({'label':'고정 양식 기획안 초안 작성','status':'done'})
         next_action={'page':'review','label':'다음: 담당자 최종 검토','description':'초안 생성을 이어서 완료했습니다. 조건·주제·프로그램·예산의 결정 사항과 미정 항목을 담당자가 최종 검토에서 확인하세요.'}
     else:

@@ -1,5 +1,6 @@
 """Application-owned fixed plan structure; the model supplies values only."""
 import base64
+import datetime
 import json
 import re
 from pathlib import Path
@@ -15,13 +16,44 @@ def text(value):
     if value is None:return ''
     if isinstance(value,(dict,list)):return json.dumps(value,ensure_ascii=False)
     return str(value)
+MAX_DAYS=10
+def schedule_headers(period):
+    """개최 기간에서 일정표의 날짜 칸 이름을 만든다. 날짜를 알 수 없으면 '1일차' 식으로 3칸(또는 'N일'에 적힌 수)."""
+    v=str(period or '');dates=[]
+    full=re.findall(r'(20\d{2})\s*[-./년]\s*(\d{1,2})\s*[-./월]\s*(\d{1,2})',v)
+    try:
+        if len(full)>=2:
+            a,b=(datetime.date(*map(int,x)) for x in (full[0],full[-1]))
+        else:
+            m=re.search(r'(\d{1,2})\s*월\s*(\d{1,2})\s*일?\s*(?:\([^)]*\))?\s*[~∼\-–—]\s*(?:(\d{1,2})\s*월\s*)?(\d{1,2})\s*일',v)
+            year=re.search(r'20\d{2}',v)
+            if not m:raise ValueError
+            y=int(year.group(0)) if year else None
+            a=datetime.date(y or 2001,int(m[1]),int(m[2]));b=datetime.date(y or 2001,int(m[3] or m[1]),int(m[4]))
+            if not y:
+                n=(b-a).days+1
+                if not 1<=n<=MAX_DAYS:raise ValueError
+                return ['%d/%d'%((a+datetime.timedelta(i)).month,(a+datetime.timedelta(i)).day) for i in range(n)]
+        n=(b-a).days+1
+        if not 1<=n<=MAX_DAYS:raise ValueError
+        dates=[a+datetime.timedelta(i) for i in range(n)]
+    except ValueError:
+        m=re.search(r'(?<![\d월])(\d)\s*일\s*(?:간|\(|동안)',v)
+        n=int(m[1]) if m and 1<=int(m[1])<=MAX_DAYS else 3
+        return ['%d일차'%(i+1) for i in range(n)]
+    return ['%d/%d(%s)'%(d.month,d.day,'월화수목금토일'[d.weekday()]) for d in dates]
+def table_spec(key,period=''):
+    spec=TABLES[key]
+    if key!='schedule':return spec
+    days=schedule_headers(period)
+    return {'kind':'array','keys':[str(i) for i in range(len(days)+1)],'headers':[spec['headers'][0]]+days}
 def normalize_plan(fields):
     source=fields if isinstance(fields,dict) else {}
     result={}
     for key in KEYS:
         value=source.get(key)
         if key not in TABLES:result[key]=text(value);continue
-        spec=TABLES[key];rows=value if isinstance(value,list) else []
+        spec=table_spec(key,text(source.get('period')));rows=value if isinstance(value,list) else []
         if spec['kind']=='scalar':result[key]=[text(v) for v in rows if not isinstance(v,(dict,list))]
         elif spec['kind']=='array':result[key]=[[text(row[i]) if i<len(row) else '' for i in range(len(spec['keys']))] for row in rows if isinstance(row,list)]
         else:result[key]=[{col:text(row.get(col)) for col in spec['keys']} for row in rows if isinstance(row,dict)]

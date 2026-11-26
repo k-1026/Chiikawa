@@ -69,6 +69,27 @@ class Conditions(unittest.TestCase):
         self.assertEqual(previous_for_ai({'concept': '예전', 'period': '예전', 'narr': {}, 'goal': 'x', 'effects': '유지'}), {'effects': '유지'})
 
 
+class Schedule(unittest.TestCase):
+    def test_day_columns_follow_the_festival_period(self):
+        from plan_schema_v06 import schedule_headers
+        self.assertEqual(schedule_headers('2028년 8월 21일~24일'), ['8/21(월)', '8/22(화)', '8/23(수)', '8/24(목)'])
+        self.assertEqual(schedule_headers('2027-08-20(금) ~ 2027-08-22(일)'), ['8/20(금)', '8/21(토)', '8/22(일)'])
+        self.assertEqual(schedule_headers('8월 30일~9월 1일'), ['8/30', '8/31', '9/1'])
+        self.assertEqual(schedule_headers('2027년 10월 주말 3일(금~일)'), ['1일차', '2일차', '3일차'])
+        self.assertEqual(schedule_headers(''), ['1일차', '2일차', '3일차'])
+
+    def test_four_day_festival_gets_four_columns_and_the_new_one_blocks(self):
+        fields = full_fields()
+        fields['period'] = '2028년 8월 21일~24일'
+        out = normalize_plan(fields)
+        self.assertEqual(len(out['schedule'][0]), 5)
+        self.assertEqual(out['schedule'][0][4], '')
+        w = {'conditions': {}, 'goods': [], 'messages': [], 'plan': fields}
+        self.assertIn('schedule', review_report(w)['blank_keys'])
+        header = next(b['rows'][0] for s in plan_model(fields)['sections'] for b in s['blocks'] if b['t'] == 'table' and b['rows'][0][0].startswith('구분 · 시간대'))
+        self.assertEqual(header[1:], ['8/21(월)', '8/22(화)', '8/23(수)', '8/24(목)'])
+
+
 class Narrative(unittest.TestCase):
     def test_chapters_are_grouped_and_short_ones_are_expanded_once(self):
         import json

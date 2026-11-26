@@ -11,7 +11,7 @@ KEYS = {
     "festival_name": "축제 이름(컨셉 포함)", "concept": "컨셉 한 줄", "period": "개최 기간", "place": "개최 장소",
     "host": "주최·주관", "visitors": "예상 관람객 / 순간 최대 인원", "budget_total": "총 사업비",
     "goal": "핵심 목표", "necessity": "필요성", "differentiation": "차별화 전략",
-    "programs": "[{name, desc}] 프로그램 3~5개", "schedule": "[[구분(낮/저녁/밤), 금, 토, 일]] 일정표 행들",
+    "programs": "[{name, desc}] 프로그램 3~5개", "schedule": "일정표 행들. 한 행은 [구분(낮/저녁/밤), 1일차, 2일차, …]이며 개최 기간의 날짜 수만큼 칸을 둔다(selections 의 schedule_days 참고). 마지막 날 행사는 마지막 칸에 둔다",
     "layout": "배치도 설명", "stay_link": "체류·상권 연결", "mascot": "마스코트(대키미·외지몽) 활용",
     "scale": "운영 규모(부스·인력)", "partners": "협력 기관·네트워크", "prep": "준비 단계 일정",
     "budget_items": "[{item, basis, amount}] 사업비 항목", "safety_staff": "안전 인력", "safety_peak": "순간 최대·동시 수용 인원",

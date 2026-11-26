@@ -4,7 +4,7 @@
 - 장마다 새 쪽에서 시작한다. 근거 없는 값은 만들지 않는다."""
 import re
 
-from plan_schema_v06 import FIXED, TEMPLATE, NARRATIVE_CHAPTERS, mark_final, map_blocks, text
+from plan_schema_v06 import FIXED, TEMPLATE, NARRATIVE_CHAPTERS, mark_final, map_blocks, table_spec, text
 
 FORM = FIXED['form']
 MAX_APPENDIX = 3          # 별첨에 넣는 굿즈 품목 수 상한
@@ -41,7 +41,7 @@ def _rows(fields, keys):
 
 
 def _grid(fields, key):
-    spec = TEMPLATE['tables'][key]
+    spec = table_spec(key, fields.get('period', ''))
     rows = fields[key] or ([['']*len(spec['keys'])] if spec['kind'] == 'array' else [{}])
     rows = [[text(r.get(c)) for c in spec['keys']] if isinstance(r, dict) else r for r in rows]
     return {'t': 'table', 'hdr': 'col', 'rows': [spec['headers']] + rows}
