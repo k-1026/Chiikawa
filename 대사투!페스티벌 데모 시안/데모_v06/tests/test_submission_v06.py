@@ -65,6 +65,10 @@ class Conditions(unittest.TestCase):
         self.assertEqual(out['budget_total'], '')   # '산정 요청'은 금액이 아니다
         self.assertEqual([r['name'] for r in out['programs']], ['사투리 퀴즈', '토론 대회'])
 
+    def test_program_written_with_extra_words_is_not_added_twice(self):
+        out = apply_conditions({'programs': [{'name': '사투리 골든벨 퀴즈쇼', 'desc': '가'}]}, self.CONDITIONS)
+        self.assertEqual([r['name'] for r in out['programs']], ['사투리 골든벨 퀴즈쇼'])
+
     def test_old_condition_values_are_not_sent_back_to_ai(self):
         self.assertEqual(previous_for_ai({'concept': '예전', 'period': '예전', 'narr': {}, 'goal': 'x', 'effects': '유지'}), {'effects': '유지'})
 

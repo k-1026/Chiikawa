@@ -122,7 +122,10 @@ def apply_conditions(fields,conditions):
     wanted=[v.strip() for v in re.split(r'\s*(?:·|,|/|\n)\s*',str((conditions or {}).get('programs') or '')) if v.strip() and not is_blank(v.strip())]
     rows=[dict(r) for r in (out.get('programs') or []) if isinstance(r,dict)]
     have=[''.join(str(r.get('name','')).split()) for r in rows]
-    missing=[{'name':w,'desc':''} for w in wanted if not any(''.join(w.split()) in n or (n and n in ''.join(w.split())) for n in have)]
+    def covered(w):
+        key=''.join(w.split());words=[t for t in w.split() if len(t)>1] or [key]
+        return any(key in n or (n and n in key) or all(t in n for t in words) for n in have)
+    missing=[{'name':w,'desc':''} for w in wanted if not covered(w)]
     if wanted:out['programs']=missing+rows
     if isinstance(out.get('missing'),list):
         done={TEMPLATE['labels'].get(k) for k in condition_values(conditions)}
