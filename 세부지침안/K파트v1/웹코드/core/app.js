@@ -265,7 +265,7 @@
     const z = S.zones.find((x) => x.id === sub) || S.zones.find((x) => x.id === 'main');
     return `<div class="page-title">축제장 지도</div>
       <div class="map-wrap">
-        <img src="assets/map_full.webp" alt="두류공원 축제 안내도 — 메인구역, 10미 포장마차, 굿즈·이벤트, 7구 맛집거리, 식사존, 플리마켓, 운영·안전 부스, 축제 출입로">
+        <img src="assets/map_full.png" alt="두류공원 지도 — 코오롱 야외음악당, 두류도서관, 2.28기념탑, 2.28 자유광장 일대. 축제 구역은 지도 위 아이콘으로 표시">
         ${S.zones.map((x) => `<button class="pin ${x.id === z.id ? 'on' : ''}" style="left:${x.x}%;top:${x.y}%;--c:${x.color}" data-seg="map" data-k="${x.id}" aria-label="${esc(x.name)}">${x.icon}</button>`).join('')}
       </div>
       <div class="zone-list">${S.zones.map((x) => `<button style="--c:${x.color}" data-seg="map" data-k="${x.id}" aria-pressed="${x.id === z.id}">${x.icon} ${esc(x.name)}</button>`).join('')}</div>
