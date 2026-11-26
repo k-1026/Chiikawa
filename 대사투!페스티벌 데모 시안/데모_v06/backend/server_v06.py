@@ -334,7 +334,7 @@ class Handler(BaseHTTPRequestHandler):
         if p=='/api/goods/recommend':
             import goods_v06 as G
             STORE.limit('goodsrec:'+str(u['id']),30,3600)
-            try:return self.output(G.recommend(b.get('concept'),STORE.workspace(u['id'])))
+            try:return self.output(G.recommend(b.get('concept'),STORE.workspace(u['id']),b.get('exclude')))
             except G.GoodsError as e:raise Error(str(e),400)
         if p=='/api/goods/plan':
             import goods_v06 as G

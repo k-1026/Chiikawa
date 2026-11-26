@@ -27,7 +27,7 @@ RULES=[
  (('행사장','현장','무료','증정','참여','스탬프'),{'sticker':2,'keyring':1},'현장 증정·스탬프 보상'),
 ]
 NOTE={'keyring':'휴대·수집이 쉬운 대표 굿즈예요','sticker':'단가가 낮고 많이 나눠 주기 좋아요','poster':'소장·전시용으로 컨셉을 크게 보여줘요','ecobag':'일상에서 계속 쓰여 홍보 효과가 오래가요','tshirt':'스태프·참가자 단체복으로도 쓸 수 있어요','magnet':'부피가 작아 관광 기념품으로 좋아요'}
-def recommend_rules(text,budget_text=''):
+def recommend_rules(text,budget_text='',exclude=()):
     t=(text or '').lower();score={k:0 for k in ITEMS};why={k:[] for k in ITEMS}
     for keys,pts,reason in RULES:
         if any(k in t for k in keys):
@@ -35,14 +35,14 @@ def recommend_rules(text,budget_text=''):
     if any(k in (budget_text or '') for k in ('적','소액','저예산','천만')):
         for it in ('sticker','magnet'):score[it]+=1;why[it].append('예산이 작은 조건')
     base={'keyring':2,'sticker':2,'poster':1,'magnet':1,'ecobag':1,'tshirt':0}  # 아무 단서가 없을 때의 기본 순서
-    ranked=sorted(ITEMS,key=lambda k:(-(score[k]+base[k]),k))[:3]
+    ranked=sorted((k for k in ITEMS if k not in exclude),key=lambda k:(-(score[k]+base[k]),k))[:3]
     return [{'item':k,'name':ITEMS[k][0],'reason':((why[k][0]+'에 맞고, ' if why[k] else '')+NOTE[k])} for k in ranked]
 
-def recommend_ai(concept,context):
+def recommend_ai(concept,context,exclude=()):
     """Gemini 가 컨셉을 읽고 굿즈 3종과 이유를 고른다. 실패하면 None."""
     key,model=os.getenv('GEMINI_API_KEY'),os.getenv('GEMINI_MODEL')
     if not key or not model:return None
-    names=', '.join('%s(%s)'%(k,v[0]) for k,v in ITEMS.items())
+    names=', '.join('%s(%s)'%(k,v[0]) for k,v in ITEMS.items() if k not in exclude)
     prompt=('대구 지역 축제 굿즈 기획자입니다. 아래 컨셉과 조건에 가장 잘 맞는 굿즈 종류 3개를 골라 JSON 배열로만 답하세요. '
             '형식: [{"item":"keyring","reason":"한 문장(한국어, 50자 이내)"}]. item 은 반드시 다음 중에서만: '+names+'\n컨셉: '+concept+'\n조건: '+context)
     try:
@@ -52,18 +52,22 @@ def recommend_ai(concept,context):
             arr=json.loads(json.load(r)['candidates'][0]['content']['parts'][0]['text'])
         out=[]
         for a in arr:
-            if a.get('item') in ITEMS and a['item'] not in [o['item'] for o in out]:
+            if a.get('item') in ITEMS and a['item'] not in exclude and a['item'] not in [o['item'] for o in out]:
                 out.append({'item':a['item'],'name':ITEMS[a['item']][0],'reason':str(a.get('reason',''))[:120]})
         return out[:3] or None
     except Exception:return None
 
-def recommend(concept,workspace):
+def recommend(concept,workspace,exclude=()):
     concept=str(concept or '').strip()[:300]
     if len(concept)<2:raise GoodsError('컨셉을 먼저 입력해 주세요.')
     c=(workspace.get('conditions') or {});plan=workspace.get('plan') or {}
     ctx=' / '.join('%s: %s'%(k,v) for k,v in (('대상',c.get('target') or plan.get('target')),('예산',c.get('budget_total') or plan.get('budget_total')),('규모',c.get('scale') or plan.get('scale')),('테마',c.get('theme'))) if v)
-    ai=recommend_ai(concept,ctx)
-    return {'recommendations':ai or recommend_rules(concept+' '+ctx,str(c.get('budget_total') or '')),'by':'ai' if ai else 'rules'}
+    exclude=[x for x in (exclude or []) if x in ITEMS]
+    reset=len(exclude)>=len(ITEMS)  # 6종을 모두 보여 줬으면 처음부터 다시
+    if reset:exclude=[]
+    ai=recommend_ai(concept,ctx,exclude)
+    recs=ai or recommend_rules(concept+' '+ctx,str(c.get('budget_total') or ''),exclude)
+    return {'recommendations':recs,'by':'ai' if ai else 'rules','reset':reset,'remaining':len([k for k in ITEMS if k not in exclude and k not in [r['item'] for r in recs]])}
 
 def ensure_table(store):
     if store.pg:return  # Supabase 는 supabase/003_goods.sql 로 미리 만든다
