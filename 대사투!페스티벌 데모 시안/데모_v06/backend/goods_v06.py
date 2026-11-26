@@ -163,6 +163,46 @@ def image_bytes(store,uid,did):
     if not r:raise GoodsError('시안을 찾을 수 없습니다.')
     return base64.b64decode(r['image'])
 
+def _plan_data(store,uid,did,quantity,workspace):
+    ensure_table(store)
+    with store.db() as db:
+        r=db.execute('SELECT item,concept,prompt,image,created_at FROM goods_designs WHERE id=? AND user_id=?',(str(did)[:40],uid)).fetchone()
+    if not r:raise GoodsError('시안을 찾을 수 없습니다.')
+    name,_,spec,caution=ITEMS[r['item']]
+    try:qty=max(1,min(100000,int(quantity)))
+    except (TypeError,ValueError):raise GoodsError('수량을 숫자로 입력해 주세요.')
+    fest=((workspace.get('plan') or {}).get('festival_name')) or '(축제명 미정)'
+    return r,name,spec,caution,qty,fest
+
+SCHEDULE=[('D-60','디자인 확정, 업체 견적 요청'),('D-45','업체 선정·계약, 시안 파일 전달'),('D-35','샘플(1차) 수령·검수'),('D-25','수정 반영·본 제작 시작'),('D-10','납품·수량 검수'),('D-3','현장 반입·판매·배포 위치 확정')]
+CHECKS=['마스코트·로고 사용 승인 여부','제작 업체 견적 3건 이상 확보','안전·인증(어린이 대상이면 KC 등) 확인','샘플 검수(색상·재단·내구성)','판매·배포 방식(무료 증정/판매) 및 재고 관리 계획']
+
+def plan_model(r,name,spec,caution,qty,fest,did):
+    today=time.strftime('%Y-%m-%d')
+    return {
+     'title':'%s · %s 제작 계획서'%(fest,name),'subtitle':'굿즈 제작 계획서 (초안)',
+     'warn':['이 문서는 공식 캐릭터 시안에 맞춘 초안입니다. [추정]·[확인 필요] 표시는 업체 견적과 담당자 확인 뒤 확정해 주세요.'],
+     'meta':'작성일 %s · 시안 번호 %s'%(today,did),
+     'sections':[
+      {'h':'1. 개요','blocks':[{'t':'table','hdr':'row','rows':[['축제',fest],['굿즈',name],['컨셉',r['concept']],['계획 수량','%s개 [가정: 담당자 입력값]'%format(qty,',')]]}]},
+      {'h':'2. 시안','blocks':[{'t':'img','src':'data:image/jpeg;base64,'+r['image'],'caption':'시안 번호 '+did},
+        {'t':'p','text':'공식 캐릭터 원본 이미지(대키미·외지몽)를 그대로 굿즈 모양에 올린 시안입니다. 캐릭터는 AI가 다시 그리지 않았고, 배경·제품 사진만 AI가 만들었습니다.'},
+        {'t':'note','text':'이 시안은 보기용 이미지(1024px)입니다. 인쇄용 고해상도·벡터(AI/PDF) 파일은 디자이너가 원본으로 다시 정리해야 합니다 [확인 필요].'}]},
+      {'h':'3. 사양','blocks':[{'t':'table','hdr':'col','rows':[['항목','내용'],['규격·재질 [추정]',spec],['제작 시 주의',caution]]}]},
+      {'h':'4. 수량·예산','blocks':[{'t':'table','hdr':'col','rows':[['항목','내용','비고'],['수량','%s개'%format(qty,','),'[가정] 담당자 입력'],['단가','견적 후 기입','[확인 필요] 업체 3곳 이상 견적 비교'],['제작비 합계','단가 × 수량','견적 후 계산'],['예비분','약 5~10% 추가 제작','[추정]']]}]},
+      {'h':'5. 제작 일정 (축제 개막일 기준 역산)','blocks':[{'t':'table','hdr':'col','rows':[['시점','할 일','구분']]+[[a,b,'[추정]'] for a,b in SCHEDULE]}]},
+      {'h':'6. 점검 목록','blocks':[{'t':'table','hdr':'col','rows':[['번호','확인 항목','확인 여부']]+[[str(i+1),c,'□ 미확인'] for i,c in enumerate(CHECKS)]}]},
+      {'h':'7. 근거 표시','blocks':[{'t':'p','text':'[확인] 시안·컨셉: 시스템에 저장된 값'},{'t':'p','text':'[가정] 수량: 담당자 입력'},{'t':'p','text':'[추정] 규격·일정: 일반적인 제작 관행이며 업체와 확정이 필요합니다.'}]},
+     ],
+     'foot':'대사투! 페스티벌 · 굿즈 제작 계획서 (초안)'}
+
+def export_plan(store,uid,did,quantity,workspace,fmt):
+    r,name,spec,caution,qty,fest=_plan_data(store,uid,did,quantity,workspace)
+    model=plan_model(r,name,spec,caution,qty,fest,str(did)[:40])
+    import plan_export_v06 as X
+    if fmt not in ('pdf','docx','hwpx'):raise GoodsError('지원하지 않는 형식입니다.')
+    return getattr(X,'to_'+fmt)(model),'제작계획서_%s_%s.%s'%(name,str(did)[:6],fmt)
+
 def production_plan(store,uid,did,quantity,workspace):
     ensure_table(store)
     with store.db() as db:

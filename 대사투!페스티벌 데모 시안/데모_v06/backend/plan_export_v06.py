@@ -38,6 +38,7 @@ tr{break-inside:avoid;page-break-inside:avoid}
 th,td{border:1px solid #8B7D9B;border-bottom:1px solid #8B7D9B;padding:7px 9px;vertical-align:top;text-align:left;box-decoration-break:clone;-webkit-box-decoration-break:clone}
 th{background:#EEE8F7;color:#413053;font-weight:700}tbody tr:nth-child(even) td{background:#F8F6FC}
 .blank{color:#8F4929;background:#FFF0E6;padding:0 3px;font-size:9pt}
+.fig{text-align:center;margin:8px 0;break-inside:avoid}.fig img{width:56%;max-width:100%;border:1px solid #8B7D9B}.fig small{display:block;color:#70677F;font-size:9pt}
 .foot{text-align:center;color:#81788D;font-size:9pt;margin-top:18px;border-top:1px solid #C9BED8;padding-top:8px;break-inside:avoid}
 """
 
@@ -77,6 +78,8 @@ def model_to_html(m: dict, full=True) -> str:
                 widths=([30,70] if hdr=="row" else [35,65]) if count==2 else [100/count]*count
                 cols="<colgroup>"+"".join('<col style="width:'+str(v)+'%">' for v in widths)+"</colgroup>"
                 o.append("<table>"+cols+header+"<tbody>"+"".join(bodyrows)+"</tbody></table>")
+            elif t == "img":
+                o.append('<p class="fig"><img src="'+html.escape(b.get("src",""),quote=True)+'" alt="">'+('<small>'+html.escape(b.get("caption",""))+'</small>' if b.get("caption") else '')+'</p>')
             elif t == "h3":
                 o.append(f'<h3>{html.escape(b.get("text",""))}</h3>')
             elif t == "note":
@@ -98,7 +101,9 @@ def to_pdf(m: dict) -> bytes:
     with tempfile.TemporaryDirectory() as d:
         h, p = Path(d) / "plan.html", Path(d) / "plan.pdf"
         h.write_text(model_to_html(m), encoding="utf-8")
-        subprocess.run([chrome, "--headless=new", "--disable-gpu", "--no-pdf-header-footer",
+        import os
+        sandbox = ["--no-sandbox"] if hasattr(os, "geteuid") and os.geteuid() == 0 else []  # Render(Docker)는 root 로 실행된다
+        subprocess.run([chrome, "--headless=new", "--disable-gpu", "--no-pdf-header-footer", *sandbox,
                         f"--user-data-dir={d}/prof", f"--print-to-pdf={p}", h.as_uri()],
                        check=True, capture_output=True, timeout=60)
         return p.read_bytes()
@@ -177,6 +182,15 @@ def to_docx(m: dict) -> bytes:
                         if (b.get("hdr", "row") == "col" and ri == 0) or (b.get("hdr", "row") == "row" and ci == 0):
                             run.bold = True
                 d.add_paragraph()
+            elif tp == "img":
+                import base64
+                try:
+                    pic = d.add_paragraph(); pic.alignment = WD_ALIGN_PARAGRAPH.CENTER
+                    pic.add_run().add_picture(io.BytesIO(base64.b64decode(b.get("src", "").split(",", 1)[-1])), width=Cm(8.5))
+                    if b.get("caption"):
+                        cap = d.add_paragraph(b["caption"]); cap.alignment = WD_ALIGN_PARAGRAPH.CENTER; cap.runs[0].font.size = Pt(9)
+                except Exception:
+                    pass
             elif tp == "h3":
                 p = d.add_paragraph(); rr = p.add_run(b.get("text", "")); rr.bold = True
             else:
@@ -220,6 +234,9 @@ def to_hwpx(m: dict) -> bytes:
                 for ri, r in enumerate(rows):
                     for ci in range(nc):
                         tb.set_cell_text(ri, ci, _c(r[ci] if ci < len(r) else ""))
+            elif tp == "img":
+                if b.get("caption"):
+                    d.add_paragraph(b["caption"])  # 한글 파일에는 그림 대신 설명만 넣는다(그림은 PDF·Word 에 포함)
             else:
                 d.add_paragraph(_c(b.get("text", "")) if tp != "h3" else b.get("text", ""))
     if m.get("foot"):

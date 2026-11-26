@@ -202,6 +202,7 @@ class Handler(BaseHTTPRequestHandler):
         except AttachmentError as e:self.fail(Error(str(e)))
         except (BrokenPipeError,ConnectionResetError):pass
         except Exception:
+            import traceback;traceback.print_exc()  # 원인은 서버 로그에만 남긴다(사용자 화면에는 일반 문구)
             self.fail(Error('요청을 처리하지 못했습니다. 다시 시도하거나 운영자에게 문의해 주세요.',500))
     def signin(self,u,extra=None):
         scope=('owner_mfa' if u['verified'] else 'owner_enroll') if u['role']=='owner' else 'normal'
@@ -336,6 +337,18 @@ class Handler(BaseHTTPRequestHandler):
             STORE.limit('goodsrec:'+str(u['id']),30,3600)
             try:return self.output(G.recommend(b.get('concept'),STORE.workspace(u['id']),b.get('exclude')))
             except G.GoodsError as e:raise Error(str(e),400)
+        if p=='/api/goods/export':
+            import goods_v06 as G
+            import urllib.parse as _up
+            STORE.limit('goodsexp:'+str(u['id']),30,3600)
+            fmt=_up.parse_qs(urlsplit(self.path).query).get('fmt',['pdf'])[0]
+            try:data,fname=G.export_plan(STORE,u['id'],b.get('id'),b.get('quantity'),STORE.workspace(u['id']),fmt)
+            except G.GoodsError as e:raise Error(str(e),400)
+            except Exception:
+                import traceback;traceback.print_exc()
+                raise Error('문서 변환에 실패했습니다. 잠시 후 다시 시도하거나 다른 형식을 이용해 주세요.',503)
+            STORE.event(u['id'],'goods_export',detail=fmt)
+            self.send_response(200);self.send_header('Content-Type',{'pdf':'application/pdf','docx':'application/vnd.openxmlformats-officedocument.wordprocessingml.document','hwpx':'application/hwp+zip'}[fmt]);self.send_header('Content-Length',str(len(data)));self.send_header('Cache-Control','no-store');self.send_header('X-Content-Type-Options','nosniff');self.send_header('Content-Disposition',"attachment; filename*=UTF-8''"+_up.quote(fname));self.end_headers();self.wfile.write(data);return
         if p=='/api/goods/plan':
             import goods_v06 as G
             try:return self.output(G.production_plan(STORE,u['id'],b.get('id'),b.get('quantity'),STORE.workspace(u['id'])))
