@@ -1,6 +1,6 @@
 'use strict';
 // 06-2. 굿즈 시안: 컨셉으로 시안 이미지를 만들고, 마음에 드는 시안에 맞춘 제작 계획서(md)를 받는다.
-const GOODS={items:{},designs:[],enabled:false,loaded:false,busy:false,concept:'',item:'keyring',recs:null,recBusy:false,poseMode:'auto',shown:[],who:'both'};
+const GOODS={items:{},groups:{},designs:[],enabled:false,loaded:false,busy:false,concept:'',item:'keyring',recs:null,recBusy:false,poseMode:'auto',shown:[],who:'both'};
 async function goodsLoad(){try{const d=await api('/api/goods/list');GOODS.items=d.items;GOODS.groups=d.groups||{};GOODS.designs=d.designs;GOODS.enabled=d.enabled;GOODS.loaded=true}catch(e){feedback(e.message,true)}if(S.page==='goodsdesign')render()}
 async function goodsMake(){if(GOODS.busy)return;const concept=(GOODS.concept||S.w.plan?.concept||S.w.conditions?.concept||'').trim();if(concept.length<2){feedback('컨셉을 입력해 주세요.',true);return}GOODS.busy=true;render();try{await api('/api/goods/design',{item:GOODS.item,concept,count:2,who:GOODS.who,pose_mode:GOODS.poseMode},120000);feedback('시안을 만들었습니다.');await goodsLoad()}catch(e){feedback(e.message,true)}finally{GOODS.busy=false;render()}}
 async function goodsSelect(d){try{const r=await api('/api/goods/select',{id:d.id,selected:!d.selected},20000);d.selected=r.selected;feedback(r.selected?'이 시안을 선택했습니다. 기획안의 굿즈 파트에 들어갑니다.':'선택을 해제했습니다.')}catch(e){feedback(e.message,true)}render()}
@@ -24,7 +24,7 @@ function goodsDesign(){
   const concept=GOODS.concept||S.w.plan?.concept||S.w.conditions?.concept||'';
   const top=heading('굿즈 시안','축제 컨셉에 맞춘 굿즈 시안 이미지를 만들고, 마음에 드는 시안의 제작 계획서를 받아요.');
   const form=el('form',{class:'card'},
-    el('div',{class:'field'},el('label',{for:'g-item'},'굿즈 종류'),el('select',{id:'g-item',onchange:e=>GOODS.item=e.target.value},...[['신규 후보 (추천 대상)',GOODS.groups.new||[]],['기본 품목',GOODS.groups.basic||Object.keys(GOODS.items)]].map(([label,keys])=>el('optgroup',{label},...keys.filter(k=>GOODS.items[k]).map(k=>el('option',{value:k,selected:k===GOODS.item},GOODS.items[k])))))),
+    el('div',{class:'field'},el('label',{for:'g-item'},'굿즈 종류'),el('select',{id:'g-item',onchange:e=>GOODS.item=e.target.value},...[['신규 후보 (추천 대상)',(GOODS.groups||{}).new||[]],['기본 품목',(GOODS.groups||{}).basic||Object.keys(GOODS.items)]].map(([label,keys])=>el('optgroup',{label},...keys.filter(k=>GOODS.items[k]).map(k=>el('option',{value:k,selected:k===GOODS.item},GOODS.items[k])))))),
     el('div',{class:'field'},el('label',{for:'g-who'},'캐릭터'),el('select',{id:'g-who',onchange:e=>GOODS.who=e.target.value},...[['both','대키미 + 외지몽'],['daekimi','대키미'],['oejimong','외지몽']].map(([k,v])=>el('option',{value:k,selected:k===GOODS.who},v)))),
     el('div',{class:'field'},el('label',{for:'g-pose'},'포즈·표정'),el('select',{id:'g-pose',onchange:e=>GOODS.poseMode=e.target.value},...[['auto','올해 추천 포즈 (공식 표정·자세에서 매년 다르게)'],['default','기본 포즈 (공식 대표 이미지)']].map(([k,v])=>el('option',{value:k,selected:k===GOODS.poseMode},v))),p('생김새와 색은 공식 원본 그대로이고, 포즈·표정만 공식 표정·자세 시트의 승인된 그림에서 골라 올해 다르게 씁니다. 이미 쓴 포즈는 피합니다.','hint')),
     el('div',{class:'field'},el('label',{for:'g-concept'},'컨셉'),el('textarea',{id:'g-concept',maxlength:300,rows:3,placeholder:'예) 우주 정거장에서 만나는 대구 사투리 파티',value:concept,oninput:e=>GOODS.concept=e.target.value})),
