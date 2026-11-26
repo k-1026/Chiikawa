@@ -1,0 +1,32 @@
+.gate .top, .gate .tabbar { display: none; }
+.gate .app, .app.gate { padding-bottom: 24px; }
+.gate-card { padding: 24px 18px; text-align: center; }
+.gate-card h1 { font-family: "Black Han Sans", sans-serif; font-size: 34px; margin: 8px 0 0; color: var(--pri-d); }
+.btn-kakao { background: #fee500; color: #191919; border: 0; border-radius: 14px; padding: 14px; width: 100%; font-weight: 800; margin-top: 10px; }
+.btn-google { background: #fff; color: #222; border: 1px solid #cfd8e0; border-radius: 14px; padding: 14px; width: 100%; font-weight: 800; margin-top: 10px; }
+.opts { display: grid; gap: 8px; margin-top: 8px; }
+.opts label { display: block; background: #fff; border: 1.5px solid var(--line); border-radius: 12px; padding: 10px 12px; font-weight: 500; }
+.opts input { margin-right: 8px; }
+.opts label:has(input:checked) { border-color: var(--pri); background: var(--sky-l); }
+.qrow { display: flex; gap: 8px; align-items: center; justify-content: space-between; padding: 10px 0; border-top: 1px solid var(--line); }
+.qrow:first-child { border-top: 0; }
+.qty { display: inline-flex; align-items: center; gap: 8px; }
+.qty button { width: 30px; height: 30px; border-radius: 50%; border: 1px solid var(--line); background: #fff; font-weight: 800; }
+.price { font-weight: 800; color: var(--pri-d); }
+.badge { display: inline-block; font-size: 11px; font-weight: 800; border-radius: 99px; padding: 2px 8px; background: var(--sky-l); color: var(--pri-d); }
+.badge.hot { background: #ffe9c2; color: #9a5b00; }
+.badge.call { background: var(--red); color: #fff; }
+.ticket { text-align: center; border: 2px dashed var(--pri); border-radius: 18px; padding: 16px; background: #fff; margin-bottom: 12px; }
+.ticket .no { font-family: "Black Han Sans", sans-serif; font-size: 38px; color: var(--pri-d); }
+.alim { background: #fee500; color: #191919; border-radius: 14px; padding: 10px 12px; margin-bottom: 12px; font-size: 13px; font-weight: 700; }
+.chat { display: grid; gap: 8px; margin: 10px 0; }
+.chat .u, .chat .b { max-width: 86%; padding: 9px 12px; border-radius: 14px; font-size: 14px; white-space: pre-wrap; }
+.chat .u { justify-self: end; background: var(--pri); color: #fff; }
+.chat .b { background: #fff; border: 1px solid var(--line); }
+.dwrap { display: grid; gap: 8px; }
+.dentry { background: #fff; border: 1px solid var(--line); border-radius: 14px; padding: 10px 12px; }
+.dentry b { font-size: 17px; color: var(--pri-d); }
+textarea, input[type=search], input.txt { width: 100%; border: 1.5px solid var(--line); border-radius: 12px; padding: 10px 12px; font: inherit; background: #fff; }
+.outbox { background: var(--sky-l); border-radius: 12px; padding: 12px; margin-top: 10px; min-height: 48px; white-space: pre-wrap; }
+.menu-card { display: grid; gap: 4px; }
+.cartbar { position: sticky; bottom: calc(var(--tabbar-h) + 8px); z-index: 10; }
