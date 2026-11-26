@@ -8,8 +8,9 @@
   /* ---------- 게이트: 로그인 → 설문 ---------- */
   window.GATE = () => {
     const a = auth();
-    $app.classList.toggle('gate', !a);
+    $app.classList.toggle('gate', !a || !store.get('survey', null));
     if (!a) { $view.innerHTML = gateLogin(); return true; }
+    if (!store.get('survey', null)) { $view.innerHTML = gateSurvey(); return true; }   // 로그인(또는 둘러보기) 직후 "1분만요"가 가장 먼저
     return false;
   };
   const gateLogin = () => {
