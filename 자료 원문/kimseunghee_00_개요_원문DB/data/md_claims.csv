@@ -1,0 +1,24 @@
+claim_id,md_id,md_section,row_key,claim_type,is_external,claim_text,md_stated_grade,md_stated_source,overall_verdict,overall_verdict_ko,evidence_count
+CLM-K00-H-01,MD-K00,머리말,기준,rule,true,"자료 기준일 2026-10-31, 조사 기간 2022-01 ~ 2026-10",,작성자 기준,interpretation,해석·제안,1
+CLM-K00-G-01,MD-K00,출처 등급,①②③,rule,true,"출처 등급 ① 공식(학술 포함) / ② 기사 / ③ 비공식, 조사 순서와 사용 원칙",,작성자 기준,interpretation,해석·제안,3
+CLM-K00-G-02,MD-K00,출처 등급,독립 근거,rule,true,같은 필자·기사·원출처는 독립 근거 1건,,작성자 기준,interpretation,해석·제안,1
+CLM-K00-L-01,MD-K00,라벨,지역,rule,true,B~D 자료(경북·경상권·전국·해외)는 대구 사실로 일반화하지 않음,,작성자 기준,interpretation,해석·제안,1
+CLM-K00-L-02,MD-K00,라벨,검증 수준,rule,true,'요약 기반'은 인용 전 원문 대조 필요,,작성자 기준,interpretation,해석·제안,1
+CLM-K00-P-01,MD-K00,기간 예외,범위,rule,true,"지침 v2는 방언의 역사·형성·언어적 특성 과거 연구를 예외로 허용, 그 외 2022년 이전은 기간외 참고",,사투리_리서치지침_v2,interpretation,해석·제안,2
+CLM-K00-A-01,MD-K00,자산 판정,3질문,rule,true,"자산 판정 3질문: 고유성(대구 직접)·지속성(2회 이상 또는 운영 중)·활용성(공식 수치 1개 이상, 가안)",,작성자 기준,interpretation,해석·제안,3
+CLM-K00-C1-01,MD-K00,전체 핵심,1,proposal,false,대구 단독 자산 0건(3질문 모두 통과한 대구 사례 없음),,작성자 판단,interpretation,해석·제안,1
+CLM-K00-C1-02,MD-K00,전체 핵심,1,fact,true,자산 후보: 경북대 사투리 백일장,②,매일신문 2026-10-08,match,일치,1
+CLM-K00-C1-03,MD-K00,전체 핵심,1,fact,true,자산 후보: 대구시민주간 사투리 프로그램,②,경북매일 2023-02-19,match,일치,3
+CLM-K00-C1-04,MD-K00,전체 핵심,1,fact,true,자산 후보: 앞산전망대 사투리 퀴즈 미디어보드,②,매일신문 2026-03-23,match,일치,2
+CLM-K00-C1-05,MD-K00,전체 핵심,1,fact,true,자산 후보: AI허브 경상 방언 데이터,①,aihub.or.kr,match,일치,1
+CLM-K00-C2-01,MD-K00,전체 핵심,2,condition,true,"국립국어원 국민의 언어 의식 조사(2025), 20~69세 5,000명",②(원자료 ① 확인 필요),뉴시스 2026-01-27,match,일치,3
+CLM-K00-C2-02,MD-K00,전체 핵심,2,figure,true,방언 유지 필요 59.2%(2020 대비 +8.3%p),②,뉴시스 2026-01-27,match,일치,4
+CLM-K00-C2-03,MD-K00,전체 핵심,2,figure,true,복수 표준어 인정 긍정 47.7%,②,뉴시스 2026-01-27,match,일치,2
+CLM-K00-C3-01,MD-K00,전체 핵심,3,figure,true,"경북 20대: 부모·고향 친구 41.3%, 교수 0%, 아르바이트 2.7%",②(논문 원문 미확인),매일신문 2026-03-23,match,일치,2
+CLM-K00-C3-02,MD-K00,전체 핵심,3,condition,true,이 수치는 경북 표본이며 대구 단독 아님,,작성자 판단,mismatch,불일치,2
+CLM-K00-C4-01,MD-K00,전체 핵심,4,fact,true,"대구 사투리 축제는 검색에서 확인되지 않음(치맥·떡볶이·판타지아 등 다른 주제만 나옴, 검색 1회)",②,헤럴드경제 2026-06-21,interpretation,해석·제안,1
+CLM-K00-C5-01,MD-K00,전체 핵심,5,fact,true,대구 지역어 조례는 찾지 못함(없다고 단정 불가),-,law.go.kr,scope_mismatch,적용 범위 다름,1
+CLM-K00-C5-02,MD-K00,전체 핵심,5,fact,true,창원 조례(2024) 확인,②,메트로서울 2024-03-11,scope_mismatch,적용 범위 다름,1
+CLM-K00-C5-03,MD-K00,전체 핵심,5,fact,true,전북 조례(2021) 확인,②,전북일보 2025-06-07,mismatch,불일치,1
+CLM-K00-C5-04,MD-K00,전체 핵심,5,fact,true,제주 조례(2007) 확인,②,서울신문 2016-08-22,match,일치,1
+CLM-K00-C6-01,MD-K00,전체 핵심,6,proposal,false,정량 근거 미확보: 사투리 굿즈·변환기·타지역 2030 인식 설문·대구 세대별 사용 통계,,작성자 판단,interpretation,해석·제안,1

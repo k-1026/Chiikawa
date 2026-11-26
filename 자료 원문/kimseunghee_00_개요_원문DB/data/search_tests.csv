@@ -1,0 +1,13 @@
+test_id,query,include_reference,expected_chunk_id,note
+ST-K00-01,방언 유지,false,CHK-K00-NIKLP-002,국립국어원 공식 수치
+ST-K00-02,"5,000명",false,CHK-K00-NIKLP-001,조사 표본
+ST-K00-03,8.3%p,false,CHK-K00-NIKLP-003,2020 대비
+ST-K00-04,복수 표준어,true,CHK-K00-NSIS-004,기사 값(참고 포함)
+ST-K00-05,대학생 38명,false,CHK-K00-KCI-001,논문 표본
+ST-K00-06,아르바이트,true,CHK-K00-IM0323-002,상황별 사용 비율(기사)
+ST-K00-07,사투리퀴즈,false,CHK-K00-DGP257024-001,앞산 전망대 키오스크
+ST-K00-08,이쁘다 아이가,false,CHK-K00-DGP258646-001,시민주간 프로그램
+ST-K00-09,백일장,true,CHK-K00-IM1008-001,경북대 백일장(기사)
+ST-K00-10,경상도 방언 발화,false,CHK-K00-AIHUB-001,AI Hub 데이터
+ST-K00-11,대구광역시조례,false,CHK-K00-ORD-DAEGU-001,대구 국어 진흥 조례
+ST-K00-12,제주특별자치도조례,false,CHK-K00-ORD-JEJU-001,제주어 조례

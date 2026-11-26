@@ -1,0 +1,7 @@
+rule_id,rule_scope,rule_text,enforcement,condition_text,rule_source_id,rule_chunk_id,target_chunk_ids,approval_status
+RULE-K00-001,source_grade,② 기사 수치는 원자료 확인 전까지 '요약 기반'으로 표시하고 확정 사실로 답하지 않는다.,block_as_fact,source_grade = 'B',SRC-K00-MD,CHK-K00-MD-003,,approved
+RULE-K00-002,source_grade,③ 비공식 자료(칼럼·민간·블로그·SNS)는 반응·참고용으로만 쓰고 링크를 붙인다.,warn,비공식 출처,SRC-K00-MD,CHK-K00-MD-004,,approved
+RULE-K00-003,region,경북·경상권·전국·해외 자료는 대구의 사실로 일반화하지 않는다.,block,applies_to 가 대구가 아님,SRC-K00-MD,CHK-K00-MD-006,,approved
+RULE-K00-004,count,같은 필자·같은 기사·같은 원출처는 독립 근거 1건으로 센다.,warn,근거 수 계산,SRC-K00-MD,CHK-K00-MD-005,,approved
+RULE-K00-005,period,2022년 이전 자료는 방언 역사·형성·언어적 특성 연구를 빼고 '기간외 참고'로 판정에서 제외한다.,warn,발행일 < 2022-01-01,SRC-K00-MD,CHK-K00-MD-009,,approved
+RULE-K00-006,sample,청년층 방언 사용 수치(41.3% 등)는 표본 정의가 기사('경북 20대')와 논문 초록('대구 지역 20대 대학생 38명')이 다르므로 표본과 함께만 인용한다.,warn,chunk_id = 'CHK-K00-IM0323-002',,,,approved

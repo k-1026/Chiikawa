@@ -1,0 +1,22 @@
+record_id,domain,subject,metric,value_numeric,value_text,unit,currency,vat_basis,quantity_basis,base_year,period_start,period_end,value_status,source_id,chunk_id,claim_id,note,approval_status
+FIG-K00-001,statistic,2025 국민의 언어 의식 조사,표본 수,5000,"5,000명",persons,,not_stated,,2025,2025-09-01,2025-10-31,reported,SRC-K00-NIKL-PRESS,CHK-K00-NIKLP-001,CLM-K00-C2-01,"만 20~69세, 전국. 조사 기간은 보고서 기준(Aside)",approved
+FIG-K00-002,statistic,2025 국민의 언어 의식 조사,지역 방언 유지 필요 긍정,59.2,59.2%,percent,,not_stated,,2025,,,reported,SRC-K00-NIKL-PRESS,CHK-K00-NIKLP-002,CLM-K00-C2-02,"전국 표본, 대구 분리 불가",approved
+FIG-K00-003,statistic,2025 국민의 언어 의식 조사,2020년 대비 증감,8.3,약 8.3%p,percentage_point,,not_stated,,2025,,,reported,SRC-K00-NIKL-PRESS,CHK-K00-NIKLP-003,CLM-K00-C2-02,,approved
+FIG-K00-004,statistic,2020 국민의 언어 의식 조사,지역 방언 유지 필요 긍정,,,percent,,not_stated,,2020,,,unconfirmed,,,,Aside 보고 50.9%(2020년 보고서 77·78쪽) — 원문 미보관이라 값 칸 비움,pending
+FIG-K00-005,statistic,2025 국민의 언어 의식 조사,복수 표준어 인정 긍정,47.7,47.7%,percent,,not_stated,,2025,,,reported,SRC-K00-NEWS-NSIS-20260127,CHK-K00-NSIS-004,CLM-K00-C2-03,공식 보고서 값은 Aside 보고(미보관),reference_only
+FIG-K00-006,statistic,청년층 상황별 방언 사용(기사 보도),방언 사용 비율 — 부모,41.3,41.3%,percent,,not_stated,,,,,reported,SRC-K00-NEWS-IM-20260323,CHK-K00-IM0323-002,CLM-K00-C3-01,"기사는 '경북 20대', 논문 초록은 '대구 지역 20대 대학생 38명'",reference_only
+FIG-K00-007,statistic,청년층 상황별 방언 사용(기사 보도),방언 사용 비율 — 고향 친구,41.3,41.3%,percent,,not_stated,,,,,reported,SRC-K00-NEWS-IM-20260323,CHK-K00-IM0323-002,CLM-K00-C3-01,"기사는 '경북 20대', 논문 초록은 '대구 지역 20대 대학생 38명'",reference_only
+FIG-K00-008,statistic,청년층 상황별 방언 사용(기사 보도),방언 사용 비율 — 교수,0,0%,percent,,not_stated,,,,,actual_zero,SRC-K00-NEWS-IM-20260323,CHK-K00-IM0323-002,CLM-K00-C3-01,"기사는 '경북 20대', 논문 초록은 '대구 지역 20대 대학생 38명'",reference_only
+FIG-K00-009,statistic,청년층 상황별 방언 사용(기사 보도),방언 사용 비율 — 아르바이트,2.7,2.7%,percent,,not_stated,,,,,reported,SRC-K00-NEWS-IM-20260323,CHK-K00-IM0323-002,CLM-K00-C3-01,"기사는 '경북 20대', 논문 초록은 '대구 지역 20대 대학생 38명'",reference_only
+FIG-K00-010,statistic,청년층 방언 사용량 자가 평가(기사 보도),점수 — 경북 20대(기사 표현),70.4,70.4점,points,,not_stated,,,,,reported,SRC-K00-NEWS-IM-20260323,CHK-K00-IM0323-003,,,reference_only
+FIG-K00-011,statistic,청년층 방언 사용량 자가 평가(기사 보도),점수 — 전북 20대,37.8,37.8점,points,,not_stated,,,,,reported,SRC-K00-NEWS-IM-20260323,CHK-K00-IM0323-003,,,reference_only
+FIG-K00-012,statistic,청년층 방언 보존 필요성(기사 보도),찬성 비율,83.6,83.6%,percent,,not_stated,,,,,reported,SRC-K00-NEWS-IM-20260323,CHK-K00-IM0323-004,,,reference_only
+FIG-K00-013,statistic,논문 표본,조사 대상 수,38,38명,persons,,not_stated,,2026,,,reported,SRC-K00-KCI-PAPER,CHK-K00-KCI-001,CLM-K00-C3-02,대구 지역 20대 대학생,approved
+FIG-K00-014,spec,AI Hub 한국어 방언 발화(경상도),화자 수(하한),,2000명 이상,persons,,not_stated,,,,,reported,SRC-K00-AIHUB-119,CHK-K00-AIHUB-001,CLM-K00-C1-05,'이상' 하한값이라 숫자 칸 비움,approved
+FIG-K00-015,spec,AI Hub 한국어 방언 발화(경상도),음성 시간(하한),,3000 시간 이상,hours,,not_stated,,,,,reported,SRC-K00-AIHUB-119,CHK-K00-AIHUB-001,,하한값,approved
+FIG-K00-016,spec,AI Hub 한국어 방언 발화(경상도),전사 어절(하한),,50 만건 이상,records,,not_stated,,,,,reported,SRC-K00-AIHUB-119,CHK-K00-AIHUB-002,,하한값,approved
+FIG-K00-017,program,제주어 보전 및 육성 조례,최초 제정일,,2007-09-27,date,,not_stated,,,2007-09-27,,reported,SRC-K00-ORD-JEJU,CHK-K00-ORD-JEJU-001,CLM-K00-C5-04,"대구는 보관본 머리에서 확인, 나머지 최초 제정일은 Aside 확인(현행판 머리만 보관)",approved
+FIG-K00-018,program,전북특별자치도 국어 진흥 조례,최초 제정일,,2014-06-27,date,,not_stated,,,2014-06-27,,reported,SRC-K00-ORD-JEONBUK,CHK-K00-ORD-JEONBUK-001,CLM-K00-C5-03,"대구는 보관본 머리에서 확인, 나머지 최초 제정일은 Aside 확인(현행판 머리만 보관)",approved
+FIG-K00-019,program,창원시 국어 진흥과 지역어 보전에 관한 조례,최초 제정일,,2013-12-30,date,,not_stated,,,2013-12-30,,reported,SRC-K00-ORD-CHANGWON,CHK-K00-ORD-CHANGWON-001,CLM-K00-C5-02,"대구는 보관본 머리에서 확인, 나머지 최초 제정일은 Aside 확인(현행판 머리만 보관)",approved
+FIG-K00-020,program,대구광역시 국어 진흥 조례,최초 제정일,,2019-10-30,date,,not_stated,,,2019-10-30,,reported,SRC-K00-ORD-DAEGU,CHK-K00-ORD-DAEGU-001,CLM-K00-C5-01,"대구는 보관본 머리에서 확인, 나머지 최초 제정일은 Aside 확인(현행판 머리만 보관)",approved
+FIG-K00-021,statistic,자산 후보 활용성 수치,참가자·방문객 수(백일장·시민주간·앞산 퀴즈),,,persons,,not_stated,,,,,not_available,,,,세 후보 모두 원문에 참가·이용 수치 없음,pending

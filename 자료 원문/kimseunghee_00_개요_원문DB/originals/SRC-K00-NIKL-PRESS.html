@@ -1,0 +1,5304 @@
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-P6P44RKY81"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-P6P44RKY81');
+</script>
+
+	<meta charset="UTF-8">  
+	<title>국립국어원</title>
+	
+		
+		
+		
+			<meta name="description" content="">
+		
+		
+	
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!--[if lt IE 9]>
+		<script src="/asset/js/html5shiv.min.js"></script>
+		<link rel="stylesheet" href="/asset/css/font/notosanskr-eot.min.css">
+	<![endif]-->
+	<link rel="shortcut icon" href="/asset/img/common/ico_favicon.png" type="image/x-icon">
+	<link rel="stylesheet" href="/asset/css/common/feCommon.min.css?20261015">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  	<script  src="https://code.jquery.com/jquery-2.2.4.js"></script>
+	<!-- //wrap -->
+	<script src="/asset/js/jquery.min.js"></script>
+	<script src="/asset/js/jquery-ui.min.js"></script>
+	<script src="/asset/js/webfont.min.js"></script>
+	<script src="/asset/js/prefixfree.min.js"></script>
+
+	<!-- eDotXPress HTML 라이브러리 --> 
+    <script src="/EDotXPressHtml/js/edotxpress-html.min.js?t=20240703"></script>
+	<script src="/EDotXPressHtml/js/edotxpress-common.js?t=20240703"></script>
+	<script src="/EDotXPressHtml/js/edotxpress-config-korean.js?t=20240703"></script>     
+
+</head>
+<body>
+	<!-- wrap -->
+	<div id="wrap" class="wrap">
+		<!-- skipToContent -->
+		<a href="#content" class="jump_go">본문으로 바로가기</a>
+		<!-- //skipToContent -->
+		
+
+
+
+<!-- 전자정부표시 -->
+<div class="top_line_bnr">
+	<div class="top_link_wrap">
+		<div class="inner">
+			<input type="hidden" name="isinternal3" value="N">
+			<input type="hidden" name="isinternal2" value="N">
+			<div class="top_flag_wrap">
+			<p class="top_flag_in"><img src="/asset/img/main/header_flag.png" alt="태극기">이 누리집은 대한민국 공식 전자정부 누리집입니다.</p>
+			<button class="top_flag_info" id="top_flag" onclick="fntopFlag();">
+			공식 누리집 확인방법
+			<span>열기</span>
+			</button>
+			</div>
+		</div>
+	</div>
+	<div class="chk_nuri_addr_bnr" style="display:none;" id="chk_nuri">
+		<div class="inner">
+		<strong>공식 누리집 주소 확인하기</strong>
+		<p>
+		go.kr 주소를 사용하는 누리집은 대한민국 정부기관이 관리하는 누리집입니다. <br>
+		이 밖에 or.kr 또는 .kr등 다른 도메인 주소를 사용하고 있다면 아래 URL에서 도메인 주소를 확인해 보세요. <br>
+		<a href="https://uiux.egovframe.go.kr/search.do" target="_blank" title="새창으로">운영중인 공식 누리집보기</a>
+		</p>
+		</div>
+	</div>
+</div>
+<script>
+
+function fntopFlag(){
+	document.getElementById("top_flag").classList.toggle('on');
+			
+	var topid = document.getElementById("chk_nuri");
+			
+	if(topid.style.display === 'none' || topid.style.display === '' ) {
+		topid.style.display = 'block';
+	} else {
+		topid.style.display = 'none';
+	}
+}
+
+</script>
+<!-- // 전자정부표시 -->
+
+
+
+<!-- header -->
+<header id="header" class="header">
+
+	<!--<link href='/asset/img/common/klogo.png' rel='icon' type='image/png' />
+	<link href='/asset/img/common/klogo.png' rel='shortcut icon' type='image/png' />
+	<link href='/asset/img/common/klogo.png' rel='apple-touch-icon'  type='image/png'/>-->
+	
+	<!-- top -->
+	<div class="top">
+		<!-- inner -->
+		<div class="inner">
+			<h1 class="logo">
+			 <a href="/front/main.do"><img src="/asset/img/common/logo.png" alt="문화체육관광부 국립국어원"></a>
+			</h1>
+			<!-- search -->
+			<div class="search">
+				<form action="/front/search/searchAllList.do" name="formTopSearch" id="formTopSearch" method="get">
+					<fieldset>
+						<legend>통합 검색</legend>
+						<input type="hidden" name="searchCategory" value="total" class="dqSearch"/>
+						<input type="hidden" name="searchScope"		value="total" class="dqSearch"/>
+						<input type="hidden" class="dicFormElem" name="focus_name" 		value="query">
+						<input type="hidden" class="dicFormElem" name="query" 			value="">
+						<input type="hidden" class="dicFormElem" name="mainSearchWord" 	value="">
+						<input type="hidden" class="dicFormElem" name="nationCode" 		value="">
+						<input type="hidden" class="dicFormElem" name="ParaWordNo" 		value="">
+						<input type="hidden" class="dicFormElem" name="SearchText" 		value="" id="SearchText">
+						<input type="hidden"  id="krSearchText" name="krSearchText" value="">
+						<input type="hidden" class="MainDicElem" name="PageRow" 	value="10" 		title="KoreanBasicElement">
+						<input type="hidden" class="MainDicElem" name="Table" 		value="words|word" title="KoreanBasicElement">
+						<input type="hidden" class="MainDicElem" name="Gubun" 		value="0" 		title="KoreanBasicElement">
+						<input type="hidden" class="MainDicElem" name="SearchPart" 	value="Simple" 	title="KoreanBasicElement">
+						<input type="hidden" class="MainDicElem" name="idx" 		value=""		title="KoreanBasicElement">
+						<input type="hidden" class="MainDicElem" name="go" 			value=""		title="KoreanBasicElement">
+						<input type="hidden" class="MainDicElem" name="gogroup" 	value=""		title="KoreanBasicElement">
+						<input type="hidden" class="MainDicElem" name="Check" 		value=""		title="KoreanBasicElement"> 
+						<input type="hidden" class="MainDicElem" name="openSearchText" value=""	id="openSearchText" title="KoreanBasicElement"> 
+						
+						<div>
+							<!-- <select name="topSearchKind" id="topSearchKind" title="통합검색 은 자창으로 검색되며 표준국어대사전, 우리말샘, 한국어기초사전 검색은 새창으로 검색">
+								<option value="1">통합검색</option>
+							</select> -->
+							<input type="hidden" name="topSearchKind"  id="topSearchKind" value="1">
+							<input type="text" name="searchQuery" id="searchTopQuery" title="키워드" placeholder="검색어를 입력하세요" style="ime-mode:active;">
+						</div>
+						<input type="submit" class="button-search" value="검색">
+					</fieldset>
+				</form>
+			</div>
+			<!-- //search -->
+
+
+			<div class="util2">
+				<button type="button" class="zoom-out" disabled="">축소</button>
+				<button type="button" class="zoom-in">확대</button>
+			</div>
+
+
+			<!-- util -->
+			<div class="util">
+				<ul>
+					<li><a href="/front/nuri/sitemap.do?mkn=1">누리집 안내 지도</a></li>
+					<li><a href="/front_eng/main.do" title="[새창]english" target="_blank">ENGLISH</a></li>
+				</ul>
+				<button type="button" class="button-search">검색 열기</button>
+				<a href="/front/sitemap/sitemap.do">전체 메뉴</a>
+			</div>
+			<!-- //util -->
+		</div>
+		<!-- //inner -->
+	</div>
+	<!-- //top -->
+	<!-- nav -->
+	<nav id="nav" class="nav clearFix disabled">
+		<!-- inner -->
+		<div class="inner">
+			<h2>주메뉴</h2>
+			
+
+
+
+
+<!-- nav -->
+
+		<!-- depth1 -->
+		
+		
+		
+		
+		
+		<script>
+		$(function() {
+			var parent_id = '152';
+			if (parent_id != '') { 
+				var parent_id1 = $('#nav li[id^='+parent_id+'_]').attr('id').split('_')[1];
+				if(parent_id1 == 0) {
+					$('#nav li[id^='+parent_id+']').addClass("css_active");
+				} else {
+	
+					$('#nav li[id^='+parent_id1+']').addClass("css_active");
+				}
+			}
+		});
+		</script>
+		<ul class="depth1 clearFix">
+			
+				
+					
+					
+					<!-- 1레벨 메뉴 여는 태그-->
+				   
+				<!-- 2레벨이 존재 할 경우 여는 태그 -->
+				
+					<li id="146_0">
+						
+						
+							
+							  
+							  	
+							  		
+										<a href="/front/page/pageView.do?page_id=P000014&amp;mn_id=193" target="_self" class="m_1depth " title=""><span>지식</span></a> 
+							  		
+							  		
+							  	
+							  
+							  
+							
+						
+						
+						
+						
+					<!-- sub -->
+				<div class="sub">
+					<!-- inner -->          
+					<div class="inner">
+						<!-- lnb -->
+						<h2>지식</h2>	
+					
+					<ul class="depth2">
+				
+				
+				
+				
+				
+				<!--  -->
+				
+			
+			<!--  -->
+			
+			
+				<!-- 1레벨 메뉴 닫는 태그-->
+				
+			
+							 
+				
+			
+			 
+				
+			
+				
+				
+				<!--  -->
+				
+				<!-- 2레벨 메뉴 여는 태그-->
+					
+						
+						<li id="154_146">
+					
+					
+					
+						
+							
+								
+									
+								  		
+											<a href="/front/page/pageView.do?page_id=P000014&amp;mn_id=193" target="_self" class="" title="">사전</a> 
+								  		
+								  		
+								  	 
+								
+								
+							  
+						
+						
+						               
+					
+				
+					<ul class="depth311">       
+				 
+				
+				
+				
+				
+				
+				
+				
+				
+			
+			
+			<!--  -->
+			
+			
+			
+				<!-- 2레벨 메뉴 닫는 태그 -->
+				 
+							 
+				
+			
+			 
+				
+			
+				
+				
+				<!--  -->
+				
+			
+			<!--  -->
+			
+			<!-- 3레벨 여는 태그 -->
+				<li id="193_154">
+					
+					
+					
+					
+						<a href="/front/page/pageView.do?page_id=P000014&amp;mn_id=193" target="_self" class="" title="">사전 소개</a>							  
+					
+					
+				</li>
+				
+			
+			
+							 
+			
+				 
+				<!-- 3레벨 메뉴 닫는 태그 -->
+				
+			
+			 
+				
+			
+				
+				
+				<!--  -->
+				
+			
+			<!--  -->
+			
+			<!-- 3레벨 여는 태그 -->
+				<li id="195_154">
+					
+					
+					
+						<a href="https://opendict.korean.go.kr" target="_blank" class="new_win" title="새 창">우리말샘</a> 
+					
+					
+					
+				</li>
+				
+			
+			
+							 
+			
+				 
+				<!-- 3레벨 메뉴 닫는 태그 -->
+				
+			
+			 
+				
+			
+				
+				
+				<!--  -->
+				
+			
+			<!--  -->
+			
+			<!-- 3레벨 여는 태그 -->
+				<li id="194_154">
+					
+					
+					
+						<a href="https://stdict.korean.go.kr" target="_blank" class="new_win" title="새 창">표준국어대사전</a> 
+					
+					
+					
+				</li>
+				
+			
+			
+							 
+			
+				 
+				<!-- 3레벨 메뉴 닫는 태그 -->
+				
+			
+			 
+				
+			
+				
+				
+				<!--  -->
+				
+			
+			<!--  -->
+			
+			<!-- 3레벨 여는 태그 -->
+				<li id="196_154">
+					
+					
+					
+						<a href="https://krdict.korean.go.kr" target="_blank" class="new_win" title="새 창">한국어기초사전</a> 
+					
+					
+					
+				</li>
+				
+			
+			
+							 
+			
+				 
+				<!-- 3레벨 메뉴 닫는 태그 -->
+				
+			
+			 
+				
+			
+				
+				
+				<!--  -->
+				
+			
+			<!--  -->
+			
+			<!-- 3레벨 여는 태그 -->
+				<li id="265_154">
+					
+					
+					
+						<a href="https://opendict.korean.go.kr/modern/main" target="_blank" class="new_win" title="새 창">근현대 국어사전</a> 
+					
+					
+					
+				</li>
+				
+			
+			
+							 
+			
+				 
+				<!-- 3레벨 메뉴 닫는 태그 -->
+				
+			
+			 
+				
+			
+				
+				
+				<!--  -->
+				
+			
+			<!--  -->
+			
+			<!-- 3레벨 여는 태그 -->
+				<li id="277_154">
+					
+					
+					
+						<a href="https://kdict.korean.go.kr/history" target="_blank" class="new_win" title="새 창">우리말어휘역사사전</a> 
+					
+					
+					
+				</li>
+				
+			
+			
+							 
+			
+				 
+				<!-- 3레벨 메뉴 닫는 태그 -->
+				
+			
+			 
+				
+			
+				
+				
+				<!--  -->
+				
+			
+			<!--  -->
+			
+			<!-- 3레벨 여는 태그 -->
+				<li id="278_154">
+					
+					
+					
+						<a href="https://ksldict.korean.go.kr/kslserv/" target="_blank" class="new_win" title="새 창">한국수어누리사전</a> 
+					
+					
+					
+				</li>
+				
+			
+			
+							 
+			
+				 
+				<!-- 3레벨 메뉴 닫는 태그 -->
+				
+			
+			 
+				
+			
+				
+				
+				<!--  -->
+				
+			
+			<!--  -->
+			
+			<!-- 3레벨 여는 태그 -->
+				<li id="279_154">
+					
+					
+					
+						<a href="https://sldict.korean.go.kr/" target="_blank" class="new_win" title="새 창">한국수어사전</a> 
+					
+					
+					
+				</li>
+				
+			
+			
+							 
+			
+				 
+				 <!-- 2레벨 메뉴 닫는 태그 -->
+					 </ul>
+					 </li>
+				 
+				<!-- 3레벨 메뉴 닫는 태그 -->
+				
+			
+			 
+				
+			
+				
+				
+				<!--  -->
+				
+				<!-- 2레벨 메뉴 여는 태그-->
+					
+					
+						<li id="155_146">
+					
+					
+						
+						
+							<a href="https://korean.go.kr/kornorms" target="_blank" class="new_win" title="새 창">어문 규범 찾기</a> 
+						
+						               
+					
+				 
+				
+				
+				
+				
+				
+				
+				
+				
+			
+			
+			<!--  -->
+			
+			
+			
+				<!-- 2레벨 메뉴 닫는 태그 -->
+				
+					 </li>
+				 
+							 
+				
+			
+			 
+				
+			
+				
+				
+				<!--  -->
+				
+				<!-- 2레벨 메뉴 여는 태그-->
+					
+					
+						<li id="156_146">
+					
+					
+						
+						
+							<a href="https://dialect.korean.go.kr" target="_blank" class="new_win" title="새 창">지역어 종합 정보</a> 
+						
+						               
+					
+				 
+				
+				
+				
+				
+				
+				
+				
+					
+				
+				
+			
+			
+			<!--  -->
+			
+			
+			
+				<!-- 2레벨 메뉴 닫는 태그 -->
+				
+					 </li>
+				 
+							 
+				
+			
+			 
+				
+			
+				
+					
+									</ul>
+								</div>
+							</div>
+						</li>
+					
+					
+					<!-- 1레벨 메뉴 여는 태그-->
+				   
+				<!-- 2레벨이 존재 할 경우 여는 태그 -->
+				
+					<li id="147_0">
+						
+						
+							
+							  
+							  	
+							  		
+										<a href="/front/imprv/refineList.do?mn_id=158" target="_self" class="m_1depth " title=""><span>개선</span></a> 
+							  		
+							  		
+							  	
+							  
+							  
+							
+						
+						
+						
+						
+					<!-- sub -->
+				<div class="sub">
+					<!-- inner -->          
+					<div class="inner">
+						<!-- lnb -->
+						<h2>개선</h2>	
+					
+					<ul class="depth2">
+				
+				
+				
+				
+				
+				<!--  -->
+				
+			
+			<!--  -->
+			
+			
+				<!-- 1레벨 메뉴 닫는 태그-->
+				
+			
+							 
+				
+			
+			 
+				
+			
+				
+				
+				<!--  -->
+				
+				<!-- 2레벨 메뉴 여는 태그-->
+					
+					
+						<li id="158_147">
+					
+					
+						
+							
+								
+								
+									<a href="/front/imprv/refineList.do?mn_id=158" target="_self" class="" title="">다듬은 말</a> 
+								
+							  
+						
+						
+						               
+					
+				 
+				
+				
+				
+				
+				
+				
+				
+				
+			
+			
+			<!--  -->
+			
+			
+			
+				<!-- 2레벨 메뉴 닫는 태그 -->
+				
+					 </li>
+				 
+							 
+				
+			
+			 
+				
+			
+				
+				
+				<!--  -->
+				
+				<!-- 2레벨 메뉴 여는 태그-->
+					
+					
+						<li id="163_147">
+					
+					
+						
+							
+								
+								
+									<a href="/front/support/supportIntro.do?mn_id=163" target="_self" class="" title="">공공언어 감수</a> 
+								
+							  
+						
+						
+						               
+					
+				 
+				
+				
+				
+				
+				
+				
+				
+				
+			
+			
+			<!--  -->
+			
+			
+			
+				<!-- 2레벨 메뉴 닫는 태그 -->
+				
+					 </li>
+				 
+							 
+				
+			
+			 
+				
+			
+				
+				
+				<!--  -->
+				
+				<!-- 2레벨 메뉴 여는 태그-->
+					
+					
+						<li id="275_147">
+					
+					
+						
+							
+								
+								
+									<a href="/front/calamity/calamityIntro.do?mn_id=275" target="_self" class="" title="">공공언어, 방송언어 개선 국민 제보</a> 
+								
+							  
+						
+						
+						               
+					
+				 
+				
+				
+				
+				
+				
+				
+				
+				
+			
+			
+			<!--  -->
+			
+			
+			
+				<!-- 2레벨 메뉴 닫는 태그 -->
+				
+					 </li>
+				 
+							 
+				
+			
+			 
+				
+			
+				
+				
+				<!--  -->
+				
+				<!-- 2레벨 메뉴 여는 태그-->
+					
+					
+						<li id="164_147">
+					
+					
+						
+							
+								
+								
+									<a href="/front/pubWord/pubWordDataIntro.do?mn_id=164" target="_self" class="" title="">공공용어 번역</a> 
+								
+							  
+						
+						
+						               
+					
+				 
+				
+				
+				
+				
+				
+				
+				
+				
+			
+			
+			<!--  -->
+			
+			
+			
+				<!-- 2레벨 메뉴 닫는 태그 -->
+				
+					 </li>
+				 
+							 
+				
+			
+			 
+				
+			
+				
+				
+				<!--  -->
+				
+				<!-- 2레벨 메뉴 여는 태그-->
+					
+					
+						<li id="159_147">
+					
+					
+						
+							
+								
+								
+									<a href="/front/imprv/stndrdList.do?mn_id=159" target="_self" class="" title="">표준 전문용어</a> 
+								
+							  
+						
+						
+						               
+					
+				 
+				
+				
+				
+				
+				
+				
+				
+					
+				
+				
+			
+			
+			<!--  -->
+			
+			
+			
+				<!-- 2레벨 메뉴 닫는 태그 -->
+				
+					 </li>
+				 
+							 
+				
+			
+			 
+				
+			
+				
+					
+									</ul>
+								</div>
+							</div>
+						</li>
+					
+					
+					<!-- 1레벨 메뉴 여는 태그-->
+				   
+				<!-- 2레벨이 존재 할 경우 여는 태그 -->
+				
+					<li id="148_0">
+						
+						
+						
+							<a href="https://edu.korean.go.kr" target="/" class="m_1depth new_win" title="새 창"><span>교육</span></a> 
+						
+						
+						
+					<!-- sub -->
+				<div class="sub">
+					<!-- inner -->          
+					<div class="inner">
+						<!-- lnb -->
+						<h2>교육</h2>	
+					
+					<ul class="depth2">
+				
+				
+				
+				
+				
+				<!--  -->
+				
+			
+			<!--  -->
+			
+			
+				<!-- 1레벨 메뉴 닫는 태그-->
+				
+			
+							 
+				
+			
+			 
+				
+			
+				
+				
+				<!--  -->
+				
+				<!-- 2레벨 메뉴 여는 태그-->
+					
+					
+						<li id="165_148">
+					
+					
+						
+						
+							<a href="https://edu.korean.go.kr" target="_blank" class="new_win" title="새 창">국어문화학교</a> 
+						
+						               
+					
+				 
+				
+				
+				
+				
+				
+				
+				
+				
+			
+			
+			<!--  -->
+			
+			
+			
+				<!-- 2레벨 메뉴 닫는 태그 -->
+				
+					 </li>
+				 
+							 
+				
+			
+			 
+				
+			
+				
+				
+				<!--  -->
+				
+				<!-- 2레벨 메뉴 여는 태그-->
+					
+						
+						<li id="169_148">
+					
+					
+					
+						
+						
+							<a href="https://klp.korean.go.kr" target="_blank" class="new_win" title="새 창">한국어교육</a> 
+						
+						               
+					
+				
+					<ul class="depth311">       
+				 
+				
+				
+				
+				
+				
+				
+				
+				
+			
+			
+			<!--  -->
+			
+			
+			
+				<!-- 2레벨 메뉴 닫는 태그 -->
+				 
+							 
+				
+			
+			 
+				
+			
+				
+				
+				<!--  -->
+				
+			
+			<!--  -->
+			
+			<!-- 3레벨 여는 태그 -->
+				<li id="280_169">
+					
+					
+					
+						<a href="https://klp.korean.go.kr/certif" target="_blank" class="new_win" title="새 창">한국어교원 자격</a> 
+					
+					
+					
+				</li>
+				
+			
+			
+							 
+			
+				 
+				<!-- 3레벨 메뉴 닫는 태그 -->
+				
+			
+			 
+				
+			
+				
+				
+				<!--  -->
+				
+			
+			<!--  -->
+			
+			<!-- 3레벨 여는 태그 -->
+				<li id="281_169">
+					
+					
+					
+						<a href="https://klp.korean.go.kr/kcenter" target="_blank" class="new_win" title="새 창">한국어교수학습샘터</a> 
+					
+					
+					
+				</li>
+				
+			
+			
+							 
+			
+				 
+				<!-- 3레벨 메뉴 닫는 태그 -->
+				
+			
+			 
+				
+			
+				
+				
+				<!--  -->
+				
+			
+			<!--  -->
+			
+			<!-- 3레벨 여는 태그 -->
+				<li id="282_169">
+					
+					
+					
+						<a href="https://klp.korean.go.kr/kteacher" target="_blank" class="new_win" title="새 창">케이-티처 프로그램</a> 
+					
+					
+					
+				</li>
+				
+			
+			
+							 
+			
+				 
+				 <!-- 2레벨 메뉴 닫는 태그 -->
+					 </ul>
+					 </li>
+				 
+				<!-- 3레벨 메뉴 닫는 태그 -->
+				
+			
+			 
+				
+			
+				
+				
+				<!--  -->
+				
+				<!-- 2레벨 메뉴 여는 태그-->
+					
+					
+						<li id="168_148">
+					
+					
+						
+						
+							<a href="https://www.korean.go.kr/hangeul/index.html" target="_blank" class="new_win" title="새 창">알고 싶은 한글</a> 
+						
+						               
+					
+				 
+				
+				
+				
+				
+				
+				
+				
+				
+			
+			
+			<!--  -->
+			
+			
+			
+				<!-- 2레벨 메뉴 닫는 태그 -->
+				
+					 </li>
+				 
+							 
+				
+			
+			 
+				
+			
+				
+				
+				<!--  -->
+				
+				<!-- 2레벨 메뉴 여는 태그-->
+					
+						
+						<li id="166_148">
+					
+					
+					
+						
+							
+								
+									
+								  		
+											<a href="/front/page/pageView.do?page_id=P000536&amp;mn_id=200" target="_self" class="" title="">우리말 꿈터</a> 
+								  		
+								  		
+								  	 
+								
+								
+							  
+						
+						
+						               
+					
+				
+					<ul class="depth311">       
+				 
+				
+				
+				
+				
+				
+				
+				
+				
+			
+			
+			<!--  -->
+			
+			
+			
+				<!-- 2레벨 메뉴 닫는 태그 -->
+				 
+							 
+				
+			
+			 
+				
+			
+				
+				
+				<!--  -->
+				
+			
+			<!--  -->
+			
+			<!-- 3레벨 여는 태그 -->
+				<li id="200_166">
+					
+					
+					
+					
+						<a href="/front/page/pageView.do?page_id=P000536&amp;mn_id=200" target="_self" class="" title="">프로그램 소개</a>							  
+					
+					
+				</li>
+				
+			
+			
+							 
+			
+				 
+				<!-- 3레벨 메뉴 닫는 태그 -->
+				
+			
+			 
+				
+			
+				
+				
+				<!--  -->
+				
+			
+			<!--  -->
+			
+			<!-- 3레벨 여는 태그 -->
+				<li id="201_166">
+					
+					
+					
+					
+						<a href="/front/page/pageView.do?page_id=P000520&amp;mn_id=201" target="_self" class="" title="">프로그램 신청 안내</a>							  
+					
+					
+				</li>
+				
+			
+			
+							 
+			
+				 
+				<!-- 3레벨 메뉴 닫는 태그 -->
+				
+			
+			 
+				
+			
+				
+				
+				<!--  -->
+				
+			
+			<!--  -->
+			
+			<!-- 3레벨 여는 태그 -->
+				<li id="260_166">
+					
+					
+					
+						<a href="https://www.korean.go.kr/koreanlanguage_vr/" target="_blank" class="new_win" title="새 창">온라인 전시관</a> 
+					
+					
+					
+				</li>
+				
+			
+			
+							 
+			
+				 
+				 <!-- 2레벨 메뉴 닫는 태그 -->
+					 </ul>
+					 </li>
+				 
+				<!-- 3레벨 메뉴 닫는 태그 -->
+				
+			
+			 
+				
+			
+				
+					
+									</ul>
+								</div>
+							</div>
+						</li>
+					
+					
+					<!-- 1레벨 메뉴 여는 태그-->
+				   
+				<!-- 2레벨이 존재 할 경우 여는 태그 -->
+				
+					<li id="149_0">
+						
+						
+							
+							  
+							  	
+							  		
+										<a href="/front/page/pageView.do?page_id=P000300&amp;mn_id=202" target="_self" class="m_1depth " title=""><span>수어</span></a> 
+							  		
+							  		
+							  	
+							  
+							  
+							
+						
+						
+						
+						
+					<!-- sub -->
+				<div class="sub">
+					<!-- inner -->          
+					<div class="inner">
+						<!-- lnb -->
+						<h2>수어</h2>	
+					
+					<ul class="depth2">
+				
+				
+				
+				
+				
+				<!--  -->
+				
+			
+			<!--  -->
+			
+			
+				<!-- 1레벨 메뉴 닫는 태그-->
+				
+			
+							 
+				
+			
+			 
+				
+			
+				
+				
+				<!--  -->
+				
+				<!-- 2레벨 메뉴 여는 태그-->
+					
+						
+						<li id="170_149">
+					
+					
+					
+						
+							
+								
+									
+								  		
+											<a href="/front/page/pageView.do?page_id=P000300&amp;mn_id=202" target="_self" class="" title="">수어</a> 
+								  		
+								  		
+								  	 
+								
+								
+							  
+						
+						
+						               
+					
+				
+					<ul class="depth311">       
+				 
+				
+				
+				
+				
+				
+				
+				
+				
+			
+			
+			<!--  -->
+			
+			
+			
+				<!-- 2레벨 메뉴 닫는 태그 -->
+				 
+							 
+				
+			
+			 
+				
+			
+				
+				
+				<!--  -->
+				
+			
+			<!--  -->
+			
+			<!-- 3레벨 여는 태그 -->
+				<li id="202_170">
+					
+					
+					
+					
+						<a href="/front/page/pageView.do?page_id=P000300&amp;mn_id=202" target="_self" class="" title="">수어 소개</a>							  
+					
+					
+				</li>
+				
+			
+			
+							 
+			
+				 
+				<!-- 3레벨 메뉴 닫는 태그 -->
+				
+			
+			 
+				
+			
+				
+				
+				<!--  -->
+				
+			
+			<!--  -->
+			
+			<!-- 3레벨 여는 태그 -->
+				<li id="270_170">
+					
+					
+					
+						<a href="https://ksldict.korean.go.kr/" target="_blank" class="new_win" title="새 창">한국수어누리사전</a> 
+					
+					
+					
+				</li>
+				
+			
+			
+							 
+			
+				 
+				<!-- 3레벨 메뉴 닫는 태그 -->
+				
+			
+			 
+				
+			
+				
+				
+				<!--  -->
+				
+			
+			<!--  -->
+			
+			<!-- 3레벨 여는 태그 -->
+				<li id="203_170">
+					
+					
+					
+						<a href="https://sldict.korean.go.kr/" target="_blank" class="new_win" title="새 창">한국수어사전</a> 
+					
+					
+					
+				</li>
+				
+			
+			
+							 
+			
+				 
+				<!-- 3레벨 메뉴 닫는 태그 -->
+				
+			
+			 
+				
+			
+				
+				
+				<!--  -->
+				
+			
+			<!--  -->
+			
+			<!-- 3레벨 여는 태그 -->
+				<li id="204_170">
+					
+					
+					
+						<a href="https://sldict.korean.go.kr/kslteacher/main/main.do" target="_blank" class="new_win" title="새 창">한국수어교원 자격</a> 
+					
+					
+					
+				</li>
+				
+			
+			
+							 
+			
+				 
+				<!-- 3레벨 메뉴 닫는 태그 -->
+				
+			
+			 
+				
+			
+				
+				
+				<!--  -->
+				
+			
+			<!--  -->
+			
+			<!-- 3레벨 여는 태그 -->
+				<li id="249_170">
+					
+					
+						
+							
+								
+							  		
+							  		
+							  		<a href="/front/board/boardStandardList.do?board_id=33&amp;mn_id=249" target="_self" class="" title="">공공수어 통역 영상</a>
+							  		
+							  	 
+							
+							
+						  
+					
+					
+					
+					
+				</li>
+				
+			
+			
+							 
+			
+				 
+				<!-- 3레벨 메뉴 닫는 태그 -->
+				
+			
+			 
+				
+			
+				
+				
+				<!--  -->
+				
+			
+			<!--  -->
+			
+			<!-- 3레벨 여는 태그 -->
+				<li id="250_170">
+					
+					
+					
+					
+						<a href="/front/board/boardStandardList.do?board_id=36&amp;mn_id=250" target="_self" class="" title="">새수어</a>							  
+					
+					
+				</li>
+				
+			
+			
+							 
+			
+				 
+				<!-- 3레벨 메뉴 닫는 태그 -->
+				
+			
+			 
+				
+			
+				
+				
+				<!--  -->
+				
+			
+			<!--  -->
+			
+			<!-- 3레벨 여는 태그 -->
+				<li id="261_170">
+					
+					
+					
+					
+						<a href="/front/board/boardStandardList.do?board_id=39&amp;mn_id=261" target="_self" class="" title="">수어 교육 자료</a>							  
+					
+					
+				</li>
+				
+			
+			
+							 
+			
+				 
+				 <!-- 2레벨 메뉴 닫는 태그 -->
+					 </ul>
+					 </li>
+				 
+				<!-- 3레벨 메뉴 닫는 태그 -->
+				
+			
+			 
+				
+			
+				
+				
+				<!--  -->
+				
+				<!-- 2레벨 메뉴 여는 태그-->
+					
+						
+						<li id="171_149">
+					
+					
+					
+						
+							
+								
+									
+								  		
+											<a href="/front/page/pageView.do?page_id=P000302&amp;mn_id=205" target="_self" class="" title="">점자</a> 
+								  		
+								  		
+								  	 
+								
+								
+							  
+						
+						
+						               
+					
+				
+					<ul class="depth311">       
+				 
+				
+				
+				
+				
+				
+				
+				
+				
+			
+			
+			<!--  -->
+			
+			
+			
+				<!-- 2레벨 메뉴 닫는 태그 -->
+				 
+							 
+				
+			
+			 
+				
+			
+				
+				
+				<!--  -->
+				
+			
+			<!--  -->
+			
+			<!-- 3레벨 여는 태그 -->
+				<li id="205_171">
+					
+					
+					
+					
+						<a href="/front/page/pageView.do?page_id=P000302&amp;mn_id=205" target="_self" class="" title="">점자 소개</a>							  
+					
+					
+				</li>
+				
+			
+			
+							 
+			
+				 
+				<!-- 3레벨 메뉴 닫는 태그 -->
+				
+			
+			 
+				
+			
+				
+				
+				<!--  -->
+				
+			
+			<!--  -->
+			
+			<!-- 3레벨 여는 태그 -->
+				<li id="206_171">
+					
+					
+					
+					
+						<a href="/front/page/pageView.do?page_id=P000303&amp;mn_id=206" target="_self" class="" title="">점자 규정과 해설</a>							  
+					
+					
+				</li>
+				
+			
+			
+							 
+			
+				 
+				<!-- 3레벨 메뉴 닫는 태그 -->
+				
+			
+			 
+				
+			
+				
+				
+				<!--  -->
+				
+			
+			<!--  -->
+			
+			<!-- 3레벨 여는 태그 -->
+				<li id="259_171">
+					
+					
+					
+						<a href="https://korean.go.kr/braille" target="_blank" class="new_win" title="새 창">점자 종합정보 누리집</a> 
+					
+					
+					
+				</li>
+				
+			
+			
+							 
+			
+				 
+				 <!-- 2레벨 메뉴 닫는 태그 -->
+					 </ul>
+					 </li>
+				 
+				<!-- 3레벨 메뉴 닫는 태그 -->
+				
+			
+			 
+				
+			
+				
+					
+									</ul>
+								</div>
+							</div>
+						</li>
+					
+					
+					<!-- 1레벨 메뉴 여는 태그-->
+				   
+				<!-- 2레벨이 존재 할 경우 여는 태그 -->
+				
+					<li id="151_0">
+						
+						
+							
+							  
+							  	
+							  		
+										<a href="/front/onlineQna/onlineQnaList.do?mn_id=216" target="_self" class="m_1depth " title=""><span>참여</span></a> 
+							  		
+							  		
+							  	
+							  
+							  
+							
+						
+						
+						
+						
+					<!-- sub -->
+				<div class="sub">
+					<!-- inner -->          
+					<div class="inner">
+						<!-- lnb -->
+						<h2>참여</h2>	
+					
+					<ul class="depth2">
+				
+				
+				
+				
+				
+				<!--  -->
+				
+			
+			<!--  -->
+			
+			
+				<!-- 1레벨 메뉴 닫는 태그-->
+				
+			
+							 
+				
+			
+			 
+				
+			
+				
+				
+				<!--  -->
+				
+				<!-- 2레벨 메뉴 여는 태그-->
+					
+						
+						<li id="179_151">
+					
+					
+					
+						
+							
+								
+									
+								  		
+											<a href="/front/onlineQna/onlineQnaList.do?mn_id=216" target="_self" class="" title="">온라인가나다</a> 
+								  		
+								  		
+								  	 
+								
+								
+							  
+						
+						
+						               
+					
+				
+					<ul class="depth311">       
+				 
+				
+				
+				
+				
+				
+				
+				
+				
+			
+			
+			<!--  -->
+			
+			
+			
+				<!-- 2레벨 메뉴 닫는 태그 -->
+				 
+							 
+				
+			
+			 
+				
+			
+				
+				
+				<!--  -->
+				
+			
+			<!--  -->
+			
+			<!-- 3레벨 여는 태그 -->
+				<li id="216_179">
+					
+					
+						
+							
+							
+								<a href="/front/onlineQna/onlineQnaList.do?mn_id=216" target="_self" class="" title="">온라인가나다</a> 
+							
+						  
+					
+					
+					
+					
+				</li>
+				
+			
+			
+							 
+			
+				 
+				<!-- 3레벨 메뉴 닫는 태그 -->
+				
+			
+			 
+				
+			
+				
+				
+				<!--  -->
+				
+			
+			<!--  -->
+			
+			<!-- 3레벨 여는 태그 -->
+				<li id="217_179">
+					
+					
+						
+							
+							
+								<a href="/front/mcfaq/mcfaqList.do?mn_id=217" target="_self" class="" title="">상담 사례 모음</a> 
+							
+						  
+					
+					
+					
+					
+				</li>
+				
+			
+			
+							 
+			
+				 
+				 <!-- 2레벨 메뉴 닫는 태그 -->
+					 </ul>
+					 </li>
+				 
+				<!-- 3레벨 메뉴 닫는 태그 -->
+				
+			
+			 
+				
+			
+				
+				
+				<!--  -->
+				
+				<!-- 2레벨 메뉴 여는 태그-->
+					
+						
+						<li id="180_151">
+					
+					
+					
+						
+							
+								
+									
+								  		
+											<a href="/front/page/pageView.do?page_id=P000162&amp;mn_id=218" target="_self" class="" title="">국민신문고</a> 
+								  		
+								  		
+								  	 
+								
+								
+							  
+						
+						
+						               
+					
+				
+					<ul class="depth311">       
+				 
+				
+				
+				
+				
+				
+				
+				
+				
+			
+			
+			<!--  -->
+			
+			
+			
+				<!-- 2레벨 메뉴 닫는 태그 -->
+				 
+							 
+				
+			
+			 
+				
+			
+				
+				
+				<!--  -->
+				
+			
+			<!--  -->
+			
+			<!-- 3레벨 여는 태그 -->
+				<li id="218_180">
+					
+					
+					
+					
+						<a href="/front/page/pageView.do?page_id=P000162&amp;mn_id=218" target="_self" class="" title="">국민신문고 민원소리</a>							  
+					
+					
+				</li>
+				
+			
+			
+							 
+			
+				 
+				<!-- 3레벨 메뉴 닫는 태그 -->
+				
+			
+			 
+				
+			
+				
+				
+				<!--  -->
+				
+			
+			<!--  -->
+			
+			<!-- 3레벨 여는 태그 -->
+				<li id="219_180">
+					
+					
+					
+					
+						<a href="/front/page/pageView.do?page_id=P000426&amp;mn_id=219" target="_self" class="" title="">국민신문고 정책참여</a>							  
+					
+					
+				</li>
+				
+			
+			
+							 
+			
+				 
+				<!-- 3레벨 메뉴 닫는 태그 -->
+				
+			
+			 
+				
+			
+				
+				
+				<!--  -->
+				
+			
+			<!--  -->
+			
+			<!-- 3레벨 여는 태그 -->
+				<li id="220_180">
+					
+					
+					
+					
+						<a href="/front/page/pageView.do?page_id=P000163&amp;mn_id=220" target="_self" class="" title="">청백리 지킴이방</a>							  
+					
+					
+				</li>
+				
+			
+			
+							 
+			
+				 
+				<!-- 3레벨 메뉴 닫는 태그 -->
+				
+			
+			 
+				
+			
+				
+				
+				<!--  -->
+				
+			
+			<!--  -->
+			
+			<!-- 3레벨 여는 태그 -->
+				<li id="221_180">
+					
+					
+					
+						<a href="https://www.mcst.go.kr/kor/s_minwon/eComplaint/officialPrinciple/principleConts.jsp" target="_blank" class="new_win" title="새 창">부패행위 신고 및 포상</a> 
+					
+					
+					
+				</li>
+				
+			
+			
+							 
+			
+				 
+				 <!-- 2레벨 메뉴 닫는 태그 -->
+					 </ul>
+					 </li>
+				 
+				<!-- 3레벨 메뉴 닫는 태그 -->
+				
+			
+			 
+				
+			
+				
+				
+				<!--  -->
+				
+				<!-- 2레벨 메뉴 여는 태그-->
+					
+					
+						<li id="181_151">
+					
+					
+						
+						
+						
+							<a href="/front/page/pageView.do?page_id=P000213&amp;mn_id=181" target="_self" class="" title="">110 화상 수어 상담</a>							  
+						               
+					
+				 
+				
+				
+				
+				
+				
+				
+				
+					
+				
+				
+			
+			
+			<!--  -->
+			
+			
+			
+				<!-- 2레벨 메뉴 닫는 태그 -->
+				
+					 </li>
+				 
+							 
+				
+			
+			 
+				
+			
+				
+					
+									</ul>
+								</div>
+							</div>
+						</li>
+					
+					
+					<!-- 1레벨 메뉴 여는 태그-->
+				   
+				<!-- 2레벨이 존재 할 경우 여는 태그 -->
+				
+					<li id="152_0">
+						
+						
+							
+							  
+							  	
+							  		
+										<a href="/front/board/boardStandardList.do?board_id=4&amp;mn_id=182" target="_self" class="m_1depth " title=""><span>알림</span></a> 
+							  		
+							  		
+							  	
+							  
+							  
+							
+						
+						
+						
+						
+					<!-- sub -->
+				<div class="sub">
+					<!-- inner -->          
+					<div class="inner">
+						<!-- lnb -->
+						<h2>알림</h2>	
+					
+					<ul class="depth2">
+				
+				
+				
+				
+				
+				<!--  -->
+				
+			
+			<!--  -->
+			
+			
+				<!-- 1레벨 메뉴 닫는 태그-->
+				
+			
+							 
+				
+			
+			 
+				
+			
+				
+				
+				<!--  -->
+				
+				<!-- 2레벨 메뉴 여는 태그-->
+					
+					
+						<li id="182_152">
+					
+					
+						
+						
+						
+							<a href="/front/board/boardStandardList.do?board_id=4&amp;mn_id=182" target="_self" class="" title="">공지 사항</a>							  
+						               
+					
+				 
+				
+				
+				
+				
+				
+				
+				
+				
+			
+			
+			<!--  -->
+			
+			
+			
+				<!-- 2레벨 메뉴 닫는 태그 -->
+				
+					 </li>
+				 
+							 
+				
+			
+			 
+				
+			
+				
+				
+				<!--  -->
+				
+				<!-- 2레벨 메뉴 여는 태그-->
+					
+					
+						<li id="183_152">
+					
+					
+						
+						
+						
+							<a href="/front/board/boardStandardList.do?board_id=5&amp;mn_id=183" target="_self" class="" title="">입찰 공고</a>							  
+						               
+					
+				 
+				
+				
+				
+				
+				
+				
+				
+				
+			
+			
+			<!--  -->
+			
+			
+			
+				<!-- 2레벨 메뉴 닫는 태그 -->
+				
+					 </li>
+				 
+							 
+				
+			
+			 
+				
+			
+				
+				
+				<!--  -->
+				
+				<!-- 2레벨 메뉴 여는 태그-->
+					
+					
+						<li id="184_152">
+					
+					
+						
+						
+						
+							<a href="/front/board/boardStandardList.do?board_id=6&amp;mn_id=184" target="_self" class="" title="">보도 자료</a>							  
+						               
+					
+				 
+				
+				
+				
+				
+				
+				
+				
+				
+			
+			
+			<!--  -->
+			
+			
+			
+				<!-- 2레벨 메뉴 닫는 태그 -->
+				
+					 </li>
+				 
+							 
+				
+			
+			 
+				
+			
+				
+				
+				<!--  -->
+				
+				<!-- 2레벨 메뉴 여는 태그-->
+					
+					
+						<li id="185_152">
+					
+					
+						
+							
+								
+								
+									<a href="/front/board/boardBSList.do?mn_id=185" target="_self" class="" title="">국어 관련 기사</a> 
+								
+							  
+						
+						
+						               
+					
+				 
+				
+				
+				
+				
+				
+				
+				
+				
+			
+			
+			<!--  -->
+			
+			
+			
+				<!-- 2레벨 메뉴 닫는 태그 -->
+				
+					 </li>
+				 
+							 
+				
+			
+			 
+				
+			
+				
+				
+				<!--  -->
+				
+				<!-- 2레벨 메뉴 여는 태그-->
+					
+					
+						<li id="187_152">
+					
+					
+						
+						
+						
+							<a href="/front/board/boardStandardList.do?board_id=7&amp;mn_id=187" target="_self" class="" title="">학회/행사/기타 안내</a>							  
+						               
+					
+				 
+				
+				
+				
+				
+				
+				
+				
+				
+			
+			
+			<!--  -->
+			
+			
+			
+				<!-- 2레벨 메뉴 닫는 태그 -->
+				
+					 </li>
+				 
+							 
+				
+			
+			 
+				
+			
+				
+				
+				<!--  -->
+				
+				<!-- 2레벨 메뉴 여는 태그-->
+					
+						
+						<li id="188_152">
+					
+					
+					
+						
+							
+								
+									
+								  		
+											<a href="/front/page/pageView.do?page_id=P000182&amp;mn_id=225" target="_self" class="" title="">관련 법령</a> 
+								  		
+								  		
+								  	 
+								
+								
+							  
+						
+						
+						               
+					
+				
+					<ul class="depth311">       
+				 
+				
+				
+				
+				
+				
+				
+				
+				
+			
+			
+			<!--  -->
+			
+			
+			
+				<!-- 2레벨 메뉴 닫는 태그 -->
+				 
+							 
+				
+			
+			 
+				
+			
+				
+				
+				<!--  -->
+				
+			
+			<!--  -->
+			
+			<!-- 3레벨 여는 태그 -->
+				<li id="222_188">
+					
+					
+					
+						<a href="https://www.law.go.kr/LSW/lsOrdinAstSc.do?section=&amp;menuId=391&amp;subMenuId=399&amp;tabMenuId=455&amp;eventGubun=060101&amp;query=%EA%B5%AD%EC%96%B4%EA%B8%B0%EB%B3%B8%EB%B2%95" target="_blank" class="new_win" title="새 창">국어기본법</a> 
+					
+					
+					
+				</li>
+				
+			
+			
+							 
+			
+				 
+				<!-- 3레벨 메뉴 닫는 태그 -->
+				
+			
+			 
+				
+			
+				
+				
+				<!--  -->
+				
+			
+			<!--  -->
+			
+			<!-- 3레벨 여는 태그 -->
+				<li id="223_188">
+					
+					
+					
+						<a href="https://www.law.go.kr/LSW/lsOrdinAstSc.do?section=&amp;menuId=391&amp;subMenuId=399&amp;tabMenuId=455&amp;eventGubun=060101&amp;query=%ED%95%9C%EA%B5%AD%EC%88%98%ED%99%94%EC%96%B8%EC%96%B4%EB%B2%95" target="_blank" class="new_win" title="새 창">한국수화언어법</a> 
+					
+					
+					
+				</li>
+				
+			
+			
+							 
+			
+				 
+				<!-- 3레벨 메뉴 닫는 태그 -->
+				
+			
+			 
+				
+			
+				
+				
+				<!--  -->
+				
+			
+			<!--  -->
+			
+			<!-- 3레벨 여는 태그 -->
+				<li id="224_188">
+					
+					
+					
+						<a href="https://www.law.go.kr/LSW/lsOrdinAstSc.do?menuId=391&amp;subMenuId=399&amp;tabMenuId=455&amp;query=%EC%A0%90%EC%9E%90%EB%B2%95" target="_blank" class="new_win" title="새 창">점자법</a> 
+					
+					
+					
+				</li>
+				
+			
+			
+							 
+			
+				 
+				<!-- 3레벨 메뉴 닫는 태그 -->
+				
+			
+			 
+				
+			
+				
+				
+				<!--  -->
+				
+			
+			<!--  -->
+			
+			<!-- 3레벨 여는 태그 -->
+				<li id="225_188">
+					
+					
+					
+					
+						<a href="/front/page/pageView.do?page_id=P000182&amp;mn_id=225" target="_self" class="" title="">국립국어원 예규</a>							  
+					
+					
+				</li>
+				
+			
+			
+							 
+			
+				 
+				 <!-- 2레벨 메뉴 닫는 태그 -->
+					 </ul>
+					 </li>
+				 
+				<!-- 3레벨 메뉴 닫는 태그 -->
+				
+			
+			 
+				
+			
+				
+					
+									</ul>
+								</div>
+							</div>
+						</li>
+					
+					
+					<!-- 1레벨 메뉴 여는 태그-->
+				   
+				<!-- 2레벨이 존재 할 경우 여는 태그 -->
+				
+					<li id="150_0">
+						
+						
+							
+							  
+							  	
+							  		
+										<a href="/front/reportData/reportDataList.do?mn_id=207" target="_self" class="m_1depth " title=""><span>자료</span></a> 
+							  		
+							  		
+							  	
+							  
+							  
+							
+						
+						
+						
+						
+					<!-- sub -->
+				<div class="sub">
+					<!-- inner -->          
+					<div class="inner">
+						<!-- lnb -->
+						<h2>자료</h2>	
+					
+					<ul class="depth2">
+				
+				
+				
+				
+				
+				<!--  -->
+				
+			
+			<!--  -->
+			
+			
+				<!-- 1레벨 메뉴 닫는 태그-->
+				
+			
+							 
+				
+			
+			 
+				
+			
+				
+				
+				<!--  -->
+				
+				<!-- 2레벨 메뉴 여는 태그-->
+					
+						
+						<li id="175_150">
+					
+					
+					
+						
+						
+							<a href="https://kli.korean.go.kr" target="_self" class="" title="">언어정보나눔터</a> 
+						
+						               
+					
+				
+					<ul class="depth311">       
+				 
+				
+				
+				
+				
+				
+				
+				
+				
+			
+			
+			<!--  -->
+			
+			
+			
+				<!-- 2레벨 메뉴 닫는 태그 -->
+				 
+							 
+				
+			
+			 
+				
+			
+				
+				
+				<!--  -->
+				
+			
+			<!--  -->
+			
+			<!-- 3레벨 여는 태그 -->
+				<li id="251_175">
+					
+					
+					
+						<a href="https://kli.korean.go.kr/corpus/main/requestMain.do" target="_blank" class="new_win" title="새 창">모두의 말뭉치</a> 
+					
+					
+					
+				</li>
+				
+			
+			
+							 
+			
+				 
+				<!-- 3레벨 메뉴 닫는 태그 -->
+				
+			
+			 
+				
+			
+				
+				
+				<!--  -->
+				
+			
+			<!--  -->
+			
+			<!-- 3레벨 여는 태그 -->
+				<li id="263_175">
+					
+					
+					
+						<a href="https://kli.korean.go.kr/benchmark/" target="_blank" class="new_win" title="새 창">인공지능(AI)말평</a> 
+					
+					
+					
+				</li>
+				
+			
+			
+							 
+			
+				 
+				<!-- 3레벨 메뉴 닫는 태그 -->
+				
+			
+			 
+				
+			
+				
+				
+				<!--  -->
+				
+			
+			<!--  -->
+			
+			<!-- 3레벨 여는 태그 -->
+				<li id="269_175">
+					
+					
+					
+						<a href="https://kli.korean.go.kr/term" target="_blank" class="new_win" title="새 창">온용어</a> 
+					
+					
+					
+				</li>
+				
+			
+			
+							 
+			
+				 
+				 <!-- 2레벨 메뉴 닫는 태그 -->
+					 </ul>
+					 </li>
+				 
+				<!-- 3레벨 메뉴 닫는 태그 -->
+				
+			
+			 
+				
+			
+				
+				
+				<!--  -->
+				
+				<!-- 2레벨 메뉴 여는 태그-->
+					
+					
+						<li id="176_150">
+					
+					
+						
+						
+							<a href="https://kcorpus.korean.go.kr" target="_blank" class="new_win" title="새 창">한국어 학습자 말뭉치 나눔터</a> 
+						
+						               
+					
+				 
+				
+				
+				
+				
+				
+				
+				
+				
+			
+			
+			<!--  -->
+			
+			
+			
+				<!-- 2레벨 메뉴 닫는 태그 -->
+				
+					 </li>
+				 
+							 
+				
+			
+			 
+				
+			
+				
+				
+				<!--  -->
+				
+				<!-- 2레벨 메뉴 여는 태그-->
+					
+					
+						<li id="247_150">
+					
+					
+						
+						
+							<a href="https://korean.go.kr/poldata" target="_blank" class="new_win" title="새 창">숫자로 살펴보는 우리말</a> 
+						
+						               
+					
+				 
+				
+				
+				
+				
+				
+				
+				
+				
+			
+			
+			<!--  -->
+			
+			
+			
+				<!-- 2레벨 메뉴 닫는 태그 -->
+				
+					 </li>
+				 
+							 
+				
+			
+			 
+				
+			
+				
+				
+				<!--  -->
+				
+				<!-- 2레벨 메뉴 여는 태그-->
+					
+					
+						<li id="173_150">
+					
+					
+						
+						
+							<a href="https://lib.korean.go.kr" target="_blank" class="new_win" title="새 창">국어전문도서관</a> 
+						
+						               
+					
+				 
+				
+				
+				
+				
+				
+				
+				
+				
+			
+			
+			<!--  -->
+			
+			
+			
+				<!-- 2레벨 메뉴 닫는 태그 -->
+				
+					 </li>
+				 
+							 
+				
+			
+			 
+				
+			
+				
+				
+				<!--  -->
+				
+				<!-- 2레벨 메뉴 여는 태그-->
+					
+						
+						<li id="172_150">
+					
+					
+					
+						
+							
+								
+									
+								  		
+											<a href="/front/reportData/reportDataList.do?mn_id=207&amp;searchOrder=years" target="_self" class="" title="">연구·조사 자료</a> 
+								  		
+								  		
+								  	 
+								
+								
+							  
+						
+						
+						               
+					
+				
+					<ul class="depth311">       
+				 
+				
+				
+				
+				
+				
+				
+				
+				
+			
+			
+			<!--  -->
+			
+			
+			
+				<!-- 2레벨 메뉴 닫는 태그 -->
+				 
+							 
+				
+			
+			 
+				
+			
+				
+				
+				<!--  -->
+				
+			
+			<!--  -->
+			
+			<!-- 3레벨 여는 태그 -->
+				<li id="207_172">
+					
+					
+						
+							
+								
+							  		
+							  		
+							  		<a href="/front/reportData/reportDataList.do?searchOrder=years&amp;mn_id=207" target="_self" class="" title="">연구 보고서</a>
+							  		
+							  	 
+							
+							
+						  
+					
+					
+					
+					
+				</li>
+				
+			
+			
+							 
+			
+				 
+				<!-- 3레벨 메뉴 닫는 태그 -->
+				
+			
+			 
+				
+			
+				
+				
+				<!--  -->
+				
+			
+			<!--  -->
+			
+			<!-- 3레벨 여는 태그 -->
+				<li id="208_172">
+					
+					
+						
+							
+							
+								<a href="/front/etcData/etcDataList.do?mn_id=208" target="_self" class="" title="">기타 자료</a> 
+							
+						  
+					
+					
+					
+					
+				</li>
+				
+			
+			
+							 
+			
+				 
+				 <!-- 2레벨 메뉴 닫는 태그 -->
+					 </ul>
+					 </li>
+				 
+				<!-- 3레벨 메뉴 닫는 태그 -->
+				
+			
+			 
+				
+			
+				
+				
+				<!--  -->
+				
+				<!-- 2레벨 메뉴 여는 태그-->
+					
+						
+						<li id="174_150">
+					
+					
+					
+						
+							
+								
+									
+								  		
+											<a href="/front/bookLink/bookLinkList.do?part=1&amp;mn_id=209" target="_self" class="" title="">간행물 자료</a> 
+								  		
+								  		
+								  	 
+								
+								
+							  
+						
+						
+						               
+					
+				
+					<ul class="depth311">       
+				 
+				
+				
+				
+				
+				
+				
+				
+				
+			
+			
+			<!--  -->
+			
+			
+			
+				<!-- 2레벨 메뉴 닫는 태그 -->
+				 
+							 
+				
+			
+			 
+				
+			
+				
+				
+				<!--  -->
+				
+			
+			<!--  -->
+			
+			<!-- 3레벨 여는 태그 -->
+				<li id="209_174">
+					
+					
+						
+							
+								
+							  		
+							  		
+							  		<a href="/front/bookLink/bookLinkList.do?part=1&amp;mn_id=209" target="_self" class="" title="">새국어생활</a>
+							  		
+							  	 
+							
+							
+						  
+					
+					
+					
+					
+				</li>
+				
+			
+			
+							 
+			
+				 
+				<!-- 3레벨 메뉴 닫는 태그 -->
+				
+			
+			 
+				
+			
+				
+				
+				<!--  -->
+				
+			
+			<!--  -->
+			
+			<!-- 3레벨 여는 태그 -->
+				<li id="210_174">
+					
+					
+						
+							
+								
+							  		
+							  		
+							  		<a href="/front/bookLink/bookLinkList.do?part=2&amp;mn_id=210" target="_self" class="" title="">쉼표, 마침표.</a>
+							  		
+							  	 
+							
+							
+						  
+					
+					
+					
+					
+				</li>
+				
+			
+			
+							 
+			
+				 
+				<!-- 3레벨 메뉴 닫는 태그 -->
+				
+			
+			 
+				
+			
+				
+				
+				<!--  -->
+				
+			
+			<!--  -->
+			
+			<!-- 3레벨 여는 태그 -->
+				<li id="211_174">
+					
+					
+					
+					
+						<a href="/front/page/pageView.do?page_id=P000051&amp;mn_id=211" target="_self" class="" title="">국어 연감</a>							  
+					
+					
+				</li>
+				
+			
+			
+							 
+			
+				 
+				 <!-- 2레벨 메뉴 닫는 태그 -->
+					 </ul>
+					 </li>
+				 
+				<!-- 3레벨 메뉴 닫는 태그 -->
+				
+			
+			 
+				
+			
+				
+				
+				<!--  -->
+				
+				<!-- 2레벨 메뉴 여는 태그-->
+					
+						
+						<li id="177_150">
+					
+					
+					
+						
+							
+								
+									
+								  		
+											<a href="/front/page/pageView.do?page_id=P000305&amp;mn_id=212" target="_self" class="" title="">정보공개/공공데이터 개방</a> 
+								  		
+								  		
+								  	 
+								
+								
+							  
+						
+						
+						               
+					
+				
+					<ul class="depth311">       
+				 
+				
+				
+				
+				
+				
+				
+				
+				
+			
+			
+			<!--  -->
+			
+			
+			
+				<!-- 2레벨 메뉴 닫는 태그 -->
+				 
+							 
+				
+			
+			 
+				
+			
+				
+				
+				<!--  -->
+				
+			
+			<!--  -->
+			
+			<!-- 3레벨 여는 태그 -->
+				<li id="212_177">
+					
+					
+					
+					
+						<a href="/front/page/pageView.do?page_id=P000305&amp;mn_id=212" target="_self" class="" title="">정보공개/공공데이터 개방 안내</a>							  
+					
+					
+				</li>
+				
+			
+			
+							 
+			
+				 
+				<!-- 3레벨 메뉴 닫는 태그 -->
+				
+			
+			 
+				
+			
+				
+				
+				<!--  -->
+				
+			
+			<!--  -->
+			
+			<!-- 3레벨 여는 태그 -->
+				<li id="213_177">
+					
+					
+					
+					
+						<a href="/front/board/boardStandardList.do?board_id=8&amp;mn_id=213" target="_self" class="" title="">정보목록</a>							  
+					
+					
+				</li>
+				
+			
+			
+							 
+			
+				 
+				<!-- 3레벨 메뉴 닫는 태그 -->
+				
+			
+			 
+				
+			
+				
+				
+				<!--  -->
+				
+			
+			<!--  -->
+			
+			<!-- 3레벨 여는 태그 -->
+				<li id="214_177">
+					
+					
+					
+					
+						<a href="/front/board/boardStandardList.do?board_id=9&amp;mn_id=214" target="_self" class="" title="">정보공개 자료실</a>							  
+					
+					
+				</li>
+				
+			
+			
+							 
+			
+				 
+				<!-- 3레벨 메뉴 닫는 태그 -->
+				
+			
+			 
+				
+			
+				
+				
+				<!--  -->
+				
+			
+			<!--  -->
+			
+			<!-- 3레벨 여는 태그 -->
+				<li id="215_177">
+					
+					
+					
+					
+						<a href="/front/page/pageView.do?page_id=P000050&amp;mn_id=215" target="_self" class="" title="">사전 정보 공표</a>							  
+					
+					
+				</li>
+				
+			
+			
+							 
+			
+				 
+				 <!-- 2레벨 메뉴 닫는 태그 -->
+					 </ul>
+					 </li>
+				 
+				<!-- 3레벨 메뉴 닫는 태그 -->
+				
+			
+			 
+				
+			
+				
+				
+				<!--  -->
+				
+				<!-- 2레벨 메뉴 여는 태그-->
+					
+					
+						<li id="178_150">
+					
+					
+						
+							
+								
+									
+								  		
+								  		
+								  			<a href="/front/board/boardMovieList.do?board_id=14&amp;b_movie_type=4&amp;mn_id=178" target="_self" class="" title="">홍보 및 방송 자료</a>
+								  		
+								  	 
+								
+								
+							  
+						
+						
+						               
+					
+				 
+				
+				
+				
+				
+				
+				
+				
+				
+			
+			
+			<!--  -->
+			
+			
+			
+				<!-- 2레벨 메뉴 닫는 태그 -->
+				
+					 </li>
+				 
+							 
+				
+			
+			 
+				
+			
+				
+				
+				<!--  -->
+				
+				<!-- 2레벨 메뉴 여는 태그-->
+					
+					
+						<li id="266_150">
+					
+					
+						
+						
+						
+							<a href="/front/board/boardStandardList.do?board_id=40&amp;mn_id=266" target="_self" class="" title="">세계 한국어 한마당/함께 읽다</a>							  
+						               
+					
+				 
+				
+				
+				
+				
+				
+				
+				
+					
+				
+				
+			
+			
+			<!--  -->
+			
+			
+			
+				<!-- 2레벨 메뉴 닫는 태그 -->
+				
+					 </li>
+				 
+							 
+				
+			
+			 
+				
+			
+				
+					
+									</ul>
+								</div>
+							</div>
+						</li>
+					
+					
+					<!-- 1레벨 메뉴 여는 태그-->
+				   
+				<!-- 2레벨이 존재 할 경우 여는 태그 -->
+				
+					<li id="153_0">
+						
+						
+							
+							  
+							  	
+							  		
+										<a href="/front/page/pageView.do?page_id=P000165&amp;mn_id=227" target="_self" class="m_1depth " title=""><span>소개</span></a> 
+							  		
+							  		
+							  	
+							  
+							  
+							
+						
+						
+						
+						
+					<!-- sub -->
+				<div class="sub">
+					<!-- inner -->          
+					<div class="inner">
+						<!-- lnb -->
+						<h2>소개</h2>	
+					
+					<ul class="depth2">
+				
+				
+				
+				
+				
+				<!--  -->
+				
+			
+			<!--  -->
+			
+			
+				<!-- 1레벨 메뉴 닫는 태그-->
+				
+			
+							 
+				
+			
+			 
+				
+			
+				
+				
+				<!--  -->
+				
+				<!-- 2레벨 메뉴 여는 태그-->
+					
+						
+						<li id="189_153">
+					
+					
+					
+						
+							
+								
+									
+								  		
+											<a href="/front/page/pageView.do?page_id=P000165&amp;mn_id=227" target="_self" class="" title="">기관 소개</a> 
+								  		
+								  		
+								  	 
+								
+								
+							  
+						
+						
+						               
+					
+				
+					<ul class="depth311">       
+				 
+				
+				
+				
+				
+				
+				
+				
+				
+			
+			
+			<!--  -->
+			
+			
+			
+				<!-- 2레벨 메뉴 닫는 태그 -->
+				 
+							 
+				
+			
+			 
+				
+			
+				
+				
+				<!--  -->
+				
+			
+			<!--  -->
+			
+			<!-- 3레벨 여는 태그 -->
+				<li id="226_189">
+					
+					
+					
+					
+						<a href="/front/page/pageView.do?page_id=P000024&amp;mn_id=226" target="_self" class="" title="">인사말</a>							  
+					
+					
+				</li>
+				
+			
+			
+							 
+			
+				 
+				<!-- 3레벨 메뉴 닫는 태그 -->
+				
+			
+			 
+				
+			
+				
+				
+				<!--  -->
+				
+			
+			<!--  -->
+			
+			<!-- 3레벨 여는 태그 -->
+				<li id="227_189">
+					
+					
+					
+					
+						<a href="/front/page/pageView.do?page_id=P000165&amp;mn_id=227" target="_self" class="" title="">설립목적</a>							  
+					
+					
+				</li>
+				
+			
+			
+							 
+			
+				 
+				<!-- 3레벨 메뉴 닫는 태그 -->
+				
+			
+			 
+				
+			
+				
+				
+				<!--  -->
+				
+			
+			<!--  -->
+			
+			<!-- 3레벨 여는 태그 -->
+				<li id="228_189">
+					
+					
+					
+					
+						<a href="/front/page/pageView.do?page_id=P000298&amp;mn_id=228" target="_self" class="" title="">기관 상징 소개</a>							  
+					
+					
+				</li>
+				
+			
+			
+							 
+			
+				 
+				 <!-- 2레벨 메뉴 닫는 태그 -->
+					 </ul>
+					 </li>
+				 
+				<!-- 3레벨 메뉴 닫는 태그 -->
+				
+			
+			 
+				
+			
+				
+				
+				<!--  -->
+				
+				<!-- 2레벨 메뉴 여는 태그-->
+					
+						
+						<li id="190_153">
+					
+					
+					
+						
+							
+								
+									
+								  		
+											<a href="/front/page/pageView.do?page_id=P000317&amp;mn_id=229" target="_self" class="" title="">발자취</a> 
+								  		
+								  		
+								  	 
+								
+								
+							  
+						
+						
+						               
+					
+				
+					<ul class="depth311">       
+				 
+				
+				
+				
+				
+				
+				
+				
+				
+			
+			
+			<!--  -->
+			
+			
+			
+				<!-- 2레벨 메뉴 닫는 태그 -->
+				 
+							 
+				
+			
+			 
+				
+			
+				
+				
+				<!--  -->
+				
+			
+			<!--  -->
+			
+			<!-- 3레벨 여는 태그 -->
+				<li id="229_190">
+					
+					
+					
+					
+						<a href="/front/page/pageView.do?page_id=P000317&amp;mn_id=229" target="_self" class="" title="">연혁</a>							  
+					
+					
+				</li>
+				
+			
+			
+							 
+			
+				 
+				<!-- 3레벨 메뉴 닫는 태그 -->
+				
+			
+			 
+				
+			
+				
+				
+				<!--  -->
+				
+			
+			<!--  -->
+			
+			<!-- 3레벨 여는 태그 -->
+				<li id="230_190">
+					
+					
+					
+					
+						<a href="/front/page/pageView.do?page_id=P000167&amp;mn_id=230" target="_self" class="" title="">역대 원장</a>							  
+					
+					
+				</li>
+				
+			
+			
+							 
+			
+				 
+				<!-- 3레벨 메뉴 닫는 태그 -->
+				
+			
+			 
+				
+			
+				
+				
+				<!--  -->
+				
+			
+			<!--  -->
+			
+			<!-- 3레벨 여는 태그 -->
+				<li id="231_190">
+					
+					
+					
+					
+						<a href="/front/page/pageView.do?page_id=P000168&amp;mn_id=231" target="_self" class="" title="">국립국어연구원 10년사</a>							  
+					
+					
+				</li>
+				
+			
+			
+							 
+			
+				 
+				<!-- 3레벨 메뉴 닫는 태그 -->
+				
+			
+			 
+				
+			
+				
+				
+				<!--  -->
+				
+			
+			<!--  -->
+			
+			<!-- 3레벨 여는 태그 -->
+				<li id="232_190">
+					
+					
+					
+					
+						<a href="/front/page/pageView.do?page_id=P000215&amp;mn_id=232" target="_self" class="" title="">국립국어원 20년사</a>							  
+					
+					
+				</li>
+				
+			
+			
+							 
+			
+				 
+				<!-- 3레벨 메뉴 닫는 태그 -->
+				
+			
+			 
+				
+			
+				
+				
+				<!--  -->
+				
+			
+			<!--  -->
+			
+			<!-- 3레벨 여는 태그 -->
+				<li id="255_190">
+					
+					
+					
+					
+						<a href="/front/page/pageView.do?page_id=P000443&amp;mn_id=255" target="_self" class="" title="">국립국어원 30년사</a>							  
+					
+					
+				</li>
+				
+			
+			
+							 
+			
+				 
+				 <!-- 2레벨 메뉴 닫는 태그 -->
+					 </ul>
+					 </li>
+				 
+				<!-- 3레벨 메뉴 닫는 태그 -->
+				
+			
+			 
+				
+			
+				
+				
+				<!--  -->
+				
+				<!-- 2레벨 메뉴 여는 태그-->
+					
+						
+						<li id="191_153">
+					
+					
+					
+						
+							
+								
+									
+								  		
+											<a href="/front/dept/deptMemberList.do?mn_id=233" target="_self" class="" title="">조직·사업 소개</a> 
+								  		
+								  		
+								  	 
+								
+								
+							  
+						
+						
+						               
+					
+				
+					<ul class="depth311">       
+				 
+				
+				
+				
+				
+				
+				
+				
+				
+			
+			
+			<!--  -->
+			
+			
+			
+				<!-- 2레벨 메뉴 닫는 태그 -->
+				 
+							 
+				
+			
+			 
+				
+			
+				
+				
+				<!--  -->
+				
+			
+			<!--  -->
+			
+			<!-- 3레벨 여는 태그 -->
+				<li id="233_191">
+					
+					
+						
+							
+							
+								<a href="/front/dept/deptMemberList.do?mn_id=233" target="_self" class="" title="">조직과 업무 소개</a> 
+							
+						  
+					
+					
+					
+					
+				</li>
+				
+			
+			
+							 
+			
+				 
+				<!-- 3레벨 메뉴 닫는 태그 -->
+				
+			
+			 
+				
+			
+				
+				
+				<!--  -->
+				
+			
+			<!--  -->
+			
+			<!-- 3레벨 여는 태그 -->
+				<li id="234_191">
+					
+					
+					
+					
+						<a href="/front/page/pageView.do?page_id=P000169&amp;mn_id=234" target="_self" class="" title="">사업 소개</a>							  
+					
+					
+				</li>
+				
+			
+			
+							 
+			
+				 
+				 <!-- 2레벨 메뉴 닫는 태그 -->
+					 </ul>
+					 </li>
+				 
+				<!-- 3레벨 메뉴 닫는 태그 -->
+				
+			
+			 
+				
+			
+				
+				
+				<!--  -->
+				
+				<!-- 2레벨 메뉴 여는 태그-->
+					
+						
+						<li id="192_153">
+					
+					
+					
+						
+							
+								
+									
+								  		
+											<a href="/front/page/pageView.do?page_id=P000183&amp;mn_id=235" target="_self" class="" title="">시설 소개</a> 
+								  		
+								  		
+								  	 
+								
+								
+							  
+						
+						
+						               
+					
+				
+					<ul class="depth311">       
+				 
+				
+				
+				
+				
+				
+				
+				
+				
+			
+			
+			<!--  -->
+			
+			
+			
+				<!-- 2레벨 메뉴 닫는 태그 -->
+				 
+							 
+				
+			
+			 
+				
+			
+				
+				
+				<!--  -->
+				
+			
+			<!--  -->
+			
+			<!-- 3레벨 여는 태그 -->
+				<li id="235_192">
+					
+					
+					
+					
+						<a href="/front/page/pageView.do?page_id=P000183&amp;mn_id=235" target="_self" class="" title="">시설 소개</a>							  
+					
+					
+				</li>
+				
+			
+			
+							 
+			
+				 
+				<!-- 3레벨 메뉴 닫는 태그 -->
+				
+			
+			 
+				
+			
+				
+				
+				<!--  -->
+				
+			
+			<!--  -->
+			
+			<!-- 3레벨 여는 태그 -->
+				<li id="237_192">
+					
+					
+					
+					
+						<a href="/front/page/pageView.do?page_id=P000184&amp;mn_id=237" target="_self" class="" title="">오시는 길</a>							  
+					
+					
+				</li>
+				
+			
+			
+							 
+			
+				 
+				 <!-- 2레벨 메뉴 닫는 태그 -->
+					 </ul>
+					 </li>
+				 
+				<!-- 3레벨 메뉴 닫는 태그 -->
+				
+			
+			
+						</ul>
+					</div>
+				</div>
+			</li>   
+			 
+				
+			
+		</ul>
+		<!-- //depth1 -->
+		<script>    
+		$(document).ready(function(){
+			$(".depth3").css("display", "block");
+			
+			var uAgent = navigator.userAgent.toLowerCase(); // 아래는 모바일 장치들의 모바일 페이지 접속을위한 스크립트 
+// 			console.log(uAgent);
+			var mobilePhones = new Array('iphone', 'ipod', 'ipad', 'android', 'blackberry', 'windows ce','nokia', 'webos', 'opera mini', 'sonyericsson', 'opera mobi', 'iemobile'); 
+			for (var i = 0; i < mobilePhones.length; i++){ 
+				if (uAgent.indexOf(mobilePhones[i]) != -1){ 
+					$(".skipToContent").css("display", "none");
+					$(".tab-select").attr("title", "해당 버튼을 누르면 페이지를 이동 할 수 있는 목록이 나타납니다.");
+					$(".tab-select").click(function(){
+						if($(this).hasClass("active") === true) {
+						   $(this).attr("title", "해당 버튼을 누르면 페이지를 이동 할 수 있는 목록이 닫힙니다.");
+						
+						} else {
+						   $(this).attr("title", "해당 버튼을 누르면 페이지를 이동 할 수 있는 목록이 나타납니다.");
+				
+						}
+
+					});
+				} 
+			};
+			
+		});
+		</script>
+		</div>
+		<!-- //inner -->
+	</nav>
+	<!-- //nav -->
+</header>
+<!-- //header -->
+		<!-- contTopBar -->
+		<div id="contTopBar" class="contTopBar">
+			<!-- inner -->
+			<div class="inner">
+				<!-- breadcrumb -->
+				<div class="breadcrumb">
+					<strong>현재 위치:</strong>
+					
+					<div class="item">
+						<a href="/front/main.do" class="home" title="메인으로 바로가기">Home</a>
+					</div>
+					
+					
+					
+					
+						
+							<div class="item">
+								<em>알림 </em>
+								<a href="" class="link menuPath0">바로가기</a>
+							</div>
+						
+					
+						
+							<div class="item">
+								<em> 보도 자료</em>
+								<a href="" class="link menuPath1">바로가기</a>
+							</div>
+						
+					
+						
+				</div>
+				<!-- //breadcrumb -->
+				<!-- util -->
+				<ul class="util">
+					<li><button type="button" class="share">공유</button></li>
+					<li><button type="button" class="print">프린트</button></li>
+					<li class="jumja_hide"><button type="button" onclick="exportBrl('btag', 'braille_rule')">디버깅파일 내려받기</button></li>
+					<li><button type="button" onclick="exportBrl('brf', 'braille_rule')" class="jumja_down">점자파일 내려받기</button></li>
+					<li><button type="button" onclick="openBrlViewer('test')" class="jumja_view">점자뷰어 보기</button></li>
+				</ul>
+				<!-- //util -->
+			</div>
+			<!-- //inner -->
+		</div>
+		<!-- //contTopBar -->
+		<!-- container -->
+		<div id="container" class="container">
+			<!-- inner -->
+			<div class="inner">
+				
+			
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- sub test-->
+<div class="sub">
+	<!-- inner -->
+	
+		<div class="inner">
+		
+			
+			
+				
+				<!-- 1레벨 열기 -->
+				<h2>알림</h2>
+				<ul class="depth2">
+				
+												
+			
+			
+			
+			
+		
+		
+		
+			<!-- 1레벨 메뉴 닫는 태그-->
+		
+		
+						 
+						 
+		
+		
+		
+		
+			
+			
+			
+				
+				<!-- 2레벨 열기 -->
+				
+				 
+					
+					
+						<li class="">
+						
+					
+					
+					
+					
+						
+						
+						 
+							<a href="/front/board/boardStandardList.do?board_id=4&amp;mn_id=182" target="_self" class="" title="">공지 사항</a>							  
+						
+					
+				
+			
+			
+			
+		
+		
+		
+		
+			<!-- 2레벨 메뉴 닫는 태그 -->
+			
+				 </li>
+			 
+						 
+						 
+		
+		
+		
+		
+			
+			
+			
+				
+				<!-- 2레벨 열기 -->
+				
+				 
+					
+					
+						<li class="">
+						
+					
+					
+					
+					
+						
+						
+						 
+							<a href="/front/board/boardStandardList.do?board_id=5&amp;mn_id=183" target="_self" class="" title="">입찰 공고</a>							  
+						
+					
+				
+			
+			
+			
+		
+		
+		
+		
+			<!-- 2레벨 메뉴 닫는 태그 -->
+			
+				 </li>
+			 
+						 
+						 
+		
+		
+		
+		
+			
+			
+			
+				
+				<!-- 2레벨 열기 -->
+				
+				 
+					
+					
+						<li class="current">
+						
+							
+															
+						
+					
+					
+					
+					
+						
+						
+						 
+							<a href="/front/board/boardStandardList.do?board_id=6&amp;mn_id=184" target="_self" class="" title="">보도 자료</a>							  
+						
+					
+				
+			
+			
+			
+		
+		
+		
+		
+			<!-- 2레벨 메뉴 닫는 태그 -->
+			
+				 </li>
+			 
+						 
+						 
+		
+		
+		
+		
+			
+			
+			
+				
+				<!-- 2레벨 열기 -->
+				
+				 
+					
+					
+						<li class="">
+						
+					
+					
+					
+					
+						
+							
+								
+								
+									<a href="/front/board/boardBSList.do?mn_id=185" target="_self" class="" title="">국어 관련 기사</a> 
+								
+							
+						
+						
+						
+					
+				
+			
+			
+			
+		
+		
+		
+		
+			<!-- 2레벨 메뉴 닫는 태그 -->
+			
+				 </li>
+			 
+						 
+						 
+		
+		
+		
+		
+			
+			
+			
+				
+				<!-- 2레벨 열기 -->
+				
+				 
+					
+					
+						<li class="">
+						
+					
+					
+					
+					
+						
+						
+						 
+							<a href="/front/board/boardStandardList.do?board_id=7&amp;mn_id=187" target="_self" class="" title="">학회/행사/기타 안내</a>							  
+						
+					
+				
+			
+			
+			
+		
+		
+		
+		
+			<!-- 2레벨 메뉴 닫는 태그 -->
+			
+				 </li>
+			 
+						 
+						 
+		
+		
+		
+		
+			
+			
+			
+				
+				<!-- 2레벨 열기 -->
+				
+					
+					
+						<li class="">
+						
+					
+					
+					
+						
+							
+								
+									<a href="/front/page/pageView.do?page_id=P000182&amp;mn_id=225&amp;mn_id=188" target="_self" class="" title="">관련 법령</a><ul class="depth3"> 
+								
+								
+							
+						
+						
+						
+					
+				
+				
+			
+			
+			
+		
+		
+		
+		
+			<!-- 2레벨 메뉴 닫는 태그 -->
+			 
+						 
+						 
+		
+		
+		
+		
+			
+			
+			
+			
+			
+			<!-- 3레벨 열기 -->
+				<li class="">
+					
+					
+						
+						 
+							<a href="https://www.law.go.kr/LSW/lsOrdinAstSc.do?section=&amp;menuId=391&amp;subMenuId=399&amp;tabMenuId=455&amp;eventGubun=060101&amp;query=%EA%B5%AD%EC%96%B4%EA%B8%B0%EB%B3%B8%EB%B2%95" target="_blank" class="new_win" title="새 창">국어기본법</a> 
+						
+						
+					
+				</li>
+				
+		
+		
+		
+		
+						 
+		
+			
+			<!-- 3레벨 메뉴 닫는 태그 -->
+						 
+		
+		
+		
+		
+			
+			
+			
+			
+			
+			<!-- 3레벨 열기 -->
+				<li class="">
+					
+					
+						
+						 
+							<a href="https://www.law.go.kr/LSW/lsOrdinAstSc.do?section=&amp;menuId=391&amp;subMenuId=399&amp;tabMenuId=455&amp;eventGubun=060101&amp;query=%ED%95%9C%EA%B5%AD%EC%88%98%ED%99%94%EC%96%B8%EC%96%B4%EB%B2%95" target="_blank" class="new_win" title="새 창">한국수화언어법</a> 
+						
+						
+					
+				</li>
+				
+		
+		
+		
+		
+						 
+		
+			
+			<!-- 3레벨 메뉴 닫는 태그 -->
+						 
+		
+		
+		
+		
+			
+			
+			
+			
+			
+			<!-- 3레벨 열기 -->
+				<li class="">
+					
+					
+						
+						 
+							<a href="https://www.law.go.kr/LSW/lsOrdinAstSc.do?menuId=391&amp;subMenuId=399&amp;tabMenuId=455&amp;query=%EC%A0%90%EC%9E%90%EB%B2%95" target="_blank" class="new_win" title="새 창">점자법</a> 
+						
+						
+					
+				</li>
+				
+		
+		
+		
+		
+						 
+		
+			
+			<!-- 3레벨 메뉴 닫는 태그 -->
+						 
+		
+		
+		
+		
+			
+			
+			
+			
+			
+			<!-- 3레벨 열기 -->
+				<li class="">
+					
+					
+						
+						
+						 
+							<a href="/front/page/pageView.do?page_id=P000182&amp;mn_id=225" target="_self" class="" title="">국립국어원 예규</a>							  
+						
+					
+				</li>
+				
+		
+		
+		
+		
+						 
+		
+			
+			<!-- 2레벨 메뉴 닫는 태그 -->
+				</ul></li>
+			
+			<!-- 3레벨 메뉴 닫는 태그 -->
+						 
+		
+		
+				</ul>
+		
+		
+		
+		</div>
+	
+	
+	<!-- //inner -->
+</div>
+<!-- //sub -->
+
+			
+			
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- content -->
+<div id="content" class="content">
+
+<!-- util -->
+<div class="util">
+	<button type="button" class="zoom-out">축소</button>
+	<button type="button" class="zoom-in">확대</button>
+</div>
+<!-- //util -->
+<div class="heading heading-depth01">
+	<h2 class="title" data-brl-use="PT">보도 자료 상세보기</h2>
+</div>
+
+
+
+<div class="boardView">
+	<!-- head -->
+	<div class="head">
+		<h2 class="title" data-brl-use="PH/H2">변화하는 언어 환경 속, 현재 우리 국민의 언어 의식은?</h2>
+		<div class="article" data-brl-use="PH">
+			<strong>작성자</strong>
+			<span>국립국어원</span>
+		
+		
+		
+			
+			
+		
+			
+			
+		
+			
+			
+		
+			
+				<strong>등록일</strong>
+				<span>2026. 1. 27. </span>
+			
+			
+		
+			
+			
+		
+			<strong>조회수</strong>
+			<span>2473</span>
+		</div>
+	</div>
+	<!-- //head -->
+	
+		
+		
+		
+		
+		<!-- file -->
+		
+			<div class="file" data-brl-use="PH">
+				<div class="desc">
+					<strong>첨부파일 총1건 </strong>
+					<em class="attachSizeArea">(0 MB)</em>
+					<a href="/common/all/board/download.do?board_id=6&amp;b_seq=1034&title=변화하는 언어 환경 속, 현재 우리 국민의 언어 의식은?">전체 내려받기</a>
+				</div>
+				<ul class="fileList">
+					
+					
+						<li>
+							<a href="/common/download.do?file_path=recent&amp;c_file_name=9fe998e6-582e-4835-b127-bde48d335881.hwpx&amp;o_file_name=[보도자료]%20변화하는%20언어%20환경%20속,%20현재%20우리%20국민의%20언어%20의식은.hwpx">[보도자료] 변화하는 언어 환경 속, 현재 우리 국민의 언어 의식은.hwpx</a>
+							
+							&emsp;
+							<a href="/front/fileView.do?file_path=recent&amp;c_file_name=9fe998e6-582e-4835-b127-bde48d335881.hwpx" class="button"  target="_blank" title="새창">미리보기</a>
+							
+						</li>
+					
+				</ul>
+			</div>
+		
+		<!-- //file -->
+		
+	
+	
+	<!-- body -->
+	<div class="body" data-brl-use="PH">
+		
+		<!-- EDITOR -->
+		
+			
+			
+				<table cellpadding="0" cellspacing="0">
+<tbody>
+<tr>
+<td style="padding: 10px 10px 10px 10px;">
+<p class="0" style="text-align: center;"><strong style="font-size: x-large;"><strong></strong></strong><span style="font-size: x-large;"><strong></strong></span><span style="font-size: x-large;"><strong></strong></span><span style="font-size: x-large;"><strong></strong></span><span style="font-size: x-large;"><strong></strong></span><span style="font-size: x-large;"><strong></strong></span><strong style="font-size: x-large;"></strong><span style="font-size: x-large;"><strong>변화하는 언어 환경 속, 현재 우리 국민의 언어 의식은?</strong></span></p>
+<div class="hwp_editor_board_content" data-hjsonver="1.0" data-jsonlen="6936">
+<p class="0">- 국어에 대한 관심은 원활한 의사소통 중심으로, 지역 방언 유지에는 긍정적</p>
+<p class="0">- 외국 문자 표기로 인한 불편 증가, 공공언어 개선 요구 지속돼</p>
+<p class="0">- 이주민&middot;장기 체류 외국인의 한국어 학습에 대한 높은 필요성 확인</p>
+<p class="0">- 국립국어원, &lsquo;2025년 국민의 언어 의식 조사&rsquo; 결과 발표</p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<p class="0"><br /><br /></p>
+<p class="0">&nbsp; 국립국어원이 2025년 실시한 &lsquo;국민의 언어 의식 조사&rsquo; 결과를 공개하였다. &lsquo;국민의 언어 의식 조사&rsquo;는 국어에 대한 관심 및 국어 사용에 대한 생각, 언어 교육과 언어 정책에 대한 인식 등 국민의 언어 의식 전반을 파악하기 위하여 2005년부터 5년마다 실시되고 있는 조사이다. 이번 조사는 전국 만 20세 이상 69세 이하 남녀 5,000명을 대상으로 진행되었다.</p>
+<p class="0">&nbsp;</p>
+<p class="0"><strong>&lsquo;원활한 의사소통&rsquo;이 중요, 지역 방언은 &lsquo;유지&middot;존속&rsquo; 필요</strong></p>
+<p class="0">&nbsp;</p>
+<p class="0">&nbsp; 조사 결과, 국어에 대한 관심은 일상 언어생활과 관련이 큰 &lsquo;말하기&rsquo;(78.7%), &lsquo;언어 예절&rsquo;(68.7%), &lsquo;글의 내용과 맥락 이해&rsquo;(66.6%) 순으로 높게 나타났다. 이에 비해 &lsquo;신조어&middot;유행어&rsquo;(45.6%)나 &lsquo;한자 사용&rsquo;(40.9%)에 대한 관심은 상대적으로 낮게 나타났는데, 이러한 결과는 국민의 관심이 실생활 의사소통 영역에 집중되고 있음을 보여준다.</p>
+<p class="0">&nbsp; 한편 지역 방언의 유지&middot;존속 필요성에 대해서는 유지하여야 한다는 긍정 응답이 59.2%로 과반을 넘겼고, 부정적인 응답은 10% 미만으로 나타났다. 이는 지난 2020년 조사에 비해 약 8.3%p 증가한 결과로, 지역 방언을 유지해야 한다는 인식이 5년 전에 비해 높아진 것으로 풀이된다. 특히 제주에서 지역 방언을 유지해야 한다는 의견이 높게 집계되었는데, 이는 제주 방언이 소멸 위기라는 인식이 작용한 것으로 분석된다.<br /><br /></p>
+<p class="0"><strong>외국 문자 표기로 인한 불편 늘고, 쉬운 공공언어에 대한 요구는 지속<br /></strong>&nbsp;</p>
+<p class="0">&nbsp; 일상생활에서 한글 표기 없이 외국 문자로만 표기된 것을 보고 곤란한 적이 있었다는 응답은 46.6%를 기록했는데, 2020년에 실시한 조사에 비해 9%p 이상 증가한 결과이다. 이러한 불편 경험은 특히 연령이 높을수록 상대적으로 많이 겪은 것으로 조사되었다.</p>
+<p class="0">&nbsp; &lsquo;외국 문자로만 표기하는 것은 문제&rsquo;라고 응답한 국민은 전체의 61.8%에 달했다. 문제인 이유로는 &lsquo;외국 문자를 모르는 사람이 못 알아들을 수 있기 때문에&rsquo;(35.3%), &lsquo;의미를 파악하기 어렵기 때문에&rsquo;(27.0%)가 꼽혔다. 이러한 조사 결과는 외국 문자 중심의 언어 환경이 상당수 국민에게 일상생활에서의 실질적인 언어 장벽으로 작용하고 있음을 보여준다.</p>
+<p class="0">&nbsp; 공공기관 언어 난이도에 대하여 국민들은 2020년 조사 대비 쉬워진 편이라는 평가를 내놨으나(&lsquo;쉬운 편이다&rsquo; 33.4%&rarr;37.8%), 이해하기 어려운 문장이나 불필요한 외국어 남용은 계속해서 개선해야 한다고 응답했다.</p>
+<p class="0">&nbsp;</p>
+<p class="0"><strong>이주민&middot;장기 체류 외국인에 대한 한국어 교육 필요성 확인</strong></p>
+<p class="0">&nbsp;</p>
+<p class="0">&nbsp; 이주민과 그 자녀를 대상으로 한 한국어 교육의 정책적 지원 필요성에 대해 &lsquo;필요하다&rsquo;라는 응답은 57%로, 이는 2020년 조사 결과(56.8%)와 유사한 수준이다. 이를 통해 이주민을 위한 한국어 교육의 정책적 지원 필요성에 대해서는 일정 수준의 사회적 인식이 유지되고 있음을 알 수 있다.</p>
+<p class="0"></p>
+<p class="0">&nbsp; 이번 조사는 변화하는 언어 환경 속 우리 국민의 언어 의식과 그에 따른 정책적 수요를 종합적으로 확인하였다는 점에서 의의가 있다. 국립국어원은 조사 결과를 바탕으로 국민의 언어 의식과 언어 환경 변화 양상을 분석하고, 향후 국어 정책 및 관련 제도 수립에 활용할 계획이다.</p>
+<p class="0">&nbsp;</p>
+<p class="0">붙임 2025년 국민의 언어 의식 조사 그림 자료<br /><br /></p>
+<table>
+<tbody>
+<tr>
+<td valign="bottom">
+<p class="0" style="text-align: center;">담당 부서</p>
+</td>
+<td valign="bottom" style="text-align: center;">
+<p class="0">문화체육관광부</p>
+</td>
+<td>
+<p class="0" style="text-align: center;">책임자</p>
+</td>
+<td>
+<div class="0" style="text-align: center;">과장</div>
+</td>
+<td style="text-align: center;">
+<div class="0">이운영</div>
+</td>
+<td style="text-align: center;">
+<div class="0">(02-2669-9711)</div>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<div class="0">&nbsp;</div>
+</td>
+<td valign="top">
+<div class="0" style="text-align: center;">국립국어원 어문연구과</div>
+</td>
+<td>
+<div class="0" style="text-align: center;">담당자</div>
+</td>
+<td style="text-align: center;">
+<div class="0">학예연구사</div>
+</td>
+<td style="text-align: center;">
+<div class="0">서혜진</div>
+</td>
+<td>
+<div class="0" style="text-align: center;">(02-2669-9714)</div>
+</td>
+</tr>
+</tbody>
+</table>
+			
+		
+		<!-- //EDITOR -->
+		
+				
+		
+	</div>
+	
+	<script>
+
+
+      var tag = document.createElement('script');
+      tag.src = "https://www.youtube.com/iframe_api";
+      var firstScriptTag = document.getElementsByTagName('script')[0];
+      firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+      var videoId = document.getElementById("ytplayer").getAttribute('videoId');
+	  console.log(videoId);
+      var player;
+      function onYouTubeIframeAPIReady() {
+        player = new YT.Player('ytplayer', {
+          height: '315',
+          width: '560',
+          'videoId': videoId,
+          events: {
+            'onReady': onPlayerReady,
+            'onStateChange': onPlayerStateChange
+          }
+        });
+      }
+
+      function onPlayerReady(event) {
+        //event.target.playVideo();
+      }
+
+      // 5. The API calls this function when the player's state changes.
+      //    The function indicates that when playing a video (state=1),
+      //    the player should play for six seconds and then stop.
+      var done = false;
+      function onPlayerStateChange(event) {
+        //if (event.data == YT.PlayerState.PLAYING && !done) {
+          //setTimeout(stopVideo, 6000);
+          //done = true;
+        //}
+      }
+      function stopVideo() {
+        player.stopVideo();
+      }
+	  function seekToPlay(sec) {
+        player.seekTo(sec, true);
+		player.playVideo();
+	  }
+
+	  // 클릭 시 최상단으로 이동
+	  $("#ytplayer_list a").click(function(){
+
+
+			window.scrollTo(0,800);
+
+	  });// 클릭 시 최상단으로 이동 끝
+
+	  
+	  // 검색 기능 구현 (table 내 '이름' 항목만 검색 됨.)
+	  $("#ytplayer_searchBtn").click(function(){
+		  
+		  $("#ytplayer_list tr").each(function() {
+				 $(this).show(); 
+		});
+		  	  
+		  var keyword=$(".ytplayer_searchBox").val();
+		  $("#ytplayer_list td:nth-child(3)").each(function() {
+			  $("#ytplayer_list td:nth-child(3)").each(function() {if($(this).text().indexOf(keyword)==-1) {$(this).parent().hide();}});
+		  });
+	  
+	  });// 검색 기능 구현 끝
+	  
+	  
+	  // 초기화 기능 구현
+	  $("#ytplayer_searchReset").click(function(){
+		  
+		  $("#ytplayer_list tr").each(function() {
+				 $(this).show(); 
+		});
+		  
+	  });// 초기화 기능 구현 끝 
+	  
+	  
+	  // 엔터키로 검색 가능하도록 구현
+	  $(".ytplayer_searchBox").keydown(function(e) {
+   			if (e.keyCode == 13) {
+               $("#ytplayer_searchBtn").trigger('click');
+               event.preventDefault();
+   			}
+
+	  });// 엔터키로 검색 가능하도록 구현 끝
+	  
+	  
+	</script>
+	
+	
+	<!-- //body -->
+	<!-- page -->
+	<div class="page" data-brl-use="PH">
+		<div>
+			<strong>이전글</strong>
+			
+				
+				<a href="/front/board/boardStandardView.do?board_id=6&mn_id=184&b_seq=1033&pageIndex=1&searchCondition=&searchKeyword=">국립국어원 &lt;표준국어대사전&gt;, 2025년 한 해 동안 이렇게 달라졌습니다</a>
+				
+				
+			
+		</div>
+		<div>
+			<strong class="next">다음글</strong>
+			
+				
+				<a href="/front/board/boardStandardView.do?board_id=6&mn_id=184&b_seq=1035&pageIndex=1&searchCondition=&searchKeyword=">국립국어원, 한국어교원 활동 조사 결과 발표</a>
+				
+				
+			
+		</div>
+	</div>
+	<!-- //page -->
+</div>
+
+		
+<div class="btnWrap alignR">
+	<a href="javascript:fnCmdList('');" class="button button-color01 button-sizeFull">목록</a>
+	
+</div>
+
+<form method="post" id="boardStandardForm" name="boardStandardForm" class="form-horizontal" action="#">
+	<input type="hidden" id="b_content"   name="b_content"   value=""/>
+	<input type="hidden" id="file_path"   name="file_path"   value=""/>
+	<input type="hidden" id="c_file_name" name="c_file_name" value=""/>
+	<input type="hidden" id="o_file_name" name="o_file_name" value=""/>
+	<input type="hidden" id="chk_id"	  name="chk_id"	  value="1034"/>
+	<input type="hidden" id="b_mobile_yn" name="b_mobile_yn" value=""/>
+	<input type="hidden" id="searchKeyword" 	name="searchKeyword" 	value=""/>
+	<input type="hidden" id="searchCondition" 	name="searchCondition" 	value=""/>
+</form>
+</div>
+
+			</div>
+			<!-- //inner -->
+		</div>
+		<!-- //container -->
+			
+
+
+
+
+
+
+
+<!-- quick menu -->
+<div id="quickMenu" class="webViewArea">
+	<ul>
+		
+		<li class="sub_quick">
+			<p class="title">국어 상담</p>
+			<ul class="sub_q_menu">
+				
+					<li class="sub_q_00">
+						<a href="/front/onlineQna/onlineQnaList.do?mn_id=216" target="_blank" title="새 창 알림">
+						<img src="/asset/img/main/mainquick_01.png?20241115" alt=""><br>
+						온라인 상담
+						</a>
+					</li>
+					
+				
+					<li class="sub_q_01">
+						<a href="void(0);" onclick="alert('이 기능은 휴대폰에서만 이용 가능합니다.');return false;">
+						<span class="skew-shake-y"><img src="/asset/img/main/mainquick_02.png?20241115" alt=""></span><br>
+						전화 상담<br>(가나다전화)<br>1599-9979<br>(10-12시, 13-17시)
+						</a>
+					</li>
+					
+				
+					<li class="sub_q_02">
+						<a href="https://pf.kakao.com/_Cgxail/chat" target="_blank" title="새창">
+						<p class="change-image"></p>
+						카카오톡 상담<br>(우리말365)
+						</a>
+					</li>
+					
+				
+					<li class="quick_title"><p class="title">공공언어 개선</p></li>
+					
+					<li class="sub_q_03">
+						<a href="/front/imprv/refineList.do?mn_id=158" target="_blank" title="새 창 알림">
+						<img src="/asset/img/main/mainquick_04.png" alt=""><br>
+						다듬은 말
+						</a>
+					</li>
+					
+				
+					<li class="sub_q_04">
+						<a href="/front/support/supportIntro.do?mn_id=163" target="_blank" title="새 창 알림">
+						<img src="/asset/img/main/mainquick_05.png" alt=""><br>
+						공공언어 감수
+						</a>
+					</li>
+					
+					<li class="sub_q_05">
+						<a href="/front/calamity/calamityIntro.do?mn_id=275" target="_blank" title="새 창 알림">
+						<img src="/asset/img/main/mainquick_07.png" alt=""><br>
+						공공언어, 방송언어<br>개선 국민 제보
+						</a>
+					</li>
+				
+					<li class="sub_q_06">
+						<a href="/front/pubWord/pubWordDataIntro.do?mn_id=164" target="_blank" title="새 창 알림">
+						<img src="/asset/img/main/mainquick_06.png" alt=""><br>
+						공공용어 번역
+						</a>
+					</li>
+				
+					<li class="sub_q_07">
+						<a href="/front/imprv/stndrdList.do?mn_id=159" target="_blank" title="새 창 알림">
+						<img src="/asset/img/main/mainquick_08.png" alt=""><br>
+						표준 전문용어
+						</a>
+					</li>
+				
+					<li class="quick_title"><p class="title">국어원 소식</p></li>
+				
+					<li class="sub_q_08">
+						<a href="https://blog.naver.com/areumkor" target="_blank" title="새 창 알림">
+						<img src="/asset/img/main/mainquick_12.png" alt=""><br>
+						블로그<br>(쉼표, 마침표.)
+						</a>
+					</li>
+
+					<li class="sub_q_09">
+						<a href="https://www.youtube.com/channel/UCQEUCVtOyPAozp76V1_Aw0A" target="_blank" title="새 창 알림">
+						<img src="/asset/img/main/mainquick_13.png" alt=""><br>
+						유튜브
+						</a>
+					</li>
+
+					<li class="sub_q_10">
+						<a href="https://www.instagram.com/areumkor/" target="_blank" title="새 창 알림">
+						<img src="/asset/img/main/mainquick_11.png" alt=""><br>
+						인스타그램
+						</a>
+					</li>
+
+					<li class="sub_q_11">
+						<a href="https://twitter.com/urimal365" target="_blank" title="새 창 알림">
+						<img src="/asset/img/main/mainquick_14.png" alt=""><br>
+						엑스
+						</a>
+					</li>
+			</ul>
+		</li>
+	</ul>
+</div>
+<!-- // quick menu -->
+
+
+
+		<!-- aside -->
+		<aside class="aside">
+			<button type="button">페이지 최 상단으로 이동</button>
+		</aside>
+		<!-- //aside -->
+		<!-- footer -->
+		<footer id="footer" class="footer">
+			<!-- inner -->
+			<div class="inner">
+				<!-- menu -->
+				<div class="menu">
+
+				  <div class="link">
+					<!-- sns -->
+					<ul>	
+						<li><a href="https://www.youtube.com/channel/UCQEUCVtOyPAozp76V1_Aw0A" target="_blank" class="youtube" title="국립국어원 유튜브 새 창으로 열림">Youtube</a></li>
+						<!--<li><a href="https://www.facebook.com/urimal365k" target="_blank" class="facebook" title="국립국어원 페이스북 새 창으로 열림">Facebook</a></li>-->
+						<li><a href="https://www.instagram.com/areumkor/" target="_blank" class="instagram" title="국립국어원 인스타그램 새 창으로 열림">Instagram</a></li>
+						<li><a href="https://twitter.com/urimal365" target="_blank" class="twitter" title="국립국어원 엑스 새 창으로 열림">Twitter</a></li>
+						<li><a href="https://blog.naver.com/areumkor" target="_blank" class="blog" title="국립국어원 블로그 새 창으로 열림">blog</a></li>
+					</ul>
+					<!-- //sns -->
+
+					<!-- family -->
+					<div class="family">
+						<select title="문체부와 소속기관 선택">
+							<option value="">문체부와 소속기관</option>
+							<option value="http://www.mcst.go.kr/main.jsp">문화체육관광부</option>
+							<option value="http://www.karts.ac.kr">한국예술종합학교</option>
+							<option value="http://gugak.sen.hs.kr/index.do">국립국악고등학교</option>
+							<option value="http://gugak.sen.ms.kr/index.do">국립국악중학교</option>
+							<option value="http://kugak-am.sen.hs.kr/index.do">국립전통예술고등학교</option>
+							<option value="http://kugak-am.sen.ms.kr/index.do">국립전통예술중학교</option>
+							<option value="http://www.museum.go.kr">국립중앙박물관</option>
+							<option value="http://www.nl.go.kr">국립중앙도서관</option>
+							<option value="http://www.nld.go.kr">국립장애인도서관</option>
+							<option value="http://www.kocis.go.kr">해외문화홍보원</option>
+							<option value="http://www.gugak.go.kr">국립국악원</option>
+							<option value="http://www.nfm.go.kr">국립민속박물관</option>
+							<option value="http://www.much.go.kr">대한민국역사박물관</option>
+							<option value="http://www.hangeul.go.kr">국립한글박물관</option>
+							<option value="http://www.ntok.go.kr">국립중앙극장</option>
+							<option value="http://www.mmca.go.kr/">국립현대미술관</option>
+							<option value="http://www.ktv.go.kr">한국정책방송원</option>
+							<option value="http://acc.go.kr">국립아시아문화전당</option>
+							<option value="http://www.naa.go.kr">대한민국예술원</option>
+							
+							<!--<option value="http://www.mcst.go.kr/web/s_etc/mobile/mobileWebList.jsp">모바일 누리집 모음</option>-->
+						</select>
+						<button type="button" class="button button-color04" title="선택된 문화부 및 소속기관 새창으로 이동">바로 가기</button>
+					</div>
+					<!-- //family -->
+				</div>
+					<ul>
+						<li><a href="/front/nuri/pageView.do?page_id=P000186&amp;mkn=2" title="개인정보 처리 방침">개인정보 처리 방침</a></li>
+						<li><a href="/front/page/pageView.do?page_id=P000305&amp;mn_id=212" title="정보공개">정보공개</a></li>
+						<li><a href="/front/nuri/pageView.do?page_id=P000189&amp;mkn=3" title="저작권 정책">저작권 정책</a></li>
+						<li><a href="/front/nuri/pageView.do?page_id=P000190&amp;mkn=4" title="무료 배포 프로그램">무료 배포 프로그램</a></li>
+						<li><a href="/front/page/pageView.do?page_id=P000184&amp;mn_id=237" title="오시는 길">오시는 길</a></li>
+						<!--<li><a href="/front/page/pageView.do?page_id=P000451&amp;mn_id=256" title="정부·언론 외래어 심의 공동위원회">정부·언론 외래어 심의 공동위원회</a></li>-->
+						
+					</ul>
+					
+					<div class="webicon">
+						
+						<a href="http://www.webwatch.or.kr/Situation/WA_Situation.html?MenuCD=110" target="_blank" title="새창"><img src="/asset/img/common/WebAccessibility.png?20251230" border="0" alt="과학기술정보통신부 WA(WEB접근성) 품질인증 마크, 웹와치(WebWatch) 2026.1.6 ~ 2027.1.5" /></a>
+
+						<a href="http://www.kogl.or.kr" target="_blank" title="공공누리 누리집 새 창으로 열림"><img src="/asset/img/common/kogl_logo.png" border="0" alt="OPEN 공공누리 공공저작물 자유이용허락"></a>
+						
+					</div>
+
+
+
+
+
+
+					<address>
+						<span>우) 07511 서울특별시 강서구 금낭화로 154(방화동 827)</span>
+						<span>대표 전화: 02-2669-9775(평일 9~12시, 13~18시)</span>
+					</address>
+					<p>COPYRIGHT ⓒ National Institute of Korean Language ALL RIGHTS RESERVED.</p>
+				</div>
+
+				<!-- //menu -->
+
+
+				</div>
+				<!-- //link -->
+			
+			<!-- //inner -->
+			<!-- LOGGER(TM) TRACKING SCRIPT V.40 FOR logger.co.kr / 53498 : COMBINE TYPE / DO NOT ALTER THIS SCRIPT. --> 
+			<!-- <script type="text/javascript">var _TRK_LID="53498";var _L_TD="ssl.logger.co.kr";var _TRK_CDMN="";</script> 
+			<script type="text/javascript">var _CDN_DOMAIN = location.protocol == "https:" ? "https://fs.bizspring.net" : "http://fs.bizspring.net";
+			(function(b,s){var f=b.getElementsByTagName(s)[0],j=b.createElement(s);j.async=true;j.src='//fs.bizspring.net/fs4/bstrk.1.js';f.parentNode.insertBefore(j,f);})(document,'script');</script>
+			<noscript>
+			<img alt="Logger Script" width="1" height="1" src="http://ssl.logger.co.kr/tracker.tsp?u=53498&amp;js=N" >
+			</noscript> -->
+			<!-- END OF LOGGER TRACKING SCRIPT --> 
+		</footer>
+		<!-- //footer -->
+
+	</div>
+	
+	<script src="/asset/js/feSeries.min.js"></script>
+	<script src="/asset/js/feCommon.js?ver=20220422"></script>        
+	<script src="/js/common.js?ver=202207285"></script>
+	<script src="/asset/js/feResize.js"></script>
+	<script type="text/javascript" src="/js/jquery-1.10.2.js"></script>
+<script type="text/javascript" src="/js/swf_multi_upload.js"></script>
+<script src="/asset/js/filesize.min.js"></script>
+<script type="text/javascript">
+$(function(){
+	var UserAgent = navigator.userAgent;
+	if('N'=='Y'){
+		if (UserAgent.match(/iPhone|iPod|Android|Windows CE|BlackBerry|Symbian|Windows Phone|webOS|Opera Mini|Opera Mobi|POLARIS|IEMobile|lgtelecom|nokia|SonyEricsson/i) != null || UserAgent.match(/LG|SAMSUNG|Samsung/) != null)
+		{
+		 	
+		}else{
+			$("#editBtn").remove();
+		}
+	}else{
+		if (UserAgent.match(/iPhone|iPod|Android|Windows CE|BlackBerry|Symbian|Windows Phone|webOS|Opera Mini|Opera Mobi|POLARIS|IEMobile|lgtelecom|nokia|SonyEricsson/i) != null || UserAgent.match(/LG|SAMSUNG|Samsung/) != null)
+		{
+		 	$("#editBtn").remove();
+		}else{
+			
+		}
+	}
+	var fileSizeVal = parseInt("482188");
+	fileSizeVal = filesize(fileSizeVal);
+	$(".attachSizeArea").html("("+fileSizeVal+")");
+});
+//목록
+function fnCmdList(pageNo){
+	if(pageNo ==""){
+		pageNo = 1;
+	}
+	$("#boardStandardForm").attr("action","/front/board/boardStandardList.do?board_id=6&pageIndex="+pageNo+"&mn_id=184").submit();
+	$("#boardStandardForm").attr("target","");
+}
+
+
+//이전글
+function fnCmdPrevView(prev_b_seq){
+	console.log(prev_b_seq);
+
+	if(prev_b_seq==""){
+		alert("이전글이 없습니다.");
+		return;
+	}
+	var pageNo = "";
+	pageNo = parseInt('') || 1;
+	if(pageNo ==""){
+		pageNo = 1;
+	}
+	$("#boardStandardForm").attr("action","/front/board/boardStandardView.do?board_id=6&mn_id=184&b_seq="+prev_b_seq+"&pageIndex="+pageNo).submit();
+	$("#boardStandardForm").attr("target","");
+}
+
+//다음글
+function fnCmdNextView(next_b_seq){
+
+	console.log(next_b_seq);
+
+	if(next_b_seq==""){
+		alert("다음글이 없습니다.");
+		return;
+	}
+	
+	var pageNo = "";
+	pageNo = parseInt('') || 1;
+	if(pageNo ==""){
+		pageNo = 1;
+	}
+	$("#boardStandardForm").attr("action","/front/board/boardStandardView.do?board_id=6&mn_id=184&b_seq="+next_b_seq+"&pageIndex="+pageNo).submit();
+	$("#boardStandardForm").attr("target","");
+}
+
+
+
+$('title').text($('title').text().replace(" | ", "(변화하는 언어 환경 속, 현재 우리 국민의 언어 의식은?) | "));
+</script>
+	
+	<script type="text/javascript">
+	
+		var encoded = '/front/board/boardStandardList.do?board_id=4&amp;mn_id=182';
+		$(".menuPath0").attr("href",encoded.replace(/&amp;/g, '&'));
+	
+			
+		var encoded = '/front/board/boardStandardList.do?board_id=6';
+		$(".menuPath1").attr("href",encoded.replace(/&amp;/g, '&'));
+	
+	
+	</script>
+	<script src="/asset/js/combobox.js"></script> 
+<script type="text/javascript" src="//wcs.naver.net/wcslog.js"></script>
+<script type="text/javascript">
+if(!wcs_add) var wcs_add = {};
+wcs_add["wa"] = "162e15a0b6f3760";
+if(window.wcs) {
+  wcs_do();
+}
+</script>
+</body>
+</html>

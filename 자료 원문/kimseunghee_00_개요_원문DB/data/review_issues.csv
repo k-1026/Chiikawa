@@ -1,0 +1,14 @@
+issue_id,issue_type,claim_ids,source_ids,description,next_action
+ISS-K00-001,sample_mismatch,CLM-K00-C3-02,SRC-K00-KCI-PAPER,논문 표본은 대구 대학생 38명인데 기사·MD는 '경북 20대(경북 표본)'로 적음,MD 03·04번과 개요 수정
+ISS-K00-002,mismatch,CLM-K00-C5-03,SRC-K00-ORD-JEONBUK,"전북 조례 '2021 제정' → 실제 2014 제정, 2021 전부개정",MD 09번·개요 수정
+ISS-K00-003,scope_mismatch,CLM-K00-C5-02,SRC-K00-ORD-CHANGWON,"창원 '2024 조례' → 2013 제정, 2024 일부개정으로 지역어 보전 추가",표현 수정
+ISS-K00-004,scope_mismatch,CLM-K00-C5-01,SRC-K00-ORD-DAEGU,대구 지역어 단독 조례는 없으나 국어 진흥 조례(2019) 제3조②에 지역어 보전 노력 조항,"MD '찾지 못함'을 '단독 조례 없음, 국어 진흥 조례에 조항 있음'으로 수정"
+ISS-K00-005,date_mismatch,CLM-K00-C3-01;CLM-K00-C1-04,SRC-K00-NEWS-IM-20260323,"매일신문 기사: MD 발행일 2026-03-23(URL), 기사 표시 2026-04-03",12번 CSV 날짜 수정
+ISS-K00-006,resolved_conflict,CLM-K00-C5-04,SRC-K00-ORD-JEJU,제주 조례 2007/2008 충돌 → 2007-09-27 제정으로 정리(Aside 확인),13번 파일 갱신
+ISS-K00-007,new_official_source,CLM-K00-C1-04,SRC-K00-DGP-257024,앞산 사투리 퀴즈 설치 시기 공식 근거 발견(2022-11 개방),자산 판정 지속성 재검토
+ISS-K00-008,broken_links,,SRC-K00-MD,"MD의 상대 링크(01_방언특성변이.md, ../_rules.md, ../사투리_리서치지침_v2.md, minju/민주개인자료조사)가 2026-11-24 파일명 정리 이후 모두 없는 경로",kimseunghee_ 접두 파일명으로 링크 수정
+ISS-K00-009,not_stored,CLM-K00-C2-03,SRC-K00-NIKL-REPORT,국립국어원 결과 보고서 PDF(11.62MB)·보도자료 hwpx 미보관 — 47.7%·2020년 50.9%·쪽 번호는 Aside 보고,필요 시 PDF 내려받아 originals/에 추가
+ISS-K00-010,unverified_detail,CLM-K00-C3-01,SRC-K00-KCI-PAPER,41.3%·0%·2.7% 등은 논문 본문에서 미확인(초록에 없음),논문 원문 열람
+ISS-K00-011,absence_claim,CLM-K00-C4-01,,'대구 사투리 축제 없음'은 검색 기반 — 대구시 누리집 검색에서도 없음(Aside)이지만 부재를 확정할 수는 없음,확정 표현 피하기
+ISS-K00-012,official_internal_note,CLM-K00-C2-01,SRC-K00-NIKL-REPORT,Aside 보고: '언어 예절' 관심도가 보도자료 68.7% vs 보고서 요약 69.7%로 다름(이 MD의 주장과는 무관),참고
+ISS-K00-013,ocr_unreviewed,,,OCR 대상 스캔 문서 없음(해당 없음),

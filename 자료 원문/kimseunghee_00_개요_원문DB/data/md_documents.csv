@@ -1,0 +1,2 @@
+md_id,repo_path,git_branch,last_commit_sha,branch_head_sha,git_blob_sha,file_sha256,title,written_date,md_version,source_id,notes
+MD-K00,local 리서치/kimseunghee_00_개요.md,main,5f61dc486f15fe7db07c025d9e9d065fcc32dda0,e1c6aca00f62c761820e7f9bd54a52548d8a53a4,239d2dd920e093f61debd0fc3bd360ac176aadfd,2f41d4c976425e9b59cc0ce26865c24092e2a8366838c01503e5cbb833835061,사투리_v02_V4 — 개요,2026-10-31,v02_V4,SRC-K00-MD,written_date 는 문서의 '자료 기준일'. 2026-11-26 main 기준. 원본은 originals/SRC-K00-MD.md

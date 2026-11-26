@@ -1,0 +1,63 @@
+{
+  "template_id": "TPL-K00-OVERVIEW",
+  "md_id": "MD-K00",
+  "description": "kimseunghee_00_개요.md 고정 양식(조사 묶음 개요 문서). 값이 아니라 양식만 담음",
+  "front_matter": [
+    "주제",
+    "성격",
+    "자료 기준일",
+    "조사 기간",
+    "작성 방식",
+    "근거 문서"
+  ],
+  "sections": [
+    {
+      "key": "FILES",
+      "title": "파일 구성",
+      "kind": "table",
+      "columns": [
+        "파일",
+        "하위 키워드"
+      ]
+    },
+    {
+      "key": "GRADE",
+      "title": "출처 등급 (조사 순서)",
+      "kind": "table",
+      "columns": [
+        "등급",
+        "범위",
+        "사용 원칙"
+      ]
+    },
+    {
+      "key": "LABEL",
+      "title": "라벨",
+      "kind": "list",
+      "groups": [
+        "내용",
+        "지역",
+        "검증 수준"
+      ]
+    },
+    {
+      "key": "PERIOD",
+      "title": "기간 예외",
+      "kind": "list"
+    },
+    {
+      "key": "ASSET",
+      "title": "자산 판정",
+      "kind": "table",
+      "columns": [
+        "질문",
+        "기준"
+      ]
+    },
+    {
+      "key": "CORE",
+      "title": "전체 핵심 (확인된 것만)",
+      "kind": "ordered_list"
+    }
+  ]
+}
