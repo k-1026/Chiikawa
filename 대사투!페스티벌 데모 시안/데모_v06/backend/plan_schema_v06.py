@@ -21,8 +21,30 @@ def normalize_plan(fields):
     if isinstance(source.get('_searches'),list):result['_searches']=[v for v in source['_searches'] if isinstance(v,str)]
     return result
 
-def plan_model(fields):
+def clip(value,n=150):
+    v=' '.join(text(value).split())
+    return v if len(v)<=n else v[:n-1]+'…'
+
+def summary_model(fields,goods):
+    rows=lambda keys:[[TEMPLATE['labels'][k],clip(fields[k],110)] for k in keys]
+    progs=[[clip(r.get('name'),24),clip(r.get('desc'),60)] for r in (fields['programs'] or [])[:5]] or [['','']]
+    items=[[clip(r.get('item'),30),clip(r.get('amount'),20)] for r in (fields['budget_items'] or [])[:5]]
+    goods_rows=[['굿즈','시안','캐릭터']]+[[g['item_name'],g['did'][:8],g['who_txt']] for g in (goods or [])[:4]] if goods else [['굿즈','시안','캐릭터'],['선택한 시안 없음','','']]
+    return {'compact':True,'title':TEMPLATE['title']+' · 요약본','subtitle':'요약본 (A4 1~2쪽) · 상세 내용은 본문 참고',
+        'warn':['공식 제출 서식이 아닌 검토용 초안입니다. 미정·가정·추정 항목과 해당 공고의 제출 양식을 확인해 주세요.'],
+        'sections':[
+         {'h':'1. 개요','blocks':[{'t':'table','hdr':'row','rows':rows(['festival_name','period','place','host','visitors','budget_total'])}]},
+         {'h':'2. 컨셉 · 목표 · 차별화','blocks':[{'t':'table','hdr':'row','rows':[[TEMPLATE['labels'][k],clip(fields[k],170)] for k in ('concept','goal','differentiation')]}]},
+         {'h':'3. 주요 프로그램','blocks':[{'t':'table','hdr':'col','rows':[['프로그램','내용']]+progs}]},
+         {'h':'4. 사업비 · 굿즈 · 확인 사항','blocks':[
+            {'t':'table','hdr':'col','rows':[['비목','금액(원)']]+(items or [['미입력 · 직접 작성','']])},
+            {'t':'table','hdr':'col','rows':goods_rows},
+            {'t':'table','hdr':'row','rows':[['추가로 확인할 사항',clip('; '.join(fields['missing']),160)]]}]}],
+        'foot':'대사투! 페스티벌 · 요약본'}
+
+def plan_model(fields,goods=None,part='full'):
     fields=normalize_plan(fields);sections=[]
+    if part=='summary':return summary_model(fields,goods)
     for section in TEMPLATE['sections']:
         blocks=[]
         for key in section['fields']:
@@ -39,4 +61,6 @@ def plan_model(fields):
         if section['title'].startswith('8.'):
             blocks.append({'t':'table','hdr':'row','rows':[['서약서 · 개인정보 동의서','공고 서식으로 별도 작성'],['추가로 확인할 사항','\n'.join(fields['missing'])]]})
         sections.append({'h':section['title'],'blocks':blocks})
-    return {'title':TEMPLATE['title'],'subtitle':'검토용 초안 · 고정 양식','warn':['공식 제출 서식이 아닌 검토용 초안입니다. 미정·가정·추정 항목과 해당 공고의 제출 양식을 확인해 주세요.'],'sections':sections,'foot':'대사투! 페스티벌 · v06 · 고정 양식'}
+    import goods_doc_v06 as GD
+    sections.append({'h':'9. 굿즈 운영 및 성과품 납품','blocks':GD.goods_part_blocks(goods,fields['concept'])})
+    return {'title':TEMPLATE['title'],'subtitle':'검토용 초안 · 고정 양식 · 본문','warn':['공식 제출 서식이 아닌 검토용 초안입니다. 미정·가정·추정 항목과 해당 공고의 제출 양식을 확인해 주세요.'],'sections':sections,'foot':'대사투! 페스티벌 · v06 · 고정 양식'}

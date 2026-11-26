@@ -20,8 +20,8 @@ class FixedPlanTests(unittest.TestCase):
         def skeleton(model):
             return [(s['h'],[(b['t'],b.get('hdr'),b['rows'][0] if b['t']=='table' and b['hdr']=='col' else b.get('text')) for b in s['blocks']]) for s in model['sections']]
         a=plan_model({});b=plan_model({'festival_name':'야간 축제','programs':[{'name':'야간 산책'}],'budget_items':[{'item':'무대','amount':'100'}],'secret_section':'no'})
-        self.assertEqual(len(a['sections']),8);self.assertEqual(skeleton(a),skeleton(b))
-        self.assertEqual([s['h'] for s in b['sections']],[s['title'] for s in TEMPLATE['sections']])
+        self.assertEqual(len(a['sections']),9);self.assertEqual(skeleton(a),skeleton(b))
+        self.assertEqual([s['h'] for s in b['sections']],[s['title'] for s in TEMPLATE['sections']]+['9. 굿즈 운영 및 성과품 납품'])  # 9장은 선택한 시안으로 자동 생성
         self.assertIn('야간 축제',str(b));self.assertNotIn('secret_section',str(b))
     def test_existing_and_edited_plans_share_canonical_shape(self):
         with tempfile.TemporaryDirectory() as folder:

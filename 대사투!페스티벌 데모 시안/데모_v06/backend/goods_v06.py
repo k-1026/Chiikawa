@@ -70,9 +70,12 @@ def recommend(concept,workspace,exclude=()):
     return {'recommendations':recs,'by':'ai' if ai else 'rules','reset':reset,'remaining':len([k for k in ITEMS if k not in exclude and k not in [r['item'] for r in recs]])}
 
 def ensure_table(store):
-    if store.pg:return  # Supabase 는 supabase/003_goods.sql 로 미리 만든다
+    if store.pg:return  # Supabase 는 supabase/003·004_goods*.sql 로 미리 만든다
     with store.db() as db:
-        db.execute('CREATE TABLE IF NOT EXISTS goods_designs(id TEXT PRIMARY KEY,user_id INTEGER NOT NULL,item TEXT NOT NULL,concept TEXT NOT NULL,prompt TEXT NOT NULL,image TEXT NOT NULL,created_at INTEGER NOT NULL)')
+        db.execute("CREATE TABLE IF NOT EXISTS goods_designs(id TEXT PRIMARY KEY,user_id INTEGER NOT NULL,item TEXT NOT NULL,concept TEXT NOT NULL,prompt TEXT NOT NULL,image TEXT NOT NULL,created_at INTEGER NOT NULL,selected INTEGER NOT NULL DEFAULT 0,who TEXT NOT NULL DEFAULT 'both',pose TEXT NOT NULL DEFAULT '')")
+        cols={r[1] for r in db.execute('PRAGMA table_info(goods_designs)').fetchall()}
+        for c,d in (('selected','INTEGER NOT NULL DEFAULT 0'),('who',"TEXT NOT NULL DEFAULT 'both'"),('pose',"TEXT NOT NULL DEFAULT ''")):
+            if c not in cols:db.execute('ALTER TABLE goods_designs ADD COLUMN %s %s'%(c,d))
 
 def configured():
     return bool(os.getenv('CF_ACCOUNT_ID') and os.getenv('CF_API_TOKEN'))
@@ -146,15 +149,23 @@ def create(store,uid,item,concept,count,who='both'):
         img=C.compose(item,who,raw,i)
         did=secrets.token_hex(8)
         with store.db() as db:
-            db.execute('INSERT INTO goods_designs(id,user_id,item,concept,prompt,image,created_at) VALUES(?,?,?,?,?,?,?)',(did,uid,item,concept,(prompt or '(배경 없음: 캐릭터 원본 합성)')+' | 캐릭터: '+who,img,int(time.time())))
+            db.execute('INSERT INTO goods_designs(id,user_id,item,concept,prompt,image,created_at,who,pose) VALUES(?,?,?,?,?,?,?,?,?)',(did,uid,item,concept,(prompt or '(배경 없음: 캐릭터 원본 합성)'),img,int(time.time()),who,''))
         out.append({'id':did,'item':item,'concept':concept})
     return out
 
 def list_designs(store,uid):
     ensure_table(store)
     with store.db() as db:
-        rows=db.execute('SELECT id,item,concept,created_at FROM goods_designs WHERE user_id=? ORDER BY created_at DESC LIMIT 60',(uid,)).fetchall()
-    return [{'id':r['id'],'item':r['item'],'concept':r['concept'],'created_at':r['created_at'],'item_name':ITEMS.get(r['item'],('굿즈',))[0]} for r in rows]
+        rows=db.execute('SELECT id,item,concept,created_at,selected,who,pose FROM goods_designs WHERE user_id=? ORDER BY created_at DESC LIMIT 60',(uid,)).fetchall()
+    return [{'id':r['id'],'item':r['item'],'concept':r['concept'],'created_at':r['created_at'],'selected':bool(r['selected']),'who':r['who'],'pose':r['pose'],'item_name':ITEMS.get(r['item'],('굿즈',))[0]} for r in rows]
+
+def select_design(store,uid,did,selected):
+    ensure_table(store)
+    with store.db() as db:
+        r=db.execute('SELECT id FROM goods_designs WHERE id=? AND user_id=?',(str(did)[:40],uid)).fetchone()
+        if not r:raise GoodsError('시안을 찾을 수 없습니다.')
+        db.execute('UPDATE goods_designs SET selected=? WHERE id=? AND user_id=?',(1 if selected else 0,str(did)[:40],uid))
+    return {'id':str(did)[:40],'selected':bool(selected)}
 
 def image_bytes(store,uid,did):
     ensure_table(store)
@@ -163,104 +174,49 @@ def image_bytes(store,uid,did):
     if not r:raise GoodsError('시안을 찾을 수 없습니다.')
     return base64.b64decode(r['image'])
 
-def _plan_data(store,uid,did,quantity,workspace):
+WHO_TXT={'both':'대키미 + 외지몽','daekimi':'대키미','oejimong':'외지몽'}
+
+def selected_designs(store,uid,workspace=None):
+    """담당자가 선택한 시안(기획안의 굿즈 파트에 쓴다)."""
     ensure_table(store)
     with store.db() as db:
-        r=db.execute('SELECT item,concept,prompt,image,created_at FROM goods_designs WHERE id=? AND user_id=?',(str(did)[:40],uid)).fetchone()
+        rows=db.execute('SELECT id,item,concept,image,who,pose FROM goods_designs WHERE user_id=? AND selected=1 ORDER BY created_at DESC LIMIT 8',(uid,)).fetchall()
+    out=[]
+    for r in rows:
+        name,_,spec,_=ITEMS.get(r['item'],('굿즈','','',''))
+        out.append({'did':r['id'],'item':r['item'],'item_name':name,'concept':r['concept'],'image_b64':r['image'],'who':r['who'],'who_txt':WHO_TXT.get(r['who'],'대키미 + 외지몽'),'spec':spec,'pose':r['pose']})
+    return out
+
+def _plan_info(store,uid,did,quantity,workspace):
+    import goods_doc_v06 as D
+    ensure_table(store)
+    with store.db() as db:
+        r=db.execute('SELECT item,concept,image,selected,who,pose FROM goods_designs WHERE id=? AND user_id=?',(str(did)[:40],uid)).fetchone()
     if not r:raise GoodsError('시안을 찾을 수 없습니다.')
-    name,_,spec,caution=ITEMS[r['item']]
     try:qty=max(1,min(100000,int(quantity)))
     except (TypeError,ValueError):raise GoodsError('수량을 숫자로 입력해 주세요.')
-    fest=((workspace.get('plan') or {}).get('festival_name')) or '(축제명 미정)'
-    return r,name,spec,caution,qty,fest
+    plan=workspace.get('plan') or {};cond=workspace.get('conditions') or {}
+    name,_,spec,_=ITEMS[r['item']]
+    return {'item_key':r['item'],'item_name':name,'spec':spec,'concept':r['concept'],'did':str(did)[:40],'image_b64':r['image'],'who':r['who'],'pose':r['pose'],
+            'qty':qty,'festival_name':plan.get('festival_name') or '(축제명 미정)','host':plan.get('host') or cond.get('host') or '','budget_total':plan.get('budget_total') or cond.get('budget_total') or '',
+            'festival':D.festival_date(workspace),'selected':bool(r['selected'])}
 
-SCHEDULE=[('D-60','디자인 확정, 업체 견적 요청'),('D-45','업체 선정·계약, 시안 파일 전달'),('D-35','샘플(1차) 수령·검수'),('D-25','수정 반영·본 제작 시작'),('D-10','납품·수량 검수'),('D-3','현장 반입·판매·배포 위치 확정')]
-CHECKS=['마스코트·로고 사용 승인 여부','제작 업체 견적 3건 이상 확보','안전·인증(어린이 대상이면 KC 등) 확인','샘플 검수(색상·재단·내구성)','판매·배포 방식(무료 증정/판매) 및 재고 관리 계획']
-
-def plan_model(r,name,spec,caution,qty,fest,did):
-    today=time.strftime('%Y-%m-%d')
-    return {
-     'title':'%s · %s 제작 계획서'%(fest,name),'subtitle':'굿즈 제작 계획서 (초안)',
-     'warn':['이 문서는 공식 캐릭터 시안에 맞춘 초안입니다. [추정]·[확인 필요] 표시는 업체 견적과 담당자 확인 뒤 확정해 주세요.'],
-     'meta':'작성일 %s · 시안 번호 %s'%(today,did),
-     'sections':[
-      {'h':'1. 개요','blocks':[{'t':'table','hdr':'row','rows':[['축제',fest],['굿즈',name],['컨셉',r['concept']],['계획 수량','%s개 [가정: 담당자 입력값]'%format(qty,',')]]}]},
-      {'h':'2. 시안','blocks':[{'t':'img','src':'data:image/jpeg;base64,'+r['image'],'caption':'시안 번호 '+did},
-        {'t':'p','text':'공식 캐릭터 원본 이미지(대키미·외지몽)를 그대로 굿즈 모양에 올린 시안입니다. 캐릭터는 AI가 다시 그리지 않았고, 배경·제품 사진만 AI가 만들었습니다.'},
-        {'t':'note','text':'이 시안은 보기용 이미지(1024px)입니다. 인쇄용 고해상도·벡터(AI/PDF) 파일은 디자이너가 원본으로 다시 정리해야 합니다 [확인 필요].'}]},
-      {'h':'3. 사양','blocks':[{'t':'table','hdr':'col','rows':[['항목','내용'],['규격·재질 [추정]',spec],['제작 시 주의',caution]]}]},
-      {'h':'4. 수량·예산','blocks':[{'t':'table','hdr':'col','rows':[['항목','내용','비고'],['수량','%s개'%format(qty,','),'[가정] 담당자 입력'],['단가','견적 후 기입','[확인 필요] 업체 3곳 이상 견적 비교'],['제작비 합계','단가 × 수량','견적 후 계산'],['예비분','약 5~10% 추가 제작','[추정]']]}]},
-      {'h':'5. 제작 일정 (축제 개막일 기준 역산)','blocks':[{'t':'table','hdr':'col','rows':[['시점','할 일','구분']]+[[a,b,'[추정]'] for a,b in SCHEDULE]}]},
-      {'h':'6. 점검 목록','blocks':[{'t':'table','hdr':'col','rows':[['번호','확인 항목','확인 여부']]+[[str(i+1),c,'□ 미확인'] for i,c in enumerate(CHECKS)]}]},
-      {'h':'7. 근거 표시','blocks':[{'t':'p','text':'[확인] 시안·컨셉: 시스템에 저장된 값'},{'t':'p','text':'[가정] 수량: 담당자 입력'},{'t':'p','text':'[추정] 규격·일정: 일반적인 제작 관행이며 업체와 확정이 필요합니다.'}]},
-     ],
-     'foot':'대사투! 페스티벌 · 굿즈 제작 계획서 (초안)'}
+MIN_PAGES=5
+def _pdf_pages(data):
+    import re
+    return len(re.findall(rb'/Type\s*/Page[^s]',data))
 
 def export_plan(store,uid,did,quantity,workspace,fmt):
-    r,name,spec,caution,qty,fest=_plan_data(store,uid,did,quantity,workspace)
-    model=plan_model(r,name,spec,caution,qty,fest,str(did)[:40])
-    import plan_export_v06 as X
+    import goods_doc_v06 as D,plan_export_v06 as X
     if fmt not in ('pdf','docx','hwpx'):raise GoodsError('지원하지 않는 형식입니다.')
-    return getattr(X,'to_'+fmt)(model),'제작계획서_%s_%s.%s'%(name,str(did)[:6],fmt)
+    info=_plan_info(store,uid,did,quantity,workspace)
+    model=D.goods_plan_model(info)
+    data=getattr(X,'to_'+fmt)(model)
+    if fmt=='pdf' and _pdf_pages(data)<MIN_PAGES:
+        raise GoodsError('계획서가 A4 %d쪽 미만으로 만들어졌습니다. 운영자에게 알려 주세요.'%MIN_PAGES)
+    return data,'제작계획서_%s_%s.%s'%(info['item_name'],str(did)[:6],fmt)
 
 def production_plan(store,uid,did,quantity,workspace):
-    ensure_table(store)
-    with store.db() as db:
-        r=db.execute('SELECT item,concept,prompt,created_at FROM goods_designs WHERE id=? AND user_id=?',(str(did)[:40],uid)).fetchone()
-    if not r:raise GoodsError('시안을 찾을 수 없습니다.')
-    name,_,spec,caution=ITEMS[r['item']]
-    try:qty=max(1,min(100000,int(quantity)))
-    except (TypeError,ValueError):raise GoodsError('수량을 숫자로 입력해 주세요.')
-    plan=workspace.get('plan') or {}
-    fest=plan.get('festival_name') or '(축제명 미정)'
-    md=f"""# {fest} · {name} 제작 계획서 (초안)
-
-> 이 문서는 공식 캐릭터 시안에 맞춘 **초안**입니다. 표시한 [추정]·[확인 필요] 항목은 실제 업체 견적과 담당자 확인 뒤 확정해 주세요.
-
-## 1. 개요
-- 축제: {fest}
-- 굿즈: {name}
-- 컨셉: {r['concept']}
-- 시안 번호: {did}
-- 계획 수량: {qty:,}개 [가정: 담당자 입력값]
-
-## 2. 시안 설명
-- 공식 캐릭터 원본 이미지(대키미·외지몽)를 그대로 굿즈 모양에 올린 시안입니다. 캐릭터는 AI가 다시 그리지 않았고, 배경·제품 사진만 AI가 만들었습니다.
-- 이 시안은 보기용 이미지(해상도 1024px)입니다. 인쇄용 고해상도·벡터(AI/PDF) 파일은 디자이너가 원본으로 다시 정리해야 합니다 [확인 필요].
-- 배경·제품 사진 생성 지시문(영문): {r['prompt']}
-
-## 3. 사양
-- 규격·재질: {spec}
-- 주의: {caution}
-
-## 4. 수량·예산
-| 항목 | 내용 |
-|---|---|
-| 수량 | {qty:,}개 |
-| 단가 | [확인 필요] 업체 3곳 이상 견적 비교 |
-| 제작비 합계 | 단가 × 수량 (견적 후 기입) |
-| 예비분 | 약 5~10% 추가 제작 [추정] |
-
-## 5. 제작 일정 (축제 개막일 기준 역산) [추정]
-| 시점 | 할 일 |
-|---|---|
-| D-60 | 디자인 확정, 업체 견적 요청 |
-| D-45 | 업체 선정·계약, 시안 파일 전달 |
-| D-35 | 샘플(1차) 수령·검수 |
-| D-25 | 수정 반영·본 제작 시작 |
-| D-10 | 납품·수량 검수 |
-| D-3 | 현장 반입·판매·배포 위치 확정 |
-
-## 6. 점검 목록
-- [ ] 마스코트·로고 사용 승인 여부
-- [ ] 제작 업체 견적 3건 이상
-- [ ] 안전·인증(어린이 대상이면 KC 등) 확인
-- [ ] 샘플 검수(색상·재단·내구성)
-- [ ] 판매·배포 방식(무료 증정/판매) 및 재고 관리 계획
-
-## 7. 근거 표시
-- [확인] 시안·컨셉: 시스템에 저장된 값
-- [가정] 수량: 담당자 입력
-- [추정] 규격·일정: 일반적인 제작 관행. 업체와 확정 필요
-"""
-    return {'markdown':md,'filename':'제작계획서_%s_%s.md'%(name,did[:6])}
+    import goods_doc_v06 as D
+    info=_plan_info(store,uid,did,quantity,workspace)
+    return {'markdown':D.model_to_md(D.goods_plan_model(info)),'filename':'제작계획서_%s_%s.md'%(info['item_name'],str(did)[:6])}

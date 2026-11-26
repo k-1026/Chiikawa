@@ -38,7 +38,9 @@ tr{break-inside:avoid;page-break-inside:avoid}
 th,td{border:1px solid #8B7D9B;border-bottom:1px solid #8B7D9B;padding:7px 9px;vertical-align:top;text-align:left;box-decoration-break:clone;-webkit-box-decoration-break:clone}
 th{background:#EEE8F7;color:#413053;font-weight:700}tbody tr:nth-child(even) td{background:#F8F6FC}
 .blank{color:#8F4929;background:#FFF0E6;padding:0 3px;font-size:9pt}
-.fig{text-align:center;margin:8px 0;break-inside:avoid}.fig img{width:56%;max-width:100%;border:1px solid #8B7D9B}.fig small{display:block;color:#70677F;font-size:9pt}
+.compact{font-size:9.2pt;line-height:1.4}.compact h1{font-size:16pt;margin-bottom:6px}.compact h2{font-size:11.5pt;margin:9px 0 4px;padding:3px 7px}.compact table{margin:4px 0 7px;font-size:8.8pt}.compact th,.compact td{padding:3px 6px}.compact .warn{padding:5px 9px;font-size:8.5pt;margin:5px 0}.compact p{margin:3px 0}.compact .foot{margin-top:8px;padding-top:4px}
+.pb{break-after:page;page-break-after:always;height:0;margin:0}
+.fig{text-align:center;margin:8px 0;break-inside:avoid}.fig img{width:44%;max-width:100%;border:1px solid #8B7D9B}.fig small{display:block;color:#70677F;font-size:9pt}
 .foot{text-align:center;color:#81788D;font-size:9pt;margin-top:18px;border-top:1px solid #C9BED8;padding-top:8px;break-inside:avoid}
 """
 
@@ -60,7 +62,8 @@ def model_to_html(m: dict, full=True) -> str:
     if m.get("meta"):
         o.append(f'<p class="meta">{html.escape(m["meta"])}</p>')
     for s in m.get("sections", []):
-        o.append(f'<h2>{html.escape(s.get("h",""))}</h2>')
+        if s.get("h"):
+            o.append(f'<h2>{html.escape(s.get("h",""))}</h2>')
         for b in s.get("blocks", []):
             t = b.get("t")
             if t == "table":
@@ -78,6 +81,8 @@ def model_to_html(m: dict, full=True) -> str:
                 widths=([30,70] if hdr=="row" else [35,65]) if count==2 else [100/count]*count
                 cols="<colgroup>"+"".join('<col style="width:'+str(v)+'%">' for v in widths)+"</colgroup>"
                 o.append("<table>"+cols+header+"<tbody>"+"".join(bodyrows)+"</tbody></table>")
+            elif t == "pagebreak":
+                o.append('<div class="pb"></div>')
             elif t == "img":
                 o.append('<p class="fig"><img src="'+html.escape(b.get("src",""),quote=True)+'" alt="">'+('<small>'+html.escape(b.get("caption",""))+'</small>' if b.get("caption") else '')+'</p>')
             elif t == "h3":
@@ -91,7 +96,7 @@ def model_to_html(m: dict, full=True) -> str:
     body = "\n".join(o)
     if not full:
         return body
-    return f'<!doctype html><html lang="ko"><head><meta charset="utf-8"><title>{html.escape(m.get("title",""))}</title><style>{CSS}</style></head><body>{body}</body></html>'
+    return f'<!doctype html><html lang="ko"><head><meta charset="utf-8"><title>{html.escape(m.get("title",""))}</title><style>{CSS}</style></head><body'+(' class="compact"' if m.get('compact') else '')+f'>{body}</body></html>'
 
 
 def to_pdf(m: dict) -> bytes:
@@ -149,7 +154,8 @@ def to_docx(m: dict) -> bytes:
         p = d.add_paragraph(m["meta"]); p.alignment = WD_ALIGN_PARAGRAPH.RIGHT
         p.runs[0].font.size = Pt(9)
     for s in m.get("sections", []):
-        h = d.add_paragraph(); rh = h.add_run(s.get("h", "")); rh.bold = True; rh.font.size = Pt(13)
+        if s.get("h"):
+            h = d.add_paragraph(); rh = h.add_run(s.get("h", "")); rh.bold = True; rh.font.size = Pt(13)
         for b in s.get("blocks", []):
             tp = b.get("t")
             if tp == "table":
@@ -182,6 +188,8 @@ def to_docx(m: dict) -> bytes:
                         if (b.get("hdr", "row") == "col" and ri == 0) or (b.get("hdr", "row") == "row" and ci == 0):
                             run.bold = True
                 d.add_paragraph()
+            elif tp == "pagebreak":
+                d.add_page_break()
             elif tp == "img":
                 import base64
                 try:
@@ -221,8 +229,9 @@ def to_hwpx(m: dict) -> bytes:
     if m.get("meta"):
         d.add_paragraph(m["meta"])
     for s in m.get("sections", []):
-        d.add_paragraph("")
-        d.add_paragraph(s.get("h", ""))
+        if s.get("h"):
+            d.add_paragraph("")
+            d.add_paragraph(s.get("h", ""))
         for b in s.get("blocks", []):
             tp = b.get("t")
             if tp == "table":
@@ -234,6 +243,8 @@ def to_hwpx(m: dict) -> bytes:
                 for ri, r in enumerate(rows):
                     for ci in range(nc):
                         tb.set_cell_text(ri, ci, _c(r[ci] if ci < len(r) else ""))
+            elif tp == "pagebreak":
+                pass
             elif tp == "img":
                 if b.get("caption"):
                     d.add_paragraph(b["caption"])  # 한글 파일에는 그림 대신 설명만 넣는다(그림은 PDF·Word 에 포함)

@@ -332,6 +332,10 @@ class Handler(BaseHTTPRequestHandler):
             try:out=G.create(STORE,u['id'],b.get('item'),b.get('concept'),b.get('count',2),b.get('who','both'))
             except G.GoodsError as e:raise Error(str(e),503)
             STORE.event(u['id'],'goods_design',detail=str(b.get('item'))[:20]);return self.output({'designs':out})
+        if p=='/api/goods/select':
+            import goods_v06 as G
+            try:return self.output(G.select_design(STORE,u['id'],b.get('id'),bool(b.get('selected',True))))
+            except G.GoodsError as e:raise Error(str(e),404)
         if p=='/api/goods/recommend':
             import goods_v06 as G
             STORE.limit('goodsrec:'+str(u['id']),30,3600)
@@ -356,7 +360,8 @@ class Handler(BaseHTTPRequestHandler):
         if p=='/api/plan-preview':
             fields=b.get('fields')
             if not isinstance(fields,dict):raise Error('기획안 항목이 필요합니다.')
-            return self.output(plan_model(fields))
+            import goods_v06 as G
+            return self.output(plan_model(fields,goods=G.selected_designs(STORE,u['id']),part='summary' if b.get('part')=='summary' else 'full'))
         if p=='/api/export':
             STORE.limit('export:'+str(u['id']),12,3600)
             fields=b.get('fields') or STORE.workspace(u['id'])['plan']
@@ -366,10 +371,11 @@ class Handler(BaseHTTPRequestHandler):
             if fmt not in ['pdf','docx','hwpx']:raise Error('지원하지 않는 형식입니다.')
             try:
                 # Export does not require an AI request.
-                exporter=importlib.import_module('plan_export_v06');data=getattr(exporter,'to_'+fmt)(plan_model(fields))
+                import goods_v06 as G
+                exporter=importlib.import_module('plan_export_v06');data=getattr(exporter,'to_'+fmt)(plan_model(fields,goods=G.selected_designs(STORE,u['id']),part='summary' if b.get('part')=='summary' else 'full'))
             except Exception:raise Error('문서 변환에 실패했습니다. PDF는 브라우저 인쇄를 이용하거나 운영자에게 문의해 주세요.',503)
             STORE.require_access(STORE.user(u['id']));STORE.event(u['id'],'plan_export',detail=fmt)
-            self.send_response(200);self.send_header('Content-Type',{'pdf':'application/pdf','docx':'application/vnd.openxmlformats-officedocument.wordprocessingml.document','hwpx':'application/hwp+zip'}[fmt]);self.send_header('Content-Length',str(len(data)));self.send_header('Cache-Control','no-store');self.send_header('X-Content-Type-Options','nosniff');self.send_header('Content-Disposition',"attachment; filename*=UTF-8''"+quote('대사투_기획안_v06.'+fmt));self.end_headers();self.wfile.write(data);return
+            self.send_response(200);self.send_header('Content-Type',{'pdf':'application/pdf','docx':'application/vnd.openxmlformats-officedocument.wordprocessingml.document','hwpx':'application/hwp+zip'}[fmt]);self.send_header('Content-Length',str(len(data)));self.send_header('Cache-Control','no-store');self.send_header('X-Content-Type-Options','nosniff');self.send_header('Content-Disposition',"attachment; filename*=UTF-8''"+quote(('대사투_기획안_요약본_v06.' if b.get('part')=='summary' else '대사투_기획안_본문_v06.')+fmt));self.end_headers();self.wfile.write(data);return
         raise Error('요청한 기능을 찾을 수 없습니다.',404)
 
 def hmac_equal(a,b):

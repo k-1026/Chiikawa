@@ -16,7 +16,10 @@ KEYS = {
     "scale": "운영 규모(부스·인력)", "partners": "협력 기관·네트워크", "prep": "준비 단계 일정",
     "budget_items": "[{item, basis, amount}] 사업비 항목", "safety_staff": "안전 인력", "safety_peak": "순간 최대·동시 수용 인원",
     "safety_org": "안전관리 조직·인파·교통 대책", "heat": "폭염 대응", "cautions": "유의 사항",
-    "effects": "기대효과", "org_intro": "신청 단체 소개", "track_record": "동종 행사 실적", "commitment": "자기부담 확약",
+    "effects": "기대효과",
+    "scope": "사업 범위·구역(장소의 구역 범위)", "budget_vat": "예산의 부가세 포함 여부", "prep_period": "준비 기간", "report_due": "결과보고 제출 기한(행사 종료 후 며칠 이내)",
+    "promo_pre": "사전 홍보 전략", "promo_off": "오프라인 홍보(옥외·인쇄물)", "promo_on": "온라인 홍보(SNS·유튜브·언론)", "report_plan": "보고 일정(착수·중간·결과)",
+    "permits": "인허가·민원 대응", "opinion": "주민·상인 의견수렴 방법", "kpi": "[{metric, method, target}] 성과지표(예: 방문객 수, 매출 변동, 참여 인원)와 측정 방법", "org_intro": "신청 단체 소개", "track_record": "동종 행사 실적", "commitment": "자기부담 확약",
 }
 
 SYSTEM = f"""너는 대구 사투리 축제 '대사투! 페스티벌'의 기획안을 정리하는 에이전트야.

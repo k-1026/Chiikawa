@@ -3,6 +3,7 @@
 const GOODS={items:{},designs:[],enabled:false,loaded:false,busy:false,concept:'',item:'keyring',recs:null,recBusy:false,shown:[],who:'both'};
 async function goodsLoad(){try{const d=await api('/api/goods/list');GOODS.items=d.items;GOODS.designs=d.designs;GOODS.enabled=d.enabled;GOODS.loaded=true}catch(e){feedback(e.message,true)}if(S.page==='goodsdesign')render()}
 async function goodsMake(){if(GOODS.busy)return;const concept=(GOODS.concept||S.w.plan?.concept||S.w.conditions?.concept||'').trim();if(concept.length<2){feedback('컨셉을 입력해 주세요.',true);return}GOODS.busy=true;render();try{await api('/api/goods/design',{item:GOODS.item,concept,count:2,who:GOODS.who},120000);feedback('시안을 만들었습니다.');await goodsLoad()}catch(e){feedback(e.message,true)}finally{GOODS.busy=false;render()}}
+async function goodsSelect(d){try{const r=await api('/api/goods/select',{id:d.id,selected:!d.selected},20000);d.selected=r.selected;feedback(r.selected?'이 시안을 선택했습니다. 기획안의 굿즈 파트에 들어갑니다.':'선택을 해제했습니다.')}catch(e){feedback(e.message,true)}render()}
 async function goodsRecommend(more=false){const concept=(GOODS.concept||S.w.plan?.concept||S.w.conditions?.concept||'').trim();if(concept.length<2){feedback('컨셉을 먼저 입력해 주세요.',true);return}GOODS.recBusy=true;render();try{const d=await api('/api/goods/recommend',{concept,exclude:more?GOODS.shown:[]},40000);GOODS.shown=d.reset||!more?d.recommendations.map(r=>r.item):[...GOODS.shown,...d.recommendations.map(r=>r.item)];if(d.reset)feedback('모든 종류를 한 번씩 보여드렸어요. 처음부터 다시 추천합니다.');GOODS.recs=d;if(d.recommendations[0])GOODS.item=d.recommendations[0].item}catch(e){feedback(e.message,true)}finally{GOODS.recBusy=false;render()}}
 function goodsDownload(r){const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([r.markdown],{type:'text/markdown;charset=utf-8'}));a.download=r.filename;a.click();setTimeout(()=>URL.revokeObjectURL(a.href),2000)}
 async function goodsFile(d,qty,fmt){const r=await fetch('/api/goods/export?fmt='+fmt,{method:'POST',credentials:'same-origin',headers:{'Content-Type':'application/json','X-CSRF-Token':S.csrf},body:JSON.stringify({id:d.id,quantity:qty})});if(!r.ok){let m='문서를 만들지 못했습니다.';try{m=(await r.json()).error||m}catch{}throw new Error(m)}return r.blob()}
@@ -33,6 +34,21 @@ function goodsDesign(){
   form.addEventListener('submit',e=>{e.preventDefault();goodsMake()});
   const grid=el('div',{class:'goods-grid'});
   if(!GOODS.designs.length)grid.append(p(GOODS.loaded?'아직 만든 시안이 없습니다.':'불러오는 중…','hint'));
-  for(const d of GOODS.designs)grid.append(el('figure',{class:'card goods-card'},el('img',{src:'/api/goods/image?id='+d.id,alt:d.item_name+' 시안 · '+d.concept,loading:'lazy'}),el('figcaption',{},el('strong',{},d.item_name),el('small',{},d.concept)),button('제작 계획서 보기',()=>goodsPlan(d),'button small')));
+  for(const d of GOODS.designs)grid.append(el('figure',{class:'card goods-card'+(d.selected?' selected':'')},el('img',{src:'/api/goods/image?id='+d.id,alt:d.item_name+' 시안 · '+d.concept,loading:'lazy'}),el('figcaption',{},el('strong',{},d.item_name),el('small',{},d.concept)),el('div',{class:'row'},button(d.selected?'✓ 선택됨 (해제)':'이 시안 선택',()=>goodsSelect(d),d.selected?'button small':'button secondary small'),button('제작 계획서 보기',()=>goodsPlan(d),'button secondary small'))));
   return el('div',{},top,el('div',{class:'stack'},form,grid));
 }
+
+// 축제 기획안: 요약본(A4 1~2쪽)과 본문을 따로 PDF로 미리 보고, PDF·Word·한글로 내려받는다.
+async function planDoc(part){
+  const dialog=$('#guide');let pdfUrl='';const label=part==='summary'?'요약본 (A4 1~2쪽)':'본문';
+  const fields=S.planDraft||S.w.plan;if(!fields){feedback('먼저 기획안을 작성해 주세요.',true);return}
+  const get=async fmt=>{const r=await fetch('/api/export?fmt='+fmt,{method:'POST',credentials:'same-origin',headers:{'Content-Type':'application/json','X-CSRF-Token':S.csrf},body:JSON.stringify({fields,part})});if(!r.ok){let m='문서를 만들지 못했습니다.';try{m=(await r.json()).error||m}catch{}throw new Error(m)}return r.blob()};
+  const frame=el('iframe',{class:'goods-pdf',title:'기획안 PDF 미리보기'});const status=p('PDF 미리보기를 만들고 있어요…','hint');
+  const preview=async()=>{try{const blob=await get('pdf');if(pdfUrl)URL.revokeObjectURL(pdfUrl);pdfUrl=URL.createObjectURL(blob);frame.src=pdfUrl+'#view=FitH';status.textContent=S.planDraft?'저장하지 않은 편집 내용을 기준으로 보여줍니다. 아래 버튼으로 내려받을 수 있어요.':'아래 버튼으로 파일을 내려받을 수 있어요.';status.className='hint'}catch(e){status.textContent=e.message;status.className='form-error'}};
+  const dl=(fmt,text,ext)=>button(text,async()=>{try{goodsSave(await get(fmt),'대사투_기획안_'+(part==='summary'?'요약본':'본문')+'.'+ext);feedback(text+' 파일을 내려받았습니다.')}catch(e){feedback(e.message,true)}},'button');
+  dialog.classList.add('goods-dialog');dialog.addEventListener('close',()=>{if(pdfUrl)URL.revokeObjectURL(pdfUrl);dialog.classList.remove('goods-dialog')},{once:true});
+  dialog.replaceChildren(el('div',{class:'guide-head'},el('h2',{id:'guide-title'},'축제 기획안 · '+label),button('닫기',()=>dialog.close(),'button secondary')),
+    el('div',{class:'row'},button(part==='summary'?'본문 보기':'요약본 보기',()=>{dialog.close();planDoc(part==='summary'?'full':'summary')},'button secondary small')),
+    status,frame,
+    el('div',{class:'goods-downloads'},el('strong',{},'파일로 내려받기'),el('div',{class:'row'},dl('pdf','PDF','pdf'),dl('docx','Word','docx'),dl('hwpx','한글(.hwpx)','hwpx')),p('한글 파일은 .hwpx 형식입니다. 한글에서 열었을 때 서식이 어긋나면 PDF를 기준으로 확인해 주세요.','hint')));
+  dialog.showModal();preview()}
