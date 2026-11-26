@@ -21,6 +21,7 @@ import re
 import sys
 
 PKG = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+DATA_DIR = os.path.join(PKG, "잡다한거")  # CSV·README 위치
 ACCESSED = "2026-11-25"
 VERSION = "v1"
 
@@ -1448,7 +1449,7 @@ def load_text(path):
     return squash(html_to_text(raw) if path.endswith(".html") else raw)
 
 def write_csv(name, fields, rows):
-    path = os.path.join(PKG, name)
+    path = os.path.join(DATA_DIR, name)
     with open(path, "w", encoding="utf-8", newline="") as f:
         w = csv.DictWriter(f, fieldnames=fields, extrasaction="raise")
         w.writeheader()
@@ -1469,7 +1470,7 @@ def main():
     src_by_id = {s["id"]: s for s in SOURCES}
     # 이전 실행의 기사 대조 결과 보존
     prev_check = {}
-    prev_path = os.path.join(PKG, "knowledge_chunks.csv")
+    prev_path = os.path.join(DATA_DIR, "knowledge_chunks.csv")
     if os.path.exists(prev_path):
         with open(prev_path, encoding="utf-8") as f:
             for r in csv.DictReader(f):

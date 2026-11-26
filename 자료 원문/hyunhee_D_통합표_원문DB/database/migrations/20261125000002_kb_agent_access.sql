@@ -87,6 +87,10 @@ language sql stable security invoker set search_path = kb, pg_temp as $$
      and c.chunk_id <> p_chunk_id;
 $$;
 
+-- search_chunks 는 security invoker 라 호출자가 pg_trgm 함수(extensions 스키마)를 볼 수 있어야 한다.
+-- Supabase 기본 설정에도 있지만, 기본값에 기대지 않도록 명시한다(이미 있으면 아무 변화 없음).
+grant usage on schema extensions to authenticated;
+
 grant execute on function kb.chunk_usability(text) to authenticated;
 grant execute on function kb.search_chunks(text, boolean, integer) to authenticated;
 grant execute on function kb.chunk_context(text) to authenticated;

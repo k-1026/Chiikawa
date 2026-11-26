@@ -28,6 +28,7 @@ import urllib.request
 from datetime import datetime, timezone
 
 PKG = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+DATA_DIR = os.path.join(PKG, "잡다한거")  # CSV 위치
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import validate_package  # noqa: E402
 
@@ -69,7 +70,7 @@ ORPHAN_CHECKS = [
 
 
 def read_csv(name):
-    with open(os.path.join(PKG, name), encoding="utf-8", newline="") as f:
+    with open(os.path.join(DATA_DIR, name), encoding="utf-8", newline="") as f:
         return list(csv.DictReader(f))
 
 

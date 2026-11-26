@@ -117,6 +117,8 @@ Supabase에 적재할 수 있는 CSV·JSON·원문 파일·SQL·적재 코드로
 | `database/verify_after_load.sql` | — | — | 적재 후 확인 쿼리 |
 | `tools/build_dataset.py` | — | — | 이 패키지의 CSV·JSON 생성기(ID·판정은 이 파일에 고정) |
 
+**CSV 11개와 이 README는 `잡다한거/` 폴더에 있습니다**(위 표의 CSV 파일명은 모두 `잡다한거/` 아래). 스크립트는 이 위치를 읽고 씁니다. `.gitattributes`·`.gitignore`는 패키지 최상위에 있어야 합니다(원문 SHA-256 보호).
+
 CSV는 모두 UTF-8(BOM 없음), 영문 소문자 컬럼명, 한 행 한 레코드입니다. 목록형 청크는 `text_original` 안에 줄바꿈이 있습니다(`text_format = lines`, CSV 따옴표 처리됨).
 
 ---
@@ -238,7 +240,28 @@ python -I tools/build_dataset.py
 
 ---
 
-## 8. 남은 단계(별도 완료 보고 필요)
+## 8. 로컬 Postgres 적재 테스트 결과(2026-11-26)
+
+실제 Supabase가 아니라, 내 컴퓨터 임시 폴더의 PostgreSQL 16.2(PyPI `pgserver` 휠의 실행 파일)로 실행했습니다.
+Supabase에만 있는 것(역할 `anon`·`authenticated`·`service_role`, `storage.buckets`, `extensions` 스키마)은 흉내 낸 스텁을 썼고,
+`pg_trgm`이 없어 유사도 함수는 '포함 여부 1/0' 스텁, trigram 인덱스는 생략했습니다.
+
+| 항목 | 결과 |
+|---|---|
+| 마이그레이션 001·002 적용 | 성공. 두 번 실행해도 오류 없음 |
+| `load_kb.py --check-db` / `--apply` | 성공. 11개 표 1,111행 적재 |
+| `--apply` 재실행 | 성공. 건수 그대로(중복 없음) |
+| `verify_after_load.sql` | 참조 끊김 0, 근거 없는 주장 0, 승인 규칙 위반 0 |
+| CSV ↔ DB 값 왕복 비교 | 11개 표 전 칸 불일치 0(한글·줄바꿈·큰 금액 정밀도 포함) |
+| 권한 | authenticated 읽기만 가능(쓰기·삭제 거부), anon 거부, service_role 쓰기 가능 |
+| DB 제약 | 잘못된 허용값·없는 FK 입력은 DB가 거부 |
+| 에이전트 함수 | RULE-003 차단, RULE-009 충돌 경고, 조건 청크 함께 반환 확인 |
+
+테스트 중 고친 것: 로그인 사용자가 `search_chunks`를 부르면 `extensions` 스키마 권한이 없어 실패 → 002에 `grant usage on schema extensions to authenticated` 추가(Supabase 기본값에도 있으나 명시).
+
+**실제 Supabase에서 아직 확인하지 않은 것**: `pg_trgm` 실제 확장·trigram 인덱스·유사도 점수, `storage.buckets` 실제 표, Storage 업로드·대조(`--upload-originals --verify-storage`).
+
+## 9. 남은 단계(별도 완료 보고 필요)
 
 1. Supabase에 마이그레이션 적용 → `--apply` 적재 → Storage 업로드·대조 → `verify_after_load.sql` 확인
 2. 임베딩 생성과 벡터 검색 연결(이번엔 하지 않음)

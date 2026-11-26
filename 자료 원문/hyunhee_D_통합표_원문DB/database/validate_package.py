@@ -17,6 +17,7 @@ import re
 import sys
 
 PKG = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+DATA_DIR = os.path.join(PKG, "잡다한거")  # CSV 위치
 
 FILES = {
     "source_documents.csv": "source_id", "md_documents.csv": "md_id", "source_sections.csv": "section_id",
@@ -77,7 +78,7 @@ def run(quiet=False):
     problems, warnings = [], []
     data = {}
     for name, pk in FILES.items():
-        path = os.path.join(PKG, name)
+        path = os.path.join(DATA_DIR, name)
         raw = open(path, "rb").read()
         try:
             raw.decode("utf-8")
