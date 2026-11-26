@@ -30,3 +30,10 @@ textarea, input[type=search], input.txt { width: 100%; border: 1.5px solid var(-
 .outbox { background: var(--sky-l); border-radius: 12px; padding: 12px; margin-top: 10px; min-height: 48px; white-space: pre-wrap; }
 .menu-card { display: grid; gap: 4px; }
 .cartbar { position: sticky; bottom: calc(var(--tabbar-h) + 8px); z-index: 10; }
+
+/* 글자 끊김 방지: 한글은 단어(어절) 단위로만 줄바꿈, 너무 긴 문자열만 예외로 끊음 */
+html, body, button, input, select, textarea { word-break: keep-all; overflow-wrap: break-word; line-break: strict; }
+h1, h2, h3, .page-title, .badge, .qrow b { text-wrap: balance; }
+p, li, .card, .callout, .muted, .foot-note { text-wrap: pretty; }
+button, .badge, .btn, .btn-kakao, .btn-google, .tabbar button { white-space: nowrap; }
+.shortcut, .card.shortcut, .opts .btn { white-space: normal; }
