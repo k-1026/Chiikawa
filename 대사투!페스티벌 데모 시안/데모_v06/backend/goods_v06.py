@@ -14,7 +14,8 @@ ITEMS={
  'tshirt':('티셔츠','a t-shirt chest print design, bold simple artwork, flat vector, plain background','면 · 사이즈 3종 이상(추정)','사이즈 비율 사전 조사 필요'),
  'magnet':('마그넷','a fridge magnet design, die-cut silhouette, glossy flat colors, plain background','6~7cm · 아크릴 또는 PVC(추정)','자석 부착력·모서리 안전 확인'),
 }
-class GoodsError(Exception):pass
+class GoodsError(Exception):
+    detail=''   # 사용자에게는 보이지 않고, 관리자 기록(audit)에만 남기는 원인 정보
 
 # ───────── 굿즈 종류
 # 팀 고정 8종(D02 2-1)과 스탬프 교환용·시상용, 그리고 예전 시안 목록의 6종은 "원래 있는 종류"라서 추천하지 않는다.
@@ -166,8 +167,12 @@ def generate_image(prompt):
         with _post('https://api.cloudflare.com/client/v4/accounts/%s/ai/run/%s'%(a,MODEL),body,{'Authorization':'Bearer '+t,'Content-Type':'application/json'},90) as r:
             d=json.load(r)
     except urllib.error.HTTPError as e:
-        raise GoodsError('시안 이미지를 만들지 못했습니다(이용 한도 초과일 수 있어요). 잠시 후 다시 시도해 주세요.' if e.code in (429,403) else '시안 이미지를 만들지 못했습니다.')
-    except Exception:raise GoodsError('시안 이미지 서비스에 연결하지 못했습니다.')
+        try:body_txt=e.read().decode('utf-8','replace')[:160]
+        except Exception:body_txt=''
+        err=GoodsError('시안 이미지를 만들지 못했습니다(이용 한도 초과일 수 있어요). 잠시 후 다시 시도해 주세요.' if e.code in (429,403) else '시안 이미지를 만들지 못했습니다.')
+        err.detail='Cloudflare HTTP %s %s'%(e.code,body_txt);raise err
+    except Exception as e:
+        err=GoodsError('시안 이미지 서비스에 연결하지 못했습니다.');err.detail='연결 실패 %s'%type(e).__name__;raise err
     img=(d.get('result') or {}).get('image')
     if not img:raise GoodsError('시안 이미지를 받지 못했습니다.')
     return img  # base64 JPEG
