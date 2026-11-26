@@ -40,7 +40,7 @@ th{background:#EEE8F7;color:#413053;font-weight:700}tbody tr:nth-child(even) td{
 .blank{color:#8F4929;background:#FFF0E6;padding:0 3px;font-size:9pt}
 .compact{font-size:9.2pt;line-height:1.4}.compact h1{font-size:16pt;margin-bottom:6px}.compact h2{font-size:11.5pt;margin:9px 0 4px;padding:3px 7px}.compact table{margin:4px 0 7px;font-size:8.8pt}.compact th,.compact td{padding:3px 6px}.compact .warn{padding:5px 9px;font-size:8.5pt;margin:5px 0}.compact p{margin:3px 0}.compact .foot{margin-top:8px;padding-top:4px}
 .pb{break-after:page;page-break-after:always;height:0;margin:0}
-.fig{text-align:center;margin:8px 0;break-inside:avoid}.fig img{width:44%;max-width:100%;border:1px solid #8B7D9B}.fig small{display:block;color:#70677F;font-size:9pt}
+.fig.wide img{width:100%}.fig{text-align:center;margin:8px 0;break-inside:avoid}.fig img{width:44%;max-width:100%;border:1px solid #8B7D9B}.fig small{display:block;color:#70677F;font-size:9pt}
 .foot{text-align:center;color:#81788D;font-size:9pt;margin-top:18px;border-top:1px solid #C9BED8;padding-top:8px;break-inside:avoid}
 """
 
@@ -84,7 +84,7 @@ def model_to_html(m: dict, full=True) -> str:
             elif t == "pagebreak":
                 o.append('<div class="pb"></div>')
             elif t == "img":
-                o.append('<p class="fig"><img src="'+html.escape(b.get("src",""),quote=True)+'" alt="">'+('<small>'+html.escape(b.get("caption",""))+'</small>' if b.get("caption") else '')+'</p>')
+                o.append('<p class="fig'+(' wide' if b.get('wide') else '')+'"><img src="'+html.escape(b.get("src",""),quote=True)+'" alt="">'+('<small>'+html.escape(b.get("caption",""))+'</small>' if b.get("caption") else '')+'</p>')
             elif t == "h3":
                 o.append(f'<h3>{html.escape(b.get("text",""))}</h3>')
             elif t == "note":
@@ -194,7 +194,7 @@ def to_docx(m: dict) -> bytes:
                 import base64
                 try:
                     pic = d.add_paragraph(); pic.alignment = WD_ALIGN_PARAGRAPH.CENTER
-                    pic.add_run().add_picture(io.BytesIO(base64.b64decode(b.get("src", "").split(",", 1)[-1])), width=Cm(8.5))
+                    pic.add_run().add_picture(io.BytesIO(base64.b64decode(b.get("src", "").split(",", 1)[-1])), width=Cm(16.5 if b.get("wide") else 8.5))
                     if b.get("caption"):
                         cap = d.add_paragraph(b["caption"]); cap.alignment = WD_ALIGN_PARAGRAPH.CENTER; cap.runs[0].font.size = Pt(9)
                 except Exception:
@@ -216,6 +216,17 @@ def to_docx(m: dict) -> bytes:
         if para.runs and para.runs[0].bold:para.paragraph_format.keep_with_next=True
     bio = io.BytesIO(); d.save(bio)
     return bio.getvalue()
+
+
+def _hwpx_picture(doc, block):
+    """한글 문서에 그림을 넣는다. 본문 폭은 약 150mm. 비율은 원본 그대로."""
+    import base64
+    from PIL import Image
+    data = base64.b64decode(block.get("src", "").split(",", 1)[-1])
+    img = Image.open(io.BytesIO(data))
+    kind = "png" if img.format == "PNG" else "jpg"
+    width = 148.0 if block.get("wide") else 75.0
+    doc.add_picture(data, kind, width_mm=width, height_mm=round(width * img.height / img.width, 1), alignment="CENTER")
 
 
 def to_hwpx(m: dict) -> bytes:
@@ -246,8 +257,9 @@ def to_hwpx(m: dict) -> bytes:
             elif tp == "pagebreak":
                 pass
             elif tp == "img":
+                _hwpx_picture(d, b)
                 if b.get("caption"):
-                    d.add_paragraph(b["caption"])  # 한글 파일에는 그림 대신 설명만 넣는다(그림은 PDF·Word 에 포함)
+                    d.add_paragraph(b["caption"])
             else:
                 d.add_paragraph(_c(b.get("text", "")) if tp != "h3" else b.get("text", ""))
     if m.get("foot"):

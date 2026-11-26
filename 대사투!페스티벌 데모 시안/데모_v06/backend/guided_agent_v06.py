@@ -4,7 +4,7 @@ No approval is inferred from an AI recommendation. Missing figures remain missin
 import json
 import re
 from conditions_v06 import require_conditions
-from plan_schema_v06 import normalize_plan
+from plan_schema_v06 import normalize_plan,apply_fixed
 KEYS=('year','host','concept','programs','scale','theme','period','place','budget_total','target','goal','stay_link')
 RULES='''
 당신은 단순 질의응답 챗봇이 아니라 지침에 따라 축제 기획을 진행하는 대키미 에이전트이다.
@@ -59,7 +59,7 @@ def run_guided(orch,planner,w,question,file_context,attachments):
         transcript=[{'role':m['role'],'text':m['content']} for m in w['messages']]
         fields=planner.write_plan(transcript,json.dumps(selections,ensure_ascii=False))
         if not isinstance(fields,dict):raise ValueError('invalid plan')
-        w['plan']=normalize_plan(fields)
+        w['plan']=apply_fixed(normalize_plan(fields),generated=True)
         stages.append({'label':'고정 양식 기획안 초안 작성','status':'done'})
         next_action={'page':'review','label':'다음: 담당자 최종 검토','description':'초안 생성을 이어서 완료했습니다. 조건·주제·프로그램·예산의 결정 사항과 미정 항목을 담당자가 최종 검토에서 확인하세요.'}
     else:

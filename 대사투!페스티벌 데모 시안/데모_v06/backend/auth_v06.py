@@ -370,7 +370,7 @@ class Store:
         r=data.get('review')
         if r is not None:
             if not isinstance(r,dict):raise Error('검토 기록 형식이 올바르지 않습니다.')
-            data['review']={'signature':str(r.get('signature',''))[:64],'checks':{k:r.get('checks',{}).get(k) is True for k in ('missing','evidence','budget','responsibility')},'responsible':str(r.get('responsible',''))[:100],'note':str(r.get('note',''))[:2000],'at':r.get('at') if isinstance(r.get('at'),int) else None}
+            data['review']={'goods_ids':[str(v)[:40] for v in (r.get('goods_ids') or [])][:20],'signature':str(r.get('signature',''))[:64],'checks':{k:r.get('checks',{}).get(k) is True for k in ('missing','evidence','budget','responsibility')},'responsible':str(r.get('responsible',''))[:100],'note':str(r.get('note',''))[:2000],'at':r.get('at') if isinstance(r.get('at'),int) else None}
         raw=json.dumps(data,ensure_ascii=False)
         if len(raw)>1000000:raise Error('기획 데이터가 너무 큽니다.',413)
         with self.db() as db:db.execute('INSERT OR REPLACE INTO workspaces VALUES(?,?,?)',(uid,raw,now()))

@@ -1,5 +1,5 @@
 'use strict';
-// 06-2. 굿즈 시안: 컨셉으로 시안 이미지를 만들고, 마음에 드는 시안에 맞춘 제작 계획서(md)를 받는다.
+// 05. 굿즈 시안: 컨셉으로 시안 이미지를 만들고, 마음에 드는 시안에 맞춘 제작 계획서(md)를 받는다.
 const GOODS={items:{},groups:{},designs:[],enabled:false,loaded:false,busy:false,concept:'',item:'keyring',recs:null,recBusy:false,poseMode:'auto',shown:[],who:'both'};
 async function goodsLoad(){try{const d=await api('/api/goods/list');GOODS.items=d.items;GOODS.groups=d.groups||{};GOODS.designs=d.designs;GOODS.enabled=d.enabled;GOODS.loaded=true}catch(e){feedback(e.message,true)}if(S.page==='goodsdesign')render()}
 async function goodsMake(){if(GOODS.busy)return;const concept=(GOODS.concept||S.w.plan?.concept||S.w.conditions?.concept||'').trim();if(concept.length<2){feedback('컨셉을 입력해 주세요.',true);return}GOODS.busy=true;render();try{const made=await api('/api/goods/design',{item:GOODS.item,concept,count:2,who:GOODS.who,pose_mode:GOODS.poseMode},120000);feedback((made.designs||[]).some(x=>x.bg_failed)?'시안을 만들었습니다. 배경 이미지는 이용 한도 때문에 만들지 못해 기본 배경을 썼어요(내일 오전 9시 이후 다시 만들면 달라집니다).':'시안을 만들었습니다.');await goodsLoad()}catch(e){feedback(e.message,true)}finally{GOODS.busy=false;render()}}

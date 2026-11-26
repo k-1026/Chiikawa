@@ -233,10 +233,10 @@ def goods_plan_model(info):
             'foot': '대사투! 페스티벌 · 굿즈 제작 계획서 (초안)'}
 
 
-def goods_part_blocks(designs, concept):
+def goods_part_blocks(designs, concept, final=False):
     """기획안 본문의 '굿즈 운영 및 성과품 납품' 블록. designs: 선택한 시안 목록 [{item_name, did, who, image_b64, qty?}]"""
     if not designs:
-        return [_p('선택한 굿즈 시안이 아직 없습니다. 「06-2. 굿즈 시안」에서 시안을 만들고 "이 시안 선택"을 눌러 주세요.'),
+        return [_p('선택한 굿즈 시안이 아직 없습니다. 「05. 굿즈 시안」에서 시안을 만들고 "이 시안 선택"을 눌러 주세요.'),
                 _tbl([['구분', '내용'], ['컨셉', concept or NEED], ['굿즈', '선택한 시안 없음']], hdr='row')]
     rows = [['구분', '내용', '규격', '수량', '비고']]
     for d in designs:
@@ -257,7 +257,25 @@ def goods_part_blocks(designs, concept):
         _h3('마. 정량평가 항목'),
         _tbl([['지표', '측정 방법', '목표값'], ['굿즈 판매량', '품목·SKU별 판매 수량 기록', NEED], ['재고·소진율', '입고 수량 대비 잔여 수량', NEED], ['방문객 반응', '현장 후기·SNS 반응 수집', NEED]]),
         _note('품목별 상세는 굿즈 제작 계획서(시안별 별도 문서)에 있습니다.')]
-    return blocks
+    return _submission(blocks) if final else blocks
+
+
+def _submission(blocks):
+    """제출본: 작성 방법을 설명하는 안내 글을 빼고, 아직 정하지 않은 칸은 '발주 전 확정'으로 적는다(값을 지어내지 않는다)."""
+    start = next(i for i, b in enumerate(blocks) if b.get('text', '').startswith('나.'))
+    out = []
+    for b in blocks[start:]:
+        b = dict(b)
+        if b.get('t') == 'table':
+            b['rows'] = [[('발주 전 확정' if (not str(c).strip() or str(c).strip() in (NEED, VENDOR)) else '제작 계획서 별도' if str(c).startswith('제작 계획서 별도') else c) for c in r] for r in b['rows']]
+        out.append(b)
+    names = ['가.', '나.', '다.', '라.', '마.']
+    n = 0
+    for b in out:
+        if b.get('t') == 'h3':
+            b['text'] = names[n] + b['text'][2:]
+            n += 1
+    return out
 
 
 def model_to_md(m):
