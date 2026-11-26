@@ -16,58 +16,90 @@ ITEMS={
 }
 class GoodsError(Exception):pass
 
-# 컨셉·대상·예산 글에서 키워드를 찾아 굿즈 종류에 점수를 준다(AI가 안 될 때도 추천은 나온다).
-RULES=[
- (('어린이','아이','가족','초등','유아'),{'sticker':3,'keyring':2,'magnet':1},'가족·어린이 대상'),
- (('청년','mz','sns','인스타','사진','포토','인증'),{'keyring':3,'sticker':3,'magnet':1},'SNS 인증·수집 성향'),
- (('기념','소장','한정','공식','굿즈샵','판매'),{'tshirt':3,'poster':2,'keyring':1},'소장·판매 목적'),
- (('실용','일상','친환경','제로웨이스트','장바구니'),{'ecobag':3,'tshirt':1},'실용·친환경 방향'),
- (('우주','사투리','캐릭터','마스코트','대키미','외지몽'),{'keyring':2,'sticker':2,'poster':1},'캐릭터 중심 컨셉'),
- (('관광','외지인','여행','기념품','방문'),{'magnet':3,'poster':1,'keyring':1},'관광·기념품 수요'),
- (('행사장','현장','무료','증정','참여','스탬프'),{'sticker':2,'keyring':1},'현장 증정·스탬프 보상'),
-]
-NOTE={'keyring':'휴대·수집이 쉬운 대표 굿즈예요','sticker':'단가가 낮고 많이 나눠 주기 좋아요','poster':'소장·전시용으로 컨셉을 크게 보여줘요','ecobag':'일상에서 계속 쓰여 홍보 효과가 오래가요','tshirt':'스태프·참가자 단체복으로도 쓸 수 있어요','magnet':'부피가 작아 관광 기념품으로 좋아요'}
-def recommend_rules(text,budget_text='',exclude=()):
-    t=(text or '').lower();score={k:0 for k in ITEMS};why={k:[] for k in ITEMS}
-    for keys,pts,reason in RULES:
-        if any(k in t for k in keys):
-            for it,v in pts.items():score[it]+=v;why[it].append(reason)
-    if any(k in (budget_text or '') for k in ('적','소액','저예산','천만')):
-        for it in ('sticker','magnet'):score[it]+=1;why[it].append('예산이 작은 조건')
-    base={'keyring':2,'sticker':2,'poster':1,'magnet':1,'ecobag':1,'tshirt':0}  # 아무 단서가 없을 때의 기본 순서
-    ranked=sorted((k for k in ITEMS if k not in exclude),key=lambda k:(-(score[k]+base[k]),k))[:3]
-    return [{'item':k,'name':ITEMS[k][0],'reason':((why[k][0]+'에 맞고, ' if why[k] else '')+NOTE[k])} for k in ranked]
+# ───────── 굿즈 종류
+# 팀 고정 8종(D02 2-1)과 스탬프 교환용·시상용, 그리고 예전 시안 목록의 6종은 "원래 있는 종류"라서 추천하지 않는다.
+FIXED=('keyring','sticker','headband','magnet','ecobag','tshirt','eyemask','tumbler','poster')
+NEW_ITEMS={
+ 'acrylic_stand':('아크릴 스탠드','','캐릭터 컷 + 받침대 · 투명 아크릴 · 높이 약 10~12cm (제안값)','받침대 안정성(쓰러짐)·얇은 돌출부 파손 확인','캐릭터 컷을 그대로 세워 책상·전시에 두기 좋음'),
+ 'pinbutton':('핀버튼(뱃지)','','지름 약 44mm 원형 · 틴 소재 · 핀 뒷면 (제안값)','핀 안전(어린이 대상은 KC 확인)·가장자리 마감 확인','작고 저렴해 수집·교환·스탬프 보상에 좋음'),
+ 'postcard':('엽서·포토카드 세트','','엽서 A6 · 포토카드 55×85mm 안팎 · 스노우지 (제안값)','인쇄 색감 차이·용지 두께 확인','여러 포즈를 한 세트로 묶어 수집욕을 살림'),
+ 'pouch':('파우치','','캔버스 또는 폴리 소재 · 지퍼 · 가로 약 20cm (제안값)','지퍼·박음질 품질, 인쇄 공법(전사·실크) 확인','일상에서 매일 쓰여 캐릭터가 오래 노출됨'),
+ 'handkerchief':('손수건','','면 · 약 40×40cm · 전사 인쇄 (제안값)','세탁 시 색 빠짐·원단 확인','여름 행사에 실용적이고 가벼워 부담 없는 기념품'),
+ 'notebook':('노트','','A5 · 스프링 또는 무선 · 표지 코팅 (제안값)','제본 방식·표지 마감 확인','사투리 메모·여행 기록용으로 활용도가 높음'),
+ 'phonecase':('폰케이스','','기종별 제작 · TPU 또는 하드 케이스 (제안값)','기종 범위(SKU 급증)·인쇄 내구성 확인','매일 손에 쥐는 물건이라 팬덤 굿즈로 인기'),
+ 'griptok':('그립톡','','지름 약 40mm · 접착면 · 에폭시 마감 (제안값)','접착력·에폭시 마감 확인','작은 면적에 캐릭터 얼굴을 살리기 좋음'),
+ 'maskingtape':('마스킹테이프','','폭 15~30mm · 길이 약 5m · 롤 (제안값)','패턴 반복 길이·재단 확인','캐릭터를 반복 패턴으로 쓰기 좋아 꾸미기 수요에 맞음'),
+ 'blanket':('담요','','플리스 또는 극세사 · 약 100×140cm · 전사 (제안값)','대형 인쇄 가능 업체·번짐 확인','야간·가을 행사에서 실용적인 소장 굿즈'),
+}
+for _k,_v in NEW_ITEMS.items():ITEMS[_k]=_v[:4]
+NEW_KEYS=tuple(NEW_ITEMS)
+NEW_NOTE={k:v[4] for k,v in NEW_ITEMS.items()}
+GROUPS={'new':list(NEW_KEYS),'basic':[k for k in ('keyring','sticker','magnet','ecobag','tshirt','poster')]}
 
-def recommend_ai(concept,context,exclude=()):
-    """Gemini 가 컨셉을 읽고 굿즈 3종과 이유를 고른다. 실패하면 None."""
+RULES=[
+ (('어린이','아이','가족','초등','유아'),{'postcard':3,'maskingtape':2,'pinbutton':2,'notebook':1},'가족·어린이 대상'),
+ (('청년','mz','sns','인스타','사진','포토','인증'),{'postcard':3,'griptok':3,'phonecase':2,'pinbutton':2},'SNS 인증·수집 성향'),
+ (('기념','소장','한정','공식','굿즈샵','판매'),{'acrylic_stand':3,'postcard':2,'blanket':1,'pinbutton':1},'소장·판매 목적'),
+ (('실용','일상','친환경','제로웨이스트'),{'pouch':3,'notebook':2,'handkerchief':2,'maskingtape':1},'실용·친환경 방향'),
+ (('우주','사투리','캐릭터','마스코트','대키미','외지몽'),{'acrylic_stand':2,'pinbutton':2,'griptok':2,'postcard':1},'캐릭터 중심 컨셉'),
+ (('관광','외지인','여행','기념품','방문'),{'postcard':3,'handkerchief':2,'pinbutton':1,'acrylic_stand':1},'관광·기념품 수요'),
+ (('행사장','현장','무료','증정','참여','스탬프'),{'pinbutton':3,'maskingtape':2,'postcard':1},'현장 증정·스탬프 보상'),
+ (('밤','야간','겨울','가을','추위','캠핑'),{'blanket':4,'pouch':1},'야간·쌀쌀한 시기 행사'),
+]
+BASE_ORDER={'pinbutton':3,'postcard':3,'acrylic_stand':2,'griptok':2,'maskingtape':2,'pouch':1,'notebook':1,'handkerchief':1,'phonecase':1,'blanket':0}
+
+def _card(k,conn,check=None):
+    return {'item':k,'name':ITEMS[k][0],'conn':conn,'check':check or ITEMS[k][3],'yoy':'실험 (신규 품목)','reason':conn}
+
+def recommend_rules(text,budget_text='',exclude=(),n=5):
+    t=(text or '').lower();score={k:0 for k in NEW_KEYS};tag={k:'' for k in NEW_KEYS}
+    for keys,pts,label in RULES:
+        if any(w in t for w in keys):
+            for it,v in pts.items():
+                score[it]+=v
+                if not tag[it]:tag[it]=label
+    if any(w in (budget_text or '') for w in ('적','소액','저예산','천만')):
+        for it in ('pinbutton','maskingtape','postcard'):score[it]+=1
+    ranked=sorted((k for k in NEW_KEYS if k not in exclude),key=lambda k:(-(score[k]+BASE_ORDER[k]),k))[:n]
+    return [_card(k,('%s에 맞고, ' % tag[k] if tag[k] else '')+NEW_NOTE[k]) for k in ranked]
+
+def recommend_ai(concept,context,exclude=(),n=5):
+    """Gemini 가 컨셉·조건을 읽고 신규 후보 n종과 이유(연도 주제 연결 1줄·제작 확인 항목)를 고른다. 실패하면 None."""
     key,model=os.getenv('GEMINI_API_KEY'),os.getenv('GEMINI_MODEL')
     if not key or not model:return None
-    names=', '.join('%s(%s)'%(k,v[0]) for k,v in ITEMS.items() if k not in exclude)
-    prompt=('대구 지역 축제 굿즈 기획자입니다. 아래 컨셉과 조건에 가장 잘 맞는 굿즈 종류 3개를 골라 JSON 배열로만 답하세요. '
-            '형식: [{"item":"keyring","reason":"한 문장(한국어, 50자 이내)"}]. item 은 반드시 다음 중에서만: '+names+'\n컨셉: '+concept+'\n조건: '+context)
+    pool=[k for k in NEW_KEYS if k not in exclude]
+    if len(pool)<2:return None
+    names=', '.join('%s(%s)'%(k,ITEMS[k][0]) for k in pool)
+    prompt=('대구 지역 축제 굿즈 기획자입니다. 팀 규칙: 고정 품목과 다른 새 품목 후보를 골라, 후보마다 연도 주제(컨셉)와 연결되는 이유 한 줄과 제작 가능성 확인 항목 한 줄을 적습니다. '
+            '근거 없이 "인기 상품"이라고 쓰지 않습니다. 아래 컨셉과 조건에 맞는 후보 %d개를 JSON 배열로만 답하세요. '
+            '형식: [{"item":"pinbutton","conn":"컨셉과 연결되는 이유 한 문장(한국어, 60자 이내)","check":"제작 전 확인할 것 한 문장(한국어, 40자 이내)"}]. '
+            'item 은 반드시 다음 중에서만: %s\n컨셉: %s\n조건: %s')%(n,names,concept,context)
     try:
         url='https://generativelanguage.googleapis.com/v1beta/models/%s:generateContent'%model
         body={'contents':[{'parts':[{'text':prompt}]}],'generationConfig':{'responseMimeType':'application/json'}}
-        with _post(url,body,{'Content-Type':'application/json','x-goog-api-key':key},20) as r:
+        with _post(url,body,{'Content-Type':'application/json','x-goog-api-key':key},25) as r:
             arr=json.loads(json.load(r)['candidates'][0]['content']['parts'][0]['text'])
         out=[]
         for a in arr:
-            if a.get('item') in ITEMS and a['item'] not in exclude and a['item'] not in [o['item'] for o in out]:
-                out.append({'item':a['item'],'name':ITEMS[a['item']][0],'reason':str(a.get('reason',''))[:120]})
-        return out[:3] or None
+            k=a.get('item')
+            if k in NEW_KEYS and k not in exclude and k not in [o['item'] for o in out]:
+                out.append(_card(k,str(a.get('conn',''))[:120] or NEW_NOTE[k],str(a.get('check',''))[:80] or None))
+        return out[:n] if len(out)>=3 else None
     except Exception:return None
 
-def recommend(concept,workspace,exclude=()):
+def recommend(concept,workspace,exclude=(),history=()):
     concept=str(concept or '').strip()[:300]
     if len(concept)<2:raise GoodsError('컨셉을 먼저 입력해 주세요.')
     c=(workspace.get('conditions') or {});plan=workspace.get('plan') or {}
     ctx=' / '.join('%s: %s'%(k,v) for k,v in (('대상',c.get('target') or plan.get('target')),('예산',c.get('budget_total') or plan.get('budget_total')),('규모',c.get('scale') or plan.get('scale')),('테마',c.get('theme'))) if v)
-    exclude=[x for x in (exclude or []) if x in ITEMS]
-    reset=len(exclude)>=len(ITEMS)  # 6종을 모두 보여 줬으면 처음부터 다시
-    if reset:exclude=[]
-    ai=recommend_ai(concept,ctx,exclude)
-    recs=ai or recommend_rules(concept+' '+ctx,str(c.get('budget_total') or ''),exclude)
-    return {'recommendations':recs,'by':'ai' if ai else 'rules','reset':reset,'remaining':len([k for k in ITEMS if k not in exclude and k not in [r['item'] for r in recs]])}
+    shown=[x for x in (exclude or []) if x in NEW_KEYS]
+    base=[x for x in (history or []) if x in NEW_KEYS]   # 지난번에 이미 고른 품목은 새 후보에서 뺀다
+    reset=len(set(shown)|set(base))>=len(NEW_KEYS)-1
+    if reset:shown=[];base=[]
+    skip=tuple(set(shown)|set(base))
+    ai=recommend_ai(concept,ctx,skip)
+    recs=ai or recommend_rules(concept+' '+ctx,str(c.get('budget_total') or ''),skip)
+    return {'recommendations':recs,'by':'ai' if ai else 'rules','reset':reset,'excluded_history':base,'rule':'고정 8종·기존 품목 제외, 후보 5종 중 사람이 2종 선택 (D02 2-3)'}
 
 def ensure_table(store):
     if store.pg:return  # Supabase 는 supabase/003·004_goods*.sql 로 미리 만든다
@@ -111,8 +143,17 @@ BG={  # 캐릭터는 넣지 않는다(원본 이미지를 따로 합성). 배경
  'magnet':'A soft pastel festival backdrop with bokeh lights, empty center, {c}.',
  'ecobag':'A plain blank cream canvas tote bag, front view, flat lay product photo on a soft background, no print, no logo.',
  'tshirt':'A plain blank white t-shirt, front view, flat lay product photo on a soft background, no print, no logo.',
+ 'acrylic_stand':'A dreamy festival backdrop scene, soft focus, empty center, {c}.',
+ 'pinbutton':'A soft pastel festival backdrop with bokeh lights, empty center, {c}.',
+ 'postcard':'A soft pastel festival backdrop with bokeh lights, empty center, {c}.',
+ 'griptok':'A soft pastel backdrop with bokeh lights, empty center, {c}.',
+ 'pouch':'A plain blank cream canvas zipper pouch, front view, flat lay product photo on a soft background, no print, no logo.',
+ 'handkerchief':'A plain blank white square cotton handkerchief laid flat, top view product photo on a soft background, no print.',
+ 'notebook':'A plain blank pastel notebook with an elastic band, front cover, flat lay product photo on a soft background, no print, no logo.',
+ 'phonecase':'A plain blank white smartphone case, back view, flat lay product photo on a soft background, no print, no logo.',
+ 'blanket':'A plain blank cream fleece blanket laid flat, top view product photo on a soft background, no print.',
 }
-NEEDS_BG=('ecobag','tshirt')  # 제품 사진이 없으면 만들 수 없는 종류
+NEEDS_BG=('ecobag','tshirt','pouch','handkerchief','notebook','phonecase','blanket')  # 제품 사진이 없으면 만들 수 없는 종류
 def make_prompt(item,concept):
     if item not in BG:return ''
     return BG[item].format(c=english_concept(concept))+' No characters, no animals, no people, no text, no letters, no writing.'
@@ -158,6 +199,13 @@ def list_designs(store,uid):
     with store.db() as db:
         rows=db.execute('SELECT id,item,concept,created_at,selected,who,pose FROM goods_designs WHERE user_id=? ORDER BY created_at DESC LIMIT 60',(uid,)).fetchall()
     return [{'id':r['id'],'item':r['item'],'concept':r['concept'],'created_at':r['created_at'],'selected':bool(r['selected']),'who':r['who'],'pose':r['pose'],'item_name':ITEMS.get(r['item'],('굿즈',))[0]} for r in rows]
+
+def history_items(store,uid):
+    """지금까지 담당자가 선택한 품목(새 후보 추천에서 뺀다)."""
+    ensure_table(store)
+    with store.db() as db:
+        rows=db.execute('SELECT DISTINCT item FROM goods_designs WHERE user_id=? AND selected=1',(uid,)).fetchall()
+    return [r['item'] for r in rows]
 
 def select_design(store,uid,did,selected):
     ensure_table(store)

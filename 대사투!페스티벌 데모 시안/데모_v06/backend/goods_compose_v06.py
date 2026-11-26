@@ -118,3 +118,75 @@ RENDER={'keyring':keyring,'sticker':sticker,'poster':poster,'ecobag':lambda w,b,
 def compose(item,who,bg_raw,variant=0):
     img=RENDER[item](who,bg_raw,variant).convert('RGB')
     buf=io.BytesIO();img.save(buf,'JPEG',quality=90);return base64.b64encode(buf.getvalue()).decode()
+
+
+# ───────── 신규 후보 품목 (공식 캐릭터 원본을 그대로 올린다)
+PALETTE=[(255,226,236),(226,240,255),(255,244,214),(230,246,226),(238,230,255)]
+
+def _one(who,variant):
+    return who if who!='both' else ('daekimi' if variant%2==0 else 'oejimong')
+
+def _circle_mask(d):
+    m=Image.new('L',(d*4,d*4),0);ImageDraw.Draw(m).ellipse((0,0,d*4-1,d*4-1),fill=255);return m.resize((d,d),Image.LANCZOS)
+
+def _badge(who,d,variant,rim=14):
+    """원형 배지: 파스텔 바탕 + 캐릭터(원 안에서 잘림) + 흰 테두리·금속 가장자리."""
+    base=Image.new('RGBA',(d,d),PALETTE[variant%len(PALETTE)]+(255,))
+    one=who if who!='both' else ('daekimi' if variant%2==0 else 'oejimong')   # 배지는 작아서 캐릭터 한 명을 크게 쓴다
+    art=fit_h(load(one),int(d*0.86))
+    if art.width>d*0.9:art=art.resize((int(d*0.9),int(art.height*d*0.9/art.width)),Image.LANCZOS)
+    base.alpha_composite(art,(int((d-art.width)/2),int(d*0.16)))
+    out=Image.new('RGBA',(d+rim*2,d+rim*2),(0,0,0,0))
+    ring=Image.new('RGBA',out.size,(205,208,218,255));ring.putalpha(_circle_mask(d+rim*2));out.alpha_composite(ring)
+    inner=Image.new('RGBA',(d,d),(0,0,0,0));inner.paste(base,(0,0),_circle_mask(d));out.alpha_composite(inner,(rim,rim))
+    return out
+
+def pinbutton(who,bg_raw,variant=0):
+    c=backdrop(bg_raw,blur=10);b=_badge(who,520,variant);paste_center(c,b,SIZE//2,SIZE//2,shadowed=True,angle=-3)
+    return c
+
+def griptok(who,bg_raw,variant=0):
+    c=backdrop(bg_raw,blur=10)
+    phone=Image.new('RGBA',(430,820),(0,0,0,0));d=ImageDraw.Draw(phone);d.rounded_rectangle((0,0,429,819),radius=70,fill=(244,244,250,255),outline=(205,205,220,255),width=6)
+    paste_center(c,phone,SIZE//2,SIZE//2,shadowed=True,angle=-6)
+    b=_badge(who,300,variant,rim=10);paste_center(c,b,SIZE//2,SIZE//2+60,shadowed=True,angle=-6)
+    return c
+
+def acrylic_stand(who,bg_raw,variant=0):
+    c=backdrop(bg_raw,blur=10)
+    art=outline(pair(who,440 if who=='both' else 600),16,(255,255,255,235))
+    cx,cy=SIZE//2,SIZE//2-30
+    base=Image.new('RGBA',(art.width+80,70),(0,0,0,0));ImageDraw.Draw(base).rounded_rectangle((0,0,base.width-1,69),radius=30,fill=(238,242,250,215),outline=(200,208,225,255),width=4)
+    paste_center(c,base,cx,cy+art.height//2-6,shadowed=True)
+    paste_center(c,art,cx,cy,shadowed=True)
+    return c
+
+def postcard(who,bg_raw,variant=0):
+    c=backdrop(bg_raw,blur=10)
+    card=Image.new('RGBA',(760,540),(255,255,255,255));d=ImageDraw.Draw(card)
+    d.rectangle((26,26,733,513),fill=PALETTE[variant%len(PALETTE)]+(255,))
+    art=pair(who,430 if who=='both' else 470,gap=-8);card.alpha_composite(art,(int((760-art.width)/2),540-26-art.height))
+    d.rectangle((26,26,733,513),outline=(255,255,255,255),width=2)
+    paste_center(c,card,SIZE//2,SIZE//2,shadowed=True,angle=-5 if variant%2==0 else 5)
+    return c
+
+def maskingtape(who,bg_raw,variant=0):
+    c=Image.new('RGBA',(SIZE,SIZE),(247,244,252,255))
+    n=['daekimi','oejimong'] if who=='both' else [who]
+    strip=Image.new('RGBA',(900,250),PALETTE[variant%len(PALETTE)]+(255,));x=20;i=0
+    while x<880:
+        im=fit_h(load(n[i%len(n)]),190);
+        if i%2:im=ImageOps.mirror(im)
+        strip.alpha_composite(im,(x,30));x+=im.width+22;i+=1
+    mask=Image.new('L',strip.size,255);ImageDraw.Draw(mask).polygon([(0,0),(14,40),(0,80),(14,125),(0,170),(14,210),(0,249)],fill=0)
+    strip.putalpha(Image.eval(mask,lambda v:230 if v else 0))
+    paste_center(c,strip,SIZE//2,SIZE//2-120,shadowed=True,angle=-4)
+    roll=Image.new('RGBA',(360,360),(0,0,0,0));d=ImageDraw.Draw(roll)
+    d.ellipse((0,0,359,359),fill=PALETTE[(variant+1)%len(PALETTE)]+(255,));art=fit_h(load(n[0]),150);roll.alpha_composite(art,(int((360-art.width)/2),12))
+    d.ellipse((120,120,239,239),fill=(247,244,252,255),outline=(200,196,215,255),width=6);d.ellipse((0,0,359,359),outline=(200,196,215,255),width=6)
+    paste_center(c,roll,SIZE//2,SIZE//2+250,shadowed=True)
+    return c
+
+RENDER.update({'pinbutton':pinbutton,'griptok':griptok,'acrylic_stand':acrylic_stand,'postcard':postcard,'maskingtape':maskingtape,
+    'pouch':lambda w,b,v=0:worn(w,b,v,0.17,0.57),'handkerchief':lambda w,b,v=0:worn(w,b,v,0.20,0.48),'notebook':lambda w,b,v=0:worn(_one(w,v),b,v,0.34,0.52),
+    'phonecase':lambda w,b,v=0:worn(_one(w,v),b,v,0.26,0.50),'blanket':lambda w,b,v=0:worn(w,b,v,0.26,0.50)})

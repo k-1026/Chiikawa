@@ -135,7 +135,7 @@ class Handler(BaseHTTPRequestHandler):
             if p=='/api/workspace':return self.output(STORE.workspace(u['id']))
             if p=='/api/goods/list':
                 import goods_v06 as G
-                return self.output({'designs':G.list_designs(STORE,u['id']),'enabled':G.configured(),'items':{k:v[0] for k,v in G.ITEMS.items()}})
+                return self.output({'designs':G.list_designs(STORE,u['id']),'enabled':G.configured(),'items':{k:v[0] for k,v in G.ITEMS.items()},'groups':G.GROUPS})
             if p=='/api/goods/image':
                 import goods_v06 as G
                 try:raw=G.image_bytes(STORE,u['id'],parse_qs(urlsplit(self.path).query).get('id',[''])[0])
@@ -339,7 +339,7 @@ class Handler(BaseHTTPRequestHandler):
         if p=='/api/goods/recommend':
             import goods_v06 as G
             STORE.limit('goodsrec:'+str(u['id']),30,3600)
-            try:return self.output(G.recommend(b.get('concept'),STORE.workspace(u['id']),b.get('exclude')))
+            try:return self.output(G.recommend(b.get('concept'),STORE.workspace(u['id']),b.get('exclude'),G.history_items(STORE,u['id'])))
             except G.GoodsError as e:raise Error(str(e),400)
         if p=='/api/goods/export':
             import goods_v06 as G
