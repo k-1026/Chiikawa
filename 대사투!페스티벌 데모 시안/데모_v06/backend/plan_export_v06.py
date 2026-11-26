@@ -48,6 +48,7 @@ th{background:#EEE8F7;color:#413053;font-weight:700}tbody tr:nth-child(even) td{
 .form.d-2{font-size:9.9pt;line-height:1.45}.form.d-2 table{font-size:8.9pt}.form.d-2 th,.form.d-2 td{padding:3px 6px}.form.d-2 .fig.wide img{width:90%}
 .form.d1{font-size:11pt;line-height:1.75}.form.d2{font-size:11.4pt;line-height:1.9}
 .newpage{break-before:page;page-break-before:always;margin-top:0}
+.keep{break-inside:avoid;page-break-inside:avoid}
 .fig.wide img{width:100%}.fig{text-align:center;margin:8px 0;break-inside:avoid}.fig img{width:44%;max-width:100%;border:1px solid #8B7D9B}.fig small{display:block;color:#70677F;font-size:9pt}
 .foot{text-align:center;color:#81788D;font-size:9pt;margin-top:18px;border-top:1px solid #C9BED8;padding-top:8px;break-inside:avoid}
 """
@@ -89,7 +90,7 @@ def model_to_html(m: dict, full=True) -> str:
                 count=max((len(r) for r in b.get("rows",[])),default=1)
                 widths=([30,70] if hdr=="row" else [35,65]) if count==2 else [100/count]*count
                 cols="<colgroup>"+"".join('<col style="width:'+str(v)+'%">' for v in widths)+"</colgroup>"
-                o.append("<table>"+cols+header+"<tbody>"+"".join(bodyrows)+"</tbody></table>")
+                o.append(("<table class=\"keep\">" if b.get("keep") else "<table>")+cols+header+"<tbody>"+"".join(bodyrows)+"</tbody></table>")
             elif t == "pagebreak":
                 o.append('<div class="pb"></div>')
             elif t == "cover":

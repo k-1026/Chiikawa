@@ -47,6 +47,18 @@ def table_spec(key,period=''):
     if key!='schedule':return spec
     days=schedule_headers(period)
     return {'kind':'array','keys':[str(i) for i in range(len(days)+1)],'headers':[spec['headers'][0]]+days}
+def clean_public(value):
+    """저장된 공공데이터 시점 값의 모양을 확인한다(글자 길이·행 수 제한). 모양이 다르면 버린다."""
+    if not isinstance(value,dict):return None
+    s=lambda v,n=200:str(v if v is not None else '')[:n]
+    table=lambda rows,width:[[s(c,80) for c in r[:width]] for r in rows[:20] if isinstance(r,list) and len(r)>=width] if isinstance(rows,list) else []
+    shapes={'weather':(('station',),{'rows':6}),'stores':(('center','radius','total','counted','asof'),{'rows':2,'food':2}),'events':(('range','total'),{'rows':2})}
+    out={'fetched':s(value.get('fetched'),20),'period_key':s(value.get('period_key'),200)}
+    for name,(texts,tables) in shapes.items():
+        part=value.get(name)
+        if isinstance(part,dict):
+            out[name]={**{k:s(part.get(k)) for k in texts},**{k:table(part.get(k),w) for k,w in tables.items()}}
+    return out if any(k in out for k in shapes) else None
 def normalize_plan(fields):
     source=fields if isinstance(fields,dict) else {}
     result={}
@@ -60,6 +72,8 @@ def normalize_plan(fields):
     narr=source.get('narr') if isinstance(source.get('narr'),dict) else {}
     written={k:str(narr[k])[:NARR_MAX] for k,_ in NARRATIVE_CHAPTERS if isinstance(narr.get(k),str) and narr[k].strip()}
     if written:result['narr']=written
+    public=clean_public(source.get('public'))
+    if public:result['public']=public
     if isinstance(source.get('_searches'),list):result['_searches']=[v for v in source['_searches'] if isinstance(v,str)]
     return result
 
@@ -117,7 +131,7 @@ def apply_conditions(fields,conditions):
 def previous_for_ai(plan):
     """이전 초안을 AI에게 줄 때, 조건에서 오는 값과 긴 설명 글은 뺀다(예전 값이 새 조건을 이기지 않게)."""
     if not isinstance(plan,dict):return plan
-    return {k:v for k,v in plan.items() if k not in CONDITION_KEYS+('narr',)}
+    return {k:v for k,v in plan.items() if k not in CONDITION_KEYS+('narr','public')}
 
 def map_blocks():
     m=FIXED['map'];path=ROOT/m['image']

@@ -27,5 +27,8 @@ def review_report(w,goods_ids=None):
     if missing:blockers.append('미입력 %d개를 채워 주세요: %s'%(len(missing),', '.join(missing)))
     empty=[t for k,t in NARRATIVE_CHAPTERS if not str((fields.get('narr') or {}).get(k,'')).strip()] if plan else []
     if empty:blockers.append('설명 글이 없는 장 %d개: %s'%(len(empty),', '.join(empty)))
+    if plan and fields.get('public'):
+        import public_data_v06 as PD
+        if PD.is_stale(fields['public'],fields.get('period','')):blockers.append('개최 기간이 바뀌었습니다. 06 기획안 작성에서 공공데이터를 다시 불러와 주세요.')
     if plan and not complete:blockers.append('07 최종 검토에서 확인 항목 4개와 검토 담당자를 저장해 주세요.'+(' (검토 뒤에 내용이 바뀌었습니다.)' if r and not fresh else ''))
     return {'blank_keys':blank,'blockers':blockers,'submittable':not blockers,'has_plan':bool(plan),'missing':missing,'open_questions':[q for q in fields.get('missing',[]) if not any(q==TEMPLATE['labels'].get(k) and not has_gap(v) for k,v in fields.items() if k!='missing')],'evidence':evidence[:60], 'checks':checks,'responsible':r.get('responsible',''),'note':r.get('note',''),'at':r.get('at') if fresh else None,'stale':bool(r) and not fresh,'complete':complete,'signature':signature(w)}

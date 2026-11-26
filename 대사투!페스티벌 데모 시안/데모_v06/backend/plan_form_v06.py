@@ -55,6 +55,11 @@ def _h(t):
     return {'t': 'h3', 'text': t}
 
 
+def public_blocks(f, section):
+    import public_data_v06 as PD
+    return PD.blocks(f.get('public'), section)
+
+
 def chapter_tables(key, f, goods, final):
     """장마다 설명 글 뒤에 붙는 표·그림."""
     if key == 'overview':
@@ -64,18 +69,18 @@ def chapter_tables(key, f, goods, final):
     if key == 'purpose':
         return [_h('목표 · 컨셉'), _rows(f, ['goal', 'concept', 'differentiation', 'necessity'])]
     if key == 'outline':
-        return [_h('축제 개요'), _rows(f, ['festival_name', 'period', 'place', 'host', 'visitors', 'budget_total', 'scope', 'budget_vat', 'prep_period', 'report_due'])]
+        return [_h('축제 개요'), _rows(f, ['festival_name', 'period', 'place', 'host', 'visitors', 'budget_total', 'scope', 'budget_vat', 'prep_period', 'report_due'])] + public_blocks(f, 'events')
     if key == 'programs':
         return [_h('프로그램 구성'), _grid(f, 'programs'), _h('일정표'), _grid(f, 'schedule')]
     if key == 'space':
         return [_rows(f, ['layout'])] + map_blocks()
     if key == 'organization':
         return [_h('추진 여건'), _rows(f, ['partners', 'scale', 'stay_link', 'prep', 'report_plan'])] + \
-            _fixed('organization', '역할 분담 (운영 기준안)') + _fixed('stages', '추진 단계 (운영 기준안)')
+            public_blocks(f, 'stores') + _fixed('organization', '역할 분담 (운영 기준안)') + _fixed('stages', '추진 단계 (운영 기준안)')
     if key == 'promotion':
         return [_h('홍보 계획'), _rows(f, ['mascot', 'promo_pre', 'promo_off', 'promo_on'])] + _fixed('promo_stages', '시기별 홍보 (운영 기준안)')
     if key == 'safety':
-        return [_h('안전관리 개요'), _rows(f, ['safety_staff', 'safety_peak', 'safety_org', 'heat', 'cautions', 'permits', 'opinion'])] + \
+        return [_h('안전관리 개요'), _rows(f, ['safety_staff', 'safety_peak', 'safety_org', 'heat', 'cautions', 'permits', 'opinion'])] + public_blocks(f, 'weather') + \
             _fixed('risks', '위험별 대응 (운영 기준안)') + _fixed('safety_checklist', '허가·신고 점검 (관계 기관 최신 기준 확인)')
     if key == 'budget':
         return [_h('총 사업비'), _rows(f, ['budget_total', 'budget_vat']), _h('사업비 산출내역'), _grid(f, 'budget_items')] + \

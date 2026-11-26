@@ -59,7 +59,7 @@ def run_guided(orch,planner,w,question,file_context,attachments):
         transcript=[{'role':m['role'],'text':m['content']} for m in w['messages']]
         fields=planner.write_plan(transcript,json.dumps(selections,ensure_ascii=False))
         if not isinstance(fields,dict):raise ValueError('invalid plan')
-        w['plan']=apply_fixed(normalize_plan(apply_conditions(fields,conditions)),generated=True)
+        w['plan']=apply_fixed(normalize_plan(dict(apply_conditions(fields,conditions),public=(w['plan'] or {}).get('public'))),generated=True)
         stages.append({'label':'고정 양식 기획안 초안 작성','status':'done'})
         next_action={'page':'review','label':'다음: 담당자 최종 검토','description':'초안 생성을 이어서 완료했습니다. 조건·주제·프로그램·예산의 결정 사항과 미정 항목을 담당자가 최종 검토에서 확인하세요.'}
     else:
