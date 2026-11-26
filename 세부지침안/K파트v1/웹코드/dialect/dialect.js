@@ -64,7 +64,7 @@
     if (/숙박|호텔|대구로페이/.test(s)) return '대구 밖에 사는 분은 사전 신청 → 1박 → 인증 후 대구로페이를 받아요. 금액은 미확정이에요.';
     if (/위치|어디|지도|화장실|출입/.test(s)) return `${f.placeDetail}에서 열려요. 지도 탭에서 구역을 눌러 보세요. 출입로는 두류공원로·공원순환로 교차점이에요.`;
     if (hit) return `“${hit.w}” = ${hit.mean}${hit.ex ? `\n예) ${hit.ex}` : ''}`;
-    return '잘 모르겠어요 🙏 운영·안전 부스에서 안내받을 수 있어요. (챗봇 범위는 기획자 확인 필요)';
+    return '잘 모르겠어요 🙏 행사 정보만 답할 수 있어요. 운영·안전 부스에서 안내받을 수 있어요.';
   };
   Object.assign(window.VIEWS, { dialect: dialectView });
 

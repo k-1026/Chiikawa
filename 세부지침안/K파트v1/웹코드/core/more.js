@@ -32,7 +32,8 @@
       <button class="shortcut" data-go="time:sun"><span class="i">🕒</span><b>시간표</b><span>금·토·일</span></button>
     </div>
     <div class="card"><b>${esc(a.name)}</b> · ${a.provider === 'kakao' ? '카카오 계정' : a.provider === 'google' ? '구글 계정' : '로그인 안 함(둘러보기)'}
-      <p class="muted">언어: 한국어 (영어는 준비 중 — 기획자 확인 필요)</p>
+      <p class="muted">언어: 한국어 (영어는 준비 중)</p>
+      <p class="muted">문의 번호: 준비 중이에요. 정해지면 여기에 표시돼요.</p>
       <button class="btn ghost" data-act="logout2">로그아웃 (모의 데이터 초기화)</button></div>`; };
 
   Object.assign(window.VIEWS, { more: moreView });

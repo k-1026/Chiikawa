@@ -57,8 +57,8 @@
   ];
   // 사전 신청·사연 접수 (구글 폼 링크로 연결). url이 비어 있으면 "링크 준비 중"으로 보임 — 폼 확정 후 채움
   S.forms = {
-    golden: { label: '골든벨 사전 신청', url: '', period: '신청 기간 D-120 ~ D-75 (2027. 4/22 ~ 6/6)', notes: ['현장 신청도 받아요.', '정원(무대 앞 의자석)보다 많으면 선착순이에요.', '나이 제한 없음. 만 14세 미만은 보호자 연락처·촬영 동의 항목이 있어요.'] },
-    radio: { label: '라디오 사연 보내기', url: '', period: '접수 기간 미정', notes: ['실명·전화번호 같은 개인정보는 쓰지 마세요.', '특정 지역을 깎아내리는 사연은 읽지 않아요.', '사투리 썰·에피소드면 뭐든 좋아요.'] },
+    golden: { label: '골든벨 사전 신청', url: 'https://docs.google.com/forms/d/e/1FAIpQLScVxo9K2zC3wB_1Vtj9Emv6dv7uy64S909D2walouaaq0DO6w/viewform', period: '신청 기간 D-120 ~ D-75 (2027. 4/22 ~ 6/6)', notes: ['정원(무대 앞 의자석)보다 많으면 선착순이에요.', '나이 제한 없음. 만 14세 미만은 보호자 연락처·촬영 동의 항목이 있어요.'] },
+    radio: { label: '라디오 사연 보내기', url: 'https://docs.google.com/forms/d/e/1FAIpQLSdWywWwxwWe9X08ubrjjuhpLoP76vRpXXtY5RsJAPY6_7YwzQ/viewform', period: '접수 기간 미정', notes: ['실명·전화번호 같은 개인정보는 쓰지 마세요.', '특정 지역을 깎아내리는 사연은 읽지 않아요.', '사투리 썰·에피소드면 뭐든 좋아요.'] },
   };
   const gb = S.stageExtras.find((e) => e.title === '사투리 골든벨'); if (gb) gb.form = 'golden';
   S.stageExtras.splice(1, 0, { icon: '📻', title: '사투리 라디오', when: '날짜·시간 미정', status: 'tbd', form: 'radio',
