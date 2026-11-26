@@ -64,3 +64,36 @@ class PoseTests(unittest.TestCase):
             self.assertEqual(len(ks), len(set(ks)))
             self.assertFalse(set(ks) & set(seen))
             seen += ks
+
+
+class BackgroundCacheTests(unittest.TestCase):
+    def setUp(self):
+        import base64, io
+        from PIL import Image
+        buf = io.BytesIO(); Image.new('RGB', (64, 64), (240, 230, 220)).save(buf, 'JPEG')
+        self.jpeg = base64.b64encode(buf.getvalue()).decode()
+        self.tmp = tempfile.TemporaryDirectory(); self.st = Store(Path(self.tmp.name) / 't.sqlite')
+        self.calls = 0; self.orig = G.generate_image
+        def fake(prompt):
+            self.calls += 1
+            return self.jpeg
+        G.generate_image = fake
+
+    def tearDown(self):
+        G.generate_image = self.orig; self.tmp.cleanup()
+
+    def test_same_product_photo_is_reused_instead_of_regenerated(self):
+        G.create(self.st, 1, 'notebook', '첫 컨셉', 2, 'both', 2027, 'auto')
+        first = self.calls
+        self.assertEqual(first, 2)                       # 변형 2개만 새로 만든다
+        G.create(self.st, 1, 'notebook', '다른 컨셉', 2, 'both', 2027, 'auto')
+        G.create(self.st, 2, 'notebook', '또 다른 컨셉', 2, 'both', 2028, 'auto')
+        self.assertEqual(self.calls, first)             # 제품 사진은 컨셉·사용자와 상관없이 재사용 → 한도를 쓰지 않는다
+
+    def test_optional_background_failure_still_makes_design_but_product_photo_failure_does_not(self):
+        def boom(prompt): raise G.GoodsError('한도')
+        G.generate_image = boom
+        out = G.create(self.st, 1, 'pinbutton', '새 컨셉', 1, 'both', 2027, 'auto')
+        self.assertTrue(out[0]['bg_failed'])             # 배경만 못 만들면 기본 배경으로 시안은 만든다
+        with self.assertRaises(G.GoodsError):
+            G.create(self.st, 1, 'pouch', '새 컨셉', 1, 'both', 2027, 'auto')   # 제품 사진이 없으면 만들 수 없다

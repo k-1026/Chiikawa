@@ -1,5 +1,5 @@
 """굿즈 시안 이미지(Cloudflare Workers AI · FLUX)와 시안에 맞춘 제작 계획서(md)."""
-import base64,json,os,secrets,ssl,sys,time,urllib.error,urllib.request
+import base64,hashlib,io,json,os,secrets,ssl,sys,time,urllib.error,urllib.request
 sys.path.insert(0,os.path.join(os.path.dirname(os.path.abspath(__file__)),'vendor'))
 
 MODEL='@cf/black-forest-labs/flux-1-schnell'
@@ -232,6 +232,38 @@ def choose_poses(who,item,year,variant,used,taken=()):
         out[ch]=pick['id']
     return out
 
+# ───────── 배경·제품 사진 재사용 (Cloudflare 무료 한도 절약)
+BG_CACHE_MAX=150   # 저장 공간을 아끼려고 최근 150장만 보관한다
+
+def ensure_bg_table(store):
+    if store.pg:return   # Supabase 는 supabase/005_goods_bg_cache.sql 로 미리 만든다
+    with store.db() as db:
+        db.execute('CREATE TABLE IF NOT EXISTS goods_bg_cache(key TEXT PRIMARY KEY,image TEXT NOT NULL,created_at INTEGER NOT NULL)')
+
+def _shrink(jpeg_b64):
+    """저장 크기를 줄이려고 1024px·JPEG 82로 다시 저장한다."""
+    try:
+        from PIL import Image
+        im=Image.open(io.BytesIO(base64.b64decode(jpeg_b64))).convert('RGB')
+        if max(im.size)>1024:im.thumbnail((1024,1024))
+        buf=io.BytesIO();im.save(buf,'JPEG',quality=82);return base64.b64encode(buf.getvalue()).decode()
+    except Exception:return jpeg_b64
+
+def get_background(store,prompt,variant):
+    """같은 지시문+변형 번호의 배경이 이미 있으면 그대로 쓰고, 없을 때만 Cloudflare 로 만든다. 반환: (이미지 bytes, 새로 만들었는가)"""
+    ensure_bg_table(store)
+    key=hashlib.sha1(prompt.encode('utf-8')).hexdigest()[:24]+':'+str(variant%3)
+    with store.db() as db:
+        r=db.execute('SELECT image FROM goods_bg_cache WHERE key=?',(key,)).fetchone()
+    if r:return base64.b64decode(r['image']),False
+    img=_shrink(generate_image(prompt))
+    try:
+        with store.db() as db:
+            db.execute('INSERT INTO goods_bg_cache(key,image,created_at) VALUES(?,?,?)',(key,img,int(time.time())))
+            db.execute('DELETE FROM goods_bg_cache WHERE key NOT IN (SELECT key FROM goods_bg_cache ORDER BY created_at DESC LIMIT %d)'%BG_CACHE_MAX)
+    except Exception:pass   # 같은 키가 동시에 들어가도 문제없다
+    return base64.b64decode(img),True
+
 def create(store,uid,item,concept,count,who='both',year=None,pose_mode='auto'):
     import goods_compose_v06 as C
     if item not in ITEMS:raise GoodsError('지원하지 않는 굿즈 종류입니다.')
@@ -243,18 +275,19 @@ def create(store,uid,item,concept,count,who='both',year=None,pose_mode='auto'):
     prompt=make_prompt(item,concept);out=[]
     used=used_pose_ids(store,uid) if pose_mode=='auto' else set();taken=set()
     for i in range(count):
-        raw=None
+        raw=None;bg_failed=False
         if prompt:
-            try:raw=base64.b64decode(generate_image(prompt))
+            try:raw,_new=get_background(store,prompt,i)
             except GoodsError:
                 if item in NEEDS_BG:raise
+                bg_failed=True   # 배경만 못 만든 경우: 기본 배경으로 시안은 만든다
         poses=choose_poses(who,item,year or time.localtime().tm_year,i,used,taken) if pose_mode=='auto' else {}
         taken.update(poses.values())
         img=C.compose(item,who,raw,i,poses)
         did=secrets.token_hex(8)
         with store.db() as db:
             db.execute('INSERT INTO goods_designs(id,user_id,item,concept,prompt,image,created_at,who,pose) VALUES(?,?,?,?,?,?,?,?,?)',(did,uid,item,concept,(prompt or '(배경 없음: 캐릭터 원본 합성)'),img,int(time.time()),who,'|'.join(poses.values())))
-        out.append({'id':did,'item':item,'concept':concept})
+        out.append({'id':did,'item':item,'concept':concept,'bg_failed':bg_failed})
     return out
 
 def list_designs(store,uid):
