@@ -163,19 +163,25 @@ def generate_image(prompt):
     a,t=os.getenv('CF_ACCOUNT_ID'),os.getenv('CF_API_TOKEN')
     if not a or not t:raise GoodsError('굿즈 시안 이미지 서비스가 아직 연결되지 않았습니다.')
     body={'prompt':prompt,'steps':6}
-    try:
-        with _post('https://api.cloudflare.com/client/v4/accounts/%s/ai/run/%s'%(a,MODEL),body,{'Authorization':'Bearer '+t,'Content-Type':'application/json'},90) as r:
-            d=json.load(r)
-    except urllib.error.HTTPError as e:
-        try:body_txt=e.read().decode('utf-8','replace')[:160]
-        except Exception:body_txt=''
-        err=GoodsError('시안 이미지를 만들지 못했습니다(이용 한도 초과일 수 있어요). 잠시 후 다시 시도해 주세요.' if e.code in (429,403) else '시안 이미지를 만들지 못했습니다.')
-        err.detail='Cloudflare HTTP %s %s'%(e.code,body_txt);raise err
-    except Exception as e:
-        err=GoodsError('시안 이미지 서비스에 연결하지 못했습니다.');err.detail='연결 실패 %s'%type(e).__name__;raise err
-    img=(d.get('result') or {}).get('image')
-    if not img:raise GoodsError('시안 이미지를 받지 못했습니다.')
-    return img  # base64 JPEG
+    url='https://api.cloudflare.com/client/v4/accounts/%s/ai/run/%s'%(a,MODEL)
+    last=None
+    for attempt in range(3):   # 일시적인 오류(서버 오류·혼잡·연결 끊김)는 짧게 쉬었다가 다시 시도한다
+        try:
+            with _post(url,body,{'Authorization':'Bearer '+t,'Content-Type':'application/json'},90) as r:
+                d=json.load(r)
+            img=(d.get('result') or {}).get('image')
+            if img:return img   # base64 JPEG
+            err=GoodsError('시안 이미지를 받지 못했습니다.');err.detail='응답에 이미지 없음 %s'%json.dumps(d.get('errors'))[:120];last=err
+        except urllib.error.HTTPError as e:
+            try:body_txt=e.read().decode('utf-8','replace')[:160]
+            except Exception:body_txt=''
+            last=GoodsError('시안 이미지를 만들지 못했습니다(이용 한도 초과일 수 있어요). 잠시 후 다시 시도해 주세요.' if e.code in (429,403) else '시안 이미지를 만들지 못했습니다. 잠시 후 다시 시도해 주세요.')
+            last.detail='Cloudflare HTTP %s %s'%(e.code,body_txt)
+            if e.code in (400,401,403,404):break   # 다시 해도 소용없는 오류
+        except Exception as e:
+            last=GoodsError('시안 이미지 서비스에 연결하지 못했습니다. 잠시 후 다시 시도해 주세요.');last.detail='연결 실패 %s'%type(e).__name__
+        if attempt<2:time.sleep(1.5*(attempt+1))
+    raise last
 
 # ───────── 포즈 라이브러리 (공식 표정·자세 시트에서 오린 포즈)
 POSE_FILE=os.path.join(os.path.dirname(os.path.abspath(__file__)),'..','assets_v06','poses','poses.json')
