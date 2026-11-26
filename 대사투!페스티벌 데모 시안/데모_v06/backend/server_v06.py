@@ -331,7 +331,7 @@ class Handler(BaseHTTPRequestHandler):
             STORE.limit('goods:'+str(u['id']),12,3600)
             try:out=G.create(STORE,u['id'],b.get('item'),b.get('concept'),b.get('count',2),b.get('who','both'),G.design_year(STORE.workspace(u['id'])),'default' if b.get('pose_mode')=='default' else 'auto')
             except G.GoodsError as e:
-                STORE.event(u['id'],'goods_design_fail',detail=(str(e)+' | '+getattr(e,'detail',''))[:300]);raise Error(str(e),503)
+                STORE.event(u['id'],'goods_design_fail',detail=re.sub(r'(cfut_|cfat_|cf_)[A-Za-z0-9_\-]+|[A-Za-z0-9_\-]{32,}','[가림]',str(e)+' | '+getattr(e,'detail',''))[:300]);raise Error(str(e),503)
             STORE.event(u['id'],'goods_design',detail=str(b.get('item'))[:20]);return self.output({'designs':out})
         if p=='/api/goods/select':
             import goods_v06 as G

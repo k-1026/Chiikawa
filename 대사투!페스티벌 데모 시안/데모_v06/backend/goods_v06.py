@@ -159,6 +159,14 @@ def make_prompt(item,concept):
     if item not in BG:return ''
     return BG[item].format(c=english_concept(concept))+' No characters, no animals, no people, no text, no letters, no writing.'
 
+def _safe_cf_detail(e):
+    """Cloudflare 오류 응답에서 오류 번호만 뽑는다. 응답 본문에는 요청 주소(계정 ID 칸에 잘못 들어간 토큰 등)가 그대로 담길 수 있어 기록하지 않는다."""
+    try:
+        d=json.loads(e.read().decode('utf-8','replace'))
+        codes=[str(x.get('code')) for x in (d.get('errors') or []) if isinstance(x,dict)]
+        return 'codes=%s'%','.join(codes[:4])
+    except Exception:return ''
+
 def generate_image(prompt):
     a,t=os.getenv('CF_ACCOUNT_ID'),os.getenv('CF_API_TOKEN')
     if not a or not t:raise GoodsError('굿즈 시안 이미지 서비스가 아직 연결되지 않았습니다.')
@@ -173,8 +181,7 @@ def generate_image(prompt):
             if img:return img   # base64 JPEG
             err=GoodsError('시안 이미지를 받지 못했습니다.');err.detail='응답에 이미지 없음 %s'%json.dumps(d.get('errors'))[:120];last=err
         except urllib.error.HTTPError as e:
-            try:body_txt=e.read().decode('utf-8','replace')[:160]
-            except Exception:body_txt=''
+            body_txt=_safe_cf_detail(e)
             last=GoodsError('시안 이미지를 만들지 못했습니다(이용 한도 초과일 수 있어요). 잠시 후 다시 시도해 주세요.' if e.code in (429,403) else '시안 이미지를 만들지 못했습니다. 잠시 후 다시 시도해 주세요.')
             last.detail='Cloudflare HTTP %s %s'%(e.code,body_txt)
             if e.code in (400,401,403,404):break   # 다시 해도 소용없는 오류
