@@ -47,7 +47,7 @@ SOURCES = [
          notes="본문의 서재극 인용 표기는 원문 그대로 '서재극(19620)'(오기로 보임, MD는 1962로 적음)"),
     dict(id="SRC-K01-KU-125264", title="대구 방언 화자의 /ㅡ/와 /ㅓ/ 지각에 관한 연구", publisher="고려대학교 학술 저장소(원 게재: 한국어학회 『한국어학』 41권)",
          doc_type="official_web", grade="A", url="https://scholar.korea.ac.kr/handle/2021.sw.korea/125264?mode=full", attach="",
-         pub="2008", pub_basis="저장소 '발행일 2008'(월·일 없음)", period="", ver="한국어학 41, pp.381-402", retrieval="curl",
+         pub="", pub_basis="저장소 '발행일 2008'(월·일 없음 — date 컬럼에 연도만 넣을 수 없어 비움)", period="", ver="한국어학 41, pp.381-402", retrieval="curl",
          ostatus="stored", snapshot="", approval="approved", rights="대학 학술 저장소 서지·초록 페이지",
          notes="저자 장혜진·차재은·신지영. 초록은 영문만 확인"),
     dict(id="SRC-K01-KS-2026", title="경북 방언 어두 폐쇄음 음향 특징의 세대별 변화 양상 연구", publisher="KoreaScience(원 게재: 한국음성학회 『말소리와 음성과학』 18권 2호)",
@@ -162,12 +162,12 @@ SOURCES += [
     dict(id="SRC-K01-RISS-0104", title="한국어 방언의 문말 억양 연구 : 대구 방언과 광주 방언의 문말 억양 비교", publisher="RISS(한국교육학술정보원) — 경북대학교 석사학위논문",
          doc_type="official_web", grade="A",
          url="https://www.riss.kr/search/detail/DetailView.do?p_mat_type=be54d9b8bc7cdb09&control_no=09820c915d07b178", attach="",
-         pub="2000", pub_basis="RISS '발행사항 大邱 : 慶北大學校, 2000'", period="", ver="석사학위논문", retrieval="aside + curl",
+         pub="", pub_basis="RISS '발행사항 大邱 : 慶北大學校, 2000'", period="", ver="석사학위논문", retrieval="aside + curl",
          ostatus="stored", snapshot="", approval="approved", rights="학술 서지 페이지", notes="저자 이승현. 전공란은 RISS 표시 '현대문학전공' 그대로"),
     dict(id="SRC-K01-RISS-0105", title="대구 방언 20대 화자의 단모음 실현 양상에 나타난 표준어 지향성의 성별적 차이", publisher="RISS(한국교육학술정보원) — 한국어학회 『한국어학』 36",
          doc_type="official_web", grade="A",
          url="https://www.riss.kr/search/detail/DetailView.do?p_mat_type=1a0202e37d52c72d&control_no=24674fb5773c4f1ae9810257f7042666",
-         attach="", pub="2007", pub_basis="RISS 'Vol.36 [2007]'(KCI 2007.08, Aside)", period="", ver="한국어학 36, pp.289-314",
+         attach="", pub="", pub_basis="RISS 'Vol.36 [2007]'(KCI 2007.08, Aside)", period="", ver="한국어학 36, pp.289-314",
          retrieval="aside + curl", ostatus="stored", snapshot="", approval="approved", rights="학술 서지 페이지", notes="저자 장혜진·신지영"),
     dict(id="SRC-K01-KS-2026-PDF", title="경북 방언 어두 폐쇄음 음향 특징의 세대별 변화 양상 연구(본문 PDF)", publisher="한국음성학회 『말소리와 음성과학』 18(2)",
          doc_type="official_attachment", grade="A", url="https://doi.org/10.13064/KSSS.2026.18.2.013", attach="", pub="2026-06-30",
@@ -229,7 +229,7 @@ cl("CLM-K01-0106-01", T1, "01-06", "fact", "서민정, 『말소리와 음성과
    [("SRC-K01-KS-2026", "CHK-K01-KS-001", ORI, "match", "")])
 cl("CLM-K01-0106-02", T1, "01-06", "fact", "1950~2000년대생 비교, 젊을수록 평음 VOT가 길어져 평음·격음 VOT 근접", "①", "KoreaScience",
    [("SRC-K01-KS-2026", "CHK-K01-KS-002", ORI, "match", "")])
-cl("CLM-K01-0106-03", T1, "01-06", "condition", "초록에 대구 명시 없음, 대구 포함 가능성만 있음", "", "작성자 판단",
+cl("CLM-K01-0106-03", T1, "01-06", "fact", "초록에 대구 명시 없음, 대구 포함 가능성만 있음", "", "작성자 판단",
    [("SRC-K01-KS-2026", "CHK-K01-KS-002", ORI, "match", "초록에 '대구' 없음은 사실"),
     ("SRC-K01-KS-2026-PDF", "CHK-K01-KSPDF-001", ALT, "scope_mismatch", "본문은 '대구시 및 경상북도에서 태어나 자란' 화자 — 대구 포함(가능성이 아니라 포함). Aside 보고, 미보관")])
 cl("CLM-K01-0107-01", T1, "01-07", "fact", "경북 방언 3권역: 북부 -니껴, 대구·경주권 -능교, -여권은 선산에서 김천·의성 일부", "③", "경북매일 칼럼 2024-07-15",
@@ -504,7 +504,7 @@ def main():
             seen.add(k)
             uniq.append(r)
     for i, r in enumerate(uniq, 1):
-        r["link_id"] = f"CLK-{i:04d}"
+        r["link_id"] = f"CLK-K01-{i:04d}"
 
     # --- 근거 연결 행
     chunk_by_id = {c["chunk_id"]: c for c in chunk_rows}
