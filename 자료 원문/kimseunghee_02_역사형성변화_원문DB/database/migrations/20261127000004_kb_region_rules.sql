@@ -51,17 +51,22 @@ $$;
 create or replace function kb.chunk_usability(p_chunk_id text)
 returns table (chunk_id text, usable_as_fact boolean, usable_as_reference boolean, blocking_rules text[], warnings text[])
 language sql stable security definer set search_path = kb, pg_temp as $$
-  with c as (select * from kb.knowledge_chunks k where k.chunk_id = p_chunk_id),
-  hit as (
-    select r.rule_id, r.enforcement, coalesce(r.warning_text, r.rule_text) as msg
-    from kb.operating_rules r, c where kb.rule_matches(r, c)
-  )
+  -- c 는 표 kb.knowledge_chunks 의 행(표 타입)이어야 kb.rule_matches(kb.operating_rules, kb.knowledge_chunks)에 넘길 수 있다.
+  -- (CTE 행은 익명 record 타입이라 함수 생성 시 타입 오류가 난다)
   select c.chunk_id,
-         c.approval_status = 'approved' and not exists (select 1 from hit where enforcement in ('block','block_as_fact')),
-         c.approval_status in ('approved','reference_only','internal') and not exists (select 1 from hit where enforcement = 'block'),
-         coalesce((select array_agg(rule_id order by rule_id) from hit where enforcement in ('block','block_as_fact')), '{}'),
-         coalesce((select array_agg(rule_id || ': ' || msg order by rule_id) from hit where enforcement = 'warn'), '{}')
-  from c;
+         c.approval_status = 'approved'
+           and not exists (select 1 from kb.operating_rules r
+                           where r.enforcement in ('block','block_as_fact') and kb.rule_matches(r, c)),
+         c.approval_status in ('approved','reference_only','internal')
+           and not exists (select 1 from kb.operating_rules r
+                           where r.enforcement = 'block' and kb.rule_matches(r, c)),
+         coalesce((select array_agg(r.rule_id order by r.rule_id) from kb.operating_rules r
+                   where r.enforcement in ('block','block_as_fact') and kb.rule_matches(r, c)), '{}'),
+         coalesce((select array_agg(r.rule_id || ': ' || coalesce(r.warning_text, r.rule_text) order by r.rule_id)
+                   from kb.operating_rules r
+                   where r.enforcement = 'warn' and kb.rule_matches(r, c)), '{}')
+  from kb.knowledge_chunks c
+  where c.chunk_id = p_chunk_id;
 $$;
 
 -- 검색: 승인 상태 필터 + 'block' 규칙에 걸린 청크 제외 + 경고 규칙은 결과에 함께 표시. 같은 청크는 한 번만.
