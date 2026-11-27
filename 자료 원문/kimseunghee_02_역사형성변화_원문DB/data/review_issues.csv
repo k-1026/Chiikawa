@@ -1,0 +1,8 @@
+issue_id,issue_type,claim_ids,source_ids,description,next_action
+ISS-K02-001,resolved,CLM-K02-0203-02,SRC-K02-ORD-JEJU-2007,제주어 조례 2007/2008 → 공식 연혁상 2007-09-27 제정(조례 제280호),MD 02-03·0절 '불일치'를 '2007(기사의 2008은 오기)'로 갱신
+ISS-K02-002,resolved,CLM-K02-0202-01,SRC-K02-LAW-KUKEO,국어기본법 원문 대조 완료: 제4조① '지역어 보전 등 … 노력하여야 한다',MD 02-02 '요약 기반·대조 필요' 해제
+ISS-K02-003,scope_mismatch,CLM-K02-S0-01,SRC-K02-RISS-A06,"대구만 다룬 형성사는 없지만 영남·경상 방언 형성 연구는 있음(김덕호·이철희 2026, 백두현 1997)","MD 0절·3절 보완, 백두현 1997 본문 확보"
+ISS-K02-004,not_retrieved,CLM-K02-S0-01,SRC-K02-RISS-A05,백두현(1997) 본문 미확보 — 서지만 있어 청크 없음,경북대 『인문과학』 원문 열람
+ISS-K02-005,official_source_archive,CLM-K02-0203-01,SRC-K02-UNESCO-2010,UNESCO 원 페이지는 접속 불가 — Internet Archive 보관본 사용,현행 WAL 접속 가능 시 재확인
+ISS-K02-006,broken_links,,SRC-K02-MD,MD의 [00_개요.md] 링크가 파일명 정리 이후 없는 경로,kimseunghee_00_개요.md 로 수정
+ISS-K02-007,ocr_unreviewed,,,OCR 대상 없음(해당 없음),

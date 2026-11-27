@@ -1,0 +1,5 @@
+test_id,rule_id,blocked_chunk_id,passing_chunk_id,note
+RT-K02-01,RULE-K02-001,CHK-K02-JEJU-001,CHK-K02-NK98-002,"제주 조례는 경고, 대구 ㅅ/ㅆ 청크는 통과"
+RT-K02-02,RULE-K02-002,CHK-K02-KB1223-001,CHK-K02-LAW-001,"칼럼은 확정 사실 불가, 법 조문은 통과"
+RT-K02-03,RULE-K02-003,CHK-K02-SEOUL-003,CHK-K02-JEJU-002,"2008 기사 표현 차단, 2007 제정본 통과"
+RT-K02-04,RULE-K02-004,CHK-K02-UN-001,CHK-K02-NK98-001,"제주어 등급 경고, 낙동강 경계는 통과"

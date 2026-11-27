@@ -1,0 +1,6 @@
+record_id,domain,subject,metric,value_numeric,value_text,unit,currency,vat_basis,quantity_basis,base_year,period_start,period_end,value_status,source_id,chunk_id,claim_id,note,approval_status
+FIG-K02-001,statistic,제주어(UNESCO 2010),사용자 수 상한,,"no more than 10,000 people",persons,,not_stated,,2010,,,reported,SRC-K02-UNESCO-2010,CHK-K02-UN-001,CLM-K02-0203-01,'이하' 상한값이라 숫자 칸 비움,approved
+FIG-K02-002,statistic,UNESCO 위기 언어 아틀라스(2010-12),등재 언어 수,2473,2473 languages,languages,,not_stated,,2010,,,reported,SRC-K02-UNESCO-2010,CHK-K02-UN-002,,As of December 2010,approved
+FIG-K02-003,statistic,UNESCO 아틀라스(2022 보관본),대한민국 등재 언어 수,1,Republic of Korea(1),languages,,not_stated,,,,,reported,SRC-K02-UNESCO-ATLAS,CHK-K02-UN-003,CLM-K02-J-01,,approved
+FIG-K02-004,program,제주어 보전 및 육성 조례,최초 제정일,,2007-09-27,date,,not_stated,,,2007-09-27,,reported,SRC-K02-ORD-JEJU-2007,CHK-K02-JEJU-002,CLM-K02-0203-02,,approved
+FIG-K02-005,statistic,경북 고대 소국(칼럼),소국 수,,대략 12개,polities,,not_stated,,,,,reported,SRC-K02-NEWS-YN-20220217,CHK-K02-YN-002,,어림값,reference_only

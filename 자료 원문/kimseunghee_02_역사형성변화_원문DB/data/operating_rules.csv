@@ -1,0 +1,5 @@
+rule_id,rule_scope,rule_text,enforcement,condition_text,rule_source_id,rule_chunk_id,target_chunk_ids,match_column,match_operator,match_value,warning_text,approval_status
+RULE-K02-001,region,대구가 아닌 지역(제주·창원·전국·영남 등) 원문은 대구의 사실로 일반화하지 않는다.,warn,region <> '대구',SRC-K02-MD,CHK-K02-MD-001,,region,<>,대구,대구가 아닌 지역 자료 — 대구 사실로 쓰지 말 것,approved
+RULE-K02-002,source_grade,언론·칼럼(B)은 확정 사실로 답하지 않는다.,block_as_fact,source_grade = 'B',,,,source_grade,=,B,언론 보도 기준 — 확정 사실로 답하지 말 것,approved
+RULE-K02-003,wrong_fact,공식 연혁과 다른 '2008년 제주어 조례' 표현은 쓰지 않는다(제정 2007-09-27).,block,대상 청크 지정,SRC-K02-ORD-JEJU-2007,CHK-K02-JEJU-002,CHK-K02-SEOUL-003,,,,,approved
+RULE-K02-004,scope,유네스코 위기 등급은 제주어에 대한 것이다. 경상·대구 방언에 옮겨 쓰지 않는다.,warn,대상 청크 지정,SRC-K02-MD,CHK-K02-MD-001,CHK-K02-UN-001;CHK-K02-UN-002;CHK-K02-SEOUL-002,,,,제주어 등급 — 경상·대구 방언 등급 아님,approved

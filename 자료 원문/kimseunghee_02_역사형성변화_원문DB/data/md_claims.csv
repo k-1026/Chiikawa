@@ -1,0 +1,9 @@
+claim_id,md_id,md_section,row_key,claim_type,is_external,claim_text,md_stated_grade,md_stated_source,overall_verdict,overall_verdict_ko,evidence_count,stale
+CLM-K02-0201-01,MD-K02,1. 표준어 정책과 방언,02-01,fact,true,"경북·경남 방언 계통, 낙동강 경계(01-01과 같은 자료)",①,새국어생활 1998-4,match,일치,2,false
+CLM-K02-0202-01,MD-K02,1. 표준어 정책과 방언,02-02,rule,true,국어기본법이 지방자치단체가 사투리·방언 보전을 위해 노력하도록 명시(창원시 기사 인용),①(요약 기반),메트로신문 2024-03-11,match,일치,2,false
+CLM-K02-0203-01,MD-K02,1. 표준어 정책과 방언,02-03,fact,true,유네스코가 제주어를 2010년 12월 '아주 심각하게 위기에 처한 언어' 4단계로 등록,②,서울신문 2016-08-22,match,일치,4,false
+CLM-K02-0203-02,MD-K02,1. 표준어 정책과 방언,02-03,fact,true,제주어 조례 제정 연도는 출처별로 2007/2008로 불일치(기사는 '2008년'),②,서울신문 2016-08-22,match,일치,2,false
+CLM-K02-0204-01,MD-K02,1. 표준어 정책과 방언,02-04,fact,true,"1933년 국어맞춤법통일안 이후 표준어 중심 교육과 방언 억제, 드라마에서 방언을 계급적 상징으로 다룸",③,경북매일 칼럼 2024-12-23,match,일치,2,false
+CLM-K02-S0-01,MD-K02,0. 핵심 요약,형성사,fact,true,대구 방언의 형성사를 직접 다룬 자료는 확보하지 못함,,작성자 검색,scope_mismatch,적용 범위 다름,3,false
+CLM-K02-J-01,MD-K02,2. 판정,유네스코,rule,true,경상 방언의 유네스코 등급은 확인되지 않음 → '경상 방언이 소멸위기'라고 쓰지 않음,,작성자 판정,match,일치,2,false
+CLM-K02-J-02,MD-K02,2. 판정,자산,proposal,false,역사·형성 자료는 모두 정보(자산 판정 대상 아님),,작성자 판정,interpretation,해석·제안,1,false

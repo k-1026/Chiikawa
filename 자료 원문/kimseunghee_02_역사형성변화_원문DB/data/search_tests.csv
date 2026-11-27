@@ -1,0 +1,18 @@
+test_id,query,query_type,include_reference,expected_chunk_id,expect,note
+ST-K02-01,지역어 보전,keyword,false,CHK-K02-LAW-001,hit,국어기본법 제4조
+ST-K02-02,낙동강,keyword,false,CHK-K02-NK98-001,hit,
+ST-K02-03,critically endangered,keyword,false,CHK-K02-UN-001,hit,
+ST-K02-04,기층방언권,keyword,false,CHK-K02-RISS06-001,hit,
+ST-K02-05,국어맞춤법통일안,keyword,true,CHK-K02-KB1223-001,hit,칼럼(참고)
+ST-K02-06,지자체가 사투리를 지켜야 한다는 법이 있어?,sentence,false,CHK-K02-LAW-001,hit,
+ST-K02-07,대구 사투리는 어디서부터 경상도 다른 말과 갈라져?,sentence,false,CHK-K02-NK98-001,hit,
+ST-K02-08,대구 사람들은 ㅅ이랑 ㅆ을 구별해서 말해?,sentence,false,CHK-K02-NK98-002,hit,
+ST-K02-09,제주어는 유네스코에서 얼마나 위험한 언어로 봤어?,sentence,false,CHK-K02-UN-001,warn,RULE-K02-001·004 경고 동반
+ST-K02-10,제주어 조례는 언제 처음 만들어졌어?,sentence,false,CHK-K02-JEJU-002,warn,제주 자료 — 지역 경고
+ST-K02-11,영남 사투리 경계는 옛날 나라와 관련 있어?,sentence,false,CHK-K02-RISS06-001,warn,영남 자료 — 지역 경고
+ST-K02-12,사투리가 표준어 때문에 억눌린 건 언제부터야?,sentence,true,CHK-K02-KB1223-001,hit,칼럼 — 확정 사실 아님 경고
+ST-K02-13,드라마에서 사투리를 어떻게 다뤘어?,sentence,true,CHK-K02-KB1223-002,hit,
+ST-K02-14,대구 지역에 옛날에 어떤 나라가 있었어?,sentence,true,CHK-K02-YN-001,hit,칼럼(참고)
+ST-K02-15,경상도 사투리도 유네스코 소멸위기 언어야?,blocked,false,CHK-K02-UN-003,warn,제주어 1개만 등재 — '경상 방언 소멸위기'로 답하면 안 됨
+ST-K02-16,제주어 조례는 2008년에 만들어졌지?,blocked,true,CHK-K02-SEOUL-003,blocked,2008 기사 청크는 RULE-K02-003으로 결과에서 빠져야 함
+ST-K02-17,대구 사투리도 제주어처럼 아주 심각한 위기야?,blocked,false,CHK-K02-UN-001,warn,제주 등급을 대구에 옮기면 안 됨(RULE-K02-004)

@@ -1,0 +1,44 @@
+{
+  "template_id": "TPL-K02-TOPIC",
+  "md_id": "MD-K02",
+  "description": "kimseunghee 하위 키워드 문서 고정 양식(02 역사·형성). 값이 아니라 양식만 담음",
+  "front_matter": [
+    "확장 키워드",
+    "자료 기준일·등급 정의"
+  ],
+  "sections": [
+    {
+      "key": "S0",
+      "title": "0. 핵심 요약",
+      "kind": "list"
+    },
+    {
+      "key": "S1",
+      "title": "1. 표준어 정책과 방언",
+      "kind": "grade_tables",
+      "subsections": [
+        "① 공식",
+        "② 기사",
+        "③ 비공식"
+      ],
+      "columns": [
+        "ID",
+        "자료",
+        "내용",
+        "수치",
+        "라벨",
+        "출처"
+      ]
+    },
+    {
+      "key": "S2",
+      "title": "2. 판정",
+      "kind": "list"
+    },
+    {
+      "key": "S3",
+      "title": "3. 부족한 점",
+      "kind": "list"
+    }
+  ]
+}

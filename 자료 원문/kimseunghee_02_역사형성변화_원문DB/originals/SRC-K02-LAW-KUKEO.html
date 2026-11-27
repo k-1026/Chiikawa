@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="ko">
+ <head>
+  <script type="text/javascript">
+    $(document).ready(function () {
+        fn_law();
+    });
+</script> 
+ </head>
+ <body>
+  <input type="hidden" id="lsNm" name="lsNm" value="국어기본법" /> 
+  <input type="hidden" id="lsId" name="lsId" value="009877" /> 
+  <input type="hidden" id="lsiSeq" name="lsiSeq" value="285635" /> 
+  <input type="hidden" id="ancYd" name="ancYd" value="20260428" /> 
+  <input type="hidden" id="efYd" name="efYd" value="20261029" /> 
+  <input type="hidden" id="ancNo" name="ancNo" value="21586" /> 
+  <input type="hidden" id="lsBdyChrCls" name="lsBdyChrCls" value="010202" /> 
+  <input type="hidden" id="lumIsConOrdin" value="" /> 
+  <input type="hidden" id="nwYnValue" value="Y" /> 
+  <input type="hidden" id="hstLnkDpYn" value="0" /> 
+  <script type="text/javascript">
+$(document).ready(function(){
+	fn_law(); // 구 이미지 치환
+
+	var isEtc = $("#viewWrap").hasClass("casePop");
+
+	// 조 트리 1depth 호출
+	//법령비교 아니고 본문 외 조회가 아닐때
+	if($("#asideLawNm").length > 0 && !isEtc){
+		if(isEng !== "Y"){
+			fSelectJoListAncInfoPTree('liBgcolorSpanJo','999','Y','285635','20261029','','','','');
+		}else{
+			fSelectJoList('liBgcolorSpanJo', '1', 'Y', '285635');
+		}
+	}
+
+});
+
+function fileLayer(temp){
+	var tempStr = $("#hwptext"+temp).attr("value");
+	if(tempStr.length > 32){
+ 		$("#hwptext"+temp).css("width", "80%").css("text-overflow", "ellipsis").css("overflow","hidden").css("white-space","nowrap");
+ 		$("#hwpxtext"+temp).css("width", "80%").css("text-overflow", "ellipsis").css("overflow","hidden").css("white-space","nowrap");
+ 		$("#pdftext"+temp).css("width", "80%").css("text-overflow", "ellipsis").css("overflow","hidden").css("white-space","nowrap");
+ 	}
+
+ 	$(".byl_pop").css("display","none");
+
+ 	//레이어높이값
+ 	var height = $("#fileSaveLayer"+temp).height();
+ 	//본문 제일 하단 위치값 
+	var pagePos = document.querySelector('#center');
+	pagePos = pagePos.getBoundingClientRect().bottom;
+	//레이어버튼위치값
+	var layPos =document.querySelector('#imgPos'+temp);
+	layPos = layPos.getBoundingClientRect().bottom;
+	var lay_pop = $('#fileSaveLayer'+temp);
+	var pos = $('#imgPos'+temp).position();
+	
+	if(pagePos > height+layPos){ //레이어가 잘리지 않을 때 
+		lay_pop.css('top', (pos.top)+25 + 'px');
+		lay_pop.css('left', '250px')
+	}else{ //레이어가 잘릴 때
+		lay_pop.css('top', ((pos.top)-height)+ 'px');
+		lay_pop.css('left', (pos.left)+25+'px');
+	}
+	document.getElementById("fileSaveLayer"+temp).style.display="block";
+}
+
+function copyToClipBoard(temp2){
+	var content = document.getElementById('textarea'+temp2);
+	content.select();
+	document.execCommand('copy');
+	alert("주소가 클립보드에 저장되었습니다.");
+	content.setSelectionRange(0,0);
+}
+
+function delLayer(temp){
+	document.getElementById("fileSaveLayer"+temp).style.display="none";
+}
+var isDark = document.body.classList.contains("dark");
+fn_darkImage(isDark);
+
+new MutationObserver(function(){
+	if (document.body.classList.contains('dark')) return;
+	$('iframe[src*="viewer/skin/"]').each(function (){
+		this.src = this.src.replace('viewer/skin/', 'viewer/skin_light/');
+	});
+}).observe(document.body, {childList:true, subtree:true, attributes:true, attributeFilter:['src']});
+</script> 
+  <div id="contentBody" class="scr_ctrl contentBody"> 
+   <div id="sideCenter" class="cont_area sideCenter" style="width: 1635px; opacity: 1;"> 
+    <!-- 연혁법령 안내문구 --> 
+    <!-- 법령명 --> 
+    <div id="conTop" class="cont_top conTop"> 
+     <a id="top"></a> 
+     <!-- 국민신문고 연결배너 출력 --> 
+     <h2> 국어기본법 </h2> 
+     <div class="ct_sub"> 
+      <span> [시행 2026. 10. 29.] [법률 제21586호, 2026. 4. 28., 일부개정] </span> 
+     </div> 
+    </div> 
+    <!-- 소관부처 --> 
+    <div id="conScroll" class="scr_area conScroll" style="overflow-y: auto; height: 561px; width: 1635px;"> 
+     <div class="cont_subtit"> 
+      <p> <a title="팝업으로 이동" onclick="cptOfiPop('http://www.mcst.go.kr'); return false;" href="#AJAX" target="_blank"> <span title="http://www.mcst.go.kr" style="cursor: pointer;"> 문화체육관광부 </span> (<span title="" style="cursor: pointer;">국어정책과</span>), 044-203-2534 </a> </p> 
+     </div> 
+     <!-- 조문정보 --> 
+     <a name="pjuk:98147407" id="pjuk:98147407"></a> 
+     <div class="pgroup" style="padding-bottom: 0px; margin-bottom: 5px;"> 
+      <p class="gtit" style="padding-top: 5px; margin-bottom: 0px;" data-joidfull="000100" data-joseq="98147407">         제1장 총칙 <span class="sfon">&lt;개정 2011. 4. 14.&gt;</span> </p> 
+     </div> 
+     <a name="J1:0" id="J1:0"></a> 
+     <div class="pgroup"> 
+      <ul class="lawico01"> 
+       <li> <a title="조문체계도 팝업으로 이동" style="text-decoration: none;" onclick="joStmdPop('285635', '0001', '00' );return false; " href="#AJAX"> <img alt="조문체계도버튼" src="/LSW/assets/images/viewer/btn-pan.svg" /> </a> </li> 
+       <li> <a title="연혁 팝업으로 이동" style="text-decoration: none;" onclick="fJoHstShow(this, '009877', '285635', '98147409', '010202');return false;" href="#AJAX"> <img alt="연혁" src="/LSW/assets/images/viewer/btn-yeon.svg" /> </a></li> 
+      </ul> 
+      <div class="lawcon"> 
+       <p class="pty1_p4"> <input name="joNoList" id="Y000100" style="vertical-align: middle;" onclick="getJoSelectLayer(this,'');" type="checkbox" value="1:0:000100:98147409" /> <span class="bl"><label for="Y000100"> 제1조(목적) </label> </span> 이 법은 국어 사용을 촉진하고 국어의 발전과 보전의 기반을 마련하여 국민의 창조적 사고력의 증진을 도모함으로써 국민의 문화적 삶의 질을 향상하고 민족문화의 발전에 이바지함을 목적으로 한다. </p>
+       <p class="pty1_de2"> <span class="sfon">[전문개정 2011. 4. 14.]</span> </p> 
+       <p></p> 
+      </div> 
+     </div> 
+     <a name="J2:0" id="J2:0"></a> 
+     <div class="pgroup"> 
+      <ul class="lawico01"> 
+       <li> <a title="조문체계도 팝업으로 이동" style="text-decoration: none;" onclick="joStmdPop('285635', '0002', '00' );return false; " href="#AJAX"> <img alt="조문체계도버튼" src="/LSW/assets/images/viewer/btn-pan.svg" /> </a> </li> 
+       <li> <a title="연혁 팝업으로 이동" style="text-decoration: none;" onclick="fJoHstShow(this, '009877', '285635', '98147411', '010202');return false;" href="#AJAX"> <img alt="연혁" src="/LSW/assets/images/viewer/btn-yeon.svg" /> </a></li> 
+      </ul> 
+      <div class="lawcon"> 
+       <p class="pty1_p4"> <input name="joNoList" id="Y000200" style="vertical-align: middle;" onclick="getJoSelectLayer(this,'');" type="checkbox" value="2:0:000200:98147411" /> <span class="bl"><label for="Y000200"> 제2조(기본 이념) </label> </span> 국가와 국민은 국어가 민족 제일의 문화유산이며 문화 창조의 원동력임을 깊이 인식하여 국어 발전에 적극적으로 힘씀으로써 민족문화의 정체성을 확립하고 국어를 잘 보전하여 후손에게 계승할 수 있도록 하여야 한다. </p>
+       <p class="pty1_de2"> <span class="sfon">[전문개정 2011. 4. 14.]</span> </p> 
+       <p></p> 
+      </div> 
+     </div> 
+     <a name="J3:0" id="J3:0"></a> 
+     <div class="pgroup"> 
+      <ul class="lawico01"> 
+       <li> <a title="조문체계도 팝업으로 이동" style="text-decoration: none;" onclick="joStmdPop('285635', '0003', '00' );return false; " href="#AJAX"> <img alt="조문체계도버튼" src="/LSW/assets/images/viewer/btn-pan.svg" /> </a> </li> 
+       <li> <a title="연혁 팝업으로 이동" style="text-decoration: none;" onclick="fJoHstShow(this, '009877', '285635', '98147413', '010202');return false;" href="#AJAX"> <img alt="연혁" src="/LSW/assets/images/viewer/btn-yeon.svg" /> </a></li> 
+      </ul> 
+      <div class="lawcon"> 
+       <p class="pty1_p4"> <input name="joNoList" id="Y000300" style="vertical-align: middle;" onclick="getJoSelectLayer(this,'');" type="checkbox" value="3:0:000300:98147413" /> <span class="bl"><label for="Y000300"> 제3조(정의) </label> </span> 이 법에서 사용하는 용어의 뜻은 다음과 같다. <span class="sfon">&lt;개정 2021. 6. 15., 2026. 6. 2.&gt;</span> </p>
+       <p class="pty1_de2_1"> </p> 
+       <p class="pty1_de2h">1. “국어”란 대한민국의 공용어로서 한국어를 말한다. </p> 
+       <p class="pty1_de2h">2. “한글”이란 국어를 표기하는 우리의 고유문자를 말한다. </p> 
+       <p class="pty1_de2h">3. “어문규범”이란 <a title="팝업으로 이동" class="link sfon2" onclick="javascript:fncLsLawPop('1034179803','JO','');" href="javascript:;">제13조</a>에 따른 국어심의회의 심의를 거쳐 제정한 한글 맞춤법, 표준어 규정, 표준 발음법, 외래어 표기법, 국어의 로마자 표기법 등 국어 사용에 필요한 규범을 말한다. </p> 
+       <p class="pty1_de2h">4. “국어능력”이란 국어를 통하여 생각이나 느낌 등을 정확하게 표현하고 이해하는 데에 필요한 듣기ㆍ말하기ㆍ읽기ㆍ쓰기 등의 능력을 말한다. </p> 
+       <p class="pty1_de2h">5. “공문서등”이란 국가기관, 지방자치단체, <a title="팝업으로 이동" class="link sfon1" onclick="javascript:fncLsLawPop('1034179805','ALLJO','');" href="javascript:;">「공공기관의 운영에 관한 법률」</a>에 따른 공공기관, 그 밖의 법률에 따라 설립된 특수법인(이하 “공공기관등”이라 한다)이 공무상 작성하거나 시행하는 문서[도면ㆍ사진ㆍ디스크ㆍ테이프ㆍ필름ㆍ슬라이드ㆍ전자문서{누리집(인터넷 홈페이지를 말한다)의 게시물을 포함한다}ㆍ현수막ㆍ안내판 등의 특수매체기록을 포함한다]를 말한다. </p> 
+       <p class="pty1_de2"> <span class="sfon">[전문개정 2011. 4. 14.]</span> </p> 
+       <p></p> 
+      </div> 
+     </div> 
+     <a name="J4:0" id="J4:0"></a> 
+     <div class="pgroup"> 
+      <ul class="lawico01"> 
+       <li> <a title="조문체계도 팝업으로 이동" style="text-decoration: none;" onclick="joStmdPop('285635', '0004', '00' );return false; " href="#AJAX"> <img alt="조문체계도버튼" src="/LSW/assets/images/viewer/btn-pan.svg" /> </a> </li> 
+       <li> <a title="연혁 팝업으로 이동" style="text-decoration: none;" onclick="fJoHstShow(this, '009877', '285635', '98147415', '010202');return false;" href="#AJAX"> <img alt="연혁" src="/LSW/assets/images/viewer/btn-yeon.svg" /> </a></li> 
+      </ul> 
+      <div class="lawcon"> 
+       <p class="pty1_p4"> <input name="joNoList" id="Y000400" style="vertical-align: middle;" onclick="getJoSelectLayer(this,'');" type="checkbox" value="4:0:000400:98147415" /> <span class="bl"><label for="Y000400"> 제4조(국가와 지방자치단체의 책무) </label> </span> ① 국가와 지방자치단체는 변화하는 언어 사용 환경에 능동적으로 대응하고, 국민의 국어능력 향상과 지역어 보전 등 국어의 발전과 보전을 위하여 노력하여야 한다. </p>
+       <p class="pty1_de2_1">② 국가와 지방자치단체는 정신상ㆍ신체상의 장애로 언어 사용에 어려움을 겪고 있는 국민이 불편 없이 국어를 사용할 수 있도록 필요한 정책을 수립하여 시행하여야 한다. </p> 
+       <p class="pty1_de2"> <span class="sfon">[전문개정 2011. 4. 14.]</span> </p> 
+       <p></p> 
+      </div> 
+     </div> 
+     <a name="J5:0" id="J5:0"></a> 
+     <div class="pgroup"> 
+      <ul class="lawico01"> 
+       <li> <a title="조문체계도 팝업으로 이동" style="text-decoration: none;" onclick="joStmdPop('285635', '0005', '00' );return false; " href="#AJAX"> <img alt="조문체계도버튼" src="/LSW/assets/images/viewer/btn-pan.svg" /> </a> </li> 
+       <li> <a title="연혁 팝업으로 이동" style="text-decoration: none;" onclick="fJoHstShow(this, '009877', '285635', '98147417', '010202');return false;" href="#AJAX"> <img alt="연혁" src="/LSW/assets/images/viewer/btn-yeon.svg" /> </a></li> 
+      </ul> 
+      <div class="lawcon"> 
+       <p class="pty1_p4"> <input name="joNoList" id="Y000500" style="vertical-align: middle;" onclick="getJoSelectLayer(this,'');" type="checkbox" value="5:0:000500:98147417" /> <span class="bl"><label for="Y000500"> 제5조(다른 법률과의 관계) </label> </span> 국어의 사용과 보급 등에 관하여 다른 법률에 특별한 규정이 있는 경우를 제외하고는 이 법에서 정하는 바에 따른다. </p>
+       <p class="pty1_de2"> <span class="sfon">[전문개정 2011. 4. 14.]</span> </p> 
+       <p></p> 
+      </div> 
+     </div> 
+     <a name="pjuk:98147419" id="pjuk:98147419"></a> 
+     <div class="pgroup" style="padding-bottom: 0px; margin-bottom: 5px;"> 
+      <p class="gtit" style="padding-top: 5px; margin-bottom: 0px;" data-joidfull="000600" data-joseq="98147419">         제2장 국어 발전 기본계획의 수립 등 <span class="sfon">&lt;개정 2011. 4. 14.&gt;</span> </p> 
+     </div> 
+     <a name="J6:0" id="J6:0"></a> 
+     <div class="pgroup"> 
+      <ul class="lawico01"> 
+       <li> <a title="조문체계도 팝업으로 이동" style="text-decoration: none;" onclick="joStmdPop('285635', '0006', '00' );return false; " href="#AJAX"> <img alt="조문체계도버튼" src="/LSW/assets/images/viewer/btn-pan.svg" /> </a> </li> 
+       <li> <a title="연혁 팝업으로 이동" style="text-decoration: none;" onclick="fJoHstShow(this, '009877', '285635', '98147421', '010202');return false;" href="#AJAX"> <img alt="연혁" src="/LSW/assets/images/viewer/btn-yeon.svg" /> </a></li> 
+      </ul> 
+      <div class="lawcon"> 
+       <p class="pty1_p4"> <input name="joNoList" id="Y000600" style="vertical-align: middle;" onclick="getJoSelectLayer(this,'');" type="checkbox" value="6:0:000600:98147421" /> <span class="bl"><label for="Y000600"> 제6조(국어 발전 기본계획의 수립) </label> </span> ① 문화체육관광부장관은 국어의 발전과 보전을 위하여 5년마다 국어 발전 기본계획(이하 “기본계획”이라 한다)을 수립ㆍ시행하여야 한다. </p>
+       <p class="pty1_de2_1">② 문화체육관광부장관은 기본계획을 수립하려는 경우에는 <a title="팝업으로 이동" class="link sfon2" onclick="javascript:fncLsLawPop('1034179789','JO','');" href="javascript:;">제13조</a>에 따른 국어심의회의 심의를 거쳐야 한다. </p> 
+       <p class="pty1_de2_1">③ 기본계획에는 다음 각 호의 사항이 포함되어야 한다. <span class="sfon">&lt;개정 2017. 3. 21.&gt;</span> </p> 
+       <p class="pty1_de2h">1. 국어 정책의 기본 방향과 추진 목표에 관한 사항 </p> 
+       <p class="pty1_de2h">2. 어문규범의 제정과 개정 방향에 관한 사항 </p> 
+       <p class="pty1_de2h">3. 국민의 국어능력 증진과 국어 사용 환경의 개선에 관한 사항 </p> 
+       <p class="pty1_de2h">4. 국어 정책과 국어 교육의 연계에 관한 사항 </p> 
+       <p class="pty1_de2h">5. 국어의 가치를 널리 알리고 국어문화유산을 보전하는 일에 관한 사항 </p> 
+       <p class="pty1_de2h">6. 국어의 국외 보급에 관한 사항 </p> 
+       <p class="pty1_de2h">7. 국어의 정보화에 관한 사항 </p> 
+       <p class="pty1_de2h">8. 남북한 언어 통일 방안에 관한 사항 </p> 
+       <p class="pty1_de2h">9. 정신상ㆍ신체상의 장애로 언어 사용에 어려움을 겪고 있는 국민과 국내 거주 외국인의 국어 사용상의 불편 해소에 관한 사항 </p> 
+       <p class="pty1_de2h">10. 국어 순화와 전문용어의 표준화ㆍ체계화에 관한 사항 </p> 
+       <p class="pty1_de2h">11. 국어 발전을 위한 민간 부문의 활동 촉진에 관한 사항 </p> 
+       <p class="pty1_de2h">12. 그 밖에 국어의 사용과 발전 및 보전에 관한 사항 </p> 
+       <p class="pty1_de2"> <span class="sfon">[전문개정 2011. 4. 14.]</span> </p> 
+       <p></p> 
+      </div> 
+     </div> 
+     <a name="J7:0" id="J7:0"></a> 
+     <div class="pgroup"> 
+      <ul class="lawico01"> 
+       <li> <a title="조문체계도 팝업으로 이동" style="text-decoration: none;" onclick="joStmdPop('285635', '0007', '00' );return false; " href="#AJAX"> <img alt="조문체계도버튼" src="/LSW/assets/images/viewer/btn-pan.svg" /> </a> </li> 
+       <li> <a title="연혁 팝업으로 이동" style="text-decoration: none;" onclick="fJoHstShow(this, '009877', '285635', '98147423', '010202');return false;" href="#AJAX"> <img alt="연혁" src="/LSW/assets/images/viewer/btn-yeon.svg" /> </a></li> 
+      </ul> 
+      <div class="lawcon"> 
+       <p class="pty1_p4"> <input name="joNoList" id="Y000700" style="vertical-align: middle;" onclick="getJoSelectLayer(this,'');" type="checkbox" value="7:0:000700:98147423" /> <span class="bl"><label for="Y000700"> 제7조(시행계획의 수립 등) </label> </span> ① 문화체육관광부장관은 기본계획을 실천하기 위한 세부계획(이하 “시행계획”이라 한다)을 수립ㆍ시행하여야 한다. </p>
+       <p class="pty1_de2_1">② 문화체육관광부장관은 시행계획의 수립ㆍ시행과 관련하여 필요한 경우 공공기관등의 장에게 협조를 요청할 수 있다. <span class="sfon">&lt;개정 2021. 6. 15.&gt;</span> </p> 
+       <p class="pty1_de2"> <span class="sfon">[전문개정 2011. 4. 14.]</span> </p> 
+       <p></p> 
+      </div> 
+     </div> 
+     <a name="J8:0" id="J8:0"></a> 
+     <div class="pgroup"> 
+      <ul class="lawico01"> 
+       <li> <a title="조문체계도 팝업으로 이동" style="text-decoration: none;" onclick="joStmdPop('285635', '0008', '00' );return false; " href="#AJAX"> <img alt="조문체계도버튼" src="/LSW/assets/images/viewer/btn-pan.svg" /> </a> </li> 
+       <li> <a title="연혁 팝업으로 이동" style="text-decoration: none;" onclick="fJoHstShow(this, '009877', '285635', '98147425', '010202');return false;" href="#AJAX"> <img alt="연혁" src="/LSW/assets/images/viewer/btn-yeon.svg" /> </a></li> 
+      </ul> 
+      <div class="lawcon"> 
+       <p class="pty1_p4"> <input name="joNoList" id="Y000800" style="vertical-align: middle;" onclick="getJoSelectLayer(this,'');" type="checkbox" value="8:0:000800:98147425" /> <span class="bl"><label for="Y000800"> 제8조(보고) </label> </span> 정부는 매년 국어의 발전과 보전에 관한 시책과 그 시행 결과에 관한 보고서를 정기회가 열리기 전까지 국회에 제출하여야 한다. <span class="sfon">&lt;개정 2017. 3. 21.&gt;</span> </p>
+       <p class="pty1_de2"> <span class="sfon">[전문개정 2011. 4. 14.]</span> </p> 
+       <p></p> 
+      </div> 
+     </div> 
+     <a name="J9:0" id="J9:0"></a> 
+     <div class="pgroup"> 
+      <ul class="lawico01"> 
+       <li> <a title="조문체계도 팝업으로 이동" style="text-decoration: none;" onclick="joStmdPop('285635', '0009', '00' );return false; " href="#AJAX"> <img alt="조문체계도버튼" src="/LSW/assets/images/viewer/btn-pan.svg" /> </a> </li> 
+       <li> <a title="연혁 팝업으로 이동" style="text-decoration: none;" onclick="fJoHstShow(this, '009877', '285635', '98147427', '010202');return false;" href="#AJAX"> <img alt="연혁" src="/LSW/assets/images/viewer/btn-yeon.svg" /> </a></li> 
+      </ul> 
+      <div class="lawcon"> 
+       <p class="pty1_p4"> <input name="joNoList" id="Y000900" style="vertical-align: middle;" onclick="getJoSelectLayer(this,'');" type="checkbox" value="9:0:000900:98147427" /> <span class="bl"><label for="Y000900"> 제9조(실태 조사 등) </label> </span> ① 문화체육관광부장관은 국어 정책의 수립에 필요한 국민의 국어능력, 국어 의식, 국어 사용 환경 등에 관한 자료를 수집하거나 실태를 조사할 수 있다. </p>
+       <p class="pty1_de2_1">② 문화체육관광부장관은 제1항에 따른 자료 수집이나 실태 조사를 위하여 필요한 경우에는 국가기관 및 국어 관련 법인ㆍ단체 등에 자료 제출이나 의견 진술 등을 요구할 수 있다. </p> 
+       <p class="pty1_de2_1">③ 국어능력, 국어 의식, 국어 사용 환경 등에 관한 실태 조사에 필요한 사항은 <a title="팝업으로 이동" class="link" onclick="javascript:fncLsPttnLinkPop('70189');" href="javascript:;">대통령령</a>으로 정한다. </p> 
+       <p class="pty1_de2"> <span class="sfon">[전문개정 2011. 4. 14.]</span> </p> 
+       <p></p> 
+      </div> 
+     </div> 
+     <a name="J10:0" id="J10:0"></a> 
+     <div class="pgroup"> 
+      <ul class="lawico01"> 
+       <li> <a title="조문체계도 팝업으로 이동" style="text-decoration: none;" onclick="joStmdPop('285635', '0010', '00' );return false; " href="#AJAX"> <img alt="조문체계도버튼" src="/LSW/assets/images/viewer/btn-pan.svg" /> </a> </li> 
+       <li> <a title="연혁 팝업으로 이동" style="text-decoration: none;" onclick="fJoHstShow(this, '009877', '285635', '98148629', '010202');return false;" href="#AJAX"> <img alt="연혁" src="/LSW/assets/images/viewer/btn-yeon.svg" /> </a></li> 
+      </ul> 
+      <div class="lawcon"> 
+       <p class="pty1_p4"> <input name="joNoList" id="Y001000" style="vertical-align: middle;" onclick="getJoSelectLayer(this,'');" type="checkbox" value="10:0:001000:98148629" /> <span class="bl"><label for="Y001000"> 제10조(국어책임관의 지정) </label> </span> ① 공공기관등의 장은 국어의 발전 및 보전을 위한 업무를 총괄하는 국어책임관을 소속 공무원 또는 직원 중에서 지정하여야 한다. <span class="sfon">&lt;개정 2017. 3. 21., 2021. 6. 15.&gt;</span> </p>
+       <p class="pty1_de2_1">② 제1항에 따른 국어책임관의 지정 및 임무 등에 관하여 필요한 사항은 <a title="팝업으로 이동" class="link" onclick="javascript:fncLsPttnLinkPop('70190');" href="javascript:;">대통령령</a>으로 정한다. </p> 
+       <p class="pty1_de2"> <span class="sfon">[전문개정 2011. 4. 14.]</span> </p> 
+       <p></p> 
+      </div> 
+     </div> 
+     <a name="pjuk:98148631" id="pjuk:98148631"></a> 
+     <div class="pgroup" style="padding-bottom: 0px; margin-bottom: 5px;"> 
+      <p class="gtit" style="padding-top: 5px; margin-bottom: 0px;" data-joidfull="001100" data-joseq="98148631">         제3장 국어 사용의 촉진 및 보급 <span class="sfon">&lt;개정 2011. 4. 14.&gt;</span> </p> 
+     </div> 
+     <a name="J11:0" id="J11:0"></a> 
+     <div class="pgroup"> 
+      <ul class="lawico01"> 
+       <li> <a title="조문체계도 팝업으로 이동" style="text-decoration: none;" onclick="joStmdPop('285635', '0011', '00' );return false; " href="#AJAX"> <img alt="조문체계도버튼" src="/LSW/assets/images/viewer/btn-pan.svg" /> </a> </li> 
+       <li> <a title="연혁 팝업으로 이동" style="text-decoration: none;" onclick="fJoHstShow(this, '009877', '285635', '98148633', '010202');return false;" href="#AJAX"> <img alt="연혁" src="/LSW/assets/images/viewer/btn-yeon.svg" /> </a></li> 
+       <li><a href="javascript:;" onclick="joDelegatePop('285635', '0011', '00', '010102');return false; " style="text-decoration: none;" title="위임행정규칙 팝업으로 이동"> <img src="/LSW/assets/images/viewer/btn-haeng.svg" alt="위임행정규칙버튼" /> </a></li> 
+      </ul> 
+      <div class="lawcon"> 
+       <p class="pty1_p4"> <input name="joNoList" id="Y001100" style="vertical-align: middle;" onclick="getJoSelectLayer(this,'');" type="checkbox" value="11:0:001100:98148633" /> <span class="bl"><label for="Y001100"> 제11조(어문규범의 제정 등) </label> </span> 문화체육관광부장관은 <a title="팝업으로 이동" class="link sfon2" onclick="javascript:fncLsLawPop('1034179791','JO','');" href="javascript:;">제13조</a>에 따른 국어심의회의 심의를 거쳐 어문규범을 제정하고, 그 내용을 관보에 <a href="#AJAX" title="팝업으로 이동" class="delegatedAdmRul_link" onclick="javascript:joDelegatePop('285635','0011','00','010102','DEG','고시하여야 한다','30973');">고시하여야 한다</a>. 이를 개정하는 경우에도 또한 같다. </p>
+       <p class="pty1_de2"> <span class="sfon">[전문개정 2011. 4. 14.]</span> </p> 
+       <div class="rule_area"> 
+        <div class="btn_rule"> 
+         <a href="javascript:viewDelegatedAdmRul('001100', '285635', '0011', '00', '010102')"><img id="delegatedAdmRul_img_001100" src="/LSW/assets/images/viewer/btn_adminRuleOpen.svg" title="위임행정규칙" alt="위임행정규칙" /></a> 
+        </div> 
+        <div id="delegated_001100" class="rule_box" style="display: none;"></div> 
+       </div> 
+       <p></p> 
+      </div> 
+     </div> 
+     <a name="J12:0" id="J12:0"></a> 
+     <div class="pgroup"> 
+      <ul class="lawico01"> 
+       <li> <a title="조문체계도 팝업으로 이동" style="text-decoration: none;" onclick="joStmdPop('285635', '0012', '00' );return false; " href="#AJAX"> <img alt="조문체계도버튼" src="/LSW/assets/images/viewer/btn-pan.svg" /> </a> </li> 
+       <li> <a title="연혁 팝업으로 이동" style="text-decoration: none;" onclick="fJoHstShow(this, '009877', '285635', '98148635', '010202');return false;" href="#AJAX"> <img alt="연혁" src="/LSW/assets/images/viewer/btn-yeon.svg" /> </a></li> 
+      </ul> 
+      <div class="lawcon"> 
+       <p class="pty1_p4"> <input name="joNoList" id="Y001200" style="vertical-align: middle;" onclick="getJoSelectLayer(this,'');" type="checkbox" value="12:0:001200:98148635" /> <span class="bl"><label for="Y001200"> 제12조(어문규범의 영향평가) </label> </span> ① 문화체육관광부장관은 어문규범이 국민의 국어 사용에 미치는 영향과 어문규범의 현실성 및 합리성 등을 평가하여 정책에 반영하여야 한다. </p>
+       <p class="pty1_de2_1">② 제1항에 따른 평가의 항목ㆍ방법 및 시기에 관한 사항은 <a title="팝업으로 이동" class="link" onclick="javascript:fncLsPttnLinkPop('70191');" href="javascript:;">대통령령</a>으로 정한다. </p> 
+       <p class="pty1_de2"> <span class="sfon">[전문개정 2011. 4. 14.]</span> </p> 
+       <p></p> 
+      </div> 
+     </div> 
+     <a name="J13:0" id="J13:0"></a> 
+     <div class="pgroup"> 
+      <ul class="lawico01"> 
+       <li> <a title="조문체계도 팝업으로 이동" style="text-decoration: none;" onclick="joStmdPop('285635', '0013', '00' );return false; " href="#AJAX"> <img alt="조문체계도버튼" src="/LSW/assets/images/viewer/btn-pan.svg" /> </a> </li> 
+       <li> <a title="연혁 팝업으로 이동" style="text-decoration: none;" onclick="fJoHstShow(this, '009877', '285635', '98148637', '010202');return false;" href="#AJAX"> <img alt="연혁" src="/LSW/assets/images/viewer/btn-yeon.svg" /> </a></li> 
+      </ul> 
+      <div class="lawcon"> 
+       <p class="pty1_p4"> <input name="joNoList" id="Y001300" style="vertical-align: middle;" onclick="getJoSelectLayer(this,'');" type="checkbox" value="13:0:001300:98148637" /> <span class="bl"><label for="Y001300"> 제13조(국어심의회) </label> </span> ① 국어의 발전과 보전을 위한 중요사항을 심의하기 위하여 문화체육관광부에 국어심의회(이하 “국어심의회”라 한다)를 둔다. </p>
+       <p class="pty1_de2_1">② 국어심의회는 다음 각 호의 사항을 심의한다. </p> 
+       <p class="pty1_de2h">1. 기본계획의 수립에 관한 사항 </p> 
+       <p class="pty1_de2h">2. 어문규범의 제정 및 개정에 관한 사항 </p> 
+       <p class="pty1_de2h">3. 그 밖에 국어의 발전과 보전에 관하여 문화체육관광부장관이 회의에 부치는 사항 </p> 
+       <p class="pty1_de2_1">③ 국어심의회는 위원장 1명과 부위원장 1명을 포함한 60명 이내의 위원으로 구성한다. </p> 
+       <p class="pty1_de2_1">④ 위원장과 부위원장은 위원 중에서 호선(互選)하고, 위원은 국어학ㆍ언어학 또는 이와 관련된 분야의 전문지식이 있는 사람 중에서 문화체육관광부장관이 위촉한다. </p> 
+       <p class="pty1_de2_1">⑤ 제2항 각 호의 사항을 심의하기 위하여 국어심의회에 분과위원회를 둘 수 있다. </p> 
+       <p class="pty1_de2_1">⑥ 제1항에 따른 국어심의회의 구성과 운영 등에 필요한 사항은 <a title="팝업으로 이동" class="link" onclick="javascript:fncLsPttnLinkPop('70192');" href="javascript:;">대통령령</a>으로 정한다. </p> 
+       <p class="pty1_de2"> <span class="sfon">[전문개정 2011. 4. 14.]</span> </p> 
+       <p></p> 
+      </div> 
+     </div> 
+     <a name="J14:0" id="J14:0"></a> 
+     <div class="pgroup"> 
+      <ul class="lawico01"> 
+       <li> <a title="조문체계도 팝업으로 이동" style="text-decoration: none;" onclick="joStmdPop('285635', '0014', '00' );return false; " href="#AJAX"> <img alt="조문체계도버튼" src="/LSW/assets/images/viewer/btn-pan.svg" /> </a> </li> 
+       <li> <a title="연혁 팝업으로 이동" style="text-decoration: none;" onclick="fJoHstShow(this, '009877', '285635', '98148639', '010202');return false;" href="#AJAX"> <img alt="연혁" src="/LSW/assets/images/viewer/btn-yeon.svg" /> </a></li> 
+      </ul> 
+      <div class="lawcon"> 
+       <p class="pty1_p4"> <input name="joNoList" id="Y001400" style="vertical-align: middle;" onclick="getJoSelectLayer(this,'');" type="checkbox" value="14:0:001400:98148639" /> <span class="bl"><label for="Y001400"> 제14조(공문서등의 작성ㆍ평가) </label> </span> ① 공공기관등은 공문서등을 일반 국민이 알기 쉬운 용어와 문장으로 써야 하며, 어문규범에 맞추어 한글로 작성하여야 한다. 다만, <a title="팝업으로 이동" class="link" onclick="javascript:fncLsPttnLinkPop('70193');" href="javascript:;">대통령령</a>으로 정하는 경우에는 괄호 안에 한자 또는 다른 외국 글자를 쓸 수 있다. <span class="sfon">&lt;개정 2017. 3. 21., 2021. 6. 15.&gt;</span> </p>
+       <p class="pty1_de2_1">② 문화체육관광부장관은 공공기관등이 작성한 공문서등에 대하여 제1항에 따른 사항을 매년 평가하고 그 결과를 누리집 등에 공개하여야 한다. <span class="sfon">&lt;신설 2021. 6. 15., 2026. 6. 2.&gt;</span> </p> 
+       <p class="pty1_de2_1">③ 공공기관등이 작성하는 공문서등의 한글 사용, 평가 및 공개에 관하여 필요한 사항은 <a title="팝업으로 이동" class="link" onclick="javascript:fncLsPttnLinkPop('70194');" href="javascript:;">대통령령</a>으로 정한다. <span class="sfon">&lt;개정 2021. 6. 15.&gt;</span> </p> 
+       <p class="pty1_de2"> <span class="sfon">[전문개정 2011. 4. 14.]<br />[제목개정 2021. 6. 15.]</span> </p> 
+       <p></p> 
+      </div> 
+     </div> 
+     <a name="J15:0" id="J15:0"></a> 
+     <div class="pgroup"> 
+      <ul class="lawico01"> 
+       <li> <a title="조문체계도 팝업으로 이동" style="text-decoration: none;" onclick="joStmdPop('285635', '0015', '00' );return false; " href="#AJAX"> <img alt="조문체계도버튼" src="/LSW/assets/images/viewer/btn-pan.svg" /> </a> </li> 
+       <li> <a title="연혁 팝업으로 이동" style="text-decoration: none;" onclick="fJoHstShow(this, '009877', '285635', '98148641', '010202');return false;" href="#AJAX"> <img alt="연혁" src="/LSW/assets/images/viewer/btn-yeon.svg" /> </a></li> 
+      </ul> 
+      <div class="lawcon"> 
+       <p class="pty1_p4"> <input name="joNoList" id="Y001500" style="vertical-align: middle;" onclick="getJoSelectLayer(this,'');" type="checkbox" value="15:0:001500:98148641" /> <span class="bl"><label for="Y001500"> 제15조(국어문화의 확산) </label> </span> ① 문화체육관광부장관은 바람직한 국어문화가 확산될 수 있도록 신문ㆍ방송ㆍ잡지ㆍ인터넷 또는 전광판 등을 활용한 홍보와 교육을 적극적으로 시행하여야 한다. </p>
+       <p class="pty1_de2_1">② 신문ㆍ방송ㆍ잡지ㆍ인터넷 등의 대중매체는 국민의 올바른 국어 사용에 이바지하도록 노력하여야 한다. </p> 
+       <p class="pty1_de2"> <span class="sfon">[전문개정 2011. 4. 14.]</span> </p> 
+       <p></p> 
+      </div> 
+     </div> 
+     <a name="J16:0" id="J16:0"></a> 
+     <div class="pgroup"> 
+      <ul class="lawico01"> 
+       <li> <a title="조문체계도 팝업으로 이동" style="text-decoration: none;" onclick="joStmdPop('285635', '0016', '00' );return false; " href="#AJAX"> <img alt="조문체계도버튼" src="/LSW/assets/images/viewer/btn-pan.svg" /> </a> </li> 
+       <li> <a title="연혁 팝업으로 이동" style="text-decoration: none;" onclick="fJoHstShow(this, '009877', '285635', '98148643', '010202');return false;" href="#AJAX"> <img alt="연혁" src="/LSW/assets/images/viewer/btn-yeon.svg" /> </a></li> 
+      </ul> 
+      <div class="lawcon"> 
+       <p class="pty1_p4"> <input name="joNoList" id="Y001600" style="vertical-align: middle;" onclick="getJoSelectLayer(this,'');" type="checkbox" value="16:0:001600:98148643" /> <span class="bl"><label for="Y001600"> 제16조(국어 정보화의 촉진) </label> </span> ① 문화체육관광부장관은 국어를 통하여 지식과 정보를 생산하고 활용하여 새로운 문화를 창조할 수 있도록 국어 정보화를 위한 각종 사업을 적극적으로 시행하여야 한다. </p>
+       <p class="pty1_de2_1">② 국가는 인터넷 및 원격정보통신서비스망 등 정보통신망을 활용하는 국민이 국어를 편리하게 사용할 수 있도록 필요한 정책을 시행하여야 한다. </p> 
+       <p class="pty1_de2_1">③ <a title="팝업으로 이동" class="link sfon1" onclick="javascript:fncLsLawPop('1034179793','ALLJO','');" href="javascript:;">「정보통신망 이용촉진 및 정보보호 등에 관한 법률」</a><a title="팝업으로 이동" class="link sfon2" onclick="javascript:fncLsLawPop('1034179795','JO','');" href="javascript:;">제2조</a><a title="팝업으로 이동" class="link sfon4" onclick="javascript:fncLsLawPop('1034179797','JO','');" href="javascript:;">제3호</a>에 따른 정보통신서비스 제공자는 국민이 국어를 편리하게 사용할 수 있도록 필요한 조치를 하여야 한다. </p> 
+       <p class="pty1_de2"> <span class="sfon">[전문개정 2011. 4. 14.]</span> </p> 
+       <p></p> 
+      </div> 
+     </div> 
+     <a name="J17:0" id="J17:0"></a> 
+     <div class="pgroup"> 
+      <ul class="lawico01"> 
+       <li> <a title="조문체계도 팝업으로 이동" style="text-decoration: none;" onclick="joStmdPop('285635', '0017', '00' );return false; " href="#AJAX"> <img alt="조문체계도버튼" src="/LSW/assets/images/viewer/btn-pan.svg" /> </a> </li> 
+       <li> <a title="연혁 팝업으로 이동" style="text-decoration: none;" onclick="fJoHstShow(this, '009877', '285635', '98148645', '010202');return false;" href="#AJAX"> <img alt="연혁" src="/LSW/assets/images/viewer/btn-yeon.svg" /> </a></li> 
+      </ul> 
+      <div class="lawcon"> 
+       <p class="pty1_p4"> <input name="joNoList" id="Y001700" style="vertical-align: middle;" onclick="getJoSelectLayer(this,'');" type="checkbox" value="17:0:001700:98148645" /> <span class="bl"><label for="Y001700"> 제17조(전문용어의 표준화 등) </label> </span> ① 국가는 국민이 각 분야의 전문용어를 쉽고 편리하게 사용할 수 있도록 표준화하고 체계화하여 보급하여야 한다. <span class="sfon">&lt;개정 2017. 3. 21.&gt;</span> </p>
+       <p class="pty1_de2_1">② 제1항에 따른 전문용어의 표준화 및 체계화를 위하여 중앙행정기관에 전문용어 표준화협의회를 두어야 한다. <span class="sfon">&lt;신설 2017. 3. 21., 2025. 4. 8.&gt;</span> </p> 
+       <p class="pty1_de2_1">③ 제2항에 따른 전문용어 표준화협의회는 소관 분야 전문용어의 표준화 및 체계화에 필요한 사항을 심의하기 위하여 연 1회 이상 회의를 개최하여야 한다. <span class="sfon">&lt;신설 2025. 4. 8.&gt;</span> </p> 
+       <p class="pty1_de2_1">④ 전문용어의 표준화 및 체계화 절차, 전문용어 표준화협의회 구성 및 운영 등에 필요한 사항은 <a title="팝업으로 이동" class="link" onclick="javascript:fncLsPttnLinkPop('143112');" href="javascript:;">대통령령</a>으로 정한다. <span class="sfon">&lt;신설 2017. 3. 21., 2025. 4. 8.&gt;</span> </p> 
+       <p></p> 
+      </div> 
+     </div> 
+     <a name="J18:0" id="J18:0"></a> 
+     <div class="pgroup"> 
+      <ul class="lawico01"> 
+       <li> <a title="조문체계도 팝업으로 이동" style="text-decoration: none;" onclick="joStmdPop('285635', '0018', '00' );return false; " href="#AJAX"> <img alt="조문체계도버튼" src="/LSW/assets/images/viewer/btn-pan.svg" /> </a> </li> 
+       <li> <a title="연혁 팝업으로 이동" style="text-decoration: none;" onclick="fJoHstShow(this, '009877', '285635', '98148647', '010202');return false;" href="#AJAX"> <img alt="연혁" src="/LSW/assets/images/viewer/btn-yeon.svg" /> </a></li> 
+      </ul> 
+      <div class="lawcon"> 
+       <p class="pty1_p4"> <input name="joNoList" id="Y001800" style="vertical-align: middle;" onclick="getJoSelectLayer(this,'');" type="checkbox" value="18:0:001800:98148647" /> <span class="bl"><label for="Y001800"> 제18조(교과용 도서의 어문규범 준수) </label> </span> 교육부장관은 <a title="팝업으로 이동" class="link sfon1" onclick="javascript:fncLsLawPop('1034179799','ALLJO','');" href="javascript:;">「초ㆍ중등교육법」</a><a title="팝업으로 이동" class="link sfon2" onclick="javascript:fncLsLawPop('1034179801','JO','');" href="javascript:;">제29조</a>에 따른 교과용 도서를 편찬하거나 검정 또는 인정하는 경우에는 어문규범을 준수하여야 하며, 이를 위하여 필요한 경우 문화체육관광부장관과 협의할 수 있다. <span class="sfon">&lt;개정 2013. 3. 23.&gt;</span> </p>
+       <p class="pty1_de2"> <span class="sfon">[전문개정 2011. 4. 14.]</span> </p> 
+       <p></p> 
+      </div> 
+     </div> 
+     <a name="J19:0" id="J19:0"></a> 
+     <div class="pgroup"> 
+      <ul class="lawico01"> 
+       <li> <a title="조문체계도 팝업으로 이동" style="text-decoration: none;" onclick="joStmdPop('285635', '0019', '00' );return false; " href="#AJAX"> <img alt="조문체계도버튼" src="/LSW/assets/images/viewer/btn-pan.svg" /> </a> </li> 
+       <li> <a title="연혁 팝업으로 이동" style="text-decoration: none;" onclick="fJoHstShow(this, '009877', '285635', '98148649', '010202');return false;" href="#AJAX"> <img alt="연혁" src="/LSW/assets/images/viewer/btn-yeon.svg" /> </a></li> 
+       <li><a href="javascript:;" onclick="openCtlInfoList('285635', '009877', '0019', '00');return false;" style="text-decoration: none;" title="관련규정 팝업으로 이동"> <img src="/LSW/assets/images/viewer/btn-gyu.svg" alt="관련규제버튼" /> </a></li> 
+      </ul> 
+      <div class="lawcon"> 
+       <p class="pty1_p4"> <input name="joNoList" id="Y001900" style="vertical-align: middle;" onclick="getJoSelectLayer(this,'');" type="checkbox" value="19:0:001900:98148649" /> <span class="bl"><label for="Y001900"> 제19조(국어의 보급 등) </label> </span> ① 국가는 외국어 또는 제2언어로서의 국어보급을 위한 예산 및 인력 확대에 노력하여야 한다. <span class="sfon">&lt;신설 2024. 10. 22.&gt;</span> </p>
+       <p class="pty1_de2_1">② 국가는 국어를 배우려는 외국인과 <a title="팝업으로 이동" class="link sfon1" onclick="javascript:fncLsLawPop('1034179807','ALLJO','');" href="javascript:;">「재외동포의 출입국과 법적 지위에 관한 법률」</a>에 따른 재외동포(이하 “재외동포”라 한다)를 위하여 교육과정과 교재를 개발하고 전문가를 양성하는 등 국어의 보급에 필요한 사업을 시행하여야 한다. <span class="sfon">&lt;개정 2024. 10. 22.&gt;</span> </p> 
+       <p class="pty1_de2_1">③ 문화체육관광부장관은 재외동포나 외국인을 대상으로 국어를 가르치려는 사람에게 자격을 부여하고, 자격증을 발급할 수 있다. <span class="sfon">&lt;개정 2019. 11. 26., 2024. 10. 22.&gt;</span> </p> 
+       <p class="pty1_de2_1">④ 제3항에 따른 자격 요건 및 자격 부여의 방법 등에 관하여 필요한 사항은 <a title="팝업으로 이동" class="link" onclick="javascript:fncLsPttnLinkPop('70195');" href="javascript:;">대통령령</a>으로 정한다. <span class="sfon">&lt;개정 2024. 10. 22.&gt;</span> </p> 
+       <p class="pty1_de2"> <span class="sfon">[전문개정 2011. 4. 14.]</span> </p> 
+       <p></p> 
+      </div> 
+     </div> 
+     <a name="J19:2" id="J19:2"></a> 
+     <div class="pgroup"> 
+      <ul class="lawico01"> 
+       <li> <a title="조문체계도 팝업으로 이동" style="text-decoration: none;" onclick="joStmdPop('285635', '0019', '02' );return false; " href="#AJAX"> <img alt="조문체계도버튼" src="/LSW/assets/images/viewer/btn-pan.svg" /> </a> </li> 
+       <li> <a title="연혁 팝업으로 이동" style="text-decoration: none;" onclick="fJoHstShow(this, '009877', '285635', '98148651', '010202');return false;" href="#AJAX"> <img alt="연혁" src="/LSW/assets/images/viewer/btn-yeon.svg" /> </a></li> 
+      </ul> 
+      <div class="lawcon"> 
+       <p class="pty1_p4"> <input name="joNoList" id="Y001902" style="vertical-align: middle;" onclick="getJoSelectLayer(this,'');" type="checkbox" value="19:2:001902:98148651" /> <span class="bl"><label for="Y001902"> 제19조의2(세종학당재단 설립 등) </label> </span> ① 국가는 외국어 또는 제2언어로서의 국어 보급을 효율적으로 수행하기 위하여 세종학당재단(이하 “재단”이라 한다)을 설립한다. </p>
+       <p class="pty1_de2_1">② 재단은 법인으로 한다. </p> 
+       <p class="pty1_de2_1">③ 재단에는 임원으로서 이사장, 이사 및 감사를 두고, 임원의 정원, 임기 및 선출방법 등은 <a href="#AJAX" title="팝업으로 이동" class="delegatedOrdin_link" onclick="javascript:joDelegatePop('285635','0019','02','010113','DEG','정관으로 정하되','429');">정관으로 정하되</a>, 임원은 교육부장관과의 협의를 거쳐 문화체육관광부장관이 임면한다. <span class="sfon">&lt;개정 2013. 3. 23.&gt;</span> </p> 
+       <p class="pty1_de2_1">④ 재단에는 <a href="#AJAX" title="팝업으로 이동" class="delegatedOrdin_link" onclick="javascript:joDelegatePop('285635','0019','02','010113','DEG','정관으로 정하는','431');">정관으로 정하는</a> 바에 따라 필요한 직원을 둔다. </p> 
+       <p class="pty1_de2_1">⑤ 재단은 다음 각 호의 사업을 한다. <span class="sfon">&lt;개정 2026. 4. 28.&gt;</span> </p> 
+       <p class="pty1_de2h">1. 외국어 또는 제2언어로서의 국어와 한국문화를 교육하는 기관이나 강좌를 대상으로 세종학당 지정 및 지원 </p> 
+       <p class="pty1_de2h">2. 온라인으로 외국어 또는 제2언어로서의 국어와 한국문화를 교육하는 누리집(누리 세종학당) 개발ㆍ운영 </p> 
+       <p class="pty1_de2h">3. 세종학당의 한국어 표준 교육과정 및 교재 보급 </p> 
+       <p class="pty1_de2h">4. 세종학당의 한국어 교원 양성, 교육 및 파견 지원 </p> 
+       <p class="pty1_de2h">5. 외국어 또는 제2언어로서의 국어 학습자를 위한 한국어 능력 평가 제도 운영 및 시행 </p> 
+       <p class="pty1_de2h">6. 세종학당을 통한 문화교육 및 홍보 사업 </p> 
+       <p class="pty1_de2h">7. 그 밖에 외국어 또는 제2언어로서의 국어보급을 위하여 필요한 사업 </p> 
+       <p class="pty1_de2_1">⑥ 국가는 재단이 수행하는 제5항의 사업 추진을 위하여 필요하다고 인정하는 때에는 <a title="팝업으로 이동" class="link" onclick="javascript:fncLsPttnLinkPop('70196');" href="javascript:;">대통령령</a>으로 정하는 바에 따라 관계 중앙행정기관 소속 공무원과 관련 단체 전문가 등으로 구성되는 세종학당정책협의회를 구성하여 운영할 수 있다. </p> 
+       <p class="pty1_de2_1">⑦ 국가는 재단의 설립, 시설 및 운영 등에 필요한 경비를 예산의 범위에서 지원할 수 있다. </p> 
+       <p class="pty1_de2_1">⑧ 재단은 제5항에 따른 사업 목적의 달성에 필요한 경비를 마련하기 위하여 <a title="팝업으로 이동" class="link" onclick="javascript:fncLsPttnLinkPop('70197');" href="javascript:;">대통령령</a>으로 정하는 바에 따라 수익사업을 할 수 있다. </p> 
+       <p class="pty1_de2_1">⑨ 법인ㆍ개인 또는 단체는 재단의 운영 및 사업 등을 지원하기 위하여 금전, 그 밖의 재산을 출연 또는 기부할 수 있다. </p> 
+       <p class="pty1_de2_1">⑩ 재단에 관하여 이 법과 <a title="팝업으로 이동" class="link sfon1" onclick="javascript:fncLsLawPop('1034180391','ALLJO','');" href="javascript:;">「공공기관의 운영에 관한 법률」</a>에서 규정한 것 외에는 <a title="팝업으로 이동" class="link sfon1" onclick="javascript:fncLsLawPop('1034180389','ALLJO','');" href="javascript:;">「민법」</a> 중 재단법인에 관한 규정을 준용한다. </p> 
+       <p class="pty1_de2"> <span class="sfon">[본조신설 2012. 5. 23.]</span> </p> 
+       <p></p> 
+      </div> 
+     </div> 
+     <a name="J19:3" id="J19:3"></a> 
+     <div class="pgroup"> 
+      <ul class="lawico01"> 
+       <li> <a title="조문체계도 팝업으로 이동" style="text-decoration: none;" onclick="joStmdPop('285635', '0019', '03' );return false; " href="#AJAX"> <img alt="조문체계도버튼" src="/LSW/assets/images/viewer/btn-pan.svg" /> </a> </li> 
+       <li> <a title="연혁 팝업으로 이동" style="text-decoration: none;" onclick="fJoHstShow(this, '009877', '285635', '98148653', '010202');return false;" href="#AJAX"> <img alt="연혁" src="/LSW/assets/images/viewer/btn-yeon.svg" /> </a></li> 
+      </ul> 
+      <div class="lawcon"> 
+       <p class="pty1_p4"> <input name="joNoList" id="Y001903" style="vertical-align: middle;" onclick="getJoSelectLayer(this,'');" type="checkbox" value="19:3:001903:98148653" /> <span class="bl"><label for="Y001903"> 제19조의3(자격취소) </label> </span> 문화체육관광부장관은 <a title="팝업으로 이동" class="link sfon2" onclick="javascript:fncLsLawPop('1034179811','JO','');" href="javascript:;">제19조</a><a title="팝업으로 이동" class="link sfon3" onclick="javascript:fncLsLawPop('1034179815','JO','');" href="javascript:;">제3항</a>에 따라 자격증을 발급받은 사람이 다음 각 호의 어느 하나에 해당하는 경우에는 그 자격을 취소하여야 한다. <span class="sfon">&lt;개정 2024. 10. 22.&gt;</span> </p>
+       <p class="pty1_de2_1"> </p> 
+       <p class="pty1_de2h">1. 거짓이나 그 밖의 부정한 방법으로 자격을 취득한 경우 </p> 
+       <p class="pty1_de2h">2. <a title="팝업으로 이동" class="link sfon2" onclick="javascript:fncLsLawPop('1034179809','JO','');" href="javascript:;">제19조</a><a title="팝업으로 이동" class="link sfon3" onclick="javascript:fncLsLawPop('1034179813','JO','');" href="javascript:;">제3항</a>에 따라 발급받은 자격증을 다른 사람에게 대여한 경우 </p> 
+       <p class="pty1_de2"> <span class="sfon">[본조신설 2019. 11. 26.]</span> </p> 
+       <p></p> 
+      </div> 
+     </div> 
+     <a name="J20:0" id="J20:0"></a> 
+     <div class="pgroup"> 
+      <ul class="lawico01"> 
+       <li> <a title="조문체계도 팝업으로 이동" style="text-decoration: none;" onclick="joStmdPop('285635', '0020', '00' );return false; " href="#AJAX"> <img alt="조문체계도버튼" src="/LSW/assets/images/viewer/btn-pan.svg" /> </a> </li> 
+       <li> <a title="연혁 팝업으로 이동" style="text-decoration: none;" onclick="fJoHstShow(this, '009877', '285635', '98148655', '010202');return false;" href="#AJAX"> <img alt="연혁" src="/LSW/assets/images/viewer/btn-yeon.svg" /> </a></li> 
+      </ul> 
+      <div class="lawcon"> 
+       <p class="pty1_p4"> <input name="joNoList" id="Y002000" style="vertical-align: middle;" onclick="getJoSelectLayer(this,'');" type="checkbox" value="20:0:002000:98148655" /> <span class="bl"><label for="Y002000"> 제20조(한글날) </label> </span> ① 정부는 한글의 독창성과 과학성을 국내외에 널리 알리고 범국민적 한글 사랑 의식을 높이기 위하여 매년 10월 9일을 한글날로 정하고, 기념행사를 한다. </p>
+       <p class="pty1_de2_1">② 제1항에 따른 기념행사에 관하여 필요한 사항은 <a title="팝업으로 이동" class="link" onclick="javascript:fncLsPttnLinkPop('70198');" href="javascript:;">대통령령</a>으로 정한다. </p> 
+       <p class="pty1_de2"> <span class="sfon">[전문개정 2011. 4. 14.]</span> </p> 
+       <p></p> 
+      </div> 
+     </div> 
+     <a name="J21:0" id="J21:0"></a> 
+     <div class="pgroup"> 
+      <ul class="lawico01"> 
+       <li> <a title="조문체계도 팝업으로 이동" style="text-decoration: none;" onclick="joStmdPop('285635', '0021', '00' );return false; " href="#AJAX"> <img alt="조문체계도버튼" src="/LSW/assets/images/viewer/btn-pan.svg" /> </a> </li> 
+       <li> <a title="연혁 팝업으로 이동" style="text-decoration: none;" onclick="fJoHstShow(this, '009877', '285635', '98148657', '010202');return false;" href="#AJAX"> <img alt="연혁" src="/LSW/assets/images/viewer/btn-yeon.svg" /> </a></li> 
+      </ul> 
+      <div class="lawcon"> 
+       <p class="pty1_p4"> <input name="joNoList" id="Y002100" style="vertical-align: middle;" onclick="getJoSelectLayer(this,'');" type="checkbox" value="21:0:002100:98148657" /> <span class="bl"><label for="Y002100"> 제21조(민간단체 등의 활동 지원) </label> </span> 국가와 지방자치단체는 국어의 발전과 보급을 목적으로 활동하는 법인ㆍ단체 등에 예산의 범위에서 필요한 지원을 할 수 있다. </p>
+       <p class="pty1_de2"> <span class="sfon">[전문개정 2011. 4. 14.]</span> </p> 
+       <p></p> 
+      </div> 
+     </div> 
+     <a name="pjuk:98148659" id="pjuk:98148659"></a> 
+     <div class="pgroup" style="padding-bottom: 0px; margin-bottom: 5px;"> 
+      <p class="gtit" style="padding-top: 5px; margin-bottom: 0px;" data-joidfull="002200" data-joseq="98148659">         제4장 국어능력의 향상 </p> 
+     </div> 
+     <a name="J22:0" id="J22:0"></a> 
+     <div class="pgroup"> 
+      <ul class="lawico01"> 
+       <li> <a title="조문체계도 팝업으로 이동" style="text-decoration: none;" onclick="joStmdPop('285635', '0022', '00' );return false; " href="#AJAX"> <img alt="조문체계도버튼" src="/LSW/assets/images/viewer/btn-pan.svg" /> </a> </li> 
+       <li> <a title="연혁 팝업으로 이동" style="text-decoration: none;" onclick="fJoHstShow(this, '009877', '285635', '98148661', '010202');return false;" href="#AJAX"> <img alt="연혁" src="/LSW/assets/images/viewer/btn-yeon.svg" /> </a></li> 
+      </ul> 
+      <div class="lawcon"> 
+       <p class="pty1_p4"> <input name="joNoList" id="Y002200" style="vertical-align: middle;" onclick="getJoSelectLayer(this,'');" type="checkbox" value="22:0:002200:98148661" /> <span class="bl"><label for="Y002200"> 제22조(국어능력 향상을 위한 정책 등) </label> </span> ① 국가와 지방자치단체는 국민의 국어능력 향상을 위한 기회를 균등하게 제공하는 데에 힘써야 하며, 국어능력 향상에 필요한 정책을 수립하여 시행하여야 한다. </p>
+       <p class="pty1_de2_1">② 제1항에 따른 정책을 효율적으로 추진하기 위하여 관계 중앙행정기관 간의 협의기구를 구성ㆍ운영할 수 있다. </p> 
+       <p class="pty1_de2_1">③ 제2항에 따른 협의기구의 구성과 운영에 필요한 사항은 <a title="팝업으로 이동" class="link" onclick="javascript:fncLsPttnLinkPop('70199');" href="javascript:;">대통령령</a>으로 정한다. </p> 
+       <p class="pty1_de2"> <span class="sfon">[전문개정 2011. 4. 14.]</span> </p> 
+       <p></p> 
+      </div> 
+     </div> 
+     <a name="J23:0" id="J23:0"></a> 
+     <div class="pgroup"> 
+      <ul class="lawico01"> 
+       <li> <a title="조문체계도 팝업으로 이동" style="text-decoration: none;" onclick="joStmdPop('285635', '0023', '00' );return false; " href="#AJAX"> <img alt="조문체계도버튼" src="/LSW/assets/images/viewer/btn-pan.svg" /> </a> </li> 
+       <li> <a title="연혁 팝업으로 이동" style="text-decoration: none;" onclick="fJoHstShow(this, '009877', '285635', '98148663', '010202');return false;" href="#AJAX"> <img alt="연혁" src="/LSW/assets/images/viewer/btn-yeon.svg" /> </a></li> 
+      </ul> 
+      <div class="lawcon"> 
+       <p class="pty1_p4"> <input name="joNoList" id="Y002300" style="vertical-align: middle;" onclick="getJoSelectLayer(this,'');" type="checkbox" value="23:0:002300:98148663" /> <span class="bl"><label for="Y002300"> 제23조(국어능력의 검정) </label> </span> ① 문화체육관광부장관은 국민의 국어능력 향상과 창조적인 언어생활의 정착을 위하여 국어능력을 검정할 수 있다. </p>
+       <p class="pty1_de2_1">② 제1항에 따른 국어능력의 검정 방법ㆍ절차ㆍ내용 및 시기에 관하여 필요한 사항은 <a title="팝업으로 이동" class="link" onclick="javascript:fncLsPttnLinkPop('70200');" href="javascript:;">대통령령</a>으로 정한다. </p> 
+       <p class="pty1_de2"> <span class="sfon">[전문개정 2011. 4. 14.]</span> </p> 
+       <p></p> 
+      </div> 
+     </div> 
+     <a name="J24:0" id="J24:0"></a> 
+     <div class="pgroup"> 
+      <ul class="lawico01"> 
+       <li> <a title="조문체계도 팝업으로 이동" style="text-decoration: none;" onclick="joStmdPop('285635', '0024', '00' );return false; " href="#AJAX"> <img alt="조문체계도버튼" src="/LSW/assets/images/viewer/btn-pan.svg" /> </a> </li> 
+       <li> <a title="연혁 팝업으로 이동" style="text-decoration: none;" onclick="fJoHstShow(this, '009877', '285635', '98148665', '010202');return false;" href="#AJAX"> <img alt="연혁" src="/LSW/assets/images/viewer/btn-yeon.svg" /> </a></li> 
+       <li><a href="javascript:;" onclick="openCtlInfoList('285635', '009877', '0024', '00');return false;" style="text-decoration: none;" title="관련규정 팝업으로 이동"> <img src="/LSW/assets/images/viewer/btn-gyu.svg" alt="관련규제버튼" /> </a></li> 
+      </ul> 
+      <div class="lawcon"> 
+       <p class="pty1_p4"> <input name="joNoList" id="Y002400" style="vertical-align: middle;" onclick="getJoSelectLayer(this,'');" type="checkbox" value="24:0:002400:98148665" /> <span class="bl"><label for="Y002400"> 제24조(국어문화원의 지정 등) </label> </span> ① 문화체육관광부장관은 국민들의 국어능력을 높이고 국어와 관련된 상담을 할 수 있도록 <a title="팝업으로 이동" class="link" onclick="javascript:fncLsPttnLinkPop('70201');" href="javascript:;">대통령령</a>으로 정하는 전문인력과 시설을 갖춘 국어 관련 전문기관ㆍ단체 또는 <a title="팝업으로 이동" class="link sfon1" onclick="javascript:fncLsLawPop('1034180393','ALLJO','');" href="javascript:;">「고등교육법」</a><a title="팝업으로 이동" class="link sfon2" onclick="javascript:fncLsLawPop('1034179817','JO','');" href="javascript:;">제2조</a>에 따른 학교의 부설기관 등을 국어문화원으로 지정할 수 있다. </p>
+       <p class="pty1_de2_1">② 국어문화원은 국어문화원 상호 간의 균형발전과 협력증진을 위하여 문화체육관광부장관의 인가를 받아 국어문화원연합회(이하 “연합회”라 한다)를 설립할 수 있다. <span class="sfon">&lt;신설 2026. 4. 28.&gt;</span> </p> 
+       <p class="pty1_de2_1">③ 연합회는 법인으로 한다. <span class="sfon">&lt;신설 2026. 4. 28.&gt;</span> </p> 
+       <p class="pty1_de2_1">④ 연합회에 관하여 이 법에 규정되지 아니한 사항은 <a title="팝업으로 이동" class="link sfon1" onclick="javascript:fncLsLawPop('1035505045','ALLJO','');" href="javascript:;">「민법」</a> 중 사단법인에 관한 규정을 준용한다. <span class="sfon">&lt;신설 2026. 4. 28.&gt;</span> </p> 
+       <p class="pty1_de2_1">⑤ 국가는 제1항에 따라 지정된 국어문화원 및 제2항에 따라 설립된 연합회의 운영에 필요한 경비를 예산의 범위에서 보조할 수 있다. <span class="sfon">&lt;개정 2026. 4. 28.&gt;</span> </p> 
+       <p class="pty1_de2_1">⑥ 문화체육관광부장관은 지정된 국어문화원이 전문인력과 시설을 유지하지 못하여 국어문화원으로서의 기능을 계속 수행하기 어렵다고 인정할 때에는 지정을 취소할 수 있다. <span class="sfon">&lt;개정 2026. 4. 28.&gt;</span> </p> 
+       <p class="pty1_de2_1">⑦ 제1항에 따른 국어문화원의 지정 방법 및 연합회의 설립ㆍ운영 등에 관하여 필요한 사항은 <a title="팝업으로 이동" class="link" onclick="javascript:fncLsPttnLinkPop('70202');" href="javascript:;">대통령령</a>으로 정한다. <span class="sfon">&lt;개정 2026. 4. 28.&gt;</span> </p> 
+       <p class="pty1_de2"> <span class="sfon">[전문개정 2011. 4. 14.]</span> </p> 
+       <p></p> 
+      </div> 
+     </div> 
+     <a name="pjuk:98148667" id="pjuk:98148667"></a> 
+     <div class="pgroup" style="padding-bottom: 0px; margin-bottom: 5px;"> 
+      <p class="gtit" style="padding-top: 5px; margin-bottom: 0px;" data-joidfull="002500" data-joseq="98148667">         제5장 보칙 <span class="sfon">&lt;개정 2011. 4. 14.&gt;</span> </p> 
+     </div> 
+     <a name="J25:0" id="J25:0"></a> 
+     <div class="pgroup"> 
+      <ul class="lawico01"> 
+       <li> <a title="조문체계도 팝업으로 이동" style="text-decoration: none;" onclick="joStmdPop('285635', '0025', '00' );return false; " href="#AJAX"> <img alt="조문체계도버튼" src="/LSW/assets/images/viewer/btn-pan.svg" /> </a> </li> 
+       <li> <a title="연혁 팝업으로 이동" style="text-decoration: none;" onclick="fJoHstShow(this, '009877', '285635', '98148669', '010202');return false;" href="#AJAX"> <img alt="연혁" src="/LSW/assets/images/viewer/btn-yeon.svg" /> </a></li> 
+      </ul> 
+      <div class="lawcon"> 
+       <p class="pty1_p4"> <input name="joNoList" id="Y002500" style="vertical-align: middle;" onclick="getJoSelectLayer(this,'');" type="checkbox" value="25:0:002500:98148669" /> <span class="bl"><label for="Y002500"> 제25조(협의) </label> </span> 중앙행정기관의 장은 국어의 사용에 관한 내용이 포함된 법령을 제정하거나 개정하려는 경우에는 미리 문화체육관광부장관과 협의하여야 한다. </p>
+       <p class="pty1_de2"> <span class="sfon">[전문개정 2011. 4. 14.]</span> </p> 
+       <p></p> 
+      </div> 
+     </div> 
+     <a name="J26:0" id="J26:0"></a> 
+     <div class="pgroup"> 
+      <ul class="lawico01"> 
+       <li> <a title="조문체계도 팝업으로 이동" style="text-decoration: none;" onclick="joStmdPop('285635', '0026', '00' );return false; " href="#AJAX"> <img alt="조문체계도버튼" src="/LSW/assets/images/viewer/btn-pan.svg" /> </a> </li> 
+       <li> <a title="연혁 팝업으로 이동" style="text-decoration: none;" onclick="fJoHstShow(this, '009877', '285635', '98148671', '010202');return false;" href="#AJAX"> <img alt="연혁" src="/LSW/assets/images/viewer/btn-yeon.svg" /> </a></li> 
+      </ul> 
+      <div class="lawcon"> 
+       <p class="pty1_p4"> <input name="joNoList" id="Y002600" style="vertical-align: middle;" onclick="getJoSelectLayer(this,'');" type="checkbox" value="26:0:002600:98148671" /> <span class="bl"><label for="Y002600"> 제26조(청문) </label> </span> 문화체육관광부장관은 다음 각 호의 어느 하나에 해당하는 처분을 하려면 청문을 하여야 한다. <span class="sfon">&lt;개정 2026. 4. 28.&gt;</span> </p>
+       <p class="pty1_de2_1"> </p> 
+       <p class="pty1_de2h">1. <a title="팝업으로 이동" class="link sfon2" onclick="javascript:fncLsLawPop('1034180395','JO','');" href="javascript:;">제19조의3</a>에 따른 자격의 취소 </p> 
+       <p class="pty1_de2h">2. <a title="팝업으로 이동" class="link sfon2" onclick="javascript:fncLsLawPop('1035505547','JO','');" href="javascript:;">제24조</a><a title="팝업으로 이동" class="link sfon3" onclick="javascript:fncLsLawPop('1035505047','JO','');" href="javascript:;">제6항</a>에 따른 국어문화원의 지정 취소 </p> 
+       <p class="pty1_de2"> <span class="sfon">[전문개정 2019. 11. 26.]</span> </p> 
+       <p></p> 
+      </div> 
+     </div> 
+     <a name="J27:0" id="J27:0"></a> 
+     <div class="pgroup"> 
+      <ul class="lawico01"> 
+       <li> <a title="조문체계도 팝업으로 이동" style="text-decoration: none;" onclick="joStmdPop('285635', '0027', '00' );return false; " href="#AJAX"> <img alt="조문체계도버튼" src="/LSW/assets/images/viewer/btn-pan.svg" /> </a> </li> 
+       <li> <a title="연혁 팝업으로 이동" style="text-decoration: none;" onclick="fJoHstShow(this, '009877', '285635', '98148673', '010202');return false;" href="#AJAX"> <img alt="연혁" src="/LSW/assets/images/viewer/btn-yeon.svg" /> </a></li> 
+      </ul> 
+      <div class="lawcon"> 
+       <p class="pty1_p4"> <input name="joNoList" id="Y002700" style="vertical-align: middle;" onclick="getJoSelectLayer(this,'');" type="checkbox" value="27:0:002700:98148673" /> <span class="bl"><label for="Y002700"> 제27조(권한의 위임ㆍ위탁) </label> </span> ① 이 법에 따른 문화체육관광부장관의 권한은 <a title="팝업으로 이동" class="link" onclick="javascript:fncLsPttnLinkPop('70203');" href="javascript:;">대통령령</a>으로 정하는 바에 따라 그 일부를 특별시장ㆍ광역시장ㆍ특별자치시장ㆍ도지사 또는 특별자치도지사에게 위임할 수 있다. <span class="sfon">&lt;개정 2022. 1. 18.&gt;</span> </p>
+       <p class="pty1_de2_1">② 문화체육관광부장관은 이 법에 따른 업무의 일부를 <a title="팝업으로 이동" class="link" onclick="javascript:fncLsPttnLinkPop('70204');" href="javascript:;">대통령령</a>으로 정하는 바에 따라 관련 기관ㆍ단체 등에 위탁할 수 있다. </p> 
+       <p class="pty1_de2"> <span class="sfon">[전문개정 2011. 4. 14.]</span> </p> 
+       <p></p> 
+      </div> 
+     </div> 
+     <!-- 조문정보 --> 
+     <!-- 부칙 영역 끝 --> 
+     <br /> 
+     <div id="arDivArea"> 
+      <a name="arArea"></a> 
+      <a name="J12608345" id="J12608345"></a> 
+      <div class="pgroup"> 
+       <p class="pty3" style="margin-bottom: -1px;"> <a class="nun" onclick="arView('ar12608345','<법률 제7368호, 2005. 1. 27.>'); return false;" href="#AJAX"> <img id="ar12608345btn" style="vertical-align: middle;" alt="부칙 <법률 제7368호, 2005. 1. 27.>조문목록 접기" src="/LSW/assets/images/viewer/brn-fold.svg" /> </a> <input name="arInf" id="chk12608345" style="vertical-align: middle;" type="checkbox" alt="부칙 <법률 제7368호, 2005. 1. 27.>체크박스 " value="12608345" /> <a class="nun" onclick="arView('ar12608345','<법률 제7368호, 2005. 1. 27.>'); return false;" href="#AJAX"> <label for="chk12608345"> <span class="bl"> 부      칙</span> </label> <span class="sfon">&lt;법률 제7368호, 2005. 1. 27.&gt;</span> </a> <a class="nun" onclick="arView('ar12608345','<법률 제7368호, 2005. 1. 27.>');return false;" href="#AJAX"> <img id="ar12608345MrBtn" style="vertical-align: middle;" alt="부칙 <법률 제7368호, 2005. 1. 27.>보기" src="/LSW/images/button/btn_more_bu.gif" /> </a> </p> 
+       <p class="pty3_dep1"><span class="bl">제1조 (시행일)</span> 이 법은 공포 후 6월이 경과한 날부터 시행한다.</p>
+       <div id="ar12608345">
+        <p class="pty3_dep1"><span class="bl">제2조 (다른 법률의 폐지)</span> 한글전용에관한법률은 폐지한다.</p>
+        <p class="pty3_dep1"><span class="bl">제3조 (공문서의 작성에 관한 적용례)</span> 제14조의 규정은 이 법 시행 후 최초로 작성하는 공문서부터 적용한다.</p>
+        <p class="pty3_dep1"><span class="bl">제4조 (어문규범에 관한 경과조치)</span> 이 법 시행 당시 종전의 문화예술진흥법 제7조의 규정에 의한 어문규범은 제11조의 규정에 의한 어문규범으로 본다.</p>
+        <p class="pty3_dep1"><span class="bl">제5조 (국어심의회에 관한 경과조치)</span> 이 법 시행 당시 종전의 문화예술진흥법 제6조의 규정에 따라 설치된 국어심의회는 제13조의 규정에 따라 설치된 국어심의회로 본다.</p>
+        <p class="pty3_dep1"><span class="bl">제6조 (다른 법률의 개정)</span> 문화예술진흥법 중 다음과 같이 개정한다.</p>
+        <p class="pty3_dep2"> 제2장(제5조 내지 제8조)을 삭제한다.</p>
+       </div> 
+      </div> 
+      <a name="J12608347" id="J12608347"></a> 
+      <div class="pgroup"> 
+       <p class="pty3" style="margin-bottom: -1px;"> <a class="nun" onclick="arView('ar12608347','<법률 제8852호, 2008. 2. 29.>'); return false;" href="#AJAX"> <img id="ar12608347btn" style="vertical-align: middle;" alt="부칙 <법률 제8852호, 2008. 2. 29.>조문목록 접기" src="/LSW/assets/images/viewer/brn-fold.svg" /> </a> <input name="arInf" id="chk12608347" style="vertical-align: middle;" type="checkbox" alt="부칙 <법률 제8852호, 2008. 2. 29.>체크박스 " value="12608347" /> <a class="nun" onclick="arView('ar12608347','<법률 제8852호, 2008. 2. 29.>'); return false;" href="#AJAX"> <label for="chk12608347"> <span class="bl"> 부      칙</span> </label> <span class="sfon">&lt;법률 제8852호, 2008. 2. 29.&gt;</span> </a> <a class="nun" onclick="fncArLawPop('정부조직법', '20080229', '08852');" href="#AJAX"> <span class="sfon">(정부조직법) </span> </a> <a class="nun" onclick="arView('ar12608347','<법률 제8852호, 2008. 2. 29.>');return false;" href="#AJAX"> <img id="ar12608347MrBtn" style="vertical-align: middle;" alt="부칙 <법률 제8852호, 2008. 2. 29.>보기" src="/LSW/images/button/btn_more_bu.gif" /> </a> </p> 
+       <p class="pty3_dep1"><span class="bl">제1조 (시행일)</span> 이 법은 공포한 날부터 시행한다. 다만, ㆍㆍㆍ&lt;생략&gt;ㆍㆍㆍ, 부칙 제6조에 따라 개정되는 법률 중 이 법의 시행 전에 공포되었으나 시행일이 도래하지 아니한 법률을 개정한 부분은 각각 해당 법률의 시행일부터 시행한다.</p>
+       <div id="ar12608347">
+        <p class="pty3_dep1"><span class="bl">제2조부터 제5조까지</span> 생략</p>
+        <p class="pty3_dep1"><span class="bl">제6조 (다른 법률의 개정)</span> ① 부터 &lt;248&gt; 까지 생략</p>
+        <p class="pty3_dep2"> &lt;249&gt; 국어기본법 일부를 다음과 같이 개정한다.</p>
+        <p class="pty3_dep2"> 제6조제1항ㆍ제2항, 제7조제1항ㆍ제2항, 제9조제1항ㆍ제2항, 제11조, 제12조제1항, 제13조제2항제3호ㆍ같은 조 제4항, 제15조제1항, 제16조제1항, 제18조, 제19조제2항, 제23조제1항, 제24조제1항ㆍ제3항, 제25조, 제26조 및 제27조제1항ㆍ제2항 중 “문화관광부장관”을 각각 “문화체육관광부장관”으로 한다.</p>
+        <p class="pty3_dep2"> 제13조제1항 중 “문화관광부”를 “문화체육관광부” 로 한다.</p>
+        <p class="pty3_dep2"> 제18조 중 “교육인적자원부장관”을 “교육과학기술부장관”으로 한다.</p>
+        <p class="pty3_dep2"> &lt;250&gt; 부터 &lt;760&gt; 까지 생략</p>
+        <p class="pty3_dep1"><span class="bl">제7조</span> 생략</p>
+       </div> 
+      </div> 
+      <a name="J12608349" id="J12608349"></a> 
+      <div class="pgroup"> 
+       <p class="pty3" style="margin-bottom: -1px;"> <img id="ar12608349btn" style="vertical-align: middle;" alt="부칙<법률 제9003호, 2008. 3. 28.>조문목록 없음" src="/LSW/assets/images/viewer/ico-dot.svg" /> <input name="arInf" id="chk12608349" style="vertical-align: middle;" type="checkbox" alt="부칙 <법률 제9003호, 2008. 3. 28.>체크박스 " value="12608349" /> <a class="nun" onclick="arView('ar12608349','<법률 제9003호, 2008. 3. 28.>'); return false;" href="#AJAX"> <label for="chk12608349"> <span class="bl"> 부      칙</span> </label> <span class="sfon">&lt;법률 제9003호, 2008. 3. 28.&gt;</span> </a> </p> 
+       <p class="pty3_dep1">①(시행일) 이 법은 공포한 날부터 시행한다.</p>
+       <p class="pty3_dep1">②(경과조치) 이 법 시행 당시 이미 지정된 국어상담소는 제24조의 개정규정에 따라 국어문화원으로 지정된 것으로 본다.</p> 
+      </div> 
+      <a name="J12608351" id="J12608351"></a> 
+      <div class="pgroup"> 
+       <p class="pty3" style="margin-bottom: -1px;"> <img id="ar12608351btn" style="vertical-align: middle;" alt="부칙<법률 제9491호, 2009. 3. 18.>조문목록 없음" src="/LSW/assets/images/viewer/ico-dot.svg" /> <input name="arInf" id="chk12608351" style="vertical-align: middle;" type="checkbox" alt="부칙 <법률 제9491호, 2009. 3. 18.>체크박스 " value="12608351" /> <a class="nun" onclick="arView('ar12608351','<법률 제9491호, 2009. 3. 18.>'); return false;" href="#AJAX"> <label for="chk12608351"> <span class="bl"> 부      칙</span> </label> <span class="sfon">&lt;법률 제9491호, 2009. 3. 18.&gt;</span> </a> </p> 
+       <p class="pty3_dep1">이 법은 공포한 날부터 시행한다.</p> 
+      </div> 
+      <a name="J12608353" id="J12608353"></a> 
+      <div class="pgroup"> 
+       <p class="pty3" style="margin-bottom: -1px;"> <img id="ar12608353btn" style="vertical-align: middle;" alt="부칙<법률 제10584호, 2011. 4. 14.>조문목록 없음" src="/LSW/assets/images/viewer/ico-dot.svg" /> <input name="arInf" id="chk12608353" style="vertical-align: middle;" type="checkbox" alt="부칙 <법률 제10584호, 2011. 4. 14.>체크박스 " value="12608353" /> <a class="nun" onclick="arView('ar12608353','<법률 제10584호, 2011. 4. 14.>'); return false;" href="#AJAX"> <label for="chk12608353"> <span class="bl"> 부      칙</span> </label> <span class="sfon">&lt;법률 제10584호, 2011. 4. 14.&gt;</span> </a> </p> 
+       <p class="pty3_dep1">이 법은 공포한 날부터 시행한다.</p> 
+      </div> 
+      <a name="J12608355" id="J12608355"></a> 
+      <div class="pgroup"> 
+       <p class="pty3" style="margin-bottom: -1px;"> <a class="nun" onclick="arView('ar12608355','<법률 제11424호, 2012. 5. 23.>'); return false;" href="#AJAX"> <img id="ar12608355btn" style="vertical-align: middle;" alt="부칙 <법률 제11424호, 2012. 5. 23.>조문목록 접기" src="/LSW/assets/images/viewer/brn-fold.svg" /> </a> <input name="arInf" id="chk12608355" style="vertical-align: middle;" type="checkbox" alt="부칙 <법률 제11424호, 2012. 5. 23.>체크박스 " value="12608355" /> <a class="nun" onclick="arView('ar12608355','<법률 제11424호, 2012. 5. 23.>'); return false;" href="#AJAX"> <label for="chk12608355"> <span class="bl"> 부      칙</span> </label> <span class="sfon">&lt;법률 제11424호, 2012. 5. 23.&gt;</span> </a> <a class="nun" onclick="arView('ar12608355','<법률 제11424호, 2012. 5. 23.>');return false;" href="#AJAX"> <img id="ar12608355MrBtn" style="vertical-align: middle;" alt="부칙 <법률 제11424호, 2012. 5. 23.>보기" src="/LSW/images/button/btn_more_bu.gif" /> </a> </p> 
+       <p class="pty3_dep1"><span class="bl">제1조(시행일)</span> 이 법은 공포 후 3개월이 경과한 날부터 시행한다.</p>
+       <div id="ar12608355">
+        <p class="pty3_dep1"><span class="bl">제2조(한국어세계화재단에 대한 경과조치)</span> ① 이 법 시행 당시 「민법」 제32조에 따라 문화체육관광부장관의 허가를 받아 설립된 재단법인 한국어세계화재단은 이 법 시행 후 2개월 이내에 이 법에 따른 정관을 작성하여 문화체육관광부장관의 인가를 받고 이 법에 따른 재단의 설립등기를 하여야 한다.</p>
+        <p class="pty3_dep2"> ② 재단법인 한국어세계화재단은 제1항에 따라 설립등기를 마친 경우에는 「민법」 중 법인의 해산 및 청산에 관한 규정에도 불구하고 해산된 것으로 본다.</p>
+        <p class="pty3_dep2"> ③ 이 법에 따른 재단은 설립등기일에 재단법인 한국어세계화재단의 모든 권리ㆍ의무와 재산관계를 승계한다.</p>
+       </div> 
+      </div> 
+      <a name="J12608357" id="J12608357"></a> 
+      <div class="pgroup"> 
+       <p class="pty3" style="margin-bottom: -1px;"> <a class="nun" onclick="arView('ar12608357','<법률 제11690호,  2013. 3. 23.>'); return false;" href="#AJAX"> <img id="ar12608357btn" style="vertical-align: middle;" alt="부칙 <법률 제11690호,  2013. 3. 23.>조문목록 접기" src="/LSW/assets/images/viewer/brn-fold.svg" /> </a> <input name="arInf" id="chk12608357" style="vertical-align: middle;" type="checkbox" alt="부칙 <법률 제11690호,  2013. 3. 23.>체크박스 " value="12608357" /> <a class="nun" onclick="arView('ar12608357','<법률 제11690호,  2013. 3. 23.>'); return false;" href="#AJAX"> <label for="chk12608357"> <span class="bl"> 부      칙</span> </label> <span class="sfon">&lt;법률 제11690호, 2013. 3. 23.&gt;</span> </a> <a class="nun" onclick="fncArLawPop('정부조직법', '20130323', '11690');" href="#AJAX"> <span class="sfon">(정부조직법) </span> </a> <a class="nun" onclick="arView('ar12608357','<법률 제11690호,  2013. 3. 23.>');return false;" href="#AJAX"> <img id="ar12608357MrBtn" style="vertical-align: middle;" alt="부칙 <법률 제11690호,  2013. 3. 23.>보기" src="/LSW/images/button/btn_more_bu.gif" /> </a> </p> 
+       <p class="pty3_dep1"><span class="bl">제1조(시행일)</span> ① 이 법은 공포한 날부터 시행한다.</p>
+       <div id="ar12608357">
+        <p class="pty3_dep2"> ② 생략</p>
+        <p class="pty3_dep1"><span class="bl">제2조부터 제5조까지</span> 생략</p>
+        <p class="pty3_dep1"><span class="bl">제6조(다른 법률의 개정)</span> ①부터 &lt;253&gt;까지 생략</p>
+        <p class="pty3_dep2"> &lt;254&gt; 국어기본법 일부를 다음과 같이 개정한다.</p>
+        <p class="pty3_dep2"> 제18조 및 제19조의2제3항 중 “교육과학기술부장관”을 각각 “교육부장관”으로 한다.</p>
+        <p class="pty3_dep2"> &lt;255&gt;부터 &lt;710&gt;까지 생략</p>
+        <p class="pty3_dep1"><span class="bl">제7조</span> 생략</p>
+       </div> 
+      </div> 
+      <a name="J12608359" id="J12608359"></a> 
+      <div class="pgroup"> 
+       <p class="pty3" style="margin-bottom: -1px;"> <img id="ar12608359btn" style="vertical-align: middle;" alt="부칙<법률 제14625호, 2017. 3. 21.>조문목록 없음" src="/LSW/assets/images/viewer/ico-dot.svg" /> <input name="arInf" id="chk12608359" style="vertical-align: middle;" type="checkbox" alt="부칙 <법률 제14625호, 2017. 3. 21.>체크박스 " value="12608359" /> <a class="nun" onclick="arView('ar12608359','<법률 제14625호, 2017. 3. 21.>'); return false;" href="#AJAX"> <label for="chk12608359"> <span class="bl"> 부      칙</span> </label> <span class="sfon">&lt;법률 제14625호, 2017. 3. 21.&gt;</span> </a> </p> 
+       <p class="pty3_dep1">이 법은 공포 후 6개월이 경과한 날부터 시행한다.</p> 
+      </div> 
+      <a name="J12608361" id="J12608361"></a> 
+      <div class="pgroup"> 
+       <p class="pty3" style="margin-bottom: -1px;"> <img id="ar12608361btn" style="vertical-align: middle;" alt="부칙<법률 제16589호, 2019. 11. 26.>조문목록 없음" src="/LSW/assets/images/viewer/ico-dot.svg" /> <input name="arInf" id="chk12608361" style="vertical-align: middle;" type="checkbox" alt="부칙 <법률 제16589호, 2019. 11. 26.>체크박스 " value="12608361" /> <a class="nun" onclick="arView('ar12608361','<법률 제16589호, 2019. 11. 26.>'); return false;" href="#AJAX"> <label for="chk12608361"> <span class="bl"> 부      칙</span> </label> <span class="sfon">&lt;법률 제16589호, 2019. 11. 26.&gt;</span> </a> </p> 
+       <p class="pty3_dep1">이 법은 공포 후 6개월이 경과한 날부터 시행한다.</p> 
+      </div> 
+      <a name="J12608363" id="J12608363"></a> 
+      <div class="pgroup"> 
+       <p class="pty3" style="margin-bottom: -1px;"> <a class="nun" onclick="arView('ar12608363','<법률 제18249호,  2021. 6. 15.>'); return false;" href="#AJAX"> <img id="ar12608363btn" style="vertical-align: middle;" alt="부칙 <법률 제18249호,  2021. 6. 15.>조문목록 접기" src="/LSW/assets/images/viewer/brn-fold.svg" /> </a> <input name="arInf" id="chk12608363" style="vertical-align: middle;" type="checkbox" alt="부칙 <법률 제18249호,  2021. 6. 15.>체크박스 " value="12608363" /> <a class="nun" onclick="arView('ar12608363','<법률 제18249호,  2021. 6. 15.>'); return false;" href="#AJAX"> <label for="chk12608363"> <span class="bl"> 부      칙</span> </label> <span class="sfon">&lt;법률 제18249호, 2021. 6. 15.&gt;</span> </a> <a class="nun" onclick="arView('ar12608363','<법률 제18249호,  2021. 6. 15.>');return false;" href="#AJAX"> <img id="ar12608363MrBtn" style="vertical-align: middle;" alt="부칙 <법률 제18249호,  2021. 6. 15.>보기" src="/LSW/images/button/btn_more_bu.gif" /> </a> </p> 
+       <p class="pty3_dep1"><span class="bl">제1조(시행일)</span> 이 법은 공포 후 6개월이 경과한 날부터 시행한다.</p>
+       <div id="ar12608363">
+        <p class="pty3_dep1"><span class="bl">제2조(공문서등의 평가에 관한 적용례)</span> 제14조의 개정규정은 이 법 시행 이후 작성하는 공문서등부터 적용한다.</p>
+       </div> 
+      </div> 
+      <a name="J12608365" id="J12608365"></a> 
+      <div class="pgroup"> 
+       <p class="pty3" style="margin-bottom: -1px;"> <img id="ar12608365btn" style="vertical-align: middle;" alt="부칙<법률 제18761호,  2022. 1. 18.>조문목록 없음" src="/LSW/assets/images/viewer/ico-dot.svg" /> <input name="arInf" id="chk12608365" style="vertical-align: middle;" type="checkbox" alt="부칙 <법률 제18761호,  2022. 1. 18.>체크박스 " value="12608365" /> <a class="nun" onclick="arView('ar12608365','<법률 제18761호,  2022. 1. 18.>'); return false;" href="#AJAX"> <label for="chk12608365"> <span class="bl"> 부      칙</span> </label> <span class="sfon">&lt;법률 제18761호, 2022. 1. 18.&gt;</span> </a> </p> 
+       <p class="pty3_dep1">이 법은 공포한 날부터 시행한다.</p> 
+      </div> 
+      <a name="J12608367" id="J12608367"></a> 
+      <div class="pgroup"> 
+       <p class="pty3" style="margin-bottom: -1px;"> <img id="ar12608367btn" style="vertical-align: middle;" alt="부칙<법률 제20491호,  2024. 10. 22.>조문목록 없음" src="/LSW/assets/images/viewer/ico-dot.svg" /> <input name="arInf" id="chk12608367" style="vertical-align: middle;" type="checkbox" alt="부칙 <법률 제20491호,  2024. 10. 22.>체크박스 " value="12608367" /> <a class="nun" onclick="arView('ar12608367','<법률 제20491호,  2024. 10. 22.>'); return false;" href="#AJAX"> <label for="chk12608367"> <span class="bl"> 부      칙</span> </label> <span class="sfon">&lt;법률 제20491호, 2024. 10. 22.&gt;</span> </a> </p> 
+       <p class="pty3_dep1">이 법은 공포 후 6개월이 경과한 날부터 시행한다.</p> 
+      </div> 
+      <a name="J12608369" id="J12608369"></a> 
+      <div class="pgroup"> 
+       <p class="pty3" style="margin-bottom: -1px;"> <img id="ar12608369btn" style="vertical-align: middle;" alt="부칙<법률 제20913호,  2025. 4. 8.>조문목록 없음" src="/LSW/assets/images/viewer/ico-dot.svg" /> <input name="arInf" id="chk12608369" style="vertical-align: middle;" type="checkbox" alt="부칙 <법률 제20913호,  2025. 4. 8.>체크박스 " value="12608369" /> <a class="nun" onclick="arView('ar12608369','<법률 제20913호,  2025. 4. 8.>'); return false;" href="#AJAX"> <label for="chk12608369"> <span class="bl"> 부      칙</span> </label> <span class="sfon">&lt;법률 제20913호, 2025. 4. 8.&gt;</span> </a> </p> 
+       <p class="pty3_dep1">이 법은 공포 후 6개월이 경과한 날부터 시행한다.</p> 
+      </div> 
+      <a name="J12608371" id="J12608371"></a> 
+      <div class="pgroup"> 
+       <p class="pty3" style="margin-bottom: -1px;"> <img id="ar12608371btn" style="vertical-align: middle;" alt="부칙<법률 제21586호,  2026. 4. 28.>조문목록 없음" src="/LSW/assets/images/viewer/ico-dot.svg" /> <input name="arInf" id="chk12608371" style="vertical-align: middle;" type="checkbox" alt="부칙 <법률 제21586호,  2026. 4. 28.>체크박스 " value="12608371" /> <a class="nun" onclick="arView('ar12608371','<법률 제21586호,  2026. 4. 28.>'); return false;" href="#AJAX"> <label for="chk12608371"> <span class="bl"> 부      칙</span> </label> <span class="sfon">&lt;법률 제21586호, 2026. 4. 28.&gt;</span> </a> </p> 
+       <p class="pty3_dep1">이 법은 공포 후 6개월이 경과한 날부터 시행한다. 다만, 제19조의2의 개정규정은 공포 후 3개월이 경과한 날부터 시행한다.</p> 
+      </div> 
+     </div> 
+     <!-- 부칙 영역 끝 --> 
+     <!-- 별표 서식 시작 --> 
+     <!-- 별표 서식 끝 --> 
+    </div> 
+   </div> 
+  </div> 
+ </body>
+</html>

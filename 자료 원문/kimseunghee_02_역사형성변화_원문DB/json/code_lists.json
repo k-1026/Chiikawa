@@ -1,0 +1,75 @@
+{
+  "source_grade": {
+    "S": "공식",
+    "A": "통계·공공데이터",
+    "B": "언론",
+    "D": "개인",
+    "E": "AI생성",
+    "U": "사용자 작성 원본(이 패키지에서 추가)"
+  },
+  "md_codes": {
+    "source_grade_md": {
+      "①": "공식·학술",
+      "②": "기사",
+      "③": "비공식(칼럼 등)"
+    },
+    "region": [
+      "대구",
+      "경북",
+      "경상",
+      "영남",
+      "전국",
+      "제주",
+      "창원"
+    ]
+  },
+  "verdict": {
+    "match": "일치",
+    "faithful_summary": "의미를 유지한 요약",
+    "interpretation": "해석·제안",
+    "overgeneralization": "과도한 일반화",
+    "scope_mismatch": "적용 범위 다름",
+    "mismatch": "불일치",
+    "unverifiable": "확인 불가"
+  },
+  "source_relation": {
+    "original_confirmed": "원래 출처 확인",
+    "alternative_official": "원래 출처 불명확·대체 근거 확보",
+    "user_authored": "사용자 작성 원본",
+    "unverifiable": "원문 확인 불가"
+  },
+  "approval_status": {
+    "approved": "공식 원문을 보관하고 글자 대조까지 끝남 — 확정 근거 사용 가능",
+    "reference_only": "언론 보도 — 참고용, 확정 사실로 쓰지 않음",
+    "internal": "팀 내부 작성 원본 — 규칙·판정의 근거",
+    "pending": "원문 미확보 또는 대조 실패 — 사용 금지"
+  },
+  "value_status": {
+    "reported": "원문에 값이 있음",
+    "not_available": "원문(자료)에 해당 값이 없음",
+    "unconfirmed": "원문을 확보하지 못해 확인 못 함",
+    "not_applicable": "해당 없음",
+    "actual_zero": "실제 값이 0(무료 등)"
+  },
+  "info_type": {
+    "fact": "사실",
+    "rule": "규칙",
+    "condition": "조건",
+    "exception": "예외",
+    "figure": "수치",
+    "procedure": "절차",
+    "example": "사례"
+  },
+  "text_check": {
+    "verified_in_stored_original": "originals/의 원문에서 글자 대조 완료",
+    "verified_in_snapshot_not_stored": "기사 스냅숏에서 글자 대조 완료(스냅숏은 저작권 때문에 미보관, SHA-256만 기록)",
+    "reported_by_aside_not_stored": "Aside(사용자 브라우저)로 열람한 인용값, 원문 미보관 — 승인 보류",
+    "not_found_in_original": "원문에서 찾지 못함 — 승인 제외",
+    "not_checked": "대조 안 함"
+  },
+  "verification_status": {
+    "verified": "원문 글자 대조 완료",
+    "aside_reported": "Aside 보고만 있음",
+    "unverified": "대조 안 됨"
+  }
+}

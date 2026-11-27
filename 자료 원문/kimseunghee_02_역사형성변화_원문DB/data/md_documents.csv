@@ -1,0 +1,2 @@
+md_id,repo_path,git_branch,last_commit_sha,branch_head_sha,git_blob_sha,file_sha256,title,written_date,md_version,source_id,notes
+MD-K02,local 리서치/kimseunghee_02_역사형성변화.md,main,5f61dc486f15fe7db07c025d9e9d065fcc32dda0,a7043e7b98f0d1c61f7ea7bc1355f7be8e1aedb0,caea051defb02631e2b0599b05e26f3ce450cbd4,cacf62af6e4081196297e0beb5967844e52d87ff4d1441406e71d6cc3f091b34,02. 대구 방언의 역사·형성·변화,2026-10-31,사투리_v02_V4,SRC-K02-MD,"written_date 는 문서의 '자료 기준일'. 기준 main a7043e7, blob caea051. 원본은 originals/SRC-K02-MD.md"
