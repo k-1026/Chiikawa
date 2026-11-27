@@ -7,3 +7,8 @@ __pycache__/
 
 # 비밀 키
 .env
+
+# 웹 기능 코드(K파트v1/웹코드): 키 파일은 올리지 않고 .env.example만 올림
+.env.local
+.env.*.local
+node_modules/
